@@ -1,0 +1,309 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bba2f71db528d4a4799a87bf9477c319, type: 3}
+  m_Name: Photo Mode Tooltip Profile
+  m_EditorClassIdentifier: 
+  m_tooltips:
+  - m_tooltipID: Screenshot Res.
+    m_header: Screenshot Resolution
+    m_text: Sets the resolution of the image when you take a screenshot.
+  - m_tooltipID: Screenshot Format
+    m_header: Screenshot Format
+    m_text: Sets the image format when you take a screenshot.
+  - m_tooltipID: Load Last Settings
+    m_header: Load Last Settings
+    m_text: If enabled the last settings that was saved when using photo mode will
+      be relaoded when photo mode is loaded again.
+  - m_tooltipID: Reset When Closed
+    m_header: Reset When Closed
+    m_text: If enabled when you close photo mode everything will be reset back to
+      the settings is was before entering photo mode.
+  - m_tooltipID: Anti-Alias Level
+    m_header: Anti-Aliasing
+    m_text: Sets the Anti-Aliasing mode.
+  - m_tooltipID: V-Sync Count
+    m_header: V-Sync Count
+    m_text: Sets the v-sync count type.
+  - m_tooltipID: Target FPS
+    m_header: Target FPS
+    m_text: Allows you to set the target FPS to cap the frame rate.
+  - m_tooltipID: Global Volume
+    m_header: Global Volume
+    m_text: Sets the global audio volume for all audio sources.
+  - m_tooltipID: Field Of View
+    m_header: Field Of View
+    m_text: Sets the cameras field of view.
+  - m_tooltipID: Camera Roll
+    m_header: Camera Roll
+    m_text: Sets the camera roll value (Z Axis).
+  - m_tooltipID: Extra Culling Distance
+    m_header: Extra Culling Distance
+    m_text: Sets the extra culling range for both our camera culling system and the
+      cameras far clip plane view range.
+  - m_tooltipID: LOD Bias
+    m_header: LOD Bias
+    m_text: Sets the level of detail bias range value.
+  - m_tooltipID: Shadow Distance
+    m_header: Shadow Distance
+    m_text: Sets the shadows render distance.
+  - m_tooltipID: Shadow Cascades
+    m_header: Shadow Cascades
+    m_text: Sets the shadows cascade count.
+  - m_tooltipID: Shadow Resolution
+    m_header: Shadow Resolution
+    m_text: Sets the quality of the shadows.
+  - m_tooltipID: Reflections Enabled
+    m_header: Reflections Enabled
+    m_text: If enabled the water reflections will be shown.
+  - m_tooltipID: Reflection Resolution
+    m_header: Reflection Resolution
+    m_text: Sets the water reflection resolution.
+  - m_tooltipID: Extra Reflection Distance
+    m_header: Extra Reflection Distance
+    m_text: Sets extra rendering distance value for water reflections.
+  - m_tooltipID: Enable Depth Of Field
+    m_header: Enable Depth Of Field
+    m_text: If enabled depth of field will be enabled.
+  - m_tooltipID: Blur Size
+    m_header: Blur Size
+    m_text: Sets the depth of field blur size.
+  - m_tooltipID: Focus Distance
+    m_header: Focus Distance
+    m_text: Sets the depth of field focus distance.
+  - m_tooltipID: Aperture
+    m_header: Aperture
+    m_text: Sets the depth of field aperture.
+  - m_tooltipID: Focal Length
+    m_header: Focal Length
+    m_text: Sets the depth of field focal length.
+  - m_tooltipID: Detail Density
+    m_header: Detail Density
+    m_text: Sets the terrains detail density.
+  - m_tooltipID: Detail Distance
+    m_header: Detail Distance
+    m_text: Sets the terrains detail distance.
+  - m_tooltipID: Pixel Error
+    m_header: Pixel Error
+    m_text: Sets the terrain heightmap pixel error.
+  - m_tooltipID: Base Map Distance
+    m_header: Base Map Distance
+    m_text: Sets the terrains base map texture render distance.
+  - m_tooltipID: Current Time
+    m_header: Current Time
+    m_text: Sets the time of day.
+  - m_tooltipID: Time of Day Enabled
+    m_header: Time of Day Enabled
+    m_text: If enabled the time will pass based on 'Time Scale'.
+  - m_tooltipID: Time Scale
+    m_header: Time Scale
+    m_text: Sets how fast the time of day will pass.
+  - m_tooltipID: Sun Rotation
+    m_header: Sun Rotation
+    m_text: Sets the sun rotation (Y Axis)
+  - m_tooltipID: Extra Fog Distance
+    m_header: Extra Fog Distance
+    m_text: Sets the extra fog distance value, allows you to add more fog in the
+      scene.
+  - m_tooltipID: Fog Color
+    m_header: Fog Color
+    m_text: Sets the overall fog color
+  - m_tooltipID: PW Fog Color
+    m_header: Extra Fog Color
+    m_text: Adds or removes fog color on the green channel.
+  - m_tooltipID: Terrain Range
+    m_header: Terrain Range
+    m_text: Sets the streaming value for loading unity terrains.
+  - m_tooltipID: Impostor Range
+    m_header: Impostor Range
+    m_text: Sets the streaming value for loading terrain imposter meshes.
+  - m_tooltipID: Weather Enabled
+    m_header: Weather Enabled
+    m_text: If enabled rain and snow can occur at random times.
+  - m_tooltipID: Rain
+    m_header: Rain
+    m_text: Starts or stops the rain effects.
+  - m_tooltipID: Snow
+    m_header: Snow
+    m_text: Starts or stops the snow effects.
+  - m_tooltipID: Wind Direction
+    m_header: Wind Direction
+    m_text: Sets the wind direction.
+  - m_tooltipID: Wind Speed
+    m_header: Wind Speed
+    m_text: Sets the wind speed.
+  - m_tooltipID: Auto Focus
+    m_header: Auto Focus
+    m_text: If enabled depth of field focus distance will be automatically set based
+      on what you're looking at.
+  - m_tooltipID: Show Reticule
+    m_header: Show Reticule
+    m_text: If enabled a reticule will show in the center of the screen.
+  - m_tooltipID: Show Rule Of Thirds
+    m_header: Show Rule Of Thirds
+    m_text: If enabled the rule of thirds line will be shown on the screen. This
+      will help you line up the perfect screenshot.
+  - m_tooltipID: Exposure
+    m_header: Exposure
+    m_text: Sets the general exposure in the scene.
+  - m_tooltipID: Sun Pitch
+    m_header: Sun Pitch
+    m_text: Sets the sun pitch (X Axis)
+  - m_tooltipID: Override Sun
+    m_header: Override Sun
+    m_text: If enabled you can override the sun settings.
+  - m_tooltipID: Sun Intensity
+    m_header: Sun Intensity
+    m_text: Sets the sun intensity.
+  - m_tooltipID: Sun Color
+    m_header: Sun Color
+    m_text: Sets overall sun color.
+  - m_tooltipID: Override Skybox
+    m_header: Override Skybox
+    m_text: If enabled you can override the skybox settings.
+  - m_tooltipID: Skybox Rotation
+    m_header: Skybox Rotation
+    m_text: Sets the rotation.
+  - m_tooltipID: Skybox Exposure
+    m_header: Skybox Exposure
+    m_text: Sets the skybox exposure.
+  - m_tooltipID: Skybox Tint Color
+    m_header: Skybox Tint Color
+    m_text: Sets the overall skybox tint.
+  - m_tooltipID: Override Fog
+    m_header: Override Fog
+    m_text: If enabled you can override the fog settings.
+  - m_tooltipID: Fog Mode
+    m_header: Fog Mode
+    m_text: Sets the fog mode.
+  - m_tooltipID: Fog Density
+    m_header: Fog Density
+    m_text: Sets the global fog density.
+  - m_tooltipID: Fog Start
+    m_header: Fog Start
+    m_text: Sets the global fog start distance
+  - m_tooltipID: Fog End
+    m_header: Fog Distance
+    m_text: Sets the general global fog distance.
+  - m_tooltipID: Start Blur Distance
+    m_header: Start Blur Distance
+    m_text: Sets the start blur render distance for depth of field.
+  - m_tooltipID: End Blur Distance
+    m_header: End Blur Distance
+    m_text: Sets the end blur render distance for depth of field.
+  - m_tooltipID: Max Radius
+    m_header: Max Radius
+    m_text: Sets the max blur radius in depth of field.
+  - m_tooltipID: High Quality
+    m_header: High Quality
+    m_text: Enables high quality mode.
+  - m_tooltipID: Reflection LOD Bias
+    m_header: Reflection LOD Bias
+    m_text: Sets the water reflections LOD bias.
+  - m_tooltipID: Near Start Blur
+    m_header: Near Start Blur
+    m_text: Sets the near blur start value.
+  - m_tooltipID: Near End Blur
+    m_header: Near End Blur
+    m_text: Sets the near blur end value.
+  - m_tooltipID: Far Start Blur
+    m_header: Far Start Blur
+    m_text: Sets the far blur start value.
+  - m_tooltipID: Far End Blur
+    m_header: Far End Blur
+    m_text: Sets the far blur end value.
+  - m_tooltipID: Ambient Intensity
+    m_header: Ambient Intensity
+    m_text: Sets the global ambient intensity.
+  - m_tooltipID: Sun Color (Kelvin)
+    m_header: Sun Color (Kelvin)
+    m_text: Sets the sun color based on the kelvin value.
+  - m_tooltipID: Override Density Volume
+    m_header: Override Density Volume
+    m_text: Sets the ability to override the HDRP density volume for volumetric lighting.
+  - m_tooltipID: Effect Type
+    m_header: Effect Type
+    m_text: Sets the overall effect of the density volume.
+  - m_tooltipID: Tiling Resolution
+    m_header: Tiling Resolution
+    m_text: Sets the resolution of the density volume.
+  - m_tooltipID: Density Albedo Color
+    m_header: Density Albedo Color
+    m_text: Sets the albedo tint color of the density volume.
+  - m_tooltipID: Extra Fog Color
+    m_header: Extra Fog Color
+    m_text: Sets the extra fog color in PW Sky this color will be multiplied with
+      the current fog color.
+  - m_tooltipID: Draw Instanced
+    m_header: Draw Instanced
+    m_text: Sets the terrain to render in instanced for better performance.
+  - m_tooltipID: Extra Underwater Fog Color
+    m_header: Extra Underwater Fog Color
+    m_text: Sets a multiplier for the underwater fog color allowing you to tweak
+      its color.
+  - m_tooltipID: Underwater Fog Distance
+    m_header: Underwater Fog Distance
+    m_text: Sets the underwater fog distance.
+  - m_tooltipID: Underwater FX Volume
+    m_header: Underwater FX Volume
+    m_text: Sets the underwater fx volume.
+  - m_tooltipID: Override Wind
+    m_header: Override Wind
+    m_text: If enabled you can override the wind settings.
+  - m_tooltipID: Global Grass Density
+    m_header: Global Grass Density
+    m_text: Sets a global multiplier for the grass system to add more grass isntances.
+  - m_tooltipID: Global Grass Distance
+    m_header: Global Grass Distance
+    m_text: Sets a global multiplier to increase the render distance of the grass.
+  - m_tooltipID: Global Camera Cell Distance
+    m_header: 
+    m_text: 
+  - m_tooltipID: Global Camera Cell Subdivision
+    m_header: 
+    m_text: 
+  - m_tooltipID: Sky Ambient Color
+    m_header: Sky Ambient Color
+    m_text: 'Ambient lighting coming from above.
+
+
+      HDR value is the alpha value
+      in the color, this value ranges from -5 to 5 in the color picker and grey color
+      value is 0. This will multiply the current color to make it brighter or darker.'
+  - m_tooltipID: Equator Ambient Color
+    m_header: Equator Ambient Color
+    m_text: 'Ambient lighting coming from the sides.
+
+
+      HDR value is the alpha
+      value in the color, this value ranges from -5 to 5 in the color picker and
+      grey color value is 0. This will multiply the current color to make it brighter
+      or darker.'
+  - m_tooltipID: Ground Ambient Color
+    m_header: Ground Ambient Color
+    m_text: 'Ambient lighting coming from below.
+
+
+      HDR value is the alpha value
+      in the color, this value ranges from -5 to 5 in the color picker and grey color
+      value is 0. This will multiply the current color to make it brighter or darker.'
+  - m_tooltipID: Show FPS
+    m_header: Show FPS
+    m_text: If enabled will show the FPS counter in photo mode.
+  - m_tooltipID: Light Intensity Multiplier
+    m_header: Light Intensity Multiplier
+    m_text: Multiplies the sun and the moon light intensity by the value.
+  - m_tooltipID: Fog Density Multiplier
+    m_header: Fog Density Multiplier
+    m_text: Multiplies the global local fog density by the value.
+  - m_tooltipID: Shadow Distance Multiplier
+    m_header: Shadow Distance Multiplier
+    m_text: Multiplies the global shadow render distance by the value.

@@ -1,0 +1,44 @@
+﻿#pragma kernel CSMain
+
+//Stores the spawn rule index & its probability chance
+struct SpawnRuleChances
+{
+	int spawnRuleIndex;
+	float probability;
+};
+//Stores the result which spawn rule should be executed at which position, including correct height
+struct StampPosition
+{
+    float3 position;
+};
+
+Texture2D<float4> Input;
+//float2 lastPosition;
+uint texelLocationIncrement;
+int maxJitter;
+int stampsPerRow;
+int randomSeed;
+int textureResolution;
+RWStructuredBuffer<StampPosition>results;
+
+float Noise(int x, int y, int random)
+{
+    int n = x + y * 57 + random * 131;
+    n = (n<<13) ^ n;
+    return (1.0f - ( (n * (n * n * 15731 + 789221) +
+            1376312589)&0x7fffffff)* 0.000000000931322574615478515625f);
+}
+
+[numthreads(8,8,1)]
+void CSMain (uint3 id : SV_DispatchThreadID)
+{
+	if(id.x % (texelLocationIncrement) == 0 && id.y % texelLocationIncrement == 0)
+	{
+		int xPos = id.x;
+		int yPos = id.y;
+		int offsetX = lerp(-maxJitter, maxJitter, Noise(id.x,id.y,randomSeed + id.x));
+		int offsetY = lerp(-maxJitter, maxJitter, Noise(id.x,id.y,randomSeed + id.y));
+		uint2 posWithOffset = uint2(clamp(xPos + offsetX,0,textureResolution), clamp(yPos + offsetY,0,textureResolution));
+    	results[id.x / texelLocationIncrement + (id.y / texelLocationIncrement) * stampsPerRow].position = float3(posWithOffset.x,Input[posWithOffset.xy].r,posWithOffset.y);
+	}
+}

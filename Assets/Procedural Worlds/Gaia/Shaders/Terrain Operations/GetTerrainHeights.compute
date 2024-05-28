@@ -1,0 +1,36 @@
+﻿// Each #kernel tells which function to compile; you can have many kernels
+#pragma kernel CSMain
+
+// Create a RenderTexture with enableRandomWrite flag and set it
+// with cs.SetTexture
+
+struct TerrainMinMax
+{
+	float minHeight;
+    float maxHeight;
+};
+
+
+Texture2D<float4> Input;
+globallycoherent RWStructuredBuffer<TerrainMinMax>outputBuffer;
+int passes;
+
+[numthreads(8,8,1)]
+void CSMain (uint3 id : SV_DispatchThreadID)
+{
+
+    for(int i=0;i<passes;i++)
+    {
+        AllMemoryBarrierWithGroupSync();
+
+        if(Input[id.xy].r>outputBuffer[0].maxHeight)
+        {
+            outputBuffer[0].maxHeight = Input[id.xy].r;
+        }
+        else if(Input[id.xy].r<outputBuffer[0].minHeight)
+        {
+            outputBuffer[0].minHeight = Input[id.xy].r;
+        }
+    }
+
+}

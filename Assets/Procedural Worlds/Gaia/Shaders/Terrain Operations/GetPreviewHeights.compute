@@ -1,0 +1,18 @@
+﻿#pragma kernel CSMain
+
+//the position of the object we want to get the height for
+// X and Z are the input, we want to get Y as result
+struct ObjectPosition
+{
+    float3 position;
+};
+
+Texture2D<float4> Input;
+SamplerState sampler_linear_clamp;
+RWStructuredBuffer<ObjectPosition>results;
+
+[numthreads(1,1,1)]
+void CSMain (uint3 id : SV_DispatchThreadID)
+{
+    results[0].position = float3(results[0].position.x,Input.SampleLevel(sampler_linear_clamp, float2(results[0].position.x,results[0].position.z), 0).r,results[0].position.z);
+}

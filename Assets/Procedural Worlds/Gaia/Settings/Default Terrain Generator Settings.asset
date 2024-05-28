@@ -1,0 +1,1018 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1d61257710f55f478816040e1d1dfc9, type: 3}
+  m_Name: Default Terrain Generator Settings
+  m_EditorClassIdentifier: 
+  m_resources:
+    m_resourcesID: c824facf-eca9-47aa-91ca-538e3fd760d8
+    m_name: NewResources
+    m_beachHeight: 5
+    m_terrainHeight: 1000
+    m_texturePrototypes: []
+    m_detailPrototypes: []
+    m_treePrototypes: []
+    m_gameObjectPrototypes: []
+    m_spawnExtensionPrototypes: []
+    m_stampDistributionPrototypes:
+    - m_featureType: Hills
+      m_stampInfluence: 1
+      m_borderMaskStyle: 1
+      m_borderMaskType: Hills
+      m_operation: 13
+      m_stackedChance: 0
+      m_minWidth: 50
+      m_maxWidth: 50
+      m_tieWidthToStrength: 1
+      m_minHeight: 10
+      m_maxHeight: 20
+      m_minMixStrength: 0.07367624
+      m_maxMixStrength: 0.3
+      m_minMixMidPoint: 0
+      m_maxMixMidPoint: 0.1520423
+      m_tieHeightToStrength: 1
+      m_minYOffset: -1
+      m_maxYOffset: 1
+      m_invertChance: 0
+      m_inputHeightToStampHeightMapping:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 1
+          outSlope: 1
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 0.22486047
+          value: 0.007277392
+          inSlope: 0.7465864
+          outSlope: 0.7465864
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0.33333334
+        - serializedVersion: 3
+          time: 0.29316127
+          value: 0.9539374
+          inSlope: 1.4646707
+          outSlope: 1.4646707
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0.16187657
+        - serializedVersion: 3
+          time: 0.34220284
+          value: 0.9925324
+          inSlope: 0.08368391
+          outSlope: 0.08368391
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0.19458498
+        - serializedVersion: 3
+          time: 0.57196707
+          value: 0.29702237
+          inSlope: -2.0620303
+          outSlope: -2.0620303
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0.33333334
+        - serializedVersion: 3
+          time: 1.0018921
+          value: 0.0032844543
+          inSlope: -0.26244757
+          outSlope: -0.26244757
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.190817
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_inputHeightToProbabilityMapping:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 1
+          outSlope: 1
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 0.38106287
+          value: 0.94511545
+          inSlope: 2.0452337
+          outSlope: 2.0452337
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0.33333334
+        - serializedVersion: 3
+          time: 0.7615521
+          value: 0.51564026
+          inSlope: 0.08278435
+          outSlope: 0.08278435
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0.22722152
+        - serializedVersion: 3
+          time: 0.9986724
+          value: 0.005023648
+          inSlope: -2.9096377
+          outSlope: -2.9096377
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.072274774
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_spawnProbability: 0.5
+    - m_featureType: Valleys
+      m_stampInfluence: 1
+      m_borderMaskStyle: 1
+      m_borderMaskType: Hills
+      m_operation: 13
+      m_stackedChance: 0
+      m_minWidth: 50
+      m_maxWidth: 50
+      m_tieWidthToStrength: 1
+      m_minHeight: 5
+      m_maxHeight: 5
+      m_minMixStrength: 0.08
+      m_maxMixStrength: 0.4
+      m_minMixMidPoint: 0.8517397
+      m_maxMixMidPoint: 1
+      m_tieHeightToStrength: 0
+      m_minYOffset: -10
+      m_maxYOffset: 0
+      m_invertChance: 0
+      m_inputHeightToStampHeightMapping:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 2
+          outSlope: 2
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_inputHeightToProbabilityMapping:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 3.3464828
+          outSlope: 3.3464828
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0.07678622
+        - serializedVersion: 3
+          time: 0.5243212
+          value: 1.0022532
+          inSlope: -0.12889998
+          outSlope: -0.12889998
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.09342721
+          outWeight: 0.33333334
+        - serializedVersion: 3
+          time: 0.658483
+          value: 1.0010108
+          inSlope: 0.12540036
+          outSlope: 0.12540036
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0.33333334
+        - serializedVersion: 3
+          time: 1.0013212
+          value: -0.006290946
+          inSlope: -0.13324991
+          outSlope: -0.13324991
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.16485435
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_spawnProbability: 0.5
+    - m_featureType: Mountains
+      m_stampInfluence: 1
+      m_borderMaskStyle: 1
+      m_borderMaskType: Hills
+      m_operation: 13
+      m_stackedChance: 0
+      m_minWidth: 50
+      m_maxWidth: 50
+      m_tieWidthToStrength: 1
+      m_minHeight: 1
+      m_maxHeight: 5
+      m_minMixStrength: 0.2
+      m_maxMixStrength: 0.8
+      m_minMixMidPoint: 0
+      m_maxMixMidPoint: 0
+      m_tieHeightToStrength: 1
+      m_minYOffset: -1
+      m_maxYOffset: 1
+      m_invertChance: 0
+      m_inputHeightToStampHeightMapping:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0.41911605
+          outSlope: 0.41911605
+          tangentMode: 34
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0.33333334
+        - serializedVersion: 3
+          time: 0.25348255
+          value: 0.1062386
+          inSlope: 2.5252206
+          outSlope: 2.5252206
+          tangentMode: 34
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0.33333334
+        - serializedVersion: 3
+          time: 0.34018007
+          value: 0.507763
+          inSlope: 2.5632138
+          outSlope: 2.5632138
+          tangentMode: 34
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0.33333334
+        - serializedVersion: 3
+          time: 0.81544125
+          value: 0.74306595
+          inSlope: 0.9436277
+          outSlope: 0.9436277
+          tangentMode: 34
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0.33333334
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 1.3921531
+          outSlope: 1.3921531
+          tangentMode: 34
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_inputHeightToProbabilityMapping:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 2
+          outSlope: 2
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_spawnProbability: 0.5
+    - m_featureType: Plains
+      m_stampInfluence: 1
+      m_borderMaskStyle: 1
+      m_borderMaskType: Hills
+      m_operation: 13
+      m_stackedChance: 0
+      m_minWidth: 50
+      m_maxWidth: 50
+      m_tieWidthToStrength: 1
+      m_minHeight: 1
+      m_maxHeight: 5
+      m_minMixStrength: 0.1
+      m_maxMixStrength: 0.2
+      m_minMixMidPoint: 0.36043873
+      m_maxMixMidPoint: 0.70461416
+      m_tieHeightToStrength: 1
+      m_minYOffset: -1
+      m_maxYOffset: 1
+      m_invertChance: 0
+      m_inputHeightToStampHeightMapping:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: -0.0051879883
+          value: 1.0075378
+          inSlope: -1.1628984
+          outSlope: -1.1628984
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0.09338524
+        - serializedVersion: 3
+          time: 0.9973755
+          value: 0.012561798
+          inSlope: -1.4365859
+          outSlope: -1.4365859
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.05577179
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_inputHeightToProbabilityMapping:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: -0.019507661
+          value: 1.0043448
+          inSlope: 0.06324839
+          outSlope: 0.06324839
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0.2271652
+        - serializedVersion: 3
+          time: 0.30107015
+          value: 0.9935778
+          inSlope: 0.09023311
+          outSlope: 0.09023311
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0.10145359
+        - serializedVersion: 3
+          time: 0.5783594
+          value: 0.14535621
+          inSlope: -1.9541246
+          outSlope: -1.9541246
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0.33333334
+        - serializedVersion: 3
+          time: 1.0026094
+          value: 0.018748473
+          inSlope: 0.086009845
+          outSlope: 0.086009845
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.1712395
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_spawnProbability: 0.5
+    - m_featureType: Mesas
+      m_stampInfluence: 1
+      m_borderMaskStyle: 1
+      m_borderMaskType: Hills
+      m_operation: 13
+      m_stackedChance: 0
+      m_minWidth: 50
+      m_maxWidth: 50
+      m_tieWidthToStrength: 1
+      m_minHeight: 1
+      m_maxHeight: 5
+      m_minMixStrength: 0.05
+      m_maxMixStrength: 0.2
+      m_minMixMidPoint: 0.12216355
+      m_maxMixMidPoint: 0.40544617
+      m_tieHeightToStrength: 1
+      m_minYOffset: -1
+      m_maxYOffset: 1
+      m_invertChance: 0
+      m_inputHeightToStampHeightMapping:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 0.12010127
+          value: 0.16832307
+          inSlope: 5.8398595
+          outSlope: 5.8398595
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0.33333334
+        - serializedVersion: 3
+          time: 0.22104855
+          value: 1.0125213
+          inSlope: 0.19449255
+          outSlope: 0.19449255
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0.1663094
+        - serializedVersion: 3
+          time: 0.26091707
+          value: 0.66103673
+          inSlope: -5.6755342
+          outSlope: -5.6755342
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0.33333334
+        - serializedVersion: 3
+          time: 0.44706693
+          value: 0.49741834
+          inSlope: -0.3964438
+          outSlope: -0.3964438
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.10590812
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_inputHeightToProbabilityMapping:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 1
+          outSlope: 1
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 0.49902165
+          value: 1.0065789
+          inSlope: -0.052033592
+          outSlope: -0.052033592
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0.15599638
+        - serializedVersion: 3
+          time: 1
+          value: -0.0025135782
+          inSlope: -1.3837179
+          outSlope: -1.3837179
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.12685964
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_spawnProbability: 0.5
+    - m_featureType: Rivers
+      m_stampInfluence: 1
+      m_borderMaskStyle: 1
+      m_borderMaskType: Hills
+      m_operation: 13
+      m_stackedChance: 0
+      m_minWidth: 50
+      m_maxWidth: 50
+      m_tieWidthToStrength: 1
+      m_minHeight: 1
+      m_maxHeight: 5
+      m_minMixStrength: 0.05
+      m_maxMixStrength: 0.5
+      m_minMixMidPoint: 0.9462935
+      m_maxMixMidPoint: 0.9924357
+      m_tieHeightToStrength: 0
+      m_minYOffset: -1
+      m_maxYOffset: -1
+      m_invertChance: 0
+      m_inputHeightToStampHeightMapping:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: -0.0012969971
+          value: 1.0062561
+          inSlope: -0.2723896
+          outSlope: -0.2723896
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0.1608301
+        - serializedVersion: 3
+          time: 0.9973755
+          value: 0.006248474
+          inSlope: -2.6144714
+          outSlope: -2.6144714
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.029831434
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_inputHeightToProbabilityMapping:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0.0051879883
+          value: 0.98750305
+          inSlope: -0.27333358
+          outSlope: -0.27333358
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0.09079117
+        - serializedVersion: 3
+          time: 0.40497124
+          value: -0.0008416064
+          inSlope: -1.9037275
+          outSlope: 0.0680669
+          tangentMode: 1
+          weightedMode: 0
+          inWeight: 0.07714884
+          outWeight: 0.1143167
+        - serializedVersion: 3
+          time: 1
+          value: 0
+          inSlope: 0.10399075
+          outSlope: 0.10399075
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.068700574
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_spawnProbability: 0.5
+    - m_featureType: Islands
+      m_stampInfluence: 1
+      m_borderMaskStyle: 1
+      m_borderMaskType: Hills
+      m_operation: 13
+      m_stackedChance: 0
+      m_minWidth: 50
+      m_maxWidth: 50
+      m_tieWidthToStrength: 1
+      m_minHeight: 1
+      m_maxHeight: 5
+      m_minMixStrength: 0.2
+      m_maxMixStrength: 0.5
+      m_minMixMidPoint: 0
+      m_maxMixMidPoint: 0.10556364
+      m_tieHeightToStrength: 1
+      m_minYOffset: -1
+      m_maxYOffset: 1
+      m_invertChance: 0
+      m_inputHeightToStampHeightMapping:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: -0.0012168884
+          value: 0.9960213
+          inSlope: -3.104774
+          outSlope: -3.104774
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0.047445253
+        - serializedVersion: 3
+          time: 0.9938965
+          value: -0.007998962
+          inSlope: -0.7235904
+          outSlope: -0.7235904
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.060955968
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_inputHeightToProbabilityMapping:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0.0024337769
+          value: 0.99798584
+          inSlope: -2.7004955
+          outSlope: -2.7004955
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0.03431363
+        - serializedVersion: 3
+          time: 0.9951172
+          value: 0
+          inSlope: -0.029364321
+          outSlope: -0.029364321
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.068611875
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_spawnProbability: 0.5
+    m_worldBiomeMaskPrototypes: []
+    m_probePrototypes: []
+    m_terrainModifierStampPrototypes: []
+  m_x: 0
+  m_y: 50
+  m_z: 0
+  m_width: 10
+  m_height: 10
+  m_rotation: 0
+  m_isWorldmapSpawner: 1
+  m_spawnRange: 512
+  m_generateRandomSeed: 1
+  m_randomSeed: 298693207
+  m_spawnDensity: 0.8
+  m_resourcesPath: 
+  m_spawnerRules:
+  - m_name: Plains
+    m_guid: 2b68b0dc-9fcd-4ad2-ab12-e929521fbfbb
+    m_useExtendedSpawn: 0
+    m_minRequiredFitness: 0.25
+    m_minInstanceRequiredFitness: 0
+    m_failureRate: 0.33157897
+    m_maxInstances: 40000000
+    m_ignoreMaxInstances: 0
+    m_minDirection: 0
+    m_maxDirection: 359.9
+    m_locationIncrementMin: 23.263159
+    m_locationIncrementMax: 20
+    m_jitterPercent: 0.2
+    m_boundsCheckQuality: 25
+    m_resourceType: 5
+    m_resourceIdx: 3
+    m_imageMasks: []
+    m_visualisationColor: {r: 0.3773585, g: 0.3773585, b: 0.3773585, a: 1}
+    m_noiseMask: 0
+    m_noiseMaskSeed: 0
+    m_noiseMaskOctaves: 8
+    m_noiseMaskPersistence: 0.25
+    m_noiseMaskFrequency: 1
+    m_noiseMaskLacunarity: 1.5
+    m_noiseZoom: 50
+    m_noiseStrength: 1
+    m_noiseInvert: 0
+    m_isActive: 1
+    m_isFoldedOut: 0
+    m_currInstanceCnt: 0
+    m_activeInstanceCnt: 0
+    m_inactiveInstanceCnt: 0
+    m_resourceSettingsFoldedOut: 0
+    m_isHelpActive: 0
+    m_spawnedInstances: 0
+    m_goSpawnTargetMode: 0
+    m_goSpawnTarget: {fileID: 0}
+    m_terrainGOSpawnTargetName: Gaia Game Object Spawns
+    m_terrainDetailDensity: 15
+    m_terrainDetailMinFitness: 0.5
+    m_terrainDetailFitnessBeginFadeOut: 0.6
+    m_createdBiomeController: {fileID: 0}
+    m_visibleInSceneHierarchy: 1
+    m_usesBoxStandIn: 0
+    m_boundsCollisionCheck: 0
+    m_changesHeightmap: 0
+  - m_name: Valleys / Lakes
+    m_guid: ab1b498b-b0f0-4898-923c-054655139ce8
+    m_useExtendedSpawn: 0
+    m_minRequiredFitness: 0.25
+    m_minInstanceRequiredFitness: 0
+    m_failureRate: 0.33552635
+    m_maxInstances: 40000000
+    m_ignoreMaxInstances: 0
+    m_minDirection: 0
+    m_maxDirection: 359.9
+    m_locationIncrementMin: 23.421055
+    m_locationIncrementMax: 30
+    m_jitterPercent: 0.376
+    m_boundsCheckQuality: 25
+    m_resourceType: 5
+    m_resourceIdx: 1
+    m_imageMasks: []
+    m_visualisationColor: {r: 0.20334375, g: 1, b: 0, a: 1}
+    m_noiseMask: 0
+    m_noiseMaskSeed: 0
+    m_noiseMaskOctaves: 8
+    m_noiseMaskPersistence: 0.25
+    m_noiseMaskFrequency: 1
+    m_noiseMaskLacunarity: 1.5
+    m_noiseZoom: 50
+    m_noiseStrength: 1
+    m_noiseInvert: 0
+    m_isActive: 1
+    m_isFoldedOut: 0
+    m_currInstanceCnt: 0
+    m_activeInstanceCnt: 0
+    m_inactiveInstanceCnt: 0
+    m_resourceSettingsFoldedOut: 0
+    m_isHelpActive: 0
+    m_spawnedInstances: 0
+    m_goSpawnTargetMode: 0
+    m_goSpawnTarget: {fileID: 0}
+    m_terrainGOSpawnTargetName: Gaia Game Object Spawns
+    m_terrainDetailDensity: 15
+    m_terrainDetailMinFitness: 0.5
+    m_terrainDetailFitnessBeginFadeOut: 0.6
+    m_createdBiomeController: {fileID: 0}
+    m_visibleInSceneHierarchy: 1
+    m_usesBoxStandIn: 0
+    m_boundsCollisionCheck: 0
+    m_changesHeightmap: 0
+  - m_name: Mesas
+    m_guid: 1c268e62-94b1-4ef6-9cbe-6cfe08d7dfeb
+    m_useExtendedSpawn: 0
+    m_minRequiredFitness: 0.25
+    m_minInstanceRequiredFitness: 0
+    m_failureRate: 0.33552635
+    m_maxInstances: 40000000
+    m_ignoreMaxInstances: 0
+    m_minDirection: 0
+    m_maxDirection: 359.9
+    m_locationIncrementMin: 23.421055
+    m_locationIncrementMax: 30
+    m_jitterPercent: 0.2
+    m_boundsCheckQuality: 25
+    m_resourceType: 5
+    m_resourceIdx: 4
+    m_imageMasks: []
+    m_visualisationColor: {r: 0.74605155, g: 0.80222553, b: 0.6139375, a: 1}
+    m_noiseMask: 0
+    m_noiseMaskSeed: 0
+    m_noiseMaskOctaves: 8
+    m_noiseMaskPersistence: 0.25
+    m_noiseMaskFrequency: 1
+    m_noiseMaskLacunarity: 1.5
+    m_noiseZoom: 50
+    m_noiseStrength: 1
+    m_noiseInvert: 0
+    m_isActive: 1
+    m_isFoldedOut: 0
+    m_currInstanceCnt: 0
+    m_activeInstanceCnt: 0
+    m_inactiveInstanceCnt: 0
+    m_resourceSettingsFoldedOut: 0
+    m_isHelpActive: 0
+    m_spawnedInstances: 0
+    m_goSpawnTargetMode: 0
+    m_goSpawnTarget: {fileID: 0}
+    m_terrainGOSpawnTargetName: Gaia Game Object Spawns
+    m_terrainDetailDensity: 15
+    m_terrainDetailMinFitness: 0.5
+    m_terrainDetailFitnessBeginFadeOut: 0.6
+    m_createdBiomeController: {fileID: 0}
+    m_visibleInSceneHierarchy: 1
+    m_usesBoxStandIn: 0
+    m_boundsCollisionCheck: 0
+    m_changesHeightmap: 0
+  - m_name: Hills
+    m_guid: b91216b6-f45b-4d02-8afe-58480926c7cf
+    m_useExtendedSpawn: 0
+    m_minRequiredFitness: 0.25
+    m_minInstanceRequiredFitness: 0
+    m_failureRate: 0.32631576
+    m_maxInstances: 40000000
+    m_ignoreMaxInstances: 0
+    m_minDirection: 0
+    m_maxDirection: 359.9
+    m_locationIncrementMin: 23.052631
+    m_locationIncrementMax: 25
+    m_jitterPercent: 0.2
+    m_boundsCheckQuality: 25
+    m_resourceType: 5
+    m_resourceIdx: 0
+    m_imageMasks: []
+    m_visualisationColor: {r: 0.7686275, g: 0.3960784, b: 0.3921569, a: 1}
+    m_noiseMask: 0
+    m_noiseMaskSeed: 0
+    m_noiseMaskOctaves: 8
+    m_noiseMaskPersistence: 0.25
+    m_noiseMaskFrequency: 1
+    m_noiseMaskLacunarity: 1.5
+    m_noiseZoom: 50
+    m_noiseStrength: 1
+    m_noiseInvert: 0
+    m_isActive: 1
+    m_isFoldedOut: 0
+    m_currInstanceCnt: 0
+    m_activeInstanceCnt: 0
+    m_inactiveInstanceCnt: 0
+    m_resourceSettingsFoldedOut: 0
+    m_isHelpActive: 0
+    m_spawnedInstances: 0
+    m_goSpawnTargetMode: 0
+    m_goSpawnTarget: {fileID: 0}
+    m_terrainGOSpawnTargetName: Gaia Game Object Spawns
+    m_terrainDetailDensity: 15
+    m_terrainDetailMinFitness: 0.5
+    m_terrainDetailFitnessBeginFadeOut: 0.6
+    m_createdBiomeController: {fileID: 0}
+    m_visibleInSceneHierarchy: 1
+    m_usesBoxStandIn: 0
+    m_boundsCollisionCheck: 0
+    m_changesHeightmap: 0
+  - m_name: Mountains
+    m_guid: 11953366-0e40-45c1-882b-fda9376e5c9b
+    m_useExtendedSpawn: 0
+    m_minRequiredFitness: 0.25
+    m_minInstanceRequiredFitness: 0
+    m_failureRate: 0.33684212
+    m_maxInstances: 40000000
+    m_ignoreMaxInstances: 0
+    m_minDirection: 0
+    m_maxDirection: 359.9
+    m_locationIncrementMin: 23.473684
+    m_locationIncrementMax: 25
+    m_jitterPercent: 0.2
+    m_boundsCheckQuality: 25
+    m_resourceType: 5
+    m_resourceIdx: 2
+    m_imageMasks: []
+    m_visualisationColor: {r: 1, g: 0, b: 0.7601948, a: 1}
+    m_noiseMask: 0
+    m_noiseMaskSeed: 0
+    m_noiseMaskOctaves: 8
+    m_noiseMaskPersistence: 0.25
+    m_noiseMaskFrequency: 1
+    m_noiseMaskLacunarity: 1.5
+    m_noiseZoom: 50
+    m_noiseStrength: 1
+    m_noiseInvert: 0
+    m_isActive: 1
+    m_isFoldedOut: 0
+    m_currInstanceCnt: 0
+    m_activeInstanceCnt: 0
+    m_inactiveInstanceCnt: 0
+    m_resourceSettingsFoldedOut: 0
+    m_isHelpActive: 0
+    m_spawnedInstances: 0
+    m_goSpawnTargetMode: 0
+    m_goSpawnTarget: {fileID: 0}
+    m_terrainGOSpawnTargetName: Gaia Game Object Spawns
+    m_terrainDetailDensity: 15
+    m_terrainDetailMinFitness: 0.5
+    m_terrainDetailFitnessBeginFadeOut: 0.6
+    m_createdBiomeController: {fileID: 0}
+    m_visibleInSceneHierarchy: 1
+    m_usesBoxStandIn: 0
+    m_boundsCollisionCheck: 0
+    m_changesHeightmap: 0
+  - m_name: Islands
+    m_guid: 8f9e1cca-37c1-48e5-ba43-327ba7be2f26
+    m_useExtendedSpawn: 0
+    m_minRequiredFitness: 0.25
+    m_minInstanceRequiredFitness: 0
+    m_failureRate: 0
+    m_maxInstances: 40000000
+    m_ignoreMaxInstances: 0
+    m_minDirection: 0
+    m_maxDirection: 359.9
+    m_locationIncrementMin: 25
+    m_locationIncrementMax: 45
+    m_jitterPercent: 1
+    m_boundsCheckQuality: 25
+    m_resourceType: 5
+    m_resourceIdx: 6
+    m_imageMasks: []
+    m_visualisationColor: {r: 0.0090351105, g: 1, b: 0.8265209, a: 1}
+    m_noiseMask: 0
+    m_noiseMaskSeed: 0
+    m_noiseMaskOctaves: 8
+    m_noiseMaskPersistence: 0.25
+    m_noiseMaskFrequency: 1
+    m_noiseMaskLacunarity: 1.5
+    m_noiseZoom: 50
+    m_noiseStrength: 1
+    m_noiseInvert: 0
+    m_isActive: 1
+    m_isFoldedOut: 0
+    m_currInstanceCnt: 0
+    m_activeInstanceCnt: 0
+    m_inactiveInstanceCnt: 0
+    m_resourceSettingsFoldedOut: 0
+    m_isHelpActive: 0
+    m_spawnedInstances: 0
+    m_goSpawnTargetMode: 0
+    m_goSpawnTarget: {fileID: 0}
+    m_terrainGOSpawnTargetName: Gaia Game Object Spawns
+    m_terrainDetailDensity: 15
+    m_terrainDetailMinFitness: 0.5
+    m_terrainDetailFitnessBeginFadeOut: 0.6
+    m_createdBiomeController: {fileID: 0}
+    m_visibleInSceneHierarchy: 1
+    m_usesBoxStandIn: 0
+    m_boundsCollisionCheck: 0
+    m_changesHeightmap: 0
+  - m_name: Rivers
+    m_guid: 433c1d10-4cb7-4217-b187-a0ac7ed7f82e
+    m_useExtendedSpawn: 0
+    m_minRequiredFitness: 0.25
+    m_minInstanceRequiredFitness: 0
+    m_failureRate: 0.32434213
+    m_maxInstances: 40000000
+    m_ignoreMaxInstances: 0
+    m_minDirection: 0
+    m_maxDirection: 359.9
+    m_locationIncrementMin: 22.973686
+    m_locationIncrementMax: 35
+    m_jitterPercent: 0.3
+    m_boundsCheckQuality: 25
+    m_resourceType: 5
+    m_resourceIdx: 5
+    m_imageMasks: []
+    m_visualisationColor: {r: 1, g: 0, b: 0.010215759, a: 1}
+    m_noiseMask: 0
+    m_noiseMaskSeed: 0
+    m_noiseMaskOctaves: 8
+    m_noiseMaskPersistence: 0.25
+    m_noiseMaskFrequency: 1
+    m_noiseMaskLacunarity: 1.5
+    m_noiseZoom: 50
+    m_noiseStrength: 1
+    m_noiseInvert: 0
+    m_isActive: 1
+    m_isFoldedOut: 0
+    m_currInstanceCnt: 0
+    m_activeInstanceCnt: 0
+    m_inactiveInstanceCnt: 0
+    m_resourceSettingsFoldedOut: 0
+    m_isHelpActive: 0
+    m_spawnedInstances: 0
+    m_goSpawnTargetMode: 0
+    m_goSpawnTarget: {fileID: 0}
+    m_terrainGOSpawnTargetName: Gaia Game Object Spawns
+    m_terrainDetailDensity: 15
+    m_terrainDetailMinFitness: 0.5
+    m_terrainDetailFitnessBeginFadeOut: 0.6
+    m_createdBiomeController: {fileID: 0}
+    m_visibleInSceneHierarchy: 1
+    m_usesBoxStandIn: 0
+    m_boundsCollisionCheck: 0
+    m_changesHeightmap: 0
+  m_showGizmos: 1
+  m_showDebug: 0
+  m_showTerrainHelper: 1
+  m_spawnMode: 0
+  imageMasks: []
+  m_clearSpawnsToggleTrees: 0
+  m_clearSpawnsToggleDetails: 0
+  m_clearSpawnsToggleGOs: 0
+  m_clearSpawnsToggleSpawnExtensions: 0
+  m_clearSpawnsToggleProbes: 0
+  m_clearSpawnsFor: 1
+  m_clearSpawnsFrom: 0
+  m_lastGUIDSaved: 81b0e93a964e9804c9806f8bde6ba9ec
+  m_stampDensity: 4
+  m_stampJitter: 0.25
+  m_stampWidth: 120
+  m_stampHeight: 100
