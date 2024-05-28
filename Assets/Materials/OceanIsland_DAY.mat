@@ -12,23 +12,24 @@ Material:
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
+  - _ALBEDO_ON
   - _APPLYNORMALMAPPING_ON
   - _CAUSTICS_ON
+  - _CLIPSURFACE_ON
   - _FLOW_ON
   - _FOAM3DLIGHTING_ON
   - _FOAM_ON
   - _PLANARREFLECTIONS_ON
   - _PROCEDURALSKY_ON
+  - _PROJECTION_PERSPECTIVE
   - _SHADOWS_ON
   - _SUBSURFACESCATTERING_ON
   - _SUBSURFACESHALLOWCOLOUR_ON
   - _TRANSPARENCY_ON
-  - _UNDERWATER_ON
   - _VARYSMOOTHNESSOVERDISTANCE_ON
   m_InvalidKeywords:
   - _COMPUTEDIRECTIONALLIGHT_ON
   - _DEBUGMULTIPLYBYLIGHT0COLOR_ON
-  - _PROJECTION_BOTH
   - _SUBSURFACEHEIGHTLERP_ON
   m_LightmapFlags: 5
   m_EnableInstancingVariants: 0
@@ -98,7 +99,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Albedo: 0
+    - _Albedo: 1
     - _ApplyFlowToNormals: 0
     - _ApplyNormalMapping: 1
     - _BumpAmt: 0.514
@@ -112,11 +113,11 @@ Material:
     - _CausticsStrength: 10
     - _CausticsTextureAverage: 0.063
     - _CausticsTextureScale: 7.8
-    - _ClipSurface: 0
+    - _ClipSurface: 1
     - _ClipUnderTerrain: 0
     - _CompileShaderWithDebugInfo: 0
     - _ComputeDirectionalLight: 1
-    - _CullMode: 0
+    - _CullMode: 2
     - _DebugDisableMultiplyByLight0Color: 0
     - _DebugDisableShapeTextures: 0
     - _DebugDisableSmoothLOD: 0
@@ -147,7 +148,7 @@ Material:
     - _PlanarReflectionNormalsStrength: 31.12
     - _PlanarReflections: 1
     - _ProceduralSky: 1
-    - _Projection: 0
+    - _Projection: 1
     - _ReflectionBlur: 1.05
     - _RefractAmt: 0
     - _RefractionStrength: 1.36
@@ -156,7 +157,7 @@ Material:
     - _S: 1
     - _Shadows: 1
     - _ShorelineFoamMinDepth: 0.577
-    - _SkyDirectionality: 0.418
+    - _SkyDirectionality: 0.982
     - _Smoothness: 0.206
     - _SmoothnessFar: 0.549
     - _SmoothnessFarDistance: 2000
@@ -178,7 +179,7 @@ Material:
     - _TexelSize: 0.125
     - _TextureRes: 1024
     - _Transparency: 1
-    - _Underwater: 1
+    - _Underwater: 0
     - _Update: 0.083
     - _VarySmoothnessOverDistance: 1
     - _WaveFoamBubblesCoverage: 1.78
