@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 21145861}
-  m_IndirectSpecularColor: {r: 0.19634986, g: 0.25732675, b: 0.33233857, a: 1}
+  m_IndirectSpecularColor: {r: 0.2194302, g: 0.27532384, b: 0.33905244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2398,7 +2398,7 @@ MonoBehaviour:
       m_warpIterations: 0.6973783
       m_warpStrength: 0.9334392
       m_warpOffset: {x: 131.88863, y: -790.25446, z: 9.614468, w: 0}
-    m_noiseSettings: {fileID: 641704891}
+    m_noiseSettings: {fileID: 1498210831}
     m_noiseToolSettings:
       worldHeightRemap: {x: 0, y: 0}
       coordSpace: 0
@@ -8536,30 +8536,6 @@ MonoBehaviour:
   - {fileID: 434049025}
   - {fileID: 328509708}
   - {fileID: 1240650951}
---- !u!114 &641704891
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cba17d399ab86974c8ef9551f6e8f8d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  transformSettings:
-    translation: {x: -219.88208, y: -311.00653, z: 1037.8025}
-    scale: {x: 2.833992, y: 1, z: 2.833992}
-    rotation: {x: 0, y: 0, z: 0}
-    flipScaleX: 0
-    flipScaleY: 0
-    flipScaleZ: 0
-  domainSettings:
-    noiseTypeName: Perlin
-    fractalTypeName: Fbm
-    noiseTypeParams: 
-    fractalTypeParams: '{"warpOffsets":{"x":131.8886260986328,"y":-790.2544555664063,"z":9.61446762084961,"w":0.0},"octavesMinMax":{"x":0.0,"y":16.0},"amplitudeMinMax":{"x":0.0,"y":1.0},"frequencyMinMax":{"x":0.0,"y":2.0},"lacunarityMinMax":{"x":0.0,"y":4.0},"persistenceMinMax":{"x":0.0,"y":1.0},"warpIterationsMinMax":{"x":0.0,"y":8.0},"warpStrengthMinMax":{"x":-2.0,"y":2.0},"octaves":8.0,"amplitude":0.48794734477996828,"frequency":1.0,"persistence":0.5,"lacunarity":0.9288221597671509,"warpIterations":0.6973782777786255,"warpStrength":0.9334391951560974,"warpEnabled":true,"warpExpanded":true}'
 --- !u!1001 &644596771
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9348,7 +9324,7 @@ GameObject:
   - component: {fileID: 812040272}
   - component: {fileID: 812040273}
   m_Layer: 0
-  m_Name: Ocean
+  m_Name: Crest Ocean
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9385,7 +9361,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _version: 0
   _globalWindSpeed: 45.9
-  _viewpoint: {fileID: 0}
+  _viewpoint: {fileID: 330585546}
   _camera: {fileID: 330585545}
   _teleportThreshold: 10
   _timeProvider: {fileID: 0}
@@ -9397,12 +9373,12 @@ MonoBehaviour:
   _layer: 4
   _gravityMultiplier: 1
   _waterBodyCulling: 1
-  _minScale: 2
-  _maxScale: 8
+  _minScale: 32
+  _maxScale: 128
   _dropDetailHeightBasedOnWaves: 0.2
   _lodDataResolution: 384
   _geometryDownSampleFactor: 2
-  _lodCount: 7
+  _lodCount: 6
   _extentsSizeMultiplier: 100
   _renderingLayerMask: 255
   _simSettingsAnimatedWaves: {fileID: 11400000, guid: ac1c5cbe93ba97847b0a01930d7f3f68,
@@ -17664,7 +17640,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61587e20dbbff7b4f8b950ee8040aea4, type: 3}
   m_Name: (Clone)
   m_EditorClassIdentifier: 
-  ProfileVersion: None
+  ProfileVersion: 3.4.1
   m_reimportHDRPShader: 0
   m_savedFromScene: 
   m_gaiaTimeOfDay:
@@ -26609,8 +26585,8 @@ MonoBehaviour:
     seaLevel: 50
     filterMode: 1
   m_universalPostFXProfile: {fileID: 0}
-  m_waterSystemMode: 2
-  m_thirdPartyWaterObject: {fileID: 0}
+  m_waterSystemMode: 1
+  m_thirdPartyWaterObject: {fileID: 812040271}
   DefaultWaterSet: 1
   m_waterMultiSceneLightingSupport: 1
   m_waterRenamingProfile: 0
@@ -26623,40 +26599,40 @@ MonoBehaviour:
   m_interval: 0.25
   m_useCustomRenderDistance: 1
   m_enableLayerDistances: 1
-  m_customRenderDistance: 300
+  m_customRenderDistance: 0
   m_customRenderDistances:
-  - 200
-  - 1
-  - 1
-  - 1
-  - 1
   - 0
-  - 1
-  - 1
-  - 1
-  - 1
-  - 1
-  - 1
-  - 1
-  - 300
-  - 300
-  - 300
-  - 300
-  - 300
-  - 300
-  - 300
-  - 300
-  - 300
-  - 300
-  - 300
-  - 300
-  - 300
-  - 300
-  - 300
-  - 300
-  - 300
-  - 300
-  - 300
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
   m_reflectionSettingsData:
     m_disableSkyboxReflections: 0
     m_enableReflections: 1
@@ -26703,8 +26679,8 @@ MonoBehaviour:
     - 0
     - 0
     m_textureResolution: 512
-  m_waterEditSettings: 1
-  m_selectedWaterProfileValuesIndex: 5
+  m_waterEditSettings: 0
+  m_selectedWaterProfileValuesIndex: 1
   m_autoRefresh: 1
   m_ignoreSceneConditions: 1
   m_refreshRate: 0.5
@@ -32896,6 +32872,30 @@ MonoBehaviour:
     m_selectedWorldBiomeMaskGUID: 
     m_growAndShrinkValue: 0
     m_globalSpawnerMaskStackRT: {fileID: 0}
+--- !u!114 &1498210831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cba17d399ab86974c8ef9551f6e8f8d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transformSettings:
+    translation: {x: -219.88208, y: -311.00653, z: 1037.8025}
+    scale: {x: 2.833992, y: 1, z: 2.833992}
+    rotation: {x: 0, y: 0, z: 0}
+    flipScaleX: 0
+    flipScaleY: 0
+    flipScaleZ: 0
+  domainSettings:
+    noiseTypeName: Perlin
+    fractalTypeName: Fbm
+    noiseTypeParams: 
+    fractalTypeParams: '{"warpOffsets":{"x":131.8886260986328,"y":-790.2544555664063,"z":9.61446762084961,"w":0.0},"octavesMinMax":{"x":0.0,"y":16.0},"amplitudeMinMax":{"x":0.0,"y":1.0},"frequencyMinMax":{"x":0.0,"y":2.0},"lacunarityMinMax":{"x":0.0,"y":4.0},"persistenceMinMax":{"x":0.0,"y":1.0},"warpIterationsMinMax":{"x":0.0,"y":8.0},"warpStrengthMinMax":{"x":-2.0,"y":2.0},"octaves":8.0,"amplitude":0.48794734477996828,"frequency":1.0,"persistence":0.5,"lacunarity":0.9288221597671509,"warpIterations":0.6973782777786255,"warpStrength":0.9334391951560974,"warpEnabled":true,"warpExpanded":true}'
 --- !u!114 &1501855419
 MonoBehaviour:
   m_ObjectHideFlags: 0
