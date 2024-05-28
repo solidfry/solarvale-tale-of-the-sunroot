@@ -1749,6 +1749,76 @@ PrefabInstance:
       propertyPath: maxSunIntensity
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 4205650852439069919, guid: 6537c9805fbde2b4bb2e94595b86f14f,
+        type: 3}
+      propertyPath: maxMoonIntensity
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4205650852439069919, guid: 6537c9805fbde2b4bb2e94595b86f14f,
+        type: 3}
+      propertyPath: lightIntensityCurve.m_Curve.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4205650852439069919, guid: 6537c9805fbde2b4bb2e94595b86f14f,
+        type: 3}
+      propertyPath: lightIntensityCurve.m_Curve.Array.data[2].time
+      value: 0.5921569
+      objectReference: {fileID: 0}
+    - target: {fileID: 4205650852439069919, guid: 6537c9805fbde2b4bb2e94595b86f14f,
+        type: 3}
+      propertyPath: lightIntensityCurve.m_Curve.Array.data[3].time
+      value: 0.98916024
+      objectReference: {fileID: 0}
+    - target: {fileID: 4205650852439069919, guid: 6537c9805fbde2b4bb2e94595b86f14f,
+        type: 3}
+      propertyPath: lightIntensityCurve.m_Curve.Array.data[2].value
+      value: 0.9858107
+      objectReference: {fileID: 0}
+    - target: {fileID: 4205650852439069919, guid: 6537c9805fbde2b4bb2e94595b86f14f,
+        type: 3}
+      propertyPath: lightIntensityCurve.m_Curve.Array.data[3].value
+      value: 0.90018946
+      objectReference: {fileID: 0}
+    - target: {fileID: 4205650852439069919, guid: 6537c9805fbde2b4bb2e94595b86f14f,
+        type: 3}
+      propertyPath: lightIntensityCurve.m_Curve.Array.data[2].inSlope
+      value: 0.0009974545
+      objectReference: {fileID: 0}
+    - target: {fileID: 4205650852439069919, guid: 6537c9805fbde2b4bb2e94595b86f14f,
+        type: 3}
+      propertyPath: lightIntensityCurve.m_Curve.Array.data[3].inSlope
+      value: -0.48780352
+      objectReference: {fileID: 0}
+    - target: {fileID: 4205650852439069919, guid: 6537c9805fbde2b4bb2e94595b86f14f,
+        type: 3}
+      propertyPath: lightIntensityCurve.m_Curve.Array.data[2].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 4205650852439069919, guid: 6537c9805fbde2b4bb2e94595b86f14f,
+        type: 3}
+      propertyPath: lightIntensityCurve.m_Curve.Array.data[2].outSlope
+      value: 0.0009974545
+      objectReference: {fileID: 0}
+    - target: {fileID: 4205650852439069919, guid: 6537c9805fbde2b4bb2e94595b86f14f,
+        type: 3}
+      propertyPath: lightIntensityCurve.m_Curve.Array.data[3].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 4205650852439069919, guid: 6537c9805fbde2b4bb2e94595b86f14f,
+        type: 3}
+      propertyPath: lightIntensityCurve.m_Curve.Array.data[3].outSlope
+      value: -0.48780352
+      objectReference: {fileID: 0}
+    - target: {fileID: 4205650852439069919, guid: 6537c9805fbde2b4bb2e94595b86f14f,
+        type: 3}
+      propertyPath: lightIntensityCurve.m_Curve.Array.data[2].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 4205650852439069919, guid: 6537c9805fbde2b4bb2e94595b86f14f,
+        type: 3}
+      propertyPath: lightIntensityCurve.m_Curve.Array.data[3].outWeight
+      value: 0.6439915
+      objectReference: {fileID: 0}
     - target: {fileID: 6485329224993454628, guid: 6537c9805fbde2b4bb2e94595b86f14f,
         type: 3}
       propertyPath: m_Name
@@ -1810,11 +1880,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _spectrum: {fileID: 11400000, guid: 2a1e253c30f067841a17d865dc2acc09, type: 2}
   _spectrumFixedAtRuntime: 1
-  _waveDirectionHeadingAngle: 0
+  _waveDirectionHeadingAngle: -90
   _overrideGlobalWindSpeed: 0
   _windSpeed: 20
   _respectShallowWaterAttenuation: 0.104
-  _weight: 1
+  _weight: 0.348
   _blendMode: 0
   _queue: 0
   _resolution: 128
@@ -1824,7 +1894,7 @@ MonoBehaviour:
   _subdivisions: 1
   _featherWaveStart: 0.1
   _version: 0
-  _windTurbulence: 0.145
+  _windTurbulence: 0.498
   _maxVerticalDisplacement: 10
   _maxHorizontalDisplacement: 15
   _enableBakedCollision: 0
@@ -1952,8 +2022,8 @@ MonoBehaviour:
   m_y: 0
   m_z: 0
   m_isFoldedOut: 0
-  m_width: 1
-  m_height: 7
+  m_width: 100
+  m_height: 5
   m_blendStrength: 0.5
   m_absoluteHeightValue: 0
   m_rotation: 0
@@ -2217,8 +2287,8 @@ MonoBehaviour:
     m_blendMode: 0
     m_imageMaskLocation: 0
     m_strength: 1
-    m_seaLevel: 26
-    m_maxWorldHeight: 66.42365
+    m_seaLevel: 0
+    m_maxWorldHeight: 0
     m_minWorldHeight: 0
     m_xOffSet: 0
     m_zOffSet: 0
@@ -2228,7 +2298,7 @@ MonoBehaviour:
     m_zScale: 1
     m_rotationDegrees: 0
     m_tiling: 0
-    m_imageMaskSpace: 1
+    m_imageMaskSpace: 0
     m_imageMaskTextureGUID: 
     m_imageMaskFilterMode: 0
     m_imageMaskColorSelectionColor: {r: 1, g: 1, b: 1, a: 1}
@@ -2372,7 +2442,7 @@ MonoBehaviour:
       m_warpIterations: 0.6973783
       m_warpStrength: 0.9334392
       m_warpOffset: {x: 131.88863, y: -790.25446, z: 9.614468, w: 0}
-    m_noiseSettings: {fileID: 1641982626}
+    m_noiseSettings: {fileID: 1497334897}
     m_noiseToolSettings:
       worldHeightRemap: {x: 0, y: 0}
       coordSpace: 0
@@ -2424,8 +2494,8 @@ MonoBehaviour:
     m_blendMode: 0
     m_imageMaskLocation: 0
     m_strength: 1
-    m_seaLevel: 26
-    m_maxWorldHeight: 66.42365
+    m_seaLevel: 0
+    m_maxWorldHeight: 0
     m_minWorldHeight: 0
     m_xOffSet: 0
     m_zOffSet: 0
@@ -3394,8 +3464,8 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 60
+  far clip plane: 10000
+  field of view: 80
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -3421,13 +3491,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 25.63, z: -10}
+  m_LocalRotation: {x: 0.0058179703, y: 0.9914773, z: -0.04762406, w: 0.12112336}
+  m_LocalPosition: {x: -2.7, y: 114.4, z: 618.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 5.5, y: 166.07, z: 0}
 --- !u!114 &330585547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3452,7 +3522,7 @@ MonoBehaviour:
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
   m_RenderPostProcessing: 1
-  m_Antialiasing: 0
+  m_Antialiasing: 1
   m_AntialiasingQuality: 2
   m_StopNaN: 0
   m_Dithering: 0
@@ -18854,7 +18924,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 7, z: 1}
+  m_LocalScale: {x: 100, y: 7, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1234800898}
@@ -18955,7 +19025,7 @@ MonoBehaviour:
   m_showSeaLevelPlane: 1
   m_showRulers: 0
   m_syncHeightmaps: 1
-  m_stampDirty: 0
+  m_stampDirty: 1
   m_worldMapStampToken: {fileID: 0}
   m_recordUndo: 0
   m_currentStamperUndoOperation: 0
@@ -25202,7 +25272,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1000, y: 1, z: 1000}
+  m_LocalScale: {x: 2000, y: 1, z: 2000}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 812040272}
@@ -25527,7 +25597,7 @@ Transform:
   m_GameObject: {fileID: 812040271}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 20, z: 0}
+  m_LocalPosition: {x: 0, y: 30, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -25548,7 +25618,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _version: 0
-  _globalWindSpeed: 150
+  _globalWindSpeed: 45.9
   _viewpoint: {fileID: 0}
   _camera: {fileID: 330585545}
   _teleportThreshold: 10
@@ -27019,7 +27089,7 @@ MonoBehaviour:
   priority: 0
   blendDistance: 0
   weight: 1
-  sharedProfile: {fileID: 11400000, guid: a6560a915ef98420e9faacc1c7438823, type: 2}
+  sharedProfile: {fileID: 11400000, guid: 348d3fb1611ba684a800839c5739c725, type: 2}
 --- !u!4 &832575519
 Transform:
   m_ObjectHideFlags: 0
@@ -32013,7 +32083,7 @@ MonoBehaviour:
   m_spawnRuleStampsToggleAllState: 1
   m_drawPreview: 0
   m_previewRuleIds: 
-  m_maxWorldHeight: 66.42365
+  m_maxWorldHeight: 0
   m_minWorldHeight: 0
   m_showSeaLevelinStampPreview: 1
   m_terrainGeneratorPanelUnfolded: 1
@@ -35949,6 +36019,30 @@ MonoBehaviour:
     m_selectedWorldBiomeMaskGUID: 
     m_growAndShrinkValue: 0
     m_globalSpawnerMaskStackRT: {fileID: 0}
+--- !u!114 &1497334897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cba17d399ab86974c8ef9551f6e8f8d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transformSettings:
+    translation: {x: -219.88208, y: -311.00653, z: 1037.8025}
+    scale: {x: 2.833992, y: 1, z: 2.833992}
+    rotation: {x: 0, y: 0, z: 0}
+    flipScaleX: 0
+    flipScaleY: 0
+    flipScaleZ: 0
+  domainSettings:
+    noiseTypeName: Perlin
+    fractalTypeName: Fbm
+    noiseTypeParams: 
+    fractalTypeParams: '{"warpOffsets":{"x":131.8886260986328,"y":-790.2544555664063,"z":9.61446762084961,"w":0.0},"octavesMinMax":{"x":0.0,"y":16.0},"amplitudeMinMax":{"x":0.0,"y":1.0},"frequencyMinMax":{"x":0.0,"y":2.0},"lacunarityMinMax":{"x":0.0,"y":4.0},"persistenceMinMax":{"x":0.0,"y":1.0},"warpIterationsMinMax":{"x":0.0,"y":8.0},"warpStrengthMinMax":{"x":-2.0,"y":2.0},"octaves":8.0,"amplitude":0.48794734477996828,"frequency":1.0,"persistence":0.5,"lacunarity":0.9288221597671509,"warpIterations":0.6973782777786255,"warpStrength":0.9334391951560974,"warpEnabled":true,"warpExpanded":true}'
 --- !u!114 &1501855419
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40489,30 +40583,6 @@ MonoBehaviour:
     m_selectedWorldBiomeMaskGUID: 
     m_growAndShrinkValue: 0
     m_globalSpawnerMaskStackRT: {fileID: 0}
---- !u!114 &1641982626
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cba17d399ab86974c8ef9551f6e8f8d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  transformSettings:
-    translation: {x: -219.88208, y: -311.00653, z: 1037.8025}
-    scale: {x: 2.833992, y: 1, z: 2.833992}
-    rotation: {x: 0, y: 0, z: 0}
-    flipScaleX: 0
-    flipScaleY: 0
-    flipScaleZ: 0
-  domainSettings:
-    noiseTypeName: Perlin
-    fractalTypeName: Fbm
-    noiseTypeParams: 
-    fractalTypeParams: '{"warpOffsets":{"x":131.8886260986328,"y":-790.2544555664063,"z":9.61446762084961,"w":0.0},"octavesMinMax":{"x":0.0,"y":16.0},"amplitudeMinMax":{"x":0.0,"y":1.0},"frequencyMinMax":{"x":0.0,"y":2.0},"lacunarityMinMax":{"x":0.0,"y":4.0},"persistenceMinMax":{"x":0.0,"y":1.0},"warpIterationsMinMax":{"x":0.0,"y":8.0},"warpStrengthMinMax":{"x":-2.0,"y":2.0},"octaves":8.0,"amplitude":0.48794734477996828,"frequency":1.0,"persistence":0.5,"lacunarity":0.9288221597671509,"warpIterations":0.6973782777786255,"warpStrength":0.9334391951560974,"warpEnabled":true,"warpExpanded":true}'
 --- !u!1001 &1657197638
 PrefabInstance:
   m_ObjectHideFlags: 0
