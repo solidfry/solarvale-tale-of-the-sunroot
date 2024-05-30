@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.112
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 21145861}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 0.112}
+  m_IndirectSpecularColor: {r: 0.0362307, g: 0.051696237, b: 0.07525824, a: 0.112}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2699,7 +2699,7 @@ MonoBehaviour:
       m_warpIterations: 0.6973783
       m_warpStrength: 0.9334392
       m_warpOffset: {x: 131.88863, y: -790.25446, z: 9.614468, w: 0}
-    m_noiseSettings: {fileID: 990463105}
+    m_noiseSettings: {fileID: 758275300}
     m_noiseToolSettings:
       worldHeightRemap: {x: 0, y: 0}
       coordSpace: 0
@@ -7846,8 +7846,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 156.025, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1299945726}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &520004358
@@ -9658,6 +9657,30 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 752669161}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &758275300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cba17d399ab86974c8ef9551f6e8f8d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transformSettings:
+    translation: {x: -219.88208, y: -311.00653, z: 1037.8025}
+    scale: {x: 2.833992, y: 1, z: 2.833992}
+    rotation: {x: 0, y: 0, z: 0}
+    flipScaleX: 0
+    flipScaleY: 0
+    flipScaleZ: 0
+  domainSettings:
+    noiseTypeName: Perlin
+    fractalTypeName: Fbm
+    noiseTypeParams: 
+    fractalTypeParams: '{"warpOffsets":{"x":131.8886260986328,"y":-790.2544555664063,"z":9.61446762084961,"w":0.0},"octavesMinMax":{"x":0.0,"y":16.0},"amplitudeMinMax":{"x":0.0,"y":1.0},"frequencyMinMax":{"x":0.0,"y":2.0},"lacunarityMinMax":{"x":0.0,"y":4.0},"persistenceMinMax":{"x":0.0,"y":1.0},"warpIterationsMinMax":{"x":0.0,"y":8.0},"warpStrengthMinMax":{"x":-2.0,"y":2.0},"octaves":8.0,"amplitude":0.48794734477996828,"frequency":1.0,"persistence":0.5,"lacunarity":0.9288221597671509,"warpIterations":0.6973782777786255,"warpStrength":0.9334391951560974,"warpEnabled":true,"warpExpanded":true}'
 --- !u!1001 &759031025
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16557,30 +16580,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 984891277}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &990463105
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cba17d399ab86974c8ef9551f6e8f8d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  transformSettings:
-    translation: {x: -219.88208, y: -311.00653, z: 1037.8025}
-    scale: {x: 2.833992, y: 1, z: 2.833992}
-    rotation: {x: 0, y: 0, z: 0}
-    flipScaleX: 0
-    flipScaleY: 0
-    flipScaleZ: 0
-  domainSettings:
-    noiseTypeName: Perlin
-    fractalTypeName: Fbm
-    noiseTypeParams: 
-    fractalTypeParams: '{"warpOffsets":{"x":131.8886260986328,"y":-790.2544555664063,"z":9.61446762084961,"w":0.0},"octavesMinMax":{"x":0.0,"y":16.0},"amplitudeMinMax":{"x":0.0,"y":1.0},"frequencyMinMax":{"x":0.0,"y":2.0},"lacunarityMinMax":{"x":0.0,"y":4.0},"persistenceMinMax":{"x":0.0,"y":1.0},"warpIterationsMinMax":{"x":0.0,"y":8.0},"warpStrengthMinMax":{"x":-2.0,"y":2.0},"octaves":8.0,"amplitude":0.48794734477996828,"frequency":1.0,"persistence":0.5,"lacunarity":0.9288221597671509,"warpIterations":0.6973782777786255,"warpStrength":0.9334391951560974,"warpEnabled":true,"warpExpanded":true}'
 --- !u!114 &1016397285
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21167,8 +21166,10 @@ GameObject:
   - component: {fileID: 1299945729}
   - component: {fileID: 1299945728}
   - component: {fileID: 1299945732}
+  - component: {fileID: 1299945734}
+  - component: {fileID: 1299945733}
   m_Layer: 0
-  m_Name: 'Capsule - Player '
+  m_Name: 'Player '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21182,12 +21183,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1299945725}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 156.025, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 505903697}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!143 &1299945728
 CharacterController:
@@ -21295,7 +21296,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1299945725}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 95275609261024a45b4806415f9ca404, type: 3}
   m_Name: 
@@ -21307,6 +21308,113 @@ MonoBehaviour:
   gravity: 20
   jumpForce: 8
   speedMultiplier: 2
+--- !u!114 &1299945733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1299945725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3023419ffccf6004c8f4c06d3b01b3a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1299945734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1299945725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 678834a95aeae0d47b6a9c8fe45ef987,
+    type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1299945733}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 82f2ac1f-4a8e-43b1-b780-85a68882d4e0
+    m_ActionName: Player/Move[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 57880077-1b8e-421d-9b96-66b463cfecee
+    m_ActionName: Player/Look[/Mouse/delta]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 3eb45b83-69b2-4c2b-8d46-cee1843d4954
+    m_ActionName: Player/Fire[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 5e7c5d55-0881-4630-aa66-d601c274fbc9
+    m_ActionName: UI/Navigate[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 69c4d4e1-90c4-4c8e-b5c0-c31367d6b6f5
+    m_ActionName: UI/Submit[/Keyboard/enter]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 691950ff-35db-4473-9d0f-dd2da27d3071
+    m_ActionName: UI/Cancel[/Keyboard/escape]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 4cc85101-6bfa-43d2-96a7-9e42d898643d
+    m_ActionName: UI/Point[/Mouse/position]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 6c3cba22-8533-496d-b179-d130248eb970
+    m_ActionName: UI/Click[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 4e4cae75-1432-423a-8e35-1160751f1b01
+    m_ActionName: UI/ScrollWheel[/Mouse/scroll]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 7c9795d9-9df0-4184-82e4-594d89af4ed5
+    m_ActionName: UI/MiddleClick[/Mouse/middleButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 3e2538bc-85d1-419e-9b8d-afb5bf44278c
+    m_ActionName: UI/RightClick[/Mouse/rightButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 8f95f925-643c-4b4d-a35a-9c0b49260ad4
+    m_ActionName: UI/TrackedDevicePosition
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 83bf9d52-b97f-49f5-901c-0e31355f3ac1
+    m_ActionName: UI/TrackedDeviceOrientation
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Player
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!114 &1303079979
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35427,7 +35535,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2006472597}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.03088531, y: -0.000000023690518, z: -0.0000000014078978,
+  m_LocalRotation: {x: 0.030885313, y: -0.000000023224857, z: -0.000000001380613,
     w: 0.999523}
   m_LocalPosition: {x: 0.0000000055879354, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -37422,3 +37530,4 @@ SceneRoots:
   - {fileID: 914071395}
   - {fileID: 1101766469}
   - {fileID: 505903697}
+  - {fileID: 1299945726}

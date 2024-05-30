@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] private CharacterController controller;
     [SerializeField] private Transform camera;
+    [SerializeField] private InputController inputController;
     private float _turnSmoothVelocity;
 
     [SerializeField] private float speed = 12f;
