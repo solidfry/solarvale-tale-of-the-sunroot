@@ -173,7 +173,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: border-low
+      name: border-very-low
       rect:
         serializedVersion: 2
         x: 192
@@ -194,7 +194,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emblem
+      name: border-low
       rect:
         serializedVersion: 2
         x: 0
@@ -203,7 +203,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 30, y: 30, z: 30, w: 30}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -215,7 +215,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: divider-empty
+      name: border-extreme-background
       rect:
         serializedVersion: 2
         x: 64
@@ -224,7 +224,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 16, y: 0, z: 16, w: 0}
+      border: {x: 30, y: 30, z: 30, w: 30}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -236,7 +236,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: divider-full
+      name: border-high-background
       rect:
         serializedVersion: 2
         x: 128
@@ -245,7 +245,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 30, y: 0, z: 30, w: 0}
+      border: {x: 30, y: 30, z: 30, w: 30}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -257,7 +257,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: border-extreme-background
+      name: border-medium-background
       rect:
         serializedVersion: 2
         x: 192
@@ -278,7 +278,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: border-high-background
+      name: border-low-background
       rect:
         serializedVersion: 2
         x: 0
@@ -299,7 +299,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: border-medium-background
+      name: border-very-low-background
       rect:
         serializedVersion: 2
         x: 64
@@ -320,7 +320,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: border-low-background
+      name: Emblem
       rect:
         serializedVersion: 2
         x: 128
@@ -329,7 +329,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 30, y: 30, z: 30, w: 30}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -341,7 +341,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: scrollbar
+      name: divider-ful
       rect:
         serializedVersion: 2
         x: 192
@@ -350,7 +350,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 30, z: 0, w: 30}
+      border: {x: 16, y: 0, z: 16, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -362,7 +362,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Scrollbar-Handle
+      name: divider-filled
       rect:
         serializedVersion: 2
         x: 0
@@ -371,13 +371,55 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 8, z: 0, w: 8}
+      border: {x: 11, y: 21, z: 12, w: 22}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: a46caf71435016a4ab2eccfeb6ed91e2
       internalID: -1509227105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scrollbar-Handle
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 30, z: 0, w: 30}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65a4de0ddb638ae4380619c7d9c53252
+      internalID: -536250071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scrollbar-Handl
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 7, z: 0, w: 7}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4ba3d24b891896458d08981c0bebc7e
+      internalID: 1259128709
       vertices: []
       indices: 
       edges: []
@@ -393,19 +435,21 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Scrollbar-Handle: -1509227105
+      Emblem: -1344115288
+      Scrollbar-Handl: 1259128709
+      Scrollbar-Handle: -536250071
       border-extreme: 533826913
-      border-extreme-background: 416441042
+      border-extreme-background: -730904398
       border-high: 1530793861
-      border-high-background: -1410218359
-      border-low: -1279679598
-      border-low-background: -1344115288
+      border-high-background: -178636913
+      border-low: 531043350
+      border-low-background: -1410218359
       border-medium: 613954924
-      border-medium-background: 187804033
-      divider-empty: -730904398
-      divider-full: -178636913
-      emblem: 531043350
-      scrollbar: -1656373080
+      border-medium-background: 416441042
+      border-very-low: -1279679598
+      border-very-low-background: 187804033
+      divider-filled: -1509227105
+      divider-ful: -1656373080
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
