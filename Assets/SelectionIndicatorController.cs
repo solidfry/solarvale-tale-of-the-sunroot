@@ -49,8 +49,9 @@ public class SelectedItemController : MonoBehaviour
     private void SetTarget()
     {
         if (currentTarget == eventSystem.currentSelectedGameObject?.transform || eventSystem.currentSelectedGameObject?.transform.parent != itemsList ) return;
-        if (eventSystem.currentSelectedGameObject == null) return;
-        currentTarget = eventSystem.currentSelectedGameObject.GetComponent<RectTransform>();
+        if (eventSystem?.currentSelectedGameObject == null) return;
+        currentTarget = eventSystem?.currentSelectedGameObject.GetComponent<RectTransform>();
+        Debug.Log("Setting new target" + currentTarget.name);
     }
 
     private void UpdateTransform()
@@ -67,5 +68,5 @@ public class SelectedItemController : MonoBehaviour
                 interpolationValue));
     }
 
-    private float Lerp(float a, float b, float t) => Mathf.Lerp(a, b, t);
+    private float Lerp(float a, float b, float t) => Mathf.Lerp(a, b, t * Time.deltaTime);
 }
