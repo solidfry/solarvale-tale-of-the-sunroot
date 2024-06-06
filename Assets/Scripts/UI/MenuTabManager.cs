@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 namespace UI
 {
-    public class InGameMenuUIManager : MonoBehaviour
+    public class MenuTabManager : MonoBehaviour
     {
         
         [Header("Animation")]
@@ -25,6 +25,23 @@ namespace UI
             OpenMenu(menuItems[_currentMenuIndex].CanvasGroup);
         }
 
+        private void OnValidate()
+        {
+            if (menuItems.Count == 0) return;
+            foreach (var menuItem in menuItems)
+            {
+                if (menuItem.Button is null || menuItem.MenuPanel is null)
+                {
+                    Debug.LogError("Menu Item is missing a reference");
+                    return;
+                } 
+                else if (menuItem.CanvasGroup == null)
+                {
+                    menuItem.SetCanvasGroup(menuItem.MenuPanel.GetComponent<CanvasGroup>());
+                }
+            }
+        }
+
         private void Initialise()
         {
             foreach (var menuItem in menuItems)
@@ -40,15 +57,20 @@ namespace UI
             menuPanel.gameObject.SetActive(true);
             FadeIn(menuPanel);
             foreach (var menuItem in menuItems)
-                if (menuItem.CanvasGroup != menuPanel)
+                if (menuItem.CanvasGroup != menuPanel && menuItem.MenuPanel.activeInHierarchy)
                 {
-                    menuItem.MenuPanel.SetActive(false);
                     FadeOut(menuItem.CanvasGroup);
                 }
         }
-        
-        void FadeOut(CanvasGroup canvasGroup) => canvasGroup.DOFade(0, fadeDuration);
-        void FadeIn(CanvasGroup canvasGroup) => canvasGroup.DOFade(1, fadeDuration);
+
+        void FadeOut(CanvasGroup canvasGroup) => canvasGroup.DOFade(0, fadeDuration).OnComplete(() =>
+        {
+            canvasGroup.interactable = false;
+            canvasGroup.gameObject.SetActive(false);
+        });
+
+        void FadeIn(CanvasGroup canvasGroup) =>
+            canvasGroup.DOFade(1, fadeDuration).OnComplete(() => { canvasGroup.interactable = true; });
     }
 
     [Serializable]
@@ -57,5 +79,7 @@ namespace UI
         [field:SerializeField] public Button Button { get; private set; }
         [field:SerializeField] public GameObject MenuPanel { get; private set; }
         [field:SerializeField] public CanvasGroup CanvasGroup  { get; private set; }
+        
+        public void SetCanvasGroup(CanvasGroup canvasGroup) => CanvasGroup = canvasGroup;
     }
 }
