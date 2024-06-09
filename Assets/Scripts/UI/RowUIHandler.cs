@@ -44,12 +44,12 @@ namespace UI
 
         void HighlightRow()
         {
-            image.CrossFadeAlpha(1f, 0.1f, false);
+            image.CrossFadeAlpha(1f, 0.1f, true);
         }
     
         void RemoveHighlight()
         {
-            image.CrossFadeAlpha(0.0f, 0.1f, false);
+            image.CrossFadeAlpha(0.0f, 0.1f, true);
         }
     }
 }

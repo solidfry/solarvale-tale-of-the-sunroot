@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.Serialization;
 
 namespace UI
 {
@@ -29,6 +28,8 @@ namespace UI
             UpdateSelectorAlpha();
             UpdateTransform();
         }
+        
+
 
         private void UpdateSelectorAlpha()
         {
@@ -54,18 +55,20 @@ namespace UI
 
         private void UpdateTransform()
         {
+            
             selectionIndicator.position = 
                 new Vector2(
                     Lerp(selectionIndicator.position.x, 
                         currentTarget.position.x, 
-                        interpolationValue), 
+                        interpolationValue * Time.unscaledDeltaTime), 
                     selectionIndicator.position.y);
+            
             selectionIndicator.SetSizeWithCurrentAnchors( RectTransform.Axis.Horizontal,  
                 Lerp(selectionIndicator.rect.width, 
                     currentTarget.rect.width, 
-                    interpolationValue));
+                    interpolationValue * Time.unscaledDeltaTime));
         }
 
-        private float Lerp(float a, float b, float t) => Mathf.Lerp(a, b, t * Time.deltaTime);
+        private float Lerp(float a, float b, float t) => Mathf.Lerp(a, b, t);
     }
 }
