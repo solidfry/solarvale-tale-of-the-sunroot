@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 namespace UI
@@ -50,6 +51,13 @@ namespace UI
                     OpenMenu(menuItem.CanvasGroup);
                     _currentMenuIndex = menuItems.IndexOf(menuItem);
                 });
+
+            SetInitialTarget();
+        }
+
+        private void SetInitialTarget()
+        {
+            EventSystem.current.SetSelectedGameObject(menuItems[_currentMenuIndex].Button.gameObject);
         }
 
         void OpenMenu(CanvasGroup menuPanel)
@@ -67,10 +75,10 @@ namespace UI
         {
             canvasGroup.interactable = false;
             canvasGroup.gameObject.SetActive(false);
-        });
+        }).SetUpdate(true);
 
         void FadeIn(CanvasGroup canvasGroup) =>
-            canvasGroup.DOFade(1, fadeDuration).OnComplete(() => { canvasGroup.interactable = true; });
+            canvasGroup.DOFade(1, fadeDuration).OnComplete(() => { canvasGroup.interactable = true; }).SetUpdate(true);
     }
 
     [Serializable]
