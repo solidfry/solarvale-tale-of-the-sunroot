@@ -23,6 +23,7 @@ namespace Interaction
             if (CheckIsInteractable()) return;
             
             Debug.Log("Interacting with " + gameObject.name);
+            interactEvent?.Invoke();
             
             if (isOneTimeUse) isInteractable = false;
         }
