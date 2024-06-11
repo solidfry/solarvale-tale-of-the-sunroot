@@ -55,9 +55,9 @@ namespace QuestSystem
             questLogText.text = "";
             foreach (QuestData quest in questData)
             {
-                string color = quest.isCompleted ? "green" : "red";
-                string status = quest.isCompleted ? " (Completed)" : "";
-                questLogText.text += $"<color={color}>{quest.title}:</color> {quest.description}{status}\n";
+                string color = quest.CheckQuestCompleted() ? "green" : "red";
+                string status = quest.CheckQuestCompleted() ? " (Completed)" : "";
+                questLogText.text += $"<color={color}>{quest.title}:</color> {quest.Description}{status}\n";
             }
         }
 
