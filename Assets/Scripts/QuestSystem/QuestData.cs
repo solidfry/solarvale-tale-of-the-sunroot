@@ -6,52 +6,37 @@ namespace QuestSystem
     public class QuestData : ScriptableObject
     {
         public string title;
-        [TextArea] 
-        public string description;
-        public bool isVisible;
-        public bool isCompleted;
-        public bool isTracked;
+        [field: SerializeField] public string Description { get; private set; }
+        [SerializeField] bool isVisible;
+        [SerializeField] bool isCompleted;
+        [SerializeField] bool isTracked;
 
 #if UNITY_EDITOR  
         private void Reset()
         {
             ResetQuest();
         }
+        
+        private void OnValidate()
+        {
+            ResetQuest();
+        }
 #endif
         
-        public void SetVisible()
-        {
-            isVisible = true;
-        }
-        
-        public void SetInvisible()
-        {
-            isVisible = false;
-        }
-        
-        public bool CheckQuestCompleted()
-        {
-            return isCompleted;
-        }
+        public void SetVisible() => isVisible = true;
 
-        public void CompleteQuest()
-        {
-            isCompleted = true;
-        }
-  
-        public void ResetQuest()
-        {
-            isCompleted = false;
-        }
-        
-        public void TrackQuest()
-        {
-            isTracked = true;
-        }
-        
-        public void UntrackQuest()
-        {
-            isTracked = false;
-        }
+        public void SetInvisible() => isVisible = false;
+
+        public bool CheckQuestCompleted() => isCompleted;
+
+        public void CompleteQuest() => isCompleted = true;
+
+        public void ResetQuest() => isCompleted = false;
+
+        public void TrackQuest() => isTracked = true;
+
+        public void UntrackQuest() => isTracked = false;
+
+        public bool CheckQuestTracked() => isTracked;
     }
 }

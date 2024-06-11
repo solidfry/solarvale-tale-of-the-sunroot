@@ -6,6 +6,9 @@ namespace QuestSystem
     {
         [SerializeField] QuestData questData;
         
-        
+        public void CompleteQuest()
+        {
+            questData.CompleteQuest();
+        }
     }
 }
