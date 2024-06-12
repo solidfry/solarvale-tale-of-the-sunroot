@@ -44,7 +44,6 @@ public class QuestNode : MonoBehaviour
             layoutElement = GetComponent<LayoutElement>();
             layoutGroup = GetComponent<LayoutGroup>();
         }
-
         
         CompileColorElements();
 

@@ -33,8 +33,8 @@ namespace QuestSystem
 
         public void CompleteQuest(QuestData questData)
         {
-            QuestData quest = questList.Find(q => q.Title == questData.Title);
-            Debug.Log("Attempting to complete quest: " + quest.Title);
+            QuestData quest = questList.Find(q => q == questData);
+            // Debug.Log("Attempting to complete quest: " + quest.Title);
             if (quest != null)
             {
                 quest.CompleteQuest();
