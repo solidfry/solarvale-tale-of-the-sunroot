@@ -1,80 +1,55 @@
 using System.Collections.Generic;
-using TMPro;
+using Events;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace QuestSystem
 {
     public class QuestManager : MonoBehaviour
     {
-        public List<QuestData> questData;
-        
-        // public List<Quest> quests = new List<Quest>();
-        public TMP_Text questLogText;
+        [SerializeField] private List<QuestData> questList;
 
-        void Start()
+        private void OnEnable()
         {
-            // AddQuest("Clean up Whale Rock", "Description");
-            // AddQuest("Bring the sick gecko to Grandma", "Description");
-            // AddQuest("Name the Gecko", "Description");
-            // AddQuest("Explore Solarvale", "Use camera to find clues on the gecko origin");
-            // AddQuest("Take a photo of the painting", "Description");
-
-            UpdateQuestLog();
+            GlobalEvents.OnQuestCompletedEvent += CompleteQuest;
+            GlobalEvents.OnQuestAcquiredEvent += AddQuest;
+        }
+        
+        private void OnDisable()
+        {
+            GlobalEvents.OnQuestCompletedEvent -= CompleteQuest;
+            GlobalEvents.OnQuestAcquiredEvent -= AddQuest;
+        }
+        
+        void AddQuest(QuestData questData)
+        {
+            if (questList.Contains(questData))
+            {
+                return;
+            }
+            questList.Add(questData);
+            GlobalEvents.OnQuestAcquiredLogUpdatedEvent?.Invoke(questData);
         }
 
-        // public void AddQuest(string title, string description)
-        // {
-        //     questData.Add(new Quest(title, description));
-        //     Debug.Log("Quest added: " + title);
-        //     UpdateQuestLog();
-        // }
-
-        public void CompleteQuest(string title)
+        public void CompleteQuest(QuestData questData)
         {
-            Debug.Log("Attempting to complete quest: " + title);
-            QuestData quest = questData.Find(q => q.title == title);
+            QuestData quest = questList.Find(q => q.Title == questData.Title);
+            Debug.Log("Attempting to complete quest: " + quest.Title);
             if (quest != null)
             {
                 quest.CompleteQuest();
-                Debug.Log(title + " completed");
-                UpdateQuestLog();
+                GlobalEvents.OnQuestCompletedLogUpdatedEvent?.Invoke(quest);
             }
             else
             {
-                // Debug.LogWarning("Quest not found: " + title);
-                // Debug.LogWarning("Available quests are:");
-                foreach (var q in questData)
+                foreach (var q in questList)
                 {
-                    Debug.LogWarning(" - " + q.title);
+                    Debug.LogWarning(" - " + q.Title);
                 }
             }
         }
-
-        void UpdateQuestLog()
-        {
-            questLogText.text = "";
-            foreach (QuestData quest in questData)
-            {
-                string color = quest.CheckQuestCompleted() ? "green" : "red";
-                string status = quest.CheckQuestCompleted() ? " (Completed)" : "";
-                questLogText.text += $"<color={color}>{quest.title}:</color> {quest.Description}{status}\n";
-            }
-        }
-
-        void Update()
-        {
-            if (Input.GetKeyDown(KeyCode.Alpha1))
-            {
-                Debug.Log("Key 1 pressed");
-                CompleteQuest("Clean up Whale Rock");
-            }
-            if (Input.GetKeyDown(KeyCode.Alpha2))
-            {
-                Debug.Log("Key 2 pressed");
-                CompleteQuest("Bring the sick gecko to Grandma");
-            }
-            // Add more code for other quests as needed
-        }
+        
+        public List<QuestData> GetQuestList() => questList;
     }
 
 }
