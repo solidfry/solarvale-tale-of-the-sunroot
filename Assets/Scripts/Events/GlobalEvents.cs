@@ -1,4 +1,5 @@
 ﻿using System;
+using Interaction;
 
 namespace Events
 {
@@ -11,6 +12,8 @@ namespace Events
         public static Action OnDialogueStartEvent;
         public static Action OnDialogueCompleteEvent;
         public static Action<bool> OnSetCursorInputForLookEvent;
+        public static Action<IInteract> OnInteractableFound;
+        public static Action OnInteractableUIEvent;
 
         
     }
