@@ -5,7 +5,7 @@ namespace QuestSystem
     [CreateAssetMenu(fileName = "New Quest", menuName = "Quest System/Quest Data")]
     public class QuestData : ScriptableObject
     {
-        public string title;
+        [field: SerializeField] public string Title { get; private set; }
         [field: SerializeField] public string Description { get; private set; }
         [SerializeField] bool isVisible;
         [SerializeField] bool isCompleted;

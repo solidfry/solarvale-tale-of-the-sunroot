@@ -1,5 +1,6 @@
 ﻿using System;
 using Interaction;
+using QuestSystem;
 
 namespace Events
 {
@@ -14,7 +15,9 @@ namespace Events
         public static Action<bool> OnSetCursorInputForLookEvent;
         public static Action<IInteract> OnInteractableFound;
         public static Action OnInteractableUIEvent;
-
-        
+        public static Action<QuestData> OnQuestCompletedEvent;
+        public static Action<QuestData> OnQuestCompletedLogUpdatedEvent;
+        public static Action<QuestData> OnQuestAcquiredEvent;
+        public static Action<QuestData> OnQuestAcquiredLogUpdatedEvent;
     }
 }
