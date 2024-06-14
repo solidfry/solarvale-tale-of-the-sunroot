@@ -19,9 +19,24 @@ public class CameraManager : MonoBehaviour
 
     private Texture2D screenCapture;
     private bool viewingPhoto;
-    
+
+    private bool isFirstPerson = false;
+
+    public Camera mainCamera;
+    public Transform firstPersonCameraPosition;
+    public Transform thirdPersonCameraPosition;
+
     private void Start()
     {
+        mainCamera = Camera.main;
+        if (mainCamera != null)
+        {
+            Debug.Log("First person camera found" + mainCamera.name);
+        }
+        else
+        {
+            Debug.Log("First person camera not found!");
+        }
         screenCapture = new Texture2D(Screen.width, Screen.height, TextureFormat.RGB24, false);
     }
 
@@ -30,6 +45,11 @@ public class CameraManager : MonoBehaviour
         // ADD Check if player is in camera mode, if so then enable camera functions other wise remove the camera mode
         // Hide all unncessary UI
         // When player press E take the photo else remove the photo
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            SwitchToFirstPerson();
+
+        }
         if (Input.GetKeyDown(KeyCode.E))
         {
             if (!viewingPhoto)
@@ -82,5 +102,19 @@ public class CameraManager : MonoBehaviour
         }
         viewingPhoto = false;
         photoFrame.SetActive(false);
+    }
+
+    void SwitchToThirdPerson()
+    {
+        mainCamera.transform.position = thirdPersonCameraPosition.position;
+        mainCamera.transform.rotation = thirdPersonCameraPosition.rotation;
+        isFirstPerson = false;
+    }
+
+    void SwitchToFirstPerson()
+    {
+        mainCamera.transform.position = firstPersonCameraPosition.position;
+        mainCamera.transform.rotation = firstPersonCameraPosition.rotation;
+        isFirstPerson = true;
     }
 }
