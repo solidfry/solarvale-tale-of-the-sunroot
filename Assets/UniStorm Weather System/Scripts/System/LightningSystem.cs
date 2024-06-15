@@ -94,7 +94,7 @@ namespace UniStorm.Utility
 
             gameObject.AddComponent<AudioSource>();
             AS = GetComponent<AudioSource>();
-            AS.outputAudioMixerGroup = FindObjectOfType<UniStormSystem>().UniStormAudioMixer.FindMatchingGroups("Master/Weather")[0];
+            // AS.outputAudioMixerGroup = FindObjectOfType<UniStormSystem>().UniStormAudioMixer.FindMatchingGroups("Master/Weather")[0];
             LightningBolt.enabled = false;
             m_LightningMaterial = LightningBolt.material;
             m_LightningMaterial.SetColor("_TintColor", UniStormSystem.Instance.LightningColor);

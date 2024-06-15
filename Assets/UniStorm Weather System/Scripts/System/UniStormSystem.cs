@@ -550,10 +550,10 @@ namespace UniStorm
                 WeatherSoundsVolume = 0.001f;
             }
 
-            UniStormAudioMixer = Resources.Load("UniStorm Audio Mixer") as UnityEngine.Audio.AudioMixer;
-            UniStormAudioMixer.SetFloat("MusicVolume", Mathf.Log(MusicVolume) * 20);
-            UniStormAudioMixer.SetFloat("AmbienceVolume", Mathf.Log(AmbienceVolume) * 20);
-            UniStormAudioMixer.SetFloat("WeatherVolume", Mathf.Log(WeatherSoundsVolume) * 20);
+            // UniStormAudioMixer = Resources.Load("UniStorm Audio Mixer") as UnityEngine.Audio.AudioMixer;
+            // UniStormAudioMixer.SetFloat("MusicVolume", Mathf.Log(MusicVolume) * 20);
+            // UniStormAudioMixer.SetFloat("AmbienceVolume", Mathf.Log(AmbienceVolume) * 20);
+            // UniStormAudioMixer.SetFloat("WeatherVolume", Mathf.Log(WeatherSoundsVolume) * 20);
 
             //Setup our sound holder
             m_SoundTransform = new GameObject();
@@ -679,20 +679,20 @@ namespace UniStorm
             CreateMoon();            
 
             //Intialize the other components and set the proper settings from within the editor
-            GameObject TempAudioSource = new GameObject("UniStorm Time of Day Sounds");
-            TempAudioSource.transform.SetParent(this.transform);
-            TempAudioSource.transform.localPosition = Vector3.zero;
-            TempAudioSource.AddComponent<AudioSource>();
-            TimeOfDayAudioSource = TempAudioSource.GetComponent<AudioSource>();
-            TimeOfDayAudioSource.outputAudioMixerGroup = UniStormAudioMixer.FindMatchingGroups("Master/Ambience")[0];
+            // GameObject TempAudioSource = new GameObject("UniStorm Time of Day Sounds");
+            // TempAudioSource.transform.SetParent(this.transform);
+            // TempAudioSource.transform.localPosition = Vector3.zero;
+            // TempAudioSource.AddComponent<AudioSource>();
+            // TimeOfDayAudioSource = TempAudioSource.GetComponent<AudioSource>();
+            // TimeOfDayAudioSource.outputAudioMixerGroup = UniStormAudioMixer.FindMatchingGroups("Master/Ambience")[0];
             m_TimeOfDaySoundsSeconds = Random.Range(TimeOfDaySoundsSecondsMin, TimeOfDaySoundsSecondsMax + 1);
 
-            GameObject TempAudioSourceMusic = new GameObject("UniStorm Time of Day Music");
-            TempAudioSourceMusic.transform.SetParent(this.transform);
-            TempAudioSourceMusic.transform.localPosition = Vector3.zero;
-            TempAudioSourceMusic.AddComponent<AudioSource>();
-            TimeOfDayMusicAudioSource = TempAudioSourceMusic.GetComponent<AudioSource>();
-            TimeOfDayMusicAudioSource.outputAudioMixerGroup = UniStormAudioMixer.FindMatchingGroups("Master/Music")[0];
+            // GameObject TempAudioSourceMusic = new GameObject("UniStorm Time of Day Music");
+            // TempAudioSourceMusic.transform.SetParent(this.transform);
+            // TempAudioSourceMusic.transform.localPosition = Vector3.zero;
+            // TempAudioSourceMusic.AddComponent<AudioSource>();
+            // TimeOfDayMusicAudioSource = TempAudioSourceMusic.GetComponent<AudioSource>();
+            // TimeOfDayMusicAudioSource.outputAudioMixerGroup = UniStormAudioMixer.FindMatchingGroups("Master/Music")[0];
 
             UniStormWindZone = GameObject.Find("UniStorm Windzone").GetComponent<WindZone>();
             m_StarsRenderer = GameObject.Find("UniStorm Stars").GetComponent<Renderer>();

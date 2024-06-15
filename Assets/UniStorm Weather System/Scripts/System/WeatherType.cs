@@ -107,7 +107,8 @@ namespace UniStorm
         public void CreateWeatherSound()
         {
             UniStormSystem UniStormSystemObject = FindObjectOfType<UniStormSystem>();
-            if (UniStormSystemObject.enabled)
+            bool doWeSound = false;
+            if (UniStormSystemObject.enabled && doWeSound)
             {
                 GameObject Temp = new GameObject();
                 Temp.AddComponent<AudioSource>();
