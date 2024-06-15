@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{B6CBD692-12EC-CDBA-0932-48F63C40C91F}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{035620BC-CC86-77C9-3B7D-ED34048C254C}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -22,7 +22,7 @@
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 			</Busses>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{A25C8B87-244D-8719-733B-75BB77583FB5}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{B21B038E-B1DA-CF61-4B27-532849863ABA}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -30,8 +30,39 @@
 					<ShortName>Lounge it.wav</ShortName>
 					<CachePath>SFX/Lounge it_818F3B66.wem</CachePath>
 				</File>
+				<File Id="954250796" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Button_Click.wav</ShortName>
+					<CachePath>SFX/Button_Click_818F3B66.wem</CachePath>
+				</File>
 			</Media>
+			<Plugins>
+				<Custom>
+					<Plugin Id="29179224" Name="Tone Generator" LibName="Wwise Tone Generator" LibId="6684674"/>
+					<Plugin Id="760665764" Name="Tone Generator" LibName="Wwise Tone Generator" LibId="6684674"/>
+				</Custom>
+				<ShareSets>
+					<Plugin Id="3948262040" Name="Octave_Down" LibName="Wwise Pitch Shifter" LibId="8912899"/>
+				</ShareSets>
+			</Plugins>
 			<Events>
+				<Event Id="1149159311" Name="Play_Button_Click" DurationType="OneShot" DurationMin="0.7894785" DurationMax="0.7894785">
+					<MediaRefs>
+						<MediaRef Id="954250796"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="3948262040"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
+				<Event Id="4021863785" Name="Play_Button_Hover" DurationType="OneShot" DurationMin="0.101" DurationMax="0.101">
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="29179224"/>
+							<PluginRef Id="760665764"/>
+						</Custom>
+					</PluginRefs>
+				</Event>
 				<Event Id="3049024044" Name="Play_Lounge_it" DurationType="OneShot" DurationMin="205.92828" DurationMax="205.92828">
 					<MediaRefs>
 						<MediaRef Id="943215775"/>
@@ -40,5 +71,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{57232F06-4D48-F6E5-E8A3-0B8D674431AE}</FileHash>
+	<FileHash>{81DDEE04-C1E0-5F8A-2581-A4CCC17F5274}</FileHash>
 </SoundBanksInfo>
