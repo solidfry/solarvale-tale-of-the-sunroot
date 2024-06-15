@@ -22,6 +22,23 @@
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 			</Busses>
 		</SoundBank>
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{A25C8B87-244D-8719-733B-75BB77583FB5}">
+			<ShortName>Main</ShortName>
+			<Path>Main.bnk</Path>
+			<Media>
+				<File Id="943215775" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Lounge it.wav</ShortName>
+					<CachePath>SFX/Lounge it_818F3B66.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="3049024044" Name="Play_Lounge_it" DurationType="OneShot" DurationMin="205.92828" DurationMax="205.92828">
+					<MediaRefs>
+						<MediaRef Id="943215775"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
 	</SoundBanks>
-	<FileHash>{65ACD701-C344-9E7E-4B1A-A247DBAA44A3}</FileHash>
+	<FileHash>{57232F06-4D48-F6E5-E8A3-0B8D674431AE}</FileHash>
 </SoundBanksInfo>
