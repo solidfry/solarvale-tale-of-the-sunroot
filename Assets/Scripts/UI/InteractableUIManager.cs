@@ -20,7 +20,11 @@ public class InteractableUIManager : MonoBehaviour
 
     private void Awake()
     {
-        keyPromptUI.SetActive(false);
+        if (canvasGroup == null)
+        {
+            canvasGroup = GetComponent<CanvasGroup>();
+        }
+        canvasGroup.alpha = 0;
     }
 
     private void OnEnable()
@@ -43,6 +47,7 @@ public class InteractableUIManager : MonoBehaviour
         }
         currentInteractable = interactable;
         ConfigureInteractableUI();
+        FadeIn();
     }
 
     private void FadeOut()
@@ -51,9 +56,7 @@ public class InteractableUIManager : MonoBehaviour
         isAnimating = true;
         canvasGroup.DOFade(0f, fadeDuration ).OnComplete(() =>
         {
-            keyPromptUI.SetActive(false);
             isAnimating = false;
-
         } ).SetAutoKill(false);
     }
     
@@ -61,21 +64,11 @@ public class InteractableUIManager : MonoBehaviour
     {
         if (isAnimating) return;
         isAnimating = true;
-        keyPromptUI.SetActive(true);
         canvasGroup.DOFade(1f, fadeDuration ).OnComplete( ( ) => isAnimating = false ).SetAutoKill(false);
     }
 
     void ConfigureInteractableUI()
     {
-        if (currentInteractable == null)
-        {
-            FadeOut();
-            return;
-        }
-        
         keyPromptUI.SetText(currentInteractable.InteractMessage);
-        FadeIn();
-        
-        // Debug.Log( $"Interactable: {currentInteractable.Name} - {currentInteractable.InteractMessage}");
     }
 }
