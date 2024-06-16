@@ -22,10 +22,14 @@
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 			</Busses>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{B21B038E-B1DA-CF61-4B27-532849863ABA}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{DE0AF79F-C1C7-8A31-8D00-82ABD3C17427}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
+				<File Id="879010177" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BrandIntro-Birds.wav</ShortName>
+					<CachePath>SFX/BrandIntro-Birds_77454B80.wem</CachePath>
+				</File>
 				<File Id="943215775" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Lounge it.wav</ShortName>
 					<CachePath>SFX/Lounge it_818F3B66.wem</CachePath>
@@ -45,6 +49,11 @@
 				</ShareSets>
 			</Plugins>
 			<Events>
+				<Event Id="2883217168" Name="Play_BrandIntro_Birds" DurationType="OneShot" DurationMin="16.127098" DurationMax="16.127098">
+					<MediaRefs>
+						<MediaRef Id="879010177"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="1149159311" Name="Play_Button_Click" DurationType="OneShot" DurationMin="0.7894785" DurationMax="0.7894785">
 					<MediaRefs>
 						<MediaRef Id="954250796"/>
@@ -71,5 +80,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{81DDEE04-C1E0-5F8A-2581-A4CCC17F5274}</FileHash>
+	<FileHash>{8B1D6D22-2F0D-98E4-CF51-9DF1535DC5FF}</FileHash>
 </SoundBanksInfo>
