@@ -6,7 +6,7 @@ namespace Core
 {
     public class BootStrapDataManager : SingletonPersistent<BootStrapDataManager>
     {
-        [SerializeField] private bool doBootstrap = true;
+        [SerializeField] private bool doBootstrap = false;
 
         private void OnValidate()
         {
@@ -23,7 +23,7 @@ namespace Core
     public static class PerformBootStrap
     {
         const string SceneName = "Init";
-        static bool doBootstrap = true;
+        static bool doBootstrap = false;
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
         public static void Execute()
