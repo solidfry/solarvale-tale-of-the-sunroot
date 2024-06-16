@@ -22,13 +22,13 @@
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 			</Busses>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{DE0AF79F-C1C7-8A31-8D00-82ABD3C17427}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{E50F6E94-9C10-5734-AE52-89569CD07208}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
 				<File Id="879010177" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>BrandIntro-Birds.wav</ShortName>
-					<CachePath>SFX/BrandIntro-Birds_77454B80.wem</CachePath>
+					<CachePath>SFX/BrandIntro-Birds_DA91CC42.wem</CachePath>
 				</File>
 				<File Id="943215775" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Lounge it.wav</ShortName>
@@ -37,6 +37,10 @@
 				<File Id="954250796" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Button_Click.wav</ShortName>
 					<CachePath>SFX/Button_Click_818F3B66.wem</CachePath>
+				</File>
+				<File Id="1029364635" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>soundscape.wav</ShortName>
+					<CachePath>SFX/soundscape_F36C7964.wem</CachePath>
 				</File>
 			</Media>
 			<Plugins>
@@ -72,6 +76,11 @@
 						</Custom>
 					</PluginRefs>
 				</Event>
+				<Event Id="3337834332" Name="Play_GameIntro_SoundScape" DurationType="OneShot" DurationMin="53.70775" DurationMax="53.70775">
+					<MediaRefs>
+						<MediaRef Id="1029364635"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="3049024044" Name="Play_Lounge_it" DurationType="OneShot" DurationMin="205.92828" DurationMax="205.92828">
 					<MediaRefs>
 						<MediaRef Id="943215775"/>
@@ -80,5 +89,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{8B1D6D22-2F0D-98E4-CF51-9DF1535DC5FF}</FileHash>
+	<FileHash>{0D0E4BC6-9694-8AC6-4308-58E531CB24FC}</FileHash>
 </SoundBanksInfo>
