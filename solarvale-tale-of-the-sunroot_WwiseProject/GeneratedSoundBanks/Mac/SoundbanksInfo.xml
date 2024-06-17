@@ -22,10 +22,14 @@
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 			</Busses>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{B21B038E-B1DA-CF61-4B27-532849863ABA}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{E50F6E94-9C10-5734-AE52-89569CD07208}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
+				<File Id="879010177" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BrandIntro-Birds.wav</ShortName>
+					<CachePath>SFX/BrandIntro-Birds_DA91CC42.wem</CachePath>
+				</File>
 				<File Id="943215775" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Lounge it.wav</ShortName>
 					<CachePath>SFX/Lounge it_818F3B66.wem</CachePath>
@@ -33,6 +37,10 @@
 				<File Id="954250796" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Button_Click.wav</ShortName>
 					<CachePath>SFX/Button_Click_818F3B66.wem</CachePath>
+				</File>
+				<File Id="1029364635" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>soundscape.wav</ShortName>
+					<CachePath>SFX/soundscape_F36C7964.wem</CachePath>
 				</File>
 			</Media>
 			<Plugins>
@@ -45,6 +53,11 @@
 				</ShareSets>
 			</Plugins>
 			<Events>
+				<Event Id="2883217168" Name="Play_BrandIntro_Birds" DurationType="OneShot" DurationMin="16.127098" DurationMax="16.127098">
+					<MediaRefs>
+						<MediaRef Id="879010177"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="1149159311" Name="Play_Button_Click" DurationType="OneShot" DurationMin="0.7894785" DurationMax="0.7894785">
 					<MediaRefs>
 						<MediaRef Id="954250796"/>
@@ -63,6 +76,11 @@
 						</Custom>
 					</PluginRefs>
 				</Event>
+				<Event Id="3337834332" Name="Play_GameIntro_SoundScape" DurationType="OneShot" DurationMin="53.70775" DurationMax="53.70775">
+					<MediaRefs>
+						<MediaRef Id="1029364635"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="3049024044" Name="Play_Lounge_it" DurationType="OneShot" DurationMin="205.92828" DurationMax="205.92828">
 					<MediaRefs>
 						<MediaRef Id="943215775"/>
@@ -71,5 +89,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{BF5D3AB5-AF1D-0D32-F59F-07F89517843F}</FileHash>
+	<FileHash>{2B6A61BD-238E-63FE-403A-FC5D7EB312B2}</FileHash>
 </SoundBanksInfo>

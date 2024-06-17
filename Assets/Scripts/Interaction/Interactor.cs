@@ -9,7 +9,7 @@ namespace Interaction
     /// </summary>
     public class Interactor : MonoBehaviour
     {
-        private IInteract _currentInteractable;
+        private IInteractable _currentInteractable;
         [SerializeField] LayerMask interactableLayers;
         [SerializeField] Vector3 rayOffset;
         [SerializeField] float interactableDistance = 3f;
@@ -26,7 +26,7 @@ namespace Interaction
         {
             if (Physics.SphereCast(GetRayOrigin(), raycastRadius, transform.forward, out var hit, interactableDistance, interactableLayers))
             {
-                if (hit.collider.TryGetComponent(out IInteract interactable))
+                if (hit.collider.TryGetComponent(out IInteractable interactable))
                 {
                     if (_currentInteractable != interactable)
                     {
@@ -72,7 +72,6 @@ namespace Interaction
         {
             if (_currentInteractable == null) return;
             _currentInteractable.Interact();
-            GlobalEvents.OnInteractableUIEvent?.Invoke();
         }
 
         private Vector3 GetRayOrigin() => transform.position + rayOffset;

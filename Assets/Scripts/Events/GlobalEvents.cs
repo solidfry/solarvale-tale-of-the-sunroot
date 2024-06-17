@@ -13,8 +13,7 @@ namespace Events
         public static Action OnDialogueStartEvent;
         public static Action OnDialogueCompleteEvent;
         public static Action<bool> OnSetCursorInputForLookEvent;
-        public static Action<IInteract> OnInteractableFound;
-        public static Action OnInteractableUIEvent;
+        public static Action<IInteractable> OnInteractableFound;
         public static Action<QuestData> OnQuestCompletedEvent;
         public static Action<QuestData> OnQuestCompletedLogUpdatedEvent;
         public static Action<QuestData> OnQuestAcquiredEvent;

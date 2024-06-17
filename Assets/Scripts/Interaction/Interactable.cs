@@ -6,7 +6,7 @@ namespace Interaction
     ///<summary>
     /// This class is added to any GameObject that can be interacted with.
     /// </summary>
-    public class Interactable : MonoBehaviour, IInteract
+    public class Interactable : MonoBehaviour, IInteractable
     {
         [SerializeField] private UnityEvent interactEvent;
         [SerializeField] private bool isInteractable = true;

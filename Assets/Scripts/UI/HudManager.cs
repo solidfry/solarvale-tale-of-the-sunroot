@@ -37,7 +37,7 @@ public class HudManager : MonoBehaviour
         if (!canShowMenu) return;
         showMenu = !showMenu;
         menuInstance.SetActive(showMenu);
-        Debug.Log("show menu: " + showMenu);
+        // Debug.Log("show menu: " + showMenu);
         GlobalEvents.OnGamePausedEvent?.Invoke(showMenu);
         GlobalEvents.OnPlayerControlsLockedEvent?.Invoke(showMenu);
         Cursor.lockState = showMenu ? CursorLockMode.None : CursorLockMode.Locked;

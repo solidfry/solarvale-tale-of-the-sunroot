@@ -54,6 +54,10 @@
 					</ChildrenList>
 				</ActorMixer>
 				<ActorMixer Name="UI" ID="{9DAF00FE-32C5-4298-9286-5C5DAFBFB287}" ShortID="631225493">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="17"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
@@ -207,6 +211,85 @@
 										</Sound>
 									</ChildrenList>
 								</RandomSequenceContainer>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="Intro" ID="{7DD3D353-263D-49A1-A221-070A4D88A5A5}" ShortID="833519760">
+							<ChildrenList>
+								<Sound Name="BrandIntro-Birds" ID="{F3A6A052-6AD7-451D-95E8-F04567AA6E00}" ShortID="814771370">
+									<PropertyList>
+										<Property Name="Lowpass" Type="int16">
+											<ValueList>
+												<Value>12</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="BrandIntro-Birds" ID="{BF7EB426-20DE-4088-A8D8-2400157607A5}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="6.09988672041294"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="3.82705221636864"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="16.1270977676671"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>BrandIntro-Birds.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="879010177"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="BrandIntro-Birds" ID="{BF7EB426-20DE-4088-A8D8-2400157607A5}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="MainMenu" ID="{849BC614-4B5A-4741-84D9-EDDA43C3FE9E}" ShortID="516522916">
+							<ChildrenList>
+								<Sound Name="GameIntro_SoundScape" ID="{3F781544-F121-4DF8-BB10-275BB72FD1E3}" ShortID="751955288">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-2</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="soundscape" ID="{67E8BBFA-7435-49A2-A7F0-BBAD37E42B44}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="6.27619300766284"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="6.10471232439336"/>
+												<Property Name="LoopBegin" Type="Real64" Value="18.8285790229885"/>
+												<Property Name="LoopEnd" Type="Real64" Value="32.2726645913155"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>soundscape.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1029364635"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="soundscape" ID="{67E8BBFA-7435-49A2-A7F0-BBAD37E42B44}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
 							</ChildrenList>
 						</Folder>
 					</ChildrenList>
