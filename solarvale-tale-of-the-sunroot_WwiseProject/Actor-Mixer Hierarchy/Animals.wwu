@@ -7,28 +7,722 @@
 				<Property Name="OverrideColor" Type="bool" Value="True"/>
 			</PropertyList>
 			<ChildrenList>
-				<Sound Name="cockatoo-squawk_01-mono" ID="{4AF0A087-F188-4721-9831-8B00DCAD8A70}" ShortID="675944749">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
-						</Reference>
-					</ReferenceList>
+				<Folder Name="Cockatoo" ID="{8A847682-50DF-4A66-9F2A-C05AFD9BEBEF}" ShortID="149423555">
 					<ChildrenList>
-						<AudioFileSource Name="cockatoo-squawk_01-mono" ID="{7F48FAC2-EEA7-4B61-91E4-E505239E3069}">
-							<Language>SFX</Language>
-							<AudioFile>cockatoo-squawk_01-mono.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="778039922"/>
-							</MediaIDList>
-						</AudioFileSource>
+						<Folder Name="Mono" ID="{828A0F13-3171-4FD1-ACF5-83617A3FBE1D}" ShortID="956876969">
+							<ChildrenList>
+								<Sound Name="cockatoo-call_and_shriek_01-mono" ID="{0303AB92-5AC6-4C78-926D-769A0857E568}" ShortID="607087233">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="cockatoo-call_and_shriek_01-mono" ID="{9403E06B-9357-4BC6-AE98-018EF960CC72}">
+											<Language>SFX</Language>
+											<AudioFile>Cockatoo\Mono_Cockatoo\cockatoo-call_and_shriek_01-mono.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="213822940"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="cockatoo-call_and_shriek_01-mono" ID="{9403E06B-9357-4BC6-AE98-018EF960CC72}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="cockatoo-call_multiple_01-mono" ID="{3D85462A-E8E9-4718-814F-BC0C1B297280}" ShortID="496020785">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="cockatoo-call_multiple_01-mono" ID="{3EA55C90-0783-40A3-9211-3AAC171E497F}">
+											<Language>SFX</Language>
+											<AudioFile>Cockatoo\Mono_Cockatoo\cockatoo-call_multiple_01-mono.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="14543938"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="cockatoo-call_multiple_01-mono" ID="{3EA55C90-0783-40A3-9211-3AAC171E497F}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="cockatoo-shriek_01-mono" ID="{EB6BF6BA-4882-4A8E-83A6-4F23BA5CE061}" ShortID="470410865">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="cockatoo-shriek_01-mono" ID="{37D42DFB-D5E9-46C0-8D6C-93B23E992EE1}">
+											<Language>SFX</Language>
+											<AudioFile>Cockatoo\Mono_Cockatoo\cockatoo-shriek_01-mono.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="66978637"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="cockatoo-shriek_01-mono" ID="{37D42DFB-D5E9-46C0-8D6C-93B23E992EE1}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="cockatoo-shriek_02-mono" ID="{E34DF1F0-01C0-4D42-A86E-F5AB407E35D1}" ShortID="981850992">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="cockatoo-shriek_02-mono" ID="{F9F2DE96-D575-4083-9A59-19E82C9B9602}">
+											<Language>SFX</Language>
+											<AudioFile>Cockatoo\Mono_Cockatoo\cockatoo-shriek_02-mono.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="790454032"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="cockatoo-shriek_02-mono" ID="{F9F2DE96-D575-4083-9A59-19E82C9B9602}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="cockatoo-shriek_03-mono" ID="{88A9C10C-9966-497B-ACF7-84A68CB94108}" ShortID="829251497">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="cockatoo-shriek_03-mono" ID="{7F7E0D5D-1E4A-427E-98C9-2EA7A1861AB5}">
+											<Language>SFX</Language>
+											<AudioFile>Cockatoo\Mono_Cockatoo\cockatoo-shriek_03-mono.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="188209021"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="cockatoo-shriek_03-mono" ID="{7F7E0D5D-1E4A-427E-98C9-2EA7A1861AB5}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="cockatoo-shriek_04-mono" ID="{49359AD5-797E-48D0-8F22-46B47F0CBBD1}" ShortID="936996483">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="cockatoo-shriek_04-mono" ID="{3C6189A1-A0DE-4E20-90A7-B6CDC1FA7883}">
+											<Language>SFX</Language>
+											<AudioFile>Cockatoo\Mono_Cockatoo\cockatoo-shriek_04-mono.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="369512965"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="cockatoo-shriek_04-mono" ID="{3C6189A1-A0DE-4E20-90A7-B6CDC1FA7883}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="cockatoo-shriek_multiple_01-mono" ID="{63FA549F-74E1-4C51-8622-73559722E333}" ShortID="806890618">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="cockatoo-shriek_multiple_01-mono" ID="{5FCA612B-0FC7-4B83-A263-E1E4C977FFCC}">
+											<Language>SFX</Language>
+											<AudioFile>Cockatoo\Mono_Cockatoo\cockatoo-shriek_multiple_01-mono.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="953198228"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="cockatoo-shriek_multiple_01-mono" ID="{5FCA612B-0FC7-4B83-A263-E1E4C977FFCC}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="cockatoo-shriek_multiple_bg_bird_walla_01-mono" ID="{50492359-9451-4359-8A47-A6CF0B448F7C}" ShortID="243894455">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="cockatoo-shriek_multiple_bg_bird_walla_01-mono" ID="{B79464A8-ED40-4E47-ADB3-CB3C11D1659D}">
+											<Language>SFX</Language>
+											<AudioFile>Cockatoo\Mono_Cockatoo\cockatoo-shriek_multiple_bg_bird_walla_01-mono.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="320695463"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="cockatoo-shriek_multiple_bg_bird_walla_01-mono" ID="{B79464A8-ED40-4E47-ADB3-CB3C11D1659D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="cockatoo-shriek_multiple_bg_bird_walla_02-mono" ID="{6564D5FC-65B3-469F-B3C7-59A856AE3D9E}" ShortID="403462440">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="cockatoo-shriek_multiple_bg_bird_walla_02-mono" ID="{882293C0-D5B0-4471-826E-2FC40D67FBC8}">
+											<Language>SFX</Language>
+											<AudioFile>Cockatoo\Mono_Cockatoo\cockatoo-shriek_multiple_bg_bird_walla_02-mono.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="358695095"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="cockatoo-shriek_multiple_bg_bird_walla_02-mono" ID="{882293C0-D5B0-4471-826E-2FC40D67FBC8}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="cockatoo-squawk_01-mono" ID="{4CEEC05A-D491-4719-B222-3019DE2DB953}" ShortID="17958672">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="cockatoo-squawk_01-mono" ID="{056910B6-321C-4485-8C59-01671A5336E7}">
+											<Language>SFX</Language>
+											<AudioFile>Cockatoo\Mono_Cockatoo\cockatoo-squawk_01-mono.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="297004737"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="cockatoo-squawk_01-mono" ID="{056910B6-321C-4485-8C59-01671A5336E7}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="cockatoo-squeal_01-mono" ID="{35B166FE-E439-4AA9-B809-F874B865A533}" ShortID="492825969">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="cockatoo-squeal_01-mono" ID="{B25722F1-B439-4B56-81F0-A61413F23D4B}">
+											<Language>SFX</Language>
+											<AudioFile>Cockatoo\Mono_Cockatoo\cockatoo-squeal_01-mono.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="323384151"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="cockatoo-squeal_01-mono" ID="{B25722F1-B439-4B56-81F0-A61413F23D4B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="cockatoo-squeal_02-mono" ID="{E6F08066-D758-4CF5-9BC9-BEBE625F951E}" ShortID="772122898">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="cockatoo-squeal_02-mono" ID="{1FF9439D-E6A5-4AE5-BBB6-A047DFF420D3}">
+											<Language>SFX</Language>
+											<AudioFile>Cockatoo\Mono_Cockatoo\cockatoo-squeal_02-mono.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="554669278"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="cockatoo-squeal_02-mono" ID="{1FF9439D-E6A5-4AE5-BBB6-A047DFF420D3}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="cockatoo-squeal_03-mono" ID="{9033BB30-0D13-4504-A950-D968EE98BD91}" ShortID="247428356">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="cockatoo-squeal_03-mono" ID="{9EA5286F-C5E9-4FEF-8BD4-A1411D7E1CF2}">
+											<Language>SFX</Language>
+											<AudioFile>Cockatoo\Mono_Cockatoo\cockatoo-squeal_03-mono.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="893599907"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="cockatoo-squeal_03-mono" ID="{9EA5286F-C5E9-4FEF-8BD4-A1411D7E1CF2}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="cockatoo-squeal_04-mono" ID="{5605C3C2-F2B7-4C1C-9099-C00DF2AC8803}" ShortID="340840639">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="cockatoo-squeal_04-mono" ID="{33D7AA94-F56D-4DB9-96DB-66AAD68D12C7}">
+											<Language>SFX</Language>
+											<AudioFile>Cockatoo\Mono_Cockatoo\cockatoo-squeal_04-mono.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="635905654"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="cockatoo-squeal_04-mono" ID="{33D7AA94-F56D-4DB9-96DB-66AAD68D12C7}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="cockatoo-walla_loop_01-mono" ID="{E4C59246-6A57-4F7C-AA5C-68AAC4191717}" ShortID="272035823">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="cockatoo-walla_loop_01-mono" ID="{E6938298-DA8A-465F-939E-5D25F4FFC139}">
+											<Language>SFX</Language>
+											<AudioFile>Cockatoo\Mono_Cockatoo\cockatoo-walla_loop_01-mono.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1017931110"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="cockatoo-walla_loop_01-mono" ID="{E6938298-DA8A-465F-939E-5D25F4FFC139}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="cockatoo-walla_loop_02-mono" ID="{B49863C6-D53D-40B9-80B8-999CC5306A56}" ShortID="965273494">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="cockatoo-walla_loop_02-mono" ID="{55DD1295-DF0F-4B8C-9191-AEE43D89093A}">
+											<Language>SFX</Language>
+											<AudioFile>Cockatoo\Mono_Cockatoo\cockatoo-walla_loop_02-mono.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="343509831"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="cockatoo-walla_loop_02-mono" ID="{55DD1295-DF0F-4B8C-9191-AEE43D89093A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="Stereo" ID="{971320E8-C894-42E6-9F55-B74D06C9C989}" ShortID="663999085">
+							<ChildrenList>
+								<Sound Name="cockatoo-call_and_shriek_01-stereo" ID="{0621FDF4-07A9-4F66-89B4-AB7BEE6B8280}" ShortID="984230313">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="cockatoo-call_and_shriek_01-stereo" ID="{31017C93-979C-41C3-8FD5-8EB68FD75AC7}">
+											<Language>SFX</Language>
+											<AudioFile>Cockatoo\Stereo_Cockatoo\cockatoo-call_and_shriek_01-stereo.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="313153086"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="cockatoo-call_and_shriek_01-stereo" ID="{31017C93-979C-41C3-8FD5-8EB68FD75AC7}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="cockatoo-call_multiple_01-stereo" ID="{12460A3A-F52A-4D76-A540-71D14210CB3F}" ShortID="116632144">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="cockatoo-call_multiple_01-stereo" ID="{A5D6885D-83BF-495B-9773-35FD3BCCEC4E}">
+											<Language>SFX</Language>
+											<AudioFile>Cockatoo\Stereo_Cockatoo\cockatoo-call_multiple_01-stereo.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="808652405"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="cockatoo-call_multiple_01-stereo" ID="{A5D6885D-83BF-495B-9773-35FD3BCCEC4E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="cockatoo-shriek_01-stereo" ID="{A2736D19-4817-43F4-B94C-ECE16519127B}" ShortID="267388111">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="cockatoo-shriek_01-stereo" ID="{1C23E1B4-4CEB-4C8E-815F-04B5D1FBEA0E}">
+											<Language>SFX</Language>
+											<AudioFile>Cockatoo\Stereo_Cockatoo\cockatoo-shriek_01-stereo.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="988468946"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="cockatoo-shriek_01-stereo" ID="{1C23E1B4-4CEB-4C8E-815F-04B5D1FBEA0E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="cockatoo-shriek_02-stereo" ID="{B812708F-C9A5-46B8-9150-1F26CCB1200A}" ShortID="243481888">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="cockatoo-shriek_02-stereo" ID="{49B37C8F-9E54-4FB6-A34E-DB4B67B56CBC}">
+											<Language>SFX</Language>
+											<AudioFile>Cockatoo\Stereo_Cockatoo\cockatoo-shriek_02-stereo.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="446127141"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="cockatoo-shriek_02-stereo" ID="{49B37C8F-9E54-4FB6-A34E-DB4B67B56CBC}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="cockatoo-shriek_03-stereo" ID="{5C9D4FB9-E34E-4398-BF38-A65330252093}" ShortID="431139084">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="cockatoo-shriek_03-stereo" ID="{CC3E2C38-9481-4025-A55C-9319BC1A0CA1}">
+											<Language>SFX</Language>
+											<AudioFile>Cockatoo\Stereo_Cockatoo\cockatoo-shriek_03-stereo.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="61147625"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="cockatoo-shriek_03-stereo" ID="{CC3E2C38-9481-4025-A55C-9319BC1A0CA1}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="cockatoo-shriek_04-stereo" ID="{9F083551-D546-4475-A081-E88F5D2EFDFD}" ShortID="571087716">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="cockatoo-shriek_04-stereo" ID="{5185C828-65CE-42F3-9F00-8C1DC02F8518}">
+											<Language>SFX</Language>
+											<AudioFile>Cockatoo\Stereo_Cockatoo\cockatoo-shriek_04-stereo.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="391027862"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="cockatoo-shriek_04-stereo" ID="{5185C828-65CE-42F3-9F00-8C1DC02F8518}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="cockatoo-shriek_multiple_01-stereo" ID="{A7ED3AFA-F80E-4DE5-9699-DC14B81983F6}" ShortID="540297633">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="cockatoo-shriek_multiple_01-stereo" ID="{16E66A36-66E0-45D1-8A3F-D39517FCE725}">
+											<Language>SFX</Language>
+											<AudioFile>Cockatoo\Stereo_Cockatoo\cockatoo-shriek_multiple_01-stereo.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="591879440"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="cockatoo-shriek_multiple_01-stereo" ID="{16E66A36-66E0-45D1-8A3F-D39517FCE725}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="cockatoo-shriek_multiple_bg_bird_walla_01-stereo" ID="{2A514011-DB36-464A-8B41-284ED10E214A}" ShortID="139879067">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="cockatoo-shriek_multiple_bg_bird_walla_01-stereo" ID="{D118F219-06EC-4BF0-811D-EDD388269E51}">
+											<Language>SFX</Language>
+											<AudioFile>Cockatoo\Stereo_Cockatoo\cockatoo-shriek_multiple_bg_bird_walla_01-stereo.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="803077824"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="cockatoo-shriek_multiple_bg_bird_walla_01-stereo" ID="{D118F219-06EC-4BF0-811D-EDD388269E51}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="cockatoo-shriek_multiple_bg_bird_walla_02-stereo" ID="{C346F82E-E11D-4334-B0E3-24DB0B32BF7C}" ShortID="734043296">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="cockatoo-shriek_multiple_bg_bird_walla_02-stereo" ID="{D8ADDA8E-6902-4500-9890-9A071677A240}">
+											<Language>SFX</Language>
+											<AudioFile>Cockatoo\Stereo_Cockatoo\cockatoo-shriek_multiple_bg_bird_walla_02-stereo.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="974823757"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="cockatoo-shriek_multiple_bg_bird_walla_02-stereo" ID="{D8ADDA8E-6902-4500-9890-9A071677A240}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="cockatoo-squawk_01-stereo" ID="{BD73740B-57F6-48BF-92C2-FF549A8EB00D}" ShortID="992471963">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="cockatoo-squawk_01-stereo" ID="{10766B56-DC3C-4393-A886-1FC4AAB5A9E8}">
+											<Language>SFX</Language>
+											<AudioFile>Cockatoo\Stereo_Cockatoo\cockatoo-squawk_01-stereo.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="437504210"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="cockatoo-squawk_01-stereo" ID="{10766B56-DC3C-4393-A886-1FC4AAB5A9E8}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="cockatoo-squeal_01-stereo" ID="{0CA2AB7A-18A5-4CC6-AC76-BDDCF8915715}" ShortID="623684526">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="cockatoo-squeal_01-stereo" ID="{EFCA7D97-820B-4190-B9E1-FCB29F9A5485}">
+											<Language>SFX</Language>
+											<AudioFile>Cockatoo\Stereo_Cockatoo\cockatoo-squeal_01-stereo.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="145980563"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="cockatoo-squeal_01-stereo" ID="{EFCA7D97-820B-4190-B9E1-FCB29F9A5485}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="cockatoo-squeal_02-stereo" ID="{CCD23329-CDBD-4620-AECE-5C16068BC6BF}" ShortID="668316608">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="cockatoo-squeal_02-stereo" ID="{FD3E96FC-D535-4829-9429-413823FCAD94}">
+											<Language>SFX</Language>
+											<AudioFile>Cockatoo\Stereo_Cockatoo\cockatoo-squeal_02-stereo.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="681720577"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="cockatoo-squeal_02-stereo" ID="{FD3E96FC-D535-4829-9429-413823FCAD94}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="cockatoo-squeal_03-stereo" ID="{B0510A52-849F-476F-B558-582E51B097F7}" ShortID="82850234">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="cockatoo-squeal_03-stereo" ID="{3D536593-9AD8-4288-8A70-B45BBBA5D57C}">
+											<Language>SFX</Language>
+											<AudioFile>Cockatoo\Stereo_Cockatoo\cockatoo-squeal_03-stereo.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1057158374"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="cockatoo-squeal_03-stereo" ID="{3D536593-9AD8-4288-8A70-B45BBBA5D57C}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="cockatoo-squeal_04-stereo" ID="{16D11D08-1D67-4E97-9617-9492FA3D5D76}" ShortID="196484263">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="cockatoo-squeal_04-stereo" ID="{E590318D-BDF9-44DD-95BC-1D9EE4E9BB32}">
+											<Language>SFX</Language>
+											<AudioFile>Cockatoo\Stereo_Cockatoo\cockatoo-squeal_04-stereo.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1011252439"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="cockatoo-squeal_04-stereo" ID="{E590318D-BDF9-44DD-95BC-1D9EE4E9BB32}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="cockatoo-walla_loop_01-stereo" ID="{8536A849-549F-4A20-BA48-FC7B1C11DD45}" ShortID="528066119">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="cockatoo-walla_loop_01-stereo" ID="{1EF7F5DB-7866-4B6B-8B61-987571C834F4}">
+											<Language>SFX</Language>
+											<AudioFile>Cockatoo\Stereo_Cockatoo\cockatoo-walla_loop_01-stereo.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="426785514"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="cockatoo-walla_loop_01-stereo" ID="{1EF7F5DB-7866-4B6B-8B61-987571C834F4}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="cockatoo-walla_loop_02-stereo" ID="{42E1DC0E-2330-4AF1-AFD8-B947E26C689A}" ShortID="426875506">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="cockatoo-walla_loop_02-stereo" ID="{398D0AAC-FB1D-42EC-8F74-E642CD6023E2}">
+											<Language>SFX</Language>
+											<AudioFile>Cockatoo\Stereo_Cockatoo\cockatoo-walla_loop_02-stereo.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="663582759"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="cockatoo-walla_loop_02-stereo" ID="{398D0AAC-FB1D-42EC-8F74-E642CD6023E2}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</Folder>
 					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="cockatoo-squawk_01-mono" ID="{7F48FAC2-EEA7-4B61-91E4-E505239E3069}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>
