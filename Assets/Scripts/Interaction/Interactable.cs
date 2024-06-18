@@ -18,6 +18,12 @@ namespace Interaction
         public string Name => gameObject.name;
         public string InteractMessage => interactMessage;
 
+        private void Awake()
+        {
+            // need to set the layer to interactable
+            gameObject.layer = LayerMask.NameToLayer("Interaction");
+        }
+
         public void Interact()
         {
             if (CheckIsInteractable()) return;

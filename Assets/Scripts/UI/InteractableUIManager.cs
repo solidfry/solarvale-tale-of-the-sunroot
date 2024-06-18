@@ -16,6 +16,8 @@ public class InteractableUIManager : MonoBehaviour
     [SerializeField] private float keyAnimationTime = 0.5f;
     
     bool isAnimating;
+
+    private bool canInteract = true;
     
 
     private void Awake()
@@ -30,15 +32,20 @@ public class InteractableUIManager : MonoBehaviour
     private void OnEnable()
     {
         GlobalEvents.OnInteractableFound += SetInteractable;
+        GlobalEvents.OnPlayerControlsLockedEvent += OnPlayerControlsLocked;
     }
-    
+
+   
+
     private void OnDisable()
     {
         GlobalEvents.OnInteractableFound -= SetInteractable;
+        GlobalEvents.OnPlayerControlsLockedEvent -= OnPlayerControlsLocked;
     }
 
     void SetInteractable(IInteractable interactable)
     {
+        if (!canInteract) return;
         if (interactable == null)
         {
             FadeOut();
@@ -70,5 +77,20 @@ public class InteractableUIManager : MonoBehaviour
     void ConfigureInteractableUI()
     {
         keyPromptUI.SetText(currentInteractable.InteractMessage);
+    }
+    
+    private void OnPlayerControlsLocked(bool value)
+    { 
+        if (value)
+        {
+            FadeOut();
+        }
+        else
+        {
+            if (currentInteractable != null)
+            {
+                FadeIn();
+            }
+        }
     }
 }
