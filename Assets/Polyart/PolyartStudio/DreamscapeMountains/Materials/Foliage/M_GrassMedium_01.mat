@@ -12,11 +12,12 @@ Material:
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
+  - DR_GRADIENT_ON
   - _ALPHATEST_ON
   - _BASEMAP_PREMULTIPLY
-  - _CELPRIMARYMODE_STEPS
+  - _CELPRIMARYMODE_SINGLE
   - _DETAILMAPBLENDINGMODE_MULTIPLY
-  - _GRADIENTSPACE_WORLD
+  - _GRADIENTSPACE_LOCAL
   - _OUTLINESPACE_SCREEN
   - _TEXTUREBLENDINGMODE_MULTIPLY
   - _UNITYSHADOWMODE_MULTIPLY
@@ -24,8 +25,8 @@ Material:
   m_InvalidKeywords:
   - _ALPHAMODULATE_ON
   m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
+  m_EnableInstancingVariants: 1
+  m_DoubleSidedGI: 1
   m_CustomRenderQueue: 2426
   stringTagMap:
     RenderType: TransparentCutout
@@ -109,11 +110,11 @@ Material:
     - _CameraDistanceImpact: 0
     - _CelExtraEnabled: 0
     - _CelNumSteps: 4
-    - _CelPrimaryMode: 2
+    - _CelPrimaryMode: 1
     - _ColorBottomLevel: 0.92
     - _ColorBottomMaskFade: 0.668
-    - _Cull: 2
-    - _Cutoff: 0.59
+    - _Cull: 0
+    - _Cutoff: 0.625
     - _DetailMapBlendingMode: 0
     - _DetailMapImpact: 0
     - _DirtheringON: 0
@@ -139,17 +140,17 @@ Material:
     - _FoliageSpecular: 0
     - _GradientAngle: 0
     - _GradientCenterX: 0.02
-    - _GradientCenterY: -1.34
-    - _GradientEnabled: 0
-    - _GradientSize: 3.54
-    - _GradientSpace: 0
+    - _GradientCenterY: 0.14
+    - _GradientEnabled: 1
+    - _GradientSize: 0.84
+    - _GradientSpace: 1
     - _GustEnabled: 1
     - _GustFrequency: 0.2
     - _GustIntensity: 0.231
     - _GustSpeed: 0.2
     - _InteractionAlpha: 1
-    - _LightContribution: 1
-    - _LightFalloffSize: 0
+    - _LightContribution: 0
+    - _LightFalloffSize: 1
     - _LightmapDirectionPitch: 0
     - _LightmapDirectionYaw: 0
     - _LockPositionGradient: 0.49
@@ -169,9 +170,9 @@ Material:
     - _QueueOffset: -24
     - _ReceiveShadows: 1
     - _RimEnabled: 0
-    - _SelfShadingSize: 0.698
+    - _SelfShadingSize: 0
     - _SelfShadingSizeExtra: 0.432
-    - _ShadowEdgeSize: 0.299
+    - _ShadowEdgeSize: 0.25
     - _ShadowEdgeSizeExtra: 0.204
     - _ShadowStrength: 0.788
     - _Smoothness: -0.067
@@ -181,7 +182,7 @@ Material:
     - _SrcBlend: 1
     - _Surface: 0
     - _TextureBlendingMode: 0
-    - _TextureImpact: 0
+    - _TextureImpact: 0.292
     - _UnityShadowMode: 1
     - _UnityShadowOcclusion: 1
     - _UnityShadowPower: 0.799
@@ -220,7 +221,7 @@ Material:
     - _ColorDimCurve: {r: 0.85023, g: 0.85034, b: 0.8504499, a: 0.85056}
     - _ColorDimExtra: {r: 1, g: 1, b: 1, a: 1}
     - _ColorDimSteps: {r: 0, g: 0, b: 0, a: 1}
-    - _ColorGradient: {r: 0, g: 0.18867922, b: 0.025729004, a: 1}
+    - _ColorGradient: {r: 0, g: 0, b: 0, a: 1}
     - _ColorTop: {r: 0.5167333, g: 0.6037736, b: 0.030758228, a: 1}
     - _ColorTopVariation: {r: 0.29107225, g: 0.4339623, b: 0, a: 1}
     - _ColorWave: {r: 0.21823503, g: 0.4056604, b: 0, a: 1}
