@@ -6,6 +6,30 @@
 				<Property Name="Color" Type="int16" Value="9"/>
 				<Property Name="OverrideColor" Type="bool" Value="True"/>
 			</PropertyList>
+			<ChildrenList>
+				<Sound Name="cockatoo-squawk_01-mono" ID="{4AF0A087-F188-4721-9831-8B00DCAD8A70}" ShortID="675944749">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="cockatoo-squawk_01-mono" ID="{7F48FAC2-EEA7-4B61-91E4-E505239E3069}">
+							<Language>SFX</Language>
+							<AudioFile>cockatoo-squawk_01-mono.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="778039922"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="cockatoo-squawk_01-mono" ID="{7F48FAC2-EEA7-4B61-91E4-E505239E3069}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>
 </WwiseDocument>
