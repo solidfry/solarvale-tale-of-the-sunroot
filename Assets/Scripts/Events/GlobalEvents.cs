@@ -1,4 +1,5 @@
 ﻿using System;
+using Cinemachine;
 using Interaction;
 using QuestSystem;
 
@@ -22,5 +23,8 @@ namespace Events
         public static Action<string> OnDialogueCompleteWithNodeEvent;
         
         public static Action<QuestConditionBase> OnQuestConditionUpdatedEvent;
+        #region Camera Management
+        public static Action<CinemachineVirtualCamera> OnSetPriorityOfCameraEvent;
+        #endregion
     }
 }
