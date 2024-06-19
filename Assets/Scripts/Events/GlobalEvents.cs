@@ -20,5 +20,7 @@ namespace Events
         public static Action<QuestData> OnQuestAcquiredLogUpdatedEvent;
         public static Action<string> OnDialogueStartWithNodeEvent;
         public static Action<string> OnDialogueCompleteWithNodeEvent;
+        
+        public static Action<QuestConditionBase> OnQuestConditionUpdatedEvent;
     }
 }

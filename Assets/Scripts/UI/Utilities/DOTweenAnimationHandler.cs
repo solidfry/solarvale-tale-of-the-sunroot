@@ -1,3 +1,5 @@
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using DG.Tweening;
@@ -8,7 +10,11 @@ namespace UI.Utilities
     public class DoTweenAnimationHandler : MonoBehaviour
     {
 
+        [SerializeField] bool setAutoKill = true;
         [SerializeField] List<DOTweenAnimation> animations;
+        
+        Coroutine _playInReverseCoroutine;
+        Coroutine _playCoroutine;
         
         private void Awake()
         {
@@ -18,14 +24,21 @@ namespace UI.Utilities
         private void OnEnable()
         {
             Debug.Log("OnEnable Ran");
+            PlayAll();
+        }
+
+        private void PlayAll()
+        {
             foreach (var tween in animations)
             {
                 tween.DORewind();
-                Debug.Log(tween + " tween is playing and " + tween.autoKill + " is the autoKill value");
+                tween.autoKill = setAutoKill;
+                // Debug.Log(tween + " tween is playing and " + tween.autoKill + " is the autoKill value");
                 tween.DOPlay();
             }
+            
         }
-    
+
         private void OnDisable()
         {
             Debug.Log("OnDisable Ran");
@@ -34,5 +47,9 @@ namespace UI.Utilities
                 tween.DORewind();
             }
         }
+        
+        public List<DOTweenAnimation> GetAnimations() => animations;
+
+    
     }
 }

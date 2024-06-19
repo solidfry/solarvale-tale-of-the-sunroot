@@ -1,13 +1,24 @@
+using System;
+using DG.Tweening;
 using QuestSystem;
 using TMPro;
 using UI.Utilities;
 using UnityEngine;
 
-public class NewQuestModalController : MonoBehaviour
+[RequireComponent(typeof(DoTweenAnimationHandler))]
+public class QuestNotificationModal : MonoBehaviour
 {
     [SerializeField] TMP_Text questName;
     [SerializeField] QuestData questData;
     [SerializeField] DoTweenAnimationHandler doTweenAnimationHandler;
+    [field: SerializeField] public CanvasGroup CanvasGroup { get; private set; }
+    
+    private void Awake()
+    {
+        if (doTweenAnimationHandler is null) doTweenAnimationHandler = GetComponent<DoTweenAnimationHandler>();
+        if (CanvasGroup is null) CanvasGroup = GetComponent<CanvasGroup>();
+        gameObject.SetActive(false);
+    }
 
     private void Start()
     {
@@ -21,7 +32,7 @@ public class NewQuestModalController : MonoBehaviour
 
     public void SetQuestName()
     {
-        questName.text = name;
+        questName.text = questData.Title;
     }
     
     public void ClearQuestName()
@@ -35,5 +46,12 @@ public class NewQuestModalController : MonoBehaviour
         questData = data;
         SetQuestName();
     }
+    
+    public void SetActive()
+    {
+        gameObject.SetActive(true);
+    }
+    
+    
     
 }
