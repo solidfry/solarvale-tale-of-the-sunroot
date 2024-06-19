@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using Events;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace Interaction
 {
@@ -68,7 +69,7 @@ namespace Interaction
                 GlobalEvents.OnInteractableFound?.Invoke(_currentInteractable);
         }
 
-        public void OnInteract()
+        public void OnInteract(InputAction.CallbackContext context)
         {
             if (_currentInteractable == null) return;
             _currentInteractable.Interact();
