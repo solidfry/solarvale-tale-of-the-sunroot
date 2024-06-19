@@ -9,7 +9,7 @@ namespace DialogueSystem
     {
         [SerializeField] string dialogueNode;
         [SerializeField] bool isOneTimeUse = false;
-        [SerializeField] bool used = false;
+        bool _used = false;
     
         [Header("Events")]
         [Space(24)]
@@ -36,9 +36,9 @@ namespace DialogueSystem
                 return;
             }
         
-            if (isOneTimeUse && used) return;
+            if (isOneTimeUse && _used) return;
         
-            if (isOneTimeUse && !used) used = true;
+            if (isOneTimeUse && !_used) _used = true;
         
             GlobalEvents.OnDialogueStartWithNodeEvent?.Invoke(dialogueNode);
             onDialogueStartEvent?.Invoke();

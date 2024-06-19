@@ -1,10 +1,8 @@
-using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using Events;
 using UnityEngine;
 
-namespace QuestSystem
+namespace QuestSystem.UI
 {
     public class QuestUIManager : MonoBehaviour
     {

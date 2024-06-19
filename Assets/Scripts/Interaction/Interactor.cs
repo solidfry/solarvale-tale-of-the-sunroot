@@ -69,7 +69,7 @@ namespace Interaction
                 GlobalEvents.OnInteractableFound?.Invoke(_currentInteractable);
         }
 
-        public void OnInteract(InputAction.CallbackContext context)
+        public void OnInteract()
         {
             if (_currentInteractable == null) return;
             _currentInteractable.Interact();

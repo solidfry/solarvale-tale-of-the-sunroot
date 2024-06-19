@@ -8,6 +8,7 @@ namespace QuestSystem
     public class QuestManager : MonoBehaviour
     {
         [SerializeField] private List<QuestData> questList;
+        [SerializeField] private List<QuestData> completedQuests;
 
         private void OnEnable()
         {
@@ -35,21 +36,15 @@ namespace QuestSystem
         {
             QuestData quest = questList.Find(q => q == questData);
             // Debug.Log("Attempting to complete quest: " + quest.Title);
-            if (quest != null)
-            {
-                quest.CompleteQuest();
-                GlobalEvents.OnQuestCompletedLogUpdatedEvent?.Invoke(quest);
-            }
-            else
-            {
-                foreach (var q in questList)
-                {
-                    Debug.LogWarning(" - " + q.Title);
-                }
-            }
+            if (quest == null) return;
+            quest.CompleteQuest();
+            questList.Remove(quest);
+            completedQuests.Add(quest);
+            GlobalEvents.OnQuestCompletedLogUpdatedEvent?.Invoke(quest);
         }
         
         public List<QuestData> GetQuestList() => questList;
+        public List<QuestData> GetCompletedQuests() => completedQuests;
     }
 
 }
