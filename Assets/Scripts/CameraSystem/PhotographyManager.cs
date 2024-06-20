@@ -1,20 +1,56 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
+using UnityEngine.InputSystem;
 
 public class PhotographyManager : MonoBehaviour
 {
-    //reference cinemachine virtual camera
-    
-    // Start is called before the first frame update
-    void Start()
+    public CinemachineVirtualCamera thirdPersonCamera;
+    public CinemachineVirtualCamera firstPersonCamera;
+    public InputActionAsset inputActionAsset; // Reference to the Input Action Asset
+
+
+    private InputAction cameraOpenAction;
+
+    void Awake()
     {
-        //when player presses the button, set priority of the camera
+        // Find the action map and the specific action
+        var playerActionMap = inputActionAsset.FindActionMap("Player");
+        cameraOpenAction = playerActionMap.FindAction("CameraOpen");
     }
 
-    // Update is called once per frame
-    void Update()
+    void OnEnable()
     {
-        
+        cameraOpenAction.Enable();
+        cameraOpenAction.performed += OnCameraOpen;
     }
+
+    void OnDisable()
+    {
+        cameraOpenAction.performed -= OnCameraOpen;
+        cameraOpenAction.Disable();
+    }
+
+    void OnCameraOpen(InputAction.CallbackContext context)
+    {
+        SwitchCamera();
+    }
+
+    void SwitchCamera()
+    {
+        // Check the current priority and switch
+        if (thirdPersonCamera.Priority > firstPersonCamera.Priority)
+        {
+            thirdPersonCamera.Priority = 0;
+            firstPersonCamera.Priority = 1;
+        }
+        else
+        {
+            thirdPersonCamera.Priority = 1;
+            firstPersonCamera.Priority = 0;
+        }
+    }
+
+
 }
