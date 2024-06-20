@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -191,6 +191,18 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8626457988897349be7eecea951ae89, type: 3}
+--- !u!114 &56964505 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 279089756314295489, guid: 8746b19db272db1499fc8f3e3e844961,
+    type: 3}
+  m_PrefabInstance: {fileID: 1251610977}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &144680956
 GameObject:
   m_ObjectHideFlags: 0
@@ -499,6 +511,54 @@ MonoBehaviour:
   interactMessage: Complete a quest
   showCannotInteractMessage: 1
   cannotInteractMessage: Cannot interact with this object.
+--- !u!1 &268742590
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 268742592}
+  - component: {fileID: 268742591}
+  m_Layer: 0
+  m_Name: PhotographySystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &268742591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 268742590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c5979658fda8f04ead3f7416a54c6f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thirdPersonCamera: {fileID: 56964505}
+  firstPersonCamera: {fileID: 1663580005}
+  inputActionAsset: {fileID: -944628639613478452, guid: 78133a3448bb08445b514549337508a9,
+    type: 3}
+--- !u!4 &268742592
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 268742590}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 760.26654, y: 314.45416, z: -3.1079726}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &275941541
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1235,6 +1295,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1663580005 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2699696508931741453, guid: 8746b19db272db1499fc8f3e3e844961,
+    type: 3}
+  m_PrefabInstance: {fileID: 1251610977}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1729211041
 GameObject:
   m_ObjectHideFlags: 0
@@ -1405,7 +1477,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1834448382
 Transform:
   m_ObjectHideFlags: 0
@@ -2103,3 +2175,4 @@ SceneRoots:
   - {fileID: 839013390}
   - {fileID: 29991361}
   - {fileID: 2582777592363704159}
+  - {fileID: 268742592}
