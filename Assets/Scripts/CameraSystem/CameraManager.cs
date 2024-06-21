@@ -1,8 +1,6 @@
 using Cinemachine;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using Events;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
 
@@ -45,14 +43,29 @@ public class CameraManager : MonoBehaviour
 
     void OnTakePhoto(InputAction.CallbackContext context)
     {
-        if (IsThirdPersonCameraHigherPriority())
+        Debug.Log("OnTakePhoto: Photo action performed");
+        if (IsFirstPersonCameraHigherPriority())
         {
             StartCoroutine(CapturePhoto());
         }
+        else
+        {
+            Debug.Log("OnTakePhoto: First person camera does not have higher priority");
+        }
     }
+
+    public bool IsFirstPersonCameraHigherPriority()
+    {
+        bool isFirstHigher = firstPersonCamera.Priority > thirdPersonCamera.Priority;
+        Debug.Log($"IsFirstPersonCameraHigherPriority: {isFirstHigher}");
+        return isFirstHigher;
+    }
+
 
     IEnumerator CapturePhoto()
     {
+        Debug.Log("CapturePhoto: Starting photo capture coroutine");
+
         // Hide UI elements
         foreach (var ui in hideUI)
         {
@@ -77,15 +90,28 @@ public class CameraManager : MonoBehaviour
 
         // Remove the photo and reset UI elements
         RemovePhoto();
+
+        // Show UI elements again
+        foreach (var ui in hideUI)
+        {
+            ui.SetActive(true);
+        }
     }
 
     void ShowPhoto()
     {
-        Sprite photoSprite = Sprite.Create(screenCapture, new Rect(0.0f, 0.0f, screenCapture.width, screenCapture.height), new Vector2(0.5f, 0.5f), 100.0f);
-        photoDisplayArea.sprite = photoSprite;
+        if (screenCapture != null)
+        {
+            Sprite photoSprite = Sprite.Create(screenCapture, new Rect(0.0f, 0.0f, screenCapture.width, screenCapture.height), new Vector2(0.5f, 0.5f), 100.0f);
+            photoDisplayArea.sprite = photoSprite;
 
-        // Show the photo frame
-        photoFrame.SetActive(true);
+            // Show the photo frame
+            photoFrame.SetActive(true);
+        }
+        else
+        {
+            Debug.LogError("Screen capture texture is null");
+        }
     }
 
     void RemovePhoto()
@@ -100,10 +126,9 @@ public class CameraManager : MonoBehaviour
 
         // Hide the photo frame
         photoFrame.SetActive(false);
-    }
 
-    public bool IsThirdPersonCameraHigherPriority()
-    {
-        return thirdPersonCamera.Priority > firstPersonCamera.Priority;
+        // Clear the photo display area
+        photoDisplayArea.sprite = null;
     }
 }
+

@@ -8,14 +8,13 @@ public class PhotographyManager : MonoBehaviour
 {
     public CinemachineVirtualCamera thirdPersonCamera;
     public CinemachineVirtualCamera firstPersonCamera;
-    public InputActionAsset inputActionAsset; // Reference to the Input Action Asset
+    public InputActionAsset inputActionAsset; 
 
 
     private InputAction cameraOpenAction;
 
     void Awake()
     {
-        // Find the action map and the specific action
         var playerActionMap = inputActionAsset.FindActionMap("Player");
         cameraOpenAction = playerActionMap.FindAction("CameraOpen");
     }
@@ -39,7 +38,6 @@ public class PhotographyManager : MonoBehaviour
 
     void SwitchCamera()
     {
-        // Check the current priority and switch
         if (thirdPersonCamera.Priority > firstPersonCamera.Priority)
         {
             thirdPersonCamera.Priority = 0;

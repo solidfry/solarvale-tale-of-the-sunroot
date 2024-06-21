@@ -521,6 +521,7 @@ GameObject:
   m_Component:
   - component: {fileID: 268742592}
   - component: {fileID: 268742591}
+  - component: {fileID: 268742593}
   m_Layer: 0
   m_Name: PhotographySystem
   m_TagString: Untagged
@@ -559,6 +560,26 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &268742593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 268742590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27981aa10da1c73428d0702309385a06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  photoDisplayArea: {fileID: 2112389735}
+  photoFrame: {fileID: 2112389734}
+  hideUI: []
+  takePhotoUI: []
+  inputActionAsset: {fileID: -944628639613478452, guid: 78133a3448bb08445b514549337508a9,
+    type: 3}
+  thirdPersonCamera: {fileID: 56964505}
+  firstPersonCamera: {fileID: 1663580005}
 --- !u!1001 &275941541
 PrefabInstance:
   m_ObjectHideFlags: 0
