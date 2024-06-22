@@ -70,7 +70,7 @@ namespace UI
         {
             if (_isAnimating) return;
             _isAnimating = true;
-            canvasGroup.DOFade(1f, fadeDuration ).OnComplete( ( ) => _isAnimating = false ).SetAutoKill(false);
+            canvasGroup.DOFade(1f, fadeDuration).OnComplete(() => _isAnimating = false ).SetAutoKill(false);
         }
 
         void ConfigureInteractableUI()

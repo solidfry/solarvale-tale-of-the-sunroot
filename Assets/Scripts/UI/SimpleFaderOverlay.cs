@@ -86,7 +86,7 @@ public class SimpleFaderOverlay : MonoBehaviour
                 FadeOut();
                 break;
             default:
-                canvasGroup.alpha = direction == FadeDirection.In ? 1 : 0;
+                canvasGroup.alpha = 0;
                 break;
         }
     }

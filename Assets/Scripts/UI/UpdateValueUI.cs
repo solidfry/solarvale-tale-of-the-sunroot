@@ -1,3 +1,4 @@
+using System.Globalization;
 using TMPro;
 using UnityEngine;
 
@@ -5,16 +6,16 @@ namespace UI
 {
     public class UpdateValueUI : MonoBehaviour
     {
-        TMP_Text text;
+        TMP_Text _text;
         
         void Start()
         {
-            text = GetComponent<TMP_Text>();
+            _text = GetComponent<TMP_Text>();
         }
         
         public void UpdateValue(float value)
         {
-            text.text = value.ToString();
+            _text.text = value.ToString(CultureInfo.CurrentCulture);
         }
     }
 }

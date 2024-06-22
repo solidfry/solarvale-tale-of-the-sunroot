@@ -12,7 +12,7 @@ namespace Utilities
             }
             else
             {
-                Debug.LogError($"Scene {sceneName.ToString()} does not exist.");
+                Debug.LogError($"Scene {sceneName} does not exist.");
             }
         } 
         
@@ -24,7 +24,7 @@ namespace Utilities
             }
             else
             {
-                Debug.LogError($"Scene {sceneIndex.ToString()} does not exist.");
+                Debug.LogError($"Scene {sceneIndex} does not exist.");
             }
         }
         
@@ -48,7 +48,7 @@ namespace Utilities
             }
             else
             {
-                Debug.LogError($"Scene {sceneIndex.ToString()} does not exist.");
+                Debug.LogError($"Scene {sceneIndex} does not exist.");
             }
         }
 
