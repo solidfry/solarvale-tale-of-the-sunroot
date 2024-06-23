@@ -83,14 +83,12 @@ namespace QuestSystem.UI
             questTitle.text = data.Title;
             questDescription.text = data.Description;
             // if the quest has conditions we want to show them also
-            if (data.HasQuestConditions())
+            if (!data.HasQuestConditions()) return;
+            if (questDescription is null) return;
+            foreach (var condition in data.GetQuestConditions())
             {
-                Debug.Log(data.GetQuestConditions().Count);
-                foreach (var condition in data.GetQuestConditions())
-                {
-                    // I want to get the description TMP Text and duplicate it and replace the text in the duplicate with the condition text
-                    Instantiate(questDescription, questDescription.transform.parent).text = condition.Title;
-                }
+                // I want to get the description TMP Text and duplicate it and replace the text in the duplicate with the condition text
+                Instantiate(questDescription, questDescription.transform.parent).text = condition.Title;
             }
         }
     
