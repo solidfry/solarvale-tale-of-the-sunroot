@@ -16,8 +16,7 @@ namespace CameraSystem
         [SerializeField] private Button discardButton; // Reference to the discard button
 
         [Header("Hide all UI")]
-        [SerializeField] private GameObject[] hideUI;
-        [SerializeField] private GameObject[] takePhotoUI;
+        [SerializeField] private GameObject hideUIParent; // Parent GameObject to hide all UI elements
 
         private Texture2D screenCapture;
         private bool viewingPhoto;
@@ -74,11 +73,8 @@ namespace CameraSystem
         {
             Debug.Log("CapturePhoto: Starting photo capture coroutine");
 
-            // Hide UI elements
-            foreach (var ui in hideUI)
-            {
-                ui.SetActive(false);
-            }
+            // Hide all UI elements
+            hideUIParent.SetActive(false);
 
             viewingPhoto = true;
 
@@ -108,12 +104,6 @@ namespace CameraSystem
 
                 // Show the canvas
                 photoCanvas.gameObject.SetActive(true);
-
-                // Show take photo UI elements
-                foreach (var ui in takePhotoUI)
-                {
-                    ui.SetActive(true);
-                }
             }
             else
             {
@@ -123,12 +113,6 @@ namespace CameraSystem
 
         void RemovePhoto()
         {
-            // Hide take photo UI elements
-            foreach (var ui in takePhotoUI)
-            {
-                ui.SetActive(false);
-            }
-
             viewingPhoto = false;
 
             // Hide the photo frame
@@ -139,6 +123,9 @@ namespace CameraSystem
 
             // Clear the photo display area
             photoDisplayArea.sprite = null;
+
+            // Show all UI elements again
+            hideUIParent.SetActive(true);
         }
 
         public void KeepPhoto()
@@ -155,6 +142,8 @@ namespace CameraSystem
         }
     }
 }
+
+
 
 
 
