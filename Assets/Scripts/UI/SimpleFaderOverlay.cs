@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
 using DG.Tweening;
+using UnityEngine.Serialization;
 
 public enum FadeDirection
 {
@@ -23,7 +24,9 @@ public class SimpleFaderOverlay : MonoBehaviour
     [SerializeField] private bool autoFade = false;
     [SerializeField] private float timeBeforeExit = 1f;
 
-    public UnityEvent OnComplete;
+    [FormerlySerializedAs("OnComplete")] public UnityEvent FadeInAndOutOnComplete;
+    public UnityEvent FadeInOnComplete;
+    public UnityEvent FadeOutOnComplete;
 
     private void Start() => FadeOnStart();
 
@@ -64,7 +67,7 @@ public class SimpleFaderOverlay : MonoBehaviour
             yield return PerformFadeRoutine(FadeDirection.In);
         }
 
-        OnComplete?.Invoke();
+        FadeInAndOutOnComplete?.Invoke();
     }
 
     private IEnumerator PerformFadeRoutine(FadeDirection direction)
@@ -97,7 +100,7 @@ public class SimpleFaderOverlay : MonoBehaviour
         if (!canvasGroup.enabled) canvasGroup.enabled = true;
     }
 
-    public void FadeIn() => canvasGroup.DOFade(1, fadeInDuration).From(0);
+    public void FadeIn() => canvasGroup.DOFade(1, fadeInDuration).From(0).OnComplete( () => FadeInOnComplete?.Invoke() );
 
-    public void FadeOut() => canvasGroup.DOFade(0, fadeOutDuration).From(1);
+    public void FadeOut() => canvasGroup.DOFade(0, fadeOutDuration).From(1).OnComplete( () => FadeOutOnComplete?.Invoke() );
 }
