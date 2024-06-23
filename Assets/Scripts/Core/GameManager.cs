@@ -34,8 +34,8 @@ namespace Core
         {
             GlobalEvents.OnGamePausedEvent += PauseGame;
             GlobalEvents.OnLockCursorEvent += LockCursor;
-            GlobalEvents.OnDialogueCompleteEvent += OnDialogueCompleteEvent;
-            GlobalEvents.OnDialogueStartEvent += OnDialogueStartEvent;
+            GlobalEvents.OnDialogueCompleteEvent += SetPlayerInteractionActive;
+            GlobalEvents.OnDialogueStartEvent += SetPlayerInteractionInactive;
             
             _playerCanInteract.ValueChanged += _ => GlobalEvents.OnPlayerControlsLockedEvent?.Invoke(!_);
         }
@@ -44,18 +44,18 @@ namespace Core
         {
             GlobalEvents.OnGamePausedEvent -= PauseGame;
             GlobalEvents.OnLockCursorEvent -= LockCursor;
-            GlobalEvents.OnDialogueCompleteEvent -= OnDialogueCompleteEvent;
-            GlobalEvents.OnDialogueStartEvent -= OnDialogueStartEvent;
+            GlobalEvents.OnDialogueCompleteEvent -= SetPlayerInteractionActive;
+            GlobalEvents.OnDialogueStartEvent -= SetPlayerInteractionInactive;
             
         }
 
-        public void OnDialogueStartEvent()
+        public void SetPlayerInteractionInactive()
         {
             _playerCanInteract.Value = false;
             GlobalEvents.OnSetCursorInputForLookEvent?.Invoke(false);
         }
 
-        private void OnDialogueCompleteEvent()
+        private void SetPlayerInteractionActive()
         {
             _playerCanInteract.Value = true;
             GlobalEvents.OnSetCursorInputForLookEvent?.Invoke(true);
