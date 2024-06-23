@@ -8,8 +8,8 @@ namespace CameraSystem
     {
         public CinemachineVirtualCamera thirdPersonCamera;
         public CinemachineVirtualCamera firstPersonCamera;
-        public InputActionAsset inputActionAsset; 
-
+        public InputActionAsset inputActionAsset;
+        public Canvas questUICanvas; // Reference to the Quest UI Canvas
 
         private InputAction cameraOpenAction;
 
@@ -34,6 +34,7 @@ namespace CameraSystem
         void OnCameraOpen(InputAction.CallbackContext context)
         {
             SwitchCamera();
+            AdjustUIVisibility();
         }
 
         void SwitchCamera()
@@ -50,6 +51,13 @@ namespace CameraSystem
             }
         }
 
+        void AdjustUIVisibility()
+        {
+            bool isFirstPersonActive = firstPersonCamera.Priority > thirdPersonCamera.Priority;
 
+            // Show/hide UI elements based on camera priority
+            questUICanvas.gameObject.SetActive(!isFirstPersonActive); // Quest UI Canvas
+        }
     }
 }
+
