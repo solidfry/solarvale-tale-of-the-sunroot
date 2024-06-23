@@ -48,6 +48,11 @@ namespace DialogueSystem
             EventSystem.current.currentSelectedGameObject.GetComponent<Selectable>().Select();
             // Debug.Log(" SetFocusObject " + focusObject.name + " " + EventSystem.current.currentSelectedGameObject.name);
         }
+        
+        void ClearFocusObject()
+        {
+            EventSystem.current.SetSelectedGameObject(null);
+        }
     
         void OnDialogueComplete()
         {
@@ -56,6 +61,7 @@ namespace DialogueSystem
             GlobalEvents.OnSetPlayerControlMapEvent?.Invoke("Player");
             GlobalEvents.OnDialogueCompleteEvent?.Invoke();
             GlobalEvents.OnDialogueCompleteWithNodeEvent?.Invoke(currentDialogueRunner.startNode);
+            ClearFocusObject();
         }
     
         private void StartDialogue(string node)
