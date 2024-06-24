@@ -12,15 +12,20 @@ namespace QuestSystem
     {
         [field: SerializeField] public string Title { get; private set; }
         [field: SerializeField] public string Description { get; private set; }
-        [SerializeField] bool isVisible;
+        // [SerializeField] bool isVisible;
         [SerializeField] bool isCompleted;
-        [SerializeField] bool isTracked;
+        // [SerializeField] bool isTracked;
         
+        [Header("Quest Conditions")]
         [SerializeField] List<QuestConditionBase> questConditions;
+        
+        [Header("Quest Initialisation Actions")]
         [SerializeField] List<InitialisationAction> initialisationActions;
+        [SerializeField] bool cleanUpInitialisationActionsOnComplete;
+        
+        [Header("Quest Chaining")]
         [SerializeField] QuestData nextQuest;
         
-        public bool cleanUpOnComplete;
 
 #if UNITY_EDITOR  
         private void Reset()
@@ -46,7 +51,7 @@ namespace QuestSystem
 
         private void ClearInitialisedActions()
         {
-            if (!isCompleted || !cleanUpOnComplete) return;
+            if (!isCompleted || !cleanUpInitialisationActionsOnComplete) return;
             questConditions.ForEach(condition =>
             {
                 condition.ResetCondition();

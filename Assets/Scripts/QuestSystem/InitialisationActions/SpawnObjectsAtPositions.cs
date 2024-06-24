@@ -9,16 +9,13 @@ namespace QuestSystem.InitialisationActions
     {
         [SerializeField] List<ObjectEntry> objectsToSpawnAtPositions;
         
-        [SerializeField] List<GameObject> spawnedObjects;
+        List<GameObject> _spawnedObjects;
         
-        public override void Execute()
-        {
-            SpawnObjects();
-        }
-        
+        public override void Execute() => SpawnObjects();
+
         public override void Clear()
         {
-            foreach (var obj in spawnedObjects)
+            foreach (var obj in _spawnedObjects)
             {
                 Destroy(obj);
             }
@@ -32,12 +29,12 @@ namespace QuestSystem.InitialisationActions
                 {
                     Instantiate(obj.objectToSpawn, obj.objectToSpawn.transform.position,
                         obj.objectToSpawn.transform.rotation);
-                    spawnedObjects.Add(obj.objectToSpawn);
+                    _spawnedObjects.Add(obj.objectToSpawn);
                 }
                 else  
                 {
                     Instantiate(obj.objectToSpawn, obj.position, Quaternion.identity);
-                    spawnedObjects.Add(obj.objectToSpawn);
+                    _spawnedObjects.Add(obj.objectToSpawn);
                 }
             }
         }

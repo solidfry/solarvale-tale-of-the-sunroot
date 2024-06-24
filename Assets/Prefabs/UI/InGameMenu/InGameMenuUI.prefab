@@ -51,6 +51,7 @@ GameObject:
   - component: {fileID: 2631676958291497967}
   - component: {fileID: 46969618166039995}
   - component: {fileID: 985954056132971365}
+  - component: {fileID: 4743715821725358677}
   m_Layer: 5
   m_Name: InGameMenuUI
   m_TagString: Untagged
@@ -97,8 +98,8 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 25
+  m_VertexColorAlwaysGammaSpace: 1
+  m_AdditionalShaderChannelsFlag: 1
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
@@ -166,6 +167,18 @@ MonoBehaviour:
   - <Button>k__BackingField: {fileID: 3054748005896967908}
     <MenuPanel>k__BackingField: {fileID: 5686916330722800429}
     <CanvasGroup>k__BackingField: {fileID: 2290261932984778545}
+--- !u!210 &4743715821725358677
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5607180172605086563}
+  m_Enabled: 1
+  m_SortingLayerID: -449329791
+  m_SortingLayer: -1
+  m_SortingOrder: 10000
+  m_SortAtRoot: 0
 --- !u!1001 &1220980872162396346
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1593,6 +1606,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   image: {fileID: 86373057669530332}
   shaderProperty: _UnscaledTime
+  log: 0
 --- !u!114 &86373057669530332
 MonoBehaviour:
   m_ObjectHideFlags: 0
