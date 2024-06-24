@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel;
 using Events;
 using ExternPropertyAttributes;
+using QuestSystem.Conditions;
 using UnityEngine;
 using UnityEngine.Serialization;
 

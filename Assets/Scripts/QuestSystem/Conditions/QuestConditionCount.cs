@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace QuestSystem
+namespace QuestSystem.Conditions
 {
     [CreateAssetMenu(fileName = "New Quest Condition Count", menuName = "Quest System/Quest Condition/Count", order = 0)]
     public class QuestConditionCount : QuestConditionBase
@@ -47,6 +47,13 @@ namespace QuestSystem
             SetConditionComplete();
             return true;
         }
+        
+        public override void InitialiseConditionActions()
+        {
+            
+        }
+        
+
         
         
     }

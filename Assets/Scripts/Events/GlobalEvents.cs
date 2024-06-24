@@ -2,6 +2,7 @@
 using Cinemachine;
 using Interaction;
 using QuestSystem;
+using QuestSystem.Conditions;
 
 namespace Events
 {

@@ -9,11 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c0d76201f114d9288526bcccb185439, type: 3}
-  m_Name: Pick up 5 pieces of trash
+  m_Script: {fileID: 11500000, guid: 7a3e989b813645d5aeb29bc2885e5ae6, type: 3}
+  m_Name: SpawnTrash
   m_EditorClassIdentifier: 
-  <Title>k__BackingField: Pick up 5 pieces of trash
-  <IsComplete>k__BackingField: 0
-  initialisationActions: []
-  requiredCount: 5
-  currentCount: 0
+  objectsToSpawnAtPositions:
+  - position: {x: 0, y: 0, z: 0}
+    objectToSpawn: {fileID: 896364931721993047, guid: dd66925b3b03e7546a34cfa906c1c6e3,
+      type: 3}
+    useObjectTransform: 1

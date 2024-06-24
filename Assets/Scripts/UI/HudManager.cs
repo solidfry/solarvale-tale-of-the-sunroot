@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Events;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
 
 namespace UI
 {
@@ -13,26 +14,13 @@ namespace UI
         [SerializeField] bool canShowMenu = true;
         [SerializeField] InputActionReference menuOpenAction;
         [SerializeField] InputActionReference menuCloseAction;
-        
-        [SerializeField] List<UIType> uiCanvases;
 
-        GameObject menuInstance;
-        
-        // I want the UIs to register with the HudManager
-        public void RegisterUI(GameObject uiPrefab, InterfaceType interfaceType)
-        {
-            var uiType = new UIType
-            {
-                uiPrefab = uiPrefab,
-                interfaceType = interfaceType
-            };
-            uiCanvases.Add(uiType);
-        }
+        GameObject _menuInstance;
     
         private void Awake()
         {
-            menuInstance = Instantiate(menu, transform.position, Quaternion.identity);
-            menuInstance.SetActive(false);
+            _menuInstance = Instantiate(menu, transform.position, Quaternion.identity);
+            _menuInstance.SetActive(false);
         }
 
         private void OnEnable()
@@ -45,7 +33,7 @@ namespace UI
         {
             if (!canShowMenu) return;
             showMenu = !showMenu;
-            menuInstance.SetActive(showMenu);
+            _menuInstance.SetActive(showMenu);
             // Debug.Log("show menu: " + showMenu);
             GlobalEvents.OnGamePausedEvent?.Invoke(showMenu);
             GlobalEvents.OnPlayerControlsLockedEvent?.Invoke(showMenu);
@@ -54,28 +42,8 @@ namespace UI
 
         private void OnDestroy()
         {
-            Destroy(menuInstance);
+            Destroy(_menuInstance);
         }
-    
-        public void SetCanShowMenu(bool canShow)
-        {
-            canShowMenu = canShow;
-        }
-    }
-    
-    [Serializable]
-    public class UIType
-    {
-        [SerializeField] public GameObject uiPrefab;
-        [SerializeField] public InterfaceType interfaceType;
-    }
-    
-    public enum InterfaceType
-    {
-        HUD,
-        Menu,
-        Dialogue,
-        Quest,
-        Interaction,
+        
     }
 }
