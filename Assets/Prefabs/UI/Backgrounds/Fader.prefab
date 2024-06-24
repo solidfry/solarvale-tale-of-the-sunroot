@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2739884488098276793}
   - component: {fileID: 8944101149571327744}
   - component: {fileID: 2390787130511097890}
+  - component: {fileID: 1141367232321327189}
   m_Layer: 5
   m_Name: Fader
   m_TagString: Untagged
@@ -98,7 +99,13 @@ MonoBehaviour:
   fadeDirection: 1
   autoFade: 0
   timeBeforeExit: 6
-  OnComplete:
+  FadeInAndOutOnComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  FadeInOnComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  FadeOutOnComplete:
     m_PersistentCalls:
       m_Calls: []
 --- !u!225 &2390787130511097890
@@ -113,3 +120,15 @@ CanvasGroup:
   m_Interactable: 0
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!210 &1141367232321327189
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1878192692058163279}
+  m_Enabled: 1
+  m_SortingLayerID: -563520693
+  m_SortingLayer: -2
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
