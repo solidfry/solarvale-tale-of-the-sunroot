@@ -3,6 +3,7 @@ using Cinemachine;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using Events;
 
 namespace CameraSystem
 {
@@ -39,6 +40,7 @@ namespace CameraSystem
             takePhotoAction.performed += OnTakePhoto;
             keepButton.onClick.AddListener(KeepPhoto);
             discardButton.onClick.AddListener(DiscardPhoto);
+
         }
 
         void OnDisable()
@@ -104,6 +106,10 @@ namespace CameraSystem
 
                 // Show the canvas
                 photoCanvas.gameObject.SetActive(true);
+
+                GlobalEvents.OnLockCursorEvent?.Invoke(false);
+                GlobalEvents.OnPlayerControlsLockedEvent.Invoke(true);
+                GlobalEvents.OnSetCursorInputForLookEvent.Invoke(false);
             }
             else
             {
@@ -126,6 +132,10 @@ namespace CameraSystem
 
             // Show all UI elements again
             hideUIParent.SetActive(true);
+
+            GlobalEvents.OnLockCursorEvent?.Invoke(true);
+            GlobalEvents.OnPlayerControlsLockedEvent.Invoke(false);
+            GlobalEvents.OnSetCursorInputForLookEvent.Invoke(true);
         }
 
         public void KeepPhoto()

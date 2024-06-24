@@ -614,7 +614,7 @@ PrefabInstance:
     - target: {fileID: 7785310242533629241, guid: 401c56c995cf8364e82e5581541a6f44,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1277,6 +1277,18 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0bbe3a69df468ae4e81e4dde5eb1dcbb, type: 3}
+--- !u!1 &898413146 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2968640367680239273, guid: 02f16863770824c48ba12cec8efc4882,
+    type: 3}
+  m_PrefabInstance: {fileID: 2582777592363704159}
+  m_PrefabAsset: {fileID: 0}
+--- !u!223 &898413150 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 2802086021809432411, guid: 02f16863770824c48ba12cec8efc4882,
+    type: 3}
+  m_PrefabInstance: {fileID: 2582777592363704159}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &979588420 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6801623528100430957, guid: 7b74c2a97b959fe418484239dd744dc9,
@@ -1829,6 +1841,11 @@ PrefabInstance:
       propertyPath: doTweenAnimationHandler
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 2089841777888681322, guid: 02f16863770824c48ba12cec8efc4882,
+        type: 3}
+      propertyPath: questList.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3590085749985604487, guid: 02f16863770824c48ba12cec8efc4882,
         type: 3}
       propertyPath: m_Name
@@ -2015,6 +2032,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4905157406444911780, guid: ad31ed8347b54d149a24648c29c3b603,
         type: 3}
+      propertyPath: questUICanvas
+      value: 
+      objectReference: {fileID: 898413150}
+    - target: {fileID: 4905157406444911780, guid: ad31ed8347b54d149a24648c29c3b603,
+        type: 3}
       propertyPath: firstPersonCamera
       value: 
       objectReference: {fileID: 1663580005}
@@ -2038,6 +2060,11 @@ PrefabInstance:
       propertyPath: photoCanvas
       value: 
       objectReference: {fileID: 63910276}
+    - target: {fileID: 6033893657418664272, guid: ad31ed8347b54d149a24648c29c3b603,
+        type: 3}
+      propertyPath: hideUIParent
+      value: 
+      objectReference: {fileID: 898413146}
     - target: {fileID: 6033893657418664272, guid: ad31ed8347b54d149a24648c29c3b603,
         type: 3}
       propertyPath: discardButton
