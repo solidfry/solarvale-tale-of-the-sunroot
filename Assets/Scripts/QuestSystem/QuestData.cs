@@ -1,6 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using QuestSystem.Conditions;
+using QuestSystem.InitialisationActions;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace QuestSystem
 {
@@ -14,7 +17,10 @@ namespace QuestSystem
         [SerializeField] bool isTracked;
         
         [SerializeField] List<QuestConditionBase> questConditions;
+        [SerializeField] List<InitialisationAction> initialisationActions;
         [SerializeField] QuestData nextQuest;
+        
+        public bool cleanUpOnComplete;
 
 #if UNITY_EDITOR  
         private void Reset()
@@ -27,10 +33,6 @@ namespace QuestSystem
             ResetQuest();
         }
 #endif
-        
-        // public void SetVisible() => isVisible = true;
-        //
-        // public void SetInvisible() => isVisible = false;
 
         public bool CheckQuestCompleted() => isCompleted;
 
@@ -38,15 +40,24 @@ namespace QuestSystem
         {
             if (IsAllQuestConditionsComplete() && !isCompleted) 
                 isCompleted = true;
+
+            ClearInitialisedActions();
+        }
+
+        private void ClearInitialisedActions()
+        {
+            if (!isCompleted || !cleanUpOnComplete) return;
+            questConditions.ForEach(condition =>
+            {
+                condition.ResetCondition();
+                condition.ClearConditionsActions();
+            });
+
+            initialisationActions.ForEach(action => action.Clear());
         }
 
         public void ResetQuest() => isCompleted = false;
-
-        // public void TrackQuest() => isTracked = true;
-        //
-        // public void UntrackQuest() => isTracked = false;
-        //
-        // public bool CheckQuestTracked() => isTracked;
+        
         
         public List<QuestConditionBase> GetQuestConditions() => questConditions;
         
@@ -64,7 +75,16 @@ namespace QuestSystem
                 return null;
             }
             return nextQuest;
-            // I want to check for null before returning this value
+        }
+
+        public void InitialiseQuest()
+        {
+            if (initialisationActions is not null)
+            {
+                initialisationActions.ForEach(action => action.Execute());
+            }
+            if (!HasQuestConditions()) return;
+            questConditions.ForEach(condition => condition.InitialiseConditionActions());
         }
     }
 

@@ -13,7 +13,6 @@ namespace UI
     
         [Header("Animation Settings")]
         [SerializeField] float fadeDuration = 0.5f;
-        [SerializeField] private float keyAnimationTime = 0.5f;
     
         bool _isAnimating;
         bool _canInteract = true;

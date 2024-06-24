@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Events;
+using QuestSystem.Conditions;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -33,6 +34,7 @@ namespace QuestSystem
             }
             
             questList.Add(questData);
+            questData.InitialiseQuest();
             GlobalEvents.OnQuestAcquiredLogUpdatedEvent?.Invoke(questData);
         }
         

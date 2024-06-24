@@ -1,4 +1,5 @@
 ﻿using QuestSystem;
+using QuestSystem.Conditions;
 using UnityEditor;
 
 [CustomEditor(typeof(QuestUpdater))]
