@@ -66,6 +66,7 @@ namespace DialogueSystem
     
         private void StartDialogue(string node)
         {
+            currentDialogueRunner.startNode = node;
             currentDialogueRunner.StartDialogue(node);
         }
 
