@@ -176,7 +176,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2270376605364927971}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -26, y: 95.14903, z: -119}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -243,14 +243,14 @@ MonoBehaviour:
   UniStormMenuKey: 27
   UniStormCanvas: {fileID: 0}
   m_MenuToggle: 0
-  TabNumber: 2
+  TabNumber: 1
   TimeTabNumbers: 0
   WeatherTabNumbers: 1
   CelestialTabNumbers: 0
   TimeFoldout: 1
   DateFoldout: 1
-  TimeSoundsFoldout: 1
-  TimeMusicFoldout: 1
+  TimeSoundsFoldout: 0
+  TimeMusicFoldout: 0
   SunFoldout: 1
   MoonFoldout: 1
   AtmosphereFoldout: 1
@@ -278,13 +278,13 @@ MonoBehaviour:
   CameraName: Main Camera
   StartingMinute: 0
   StartingHour: 17
-  Minute: 13
+  Minute: 30
   Hour: 12
   Day: 25
   Month: 6
-  Year: 2020
-  DayLength: 1
-  NightLength: 1
+  Year: 2032
+  DayLength: 24
+  NightLength: 12
   TimeOfDayUpdateSeconds: 5
   UseTimeOfDayUpdateControl: 1
   m_TimeFloat: 0
@@ -452,7 +452,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 1c574a7c95db0204d8f2627686dde9dd, type: 2}
   - {fileID: 11400000, guid: 2c22445a1c49d7f4587aad0d120738bb, type: 2}
   - {fileID: 11400000, guid: 9c9c95d0c839e12409171dc4a845551a, type: 2}
-  CurrentWeatherType: {fileID: 11400000, guid: 865815ce607d94c4cb41162c44555e7c, type: 2}
+  CurrentWeatherType: {fileID: 11400000, guid: 8564137bd991ab448bb763ee76ea290f, type: 2}
   NextWeatherType: {fileID: 0}
   ByPassCoverageTransition: 0
   m_PrecipitationOdds: 50
@@ -1218,7 +1218,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   CurrentSeason: 4
-  CloudType: 0
+  CloudType: 1
   CloudQuality: 2
   TemperatureType: 1
   TemperatureCurve:
