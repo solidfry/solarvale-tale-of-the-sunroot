@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Yarn.Compiler;
 
 namespace QuestSystem.UI
 {
@@ -29,10 +31,10 @@ namespace QuestSystem.UI
         [SerializeField] private float colorAnimationTime = 0.5f;
         [SerializeField] private float heightAnimationTime = 0.5f;
         [SerializeField] float delayBeforeFade = 3f;
-
-    
+        
         float combinedHeight;
     
+        List<TMP_Text> allTextElements;
         List<Graphic> colorChangeElements;
         
         public Observable<bool> isSafeToDestroy = new(false);
@@ -46,12 +48,13 @@ namespace QuestSystem.UI
                 layoutGroup = GetComponent<LayoutGroup>();
             }
         
+            allTextElements = GetComponentsInChildren<TMP_Text>().ToList();
             CompileColorElements();
 
-            if (QuestData != null)
-            {
-                SetQuestText(QuestData);
-            }
+            // if (QuestData != null)
+            // {
+            //     SetQuestText(QuestData);
+            // }
         
         }
 
@@ -64,12 +67,9 @@ namespace QuestSystem.UI
 
         private void CompileColorElements()
         {
-            colorChangeElements = new()
-            {
-                questStatusIcon,
-                questTitle,
-                questDescription
-            };
+            colorChangeElements = new();
+            colorChangeElements.Add(questStatusIcon);
+            colorChangeElements.AddRange(allTextElements);
         }
 
         public void SetQuestData(QuestData data)
@@ -82,6 +82,14 @@ namespace QuestSystem.UI
         {
             questTitle.text = data.Title;
             questDescription.text = data.Description;
+            // if the quest has conditions we want to show them also
+            if (!data.HasQuestConditions()) return;
+            if (questDescription is null) return;
+            foreach (var condition in data.GetQuestConditions())
+            {
+                // I want to get the description TMP Text and duplicate it and replace the text in the duplicate with the condition text
+                Instantiate(questDescription, questDescription.transform.parent).text = condition.Title;
+            }
         }
     
         [ContextMenu("SetIsCompleted")]
@@ -95,7 +103,10 @@ namespace QuestSystem.UI
 
         private float CalculateCombinedHeight()
         {
-            return questTitle.rectTransform.rect.height + questDescription.rectTransform.rect.height + layoutGroup.padding.vertical;
+            var text = GetComponentsInChildren<TMP_Text>();
+            var sum = text.Sum( t => t.rectTransform.rect.height);
+            return sum + layoutGroup.padding.vertical;
+            // return questTitle.rectTransform.rect.height + questDescription.rectTransform.rect.height + layoutGroup.padding.vertical;
         }
     
         public void SetQuestStatusIcon()

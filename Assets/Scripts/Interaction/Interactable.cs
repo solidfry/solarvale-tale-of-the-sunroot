@@ -11,6 +11,7 @@ namespace Interaction
         [SerializeField] private UnityEvent interactEvent;
         [SerializeField] private bool isInteractable = true;
         [SerializeField] private bool isOneTimeUse = false;
+        [SerializeField] private bool isDisabledAfterUse = false;
         [SerializeField] private string interactMessage = "Interact";
         [SerializeField] private bool showCannotInteractMessage = true;
         [SerializeField] private string cannotInteractMessage = "Cannot interact with this object.";
@@ -30,8 +31,10 @@ namespace Interaction
             
             Debug.Log("Interacting with " + gameObject.name);
             interactEvent?.Invoke();
-            
+
             if (isOneTimeUse) isInteractable = false;
+
+            if (isDisabledAfterUse) gameObject.SetActive(false);
         }
 
         private bool CheckIsInteractable()

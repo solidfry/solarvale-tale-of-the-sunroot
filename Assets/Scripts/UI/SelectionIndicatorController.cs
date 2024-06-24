@@ -9,7 +9,7 @@ namespace UI
         [SerializeField] EventSystem eventSystem;
         [SerializeField] Transform itemsList;
     
-        CanvasGroup selectionIndicatorCanvasGroup;
+        CanvasGroup _selectionIndicatorCanvasGroup;
 
         [SerializeField] RectTransform currentTarget;
 
@@ -18,8 +18,8 @@ namespace UI
         private void Start()
         {
             eventSystem = EventSystem.current;
-            selectionIndicatorCanvasGroup = selectionIndicator.GetComponent<CanvasGroup>();
-            selectionIndicatorCanvasGroup.alpha = 0;
+            _selectionIndicatorCanvasGroup = selectionIndicator.GetComponent<CanvasGroup>();
+            _selectionIndicatorCanvasGroup.alpha = 0;
         }
 
         private void Update()
@@ -33,9 +33,9 @@ namespace UI
 
         private void UpdateSelectorAlpha()
         {
-            if (selectionIndicatorCanvasGroup.alpha < 1)
+            if (_selectionIndicatorCanvasGroup.alpha < 1)
             {
-                selectionIndicatorCanvasGroup.alpha = Lerp(selectionIndicatorCanvasGroup.alpha, 1, interpolationValue);
+                _selectionIndicatorCanvasGroup.alpha = Lerp(_selectionIndicatorCanvasGroup.alpha, 1, interpolationValue);
             }
         }
 
@@ -47,10 +47,11 @@ namespace UI
 
         private void SetTarget()
         {
-            if (currentTarget == eventSystem.currentSelectedGameObject?.transform || eventSystem.currentSelectedGameObject?.transform.parent != itemsList ) return;
+            if (eventSystem.currentSelectedGameObject is null) return;
+            if (eventSystem.currentSelectedGameObject.transform == currentTarget || eventSystem.currentSelectedGameObject.transform.parent != itemsList) return;
             if (eventSystem?.currentSelectedGameObject == null) return;
             currentTarget = eventSystem?.currentSelectedGameObject.transform as RectTransform;
-            Debug.Log("Setting new target" + currentTarget.name);
+            // Debug.Log("Setting new target" + currentTarget.name);
         }
 
         private void UpdateTransform()
