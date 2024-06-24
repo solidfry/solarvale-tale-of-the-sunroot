@@ -8,27 +8,18 @@ namespace CameraSystem
     {
         public CinemachineVirtualCamera thirdPersonCamera;
         public CinemachineVirtualCamera firstPersonCamera;
-        public InputActionAsset inputActionAsset;
         public Canvas questUICanvas; // Reference to the Quest UI Canvas
 
-        private InputAction cameraOpenAction;
-
-        void Awake()
-        {
-            var playerActionMap = inputActionAsset.FindActionMap("Player");
-            cameraOpenAction = playerActionMap.FindAction("CameraOpen");
-        }
+        [SerializeField] private InputActionReference cameraOpenActionRef;
 
         void OnEnable()
         {
-            cameraOpenAction.Enable();
-            cameraOpenAction.performed += OnCameraOpen;
+            cameraOpenActionRef.action.performed += OnCameraOpen;
         }
 
         void OnDisable()
         {
-            cameraOpenAction.performed -= OnCameraOpen;
-            cameraOpenAction.Disable();
+            cameraOpenActionRef.action.performed -= OnCameraOpen;
         }
 
         void OnCameraOpen(InputAction.CallbackContext context)

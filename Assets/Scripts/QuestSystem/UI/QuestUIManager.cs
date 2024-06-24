@@ -15,16 +15,21 @@ namespace QuestSystem.UI
         [Header("UI Elements")] 
         [SerializeField] RectTransform questUICanvas;
         [SerializeField] RectTransform questLogParent;
+        [SerializeField] CanvasGroup headerCanvasGroup;
 
         [Header("Quest Notifications")]
         [SerializeField] private QuestNotificationModal questNotificationModal;
         [SerializeField] float notificationDuration = 3f;
         [SerializeField] float notificationFadeDuration = 2f;
+        [SerializeField] float headerFadeDuration = 0.5f;
         private QuestNotificationModal _questNotificationInstance;
+        
         private void Start()
         {
             InitialiseQuestLog();
             InitialiseQuestNotificationModal();
+            // If the quest log is empty then hide the header canvas group
+            ToggleHeader(0);
         }
 
         private void OnEnable()
@@ -43,7 +48,6 @@ namespace QuestSystem.UI
         private void DestroyQuestNotification()
         {
             if (_questNotificationInstance is null) return;
-            // _questNotificationInstance.IntroAnimationCompleted -= PlayHideQuestNotification;
             Destroy(_questNotificationInstance.gameObject);
         }
 
@@ -63,6 +67,7 @@ namespace QuestSystem.UI
         
         private void InitialiseQuestNotificationModal()
         {
+            if (questNotificationModal is null) return;
             _questNotificationInstance = Instantiate(questNotificationModal, questUICanvas);
         }
         
@@ -77,6 +82,7 @@ namespace QuestSystem.UI
                 return;
             }
             
+            ToggleHeader(headerFadeDuration);
             // Add the quest node because it doesn't exist
             AddQuestNodeElement(questData);
             ShowQuestNotification(questData);
@@ -84,6 +90,7 @@ namespace QuestSystem.UI
 
         private void ShowQuestNotification(QuestData questData)
         {
+            if (_questNotificationInstance is null) return;
             _questNotificationInstance.SetQuestData(questData);
             _questNotificationInstance.SetActive();
             
@@ -120,9 +127,21 @@ namespace QuestSystem.UI
                 questNodes.FindAll(q => q.isSafeToDestroy.Value).ForEach(q =>
                 {
                     questNodes.Remove(q);
+                    //TODO: pooling would be a good idea at some point but this one is low risk
                     Destroy(q.gameObject);
                 });
             }
+        }
+        
+        // if there is no quest nodes then do not show the header canvas group.
+        // We need a check here.
+        
+        bool IsQuestLogEmpty() => questNodes.Count == 0;
+        
+        void ToggleHeader(float duration = 0.5f)
+        {
+            if (headerCanvasGroup is null) return;
+            headerCanvasGroup.DOFade(headerCanvasGroup.alpha > 0 && IsQuestLogEmpty() ? 0 : 1, duration);
         }
     }
 }
