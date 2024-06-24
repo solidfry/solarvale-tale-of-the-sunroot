@@ -107,12 +107,11 @@ MonoBehaviour:
     hdrDebugViewPS: {fileID: 4800000, guid: 573620ae32aec764abd4d728906d2587, type: 3}
   m_RendererFeatures:
   - {fileID: -1878332245247344467}
-  - {fileID: 2643392734009920018}
   - {fileID: 166445240514147758}
   - {fileID: -5000543669826407791}
   - {fileID: 1131798712976922368}
   - {fileID: -1143069082354463060}
-  m_RendererFeatureMap: adc0de57c6d2eee5128a82b0af37af24ae75667b10554f02357cee5e05469c6675de9942b8cfbff0
+  m_RendererFeatureMap: adc0de57c6d2eee5ae75667b10554f02357cee5e05469c6675de9942b8cfbff0
   m_UseNativeRenderPass: 1
   postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
   xrSystemData: {fileID: 11400000, guid: 60e1133243b97e347b653163a8c01b64, type: 2}
@@ -195,38 +194,3 @@ MonoBehaviour:
     sunShaftIntensity: 1
     maxRadius: 0.5
     useDepthTexture: 1
---- !u!114 &2643392734009920018
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1b1f8e52a528414eb09a2a63238d9d6, type: 3}
-  m_Name: UniStormAtmosphericFogFeature
-  m_EditorClassIdentifier: 
-  m_Active: 1
-  settings:
-    isEnabled: 1
-    renderPassEvent: 450
-    NoiseTexture: {fileID: 2800000, guid: e09deeeaec0a3c547a3b72ad3d615255, type: 2}
-    Dither: 0
-    distanceFog: 0
-    useRadialDistance: 1
-    heightFog: 1
-    height: 1
-    heightDensity: 2
-    startDistance: 0
-    SunColor: {r: 0, g: 0, b: 0, a: 1}
-    MoonColor: {r: 0.33023313, g: 0.36793935, b: 0.38679242, a: 1}
-    TopColor: {r: 1, g: 1, b: 1, a: 0}
-    BottomColor: {r: 0.121720165, g: 0.16240925, b: 0.1998697, a: 1}
-    BlendHeight: 0.031574972
-    FogGradientHeight: 0.5
-    SunIntensity: 0.23305051
-    MoonIntensity: 0.31069252
-    SunFalloffIntensity: 9.4
-    SunControl: -0.009032018
-    MoonControl: 1.0687933
