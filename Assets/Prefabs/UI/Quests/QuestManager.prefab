@@ -46,9 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5026ff8394a921d4d9c7ac23c11248bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questList:
-  - {fileID: 11400000, guid: 1613328345e86ed4dbc33e5affffd1b5, type: 2}
-  - {fileID: 11400000, guid: eeaa923e299279f4e83e4ebec4cb6148, type: 2}
+  questList: []
   completedQuests: []
 --- !u!1001 &921036705252889967
 PrefabInstance:
@@ -62,6 +60,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: QuestUICanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 2736663205014594502, guid: b0512fa67ea89a44f8583bd4c8608c67,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2863085777996251929, guid: b0512fa67ea89a44f8583bd4c8608c67,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3038571185386828340, guid: b0512fa67ea89a44f8583bd4c8608c67,
+        type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3038571185386828340, guid: b0512fa67ea89a44f8583bd4c8608c67,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -449329791
+      objectReference: {fileID: 0}
+    - target: {fileID: 3038571185386828340, guid: b0512fa67ea89a44f8583bd4c8608c67,
+        type: 3}
+      propertyPath: m_VertexColorAlwaysGammaSpace
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3065941886570431559, guid: b0512fa67ea89a44f8583bd4c8608c67,
         type: 3}
@@ -163,10 +186,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3601201413352594902, guid: b0512fa67ea89a44f8583bd4c8608c67,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 5486092437730753032, guid: b0512fa67ea89a44f8583bd4c8608c67,
         type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5727112250156850558, guid: b0512fa67ea89a44f8583bd4c8608c67,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6073708988795055306, guid: b0512fa67ea89a44f8583bd4c8608c67,
         type: 3}
@@ -198,10 +231,20 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6223369353427925544, guid: b0512fa67ea89a44f8583bd4c8608c67,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 8928216181841973257, guid: b0512fa67ea89a44f8583bd4c8608c67,
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9001080114422823074, guid: b0512fa67ea89a44f8583bd4c8608c67,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 9189666856320807303, guid: b0512fa67ea89a44f8583bd4c8608c67,
         type: 3}
@@ -234,9 +277,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 3402950613305178169, guid: b0512fa67ea89a44f8583bd4c8608c67, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2736663205014594502, guid: b0512fa67ea89a44f8583bd4c8608c67,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6213730785963539254}
   m_SourcePrefab: {fileID: 100100000, guid: b0512fa67ea89a44f8583bd4c8608c67, type: 3}
 --- !u!225 &2189688485122880731 stripped
 CanvasGroup:
@@ -250,6 +298,24 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 921036705252889967}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2968640367680239273 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2736663205014594502, guid: b0512fa67ea89a44f8583bd4c8608c67,
+    type: 3}
+  m_PrefabInstance: {fileID: 921036705252889967}
+  m_PrefabAsset: {fileID: 0}
+--- !u!210 &6213730785963539254
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2968640367680239273}
+  m_Enabled: 1
+  m_SortingLayerID: -449329791
+  m_SortingLayer: -1
+  m_SortingOrder: 100
+  m_SortAtRoot: 1
 --- !u!224 &4677738086435925863 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5486092437730753032, guid: b0512fa67ea89a44f8583bd4c8608c67,
@@ -339,6 +405,11 @@ PrefabInstance:
       propertyPath: headerCanvasGroup
       value: 
       objectReference: {fileID: 2189688485122880731}
+    - target: {fileID: 9074282514612904371, guid: 11c3a83ee8e52104a8946c07d56554f2,
+        type: 3}
+      propertyPath: notificationDuration
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

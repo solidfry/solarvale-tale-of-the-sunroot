@@ -14,8 +14,8 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 0
-  m_FogColor: {r: 0.7176471, g: 0.654902, b: 0.6156863, a: 1}
+  m_Fog: 1
+  m_FogColor: {r: 0.7738964, g: 0.8773585, b: 0.8616423, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.001
   m_LinearFogStart: 5
@@ -23,7 +23,7 @@ RenderSettings:
   m_AmbientSkyColor: {r: 0.51255, g: 0.52611744, b: 0.603, a: 1}
   m_AmbientEquatorColor: {r: 0.3, g: 0.22584271, b: 0.20898877, a: 1}
   m_AmbientGroundColor: {r: 0.042307694, g: 0.046153847, b: 0.05, a: 1}
-  m_AmbientIntensity: 1
+  m_AmbientIntensity: 0
   m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: f049e97d2aadb8f4cb24f80ca9ad0962, type: 2}
@@ -33,7 +33,7 @@ RenderSettings:
   m_HaloTexture: {fileID: 0}
   m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
   m_DefaultReflectionMode: 0
-  m_DefaultReflectionResolution: 128
+  m_DefaultReflectionResolution: 512
   m_ReflectionBounces: 1
   m_ReflectionIntensity: 0.112
   m_CustomReflection: {fileID: 0}
@@ -1620,6 +1620,30 @@ MonoBehaviour:
     m_selectedWorldBiomeMaskGUID: 
     m_growAndShrinkValue: 0
     m_globalSpawnerMaskStackRT: {fileID: 0}
+--- !u!114 &191900783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cba17d399ab86974c8ef9551f6e8f8d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transformSettings:
+    translation: {x: -219.88208, y: -311.00653, z: 1037.8025}
+    scale: {x: 2.833992, y: 1, z: 2.833992}
+    rotation: {x: 0, y: 0, z: 0}
+    flipScaleX: 0
+    flipScaleY: 0
+    flipScaleZ: 0
+  domainSettings:
+    noiseTypeName: Perlin
+    fractalTypeName: Fbm
+    noiseTypeParams: 
+    fractalTypeParams: '{"warpOffsets":{"x":131.8886260986328,"y":-790.2544555664063,"z":9.61446762084961,"w":0.0},"octavesMinMax":{"x":0.0,"y":16.0},"amplitudeMinMax":{"x":0.0,"y":1.0},"frequencyMinMax":{"x":0.0,"y":2.0},"lacunarityMinMax":{"x":0.0,"y":4.0},"persistenceMinMax":{"x":0.0,"y":1.0},"warpIterationsMinMax":{"x":0.0,"y":8.0},"warpStrengthMinMax":{"x":-2.0,"y":2.0},"octaves":8.0,"amplitude":0.48794734477996828,"frequency":1.0,"persistence":0.5,"lacunarity":0.9288221597671509,"warpIterations":0.6973782777786255,"warpStrength":0.9334391951560974,"warpEnabled":true,"warpExpanded":true}'
 --- !u!114 &240979696
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1749,17 +1773,17 @@ PrefabInstance:
     - target: {fileID: 2838293530554581146, guid: ad31ed8347b54d149a24648c29c3b603,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 760.2665
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2838293530554581146, guid: ad31ed8347b54d149a24648c29c3b603,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 314.45416
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2838293530554581146, guid: ad31ed8347b54d149a24648c29c3b603,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.1079721
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2838293530554581146, guid: ad31ed8347b54d149a24648c29c3b603,
         type: 3}
@@ -2479,7 +2503,7 @@ MonoBehaviour:
       m_warpIterations: 0.6973783
       m_warpStrength: 0.9334392
       m_warpOffset: {x: 131.88863, y: -790.25446, z: 9.614468, w: 0}
-    m_noiseSettings: {fileID: 2094694462}
+    m_noiseSettings: {fileID: 191900783}
     m_noiseToolSettings:
       worldHeightRemap: {x: 0, y: 0}
       coordSpace: 0
@@ -17830,47 +17854,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1177516786195541288, guid: 02f16863770824c48ba12cec8efc4882,
-        type: 3}
-      propertyPath: questData
-      value: 
-      objectReference: {fileID: 11400000, guid: 1613328345e86ed4dbc33e5affffd1b5,
-        type: 2}
-    - target: {fileID: 1177516786195541288, guid: 02f16863770824c48ba12cec8efc4882,
-        type: 3}
-      propertyPath: doTweenAnimationHandler
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2089841777888681322, guid: 02f16863770824c48ba12cec8efc4882,
-        type: 3}
-      propertyPath: questList.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2089841777888681322, guid: 02f16863770824c48ba12cec8efc4882,
-        type: 3}
-      propertyPath: completedQuests.Array.size
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2802086021809432411, guid: 02f16863770824c48ba12cec8efc4882,
         type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 697348554}
-    - target: {fileID: 2802086021809432411, guid: 02f16863770824c48ba12cec8efc4882,
-        type: 3}
-      propertyPath: m_RenderMode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2802086021809432411, guid: 02f16863770824c48ba12cec8efc4882,
-        type: 3}
-      propertyPath: m_SortingLayerID
-      value: -449329791
-      objectReference: {fileID: 0}
-    - target: {fileID: 2802086021809432411, guid: 02f16863770824c48ba12cec8efc4882,
-        type: 3}
-      propertyPath: m_VertexColorAlwaysGammaSpace
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3590085749985604487, guid: 02f16863770824c48ba12cec8efc4882,
         type: 3}
       propertyPath: m_Name
@@ -17911,30 +17899,20 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7233512883640689104, guid: 02f16863770824c48ba12cec8efc4882,
-        type: 3}
-      propertyPath: setAutoKill
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7588905093866850001, guid: 02f16863770824c48ba12cec8efc4882,
-        type: 3}
-      propertyPath: notificationDuration
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 7794561876559934919, guid: 02f16863770824c48ba12cec8efc4882,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.94354534
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7794561876559934919, guid: 02f16863770824c48ba12cec8efc4882,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 157.30281
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7794561876559934919, guid: 02f16863770824c48ba12cec8efc4882,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.459112
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7794561876559934919, guid: 02f16863770824c48ba12cec8efc4882,
         type: 3}
@@ -18007,8 +17985,7 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 2590022292619750742, guid: 02f16863770824c48ba12cec8efc4882, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 02f16863770824c48ba12cec8efc4882, type: 3}
@@ -34330,30 +34307,6 @@ MonoBehaviour:
     m_selectedWorldBiomeMaskGUID: 
     m_growAndShrinkValue: 0
     m_globalSpawnerMaskStackRT: {fileID: 0}
---- !u!114 &2094694462
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cba17d399ab86974c8ef9551f6e8f8d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  transformSettings:
-    translation: {x: -219.88208, y: -311.00653, z: 1037.8025}
-    scale: {x: 2.833992, y: 1, z: 2.833992}
-    rotation: {x: 0, y: 0, z: 0}
-    flipScaleX: 0
-    flipScaleY: 0
-    flipScaleZ: 0
-  domainSettings:
-    noiseTypeName: Perlin
-    fractalTypeName: Fbm
-    noiseTypeParams: 
-    fractalTypeParams: '{"warpOffsets":{"x":131.8886260986328,"y":-790.2544555664063,"z":9.61446762084961,"w":0.0},"octavesMinMax":{"x":0.0,"y":16.0},"amplitudeMinMax":{"x":0.0,"y":1.0},"frequencyMinMax":{"x":0.0,"y":2.0},"lacunarityMinMax":{"x":0.0,"y":4.0},"persistenceMinMax":{"x":0.0,"y":1.0},"warpIterationsMinMax":{"x":0.0,"y":8.0},"warpStrengthMinMax":{"x":-2.0,"y":2.0},"octaves":8.0,"amplitude":0.48794734477996828,"frequency":1.0,"persistence":0.5,"lacunarity":0.9288221597671509,"warpIterations":0.6973782777786255,"warpStrength":0.9334391951560974,"warpEnabled":true,"warpExpanded":true}'
 --- !u!114 &2098562539
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35557,11 +35510,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5857738312332816154, guid: 0e539266a4862f94d9dee21ab0339928,
         type: 3}
-      propertyPath: FogType
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5857738312332816154, guid: 0e539266a4862f94d9dee21ab0339928,
-        type: 3}
       propertyPath: TabNumber
       value: 2
       objectReference: {fileID: 0}
@@ -35572,6 +35520,11 @@ PrefabInstance:
       objectReference: {fileID: 1707106816}
     - target: {fileID: 5857738312332816154, guid: 0e539266a4862f94d9dee21ab0339928,
         type: 3}
+      propertyPath: LowCloudHeight
+      value: 298
+      objectReference: {fileID: 0}
+    - target: {fileID: 5857738312332816154, guid: 0e539266a4862f94d9dee21ab0339928,
+        type: 3}
       propertyPath: PlayerTransform
       value: 
       objectReference: {fileID: 1470854553}
@@ -35579,8 +35532,13 @@ PrefabInstance:
         type: 3}
       propertyPath: CurrentWeatherType
       value: 
-      objectReference: {fileID: 11400000, guid: 5e51740885cc8c14497e44041aeb303e,
+      objectReference: {fileID: 11400000, guid: 8564137bd991ab448bb763ee76ea290f,
         type: 2}
+    - target: {fileID: 5857738312332816154, guid: 0e539266a4862f94d9dee21ab0339928,
+        type: 3}
+      propertyPath: StormyHorizonBrightness
+      value: 1.073
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -35607,22 +35565,22 @@ PrefabInstance:
     - target: {fileID: 3706941298269226024, guid: cab189e516aac90418c50707400a651a,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.73062444
+      value: 0.7306818
       objectReference: {fileID: 0}
     - target: {fileID: 3706941298269226024, guid: cab189e516aac90418c50707400a651a,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.016283363
+      value: 0.016289758
       objectReference: {fileID: 0}
     - target: {fileID: 3706941298269226024, guid: cab189e516aac90418c50707400a651a,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.68241596
+      value: 0.68235433
       objectReference: {fileID: 0}
     - target: {fileID: 3706941298269226024, guid: cab189e516aac90418c50707400a651a,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.015208946
+      value: -0.0152123505
       objectReference: {fileID: 0}
     - target: {fileID: 5754649896476583623, guid: cab189e516aac90418c50707400a651a,
         type: 3}
@@ -35815,22 +35773,22 @@ PrefabInstance:
     - target: {fileID: 7084293734041802467, guid: 8746b19db272db1499fc8f3e3e844961,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.99875605
+      value: 0.9987596
       objectReference: {fileID: 0}
     - target: {fileID: 7084293734041802467, guid: 8746b19db272db1499fc8f3e3e844961,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.02225919
+      value: 0.022266263
       objectReference: {fileID: 0}
     - target: {fileID: 7084293734041802467, guid: 8746b19db272db1499fc8f3e3e844961,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.044609547
+      value: 0.044525385
       objectReference: {fileID: 0}
     - target: {fileID: 7084293734041802467, guid: 8746b19db272db1499fc8f3e3e844961,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0009942083
+      value: -0.0009926464
       objectReference: {fileID: 0}
     - target: {fileID: 7084293734041802468, guid: 8746b19db272db1499fc8f3e3e844961,
         type: 3}

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3038571185386828340}
   - component: {fileID: 2896576231508163137}
   - component: {fileID: 3195714970638670840}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: QuestUICanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48,7 +48,7 @@ Canvas:
   m_GameObject: {fileID: 2736663205014594502}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -114,7 +114,7 @@ GameObject:
   - component: {fileID: 3935813722042561595}
   - component: {fileID: 8392838337006586142}
   - component: {fileID: 1345300939068858804}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Header
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -205,7 +205,7 @@ GameObject:
   - component: {fileID: 1735055936937111503}
   - component: {fileID: 8306558414410157005}
   - component: {fileID: 1557967453717215630}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -280,7 +280,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1587728999484245786}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: QuestHUD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -322,7 +322,7 @@ GameObject:
   - component: {fileID: 7623289834301021639}
   - component: {fileID: 3347384169709106658}
   - component: {fileID: 8778404015896099049}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -508,7 +508,7 @@ GameObject:
   - component: {fileID: 5022686739062775494}
   - component: {fileID: 845650023647401202}
   - component: {fileID: 3119521244743941962}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Objectives
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -781,6 +781,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1735055936937111503}
     m_Modifications:
+    - target: {fileID: 150637383053562954, guid: fb97270daccdf2a47958b94b65319a48,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 842653921622149165, guid: fb97270daccdf2a47958b94b65319a48,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1194503407195116553, guid: fb97270daccdf2a47958b94b65319a48,
+        type: 3}
+      propertyPath: m_paragraphSpacing
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 2332339582100117059, guid: fb97270daccdf2a47958b94b65319a48,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 2924154174050028775, guid: fb97270daccdf2a47958b94b65319a48,
         type: 3}
       propertyPath: m_Pivot.x
@@ -881,10 +901,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3056189580585573022, guid: fb97270daccdf2a47958b94b65319a48,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 5211732160760883264, guid: fb97270daccdf2a47958b94b65319a48,
         type: 3}
       propertyPath: m_Name
       value: NewQuestModal
+      objectReference: {fileID: 0}
+    - target: {fileID: 5211732160760883264, guid: fb97270daccdf2a47958b94b65319a48,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9056079268207316976, guid: fb97270daccdf2a47958b94b65319a48,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
