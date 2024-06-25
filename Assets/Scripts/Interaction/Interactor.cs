@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using Events;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 namespace Interaction
 {
@@ -20,11 +19,31 @@ namespace Interaction
         [SerializeField] float interactCooldown = 0.1f;
         private Coroutine _interactNullCooldown;
         private bool _isInteracting;
+        [SerializeField] bool canInteract = true;
 
         private void FixedUpdate() => CheckInteractable();
 
+        private void OnEnable()
+        {
+            GlobalEvents.OnSetCanInteractEvent += SetCanInteract;
+        }
+        
+        private void OnDisable()
+        {
+            GlobalEvents.OnSetCanInteractEvent -= SetCanInteract;
+        }
+
+        private void SetCanInteract(bool value)
+        {
+            canInteract = value;
+            if (value) 
+                StartCoroutine(SetInteractableNull());
+        }
+
         private void CheckInteractable()
         {
+            if (!canInteract) return;
+            
             if (Physics.SphereCast(GetRayOrigin(), raycastRadius, transform.forward, out var hit, interactableDistance, interactableLayers))
             {
                 if (hit.collider.TryGetComponent(out IInteractable interactable))
@@ -71,7 +90,7 @@ namespace Interaction
 
         public void OnInteract()
         {
-            if (_currentInteractable == null) return;
+            if (_currentInteractable == null || !canInteract) return;
             _currentInteractable.Interact();
         }
 

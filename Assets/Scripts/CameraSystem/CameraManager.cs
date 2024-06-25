@@ -1,9 +1,12 @@
 using System.Collections;
 using Cinemachine;
+using Entities;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using Events;
+using UnityEngine.Events;
+using UnityEngine.Serialization;
 
 namespace CameraSystem
 {
@@ -27,11 +30,23 @@ namespace CameraSystem
 
         public CinemachineVirtualCamera thirdPersonCamera;
         public CinemachineVirtualCamera firstPersonCamera;
+        
+        
+        [Header("On Photo Taken Event Handling")]
+        [Space(10)]
+        public UnityEvent<EntityData> onPhotoTaken;
+        
+        [Header("Raycast Settings")]
+        [FormerlySerializedAs("raycastDistance")] [SerializeField] float rayCastDistance = 300f;
+        [FormerlySerializedAs("raycastBoxSize")] [SerializeField] float rayCastBoxSize = 0.5f;
+        Camera _mainCamera;
+
 
         void Awake()
         {
             var playerActionMap = inputActionAsset.FindActionMap("Player");
             takePhotoAction = playerActionMap.FindAction("TakePhoto");
+            _mainCamera = Camera.main;
         }
 
         void OnEnable()
@@ -40,7 +55,6 @@ namespace CameraSystem
             takePhotoAction.performed += OnTakePhoto;
             keepButton.onClick.AddListener(KeepPhoto);
             discardButton.onClick.AddListener(DiscardPhoto);
-
         }
 
         void OnDisable()
@@ -67,7 +81,7 @@ namespace CameraSystem
         public bool IsFirstPersonCameraHigherPriority()
         {
             bool isFirstHigher = firstPersonCamera.Priority > thirdPersonCamera.Priority;
-            Debug.Log($"IsFirstPersonCameraHigherPriority: {isFirstHigher}");
+            // Debug.Log($"IsFirstPersonCameraHigherPriority: {isFirstHigher}");
             return isFirstHigher;
         }
 
@@ -88,6 +102,9 @@ namespace CameraSystem
             screenCapture = new Texture2D(Screen.width, Screen.height, TextureFormat.RGBA32, false);
             screenCapture.ReadPixels(regionToRead, 0, 0, false);
             screenCapture.Apply();
+
+            // the ray should fire here which will then pass the data to the unity event to invoke
+            HandlePhotographyRayForQuests();
 
             // Display the photo
             ShowPhoto();
@@ -110,6 +127,7 @@ namespace CameraSystem
                 GlobalEvents.OnLockCursorEvent?.Invoke(false);
                 GlobalEvents.OnPlayerControlsLockedEvent.Invoke(true);
                 GlobalEvents.OnSetCursorInputForLookEvent.Invoke(false);
+                GlobalEvents.OnSetCanInteractEvent?.Invoke(false);
             }
             else
             {
@@ -136,6 +154,7 @@ namespace CameraSystem
             GlobalEvents.OnLockCursorEvent?.Invoke(true);
             GlobalEvents.OnPlayerControlsLockedEvent.Invoke(false);
             GlobalEvents.OnSetCursorInputForLookEvent.Invoke(true);
+            GlobalEvents.OnSetCanInteractEvent?.Invoke(true);
         }
 
         public void KeepPhoto()
@@ -149,6 +168,42 @@ namespace CameraSystem
         {
             Debug.Log("DiscardPhoto: Photo discarded");
             RemovePhoto();
+        }
+        
+        RaycastHit GetRaycastHit(out Ray ray)
+        {
+            ray = _mainCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
+            Physics.BoxCast(ray.origin, Vector3.one * rayCastBoxSize, ray.direction, out var hit, Quaternion.identity, rayCastDistance);
+            return hit;
+        }
+        
+        private void HandlePhotographyRayForQuests()
+        {
+            RaycastHit hit = GetRaycastHit(out Ray ray);
+            EntityData e = GetEntityDataFromRaycastHit(hit);
+            onPhotoTaken?.Invoke(e);
+        }
+
+        EntityData GetEntityDataFromRaycastHit(RaycastHit hit)
+        {
+            if (hit.collider is not null && hit.collider.TryGetComponent(out IEntity e))
+            {
+                return e?.GetEntityData;
+            }
+            return null;
+        }
+
+        private void OnDrawGizmos()
+        {
+            if (IsFirstPersonCameraHigherPriority())
+            {
+                RaycastHit hit = GetRaycastHit(out Ray ray);
+                
+                Gizmos.color = Color.red; 
+                // I want to draw a box cast gizmo here
+                Gizmos.DrawRay(ray.origin,  ray.direction * rayCastDistance);  
+                Gizmos.DrawCube(hit.point, Vector3.one * rayCastBoxSize);
+            }
         }
     }
 }
