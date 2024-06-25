@@ -14,6 +14,7 @@ namespace QuestSystem.UI
 
         [Header("UI Elements")] 
         [SerializeField] RectTransform questUICanvas;
+        [SerializeField] CanvasGroup questUICanvasGroup;
         [SerializeField] RectTransform questLogParent;
         [SerializeField] CanvasGroup headerCanvasGroup;
 
@@ -36,8 +37,15 @@ namespace QuestSystem.UI
         {
             GlobalEvents.OnQuestCompletedLogUpdatedEvent += CheckQuestsCompleted;
             GlobalEvents.OnQuestAcquiredLogUpdatedEvent += UpdateQuestLog;
+            GlobalEvents.OnSetHUDVisibilityEvent += ToggleQuestUI;
         }
-        
+
+        private void ToggleQuestUI(bool value)
+        {
+            if (questUICanvasGroup is null) return;
+            questUICanvasGroup.DOFade(value ? 1 : 0, 0.5f);
+        }
+
         private void OnDisable()
         {
             GlobalEvents.OnQuestCompletedLogUpdatedEvent -= CheckQuestsCompleted;

@@ -7,17 +7,13 @@ namespace CameraSystem
 {
     public class CameraManager : MonoBehaviour
     {
+        [Header("Input Action to Open Camera Mode")]
+        [SerializeField] private InputActionReference cameraOpenActionRef;
+        
+        [Header("Cameras")]
         public CinemachineVirtualCamera thirdPersonCamera;
         public CinemachineVirtualCamera firstPersonCamera;
-        public Canvas questUICanvas; // Reference to the Quest UI Canvas
-
-        [SerializeField] private InputActionReference cameraOpenActionRef;
-
-
-        private void Awake()
-        {
-            
-        }
+        
 
         void OnEnable()
         {
@@ -41,7 +37,6 @@ namespace CameraSystem
             {
                 thirdPersonCamera.Priority = 0;
                 firstPersonCamera.Priority = 1;
-                GlobalEvents.OnSetHUDVisibilityEvent?.Invoke(false);
                 GlobalEvents.OnSetCursorInputForLookEvent?.Invoke(false);
 
             }
@@ -49,18 +44,15 @@ namespace CameraSystem
             {
                 thirdPersonCamera.Priority = 1;
                 firstPersonCamera.Priority = 0;
-                GlobalEvents.OnSetHUDVisibilityEvent?.Invoke(true);
-                GlobalEvents.OnSetCursorInputForLookEvent?.Invoke(true);
             }
         }
         
-        public bool IsCameraOpen() => firstPersonCamera?.Priority > thirdPersonCamera?.Priority;
+        public bool IsInCameraMode() => firstPersonCamera?.Priority > thirdPersonCamera?.Priority;
 
         void AdjustUIVisibility()
         {
-            // Show/hide UI elements based on camera priority.
-            // TODO: Refactor. This script should not need a reference to this UI element.
-            questUICanvas.gameObject.SetActive(!IsCameraOpen()); // Quest UI Canvas
+            GlobalEvents.OnSetCursorInputForLookEvent?.Invoke(!IsInCameraMode());
+            GlobalEvents.OnSetHUDVisibilityEvent?.Invoke(!IsInCameraMode());
         }
     }
 }

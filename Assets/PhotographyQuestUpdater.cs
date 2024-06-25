@@ -5,13 +5,10 @@ using UnityEngine;
 
 public class PhotographyQuestUpdater : MonoBehaviour
 {
-    [SerializeField] private EntityData lastEntityData;
-    
     [SerializeField] List<EntityData> entitiesPhotographed;
 
     public void UpdatePhotographyQuests(EntityData eData)
     {   
-        
         entitiesPhotographed.Add(eData);
         GlobalEvents.OnPhotographConditionUpdatedEvent?.Invoke(eData);
         Debug.Log("PhotographyQuestUpdater Sent Event" + eData);

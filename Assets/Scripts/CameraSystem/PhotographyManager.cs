@@ -1,12 +1,10 @@
 using System.Collections;
-using Cinemachine;
 using Entities;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using Events;
 using UnityEngine.Events;
-using UnityEngine.Serialization;
 
 namespace CameraSystem
 {
@@ -21,16 +19,10 @@ namespace CameraSystem
         [SerializeField] private Button keepButton; // Reference to the keep button
         [SerializeField] private Button discardButton; // Reference to the discard button
 
-        [Header("Hide all UI")]
-        [SerializeField] private GameObject hideUIParent; // Parent GameObject to hide all UI elements
-
         private Texture2D _screenCapture;
         private bool _viewingPhoto;
         
         [SerializeField] private InputActionReference takePhotoActionRef;
-
-        public CinemachineVirtualCamera thirdPersonCamera;
-        public CinemachineVirtualCamera firstPersonCamera;
         
         [Header("On Photo Taken Event Handling")]
         [Space(10)]
@@ -88,7 +80,7 @@ namespace CameraSystem
                 Debug.LogError("IsFirstPersonCameraHigherPriority: Camera manager is null");
                 cameraManager = GetComponent<CameraManager>();
             }
-            return cameraManager.IsCameraOpen();
+            return cameraManager.IsInCameraMode();
         }
 
         IEnumerator CapturePhoto()
@@ -96,8 +88,6 @@ namespace CameraSystem
             Debug.Log("CapturePhoto: Starting photo capture coroutine");
 
             // Hide all UI elements
-            hideUIParent.SetActive(false);
-
             _viewingPhoto = true;
 
             yield return new WaitForEndOfFrame();
@@ -118,27 +108,19 @@ namespace CameraSystem
 
         void ShowPhoto()
         {
-            if (_screenCapture != null)
-            {
-                Debug.Log("ShowPhoto: Displaying captured photo");
-                Sprite photoSprite = Sprite.Create(_screenCapture, new Rect(0.0f, 0.0f, _screenCapture.width, _screenCapture.height), new Vector2(0.5f, 0.5f), 100.0f);
-                photoDisplayArea.sprite = photoSprite;
+            if (_screenCapture == null) return;
+            
+            // Debug.Log("ShowPhoto: Displaying captured photo");
+            Sprite photoSprite = Sprite.Create(_screenCapture, new Rect(0.0f, 0.0f, _screenCapture.width, _screenCapture.height), new Vector2(0.5f, 0.5f), 100.0f);
+            photoDisplayArea.sprite = photoSprite;
 
-                // Show the photo frame
-                photoFrame.SetActive(true);
+            // Show the photo frame
+            photoFrame.SetActive(true);
 
-                // Show the canvas
-                photoCanvas.gameObject.SetActive(true);
+            // Show the canvas
+            photoCanvas.gameObject.SetActive(true);
 
-                GlobalEvents.OnLockCursorEvent?.Invoke(false);
-                GlobalEvents.OnPlayerControlsLockedEvent.Invoke(true);
-                GlobalEvents.OnSetCursorInputForLookEvent.Invoke(false);
-                GlobalEvents.OnSetCanInteractEvent?.Invoke(false);
-            }
-            else
-            {
-                Debug.LogError("ShowPhoto: Screen capture texture is null");
-            }
+            HandleOnShowPhotoGlobalEvents();
         }
 
         void RemovePhoto()
@@ -154,15 +136,9 @@ namespace CameraSystem
             // Clear the photo display area
             photoDisplayArea.sprite = null;
 
-            // Show all UI elements again
-            hideUIParent.SetActive(true);
-
-            GlobalEvents.OnLockCursorEvent?.Invoke(true);
-            GlobalEvents.OnPlayerControlsLockedEvent.Invoke(false);
-            GlobalEvents.OnSetCursorInputForLookEvent.Invoke(true);
-            GlobalEvents.OnSetCanInteractEvent?.Invoke(true);
+            HandleOnRemovePhoto();
         }
-
+        
         public void KeepPhoto()
         {
             // Implement logic to keep the photo, if needed
@@ -176,7 +152,7 @@ namespace CameraSystem
             RemovePhoto();
         }
         
-        RaycastHit GetRaycastHit(out Ray ray)
+        RaycastHit GetRayCastHit(out Ray ray)
         {
             ray = _mainCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
             Physics.BoxCast(ray.origin, Vector3.one * rayCastBoxSize, ray.direction, out var hit, Quaternion.identity, rayCastDistance);
@@ -185,12 +161,12 @@ namespace CameraSystem
         
         private void HandlePhotographyRayForQuests()
         {
-            RaycastHit hit = GetRaycastHit(out Ray ray);
-            EntityData e = GetEntityDataFromRaycastHit(hit);
+            RaycastHit hit = GetRayCastHit(out Ray ray);
+            EntityData e = GetEntityDataFromRayCastHit(hit);
             onPhotoTaken?.Invoke(e);
         }
 
-        EntityData GetEntityDataFromRaycastHit(RaycastHit hit)
+        EntityData GetEntityDataFromRayCastHit(RaycastHit hit)
         {
             if (hit.collider is not null && hit.collider.TryGetComponent(out IEntity e))
             {
@@ -198,12 +174,29 @@ namespace CameraSystem
             }
             return null;
         }
+        
+        private static void HandleOnRemovePhoto()
+        {
+            GlobalEvents.OnLockCursorEvent?.Invoke(true);
+            GlobalEvents.OnPlayerControlsLockedEvent.Invoke(false);
+            GlobalEvents.OnSetCursorInputForLookEvent.Invoke(true);
+            GlobalEvents.OnSetCanInteractEvent?.Invoke(true);
+        }
+        
+        private static void HandleOnShowPhotoGlobalEvents()
+        {
+            GlobalEvents.OnLockCursorEvent?.Invoke(false);
+            GlobalEvents.OnPlayerControlsLockedEvent.Invoke(true);
+            GlobalEvents.OnSetCursorInputForLookEvent.Invoke(false);
+            GlobalEvents.OnSetCanInteractEvent?.Invoke(false);
+        }
+
 
         private void OnDrawGizmos()
         {
             if (IsFirstPersonCameraHigherPriority())
             {
-                RaycastHit hit = GetRaycastHit(out Ray ray);
+                RaycastHit hit = GetRayCastHit(out Ray ray);
                 
                 Gizmos.color = Color.red; 
                 // I want to draw a box cast gizmo here
