@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.112
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 21145861}
-  m_IndirectSpecularColor: {r: 0.047500346, g: 0.06404152, b: 0.084646866, a: 0.112}
+  m_IndirectSpecularColor: {r: 0.047500137, g: 0.06404132, b: 0.084646665, a: 0.112}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7690,7 +7690,7 @@ MonoBehaviour:
       m_warpIterations: 0.6973783
       m_warpStrength: 0.9334392
       m_warpOffset: {x: 131.88863, y: -790.25446, z: 9.614468, w: 0}
-    m_noiseSettings: {fileID: 1870722332}
+    m_noiseSettings: {fileID: 478818291}
     m_noiseToolSettings:
       worldHeightRemap: {x: 0, y: 0}
       coordSpace: 0
@@ -16487,6 +16487,30 @@ Transform:
   - {fileID: 890284060}
   m_Father: {fileID: 1339193820}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &478818291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cba17d399ab86974c8ef9551f6e8f8d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transformSettings:
+    translation: {x: -219.88208, y: -311.00653, z: 1037.8025}
+    scale: {x: 2.833992, y: 1, z: 2.833992}
+    rotation: {x: 0, y: 0, z: 0}
+    flipScaleX: 0
+    flipScaleY: 0
+    flipScaleZ: 0
+  domainSettings:
+    noiseTypeName: Perlin
+    fractalTypeName: Fbm
+    noiseTypeParams: 
+    fractalTypeParams: '{"warpOffsets":{"x":131.8886260986328,"y":-790.2544555664063,"z":9.61446762084961,"w":0.0},"octavesMinMax":{"x":0.0,"y":16.0},"amplitudeMinMax":{"x":0.0,"y":1.0},"frequencyMinMax":{"x":0.0,"y":2.0},"lacunarityMinMax":{"x":0.0,"y":4.0},"persistenceMinMax":{"x":0.0,"y":1.0},"warpIterationsMinMax":{"x":0.0,"y":8.0},"warpStrengthMinMax":{"x":-2.0,"y":2.0},"octaves":8.0,"amplitude":0.48794734477996828,"frequency":1.0,"persistence":0.5,"lacunarity":0.9288221597671509,"warpIterations":0.6973782777786255,"warpStrength":0.9334391951560974,"warpEnabled":true,"warpExpanded":true}'
 --- !u!1 &481236655
 GameObject:
   m_ObjectHideFlags: 0
@@ -44503,7 +44527,7 @@ PrefabInstance:
     - target: {fileID: 5144047520134273037, guid: 401c56c995cf8364e82e5581541a6f44,
         type: 3}
       propertyPath: dialogueNode
-      value: ShowGrandmaYourPhotos
+      value: ShowGrandmaYourPhotosBuild
       objectReference: {fileID: 0}
     - target: {fileID: 5144047520134273037, guid: 401c56c995cf8364e82e5581541a6f44,
         type: 3}
@@ -55389,7 +55413,7 @@ PrefabInstance:
     - target: {fileID: 2931324683484775229, guid: 401c56c995cf8364e82e5581541a6f44,
         type: 3}
       propertyPath: interactMessage
-      value: Investigate Condition
+      value: Talk to the Gecko
       objectReference: {fileID: 0}
     - target: {fileID: 3264637378447717473, guid: 401c56c995cf8364e82e5581541a6f44,
         type: 3}
@@ -55751,7 +55775,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1641882599}
         m_TargetAssemblyTypeName: QuestSystem.QuestUpdater, Assembly-CSharp
-        m_MethodName: UpdateQuest
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -56151,8 +56175,40 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7844503704716541670, guid: 73d6d2c0ac3c9b7489893a1694c72fef,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1654738306}
   m_SourcePrefab: {fileID: 100100000, guid: 73d6d2c0ac3c9b7489893a1694c72fef, type: 3}
+--- !u!1 &1654738305 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7844503704716541670, guid: 73d6d2c0ac3c9b7489893a1694c72fef,
+    type: 3}
+  m_PrefabInstance: {fileID: 1654738304}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &1654738306
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1654738305}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 5294112857186086244, guid: 73d6d2c0ac3c9b7489893a1694c72fef, type: 3}
 --- !u!1001 &1655686086
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -64697,30 +64753,6 @@ Transform:
   - {fileID: 1554458688}
   m_Father: {fileID: 2076733769}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1870722332
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cba17d399ab86974c8ef9551f6e8f8d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  transformSettings:
-    translation: {x: -219.88208, y: -311.00653, z: 1037.8025}
-    scale: {x: 2.833992, y: 1, z: 2.833992}
-    rotation: {x: 0, y: 0, z: 0}
-    flipScaleX: 0
-    flipScaleY: 0
-    flipScaleZ: 0
-  domainSettings:
-    noiseTypeName: Perlin
-    fractalTypeName: Fbm
-    noiseTypeParams: 
-    fractalTypeParams: '{"warpOffsets":{"x":131.8886260986328,"y":-790.2544555664063,"z":9.61446762084961,"w":0.0},"octavesMinMax":{"x":0.0,"y":16.0},"amplitudeMinMax":{"x":0.0,"y":1.0},"frequencyMinMax":{"x":0.0,"y":2.0},"lacunarityMinMax":{"x":0.0,"y":4.0},"persistenceMinMax":{"x":0.0,"y":1.0},"warpIterationsMinMax":{"x":0.0,"y":8.0},"warpStrengthMinMax":{"x":-2.0,"y":2.0},"octaves":8.0,"amplitude":0.48794734477996828,"frequency":1.0,"persistence":0.5,"lacunarity":0.9288221597671509,"warpIterations":0.6973782777786255,"warpStrength":0.9334391951560974,"warpEnabled":true,"warpExpanded":true}'
 --- !u!1 &1871422028
 GameObject:
   m_ObjectHideFlags: 0
