@@ -1,15 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class DialogueDisplay : MonoBehaviour
 {
-    [SerializeField] private GameObject dialogueSystem;
     [SerializeField] private Animator introDolly;
     [SerializeField] private string animationName;
+    public UnityEvent onDialogueStartEvent;
     void Start()
     {
-        dialogueSystem.SetActive(false);
         StartCoroutine(WaitForIntroDollyToEnd());
     }
 
@@ -21,6 +21,6 @@ public class DialogueDisplay : MonoBehaviour
             yield return null;
         }
 
-        dialogueSystem.SetActive(true);
+        onDialogueStartEvent?.Invoke();
     }
 }
