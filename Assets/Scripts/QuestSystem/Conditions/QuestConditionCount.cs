@@ -2,7 +2,7 @@
 
 namespace QuestSystem.Conditions
 {
-    [CreateAssetMenu(fileName = "New Quest Condition Count", menuName = "Quest System/Quest Condition/Count", order = 0)]
+    [CreateAssetMenu(fileName = "New Count Condition", menuName = "Quest System/Conditions/Count", order = 0)]
     public class QuestConditionCount : QuestConditionBase
     {
         [SerializeField] private int requiredCount = 1;

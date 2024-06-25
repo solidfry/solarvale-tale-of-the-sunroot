@@ -3,6 +3,7 @@ using UnityEngine;
 
 namespace QuestSystem.Conditions
 {
+    [CreateAssetMenu(fileName = "New Photograph Condition", menuName = "Quest System/Conditions/Photograph Condition")]
     public class QuestConditionPhotograph : QuestConditionBase
     {
         [SerializeField] private int requiredCount = 1;

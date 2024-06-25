@@ -1923,8 +1923,14 @@ PrefabInstance:
     - target: {fileID: 2089841777888681322, guid: 02f16863770824c48ba12cec8efc4882,
         type: 3}
       propertyPath: questList.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2089841777888681322, guid: 02f16863770824c48ba12cec8efc4882,
+        type: 3}
+      propertyPath: questList.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: f201e01125661664496c2df5bdbb7b7f,
+        type: 2}
     - target: {fileID: 3590085749985604487, guid: 02f16863770824c48ba12cec8efc4882,
         type: 3}
       propertyPath: m_Name
@@ -2238,7 +2244,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lastEntityData: {fileID: 0}
-  entityDataList: []
+  entitiesPhotographed: []
 --- !u!1001 &5713105456899253272
 PrefabInstance:
   m_ObjectHideFlags: 0

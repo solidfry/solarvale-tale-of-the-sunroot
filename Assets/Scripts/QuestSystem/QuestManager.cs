@@ -59,13 +59,14 @@ namespace QuestSystem
                 foreach (var condition in photoQuest.GetQuestConditions())
                 {
                     if (condition is not QuestConditionPhotograph photoCondition) continue;
-                    if (photoCondition.GetEntityData() != entity && photoCondition.GetEntityData() != null && photoCondition.GetEntityType() != EntityType.None) continue;
-                    
-                    photoCondition.UpdateCondition();
-                    
-                    if (!photoCondition.IsConditionComplete()) continue;
-                    
-                    GlobalEvents.OnQuestConditionUpdatedEvent?.Invoke(photoCondition);
+                    if (photoCondition.GetEntityData() == entity || photoCondition.GetEntityData() == null ||
+                        photoCondition.GetEntityType() == EntityType.None)
+                    {
+                        photoCondition.UpdateCondition();
+
+                        if (photoQuest.IsAllQuestConditionsComplete())
+                            GlobalEvents.OnQuestCompletedEvent?.Invoke(photoQuest);
+                    }
                 }
             }
         }
@@ -81,9 +82,9 @@ namespace QuestSystem
                     if (questCondition != condition || condition.IsConditionComplete()) continue;
                     
                     condition.UpdateCondition();
-                        
-                    if (!quest.IsAllQuestConditionsComplete()) continue;
-                    GlobalEvents.OnQuestCompletedEvent?.Invoke(quest);
+
+                    if (quest.IsAllQuestConditionsComplete()) 
+                        GlobalEvents.OnQuestCompletedEvent?.Invoke(quest);
                 }
             }
             tempList.Clear();
