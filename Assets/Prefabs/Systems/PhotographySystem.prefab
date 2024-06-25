@@ -57,8 +57,20 @@ MonoBehaviour:
   firstPersonCamera: {fileID: 0}
   onPhotoTaken:
     m_PersistentCalls:
-      m_Calls: []
-  rayCastDistance: 300
+      m_Calls:
+      - m_Target: {fileID: 588250152800585689}
+        m_TargetAssemblyTypeName: PhotographyQuestUpdater, Assembly-CSharp
+        m_MethodName: UpdatePhotographyQuests
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  rayCastDistance: 30
   rayCastBoxSize: 0.5
 --- !u!114 &4905157406444911780
 MonoBehaviour:
