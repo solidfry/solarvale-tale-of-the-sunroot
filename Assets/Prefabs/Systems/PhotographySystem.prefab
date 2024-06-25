@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2838293530554581146}
-  - component: {fileID: 6033893657418664272}
   - component: {fileID: 4905157406444911780}
+  - component: {fileID: 6033893657418664272}
   - component: {fileID: 588250152800585689}
   m_Layer: 0
   m_Name: PhotographySystem
@@ -34,6 +34,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4905157406444911780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 885230153009753124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c5979658fda8f04ead3f7416a54c6f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thirdPersonCamera: {fileID: 0}
+  firstPersonCamera: {fileID: 0}
+  questUICanvas: {fileID: 0}
+  cameraOpenActionRef: {fileID: -8830811728866751316, guid: 78133a3448bb08445b514549337508a9,
+    type: 3}
 --- !u!114 &6033893657418664272
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52,7 +69,8 @@ MonoBehaviour:
   keepButton: {fileID: 0}
   discardButton: {fileID: 0}
   hideUIParent: {fileID: 0}
-  takePhotoActionRef: {fileID: 0}
+  takePhotoActionRef: {fileID: 3986492942688173008, guid: 78133a3448bb08445b514549337508a9,
+    type: 3}
   thirdPersonCamera: {fileID: 0}
   firstPersonCamera: {fileID: 0}
   onPhotoTaken:
@@ -72,23 +90,6 @@ MonoBehaviour:
         m_CallState: 2
   rayCastDistance: 30
   rayCastBoxSize: 0.5
---- !u!114 &4905157406444911780
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 885230153009753124}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c5979658fda8f04ead3f7416a54c6f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thirdPersonCamera: {fileID: 0}
-  firstPersonCamera: {fileID: 0}
-  questUICanvas: {fileID: 0}
-  cameraOpenActionRef: {fileID: -8830811728866751316, guid: 78133a3448bb08445b514549337508a9,
-    type: 3}
 --- !u!114 &588250152800585689
 MonoBehaviour:
   m_ObjectHideFlags: 0

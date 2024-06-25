@@ -17,6 +17,10 @@ namespace Events
         public static Action<bool> OnSetCursorInputForLookEvent;
         public static Action<IInteractable> OnInteractableFound;
         #endregion
+
+        #region UI Management
+        public static Action<bool> OnSetHUDVisibilityEvent;
+        #endregion
         
         #region Player Management
         public static Action<bool> OnSetCanInteractEvent;
