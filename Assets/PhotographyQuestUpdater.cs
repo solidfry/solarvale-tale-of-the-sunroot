@@ -7,12 +7,18 @@ public class PhotographyQuestUpdater : MonoBehaviour
 {
     [SerializeField] private EntityData lastEntityData;
     
-    [SerializeField] List<EntityData> entityDataList;
+    [SerializeField] List<EntityData> entitiesPhotographed;
 
     public void UpdatePhotographyQuests(EntityData eData)
     {   
-        entityDataList.Add(eData);
+        
+        entitiesPhotographed.Add(eData);
         GlobalEvents.OnPhotographConditionUpdatedEvent?.Invoke(eData);
         Debug.Log("PhotographyQuestUpdater Sent Event" + eData);
+    }
+
+    private void OnDisable()
+    {
+        entitiesPhotographed.Clear();
     }
 }

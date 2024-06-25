@@ -4,13 +4,13 @@ namespace Entities
 {
     public enum EntityType
     {
+        None,
         Player,
         Animal,
         Plant,
         NonPlayerCharacter,
         Prop,
-        Item,
-        Any
+        Item
     }
     
     [CreateAssetMenu(fileName = "New Entity Data", menuName = "Entities/Entity Data", order = 0)]
@@ -18,7 +18,17 @@ namespace Entities
     {
         [field: SerializeField] public string Name { get; private set; }
         [SerializeField] private EntityType entityType;
-        
+        public static EntityData Empty
+        {
+            get
+            {
+                var empty = CreateInstance<EntityData>();
+                empty.Name = "Empty";
+                empty.entityType = EntityType.None;
+                return empty;
+            }
+        }
+
         public EntityType EntityType => entityType;
     }
 }

@@ -59,7 +59,7 @@ namespace QuestSystem
                 foreach (var condition in photoQuest.GetQuestConditions())
                 {
                     if (condition is not QuestConditionPhotograph photoCondition) continue;
-                    if (photoCondition.GetEntityData() != entity && photoCondition.GetEntityData() != null && photoCondition.GetEntityType() != EntityType.Any) continue;
+                    if (photoCondition.GetEntityData() != entity && photoCondition.GetEntityData() != null && photoCondition.GetEntityType() != EntityType.None) continue;
                     
                     photoCondition.UpdateCondition();
                     
