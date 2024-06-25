@@ -46,7 +46,8 @@ namespace CameraSystem
         {
             bool isFirstPersonActive = firstPersonCamera.Priority > thirdPersonCamera.Priority;
 
-            // Show/hide UI elements based on camera priority
+            // Show/hide UI elements based on camera priority.
+            // TODO: Refactor. This script should not need a reference to this UI element.
             questUICanvas.gameObject.SetActive(!isFirstPersonActive); // Quest UI Canvas
         }
     }

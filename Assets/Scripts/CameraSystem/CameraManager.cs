@@ -24,13 +24,11 @@ namespace CameraSystem
 
         private Texture2D screenCapture;
         private bool viewingPhoto;
-
-        public InputActionAsset inputActionAsset; // Reference to the Input Action Asset
-        private InputAction takePhotoAction;
+        
+        [SerializeField] private InputActionReference takePhotoActionRef;
 
         public CinemachineVirtualCamera thirdPersonCamera;
         public CinemachineVirtualCamera firstPersonCamera;
-        
         
         [Header("On Photo Taken Event Handling")]
         [Space(10)]
@@ -44,23 +42,19 @@ namespace CameraSystem
 
         void Awake()
         {
-            var playerActionMap = inputActionAsset.FindActionMap("Player");
-            takePhotoAction = playerActionMap.FindAction("TakePhoto");
             _mainCamera = Camera.main;
         }
 
         void OnEnable()
         {
-            takePhotoAction.Enable();
-            takePhotoAction.performed += OnTakePhoto;
+            takePhotoActionRef.action.performed += OnTakePhoto;
             keepButton.onClick.AddListener(KeepPhoto);
             discardButton.onClick.AddListener(DiscardPhoto);
         }
 
         void OnDisable()
         {
-            takePhotoAction.performed -= OnTakePhoto;
-            takePhotoAction.Disable();
+            takePhotoActionRef.action.performed -= OnTakePhoto;
             keepButton.onClick.RemoveListener(KeepPhoto);
             discardButton.onClick.RemoveListener(DiscardPhoto);
         }
