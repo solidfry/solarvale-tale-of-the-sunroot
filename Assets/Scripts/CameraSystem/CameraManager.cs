@@ -37,8 +37,8 @@ namespace CameraSystem
         public UnityEvent<EntityData> onPhotoTaken;
         
         [Header("Raycast Settings")]
-        [FormerlySerializedAs("raycastDistance")] [SerializeField] float rayCastDistance = 300f;
-        [FormerlySerializedAs("raycastBoxSize")] [SerializeField] float rayCastBoxSize = 0.5f;
+        [SerializeField] float rayCastDistance = 300f;
+        [SerializeField] float rayCastBoxSize = 0.5f;
         Camera _mainCamera;
 
 
