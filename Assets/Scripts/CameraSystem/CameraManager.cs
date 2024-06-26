@@ -9,51 +9,55 @@ namespace CameraSystem
     {
         [Header("Input Action to Open Camera Mode")]
         [SerializeField] private InputActionReference cameraOpenActionRef;
-        
-        [Header("Cameras")]
-        public CinemachineVirtualCamera thirdPersonCamera;
-        public CinemachineVirtualCamera firstPersonCamera;
-        
 
-        void OnEnable()
+        [Header("Cameras")]
+        [SerializeField] private CinemachineVirtualCamera thirdPersonCamera;
+        [SerializeField] private CinemachineVirtualCamera firstPersonCamera;
+
+        private void Start()
+        {
+            AdjustUIVisibility();
+        }
+
+        private void OnEnable()
         {
             cameraOpenActionRef.action.performed += OnCameraOpen;
         }
 
-        void OnDisable()
+        private void OnDisable()
         {
             cameraOpenActionRef.action.performed -= OnCameraOpen;
         }
 
-        void OnCameraOpen(InputAction.CallbackContext context)
+        private void OnCameraOpen(InputAction.CallbackContext context)
         {
             SwitchCamera();
             AdjustUIVisibility();
         }
 
-        void SwitchCamera()
+        private void SwitchCamera()
         {
-            if (thirdPersonCamera.Priority > firstPersonCamera.Priority)
-            {
-                thirdPersonCamera.Priority = 0;
-                firstPersonCamera.Priority = 1;
-                GlobalEvents.OnSetCursorInputForLookEvent?.Invoke(false);
-
-            }
-            else
+            if (IsInCameraMode)
             {
                 thirdPersonCamera.Priority = 1;
                 firstPersonCamera.Priority = 0;
             }
+            else
+            {
+                thirdPersonCamera.Priority = 0;
+                firstPersonCamera.Priority = 1;
+                GlobalEvents.OnSetCursorInputForLookEvent?.Invoke(false);
+            }
         }
-        
-        public bool IsInCameraMode() => firstPersonCamera?.Priority > thirdPersonCamera?.Priority;
 
-        void AdjustUIVisibility()
+        public bool IsInCameraMode => firstPersonCamera.Priority > thirdPersonCamera.Priority;
+
+        private void AdjustUIVisibility()
         {
-            GlobalEvents.OnSetCursorInputForLookEvent?.Invoke(!IsInCameraMode());
-            GlobalEvents.OnSetHUDVisibilityEvent?.Invoke(!IsInCameraMode());
+            GlobalEvents.OnSetCursorInputForLookEvent?.Invoke(!IsInCameraMode);
+            GlobalEvents.OnSetHUDVisibilityEvent?.Invoke(!IsInCameraMode);
+            GlobalEvents.OnSetCameraHUDVisibilityEvent?.Invoke(IsInCameraMode);
+            GlobalEvents.OnSetCanInteractEvent?.Invoke(!IsInCameraMode);
         }
     }
 }
-

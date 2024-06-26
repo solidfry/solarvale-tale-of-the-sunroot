@@ -180,13 +180,14 @@ GameObject:
   - component: {fileID: 3529564939713922616}
   - component: {fileID: 1312552320046436345}
   - component: {fileID: 7258750543084782111}
+  - component: {fileID: 8138328612154758563}
   m_Layer: 5
   m_Name: PhotographyHUDUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &3958648125499667780
 RectTransform:
   m_ObjectHideFlags: 0
@@ -229,7 +230,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
+  m_VertexColorAlwaysGammaSpace: 1
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
@@ -297,6 +298,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   setAutoKill: 1
   animations: []
+--- !u!225 &8138328612154758563
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5346934979171533906}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
 --- !u!1 &6407720114114100348
 GameObject:
   m_ObjectHideFlags: 0

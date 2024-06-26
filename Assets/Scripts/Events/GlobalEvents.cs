@@ -20,6 +20,7 @@ namespace Events
 
         #region UI Management
         public static Action<bool> OnSetHUDVisibilityEvent;
+        public static Action<bool> OnSetCameraHUDVisibilityEvent;
         #endregion
         
         #region Player Management
@@ -45,5 +46,7 @@ namespace Events
         #region Camera Management
         public static Action<CinemachineVirtualCamera> OnSetPriorityOfCameraEvent;
         #endregion
+
+      
     }
 }

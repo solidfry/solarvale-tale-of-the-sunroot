@@ -42,8 +42,17 @@ namespace Interaction
 
         private void CheckInteractable()
         {
-            if (!canInteract) return;
-            
+            if (!canInteract)
+            {
+                ClearInteractable();
+                return;
+            }
+
+            HandleCast();
+        }
+
+        private void HandleCast()
+        {
             if (Physics.SphereCast(GetRayOrigin(), raycastRadius, transform.forward, out var hit, interactableDistance, interactableLayers))
             {
                 if (hit.collider.TryGetComponent(out IInteractable interactable))
@@ -52,7 +61,7 @@ namespace Interaction
                     {
                         _currentInteractable = interactable;
                         SendInteractEvent();
-                        Debug.Log($"Interactable found: {_currentInteractable}");
+                        // Debug.Log($"Interactable found: {_currentInteractable}");
                     }
                 }
             }
@@ -68,7 +77,7 @@ namespace Interaction
                     }
 
                     _interactNullCooldown = StartCoroutine(SetInteractableNull());
-                    Debug.Log("No Interactable found");
+                    // Debug.Log("No Interactable found");
                 }
             }
         }
@@ -95,6 +104,12 @@ namespace Interaction
         }
 
         private Vector3 GetRayOrigin() => transform.position + rayOffset;
+        
+        void ClearInteractable()
+        {
+            _currentInteractable = null;
+            GlobalEvents.OnInteractableFound?.Invoke(_currentInteractable);
+        }
 
         private void OnDrawGizmos()
         {
