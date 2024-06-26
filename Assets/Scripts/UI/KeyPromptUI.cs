@@ -2,6 +2,7 @@ using DG.Tweening;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Utilities;
 using UnityEngine.UI;
 
 namespace UI
@@ -37,7 +38,9 @@ namespace UI
         {
             if (inputAction == null) return;
             inputAction.action.performed += _ => AnimateKeyImage(interactedColor);
-            InputSystem.onDeviceChange += OnDeviceChange;
+            // InputSystem.onDeviceChange += OnDeviceChange;
+            InputSystem.onAnyButtonPress.CallOnce(control => OnDeviceChange(control.device, InputDeviceChange.Added));
+
         }
 
         private void OnDeviceChange(InputDevice device, InputDeviceChange change)
@@ -73,8 +76,8 @@ namespace UI
 
         private void OnDisable()
         {
-            if (inputAction == null) return;
-            InputSystem.onDeviceChange -= OnDeviceChange;
+            // if (inputAction == null) return;
+            // InputSystem.onDeviceChange -= OnDeviceChange;
         }
     }
     

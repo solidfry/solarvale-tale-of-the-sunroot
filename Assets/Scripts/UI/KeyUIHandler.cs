@@ -30,10 +30,11 @@ namespace UI
             _text.text = key;
         }
         
-        public void SetKeyType(string deviceName,  string actionName)
+        public void SetKeyType(string deviceName, string actionName)
         {
             var keyMapType = keyMappingData.GetSpriteByDeviceAndAction(deviceName, actionName);
             keyType = keyMapType.keyType;
+            _image.sprite = keyMappingData.GetSprite(keyType);
         }
 
     
