@@ -97,7 +97,9 @@ namespace CameraSystem
 
             photoFrame.SetActive(true);
             photoCanvas.gameObject.SetActive(true);
-
+            
+            // photographyHUDController.
+            photographyHUDController.ToggleCanvas(false);
             HandleOnShowPhotoGlobalEvents();
         }
 
@@ -108,6 +110,7 @@ namespace CameraSystem
             photoCanvas.gameObject.SetActive(false);
             photoDisplayArea.sprite = null;
             
+            photographyHUDController.ToggleCanvas(true);
             photographyHUDController.SetHUDVisibility(true);
             HandleOnRemovePhotoGlobalEvents();
         }

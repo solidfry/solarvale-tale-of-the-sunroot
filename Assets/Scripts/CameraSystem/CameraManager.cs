@@ -13,6 +13,7 @@ namespace CameraSystem
         [Header("Cameras")]
         [SerializeField] private CinemachineVirtualCamera thirdPersonCamera;
         [SerializeField] private CinemachineVirtualCamera firstPersonCamera;
+        [SerializeField] private CinemachineVirtualCamera conversationCamera;
 
         private void Start()
         {

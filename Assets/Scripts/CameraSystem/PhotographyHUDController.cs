@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using DG.Tweening;
 using UnityEngine;
 using Events;
@@ -12,10 +13,14 @@ namespace CameraSystem
         CanvasGroup _hudCanvasGroup;
         
         [SerializeField] float fadeDuration = 0.5f;
+        [SerializeField] float fadeDelay = 1f;
+        
+        public Tween FadeTween { get; private set; } = null;
         
         public void OnEnable()
         {
             _hudCanvasGroup = hudCanvas.GetComponent<CanvasGroup>();
+            SetHUDVisibility(0, 0);
             GlobalEvents.OnSetCameraHUDVisibilityEvent += SetHUDVisibility;
         }
         
@@ -26,12 +31,18 @@ namespace CameraSystem
         
         public void SetHUDVisibility(bool isVisible)
         {
-            _hudCanvasGroup.DOFade(isVisible ? 1 : 0, fadeDuration);
+            FadeTween = _hudCanvasGroup.DOFade(isVisible ? 1 : 0, fadeDuration).SetDelay(isVisible ? fadeDelay : 0);
         }
         
-        public void SetHUDVisibility(float alpha, float duration = 0.5f)
+        public void SetHUDVisibility(float alpha, float duration = 0.5f, float delay = 0f)
         {
-            _hudCanvasGroup.DOFade(alpha, duration);
+            FadeTween = _hudCanvasGroup.DOFade(alpha, duration).SetDelay(delay);
         }
+        
+        public void ToggleCanvas(bool value)
+        {
+            hudCanvas.enabled = value;
+        }
+        
     }
 }
