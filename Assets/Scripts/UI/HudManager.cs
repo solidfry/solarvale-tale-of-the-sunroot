@@ -1,26 +1,30 @@
-using System;
-using System.Collections.Generic;
 using Events;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.Serialization;
 
 namespace UI
 {
     public class HudManager : MonoBehaviour
     {
+        [Header("UI Elements")]
         [SerializeField] GameObject menu;
+        [SerializeField] GameObject playerHUD;
+        
+        [Header("Menu Settings")]
         [SerializeField] bool showMenu = false;
         [SerializeField] bool canShowMenu = true;
         [SerializeField] InputActionReference menuOpenAction;
         [SerializeField] InputActionReference menuCloseAction;
-
+        
         GameObject _menuInstance;
+        GameObject _playerHUDInstance;
     
-        private void Awake()
+        private void Start()
         {
             _menuInstance = Instantiate(menu, transform.position, Quaternion.identity);
+            _playerHUDInstance = Instantiate(playerHUD, transform.position, Quaternion.identity);
             _menuInstance.SetActive(false);
+            // _playerHUDInstance.SetActive(false);
         }
 
         private void OnEnable()
@@ -43,6 +47,7 @@ namespace UI
         private void OnDestroy()
         {
             Destroy(_menuInstance);
+            Destroy(_playerHUDInstance);
         }
         
     }

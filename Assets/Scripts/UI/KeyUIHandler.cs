@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 namespace UI
@@ -23,6 +24,18 @@ namespace UI
             _text = GetComponentInChildren<TMP_Text>();
             _text.text = key;
         }
+        
+        public void SetText(string k)
+        {
+            key = k;
+            _text.text = key;
+        }
+
+        public void SetKeyType(KeyType kt)
+        {
+            keyType = kt;
+        }
+       
     
     }
 }

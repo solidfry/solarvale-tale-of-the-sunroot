@@ -5,7 +5,6 @@ using DG.Tweening;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using Yarn.Compiler;
 
 namespace QuestSystem.UI
 {
@@ -32,10 +31,10 @@ namespace QuestSystem.UI
         [SerializeField] private float heightAnimationTime = 0.5f;
         [SerializeField] float delayBeforeFade = 3f;
         
-        float combinedHeight;
+        float _combinedHeight;
     
-        List<TMP_Text> allTextElements;
-        List<Graphic> colorChangeElements;
+        List<TMP_Text> _allTextElements;
+        List<Graphic> _colorChangeElements;
         
         public Observable<bool> isSafeToDestroy = new(false);
 
@@ -48,28 +47,22 @@ namespace QuestSystem.UI
                 layoutGroup = GetComponent<LayoutGroup>();
             }
         
-            allTextElements = GetComponentsInChildren<TMP_Text>().ToList();
+            _allTextElements = GetComponentsInChildren<TMP_Text>().ToList();
             CompileColorElements();
-
-            // if (QuestData != null)
-            // {
-            //     SetQuestText(QuestData);
-            // }
-        
         }
 
         private void Update()
         {
-            if (combinedHeight != 0) return;
+            if (_combinedHeight != 0) return;
             if (CalculateCombinedHeight() == 0) return;
-            combinedHeight = CalculateCombinedHeight();
+            _combinedHeight = CalculateCombinedHeight();
         }
 
         private void CompileColorElements()
         {
-            colorChangeElements = new();
-            colorChangeElements.Add(questStatusIcon);
-            colorChangeElements.AddRange(allTextElements);
+            _colorChangeElements = new();
+            _colorChangeElements.Add(questStatusIcon);
+            _colorChangeElements.AddRange(_allTextElements);
         }
 
         public void SetQuestData(QuestData data)
@@ -103,7 +96,7 @@ namespace QuestSystem.UI
 
         private float CalculateCombinedHeight()
         {
-            var text = GetComponentsInChildren<TMP_Text>();
+            var text = _allTextElements;
             var sum = text.Sum( t => t.rectTransform.rect.height);
             return sum + layoutGroup.padding.vertical;
             // return questTitle.rectTransform.rect.height + questDescription.rectTransform.rect.height + layoutGroup.padding.vertical;
@@ -119,15 +112,15 @@ namespace QuestSystem.UI
         { 
             if (!isCompleted) return;
         
-            for  (int i = 0; i < colorChangeElements.Count; i++)
+            for  (int i = 0; i < _colorChangeElements.Count; i++)
             {
                 // if the element is not the last element then continue
-                if (i != colorChangeElements.Count - 1)
+                if (i != _colorChangeElements.Count - 1)
                 {
-                    colorChangeElements[i].DOColor(completedColor, colorAnimationTime).SetAutoKill(true);
+                    _colorChangeElements[i].DOColor(completedColor, colorAnimationTime).SetAutoKill(true);
                     continue;
                 } 
-                colorChangeElements[i].DOColor(completedColor, colorAnimationTime).SetAutoKill(true)
+                _colorChangeElements[i].DOColor(completedColor, colorAnimationTime).SetAutoKill(true)
                     .OnComplete(
                         () =>
                         {
@@ -149,8 +142,8 @@ namespace QuestSystem.UI
         public void AnimateIn()
         {
             canvasGroup.DOFade(1, fadeDuration).From(0).SetAutoKill(true);
-            layoutElement.DOPreferredSize(new Vector2( layoutElement.preferredWidth, combinedHeight ), heightAnimationTime ).From( new Vector2( layoutElement.preferredWidth, layoutElement.preferredHeight ) )
-                .OnComplete( () => layoutElement.preferredHeight = combinedHeight ).SetAutoKill(true);
+            layoutElement.DOPreferredSize(new Vector2( layoutElement.preferredWidth, _combinedHeight ), heightAnimationTime ).From( new Vector2( layoutElement.preferredWidth, layoutElement.preferredHeight ) )
+                .OnComplete( () => layoutElement.preferredHeight = _combinedHeight ).SetAutoKill(true);
         }
     
         // To animate in properly, we have to wait for the UI to update the text elements height because on Start they are zero.

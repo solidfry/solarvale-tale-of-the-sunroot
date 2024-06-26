@@ -1,11 +1,15 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
-using UI;
+using UnityEngine.InputSystem;
+
 namespace UI
 {
     [CreateAssetMenu(fileName = "KeyMapping", menuName = "UI/KeyMappingData", order = 0)]
     public class KeyMappingData : ScriptableObject
     {
+        [SerializeField] InputActionAsset inputActionAsset;
+        [SerializeField] List<DeviceMap> deviceMaps;
         [SerializeField] List<KeyMap> keyMap;
         
         public Sprite GetSprite(KeyType keyType)
@@ -18,11 +22,28 @@ namespace UI
                 }
             }
             return null;
-        }           
+        }
+        
+        [ContextMenu("PopulateDeviceMaps")]
+        public void PopulateDeviceMaps()
+        {
+            var devices = inputActionAsset.devices;
+            foreach (var device in devices)
+            {
+                Debug.Log(devices + " " + device);
+            }
+        }
     }
     
-    [System.Serializable]
-    public record KeyMap ()
+    [Serializable]
+    public record DeviceMap 
+    {
+        public string deviceName;
+        public List<KeyMap> keyMap;
+    }
+    
+    [Serializable]
+    public record KeyMap 
     {
         public KeyType keyType;
         public Sprite sprite;
