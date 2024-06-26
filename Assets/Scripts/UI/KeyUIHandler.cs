@@ -1,6 +1,5 @@
 using TMPro;
 using UnityEngine;
-using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 namespace UI
@@ -30,12 +29,13 @@ namespace UI
             key = k;
             _text.text = key;
         }
-
-        public void SetKeyType(KeyType kt)
+        
+        public void SetKeyType(string deviceName,  string actionName)
         {
-            keyType = kt;
+            var keyMapType = keyMappingData.GetSpriteByDeviceAndAction(deviceName, actionName);
+            keyType = keyMapType.keyType;
         }
-       
+
     
     }
 }

@@ -17,7 +17,8 @@ namespace UI
         Color _originalColor;
         
         [SerializeField] InputActionReference inputAction;
-
+        
+        string _currentDevice;
         string _currentKeyText;
         
         private void Awake()
@@ -41,8 +42,14 @@ namespace UI
 
         private void OnDeviceChange(InputDevice device, InputDeviceChange change)
         {
+            if (InputSystem.devices.Count == 0) return;
             if (inputAction == null) return;
+            
+            if (device.name == _currentDevice) return;
+            
+            _currentDevice = device.name;
             keyUIHandler.SetText(inputAction.action.bindings[0].ToDisplayString());
+            keyUIHandler.SetKeyType(_currentDevice, inputAction.action.name);
         }
 
         public void SetActive(bool active)

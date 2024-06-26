@@ -12,6 +12,203 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fee8fefd2017461790db8c5ed584b20b, type: 3}
   m_Name: KeyMapping
   m_EditorClassIdentifier: 
+  inputActionAsset: {fileID: -944628639613478452, guid: 78133a3448bb08445b514549337508a9,
+    type: 3}
+  deviceMaps:
+  - deviceName: KeyboardMouse
+    keyTypeMap:
+    - name: Move
+      keyType: 1
+      path: <Keyboard>/w
+    - name: Move
+      keyType: 1
+      path: <Keyboard>/s
+    - name: Move
+      keyType: 1
+      path: <Keyboard>/a
+    - name: Move
+      keyType: 1
+      path: <Keyboard>/d
+    - name: Move
+      keyType: 1
+      path: <Keyboard>/upArrow
+    - name: Move
+      keyType: 1
+      path: <Keyboard>/downArrow
+    - name: Move
+      keyType: 1
+      path: <Keyboard>/leftArrow
+    - name: Move
+      keyType: 1
+      path: <Keyboard>/rightArrow
+    - name: Look
+      keyType: 19
+      path: <Pointer>/delta
+    - name: Jump
+      keyType: 1
+      path: <Keyboard>/space
+    - name: Sprint
+      keyType: 1
+      path: <Keyboard>/leftShift
+    - name: MenuOpen
+      keyType: 1
+      path: <Keyboard>/i
+    - name: CameraOpen
+      keyType: 1
+      path: <Keyboard>/q
+    - name: TakePhoto
+      keyType: 1
+      path: <Keyboard>/e
+    - name: Navigate
+      keyType: 1
+      path: <Keyboard>/w
+    - name: Navigate
+      keyType: 1
+      path: <Keyboard>/upArrow
+    - name: Navigate
+      keyType: 1
+      path: <Keyboard>/s
+    - name: Navigate
+      keyType: 1
+      path: <Keyboard>/downArrow
+    - name: Navigate
+      keyType: 1
+      path: <Keyboard>/a
+    - name: Navigate
+      keyType: 1
+      path: <Keyboard>/leftArrow
+    - name: Navigate
+      keyType: 1
+      path: <Keyboard>/d
+    - name: Navigate
+      keyType: 1
+      path: <Keyboard>/rightArrow
+    - name: Submit
+      keyType: 19
+      path: '*/{Submit}'
+    - name: Cancel
+      keyType: 19
+      path: '*/{Cancel}'
+    - name: Point
+      keyType: 19
+      path: <Mouse>/position
+    - name: Click
+      keyType: 0
+      path: <Mouse>/leftButton
+    - name: ScrollWheel
+      keyType: 19
+      path: <Mouse>/scroll
+    - name: MiddleClick
+      keyType: 0
+      path: <Mouse>/middleButton
+    - name: RightClick
+      keyType: 0
+      path: <Mouse>/rightButton
+    - name: MenuClose
+      keyType: 1
+      path: <Keyboard>/i
+  - deviceName: Gamepad
+    keyTypeMap:
+    - name: Move
+      keyType: 6
+      path: <Gamepad>/leftStick
+    - name: Look
+      keyType: 6
+      path: <Gamepad>/rightStick
+    - name: Jump
+      keyType: 0
+      path: <Gamepad>/buttonSouth
+    - name: Sprint
+      keyType: 4
+      path: <Gamepad>/leftTrigger
+    - name: MenuOpen
+      keyType: 19
+      path: '*/{Menu}'
+    - name: CameraOpen
+      keyType: 0
+      path: <Gamepad>/buttonNorth
+    - name: TakePhoto
+      keyType: 3
+      path: <Gamepad>/rightShoulder
+    - name: Navigate
+      keyType: 6
+      path: <Gamepad>/leftStick/up
+    - name: Navigate
+      keyType: 6
+      path: <Gamepad>/rightStick/up
+    - name: Navigate
+      keyType: 6
+      path: <Gamepad>/leftStick/down
+    - name: Navigate
+      keyType: 6
+      path: <Gamepad>/rightStick/down
+    - name: Navigate
+      keyType: 6
+      path: <Gamepad>/leftStick/left
+    - name: Navigate
+      keyType: 6
+      path: <Gamepad>/rightStick/left
+    - name: Navigate
+      keyType: 6
+      path: <Gamepad>/leftStick/right
+    - name: Navigate
+      keyType: 6
+      path: <Gamepad>/rightStick/right
+    - name: Navigate
+      keyType: 19
+      path: <Gamepad>/dpad
+    - name: Submit
+      keyType: 19
+      path: '*/{Submit}'
+    - name: Cancel
+      keyType: 19
+      path: '*/{Cancel}'
+    - name: Point
+      keyType: 19
+      path: <Mouse>/position
+    - name: MenuClose
+      keyType: 19
+      path: '*/{Menu}'
+  - deviceName: Xbox Controller
+    keyTypeMap:
+    - name: MenuOpen
+      keyType: 19
+      path: '*/{Menu}'
+    - name: CameraOpen
+      keyType: 0
+      path: <Gamepad>/buttonNorth
+    - name: TakePhoto
+      keyType: 3
+      path: <Gamepad>/rightShoulder
+    - name: Submit
+      keyType: 19
+      path: '*/{Submit}'
+    - name: Cancel
+      keyType: 19
+      path: '*/{Cancel}'
+    - name: MenuClose
+      keyType: 19
+      path: '*/{Menu}'
+  - deviceName: PS4 Controller
+    keyTypeMap:
+    - name: MenuOpen
+      keyType: 19
+      path: '*/{Menu}'
+    - name: CameraOpen
+      keyType: 0
+      path: <Gamepad>/buttonNorth
+    - name: TakePhoto
+      keyType: 3
+      path: <Gamepad>/rightShoulder
+    - name: Submit
+      keyType: 19
+      path: '*/{Submit}'
+    - name: Cancel
+      keyType: 19
+      path: '*/{Cancel}'
+    - name: MenuClose
+      keyType: 19
+      path: '*/{Menu}'
   keyMap:
   - keyType: 1
     sprite: {fileID: 1319470556, guid: 995ac951a93294f41b3fa916bb6cdebb, type: 3}
@@ -27,6 +224,8 @@ MonoBehaviour:
     sprite: {fileID: -1115133554, guid: 995ac951a93294f41b3fa916bb6cdebb, type: 3}
   - keyType: 6
     sprite: {fileID: -1115133554, guid: 995ac951a93294f41b3fa916bb6cdebb, type: 3}
+  - keyType: 11
+    sprite: {fileID: 1319470556, guid: 995ac951a93294f41b3fa916bb6cdebb, type: 3}
   - keyType: 7
     sprite: {fileID: -1115133554, guid: 995ac951a93294f41b3fa916bb6cdebb, type: 3}
   - keyType: 8
@@ -35,3 +234,5 @@ MonoBehaviour:
     sprite: {fileID: -1115133554, guid: 995ac951a93294f41b3fa916bb6cdebb, type: 3}
   - keyType: 10
     sprite: {fileID: -1115133554, guid: 995ac951a93294f41b3fa916bb6cdebb, type: 3}
+  - keyType: 19
+    sprite: {fileID: 1319470556, guid: 995ac951a93294f41b3fa916bb6cdebb, type: 3}
