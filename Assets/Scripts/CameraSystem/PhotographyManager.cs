@@ -20,11 +20,11 @@ namespace CameraSystem
         [SerializeField] private Button discardButton;
 
         [SerializeField] private InputActionReference takePhotoActionRef;
-        
+
         [Header("On Photo Taken Event Handling")]
         [Space(10)]
         public UnityEvent<EntityData> onPhotoTaken;
-        
+
         [Header("RayCast Settings")]
         [SerializeField] private float rayCastDistance = 300f;
         [SerializeField] private float rayCastBoxSize = 0.5f;
@@ -35,6 +35,9 @@ namespace CameraSystem
         private Texture2D _screenCapture;
         private bool _viewingPhoto;
 
+        // Desired photo size
+        private const int PhotoWidth = 800; 
+        private const int PhotoHeight = 600; 
         private void OnValidate()
         {
             cameraManager ??= GetComponent<CameraManager>();
@@ -69,7 +72,7 @@ namespace CameraSystem
             if (IsInCameraMode)
             {
                 StartCoroutine(CapturePhoto());
-                photographyHUDController.SetHUDVisibility(0,0);
+                photographyHUDController.SetHUDVisibility(0, 0);
             }
         }
 
@@ -79,8 +82,19 @@ namespace CameraSystem
         {
             yield return new WaitForEndOfFrame();
 
-            var regionToRead = new Rect(0, 0, Screen.width, Screen.height);
-            _screenCapture = new Texture2D(Screen.width, Screen.height, TextureFormat.RGBA32, false);
+            // Calculate the center position of the screen
+            int centerX = Screen.width / 2;
+            int centerY = Screen.height / 2;
+
+            // Calculate the region to read
+            var regionToRead = new Rect(
+                centerX - PhotoWidth / 2,
+                centerY - PhotoHeight / 2,
+                PhotoWidth,
+                PhotoHeight
+            );
+
+            _screenCapture = new Texture2D(PhotoWidth, PhotoHeight, TextureFormat.RGBA32, false);
             _screenCapture.ReadPixels(regionToRead, 0, 0, false);
             _screenCapture.Apply();
 
@@ -97,8 +111,7 @@ namespace CameraSystem
 
             photoFrame.SetActive(true);
             photoCanvas.gameObject.SetActive(true);
-            
-            // photographyHUDController.
+
             photographyHUDController.ToggleCanvas(false);
             HandleOnShowPhotoGlobalEvents();
         }
@@ -109,7 +122,7 @@ namespace CameraSystem
             photoFrame.SetActive(false);
             photoCanvas.gameObject.SetActive(false);
             photoDisplayArea.sprite = null;
-            
+
             photographyHUDController.ToggleCanvas(true);
             photographyHUDController.SetHUDVisibility(true);
             HandleOnRemovePhotoGlobalEvents();
@@ -169,7 +182,7 @@ namespace CameraSystem
             if (IsInCameraMode)
             {
                 var hit = GetRayCastHit(out var ray);
-                
+
                 Gizmos.color = Color.red;
                 Gizmos.DrawRay(ray.origin, ray.direction * rayCastDistance);
                 Gizmos.DrawCube(hit.point, Vector3.one * rayCastBoxSize);
@@ -177,3 +190,4 @@ namespace CameraSystem
         }
     }
 }
+
