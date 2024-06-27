@@ -3,15 +3,35 @@
     public enum KeyType
     {
         Button,
-        Key,
-        ShoulderLeft,
-        ShoulderRight,
-        TriggerLeft,
-        TriggerRight,
+        Keyboard,
+        LeftShoulder,
+        RightShoulder,
+        LeftTrigger,
+        RightTrigger,
         Stick,
-        DPadLeft,
-        DPadRight,
+        RightStick,
+        RightStickUp,
+        RightStickDown,
+        RightStickLeft,
+        RightStickRight,
+        LeftStick,
+        LeftStickUp,
+        LeftStickDown,
+        LeftStickLeft,
+        LeftStickRight,
         DPadUp,
+        DPadRight,
+        DPadLeft,
         DPadDown,
+        None
+    }
+    
+    public enum DeviceType
+    {
+        Keyboard,
+        Mouse,
+        Gamepad,
+        Touchscreen,
+        None
     }
 }

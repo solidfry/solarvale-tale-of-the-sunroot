@@ -25,6 +25,7 @@ namespace Events
         
         #region Player Management
         public static Action<bool> OnSetCanInteractEvent;
+        public static Action<string> OnControlSchemeChangedEvent;
         #endregion
 
         #region Dialogue
