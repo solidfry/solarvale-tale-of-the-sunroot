@@ -35,7 +35,6 @@ namespace UI
         public void SetKeyType(string deviceName, string actionName)
         {
             var keyMapType = keyMappingData.GetSpriteByDeviceAndAction(deviceName, actionName);
-            // Debug.Log(keyMapType);
             if (keyMapType == null) return;
             keyType = keyMapType.keyType;
             _image.sprite = keyMappingData.GetSprite(keyType);

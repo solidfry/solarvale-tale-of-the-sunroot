@@ -114,7 +114,17 @@ namespace UI
         
         public KeyTypeMap GetSpriteByDeviceAndAction(string deviceName, string actionName)
         {
-            return deviceMaps.Find( x => x.deviceName == deviceName)?.keyTypeMap.Find( x => x.name == actionName);
+            foreach (var deviceMap in deviceMaps)
+            {
+                if (deviceMap.deviceName != deviceName) continue;
+                foreach (var keyTypeMap in deviceMap.keyTypeMap)
+                {
+                    if (keyTypeMap.name != actionName) continue;
+                    return keyTypeMap;
+                }
+            }   
+            return null;
+            // return deviceMaps.Find( x => x.deviceName == deviceName)?.keyTypeMap.Find( x => x.name == actionName);
         }
     }
 
