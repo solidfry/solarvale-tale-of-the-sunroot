@@ -77,6 +77,11 @@ MonoBehaviour:
       path: <Keyboard>/i
       shortName: I
       spriteOverrideForGlyph: {fileID: 0}
+    - name: Interact
+      keyType: 1
+      path: <Keyboard>/e
+      shortName: E
+      spriteOverrideForGlyph: {fileID: 0}
     - name: CameraOpen
       keyType: 1
       path: <Keyboard>/q
@@ -189,6 +194,17 @@ MonoBehaviour:
       path: <Gamepad>/leftTrigger
       shortName: LT
       spriteOverrideForGlyph: {fileID: 0}
+    - name: MenuOpen
+      keyType: 0
+      path: '*/{Menu}'
+      shortName: Menu
+      spriteOverrideForGlyph: {fileID: -242858442, guid: 5f94d632b844a424f9ab5be9cd3d2879,
+        type: 3}
+    - name: Interact
+      keyType: 0
+      path: '*/{PrimaryAction}'
+      shortName: A
+      spriteOverrideForGlyph: {fileID: 0}
     - name: CameraOpen
       keyType: 0
       path: <Gamepad>/buttonNorth
@@ -199,12 +215,6 @@ MonoBehaviour:
       path: <Gamepad>/rightShoulder
       shortName: RB
       spriteOverrideForGlyph: {fileID: 0}
-    - name: MenuOpen
-      keyType: 0
-      path: '*/{Menu}'
-      shortName: Menu
-      spriteOverrideForGlyph: {fileID: -242858442, guid: 5f94d632b844a424f9ab5be9cd3d2879,
-        type: 3}
     - name: Navigate
       keyType: 12
       path: <Gamepad>/leftStick/up
@@ -272,6 +282,17 @@ MonoBehaviour:
       spriteOverrideForGlyph: {fileID: 0}
   - deviceName: Xbox Controller
     keyTypeMap:
+    - name: MenuOpen
+      keyType: 0
+      path: '*/{Menu}'
+      shortName: Menu
+      spriteOverrideForGlyph: {fileID: -242858442, guid: 5f94d632b844a424f9ab5be9cd3d2879,
+        type: 3}
+    - name: Interact
+      keyType: 0
+      path: '*/{PrimaryAction}'
+      shortName: A
+      spriteOverrideForGlyph: {fileID: 0}
     - name: CameraOpen
       keyType: 0
       path: <Gamepad>/buttonNorth
@@ -281,11 +302,6 @@ MonoBehaviour:
       keyType: 3
       path: <Gamepad>/rightShoulder
       shortName: RB
-      spriteOverrideForGlyph: {fileID: 0}
-    - name: MenuOpen
-      keyType: 0
-      path: '*/{Menu}'
-      shortName: Menu
       spriteOverrideForGlyph: {fileID: 0}
     - name: Submit
       keyType: 21
@@ -304,6 +320,17 @@ MonoBehaviour:
       spriteOverrideForGlyph: {fileID: 0}
   - deviceName: PS4 Controller
     keyTypeMap:
+    - name: MenuOpen
+      keyType: 0
+      path: '*/{Menu}'
+      shortName: Menu
+      spriteOverrideForGlyph: {fileID: -242858442, guid: 5f94d632b844a424f9ab5be9cd3d2879,
+        type: 3}
+    - name: Interact
+      keyType: 0
+      path: '*/{PrimaryAction}'
+      shortName: X
+      spriteOverrideForGlyph: {fileID: 0}
     - name: CameraOpen
       keyType: 0
       path: <Gamepad>/buttonNorth
@@ -313,11 +340,6 @@ MonoBehaviour:
       keyType: 3
       path: <Gamepad>/rightShoulder
       shortName: RB
-      spriteOverrideForGlyph: {fileID: 0}
-    - name: MenuOpen
-      keyType: 0
-      path: '*/{Menu}'
-      shortName: Menu
       spriteOverrideForGlyph: {fileID: 0}
     - name: Submit
       keyType: 21

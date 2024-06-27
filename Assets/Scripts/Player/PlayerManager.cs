@@ -18,8 +18,6 @@ namespace Player
             if (playerInput is null)
                 playerInput = GetComponentInChildren<PlayerInput>();
             
-            // playerInput.onControlsChanged += OnControlsChanged;
-            
             _currentControlSchemeObservable = new Observable<string>(playerInput.currentControlScheme);
             _currentControlSchemeObservable.ValueChanged += OnControlsChanged;
         }
