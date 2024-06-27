@@ -26,13 +26,12 @@ namespace QuestSystem
         [Header("Quest Chaining")]
         [SerializeField] QuestData nextQuest;
         
-
-#if UNITY_EDITOR  
         private void Reset()
         {
             ResetQuest();
         }
-        
+
+#if UNITY_EDITOR  
         private void OnValidate()
         {
             ResetQuest();

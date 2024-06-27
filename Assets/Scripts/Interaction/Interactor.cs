@@ -51,23 +51,32 @@ namespace Interaction
             HandleCast();
         }
 
+        private Collider[] _hits = new Collider[10]; // Adjust the size as needed
+
         private void HandleCast()
         {
-            if (Physics.SphereCast(GetRayOrigin(), raycastRadius, transform.forward, out var hit, interactableDistance, interactableLayers))
+            int hitCount = Physics.OverlapSphereNonAlloc(GetRayOrigin(), raycastRadius, _hits, interactableLayers);
+
+            if (hitCount > 0)
             {
-                if (hit.collider.TryGetComponent(out IInteractable interactable))
+                for (int i = 0; i < hitCount; i++)
                 {
-                    if (_currentInteractable != interactable)
+                    Collider hit = _hits[i];
+                    if (hit.TryGetComponent(out IInteractable interactable))
                     {
-                        _currentInteractable = interactable;
-                        SendInteractEvent();
-                        // Debug.Log($"Interactable found: {_currentInteractable}");
+                        if (_currentInteractable != interactable)
+                        {
+                            _currentInteractable = interactable;
+                            SendInteractEvent();
+                            // Debug.Log($"Interactable found: {_currentInteractable}");
+                        }
+                        return; // Exit after finding the first interactable
                     }
                 }
             }
             else
             {
-                if (_currentInteractable != null && hit.collider == null)
+                if (_currentInteractable != null)
                 {
                     if (_isInteracting) return;
 
@@ -81,6 +90,7 @@ namespace Interaction
                 }
             }
         }
+
 
         private IEnumerator SetInteractableNull()
         {
@@ -115,14 +125,12 @@ namespace Interaction
         {
             if (!showDebugRay) return;
             Gizmos.color = Color.red;
-            Gizmos.DrawRay(GetRayOrigin(), transform.forward * interactableDistance);
-            Gizmos.DrawWireSphere(GetRayOrigin() + transform.forward * interactableDistance, raycastRadius);
+            Gizmos.DrawWireSphere(GetRayOrigin(), raycastRadius);
 
             if (_currentInteractable != null)
             {
                 Gizmos.color = Color.green;
-                Gizmos.DrawRay(GetRayOrigin(), transform.forward * interactableDistance);
-                Gizmos.DrawWireSphere(GetRayOrigin() + transform.forward * interactableDistance, raycastRadius);
+                Gizmos.DrawWireSphere(GetRayOrigin(), raycastRadius);
             }
         }
     }

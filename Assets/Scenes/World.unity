@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.112
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 21145861}
-  m_IndirectSpecularColor: {r: 0.047501087, g: 0.06404245, b: 0.08464783, a: 0.112}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 0.112}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -855,6 +855,30 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1279979344}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &36956579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cba17d399ab86974c8ef9551f6e8f8d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transformSettings:
+    translation: {x: -219.88208, y: -311.00653, z: 1037.8025}
+    scale: {x: 2.833992, y: 1, z: 2.833992}
+    rotation: {x: 0, y: 0, z: 0}
+    flipScaleX: 0
+    flipScaleY: 0
+    flipScaleZ: 0
+  domainSettings:
+    noiseTypeName: Perlin
+    fractalTypeName: Fbm
+    noiseTypeParams: 
+    fractalTypeParams: '{"warpOffsets":{"x":131.8886260986328,"y":-790.2544555664063,"z":9.61446762084961,"w":0.0},"octavesMinMax":{"x":0.0,"y":16.0},"amplitudeMinMax":{"x":0.0,"y":1.0},"frequencyMinMax":{"x":0.0,"y":2.0},"lacunarityMinMax":{"x":0.0,"y":4.0},"persistenceMinMax":{"x":0.0,"y":1.0},"warpIterationsMinMax":{"x":0.0,"y":8.0},"warpStrengthMinMax":{"x":-2.0,"y":2.0},"octaves":8.0,"amplitude":0.48794734477996828,"frequency":1.0,"persistence":0.5,"lacunarity":0.9288221597671509,"warpIterations":0.6973782777786255,"warpStrength":0.9334391951560974,"warpEnabled":true,"warpExpanded":true}'
 --- !u!1001 &37766276
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6156,6 +6180,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 608496521058097666, guid: ad31ed8347b54d149a24648c29c3b603,
+        type: 3}
+      propertyPath: m_Alpha
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 885230153009753124, guid: ad31ed8347b54d149a24648c29c3b603,
         type: 3}
       propertyPath: m_Name
@@ -6215,6 +6244,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3653782234382076915, guid: ad31ed8347b54d149a24648c29c3b603,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3690450835016382958, guid: ad31ed8347b54d149a24648c29c3b603,
         type: 3}
@@ -6281,6 +6315,11 @@ PrefabInstance:
       propertyPath: thirdPersonCamera
       value: 
       objectReference: {fileID: 5038140549188369536}
+    - target: {fileID: 6033893657418664272, guid: ad31ed8347b54d149a24648c29c3b603,
+        type: 3}
+      propertyPath: ignoreLayerMask.m_Bits
+      value: 4100
+      objectReference: {fileID: 0}
     - target: {fileID: 6723550351947172565, guid: ad31ed8347b54d149a24648c29c3b603,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -7481,7 +7520,7 @@ MonoBehaviour:
       m_warpIterations: 0.6973783
       m_warpStrength: 0.9334392
       m_warpOffset: {x: 131.88863, y: -790.25446, z: 9.614468, w: 0}
-    m_noiseSettings: {fileID: 885778616}
+    m_noiseSettings: {fileID: 36956579}
     m_noiseToolSettings:
       worldHeightRemap: {x: 0, y: 0}
       coordSpace: 0
@@ -24257,7 +24296,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueNode: LolaHearsAGecko
-  isOneTimeUse: 0
+  isOneTimeUse: 1
   onDialogueStartEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -24313,7 +24352,7 @@ SphereCollider:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4096
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -27027,30 +27066,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 679700425}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &885778616
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cba17d399ab86974c8ef9551f6e8f8d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  transformSettings:
-    translation: {x: -219.88208, y: -311.00653, z: 1037.8025}
-    scale: {x: 2.833992, y: 1, z: 2.833992}
-    rotation: {x: 0, y: 0, z: 0}
-    flipScaleX: 0
-    flipScaleY: 0
-    flipScaleZ: 0
-  domainSettings:
-    noiseTypeName: Perlin
-    fractalTypeName: Fbm
-    noiseTypeParams: 
-    fractalTypeParams: '{"warpOffsets":{"x":131.8886260986328,"y":-790.2544555664063,"z":9.61446762084961,"w":0.0},"octavesMinMax":{"x":0.0,"y":16.0},"amplitudeMinMax":{"x":0.0,"y":1.0},"frequencyMinMax":{"x":0.0,"y":2.0},"lacunarityMinMax":{"x":0.0,"y":4.0},"persistenceMinMax":{"x":0.0,"y":1.0},"warpIterationsMinMax":{"x":0.0,"y":8.0},"warpStrengthMinMax":{"x":-2.0,"y":2.0},"octaves":8.0,"amplitude":0.48794734477996828,"frequency":1.0,"persistence":0.5,"lacunarity":0.9288221597671509,"warpIterations":0.6973782777786255,"warpStrength":0.9334391951560974,"warpEnabled":true,"warpExpanded":true}'
 --- !u!4 &888335885 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 942762337184432749, guid: b9c7a183a7a2e004cb24435cb080a708,
@@ -46158,6 +46173,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7785310242533629241, guid: 401c56c995cf8364e82e5581541a6f44,
         type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7785310242533629241, guid: 401c56c995cf8364e82e5581541a6f44,
+        type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -56077,6 +56097,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Character - Leaf
+      objectReference: {fileID: 0}
+    - target: {fileID: 7785310242533629241, guid: 401c56c995cf8364e82e5581541a6f44,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7785310242533629241, guid: 401c56c995cf8364e82e5581541a6f44,
         type: 3}
@@ -71507,7 +71532,7 @@ PrefabInstance:
     - target: {fileID: 3706941298269226024, guid: cab189e516aac90418c50707400a651a,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.016283365
+      value: 0.016283352
       objectReference: {fileID: 0}
     - target: {fileID: 3706941298269226024, guid: cab189e516aac90418c50707400a651a,
         type: 3}
@@ -71517,7 +71542,7 @@ PrefabInstance:
     - target: {fileID: 3706941298269226024, guid: cab189e516aac90418c50707400a651a,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0152089475
+      value: -0.015208935
       objectReference: {fileID: 0}
     - target: {fileID: 5754649896476583623, guid: cab189e516aac90418c50707400a651a,
         type: 3}
@@ -71597,21 +71622,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1279112673609006814, guid: 8746b19db272db1499fc8f3e3e844961,
-        type: 3}
-      propertyPath: rayOffset.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1279112673609006814, guid: 8746b19db272db1499fc8f3e3e844961,
-        type: 3}
-      propertyPath: raycastRadius
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1279112673609006814, guid: 8746b19db272db1499fc8f3e3e844961,
-        type: 3}
-      propertyPath: interactableDistance
-      value: 1.52
-      objectReference: {fileID: 0}
     - target: {fileID: 1958394100996140248, guid: 8746b19db272db1499fc8f3e3e844961,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -71672,50 +71682,15 @@ PrefabInstance:
       propertyPath: m_UIInputModule
       value: 
       objectReference: {fileID: 1943003780}
-    - target: {fileID: 7084293734041802467, guid: 8746b19db272db1499fc8f3e3e844961,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.31665367
-      objectReference: {fileID: 0}
-    - target: {fileID: 7084293734041802467, guid: 8746b19db272db1499fc8f3e3e844961,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.5333977
-      objectReference: {fileID: 0}
-    - target: {fileID: 7084293734041802467, guid: 8746b19db272db1499fc8f3e3e844961,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -3.5376947
-      objectReference: {fileID: 0}
-    - target: {fileID: 7084293734041802467, guid: 8746b19db272db1499fc8f3e3e844961,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.99875605
-      objectReference: {fileID: 0}
-    - target: {fileID: 7084293734041802467, guid: 8746b19db272db1499fc8f3e3e844961,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.022259193
-      objectReference: {fileID: 0}
-    - target: {fileID: 7084293734041802467, guid: 8746b19db272db1499fc8f3e3e844961,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.044609547
-      objectReference: {fileID: 0}
-    - target: {fileID: 7084293734041802467, guid: 8746b19db272db1499fc8f3e3e844961,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.0009942092
-      objectReference: {fileID: 0}
-    - target: {fileID: 7084293734041802468, guid: 8746b19db272db1499fc8f3e3e844961,
-        type: 3}
-      propertyPath: field of view
-      value: 58
-      objectReference: {fileID: 0}
     - target: {fileID: 8811856263115372022, guid: 8746b19db272db1499fc8f3e3e844961,
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8811856263115372022, guid: 8746b19db272db1499fc8f3e3e844961,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

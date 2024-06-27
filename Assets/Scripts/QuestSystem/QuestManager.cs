@@ -11,6 +11,8 @@ namespace QuestSystem
     {
         [SerializeField] private List<QuestData> questList;
         [SerializeField] private List<QuestData> completedQuests;
+        
+        Queue<QuestData> _questQueue = new Queue<QuestData>();
 
         private void OnEnable()
         {
@@ -31,6 +33,7 @@ namespace QuestSystem
         
         void AddQuest(QuestData questData)
         {
+            
             if (questList.Contains(questData) || completedQuests.Contains(questData))
             {
                 return;

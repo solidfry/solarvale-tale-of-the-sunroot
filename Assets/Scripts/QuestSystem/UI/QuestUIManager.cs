@@ -25,6 +25,8 @@ namespace QuestSystem.UI
         [SerializeField] float headerFadeDuration = 0.5f;
         private QuestNotificationModal _questNotificationInstance;
         
+        Tween _fadeTween;
+        
         private void Start()
         {
             InitialiseQuestLog();
@@ -43,13 +45,15 @@ namespace QuestSystem.UI
         private void ToggleQuestUI(bool value)
         {
             if (questUICanvasGroup is null) return;
-            questUICanvasGroup.DOFade(value ? 1 : 0, 0.5f);
+            if (_fadeTween != null) _fadeTween.Kill();
+            _fadeTween = questUICanvasGroup.DOFade(value ? 1 : 0, 0.5f);
         }
 
         private void OnDisable()
         {
             GlobalEvents.OnQuestCompletedLogUpdatedEvent -= CheckQuestsCompleted;
             GlobalEvents.OnQuestAcquiredLogUpdatedEvent -= UpdateQuestLog;
+            GlobalEvents.OnSetHUDVisibilityEvent -= ToggleQuestUI;
             DestroyQuestNotification();
         }
 

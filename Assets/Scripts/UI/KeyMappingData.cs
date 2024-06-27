@@ -128,7 +128,7 @@ namespace UI
     [Serializable] 
     public class KeyTypeMap
     {
-        public new string name;
+        public string name;
         public KeyType keyType;
         public string path;
         public string shortName;

@@ -31,11 +31,13 @@ namespace CameraSystem
         
         public void SetHUDVisibility(bool isVisible)
         {
+            FadeTween.Kill();
             FadeTween = _hudCanvasGroup.DOFade(isVisible ? 1 : 0, fadeDuration).SetDelay(isVisible ? fadeDelay : 0);
         }
         
         public void SetHUDVisibility(float alpha, float duration = 0.5f, float delay = 0f)
         {
+            FadeTween.Kill();
             FadeTween = _hudCanvasGroup.DOFade(alpha, duration).SetDelay(delay);
         }
         

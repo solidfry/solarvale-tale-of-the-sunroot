@@ -23,7 +23,6 @@ namespace UI.Utilities
 
         private void OnEnable()
         {
-            Debug.Log("OnEnable Ran");
             PlayAll();
         }
 
@@ -41,7 +40,6 @@ namespace UI.Utilities
 
         private void OnDisable()
         {
-            Debug.Log("OnDisable Ran");
             foreach (var tween in animations)
             {
                 tween.DORewind();

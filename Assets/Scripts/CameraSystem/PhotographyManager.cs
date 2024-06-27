@@ -28,8 +28,10 @@ namespace CameraSystem
         [Header("RayCast Settings")]
         [SerializeField] private float rayCastDistance = 300f;
         [SerializeField] private float rayCastBoxSize = 0.5f;
+        [SerializeField] LayerMask ignoreLayerMask;
 
         [SerializeField] private PhotographyHUDController photographyHUDController;
+        
 
         private Camera _mainCamera;
         private Texture2D _screenCapture;
@@ -138,16 +140,25 @@ namespace CameraSystem
             RemovePhoto();
         }
 
-        private RaycastHit GetRayCastHit(out Ray ray)
+        private RaycastHit GetRayCastHit()
         {
-            ray = _mainCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
-            Physics.BoxCast(ray.origin, Vector3.one * rayCastBoxSize, ray.direction, out var hit, Quaternion.identity, rayCastDistance);
-            return hit;
+            Ray ray = _mainCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0)); // Create a ray from the center of the screen
+            RaycastHit hit;
+            bool hitSomething = Physics.BoxCast(ray.origin, Vector3.one * rayCastBoxSize, ray.direction, out hit, Quaternion.identity, rayCastDistance,  ~ignoreLayerMask);
+
+            if (hitSomething)
+            {
+                return hit; // Return the hit if something was detected
+            }
+            else
+            {
+                return default; // Return a default RaycastHit if nothing was detected
+            }
         }
 
         private void HandlePhotographyRayForQuests()
         {
-            var hit = GetRayCastHit(out _);
+            var hit = GetRayCastHit();
             var entityData = GetEntityDataFromRayCastHit(hit);
             onPhotoTaken?.Invoke(entityData);
         }
@@ -181,13 +192,20 @@ namespace CameraSystem
         {
             if (IsInCameraMode)
             {
-                var hit = GetRayCastHit(out var ray);
+                var hit = GetRayCastHit();
 
                 Gizmos.color = Color.red;
-                Gizmos.DrawRay(ray.origin, ray.direction * rayCastDistance);
-                Gizmos.DrawCube(hit.point, Vector3.one * rayCastBoxSize);
+                if (hit.collider != null)
+                {
+                    Gizmos.DrawRay(hit.point, hit.normal * rayCastDistance);
+                    Gizmos.DrawCube(hit.point, Vector3.one * rayCastBoxSize);
+                }
+                else
+                {
+                    Ray ray = _mainCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
+                    Gizmos.DrawRay(ray.origin, ray.direction * rayCastDistance);
+                }
             }
         }
     }
 }
-
