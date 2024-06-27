@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -51,7 +52,9 @@ namespace UI
                             {
                                 name = binding.action,
                                 keyType = MapActionPathToKeyType(binding.path),
-                                path = binding.path
+                                path = binding.path,
+                                shortName = binding.ToDisplayString(),
+                                spriteOverrideForGlyph = null
                             };
                             deviceMap.keyTypeMap.Add(keyTypeMap);
                         }
@@ -75,20 +78,31 @@ namespace UI
             
             var keyTypes = Enum.GetNames(typeof(KeyType));
             
+            var comparison = StringComparison.OrdinalIgnoreCase;
+            
             foreach (var keyType in keyTypes)
             {
-                if (path.Contains("keyboard", StringComparison.OrdinalIgnoreCase))
+                if (path.Contains("keyboard", comparison))
                 {
                     return KeyType.Keyboard;
+                }
+                if (subPath.Contains("menu", comparison))
+                {
+                    return KeyType.Button;
                 }
                 if (subPath.Length == 1) // if the path is just a single character, it's a button
                 {
                     return KeyType.Button;
                 }
-                
-                
-                
-                if (subPath.Contains(keyType, StringComparison.OrdinalIgnoreCase))
+                if (subPath.Contains("leftstick", comparison))
+                {
+                    return KeyType.LeftStick;
+                }
+                if (subPath.Contains("rightstick", comparison))
+                {
+                    return KeyType.RightStick;
+                }
+                if (subPath.Contains(keyType, comparison))
                 {
                     return (KeyType) Enum.Parse(typeof(KeyType), keyType);
                 }
@@ -117,6 +131,8 @@ namespace UI
         public new string name;
         public KeyType keyType;
         public string path;
+        public string shortName;
+        public Sprite spriteOverrideForGlyph;
     }
 
     [Serializable]

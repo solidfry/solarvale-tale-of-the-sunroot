@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 namespace UI
@@ -9,6 +10,7 @@ namespace UI
         [SerializeField] KeyMappingData keyMappingData;
         [SerializeField] string key;
         [SerializeField] KeyType keyType;
+        [SerializeField] Image fallbackImage;
         Image _image;
         TMP_Text _text;
     
@@ -33,8 +35,21 @@ namespace UI
         public void SetKeyType(string deviceName, string actionName)
         {
             var keyMapType = keyMappingData.GetSpriteByDeviceAndAction(deviceName, actionName);
+            // Debug.Log(keyMapType);
             keyType = keyMapType.keyType;
             _image.sprite = keyMappingData.GetSprite(keyType);
+            if (keyMapType.spriteOverrideForGlyph != null)
+            {
+                fallbackImage.sprite = keyMapType.spriteOverrideForGlyph;
+                fallbackImage.enabled = true;
+                _text.gameObject.SetActive(false);
+            } 
+            else 
+            {
+                fallbackImage.enabled = false;
+                SetText(keyMapType.shortName);
+                _text.gameObject.SetActive(true);
+            }
         }
 
     

@@ -1,8 +1,8 @@
 using DG.Tweening;
+using Events;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.InputSystem.Utilities;
 using UnityEngine.UI;
 
 namespace UI
@@ -27,32 +27,33 @@ namespace UI
             _originalColor = keyImage.color;
         }
 
-        private void Update()
-        {
-            if (inputAction == null) return;
-            if (inputAction.action.bindings[0].ToDisplayString() == _currentKeyText) return;
-            keyUIHandler.SetText(inputAction.action.bindings[0].ToDisplayString());
-        }
+        // private void Update()
+        // {
+        //     if (inputAction == null) return;
+        //     if (inputAction.action.bindings[0].ToDisplayString() == _currentKeyText) return;
+        //     keyUIHandler.SetText(inputAction.action.bindings[0].ToDisplayString());
+        // }
 
         private void OnEnable()
         {
             if (inputAction == null) return;
             inputAction.action.performed += _ => AnimateKeyImage(interactedColor);
-            // InputSystem.onDeviceChange += OnDeviceChange;
-            InputSystem.onAnyButtonPress.CallOnce(control => OnDeviceChange(control.device, InputDeviceChange.Added));
-
+            GlobalEvents.OnControlSchemeChangedEvent += OnControlSchemeChanged;
+        }
+        
+        private void OnDisable()
+        {
+            if (inputAction == null) return;
+            GlobalEvents.OnControlSchemeChangedEvent -= OnControlSchemeChanged;
         }
 
-        private void OnDeviceChange(InputDevice device, InputDeviceChange change)
+        private void OnControlSchemeChanged(string scheme)
         {
+            Debug.Log(scheme);
             if (InputSystem.devices.Count == 0) return;
             if (inputAction == null) return;
-            
-            if (device.name == _currentDevice) return;
-            
-            _currentDevice = device.name;
-            keyUIHandler.SetText(inputAction.action.bindings[0].ToDisplayString());
-            keyUIHandler.SetKeyType(_currentDevice, inputAction.action.name);
+            // var mask = InputBinding.MaskByGroup(_currentDevice);
+            keyUIHandler.SetKeyType(scheme, inputAction.action.name);
         }
 
         public void SetActive(bool active)
@@ -74,11 +75,7 @@ namespace UI
                 .SetAutoKill(false);
         }
 
-        private void OnDisable()
-        {
-            // if (inputAction == null) return;
-            // InputSystem.onDeviceChange -= OnDeviceChange;
-        }
+ 
     }
     
     

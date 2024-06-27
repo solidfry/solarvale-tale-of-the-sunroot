@@ -9,17 +9,38 @@ namespace Player
     {
         [SerializeField] PlayerInput playerInput;
         [SerializeField] StarterAssetsInputs starterAssetsInputs;
-    
+
+        private string _currentControlsScheme;
+        Observable<string> _currentControlSchemeObservable;
+        
         private void Awake()
         {
             if (playerInput is null)
                 playerInput = GetComponentInChildren<PlayerInput>();
+            
+            // playerInput.onControlsChanged += OnControlsChanged;
+            
+            _currentControlSchemeObservable = new Observable<string>(playerInput.currentControlScheme);
+            _currentControlSchemeObservable.ValueChanged += OnControlsChanged;
         }
-    
+
+        private void Update()
+        {
+            if (_currentControlsScheme == playerInput.currentControlScheme) return;
+            _currentControlsScheme = playerInput.currentControlScheme;
+            _currentControlSchemeObservable?.Invoke();
+        }
+
         private void OnEnable()
         {
             GlobalEvents.OnPlayerControlsLockedEvent += TogglePlayerControls;
             GlobalEvents.OnSetCursorInputForLookEvent += SetCursorInputForLook;
+        }
+
+        private void OnControlsChanged(string inputs)
+        {
+            Debug.Log("OnControlsChanged: " + playerInput.currentControlScheme);
+            GlobalEvents.OnControlSchemeChangedEvent?.Invoke(playerInput.currentControlScheme);
         }
 
         private void SetCursorInputForLook(bool canLook)
@@ -31,7 +52,9 @@ namespace Player
         private void OnDisable()
         {
             GlobalEvents.OnPlayerControlsLockedEvent -= TogglePlayerControls;
-            GlobalEvents.OnSetCursorInputForLookEvent -= SetCursorInputForLook;
+            GlobalEvents.OnSetCursorInputForLookEvent -= SetCursorInputForLook; 
+            // playerInput.onControlsChanged += OnControlsChanged;
+            _currentControlSchemeObservable.ValueChanged -= OnControlsChanged;
         }
 
         public void TogglePlayerControls(bool isPaused)
