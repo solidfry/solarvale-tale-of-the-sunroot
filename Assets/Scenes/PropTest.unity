@@ -503,7 +503,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61587e20dbbff7b4f8b950ee8040aea4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ProfileVersion: None
+  ProfileVersion: 3.4.1
   m_reimportHDRPShader: 0
   m_savedFromScene: 
   m_gaiaTimeOfDay:
@@ -522,7 +522,7 @@ MonoBehaviour:
   DefaultLightingSet: 0
   m_lightingMultiSceneLightingSupport: 1
   m_lightingUpdateInRealtime: 0
-  m_selectedLightingProfileValuesIndex: 0
+  m_selectedLightingProfileValuesIndex: 1
   m_profileType: 1
   m_renamingProfile: 0
   m_lightingEditSettings: 0
@@ -667,7 +667,7 @@ MonoBehaviour:
     - 0
     m_textureResolution: 512
   m_waterEditSettings: 0
-  m_selectedWaterProfileValuesIndex: 0
+  m_selectedWaterProfileValuesIndex: 1
   m_autoRefresh: 1
   m_ignoreSceneConditions: 1
   m_refreshRate: 0.5
@@ -4675,44 +4675,6 @@ MonoBehaviour:
   m_drawWorldDesignerRulers: 1
   m_drawWorldDesignerDensityViz: 0
   m_autoStampDensityVisualizationTimeStamp: 0
---- !u!84 &546253145
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Stamper Cached Render Texture
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  m_IsAlphaChannelOptional: 0
-  serializedVersion: 5
-  m_Width: 2049
-  m_Height: 2049
-  m_AntiAliasing: 1
-  m_MipCount: -1
-  m_DepthStencilFormat: 0
-  m_ColorFormat: 49
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 0
-  m_UseDynamicScale: 0
-  m_BindMS: 0
-  m_EnableCompatibleFormat: 1
-  m_EnableRandomWrite: 1
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 0
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
-  m_ShadowSamplingMode: 2
 --- !u!114 &561312857
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6606,7 +6568,7 @@ MonoBehaviour:
   m_spawnRuleStampsToggleAllState: 1
   m_drawPreview: 0
   m_previewRuleIds: 
-  m_maxWorldHeight: 0
+  m_maxWorldHeight: 58.67515
   m_minWorldHeight: 0
   m_showSeaLevelinStampPreview: 1
   m_terrainGeneratorPanelUnfolded: 1
@@ -7112,9 +7074,9 @@ MonoBehaviour:
   m_worldDesignerUserBounds:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0, y: 0, z: 0}
-  m_worldDesignerSampleObjectPos1: {x: -20, y: 12.193243, z: 0}
-  m_worldDesignerSampleObjectPos2: {x: 0, y: 13.877882, z: 0}
-  m_worldDesignerSampleObjectPos3: {x: 20, y: 15.275545, z: 0}
+  m_worldDesignerSampleObjectPos1: {x: -20, y: 12.137722, z: 0}
+  m_worldDesignerSampleObjectPos2: {x: 0, y: 13.830984, z: 0}
+  m_worldDesignerSampleObjectPos3: {x: 20, y: 15.231065, z: 0}
   m_drawWorldDesignerSampleObjects: 1
   m_drawWorldDesignerHandles: 0
   m_drawWorldDesignerRulers: 1
@@ -8858,30 +8820,6 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
---- !u!114 &780828417
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cba17d399ab86974c8ef9551f6e8f8d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  transformSettings:
-    translation: {x: -310.95093, y: 733.6404, z: -231.33899}
-    scale: {x: 2.5428486, y: 1, z: 2.5428486}
-    rotation: {x: 0, y: 0, z: 0}
-    flipScaleX: 0
-    flipScaleY: 0
-    flipScaleZ: 0
-  domainSettings:
-    noiseTypeName: Perlin
-    fractalTypeName: Fbm
-    noiseTypeParams: 
-    fractalTypeParams: '{"warpOffsets":{"x":-327.9736022949219,"y":-705.0620727539063,"z":498.46661376953127,"w":0.0},"octavesMinMax":{"x":0.0,"y":16.0},"amplitudeMinMax":{"x":0.0,"y":1.0},"frequencyMinMax":{"x":0.0,"y":2.0},"lacunarityMinMax":{"x":0.0,"y":4.0},"persistenceMinMax":{"x":0.0,"y":1.0},"warpIterationsMinMax":{"x":0.0,"y":8.0},"warpStrengthMinMax":{"x":-2.0,"y":2.0},"octaves":8.0,"amplitude":0.5108341574668884,"frequency":1.0,"persistence":0.5,"lacunarity":1.2121094465255738,"warpIterations":3.2272520065307619,"warpStrength":0.572096049785614,"warpEnabled":true,"warpExpanded":true}'
 --- !u!1 &783104522
 GameObject:
   m_ObjectHideFlags: 0
@@ -9410,6 +9348,30 @@ MonoBehaviour:
     m_selectedWorldBiomeMaskGUID: 
     m_growAndShrinkValue: 0
     m_globalSpawnerMaskStackRT: {fileID: 0}
+--- !u!114 &859613575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cba17d399ab86974c8ef9551f6e8f8d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transformSettings:
+    translation: {x: -310.95093, y: 733.6404, z: -231.33899}
+    scale: {x: 2.5428486, y: 1, z: 2.5428486}
+    rotation: {x: 0, y: 0, z: 0}
+    flipScaleX: 0
+    flipScaleY: 0
+    flipScaleZ: 0
+  domainSettings:
+    noiseTypeName: Perlin
+    fractalTypeName: Fbm
+    noiseTypeParams: 
+    fractalTypeParams: '{"warpOffsets":{"x":-327.9736022949219,"y":-705.0620727539063,"z":498.46661376953127,"w":0.0},"octavesMinMax":{"x":0.0,"y":16.0},"amplitudeMinMax":{"x":0.0,"y":1.0},"frequencyMinMax":{"x":0.0,"y":2.0},"lacunarityMinMax":{"x":0.0,"y":4.0},"persistenceMinMax":{"x":0.0,"y":1.0},"warpIterationsMinMax":{"x":0.0,"y":8.0},"warpStrengthMinMax":{"x":-2.0,"y":2.0},"octaves":8.0,"amplitude":0.5108341574668884,"frequency":1.0,"persistence":0.5,"lacunarity":1.2121094465255738,"warpIterations":3.2272520065307619,"warpStrength":0.572096049785614,"warpEnabled":true,"warpExpanded":true}'
 --- !u!1 &887457821
 GameObject:
   m_ObjectHideFlags: 0
@@ -9858,17 +9820,17 @@ MonoBehaviour:
   m_showSeaLevelPlane: 1
   m_showRulers: 0
   m_syncHeightmaps: 1
-  m_stampDirty: 1
+  m_stampDirty: 0
   m_worldMapStampToken: {fileID: 0}
   m_recordUndo: 0
   m_currentStamperUndoOperation: 0
   m_stamperUndoOperations: []
   m_linkedBiomeController: {fileID: 0}
-  m_cachedRenderTexture: {fileID: 546253145}
-  m_cachedMaskTexture: {fileID: 1234120302}
+  m_cachedRenderTexture: {fileID: 1101652670}
+  m_cachedMaskTexture: {fileID: 1597360144}
   m_drawPreview: 1
   m_showSeaLevelinStampPreview: 1
-  m_maxCurrentTerrainHeight: 58.593163
+  m_maxCurrentTerrainHeight: 58.67515
   m_minCurrentTerrainHeight: 0
   m_activacteLocationSliders: 1
   m_activatePreviewRequested: 0
@@ -9897,7 +9859,7 @@ MonoBehaviour:
   m_highlightLoadingSettings: 0
   m_highlightLoadingSettingsStartedTimeStamp: 0
   m_baseTerrainMinHeight: 0
-  m_baseTerrainMaxHeight: 58.593163
+  m_baseTerrainMaxHeight: 58.67515
   m_firstFrameAfterStampSpawning: 0
   m_worldDesignerStampVisColor0: {r: 1, g: 0, b: 0, a: 0}
   m_worldDesignerStampVisColor1: {r: 0, g: 1, b: 0, a: 0}
@@ -11465,7 +11427,7 @@ MonoBehaviour:
   m_z: 0
   m_isFoldedOut: 0
   m_width: 100
-  m_height: 5
+  m_height: 7
   m_blendStrength: 0.5
   m_absoluteHeightValue: 0
   m_rotation: 0
@@ -11729,8 +11691,8 @@ MonoBehaviour:
     m_blendMode: 0
     m_imageMaskLocation: 0
     m_strength: 1
-    m_seaLevel: 0
-    m_maxWorldHeight: 0
+    m_seaLevel: 25
+    m_maxWorldHeight: 58.67515
     m_minWorldHeight: 0
     m_xOffSet: 0
     m_zOffSet: 0
@@ -11740,7 +11702,7 @@ MonoBehaviour:
     m_zScale: 1
     m_rotationDegrees: 0
     m_tiling: 0
-    m_imageMaskSpace: 0
+    m_imageMaskSpace: 1
     m_imageMaskTextureGUID: 
     m_imageMaskFilterMode: 0
     m_imageMaskColorSelectionColor: {r: 1, g: 1, b: 1, a: 1}
@@ -11884,7 +11846,7 @@ MonoBehaviour:
       m_warpIterations: 3.227252
       m_warpStrength: 0.57209605
       m_warpOffset: {x: -327.9736, y: -705.0621, z: 498.4666, w: 0}
-    m_noiseSettings: {fileID: 780828417}
+    m_noiseSettings: {fileID: 859613575}
     m_noiseToolSettings:
       worldHeightRemap: {x: 0, y: 0}
       coordSpace: 0
@@ -11936,8 +11898,8 @@ MonoBehaviour:
     m_blendMode: 0
     m_imageMaskLocation: 0
     m_strength: 1
-    m_seaLevel: 0
-    m_maxWorldHeight: 0
+    m_seaLevel: 25
+    m_maxWorldHeight: 58.67515
     m_minWorldHeight: 0
     m_xOffSet: 0
     m_zOffSet: 0
@@ -12117,6 +12079,44 @@ MonoBehaviour:
     m_selectedWorldBiomeMaskGUID: 
     m_growAndShrinkValue: 0
     m_globalSpawnerMaskStackRT: {fileID: 0}
+--- !u!84 &1101652670
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Stamper Cached Render Texture
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  m_IsAlphaChannelOptional: 0
+  serializedVersion: 5
+  m_Width: 2049
+  m_Height: 2049
+  m_AntiAliasing: 1
+  m_MipCount: -1
+  m_DepthStencilFormat: 0
+  m_ColorFormat: 49
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 0
+  m_UseDynamicScale: 0
+  m_BindMS: 0
+  m_EnableCompatibleFormat: 1
+  m_EnableRandomWrite: 1
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 0
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
+  m_ShadowSamplingMode: 2
 --- !u!114 &1121690749
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14479,44 +14479,6 @@ MonoBehaviour:
   m_worldMapStampSettings: {fileID: 86343712}
   m_oldTerrainOffsetX: 0
   m_oldTerrainOffsetZ: 0
---- !u!84 &1234120302
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  m_IsAlphaChannelOptional: 0
-  serializedVersion: 5
-  m_Width: 2049
-  m_Height: 2049
-  m_AntiAliasing: 1
-  m_MipCount: -1
-  m_DepthStencilFormat: 0
-  m_ColorFormat: 49
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 0
-  m_UseDynamicScale: 0
-  m_BindMS: 0
-  m_EnableCompatibleFormat: 1
-  m_EnableRandomWrite: 1
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
-  m_ShadowSamplingMode: 2
 --- !u!1001 &1251021575
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15873,25 +15835,25 @@ MonoBehaviour:
     m_beachHeight: 5
     m_terrainHeight: 1000
     m_texturePrototypes:
-    - m_name: Env.Tex.Sandy
-      m_texture: {fileID: 2800000, guid: a235b23eb0bf38b468c8e693883f493c, type: 3}
+    - m_name: Env.Tex.Sandy 1
+      m_texture: {fileID: 2800000, guid: 0157a035e596efb418b1074735ed4495, type: 3}
       m_textureFileName: 
-      m_normal: {fileID: 0}
+      m_normal: {fileID: 2800000, guid: f5adb7b5c7f5fec418e4bf8d501f4957, type: 3}
       m_maskmap: {fileID: 0}
       m_CTSSmoothnessMap: {fileID: 0}
       m_CTSRoughnessMap: {fileID: 0}
       m_CTSHeightMap: {fileID: 0}
       m_CTSAmbientOcclusionMap: {fileID: 0}
       m_normalFileName: 
-      m_sizeX: 8
-      m_sizeY: 8
+      m_sizeX: 32
+      m_sizeY: 32
       m_offsetX: 0
       m_offsetY: 0
       m_metallic: 0.2
       m_smoothness: 0.5
       m_spawnCriteria: []
       m_LayerGUID: b7efd95635adc094694aa318692dc0b9
-      m_normalScale: 1.2
+      m_normalScale: 0.38
       m_diffuseRemapMax: {x: 1, y: 1, z: 1, w: 1}
       m_diffuseRemapMin: {x: 0, y: 0, z: 0, w: 0}
       m_maskMapRemapMax: {x: 1, y: 1, z: 1, w: 1}
@@ -15924,17 +15886,17 @@ MonoBehaviour:
       m_specularColor: {r: 0, g: 0, b: 0, a: 0}
       m_channelRemapFoldedOut: 0
     - m_name: Env.Tex.Rocky
-      m_texture: {fileID: 2800000, guid: efa8f244ed9d43349a328b02c32040da, type: 3}
+      m_texture: {fileID: 2800000, guid: 5d6e8a73c4c09444fbbe06b07f29d4d9, type: 3}
       m_textureFileName: 
-      m_normal: {fileID: 0}
+      m_normal: {fileID: 2800000, guid: 13cf9c9bffdaba24ca96adc12a087437, type: 3}
       m_maskmap: {fileID: 0}
       m_CTSSmoothnessMap: {fileID: 0}
       m_CTSRoughnessMap: {fileID: 0}
       m_CTSHeightMap: {fileID: 0}
       m_CTSAmbientOcclusionMap: {fileID: 0}
       m_normalFileName: 
-      m_sizeX: 8
-      m_sizeY: 4
+      m_sizeX: 32
+      m_sizeY: 32
       m_offsetX: 0
       m_offsetY: 0
       m_metallic: 0.5
@@ -19962,6 +19924,44 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!84 &1597360144
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  m_IsAlphaChannelOptional: 0
+  serializedVersion: 5
+  m_Width: 2049
+  m_Height: 2049
+  m_AntiAliasing: 1
+  m_MipCount: -1
+  m_DepthStencilFormat: 0
+  m_ColorFormat: 49
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 0
+  m_UseDynamicScale: 0
+  m_BindMS: 0
+  m_EnableCompatibleFormat: 1
+  m_EnableRandomWrite: 1
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
+  m_ShadowSamplingMode: 2
 --- !u!114 &1614625657
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23716,7 +23716,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.7
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -23758,7 +23758,7 @@ Light:
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
+  m_BounceIntensity: 0.14
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
