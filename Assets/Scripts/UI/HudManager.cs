@@ -22,8 +22,8 @@ namespace UI
         private void Start()
         {
             if (menu == null || playerHUD == null) return;
-            _menuInstance = Instantiate(menu, transform.position, Quaternion.identity);
-            _playerHUDInstance = Instantiate(playerHUD, transform.position, Quaternion.identity);
+            _menuInstance = Instantiate(menu, transform.position, Quaternion.identity, transform);
+            _playerHUDInstance = Instantiate(playerHUD, transform.position, Quaternion.identity, transform);
             _menuInstance.SetActive(false);
             // _playerHUDInstance.SetActive(false);
         }

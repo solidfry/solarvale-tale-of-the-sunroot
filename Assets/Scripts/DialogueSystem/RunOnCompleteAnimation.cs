@@ -1,7 +1,6 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.UIElements;
 
 namespace DialogueSystem
 {
@@ -9,7 +8,10 @@ namespace DialogueSystem
     {
         [SerializeField] private Animator animationController;
         [SerializeField] private string animationName;
+        public UnityEvent onAnimationStartEvent;
         public UnityEvent onAnimationEndEvent;
+        
+        bool isPlaying = false;
         
         void Start()
         {
@@ -22,6 +24,13 @@ namespace DialogueSystem
 
         private IEnumerator WaitForAnimationToEnd(string anim = null)
         {
+            if (!isPlaying)
+            {
+                onAnimationStartEvent?.Invoke();
+                isPlaying = true;
+                Debug.Log(isPlaying + " is playing");
+            }
+            
             if (anim == null)
             {
                 Debug.Log("No animation name provided");
@@ -36,6 +45,8 @@ namespace DialogueSystem
 
             Debug.Log("Animation ended");
             onAnimationEndEvent?.Invoke();
+            isPlaying = false;
+            Debug.Log(anim + " is playing: " + isPlaying);
         }
     }
 }

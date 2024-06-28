@@ -49,7 +49,7 @@ namespace UI
 
         private void OnControlSchemeChanged(string scheme)
         {
-            Debug.Log(scheme);
+            // Debug.Log(scheme);
             if (InputSystem.devices.Count == 0) return;
             if (inputAction == null) return;
             // var mask = InputBinding.MaskByGroup(_currentDevice);

@@ -31,7 +31,7 @@ namespace Player
 
         private void OnEnable()
         {
-            GlobalEvents.OnPlayerControlsLockedEvent += TogglePlayerControls;
+            GlobalEvents.OnPlayerControlsLockedEvent += TogglePlayerActionMap;
             GlobalEvents.OnSetCursorInputForLookEvent += SetCursorInputForLook;
         }
 
@@ -49,13 +49,26 @@ namespace Player
 
         private void OnDisable()
         {
-            GlobalEvents.OnPlayerControlsLockedEvent -= TogglePlayerControls;
+            GlobalEvents.OnPlayerControlsLockedEvent -= TogglePlayerActionMap;
             GlobalEvents.OnSetCursorInputForLookEvent -= SetCursorInputForLook; 
             // playerInput.onControlsChanged += OnControlsChanged;
             _currentControlSchemeObservable.ValueChanged -= OnControlsChanged;
         }
+        
+        public void SetPlayerControlsLocked(bool isLocked)
+        {
+            switch (isLocked)
+            {
+                case true:
+                    playerInput.ActivateInput();
+                    break;
+                default:
+                    playerInput.DeactivateInput();
+                    break;
+            }
+        }
 
-        public void TogglePlayerControls(bool isPaused)
+        public void TogglePlayerActionMap(bool isPaused)
         {   
             //Disable Player Input on Player Action Map
             SetPlayerControlMap(isPaused ? "UI" : "Player");
