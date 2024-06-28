@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2838293530554581146}
-  - component: {fileID: 4905157406444911780}
   - component: {fileID: 6033893657418664272}
   - component: {fileID: 588250152800585689}
   m_Layer: 0
@@ -36,23 +35,6 @@ Transform:
   - {fileID: 5651744727561091813}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4905157406444911780
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 885230153009753124}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c5979658fda8f04ead3f7416a54c6f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cameraOpenActionRef: {fileID: -8830811728866751316, guid: 78133a3448bb08445b514549337508a9,
-    type: 3}
-  thirdPersonCamera: {fileID: 0}
-  firstPersonCamera: {fileID: 0}
-  conversationCamera: {fileID: 0}
 --- !u!114 &6033893657418664272
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65,7 +47,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27981aa10da1c73428d0702309385a06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraManager: {fileID: 4905157406444911780}
   photoDisplayArea: {fileID: 7150932839481071125}
   photoFrame: {fileID: 2850196628600183383}
   photoCanvas: {fileID: 4229786764862310425}
@@ -97,6 +78,8 @@ MonoBehaviour:
     hudCanvas: {fileID: 2088508408523079008}
     fadeDuration: 0.5
     fadeDelay: 1
+  IsInCameraMode: 0
+  viewingPhoto: 0
 --- !u!114 &588250152800585689
 MonoBehaviour:
   m_ObjectHideFlags: 0

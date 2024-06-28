@@ -1,9 +1,11 @@
 ﻿using System;
+using CameraSystem;
 using Cinemachine;
 using Entities;
 using Interaction;
 using QuestSystem;
 using QuestSystem.Conditions;
+using UnityEngine;
 
 namespace Events
 {
@@ -11,7 +13,8 @@ namespace Events
     {
         #region Game Management
         public static Action<bool> OnGamePausedEvent;
-        public static Action<bool> OnPlayerControlsLockedEvent;
+        public static Action<bool> OnPlayerChangeActionMapEvent;
+        public static Action<bool> OnSetPlayerControlsLockedEvent;
         public static Action<bool> OnLockCursorEvent;
         public static Action<string> OnSetPlayerControlMapEvent;
         public static Action<bool> OnSetCursorInputForLookEvent;
@@ -45,7 +48,8 @@ namespace Events
         #endregion
         
         #region Camera Management
-        public static Action<CinemachineVirtualCamera> OnSetPriorityOfCameraEvent;
+        public static Action<CameraMode> OnChangeCameraModeEvent;
+        public static Action<Canvas> OnRegisterUIWithCameraEvent;
         #endregion
 
       

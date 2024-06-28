@@ -2,11 +2,10 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace UI
+namespace UI.Inputs
 {
     public class ToggleUIStateHandler : MonoBehaviour
     {
-    
         Toggle _toggle;
         TMP_Text _text;
     

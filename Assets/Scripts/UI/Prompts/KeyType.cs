@@ -1,4 +1,4 @@
-﻿namespace UI
+﻿namespace UI.Prompts
 {
     public enum KeyType
     {

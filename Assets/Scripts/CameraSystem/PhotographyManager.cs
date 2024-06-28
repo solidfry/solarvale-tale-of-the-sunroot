@@ -5,13 +5,12 @@ using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using Events;
 using UnityEngine.Events;
+using UnityEngine.Serialization;
 
 namespace CameraSystem
 {
     public class PhotographyManager : MonoBehaviour
     {
-        [SerializeField] private CameraManager cameraManager;
-
         [Header("Photo UI")]
         [SerializeField] private Image photoDisplayArea;
         [SerializeField] private GameObject photoFrame;
@@ -32,23 +31,33 @@ namespace CameraSystem
 
         [SerializeField] private PhotographyHUDController photographyHUDController;
         
-
+        [SerializeField] private bool IsInCameraMode;
+        [FormerlySerializedAs("_viewingPhoto")] [SerializeField] private bool viewingPhoto;
+        
         private Camera _mainCamera;
         private Texture2D _screenCapture;
-        private bool _viewingPhoto;
 
         // Desired photo size
         private const int PhotoWidth = 800; 
-        private const int PhotoHeight = 600; 
-        private void OnValidate()
-        {
-            cameraManager ??= GetComponent<CameraManager>();
-        }
-
+        private const int PhotoHeight = 800; 
+        
         private void Awake()
         {
             _mainCamera = Camera.main;
-            cameraManager ??= GetComponent<CameraManager>();
+        }
+
+        private void OnCameraModeChanged(CameraMode mode)
+        {
+            if (mode == CameraMode.Photography)
+            {
+                photographyHUDController.SetHUDVisibility(1, 0);
+                IsInCameraMode = true;
+            }
+            else
+            {
+                photographyHUDController.SetHUDVisibility(0, 0);
+                IsInCameraMode = false;
+            }
         }
 
         private void OnEnable()
@@ -58,6 +67,8 @@ namespace CameraSystem
             discardButton.onClick.AddListener(DiscardPhoto);
 
             photographyHUDController.OnEnable();
+
+            GlobalEvents.OnChangeCameraModeEvent += OnCameraModeChanged;
         }
 
         private void OnDisable()
@@ -67,6 +78,7 @@ namespace CameraSystem
             discardButton.onClick.RemoveListener(DiscardPhoto);
 
             photographyHUDController.OnDisable();
+            GlobalEvents.OnChangeCameraModeEvent -= OnCameraModeChanged;
         }
 
         private void OnTakePhoto(InputAction.CallbackContext context)
@@ -77,9 +89,7 @@ namespace CameraSystem
                 photographyHUDController.SetHUDVisibility(0, 0);
             }
         }
-
-        private bool IsInCameraMode => cameraManager != null && cameraManager.IsInCameraMode;
-
+        
         private IEnumerator CapturePhoto()
         {
             yield return new WaitForEndOfFrame();
@@ -120,7 +130,7 @@ namespace CameraSystem
 
         private void RemovePhoto()
         {
-            _viewingPhoto = false;
+            viewingPhoto = false;
             photoFrame.SetActive(false);
             photoCanvas.gameObject.SetActive(false);
             photoDisplayArea.sprite = null;
@@ -175,7 +185,7 @@ namespace CameraSystem
         private static void HandleOnRemovePhotoGlobalEvents()
         {
             GlobalEvents.OnLockCursorEvent?.Invoke(true);
-            GlobalEvents.OnPlayerControlsLockedEvent.Invoke(false);
+            GlobalEvents.OnPlayerChangeActionMapEvent.Invoke(false);
             GlobalEvents.OnSetCursorInputForLookEvent.Invoke(true);
             GlobalEvents.OnSetCanInteractEvent?.Invoke(true);
         }
@@ -183,7 +193,7 @@ namespace CameraSystem
         private static void HandleOnShowPhotoGlobalEvents()
         {
             GlobalEvents.OnLockCursorEvent?.Invoke(false);
-            GlobalEvents.OnPlayerControlsLockedEvent.Invoke(true);
+            GlobalEvents.OnPlayerChangeActionMapEvent.Invoke(true);
             GlobalEvents.OnSetCursorInputForLookEvent.Invoke(false);
             GlobalEvents.OnSetCanInteractEvent?.Invoke(false);
         }

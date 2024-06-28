@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3441306343451356925}
   - component: {fileID: 7630763430899111602}
   - component: {fileID: 1145801343263962055}
+  - component: {fileID: 624350979846347683}
   m_Layer: 5
   m_Name: InteractableUI
   m_TagString: Untagged
@@ -49,7 +50,7 @@ Canvas:
   m_GameObject: {fileID: 6418164635123777417}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -118,6 +119,19 @@ MonoBehaviour:
   keyPromptUI: {fileID: 5829109116352078152}
   canvasGroup: {fileID: 5958721400664201477}
   fadeDuration: 0.25
+--- !u!114 &624350979846347683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6418164635123777417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 784f1902d3ba41089f2ada31715e2e84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  registerOnStart: 1
 --- !u!1001 &4450771842595321324
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -1,19 +1,38 @@
-using Cinemachine;
+using System.Collections.Generic;
 using Events;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Utilities;
 
 namespace CameraSystem
 {
     public class CameraManager : MonoBehaviour
     {
+        [SerializeField] private CameraMode currentCameraMode;
+        
         [Header("Input Action to Open Camera Mode")]
         [SerializeField] private InputActionReference cameraOpenActionRef;
+        
+        [SerializeField] List<CameraType> cameras;
 
-        [Header("Cameras")]
-        [SerializeField] private CinemachineVirtualCamera thirdPersonCamera;
-        [SerializeField] private CinemachineVirtualCamera firstPersonCamera;
-        [SerializeField] private CinemachineVirtualCamera conversationCamera;
+        Observable<CameraMode> CurrentCameraMode { get; set; }
+        
+        private void Awake()
+        {
+            CurrentCameraMode = new Observable<CameraMode>(CameraMode.Exploration);
+            CurrentCameraMode.ValueChanged += SendCameraMode;
+        }
+
+        private void SendCameraMode(CameraMode mode) => GlobalEvents.OnChangeCameraModeEvent?.Invoke(mode);
+
+        private void SetCameraMode(CameraMode mode)
+        {
+            CurrentCameraMode.Value = mode;
+            currentCameraMode = CurrentCameraMode;
+            UpdateCamera(CurrentCameraMode.Value);
+        }
+        
+        private void UpdateCamera(CameraMode mode) => cameras.ForEach(c => c.SetPriority(c.Mode == mode ? 1 : 0));
 
         private void Start()
         {
@@ -38,27 +57,22 @@ namespace CameraSystem
 
         private void SwitchCamera()
         {
-            if (IsInCameraMode)
-            {
-                thirdPersonCamera.Priority = 1;
-                firstPersonCamera.Priority = 0;
-            }
-            else
-            {
-                thirdPersonCamera.Priority = 0;
-                firstPersonCamera.Priority = 1;
+            SetCameraMode(IsInCameraMode ? CameraMode.Exploration : CameraMode.Photography);
+            if (IsInCameraMode) 
                 GlobalEvents.OnSetCursorInputForLookEvent?.Invoke(false);
-            }
         }
 
-        public bool IsInCameraMode => firstPersonCamera.Priority > thirdPersonCamera.Priority;
+        public bool IsInCameraMode => CurrentCameraMode == CameraMode.Photography;
 
         private void AdjustUIVisibility()
         {
+            Debug.Log(IsInCameraMode ? CameraMode.Photography : CameraMode.Exploration);
             GlobalEvents.OnSetCursorInputForLookEvent?.Invoke(!IsInCameraMode);
             GlobalEvents.OnSetHUDVisibilityEvent?.Invoke(!IsInCameraMode);
             GlobalEvents.OnSetCameraHUDVisibilityEvent?.Invoke(IsInCameraMode);
             GlobalEvents.OnSetCanInteractEvent?.Invoke(!IsInCameraMode);
         }
+        
+        
     }
 }

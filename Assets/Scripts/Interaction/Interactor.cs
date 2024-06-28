@@ -12,7 +12,6 @@ namespace Interaction
         private IInteractable _currentInteractable;
         [SerializeField] LayerMask interactableLayers;
         [SerializeField] Vector3 rayOffset;
-        [SerializeField] float interactableDistance = 3f;
         [SerializeField] bool showDebugRay = true;
         [SerializeField] float raycastRadius = 0.5f;
         [SerializeField] bool sendInteractEvent = true;

@@ -2,6 +2,7 @@ using Events;
 using StarterAssets;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Utilities;
 
 namespace Player
 {
@@ -31,13 +32,19 @@ namespace Player
 
         private void OnEnable()
         {
-            GlobalEvents.OnPlayerControlsLockedEvent += TogglePlayerActionMap;
+            GlobalEvents.OnPlayerChangeActionMapEvent += TogglePlayerActionMap;
             GlobalEvents.OnSetCursorInputForLookEvent += SetCursorInputForLook;
+        }
+        
+        private void OnDisable()
+        {
+            GlobalEvents.OnPlayerChangeActionMapEvent -= TogglePlayerActionMap;
+            GlobalEvents.OnSetCursorInputForLookEvent -= SetCursorInputForLook; 
+            _currentControlSchemeObservable.ValueChanged -= OnControlsChanged;
         }
 
         private void OnControlsChanged(string inputs)
         {
-            Debug.Log("OnControlsChanged: " + playerInput.currentControlScheme);
             GlobalEvents.OnControlSchemeChangedEvent?.Invoke(playerInput.currentControlScheme);
         }
 
@@ -45,14 +52,6 @@ namespace Player
         {
             if (starterAssetsInputs is null) return;
             starterAssetsInputs.cursorInputForLook = canLook;
-        }
-
-        private void OnDisable()
-        {
-            GlobalEvents.OnPlayerControlsLockedEvent -= TogglePlayerActionMap;
-            GlobalEvents.OnSetCursorInputForLookEvent -= SetCursorInputForLook; 
-            // playerInput.onControlsChanged += OnControlsChanged;
-            _currentControlSchemeObservable.ValueChanged -= OnControlsChanged;
         }
         
         public void SetPlayerControlsLocked(bool isLocked)
@@ -68,12 +67,8 @@ namespace Player
             }
         }
 
-        public void TogglePlayerActionMap(bool isPaused)
-        {   
-            //Disable Player Input on Player Action Map
-            SetPlayerControlMap(isPaused ? "UI" : "Player");
-        }
-    
+        public void TogglePlayerActionMap(bool isPaused) => SetPlayerControlMap(isPaused ? "UI" : "Player");
+
         void SetPlayerControlMap(string actionMap)
         {
             playerInput.SwitchCurrentActionMap(actionMap);

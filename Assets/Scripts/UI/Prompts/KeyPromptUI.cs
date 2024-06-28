@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
-namespace UI
+namespace UI.Prompts
 {
     public class KeyPromptUI : MonoBehaviour
     {

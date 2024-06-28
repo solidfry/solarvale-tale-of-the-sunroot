@@ -35,7 +35,7 @@ namespace DialogueSystem
 
         void OnDialogueStart()
         {
-            GlobalEvents.OnPlayerControlsLockedEvent?.Invoke(true);
+            GlobalEvents.OnPlayerChangeActionMapEvent?.Invoke(true);
             GlobalEvents.OnLockCursorEvent?.Invoke(false);
             GlobalEvents.OnSetPlayerControlMapEvent?.Invoke("UI");
             SetFocusObject(initialFocusObject);
@@ -56,7 +56,7 @@ namespace DialogueSystem
     
         void OnDialogueComplete()
         {
-            GlobalEvents.OnPlayerControlsLockedEvent?.Invoke(false);
+            GlobalEvents.OnPlayerChangeActionMapEvent?.Invoke(false);
             GlobalEvents.OnLockCursorEvent?.Invoke(true);
             GlobalEvents.OnSetPlayerControlMapEvent?.Invoke("Player");
             GlobalEvents.OnDialogueCompleteEvent?.Invoke();

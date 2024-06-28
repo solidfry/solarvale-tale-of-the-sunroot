@@ -1,6 +1,7 @@
 using DG.Tweening;
 using Events;
 using Interaction;
+using UI.Prompts;
 using UnityEngine;
 
 namespace UI
@@ -30,7 +31,7 @@ namespace UI
         private void OnEnable()
         {
             GlobalEvents.OnInteractableFound += SetInteractable;
-            GlobalEvents.OnPlayerControlsLockedEvent += OnPlayerControlsLocked;
+            GlobalEvents.OnPlayerChangeActionMapEvent += OnPlayerControlsLocked;
         }
 
    
@@ -38,7 +39,7 @@ namespace UI
         private void OnDisable()
         {
             GlobalEvents.OnInteractableFound -= SetInteractable;
-            GlobalEvents.OnPlayerControlsLockedEvent -= OnPlayerControlsLocked;
+            GlobalEvents.OnPlayerChangeActionMapEvent -= OnPlayerControlsLocked;
         }
 
         void SetInteractable(IInteractable interactable)

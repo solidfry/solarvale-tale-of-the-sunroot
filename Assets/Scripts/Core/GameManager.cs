@@ -38,7 +38,7 @@ namespace Core
             GlobalEvents.OnDialogueCompleteEvent += SetPlayerInteractionActive;
             GlobalEvents.OnDialogueStartEvent += SetPlayerInteractionInactive;
             
-            _playerCanInteract.ValueChanged += _ => GlobalEvents.OnPlayerControlsLockedEvent?.Invoke(!_);
+            _playerCanInteract.ValueChanged += _ => GlobalEvents.OnPlayerChangeActionMapEvent?.Invoke(!_);
         }
         
         private void OnDisable()

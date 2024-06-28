@@ -29,8 +29,6 @@ namespace UI
             UpdateTransform();
         }
         
-
-
         private void UpdateSelectorAlpha()
         {
             if (_selectionIndicatorCanvasGroup.alpha < 1)
