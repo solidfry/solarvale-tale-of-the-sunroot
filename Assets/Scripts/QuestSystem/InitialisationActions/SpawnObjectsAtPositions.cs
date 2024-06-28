@@ -9,7 +9,7 @@ namespace QuestSystem.InitialisationActions
     {
         [SerializeField] List<ObjectEntry> objectsToSpawnAtPositions;
         
-        List<GameObject> _spawnedObjects;
+        List<GameObject> _spawnedObjects = new ();
         
         public override void Execute() => SpawnObjects();
 
