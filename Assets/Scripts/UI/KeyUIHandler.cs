@@ -35,9 +35,10 @@ namespace UI
         public void SetKeyType(string deviceName, string actionName)
         {
             var keyMapType = keyMappingData.GetSpriteByDeviceAndAction(deviceName, actionName);
-            if (keyMapType == null) return;
+            if (keyMapType is null) return;
+            if (_image is null) return;
             keyType = keyMapType.keyType;
-            _image.sprite = keyMappingData.GetSprite(keyType);
+            _image.sprite ??= keyMappingData.GetSprite(keyType);
             if (keyMapType.spriteOverrideForGlyph != null)
             {
                 fallbackImage.sprite = keyMapType.spriteOverrideForGlyph;

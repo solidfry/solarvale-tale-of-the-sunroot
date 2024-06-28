@@ -27,14 +27,14 @@ namespace QuestSystem.InitialisationActions
             {
                 if (obj.useObjectTransform)
                 {
-                    Instantiate(obj.objectToSpawn, obj.objectToSpawn.transform.position,
+                    var spawned= Instantiate(obj.objectToSpawn, obj.objectToSpawn.transform.position,
                         obj.objectToSpawn.transform.rotation);
-                    _spawnedObjects.Add(obj.objectToSpawn);
+                    _spawnedObjects.Add(spawned);
                 }
                 else  
                 {
-                    Instantiate(obj.objectToSpawn, obj.position, Quaternion.identity);
-                    _spawnedObjects.Add(obj.objectToSpawn);
+                    var spawned= Instantiate(obj.objectToSpawn, obj.position, Quaternion.identity);
+                    _spawnedObjects.Add(spawned);
                 }
             }
         }
