@@ -2,17 +2,6 @@
 
 namespace Entities
 {
-    public enum EntityType
-    {
-        None,
-        Player,
-        Animal,
-        Plant,
-        NonPlayerCharacter,
-        Prop,
-        Item
-    }
-    
     [CreateAssetMenu(fileName = "New Entity Data", menuName = "Entities/Entity Data", order = 0)]
     public class EntityData : ScriptableObject
     {

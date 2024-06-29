@@ -51,6 +51,8 @@ namespace Creatures
 
         private void OnDrawGizmos()
         {
+            if (creature == null) return;
+            if (creature.GetStats == null) return;
             Gizmos.color = Color.green;
             Gizmos.DrawWireSphere(transform.position, creature.GetStats.SightRange);
         }
