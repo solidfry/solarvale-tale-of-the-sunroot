@@ -175,7 +175,7 @@ namespace CameraSystem
 
         private EntityData GetEntityDataFromRayCastHit(RaycastHit hit)
         {
-            if (hit.collider != null && hit.collider.TryGetComponent(out IEntity<EntityData> entity))
+            if (hit.collider != null && hit.collider.TryGetComponent(out IEntity entity))
             {
                 return entity?.GetEntityData;
             }

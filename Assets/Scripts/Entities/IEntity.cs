@@ -2,8 +2,8 @@
 
 namespace Entities
 {
-    public interface IEntity<T> where T : EntityData
+    public interface IEntity
     {
-        [CanBeNull] T GetEntityData { get; }
-    }   
+        [CanBeNull] EntityData GetEntityData { get; }
+    }
 }

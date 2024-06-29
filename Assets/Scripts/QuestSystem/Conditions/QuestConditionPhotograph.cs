@@ -1,5 +1,4 @@
-﻿using Creatures.Enums;
-using Entities;
+﻿using Entities;
 using UnityEngine;
 
 namespace QuestSystem.Conditions
