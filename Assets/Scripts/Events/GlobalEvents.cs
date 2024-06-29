@@ -1,6 +1,6 @@
 ﻿using System;
 using CameraSystem;
-using Cinemachine;
+using Creatures;
 using Entities;
 using Interaction;
 using QuestSystem;
@@ -52,6 +52,9 @@ namespace Events
         public static Action<Canvas> OnRegisterUIWithCameraEvent;
         #endregion
 
+        #region Creature Management
+        public static Action<Creature> OnRegisterCreatureEvent;
+        #endregion
       
     }
 }

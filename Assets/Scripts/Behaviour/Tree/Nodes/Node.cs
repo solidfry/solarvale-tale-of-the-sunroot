@@ -24,7 +24,7 @@ namespace Behaviour.Tree.Nodes
             Parent = null;
         }
 
-        public Node(List<Node> children)
+        protected Node(List<Node> children)
         {
             foreach (var child in children)
                 Attach(child);

@@ -1,78 +1,106 @@
 ﻿using Creatures.Stats;
-using Entities;
+using Events;
 using UnityEngine;
 using UnityEngine.AI;
 
 namespace Creatures
 {
-    [RequireComponent(typeof(NavMeshAgent), typeof(Rigidbody), typeof(Collider))]
-    public class Creature : EntityBase<CreatureEntityData>
+    [RequireComponent(typeof(NavMeshAgent), typeof(Rigidbody), typeof(CapsuleCollider))]
+    public class Creature : CreatureEntityBase
     {
-        [field:SerializeField] public NavMeshAgent Agent { get; private set; }
-        [field:SerializeField] public Rigidbody Rigidbody { get; private set; }
-        [field:SerializeField] public Collider Collider { get; private set; }
+        [SerializeField] Rigidbody rigidBody;
+        [SerializeField] NavMeshAgent agent;
+        [SerializeField] CapsuleCollider capsule;
         
+        [SerializeField] CreatureBehaviourTree behaviourTree;
+        public CreatureBehaviourTree GetBehaviourTree => behaviourTree ??= GetComponent<CreatureBehaviourTree>();
+        
+        CreatureStatsDataBase _stats;
+        
+        public CreatureStatsDataBase GetStats => _stats;
 
-        private void OnValidate()
-        {
-            if (Agent is null)
-            {
-                Agent = GetComponent<NavMeshAgent>();
-            }
+        private void Awake() => Initialise();
 
-            if (Rigidbody is null)
-            {
-                Rigidbody = GetComponent<Rigidbody>();
-            }
+        private void Start() => RegisterWithManager();
+        
+        public NavMeshAgent GetAgent() => agent;
+        
+        #region Initialisation
 
-            if (Collider is null)
-            {
-                Collider = GetComponent<Collider>();
-            }
-
-            Initialise();
-
-        }
-
+        [ContextMenu("Initialise")]
         private void Initialise()
         {
+            CheckCrucialSystems();
+            
             SetupRigidbody();
             SetupCollider();
-            SetupNavMeshAgent();
-            
-            RegisterWithManager();
+            SetupAgent();
         }
 
-        private void RegisterWithManager()
+        private void CheckCrucialSystems()
         {
+            Debug.Log($"Checking crucial systems in {gameObject.name}");
+            if (GetEntityData == null)
+            {
+                Debug.LogError($"EntityData is null in {gameObject.name}");
+                return;
+            }
             
+            _stats ??= GetEntityData.GetStats();
+            agent ??= GetComponent<NavMeshAgent>();
+            rigidBody ??= GetComponent<Rigidbody>();
+            capsule ??= GetComponent<CapsuleCollider>();
+            behaviourTree ??= GetComponent<CreatureBehaviourTree>();
+        }
+        private void SetupAgent()
+        {
+            if (agent is null)
+            {
+                Debug.LogError($"Agent is null in {gameObject.name}");
+                return;
+            }
+
+            ConfigureAgent(_stats);
         }
 
-        private void SetupNavMeshAgent()
+        private void ConfigureAgent (CreatureStatsDataBase creatureStats)
         {
-            if (GetEntityData != null) Agent.acceleration = GetEntityData.Stats.Acceleration;
+            if (creatureStats is null) return;
+            agent.height = creatureStats.Height;
+            agent.radius = creatureStats.Length / 2f;
+            agent.acceleration = creatureStats.Acceleration;
+            agent.speed =  creatureStats.Speed;
+            agent.angularSpeed = creatureStats.AngularSpeed;
+            agent.stoppingDistance = creatureStats.StoppingDistance;
         }
 
         private void SetupCollider()
         {
+            ConfigureColliderSize(_stats);
+        }
+
+        private void ConfigureColliderSize(CreatureStatsDataBase creatureStats)
+        {
+            if (creatureStats is null) return;
+            capsule.direction = (int)creatureStats.CapsuleDirection; 
+                
+            capsule.height = creatureStats.Length;
+            capsule.radius = creatureStats.Width;
         }
 
         private void SetupRigidbody()
         {
+            if (_stats is null) return;
+            rigidBody.mass = _stats.Mass;
         }
-
-        private void Awake()
-        {
-        }
-
-        private void Start()
-        {
-        }
-
-
-        public void Interact()
-        {
         
+        private void RegisterWithManager()
+        {
+            // Register with manager logic
+            GlobalEvents.OnRegisterCreatureEvent?.Invoke(this);
         }
+
+        #endregion
+       
     }
 }

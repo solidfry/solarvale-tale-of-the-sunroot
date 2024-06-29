@@ -6,7 +6,7 @@ namespace Entities
     {
         [SerializeField] protected T entityData;
         
-        public T GetEntityData => entityData;
+        public virtual T GetEntityData => entityData;
     }
     
 }

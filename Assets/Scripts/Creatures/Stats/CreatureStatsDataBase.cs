@@ -3,11 +3,18 @@ using UnityEngine;
 
 namespace Creatures.Stats
 {
+    public enum DirectionAxis
+    {
+        X = 0,
+        Y = 1,
+        Z = 2
+    }
     public abstract class CreatureStatsDataBase : ScriptableObject
     {
         [field: SerializeField] public float SightRange { get; protected set; }
         
         [field: Header("Physical Attributes")]
+        [field: SerializeField] public DirectionAxis CapsuleDirection { get; protected set; }
         [field: SerializeField] public float Height { get; protected set; }
         [field: SerializeField] public float Length { get; protected set; }
         [field: SerializeField] public float Width { get; protected set; }

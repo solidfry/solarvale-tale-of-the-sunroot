@@ -1,4 +1,6 @@
-﻿using Behaviour.Tree.Nodes;
+﻿using System.Linq;
+using Behaviour.Tree.Nodes;
+using Creatures;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -10,6 +12,7 @@ namespace Behaviour
         private Transform[] _waypoints;
         private Animator _animator;
         private NavMeshAgent _agent;
+        private Creature _creature;
         
         private int _currentWaypointIndex = 0;
         
@@ -17,11 +20,12 @@ namespace Behaviour
         private float _waitCounter = 0f;
         private bool _isWaiting = false;
 
-        public TaskPatrol(NavMeshAgent agent, Transform transform, Transform[] waypoints)
+        public TaskPatrol(Creature creature, NavMeshAgent agent, Transform[] waypoints)
         {
+            _creature = creature;
             _agent = agent;
             _animator = agent.GetComponent<Animator>();
-            _transform = transform;
+            _transform = creature.transform;
             _waypoints = waypoints;
         }
             
@@ -38,9 +42,10 @@ namespace Behaviour
           }
           else
           {
-              if (_agent.remainingDistance < 0.1f)
+              if (_agent.remainingDistance <= _creature.GetStats.StoppingDistance)
               {
-                  if (_waypoints.Length == 0) return NodeState.Failure;
+                  if (_waypoints.Length == 0 || _waypoints.All(x => x is null)) 
+                      return NodeState.Failure;
                   _currentWaypointIndex = (_currentWaypointIndex + 1) % _waypoints.Length;
                   _agent.SetDestination(_waypoints[_currentWaypointIndex].position);
                   _isWaiting = true;
