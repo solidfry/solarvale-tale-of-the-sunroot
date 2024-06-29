@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.AI;
 
-namespace Behaviour
+namespace Creatures.Behaviours
 {
     public class TaskGoToTarget : Node
     {
@@ -14,8 +14,7 @@ namespace Behaviour
             _transform = transform;
             _agent = agent;
         }
-
-
+        
         public override NodeState Evaluate()
         {
             Transform target = (Transform)GetData("target");

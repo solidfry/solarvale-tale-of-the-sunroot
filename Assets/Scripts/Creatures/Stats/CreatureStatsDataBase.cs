@@ -31,8 +31,10 @@ namespace Creatures.Stats
         [field: SerializeField] public float AvoidanceRadius { get; protected set; }
         [field: SerializeField] public float AvoidancePriority { get; protected set; }
         
+        [field:Header("Feeding")]
+        [field: SerializeField] public float FeedRate { get; protected set; }
+        public abstract MovementType MovementType { get; protected set; }
         public abstract FeedingBehaviourType FeedingBehaviourType { get; protected set; }
         public abstract ActivityType ActivityType { get; protected set; }
-        public abstract MovementType MovementType { get; protected set; }
     }
 }

@@ -3,6 +3,7 @@ using Behaviour;
 using Behaviour.Tree;
 using UnityEngine;
 using Behaviour.Tree.Nodes;
+using Creatures.Behaviours;
 using UnityEngine.AI;
 using UnityEngine.Serialization;
 
@@ -13,7 +14,7 @@ namespace Creatures
     {
         [Header("Creature Behaviour Tree")]
         [SerializeField] Creature creature;
-        [FormerlySerializedAs("currentFoodSources")] [SerializeField] Transform[] currentTargets = new Transform[5];
+        [SerializeField] List<Transform> currentTargets = new (5);
         [FormerlySerializedAs("foodLayer")] [SerializeField] private LayerMask targetLayer;
         
         NavMeshAgent _agent;
@@ -34,40 +35,35 @@ namespace Creatures
 
         protected override Node SetupTree()
         {
-            var root = new Selector(new List<Node>
+            Node root = new Selector(new List<Node>
             {
+                new Sequence( new List<Node>
+                {
+                    new TaskCheckTargetInRangeForAction(creature, targetLayer),
+                    new TaskAction(creature, () =>
+                    {
+                        Debug.Log("Eating target");
+                         var target = currentTargets[0];
+                        currentTargets.RemoveAt(0);
+                        Destroy(target.gameObject);
+                    }) 
+                }),
                 new Sequence(new List<Node>
                 {
-                    new CheckFoodInRange(creature, targetLayer),
+                    new TaskFindTargetInSightRange(creature, targetLayer, ref currentTargets),
                     new TaskGoToTarget(transform, _agent)
                 }),
-                new TaskPatrol(creature, _agent, currentTargets)
+                new TaskPatrol(creature, _agent, ref currentTargets)
             });
             return root;
         }
         
-        
-        public int GetTargetSources(out Transform[] targetSources)
+        public ref List<Transform> GetFoodSourcesAsRef()
         {
-            targetSources = currentTargets;
-            return currentTargets.Length;
+            return ref currentTargets;
         }
         
-        public int GetAllNonNullTargetSources(out Transform[] targetSources)
-        {
-            List<Transform> sources = new List<Transform>();
-            foreach (var source in currentTargets)
-            {
-                if (source != null)
-                {
-                    sources.Add(source);
-                }
-            }
-            targetSources = sources.ToArray();
-            return sources.Count;
-        }
-        
-        public void SetFoodSources(Transform[] targetSources)
+        public void SetFoodSources(List<Transform> targetSources)
         {
             currentTargets = targetSources;
         }
@@ -80,7 +76,6 @@ namespace Creatures
             Gizmos.DrawWireSphere(transform.position, creature.GetStats.SightRange);
         }
     }
-    
 }
 
         

@@ -13,6 +13,8 @@ namespace Creatures
         [SerializeField] NavMeshAgent agent;
         [SerializeField] CapsuleCollider capsule;
         
+        [field:SerializeField] public float CurrentSightRange { get; set; }
+        
         [FormerlySerializedAs("behaviourBehaviourTreeBase")] [SerializeField] CreatureBehaviourTree behaviourTree;
         public CreatureBehaviourTree GetBehaviourTree => behaviourTree ??= GetComponent<CreatureBehaviourTree>();
         
