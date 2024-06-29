@@ -2,10 +2,8 @@
 
 namespace Entities
 {
-    public class Entity : MonoBehaviour, IEntity
+    public class Entity : EntityBase<EntityData>
     {
-        [SerializeField] private EntityData entityData;
         
-        public EntityData GetEntityData => entityData;
     }
 }

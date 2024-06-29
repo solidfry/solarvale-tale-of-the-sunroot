@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using Creatures.Enums;
 using Entities;
 using Events;
 using QuestSystem.Conditions;

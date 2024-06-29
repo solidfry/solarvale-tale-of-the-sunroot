@@ -1,34 +1,22 @@
-﻿using UnityEngine;
+﻿using Creatures.Enums;
+using UnityEngine;
 
 namespace Entities
 {
-    public enum EntityType
-    {
-        None,
-        Player,
-        Animal,
-        Plant,
-        NonPlayerCharacter,
-        Prop,
-        Item
-    }
-    
     [CreateAssetMenu(fileName = "New Entity Data", menuName = "Entities/Entity Data", order = 0)]
     public class EntityData : ScriptableObject
     {
-        [field: SerializeField] public string Name { get; private set; }
-        [SerializeField] private EntityType entityType;
+        [field: SerializeField] public string EntityName { get; private set; }
+        [field: SerializeField] public EntityType EntityType { get; protected set; } = EntityType.NonPlayerCharacter;
         public static EntityData Empty
         {
             get
             {
                 var empty = CreateInstance<EntityData>();
-                empty.Name = "Empty";
-                empty.entityType = EntityType.None;
+                empty.EntityName = "";
+                empty.EntityType = EntityType.None;
                 return empty;
             }
         }
-
-        public EntityType EntityType => entityType;
     }
 }

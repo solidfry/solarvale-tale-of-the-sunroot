@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.112
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 21145861}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 0.112}
+  m_IndirectSpecularColor: {r: 0.047500927, g: 0.064042285, b: 0.084647655, a: 0.112}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -267,6 +267,30 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9c7a183a7a2e004cb24435cb080a708, type: 3}
+--- !u!114 &10983299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cba17d399ab86974c8ef9551f6e8f8d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transformSettings:
+    translation: {x: -219.88208, y: -311.00653, z: 1037.8025}
+    scale: {x: 2.833992, y: 1, z: 2.833992}
+    rotation: {x: 0, y: 0, z: 0}
+    flipScaleX: 0
+    flipScaleY: 0
+    flipScaleZ: 0
+  domainSettings:
+    noiseTypeName: Perlin
+    fractalTypeName: Fbm
+    noiseTypeParams: 
+    fractalTypeParams: '{"warpOffsets":{"x":131.8886260986328,"y":-790.2544555664063,"z":9.61446762084961,"w":0.0},"octavesMinMax":{"x":0.0,"y":16.0},"amplitudeMinMax":{"x":0.0,"y":1.0},"frequencyMinMax":{"x":0.0,"y":2.0},"lacunarityMinMax":{"x":0.0,"y":4.0},"persistenceMinMax":{"x":0.0,"y":1.0},"warpIterationsMinMax":{"x":0.0,"y":8.0},"warpStrengthMinMax":{"x":-2.0,"y":2.0},"octaves":8.0,"amplitude":0.48794734477996828,"frequency":1.0,"persistence":0.5,"lacunarity":0.9288221597671509,"warpIterations":0.6973782777786255,"warpStrength":0.9334391951560974,"warpEnabled":true,"warpExpanded":true}'
 --- !u!1 &11188882
 GameObject:
   m_ObjectHideFlags: 0
@@ -7461,7 +7485,7 @@ MonoBehaviour:
       m_warpIterations: 0.6973783
       m_warpStrength: 0.9334392
       m_warpOffset: {x: 131.88863, y: -790.25446, z: 9.614468, w: 0}
-    m_noiseSettings: {fileID: 1217681202}
+    m_noiseSettings: {fileID: 10983299}
     m_noiseToolSettings:
       worldHeightRemap: {x: 0, y: 0}
       coordSpace: 0
@@ -39230,30 +39254,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 880721969}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1217681202
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cba17d399ab86974c8ef9551f6e8f8d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  transformSettings:
-    translation: {x: -219.88208, y: -311.00653, z: 1037.8025}
-    scale: {x: 2.833992, y: 1, z: 2.833992}
-    rotation: {x: 0, y: 0, z: 0}
-    flipScaleX: 0
-    flipScaleY: 0
-    flipScaleZ: 0
-  domainSettings:
-    noiseTypeName: Perlin
-    fractalTypeName: Fbm
-    noiseTypeParams: 
-    fractalTypeParams: '{"warpOffsets":{"x":131.8886260986328,"y":-790.2544555664063,"z":9.61446762084961,"w":0.0},"octavesMinMax":{"x":0.0,"y":16.0},"amplitudeMinMax":{"x":0.0,"y":1.0},"frequencyMinMax":{"x":0.0,"y":2.0},"lacunarityMinMax":{"x":0.0,"y":4.0},"persistenceMinMax":{"x":0.0,"y":1.0},"warpIterationsMinMax":{"x":0.0,"y":8.0},"warpStrengthMinMax":{"x":-2.0,"y":2.0},"octaves":8.0,"amplitude":0.48794734477996828,"frequency":1.0,"persistence":0.5,"lacunarity":0.9288221597671509,"warpIterations":0.6973782777786255,"warpStrength":0.9334391951560974,"warpEnabled":true,"warpExpanded":true}'
 --- !u!1001 &1218993885
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41208,19 +41208,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1405775525}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1254181095
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1254181089}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 39c8823fbd544fb1bc5eae6bbe77fb4e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityData: {fileID: 11400000, guid: 851882085d3989e4f8ee06abb2b90f28, type: 2}
 --- !u!114 &1254181096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41236,6 +41223,19 @@ MonoBehaviour:
   questAction: 0
   questData: {fileID: 11400000, guid: 094c5e732c46cc74395284ca55a5793a, type: 2}
   questCondition: {fileID: 0}
+--- !u!114 &1254181102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1254181089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3351ce4d7d3d4c55bea3d48ee0e2658c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  entityData: {fileID: 11400000, guid: 851882085d3989e4f8ee06abb2b90f28, type: 2}
 --- !u!1 &1255023567
 GameObject:
   m_ObjectHideFlags: 0
@@ -46222,7 +46222,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5562653932230839373, guid: 401c56c995cf8364e82e5581541a6f44,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1254181095}
+      addedObject: {fileID: 1254181102}
   m_SourcePrefab: {fileID: 100100000, guid: 401c56c995cf8364e82e5581541a6f44, type: 3}
 --- !u!1 &1405853321
 GameObject:
@@ -71992,6 +71992,46 @@ PrefabInstance:
       propertyPath: m_UIInputModule
       value: 
       objectReference: {fileID: 1943003780}
+    - target: {fileID: 7084293734041802467, guid: 8746b19db272db1499fc8f3e3e844961,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.31665367
+      objectReference: {fileID: 0}
+    - target: {fileID: 7084293734041802467, guid: 8746b19db272db1499fc8f3e3e844961,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.5333977
+      objectReference: {fileID: 0}
+    - target: {fileID: 7084293734041802467, guid: 8746b19db272db1499fc8f3e3e844961,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.5376947
+      objectReference: {fileID: 0}
+    - target: {fileID: 7084293734041802467, guid: 8746b19db272db1499fc8f3e3e844961,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.99875605
+      objectReference: {fileID: 0}
+    - target: {fileID: 7084293734041802467, guid: 8746b19db272db1499fc8f3e3e844961,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.022259193
+      objectReference: {fileID: 0}
+    - target: {fileID: 7084293734041802467, guid: 8746b19db272db1499fc8f3e3e844961,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.044609547
+      objectReference: {fileID: 0}
+    - target: {fileID: 7084293734041802467, guid: 8746b19db272db1499fc8f3e3e844961,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.0009942092
+      objectReference: {fileID: 0}
+    - target: {fileID: 7084293734041802468, guid: 8746b19db272db1499fc8f3e3e844961,
+        type: 3}
+      propertyPath: field of view
+      value: 58
+      objectReference: {fileID: 0}
     - target: {fileID: 8811856263115372022, guid: 8746b19db272db1499fc8f3e3e844961,
         type: 3}
       propertyPath: m_Name
