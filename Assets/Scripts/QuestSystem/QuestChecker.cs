@@ -9,8 +9,8 @@ namespace QuestSystem
     public class QuestChecker : MonoBehaviour
     {
         [SerializeField] private QuestData questDataToCheck;
-        [SerializeField] private GameObject currentNPC;
-        [SerializeField] private GameObject newNPC;
+        [SerializeField] private GameObject[] removeUsedInteractable;
+        [SerializeField] private GameObject[] addNewInteractable;
 
         private void Update()
         {
@@ -21,8 +21,15 @@ namespace QuestSystem
         {
             if (questDataToCheck != null && questDataToCheck.CheckQuestCompleted())
             {
-                currentNPC.SetActive(false);
-                newNPC.SetActive(true);
+                for (int i = 0; i < addNewInteractable.Length; i++)
+                {
+                    addNewInteractable[i].SetActive(true);
+                }
+                for (int i=0; i< removeUsedInteractable.Length; i++)
+                {
+                    removeUsedInteractable[i].SetActive(false);
+                }
+                Destroy(this);
             }
         }
     }
