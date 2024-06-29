@@ -6719,6 +6719,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_AgentTypeID: -1372625422
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 16255
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 23800000, guid: c473bd8ff8f6e5c4f8ca1eea82f1bb4e, type: 2}
+  m_BuildHeightMesh: 0
 --- !u!1 &599859482
 GameObject:
   m_ObjectHideFlags: 0
@@ -12174,7 +12193,7 @@ MonoBehaviour:
       m_warpIterations: 3.227252
       m_warpStrength: 0.57209605
       m_warpOffset: {x: -327.9736, y: -705.0621, z: 498.4666, w: 0}
-    m_noiseSettings: {fileID: 2031944458}
+    m_noiseSettings: {fileID: 1563659969}
     m_noiseToolSettings:
       worldHeightRemap: {x: 0, y: 0}
       coordSpace: 0
@@ -19012,6 +19031,30 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f7f88faf6bf09c41ac1d40f9f3d299a, type: 3}
+--- !u!114 &1563659969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cba17d399ab86974c8ef9551f6e8f8d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transformSettings:
+    translation: {x: -310.95093, y: 733.6404, z: -231.33899}
+    scale: {x: 2.5428486, y: 1, z: 2.5428486}
+    rotation: {x: 0, y: 0, z: 0}
+    flipScaleX: 0
+    flipScaleY: 0
+    flipScaleZ: 0
+  domainSettings:
+    noiseTypeName: Perlin
+    fractalTypeName: Fbm
+    noiseTypeParams: 
+    fractalTypeParams: '{"warpOffsets":{"x":-327.9736022949219,"y":-705.0620727539063,"z":498.46661376953127,"w":0.0},"octavesMinMax":{"x":0.0,"y":16.0},"amplitudeMinMax":{"x":0.0,"y":1.0},"frequencyMinMax":{"x":0.0,"y":2.0},"lacunarityMinMax":{"x":0.0,"y":4.0},"persistenceMinMax":{"x":0.0,"y":1.0},"warpIterationsMinMax":{"x":0.0,"y":8.0},"warpStrengthMinMax":{"x":-2.0,"y":2.0},"octaves":8.0,"amplitude":0.5108341574668884,"frequency":1.0,"persistence":0.5,"lacunarity":1.2121094465255738,"warpIterations":3.2272520065307619,"warpStrength":0.572096049785614,"warpEnabled":true,"warpExpanded":true}'
 --- !u!114 &1563760796
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26258,30 +26301,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2031944458
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cba17d399ab86974c8ef9551f6e8f8d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  transformSettings:
-    translation: {x: -310.95093, y: 733.6404, z: -231.33899}
-    scale: {x: 2.5428486, y: 1, z: 2.5428486}
-    rotation: {x: 0, y: 0, z: 0}
-    flipScaleX: 0
-    flipScaleY: 0
-    flipScaleZ: 0
-  domainSettings:
-    noiseTypeName: Perlin
-    fractalTypeName: Fbm
-    noiseTypeParams: 
-    fractalTypeParams: '{"warpOffsets":{"x":-327.9736022949219,"y":-705.0620727539063,"z":498.46661376953127,"w":0.0},"octavesMinMax":{"x":0.0,"y":16.0},"amplitudeMinMax":{"x":0.0,"y":1.0},"frequencyMinMax":{"x":0.0,"y":2.0},"lacunarityMinMax":{"x":0.0,"y":4.0},"persistenceMinMax":{"x":0.0,"y":1.0},"warpIterationsMinMax":{"x":0.0,"y":8.0},"warpStrengthMinMax":{"x":-2.0,"y":2.0},"octaves":8.0,"amplitude":0.5108341574668884,"frequency":1.0,"persistence":0.5,"lacunarity":1.2121094465255738,"warpIterations":3.2272520065307619,"warpStrength":0.572096049785614,"warpEnabled":true,"warpExpanded":true}'
 --- !u!1 &2033517515
 GameObject:
   m_ObjectHideFlags: 0
@@ -27016,6 +27035,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3652540602525952645, guid: ea6bb415bc6bc9f4aa421f4e02dea3f7,
         type: 3}
+      propertyPath: currentTargets.Array.data[0]
+      value: 
+      objectReference: {fileID: 633218226}
+    - target: {fileID: 3652540602525952645, guid: ea6bb415bc6bc9f4aa421f4e02dea3f7,
+        type: 3}
       propertyPath: currentFoodSources.Array.data[0]
       value: 
       objectReference: {fileID: 633218226}
@@ -27023,6 +27047,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Wombat
+      objectReference: {fileID: 0}
+    - target: {fileID: 5131348057448836552, guid: ea6bb415bc6bc9f4aa421f4e02dea3f7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 7188023990522733205, guid: ea6bb415bc6bc9f4aa421f4e02dea3f7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 8665259353011276281, guid: ea6bb415bc6bc9f4aa421f4e02dea3f7,
         type: 3}
@@ -27073,6 +27107,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8998118516517397539, guid: ea6bb415bc6bc9f4aa421f4e02dea3f7,
+        type: 3}
+      propertyPath: m_AgentTypeID
+      value: -1372625422
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

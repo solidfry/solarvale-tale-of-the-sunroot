@@ -7,43 +7,48 @@ namespace Behaviour
     public class CheckFoodInRange : Node
     {
         private Creature _creature;
-        private LayerMask _foodLayer;
+        private LayerMask _layerMask;
         private Transform _transform;
-        private Transform[] _foodSources;
         // Animator _animator;
         // the animator will be pulled from the creature 
         
         
         private Collider[] _colliders = new Collider[5];
         
-        public CheckFoodInRange(Creature creature, LayerMask foodLayer)
+        public CheckFoodInRange(Creature creature, LayerMask layerMask)
         {
             _creature = creature;
+            Debug.Log("CHECKINFOOD: Creature is " + _creature);
             _transform = creature.transform;
-            _foodLayer = foodLayer;
+            _layerMask = layerMask;
+            Debug.Log($"{creature.GetStats}  {_creature.GetEntityData} {_creature.GetStats.SightRange}" , creature);
+            Debug.Log("CHECKINFOOD: Creature is " + _layerMask);
         }
         
         public override NodeState Evaluate()
         {
-            object t = GetData("target");
+            if (_creature.GetBehaviourTree.GetAllNonNullTargetSources( out var nonNullTargets) > 0)
+            {
+                Debug.Log(_transform + "CHECKINFOOD: Target is " + nonNullTargets[0]);
+                GetRootNode().SetData("target", nonNullTargets[0]);
+                State = NodeState.Success;
+                return State;
+            }
+            Transform t = (Transform)GetData("target");
+            Debug.Log("CHECKINFOOD: Target is " + t);
             if (t == null)
             {
-                var size = Physics.OverlapSphereNonAlloc(_transform.position, _creature.GetStats.SightRange, _colliders, _foodLayer);
-               
+                var size = Physics.OverlapSphereNonAlloc(_transform.position, _creature.GetStats.SightRange, _colliders, _layerMask);
                 
-                if (size == 0)
+                if (size > 0) 
                 {
-                    State = NodeState.Failure;
+                    Parent.Parent.SetData("target", _colliders[0].transform);
+                    _creature.GetBehaviourTree.SetFoodSources(UpdateFoodSources(size));
+                    State = NodeState.Success;
                     return State;
                 }
                 
-                var foodSources = UpdateFoodSources(size);
-
-                _creature.GetBehaviourTree.SetFoodSources(foodSources);
-                
-                Parent.Parent.SetData("target", _colliders[0].transform);
-                // _animator.SetBool("isWalking", true);
-                State = NodeState.Success;
+                State = NodeState.Failure;
                 return State;
                 
             }

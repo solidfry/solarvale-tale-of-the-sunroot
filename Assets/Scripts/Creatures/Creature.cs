@@ -2,6 +2,7 @@
 using Events;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Serialization;
 
 namespace Creatures
 {
@@ -12,7 +13,7 @@ namespace Creatures
         [SerializeField] NavMeshAgent agent;
         [SerializeField] CapsuleCollider capsule;
         
-        [SerializeField] CreatureBehaviourTree behaviourTree;
+        [FormerlySerializedAs("behaviourBehaviourTreeBase")] [SerializeField] CreatureBehaviourTree behaviourTree;
         public CreatureBehaviourTree GetBehaviourTree => behaviourTree ??= GetComponent<CreatureBehaviourTree>();
         
         CreatureStatsDataBase _stats;

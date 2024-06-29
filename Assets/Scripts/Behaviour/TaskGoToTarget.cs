@@ -29,6 +29,7 @@ namespace Behaviour
             
             if (_agent.remainingDistance <= _agent.stoppingDistance && !_agent.pathPending)
             {
+                Debug.Log("TaskGoToTarget: Arrived at target");
                 State = NodeState.Success;
                 return State;
             }

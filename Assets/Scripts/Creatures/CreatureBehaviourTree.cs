@@ -1,19 +1,20 @@
 ﻿using System.Collections.Generic;
 using Behaviour;
+using Behaviour.Tree;
 using UnityEngine;
 using Behaviour.Tree.Nodes;
 using UnityEngine.AI;
-using Tree = Behaviour.Tree.Tree;
+using UnityEngine.Serialization;
 
 namespace Creatures
 {
     [RequireComponent(typeof(Creature))]
-    public class CreatureBehaviourTree : Tree
+    public class CreatureBehaviourTree : BehaviourTreeBase
     {
         [Header("Creature Behaviour Tree")]
         [SerializeField] Creature creature;
-        [SerializeField] Transform[] currentFoodSources = new Transform[5];
-        [SerializeField] private LayerMask foodLayer;
+        [FormerlySerializedAs("currentFoodSources")] [SerializeField] Transform[] currentTargets = new Transform[5];
+        [FormerlySerializedAs("foodLayer")] [SerializeField] private LayerMask targetLayer;
         
         NavMeshAgent _agent;
 
@@ -27,26 +28,48 @@ namespace Creatures
 
         private void Awake()
         {
+            creature = GetComponent<Creature>();
             _agent = creature.GetAgent();
         }
 
         protected override Node SetupTree()
         {
-            Node root = new Selector(new List<Node>
+            var root = new Selector(new List<Node>
             {
                 new Sequence(new List<Node>
                 {
-                    new CheckFoodInRange(this.creature, foodLayer),
+                    new CheckFoodInRange(creature, targetLayer),
                     new TaskGoToTarget(transform, _agent)
                 }),
-                new TaskPatrol(this.creature, _agent, currentFoodSources)
+                new TaskPatrol(creature, _agent, currentTargets)
             });
             return root;
         }
         
-        public void SetFoodSources(Transform[] foodSources)
+        
+        public int GetTargetSources(out Transform[] targetSources)
         {
-            currentFoodSources = foodSources;
+            targetSources = currentTargets;
+            return currentTargets.Length;
+        }
+        
+        public int GetAllNonNullTargetSources(out Transform[] targetSources)
+        {
+            List<Transform> sources = new List<Transform>();
+            foreach (var source in currentTargets)
+            {
+                if (source != null)
+                {
+                    sources.Add(source);
+                }
+            }
+            targetSources = sources.ToArray();
+            return sources.Count;
+        }
+        
+        public void SetFoodSources(Transform[] targetSources)
+        {
+            currentTargets = targetSources;
         }
 
         private void OnDrawGizmos()

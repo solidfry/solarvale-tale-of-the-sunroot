@@ -1,18 +1,19 @@
 ﻿using System.Collections.Generic;
+using UnityEngine;
 
 namespace Behaviour.Tree.Nodes
 {
     public enum NodeState
     {
         Running,
+        Failure,
         Success,
-        Failure
     }
 
     public class Node
     {
         protected NodeState State;
-
+        
         public Node Parent { get; private set; }
 
         protected List<Node> Children;
@@ -30,9 +31,25 @@ namespace Behaviour.Tree.Nodes
                 Attach(child);
         }
 
+        protected Node GetRootNode()
+        {
+            Node node = this;
+            while (node.Parent is not null)
+            {
+                node = node.Parent;
+            }
+
+            return node;
+        }
+
         private void Attach(Node node)
         {
             node.Parent = this;
+            if (Children is null)
+            {
+                Children = new List<Node>();
+            }
+            Debug.Log(node + $" failed at {node.State}" + " attached to " + this + " and the parent is " + node.Parent + " and the children are " + Children);
             Children.Add(node);
         }
 
