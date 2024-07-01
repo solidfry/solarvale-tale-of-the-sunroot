@@ -1,10 +1,17 @@
 ﻿using System.Collections.Generic;
-using Behaviour.Tree.Nodes;
 using UnityEngine;
 using UnityEngine.AI;
 
 namespace Behaviour.Pathfinding
 {
+    
+    public enum NodeState
+    {
+        Running,
+        Success,
+        Failure
+    }
+    
     public interface IStrategy
     {
         NodeState Process();
@@ -55,7 +62,7 @@ namespace Behaviour.Pathfinding
         
         public void Reset() => currentIndex = 0;
     }
-    
+
     public class ActionStrategy : IStrategy
     {
         readonly System.Action action;

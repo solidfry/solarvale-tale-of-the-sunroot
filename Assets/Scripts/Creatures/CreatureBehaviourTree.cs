@@ -3,6 +3,7 @@ using System.Linq;
 using Behaviour.Pathfinding;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Serialization;
 using Sequence = Behaviour.Pathfinding.Sequence;
 
 namespace Creatures
@@ -16,6 +17,7 @@ namespace Creatures
         [SerializeField] private LayerMask targetLayer;
         [SerializeField] int sightRangeMultiplier = 1;
         [SerializeField] float sightRange = 5;
+        [FormerlySerializedAs("rangeLimitMultiplier")] [SerializeField] int multiplierLimit;
 
         NavMeshAgent _agent;
         
@@ -62,8 +64,8 @@ namespace Creatures
                 if (currentTargets.Count == 0)
                 {
                     // I want to clamp these values to a max of 5
-                    
-                    sightRangeMultiplier = sightRangeMultiplier < 5 ? sightRangeMultiplier + 1 : 5;
+
+                    sightRangeMultiplier = sightRangeMultiplier < multiplierLimit ? sightRangeMultiplier + 1 : multiplierLimit;
                     
                     sightRange = creature.GetStats.SightRange * sightRangeMultiplier;
                     return false;

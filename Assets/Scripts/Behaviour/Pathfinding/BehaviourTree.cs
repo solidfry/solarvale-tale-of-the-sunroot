@@ -1,5 +1,4 @@
-﻿using Behaviour.Tree.Nodes;
-
+﻿
 namespace Behaviour.Pathfinding
 {
     public class BehaviourTree : Node
