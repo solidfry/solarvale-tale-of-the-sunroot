@@ -36,11 +36,12 @@ namespace CameraSystem
         
         private Camera _mainCamera;
         private Texture2D _screenCapture;
+        private Transform albumParent;
 
         // Desired photo size
         private const int PhotoWidth = 800; 
-        private const int PhotoHeight = 800; 
-        
+        private const int PhotoHeight = 800;
+
         private void Awake()
         {
             _mainCamera = Camera.main;
@@ -142,6 +143,13 @@ namespace CameraSystem
 
         public void KeepPhoto()
         {
+            //InGameMenuUI needs to be built to work
+            //GameObject albumGridLayoutGroup = GameObject.Find("Grid Layout Group");
+            //When player keeps the photo make a clone of the image and move it to the album in InGameMenuUI
+            //if (albumGridLayoutGroup != null)
+            //{
+                // photoFrameClone = Instantiate(photoFrame, albumGridLayoutGroup.transform);
+            //}
             RemovePhoto();
         }
 
