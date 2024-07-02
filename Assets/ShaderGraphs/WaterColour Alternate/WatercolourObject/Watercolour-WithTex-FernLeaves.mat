@@ -30,17 +30,15 @@ Material:
   - _MAIN_LIGHT_SHADOWS
   - _MAIN_LIGHT_SHADOWS_CASCADE
   - _SOFT_SHADOWS
-  - _SURFACE_TYPE_TRANSPARENT
   m_InvalidKeywords:
   - _SPECULAR_SETUP
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 3050
+  m_CustomRenderQueue: 2500
   stringTagMap:
-    RenderType: Transparent
-  disabledShaderPasses:
-  - DepthOnly
+    RenderType: TransparentCutout
+  disabledShaderPasses: []
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
@@ -87,22 +85,22 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - Vector1_2BDF6FD9: 0.46
-    - Vector1_2FA10055: 0
-    - Vector1_46F1304E: 0.03
-    - Vector1_BBEA2355: 0
+    - Vector1_2BDF6FD9: 2.74
+    - Vector1_2FA10055: 0.65
+    - Vector1_46F1304E: 0.12
+    - Vector1_BBEA2355: 0.22
     - _AO: 1
     - _AO_Strength: 1
     - _Albedo_Intensity: 1
-    - _Albedo_Strength: 1.04
+    - _Albedo_Strength: 4.64
     - _AlphaClip: 1
-    - _AlphaToMask: 0
+    - _AlphaToMask: 1
     - _Alpha_Clip_Threshold: 0
     - _Blend: 0
     - _BlendModePreserveSpecular: 1
     - _CastShadows: 1
     - _Cull: 0
-    - _DstBlend: 10
+    - _DstBlend: 0
     - _Emission_Strength: 0
     - _MAIN_LIGHT_SHADOWS: 1
     - _MAIN_LIGHT_SHADOWS_CASCADE: 1
@@ -113,17 +111,17 @@ Material:
     - _ReceiveShadows: 1
     - _SOFT_SHADOWS: 1
     - _SpecularStrength: 0
-    - _SrcBlend: 5
-    - _Surface: 1
+    - _SrcBlend: 1
+    - _Surface: 0
     - _WorkflowMode: 0
     - _ZTest: 4
-    - _ZWrite: 0
+    - _ZWrite: 1
     - _ZWriteControl: 0
     m_Colors:
     - Color_D9F05973: {r: 1, g: 1, b: 1, a: 1}
-    - Color_DB04B181: {r: 0.7075472, g: 0.7075472, b: 0.7075472, a: 1}
-    - _Albedo_Color: {r: 1, g: 1, b: 1, a: 0}
+    - Color_DB04B181: {r: 0, g: 0.16037738, b: 0.15723656, a: 1}
+    - _Albedo_Color: {r: 0.21600097, g: 0.4056604, b: 0, a: 0}
     - _Emission_Color: {r: 0, g: 0, b: 0, a: 0}
-    - _Fresnel_Color: {r: 0, g: 0, b: 0, a: 0}
+    - _Fresnel_Color: {r: 0.9474709, g: 1, b: 0.8443396, a: 0}
     - _Specular_Color: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
