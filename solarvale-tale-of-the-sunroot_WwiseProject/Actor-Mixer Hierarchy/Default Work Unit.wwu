@@ -14,9 +14,11 @@
 					</ReferenceList>
 					<ChildrenList>
 						<WorkUnit Name="Player" ID="{29288FA7-6AE1-4C2C-BA16-84B49B35B5C2}" PersistMode="Reference"/>
-						<WorkUnit Name="Ambient" ID="{BF25DDCB-4F6E-4FFB-A522-CBB1CD35F4B9}" PersistMode="Reference"/>
+						<WorkUnit Name="Atmos" ID="{BF25DDCB-4F6E-4FFB-A522-CBB1CD35F4B9}" PersistMode="Reference"/>
 						<WorkUnit Name="NPCs" ID="{28783CC2-5E3B-4DAA-A4CF-C9B8588D73B2}" PersistMode="Reference"/>
 						<WorkUnit Name="Animals" ID="{D2C9257C-DAA1-4CB6-A024-0760DAE2D341}" PersistMode="Reference"/>
+						<WorkUnit Name="SFX" ID="{1A7BD965-CC17-4EA5-85D8-3938F011058F}" PersistMode="Reference"/>
+						<WorkUnit Name="Foley" ID="{E09976D1-5D68-4EB6-B066-673F4F9844F1}" PersistMode="Reference"/>
 					</ChildrenList>
 				</ActorMixer>
 				<ActorMixer Name="Music" ID="{EF4ECDC6-4458-4D55-A868-89E5D1A6F1F6}" ShortID="879711763">
@@ -30,6 +32,13 @@
 					</ReferenceList>
 					<ChildrenList>
 						<Sound Name="Lounge it" ID="{74AEA00C-14E3-4495-B9A7-172A8451F0D4}" ShortID="395072240">
+							<PropertyList>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
@@ -49,6 +58,94 @@
 							</ChildrenList>
 							<ActiveSourceList>
 								<ActiveSource Name="Lounge it" ID="{0ECD0BD3-93C0-4CAC-A44C-08F0025690C5}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="music_flute_solo" ID="{19E1FC93-6D25-4895-ADF7-6491EA3262A4}" ShortID="426584283">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="music_flute_solo" ID="{AD6CB23B-F8CE-46C4-BD29-6CF590EC4A3C}">
+									<Language>SFX</Language>
+									<AudioFile>music_flute_solo.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="695495137"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="music_flute_solo" ID="{AD6CB23B-F8CE-46C4-BD29-6CF590EC4A3C}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="music_flutes_edit" ID="{5CD7F791-2127-406D-8712-9551503B4E60}" ShortID="446237596">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="music_flutes_edit" ID="{07EF8BDE-5C34-443A-9C1C-95A019D91765}">
+									<Language>SFX</Language>
+									<AudioFile>music_flutes_edit.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="236542911"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="music_flutes_edit" ID="{07EF8BDE-5C34-443A-9C1C-95A019D91765}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="music_flutes" ID="{E0F0E640-A937-4834-8FB5-C866BEEBF766}" ShortID="769830440">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="music_flutes" ID="{94F036E0-52D8-448D-BDA1-538107161128}">
+									<Language>SFX</Language>
+									<AudioFile>music_flutes.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1030003723"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="music_flutes" ID="{94F036E0-52D8-448D-BDA1-538107161128}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="music_picolo" ID="{26EB117B-33A9-4FFB-BAFF-9E049E73D2DA}" ShortID="303729063">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="music_picolo" ID="{8099DA46-B30A-4EC1-A6BC-9924937479FF}">
+									<Language>SFX</Language>
+									<AudioFile>music_picolo.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="82482550"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="music_picolo" ID="{8099DA46-B30A-4EC1-A6BC-9924937479FF}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
@@ -288,6 +385,32 @@
 									</ChildrenList>
 									<ActiveSourceList>
 										<ActiveSource Name="soundscape" ID="{67E8BBFA-7435-49A2-A7F0-BBAD37E42B44}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="Camera" ID="{4A169875-33DD-47D0-919F-5863656B364C}" ShortID="760734479">
+							<ChildrenList>
+								<Sound Name="Polaroid_photo_click_print" ID="{9E5814BE-1A22-46B0-BAEC-F270B423B85E}" ShortID="535097387">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Polaroid_photo_click_print" ID="{C77BEBE0-FCBF-4C69-A183-92DDE172F984}">
+											<Language>SFX</Language>
+											<AudioFile>Camera\Polaroid_photo_click_print.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="625821779"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Polaroid_photo_click_print" ID="{C77BEBE0-FCBF-4C69-A183-92DDE172F984}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
