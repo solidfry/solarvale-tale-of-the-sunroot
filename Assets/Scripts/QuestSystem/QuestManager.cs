@@ -1,55 +1,119 @@
 using System.Collections.Generic;
+using System.Linq;
+using Entities;
 using Events;
+using QuestSystem.Conditions;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace QuestSystem
 {
     public class QuestManager : MonoBehaviour
     {
         [SerializeField] private List<QuestData> questList;
+        [SerializeField] private List<QuestData> completedQuests;
+        
+        Queue<QuestData> _questQueue = new Queue<QuestData>();
 
         private void OnEnable()
         {
             GlobalEvents.OnQuestCompletedEvent += CompleteQuest;
             GlobalEvents.OnQuestAcquiredEvent += AddQuest;
+            GlobalEvents.OnQuestConditionUpdatedEvent += UpdateQuestConditions;
+            GlobalEvents.OnPhotographConditionUpdatedEvent += UpdatePhotographyQuests;
         }
         
+
         private void OnDisable()
         {
             GlobalEvents.OnQuestCompletedEvent -= CompleteQuest;
             GlobalEvents.OnQuestAcquiredEvent -= AddQuest;
+            GlobalEvents.OnQuestConditionUpdatedEvent -= UpdateQuestConditions;
+            GlobalEvents.OnPhotographConditionUpdatedEvent -= UpdatePhotographyQuests;
         }
         
         void AddQuest(QuestData questData)
         {
-            if (questList.Contains(questData))
+            
+            if (questList.Contains(questData) || completedQuests.Contains(questData))
             {
                 return;
             }
+            
             questList.Add(questData);
+            questData.InitialiseQuest();
             GlobalEvents.OnQuestAcquiredLogUpdatedEvent?.Invoke(questData);
         }
-
-        public void CompleteQuest(QuestData questData)
+        
+        private void UpdatePhotographyQuests(EntityData entity = null)
         {
-            QuestData quest = questList.Find(q => q == questData);
-            // Debug.Log("Attempting to complete quest: " + quest.Title);
-            if (quest != null)
+            var tempList = questList
+                .FindAll(x => x.GetQuestConditions()
+                    .Any(y => y is QuestConditionPhotograph))
+                .ToList();
+
+            if (tempList.Count == 0)
             {
-                quest.CompleteQuest();
-                GlobalEvents.OnQuestCompletedLogUpdatedEvent?.Invoke(quest);
+                Debug.Log("No Photography Quests so returning early");
+                return;
             }
-            else
+            
+            foreach (var photoQuest in tempList)
             {
-                foreach (var q in questList)
+                foreach (var condition in photoQuest.GetQuestConditions())
                 {
-                    Debug.LogWarning(" - " + q.Title);
+                    if (condition is not QuestConditionPhotograph photoCondition) continue;
+                    if (photoCondition.GetEntityData() == entity || photoCondition.GetEntityData() == null ||
+                        photoCondition.GetEntityType() == EntityType.None)
+                    {
+                        photoCondition.UpdateCondition();
+
+                        if (photoQuest.IsAllQuestConditionsComplete())
+                            GlobalEvents.OnQuestCompletedEvent?.Invoke(photoQuest);
+                    }
                 }
             }
         }
         
+        private void UpdateQuestConditions(QuestConditionBase condition)
+        {
+            var tempList = questList.ToList();
+            
+            foreach (var quest in tempList)
+            {
+                foreach (var questCondition in quest.GetQuestConditions())
+                {
+                    if (questCondition != condition || condition.IsConditionComplete()) continue;
+                    
+                    condition.UpdateCondition();
+
+                    if (quest.IsAllQuestConditionsComplete()) 
+                        GlobalEvents.OnQuestCompletedEvent?.Invoke(quest);
+                }
+            }
+            tempList.Clear();
+        }
+
+        void CompleteQuest(QuestData questData)
+        {
+            QuestData quest = questList.Find(q => q == questData);
+            if (quest is null) return;
+            quest.CompleteQuest();
+            questList.Remove(quest);
+            completedQuests.Add(quest);
+            
+            AddNextQuest(quest);
+            
+            GlobalEvents.OnQuestCompletedLogUpdatedEvent?.Invoke(quest);
+        }
+
+        void AddNextQuest(QuestData quest)
+        {
+            if (quest.GetNextQuest() is null) return;
+            AddQuest(quest.GetNextQuest());
+        }
+
         public List<QuestData> GetQuestList() => questList;
+        public List<QuestData> GetCompletedQuests() => completedQuests;
     }
 
 }

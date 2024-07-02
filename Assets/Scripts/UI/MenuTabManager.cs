@@ -9,7 +9,6 @@ namespace UI
 {
     public class MenuTabManager : MonoBehaviour
     {
-        
         [Header("Animation")]
         [SerializeField] 
         private float fadeDuration = 0.5f;

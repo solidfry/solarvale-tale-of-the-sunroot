@@ -2,15 +2,25 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
-  serializedVersion: 6
+  serializedVersion: 8
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Rock03
   m_Shader: {fileID: 4800000, guid: bee44b4a58655ee4cbff107302a3e131, type: 3}
-  m_ShaderKeywords: _CELPRIMARYMODE_SINGLE _GLOSSYREFLECTIONS_OFF _SPECULARHIGHLIGHTS_OFF
-    _UNITYSHADOWMODE_NONE
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords:
+  - _CELPRIMARYMODE_SINGLE
+  - _DETAILMAPBLENDINGMODE_MULTIPLY
+  - _GRADIENTSPACE_WORLD
+  - _OUTLINESPACE_SCREEN
+  - _TEXTUREBLENDINGMODE_MULTIPLY
+  m_InvalidKeywords:
+  - _GLOSSYREFLECTIONS_OFF
+  - _SPECULARHIGHLIGHTS_OFF
+  - _UNITYSHADOWMODE_NONE
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -18,6 +28,7 @@ Material:
   stringTagMap: {}
   disabledShaderPasses:
   - SRPDEFAULTUNLIT
+  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -38,6 +49,10 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -69,8 +84,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
     - _AlphaClip: 0
+    - _BaseMapPremultiply: 0
     - _Blend: 0
     - _BumpScale: 1
     - _CameraDistanceImpact: 0
@@ -79,6 +96,8 @@ Material:
     - _CelPrimaryMode: 1
     - _Cull: 2
     - _Cutoff: 0.5
+    - _DetailMapBlendingMode: 0
+    - _DetailMapImpact: 0
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _FlatRimEdgeSmoothness: 0.5
@@ -97,6 +116,7 @@ Material:
     - _GradientEnabled: 0
     - _GradientEnd: 1
     - _GradientSize: 10
+    - _GradientSpace: 0
     - _GradientStart: 0
     - _LightContribution: 0.5
     - _LightFalloffSize: 0.0001
@@ -106,7 +126,9 @@ Material:
     - _Mode: 0
     - _OcclusionStrength: 1
     - _OutlineDepthOffset: 0
+    - _OutlineEnabled: 0
     - _OutlineScale: 1
+    - _OutlineSpace: 0
     - _OutlineWidth: 0
     - _OverrideLightmapDir: 0
     - _OverrideShadows: 1
@@ -131,6 +153,7 @@ Material:
     - _UnityShadowPower: 0.2
     - _UnityShadowSharpness: 1
     - _VertexColorsEnabled: 0
+    - _VertexExtrusionSmoothNormals: 0
     - _ZWrite: 1
     m_Colors:
     - _BaseColor: {r: 0.40566036, g: 0.40138313, b: 0.369304, a: 1}
@@ -142,6 +165,7 @@ Material:
     - _ColorGradient: {r: 0.65, g: 0.65, b: 0.65, a: 1}
     - _ColorSecondary: {r: 0.10232314, g: 0.1981132, b: 0.015886439, a: 1}
     - _ColorShadows: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    - _DetailMapColor: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _FlatRimColor: {r: 0.65, g: 0.65, b: 0.65, a: 1}
     - _FlatSpecularColor: {r: 0.65, g: 0.65, b: 0.65, a: 1}

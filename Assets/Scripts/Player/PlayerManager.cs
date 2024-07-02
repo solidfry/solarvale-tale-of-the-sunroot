@@ -1,48 +1,78 @@
-using System.Collections;
-using System.Collections.Generic;
 using Events;
 using StarterAssets;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Utilities;
 
-public class PlayerManager : MonoBehaviour
+namespace Player
 {
-    [SerializeField] PlayerInput playerInput;
-    [SerializeField] StarterAssetsInputs starterAssetsInputs;
-    
-    private void Awake()
+    public class PlayerManager : MonoBehaviour
     {
-        if (playerInput is null)
-            playerInput = GetComponentInChildren<PlayerInput>();
-    }
-    
-    private void OnEnable()
-    {
-        GlobalEvents.OnPlayerControlsLockedEvent += TogglePlayerControls;
-        GlobalEvents.OnSetCursorInputForLookEvent += SetCursorInputForLook;
-    }
+        [SerializeField] PlayerInput playerInput;
+        [SerializeField] StarterAssetsInputs starterAssetsInputs;
 
-    private void SetCursorInputForLook(bool canLook)
-    {
-        if (starterAssetsInputs is null) return;
-        starterAssetsInputs.cursorInputForLook = canLook;
-    }
+        private string _currentControlsScheme;
+        Observable<string> _currentControlSchemeObservable;
+        
+        private void Awake()
+        {
+            if (playerInput is null)
+                playerInput = GetComponentInChildren<PlayerInput>();
+            
+            _currentControlSchemeObservable = new Observable<string>(playerInput.currentControlScheme);
+            _currentControlSchemeObservable.ValueChanged += OnControlsChanged;
+        }
 
-    private void OnDisable()
-    {
-        GlobalEvents.OnPlayerControlsLockedEvent -= TogglePlayerControls;
-        GlobalEvents.OnSetCursorInputForLookEvent -= SetCursorInputForLook;
-    }
+        private void Update()
+        {
+            if (_currentControlsScheme == playerInput.currentControlScheme) return;
+            _currentControlsScheme = playerInput.currentControlScheme;
+            _currentControlSchemeObservable?.Invoke();
+        }
 
-    void TogglePlayerControls(bool isPaused)
-    {   
-        //Disable Player Input on Player Action Map
-        SetPlayerControlMap(isPaused ? "UI" : "Player");
-    }
+        private void OnEnable()
+        {
+            GlobalEvents.OnPlayerChangeActionMapEvent += TogglePlayerActionMap;
+            GlobalEvents.OnSetCursorInputForLookEvent += SetCursorInputForLook;
+        }
+        
+        private void OnDisable()
+        {
+            GlobalEvents.OnPlayerChangeActionMapEvent -= TogglePlayerActionMap;
+            GlobalEvents.OnSetCursorInputForLookEvent -= SetCursorInputForLook; 
+            _currentControlSchemeObservable.ValueChanged -= OnControlsChanged;
+        }
+
+        private void OnControlsChanged(string inputs)
+        {
+            GlobalEvents.OnControlSchemeChangedEvent?.Invoke(playerInput.currentControlScheme);
+        }
+
+        private void SetCursorInputForLook(bool canLook)
+        {
+            if (starterAssetsInputs is null) return;
+            starterAssetsInputs.cursorInputForLook = canLook;
+        }
+        
+        public void SetPlayerControlsLocked(bool isLocked)
+        {
+            switch (isLocked)
+            {
+                case true:
+                    playerInput.ActivateInput();
+                    break;
+                default:
+                    playerInput.DeactivateInput();
+                    break;
+            }
+        }
+
+        public void TogglePlayerActionMap(bool isPaused) => SetPlayerControlMap(isPaused ? "UI" : "Player");
+
+        void SetPlayerControlMap(string actionMap)
+        {
+            playerInput.SwitchCurrentActionMap(actionMap);
+        }
     
-    void SetPlayerControlMap(string actionMap)
-    {
-        playerInput.SwitchCurrentActionMap(actionMap);
     }
-    
 }
