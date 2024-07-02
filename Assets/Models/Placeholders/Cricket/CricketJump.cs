@@ -6,8 +6,10 @@ public class CricketJump : MonoBehaviour
 {
     // Public variables for jump force and cooldown time
     public float jumpForce = 1f;
-    public float minJumpCooldown = 0.5f; // Minimum cooldown time in seconds
-    public float maxJumpCooldown = 2f; // Maximum cooldown time in seconds
+    public float minJumpCooldownInTrigger = 0.5f; // Minimum cooldown time in seconds
+    public float maxJumpCooldownInTrigger = 2f; // Maximum cooldown time in seconds
+    public float minJumpCooldownOutTrigger = 5;
+    public float maxJumpCooldownOutTrigger = 10;
     public float rotateDuration = 1f; // Duration for rotation to target direction
     public float moveSpeed = 5f; // Speed of movement towards target direction
 
@@ -69,6 +71,11 @@ public class CricketJump : MonoBehaviour
         {
             RotateAndJump();
         }
+        else if (Time.time > nextJumpTime)
+        {
+            // Perform the jump
+            PerformJump();
+        }
 
         // Smoothly rotate towards the target rotation if rotating
         if (isRotating)
@@ -99,7 +106,7 @@ public class CricketJump : MonoBehaviour
         rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
 
         // Set the next jump time based on a random cooldown between minJumpCooldown and maxJumpCooldown
-        nextJumpTime = Time.time + Random.Range(minJumpCooldown, maxJumpCooldown);
+        nextJumpTime = Time.time + Random.Range(minJumpCooldownInTrigger, maxJumpCooldownInTrigger);
 
         // Start coroutine to handle gradual falling after 0.75 seconds
         StartCoroutine(GradualFall(0.75f));
@@ -150,5 +157,28 @@ public class CricketJump : MonoBehaviour
         {
             isGrounded = false;
         }
+    }
+    void PerformJump()
+    {
+        // Calculate a random rotation around the Z-axis within +/- 60 degrees from the current Z rotation
+        float currentZRotation = transform.rotation.eulerAngles.z;
+        float randomRotationZ = Random.Range(currentZRotation - 60f, currentZRotation + 60f);
+
+        // Calculate target rotation to face the new Z direction, only modify Z-axis
+        Quaternion targetRotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, randomRotationZ);
+
+        // Start rotating towards the target direction
+        isRotating = true;
+
+        // Apply an upward force to the Rigidbody to make the GameObject jump
+        rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+
+        // Set the next jump time based on a random cooldown between minJumpCooldown and maxJumpCooldown
+        SetNextJumpTime();
+    }
+
+    void SetNextJumpTime()
+    {
+        nextJumpTime = Time.time + Random.Range(minJumpCooldownOutTrigger, maxJumpCooldownOutTrigger);
     }
 }
