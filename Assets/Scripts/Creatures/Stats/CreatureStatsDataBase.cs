@@ -27,9 +27,14 @@ namespace Creatures.Stats
         [field: SerializeField] public float Acceleration { get; protected set; }
         [field: SerializeField] public float StoppingDistance { get; protected set; }
         
+        [field: Header("Danger")]
+        [field:SerializeField] public float DangerDetectionRange { get; protected set; }
+        [field:SerializeField] public float DangerRunTime { get; protected set; } 
+        
         [field:Header("Obstacle Avoidance")]
         [field: SerializeField] public float AvoidanceRadius { get; protected set; }
         [field: SerializeField] public float AvoidancePriority { get; protected set; }
+        
         
         [field:Header("Feeding")]
         [field: SerializeField] public float FeedRate { get; protected set; }

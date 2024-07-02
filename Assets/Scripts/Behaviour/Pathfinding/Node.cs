@@ -1,87 +1,19 @@
 ﻿using System.Collections.Generic;
-using Utilities;
 
 namespace Behaviour.Pathfinding
 {
-    public class Sequence : Node
-    {
-        public Sequence(string name) : base(name) {}
-
-        public override NodeState Process()
-        {
-            if (CurrentChild < Children.Count)
-            {
-                switch (Children[CurrentChild].Process())
-                {
-                    case NodeState.Running:
-                        return NodeState.Running;
-                    case NodeState.Failure:
-                        Reset();
-                        return NodeState.Failure;
-                    default:
-                        CurrentChild++;
-                        return CurrentChild == Children.Count ? NodeState.Success : NodeState.Running;
-                }
-            }
-            
-            Reset();
-            return NodeState.Success;
-        }
-    }
-
-    public class Selector : Node
-    {
-        public Selector(string name) : base(name) {}
-        
-        public override NodeState Process()
-        {
-            if (CurrentChild < Children.Count)
-            {
-                switch (Children[CurrentChild].Process())
-                {
-                    case NodeState.Running:
-                        return NodeState.Running;
-                    case NodeState.Success:
-                        Reset();
-                        return NodeState.Success;
-                    default:
-                        CurrentChild++;
-                        return NodeState.Running;
-                    
-                }
-            }
-            
-            Reset();
-            return NodeState.Failure;
-        }
-        
-    }
-    
-    public class Leaf : Node
-    {
-        readonly IStrategy strategy;
-
-        public Leaf(string name, IStrategy strategy) : base(name)
-        {
-            Preconditions.CheckNotNull(strategy);
-            this.strategy = strategy;
-        }
-        
-        public override NodeState Process() => strategy.Process();
-        
-        public override void Reset() => strategy.Reset();
-    }
-
     public class Node
     {
         public readonly string name;
+        public readonly int priority;
         
         public readonly List<Node> Children = new();
         protected int CurrentChild;
         
-        public Node(string name = "Node")
+        public Node(string name = "Node", int priority = 0)
         {
             this.name = name;
+            this.priority = priority;
         }
         
         public void AddChild(Node child) => Children.Add(child);
@@ -98,4 +30,64 @@ namespace Behaviour.Pathfinding
         }
     }
     
+    public class Repeat : Node
+    {
+        public readonly int times;
+        private int count;
+        
+        public Repeat(string name, int times, int priority = 0) : base(name, priority)
+        {
+            this.times = times;
+        }
+        
+        public override NodeState Process()
+        {
+            if (count < times)
+            {
+                if (Children[0].Process() == NodeState.Success)
+                {
+                    count++;
+                }
+                
+                return NodeState.Running;
+            }
+            
+            count = 0;
+            return NodeState.Success;
+        }
+    }
+    
+    public class UntilFail : Node
+    {
+        public UntilFail(string name, int priority = 0) : base(name, priority) {}
+
+        public override NodeState Process()
+        {
+            if (Children[0].Process() == NodeState.Failure)
+            {
+                Reset();
+                return NodeState.Failure;
+            }
+            
+            return NodeState.Running;
+        }
+    }
+    
+    public class Inverter : Node
+    {
+        public Inverter(string name, int priority = 0) : base(name, priority) {}
+        
+        public override NodeState Process()
+        {
+            switch (Children[0].Process())
+            {
+                case NodeState.Running:
+                    return NodeState.Running;
+                case NodeState.Failure:
+                    return NodeState.Success;
+                default:
+                    return NodeState.Failure;
+            }
+        }
+    }
 }

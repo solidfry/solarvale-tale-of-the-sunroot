@@ -38,6 +38,8 @@ namespace Creatures
             SetupRigidbody();
             SetupCollider();
             SetupAgent();
+            
+            GetBehaviourTree.Initialise();
         }
 
         private void CheckCrucialSystems()
