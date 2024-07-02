@@ -26,6 +26,7 @@ Material:
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
+  - _ALPHATEST_ON
   - _MAIN_LIGHT_SHADOWS
   - _MAIN_LIGHT_SHADOWS_CASCADE
   - _SOFT_SHADOWS
@@ -61,7 +62,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: eedd25b5ec582684eb14cfd1d1161e9e, type: 3}
+        m_Texture: {fileID: 2800000, guid: f02f6730fa71b444c91f3a59ff5f30a1, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Metallic_Texture:
@@ -69,7 +70,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalTexture:
-        m_Texture: {fileID: 2800000, guid: 54fad084277756446b448acfc1295835, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -86,17 +87,17 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - Vector1_2BDF6FD9: 0
-    - Vector1_2FA10055: 0.63
-    - Vector1_46F1304E: 0.25
-    - Vector1_BBEA2355: 0.49
+    - Vector1_2BDF6FD9: 0.38
+    - Vector1_2FA10055: 0.14
+    - Vector1_46F1304E: 0.36
+    - Vector1_BBEA2355: 0.14
     - _AO: 1
     - _AO_Strength: 1
     - _Albedo_Intensity: 1
-    - _Albedo_Strength: 2.88
-    - _AlphaClip: 0
+    - _Albedo_Strength: 5.31
+    - _AlphaClip: 1
     - _AlphaToMask: 0
-    - _Alpha_Clip_Threshold: 0.062
+    - _Alpha_Clip_Threshold: 0
     - _Blend: 0
     - _BlendModePreserveSpecular: 1
     - _CastShadows: 1
@@ -106,7 +107,7 @@ Material:
     - _MAIN_LIGHT_SHADOWS: 1
     - _MAIN_LIGHT_SHADOWS_CASCADE: 1
     - _Metallic_Strength: 0
-    - _NormalStength: 0.265
+    - _NormalStength: 0
     - _QueueControl: 0
     - _QueueOffset: 50
     - _ReceiveShadows: 1
@@ -119,10 +120,10 @@ Material:
     - _ZWrite: 0
     - _ZWriteControl: 0
     m_Colors:
-    - Color_D9F05973: {r: 0.6509434, g: 0.6509434, b: 0.6509434, a: 1}
-    - Color_DB04B181: {r: 0.41745284, g: 0.4580602, b: 0.5566038, a: 1}
-    - _Albedo_Color: {r: 0.20207226, g: 0.3301887, b: 0.19780171, a: 0}
+    - Color_D9F05973: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    - Color_DB04B181: {r: 0, g: 0.18867922, b: 0.008865031, a: 1}
+    - _Albedo_Color: {r: 0, g: 0.3490566, b: 0.20943393, a: 1}
     - _Emission_Color: {r: 0, g: 0, b: 0, a: 0}
-    - _Fresnel_Color: {r: 1, g: 1, b: 1, a: 0}
+    - _Fresnel_Color: {r: 0.97217375, g: 1, b: 0.4481132, a: 0}
     - _Specular_Color: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []

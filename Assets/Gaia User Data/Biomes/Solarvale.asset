@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-441284916555360249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4b6d2ca1100d734aaa40e6410ad3214, type: 3}
+  m_Name: Custom Biome(Clone)
+  m_EditorClassIdentifier: 
+  m_x: 0
+  m_y: 0
+  m_z: 0
+  m_range: 512
+  m_postProcessBlenddDistance: 0
+  m_visualisationColor: {r: 0, g: 0.9098299, b: 1, a: 1}
+  m_removeForeignGameObjects: 0
+  m_removeForeignGameObjectStrength: 0.2
+  m_removeForeignTrees: 0
+  m_removeForeignTreesStrength: 0.2
+  m_removeForeignTerrainDetails: 0
+  m_removeForeignTerrainDetailsStrength: 0.2
+  imageMasks: []
+  m_lastSavePath: Assets/Gaia User Data/Biomes/Solarvale.asset
+  m_clearSpawnsToggleTrees: 0
+  m_clearSpawnsToggleDetails: 0
+  m_clearSpawnsToggleGOs: 0
+  m_clearSpawnsToggleSpawnExtensions: 0
+  m_clearSpawnsToggleProbes: 0
+  m_clearSpawnsFor: 0
+  m_clearSpawnsFrom: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bf996bd940696a4b814912e16c3d5ac, type: 3}
+  m_Name: Solarvale
+  m_EditorClassIdentifier: 
+  m_orderNumber: 0
+  m_spawnerPresetList:
+  - m_autoAssignPrototypes: 1
+    m_spawnerSettings: {fileID: 11400000, guid: 4dda95930422a9f469c0c99505aff15e,
+      type: 2}
+    m_isActiveInStamper: 0
+    m_isActiveInBiome: 1
+  - m_autoAssignPrototypes: 1
+    m_spawnerSettings: {fileID: 11400000, guid: 29314e3030f02404ea363aa54072ed20,
+      type: 2}
+    m_isActiveInStamper: 0
+    m_isActiveInBiome: 1
+  - m_autoAssignPrototypes: 1
+    m_spawnerSettings: {fileID: 11400000, guid: 73049ac12c97b4c4d8547330a2b13c8b,
+      type: 2}
+    m_isActiveInStamper: 0
+    m_isActiveInBiome: 1
+  m_biomeControllerSettings: {fileID: -441284916555360249}
+  m_postProcessingProfileGUID: 
+  m_gaiaSceneCullingProfile: {fileID: 0}

@@ -53,6 +53,11 @@ MonoBehaviour:
       m_bendFactor: 0
       m_healthyColour: {r: 1, g: 1, b: 1, a: 1}
       m_dryColour: {r: 1, g: 1, b: 1, a: 1}
+      m_snapToTerrain: 1
+      m_customOffset: 0
+      m_minYOffset: -2
+      m_maxYOffset: 2
+      m_yOffsetBasedOn: 0
       m_spawnScale: 1
       m_minWidth: 0.75
       m_maxWidth: 1.5
@@ -71,6 +76,10 @@ MonoBehaviour:
       m_spawnExtensions: []
       m_instancesFoldOut: 0
       m_dnaFoldedOut: 0
+      m_useFlora: 0
+      m_floraLODs: []
+      m_detailerSettingsObjectAssetGUID: 
+      m_detailerSettingsObjectInstanceID: 0
     m_gameObjectPrototypes: []
     m_spawnExtensionPrototypes: []
     m_stampDistributionPrototypes: []
@@ -86,7 +95,7 @@ MonoBehaviour:
   m_isWorldmapSpawner: 0
   m_spawnRange: 512
   m_generateRandomSeed: 1
-  m_randomSeed: 1211313678
+  m_randomSeed: 1060388333
   m_spawnDensity: 0.8
   m_resourcesPath: 
   m_spawnerRules:
@@ -115,8 +124,8 @@ MonoBehaviour:
       m_blendMode: 0
       m_imageMaskLocation: 1
       m_strength: 1
-      m_seaLevel: 25
-      m_maxWorldHeight: 102.407814
+      m_seaLevel: 16
+      m_maxWorldHeight: 111.25951
       m_minWorldHeight: 0
       m_xOffSet: 0
       m_zOffSet: 0
@@ -155,30 +164,6 @@ MonoBehaviour:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-      m_heightMaskCurve:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 3
-          time: 0
-          value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0
-          outWeight: 0
-        - serializedVersion: 3
-          time: 1
-          value: 1
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0
-          outWeight: 0
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
       m_strengthTransformCurve:
         serializedVersion: 2
         m_Curve:
@@ -196,6 +181,30 @@ MonoBehaviour:
           value: 1
           inSlope: 1
           outSlope: 1
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_heightMaskCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
           tangentMode: 0
           weightedMode: 0
           inWeight: 0
@@ -304,8 +313,8 @@ MonoBehaviour:
       m_blendMode: 0
       m_imageMaskLocation: 1
       m_strength: 1
-      m_seaLevel: 25
-      m_maxWorldHeight: 102.407814
+      m_seaLevel: 16
+      m_maxWorldHeight: 111.25951
       m_minWorldHeight: 0
       m_xOffSet: 0
       m_zOffSet: 0
@@ -344,30 +353,6 @@ MonoBehaviour:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-      m_heightMaskCurve:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 3
-          time: 0
-          value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0
-          outWeight: 0
-        - serializedVersion: 3
-          time: 1
-          value: 1
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0
-          outWeight: 0
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
       m_strengthTransformCurve:
         serializedVersion: 2
         m_Curve:
@@ -389,6 +374,30 @@ MonoBehaviour:
           weightedMode: 0
           inWeight: 0.1226655
           outWeight: 0.3333333
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_heightMaskCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
         - serializedVersion: 3
           time: 1
           value: 1
@@ -523,6 +532,11 @@ MonoBehaviour:
     m_usesBoxStandIn: 0
     m_boundsCollisionCheck: 0
     m_changesHeightmap: 0
+    m_startOffsetX: 0
+    m_startOffsetZ: 0
+    m_collisionLayersToClear:
+      serializedVersion: 2
+      m_Bits: 0
   m_showGizmos: 1
   m_showDebug: 0
   m_showTerrainHelper: 1
@@ -536,8 +550,8 @@ MonoBehaviour:
     m_blendMode: 0
     m_imageMaskLocation: 0
     m_strength: 1
-    m_seaLevel: 25
-    m_maxWorldHeight: 102.407814
+    m_seaLevel: 16
+    m_maxWorldHeight: 111.25951
     m_minWorldHeight: 0
     m_xOffSet: 0
     m_zOffSet: 0
@@ -576,30 +590,6 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    m_heightMaskCurve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
     m_strengthTransformCurve:
       serializedVersion: 2
       m_Curve:
@@ -621,6 +611,30 @@ MonoBehaviour:
         weightedMode: 0
         inWeight: -0
         outWeight: -0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_heightMaskCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -725,8 +739,8 @@ MonoBehaviour:
     m_blendMode: 0
     m_imageMaskLocation: 0
     m_strength: 1
-    m_seaLevel: 25
-    m_maxWorldHeight: 102.407814
+    m_seaLevel: 16
+    m_maxWorldHeight: 111.25951
     m_minWorldHeight: 0
     m_xOffSet: 0
     m_zOffSet: 0
@@ -758,6 +772,30 @@ MonoBehaviour:
         value: 0
         inSlope: 0
         outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_strengthTransformCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 1
+        outSlope: 1
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 1
+        outSlope: 1
         tangentMode: 0
         weightedMode: 0
         inWeight: 0
@@ -803,30 +841,6 @@ MonoBehaviour:
         tangentMode: 34
         weightedMode: 0
         inWeight: 0.33333334
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    m_strengthTransformCurve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 1
-        outSlope: 1
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 1
-        inSlope: 1
-        outSlope: 1
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
         outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
@@ -932,8 +946,8 @@ MonoBehaviour:
     m_blendMode: 0
     m_imageMaskLocation: 0
     m_strength: 1
-    m_seaLevel: 25
-    m_maxWorldHeight: 102.407814
+    m_seaLevel: 16
+    m_maxWorldHeight: 111.25951
     m_minWorldHeight: 0
     m_xOffSet: 0
     m_zOffSet: 0
@@ -972,30 +986,6 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    m_heightMaskCurve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
     m_strengthTransformCurve:
       serializedVersion: 2
       m_Curve:
@@ -1013,6 +1003,30 @@ MonoBehaviour:
         value: 1
         inSlope: 1
         outSlope: 1
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_heightMaskCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
         tangentMode: 0
         weightedMode: 0
         inWeight: 0
@@ -1085,7 +1099,9 @@ MonoBehaviour:
     - m_active: 1
       m_invert: 0
       m_type: 2
-      m_treeSpawnRuleGUID: f36c4603-1ce3-4559-a4e8-e89230637194
+      m_selectedTreeSpawnRuleGUIDs:
+      - f36c4603-1ce3-4559-a4e8-e89230637194
+      m_treeSpawnRuleGUID: 
       m_tag: 
       m_Radius: 2.87
       m_growShrinkDistance: 5
@@ -1127,8 +1143,8 @@ MonoBehaviour:
     m_selectedWorldBiomeMaskGUID: 
     m_growAndShrinkValue: 0
     m_globalSpawnerMaskStackRT: {fileID: 0}
-  m_clearSpawnsToggleTrees: 0
-  m_clearSpawnsToggleDetails: 0
+  m_clearSpawnsToggleTrees: 1
+  m_clearSpawnsToggleDetails: 1
   m_clearSpawnsToggleGOs: 0
   m_clearSpawnsToggleSpawnExtensions: 0
   m_clearSpawnsToggleProbes: 0
