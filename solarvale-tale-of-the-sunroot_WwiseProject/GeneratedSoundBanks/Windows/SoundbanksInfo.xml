@@ -22,17 +22,25 @@
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 			</Busses>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{48E36274-1EE3-804D-3440-5B2C9919C4B0}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{D0CFDB7A-E360-DE8E-5289-A0D8621AAF50}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
+				<File Id="45670411" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_Cricket.wav</ShortName>
+					<CachePath>SFX/SFX_Cricket_818F3B66.wem</CachePath>
+				</File>
+				<File Id="625821779" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Camera\Polaroid_photo_click_print.wav</ShortName>
+					<CachePath>SFX/Camera/Polaroid_photo_click_print_818F3B66.wem</CachePath>
+				</File>
+				<File Id="695495137" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>music_flute_solo.wav</ShortName>
+					<CachePath>SFX/music_flute_solo_818F3B66.wem</CachePath>
+				</File>
 				<File Id="879010177" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>BrandIntro-Birds.wav</ShortName>
 					<CachePath>SFX/BrandIntro-Birds_A7BD7755.wem</CachePath>
-				</File>
-				<File Id="943215775" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Lounge it.wav</ShortName>
-					<CachePath>SFX/Lounge it_818F3B66.wem</CachePath>
 				</File>
 				<File Id="954250796" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Button_Click.wav</ShortName>
@@ -81,13 +89,23 @@
 						<MediaRef Id="1029364635"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3049024044" Name="Play_Lounge_it" DurationType="OneShot" DurationMin="205.92828" DurationMax="205.92828">
+				<Event Id="1150390550" Name="Play_music_flute_solo" DurationType="OneShot" DurationMin="52.5" DurationMax="52.5">
 					<MediaRefs>
-						<MediaRef Id="943215775"/>
+						<MediaRef Id="695495137"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1715369302" Name="Play_Polaroid_photo_click_print" DurationType="OneShot" DurationMin="3.4249375" DurationMax="3.4249375">
+					<MediaRefs>
+						<MediaRef Id="625821779"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3568461127" Name="Play_SFX_Cricket" DurationType="OneShot" DurationMin="0.75" DurationMax="0.75">
+					<MediaRefs>
+						<MediaRef Id="45670411"/>
 					</MediaRefs>
 				</Event>
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{5615243F-66D1-0AD0-B4C2-43F69447FDC5}</FileHash>
+	<FileHash>{B12526F6-40CB-9D07-BDDB-5DFFD14E0975}</FileHash>
 </SoundBanksInfo>
