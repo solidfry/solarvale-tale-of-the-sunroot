@@ -1,5 +1,6 @@
 using Events;
 using Gaia;
+using Photography;
 using UI;
 using UnityEngine;
 using Utilities;
@@ -14,9 +15,11 @@ namespace Core
         Dialogue,
         Cutscene
     }
+    
     public class GameManager : SingletonPersistent<GameManager>
     {
         [SerializeField] HudManager hudManager;
+        [SerializeField] PhotoManager photoManager;
     
         [SerializeField] bool IsPaused = false;
 
@@ -28,6 +31,9 @@ namespace Core
          
             if (hudManager is null)
                 hudManager = GetComponentInChildren<HudManager>();
+            
+            if (photoManager is null)
+                photoManager = GetComponentInChildren<PhotoManager>();
         }
         
 
@@ -47,9 +53,10 @@ namespace Core
             GlobalEvents.OnLockCursorEvent -= LockCursor;
             GlobalEvents.OnDialogueCompleteEvent -= SetPlayerInteractionActive;
             GlobalEvents.OnDialogueStartEvent -= SetPlayerInteractionInactive;
-            
         }
-
+        
+        public PhotoManager PhotoManager => photoManager;
+        
         public void SetPlayerInteractionInactive()
         {
             _playerCanInteract.Value = false;
@@ -61,9 +68,7 @@ namespace Core
             _playerCanInteract.Value = true;
             GlobalEvents.OnSetCursorInputForLookEvent?.Invoke(true);
         }
-
         
-    
         void PauseGame(bool pause)
         {
             Debug.Log("PauseGame");
@@ -74,5 +79,6 @@ namespace Core
         void LockCursor(bool _lockCursor) => Cursor.lockState = _lockCursor ? CursorLockMode.Locked : CursorLockMode.None;
         
         public void SetPlayerCanInteract(bool canInteract) => _playerCanInteract.Value = canInteract;
+        
     }
 }

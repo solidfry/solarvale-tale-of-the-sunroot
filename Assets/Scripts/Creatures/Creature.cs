@@ -1,4 +1,5 @@
 ﻿using Creatures.Stats;
+using Entities;
 using Events;
 using UnityEngine;
 using UnityEngine.AI;
@@ -7,7 +8,7 @@ using UnityEngine.Serialization;
 namespace Creatures
 {
     [RequireComponent(typeof(NavMeshAgent), typeof(Rigidbody), typeof(CapsuleCollider))]
-    public class Creature : CreatureEntityBase
+    public class Creature : Entity
     {
         [SerializeField] Rigidbody rigidBody;
         [SerializeField] NavMeshAgent agent;
@@ -106,6 +107,7 @@ namespace Creatures
         }
 
         #endregion
-       
+
+        public new CreatureEntityData GetEntityData => entityData as CreatureEntityData;
     }
 }

@@ -31,6 +31,7 @@ namespace UI.Camera
             
             uiCanvases.Add(canvas);
             canvas.worldCamera = uiCamera;
+            canvas.sortingLayerName = "UI";
         }
 
         private static void SetCameraScreenSpaceOverlay(Canvas canvas)

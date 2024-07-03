@@ -100,6 +100,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4907805612862758769}
+  - component: {fileID: 9086598200471009580}
   m_Layer: 5
   m_Name: AlbumPhoto
   m_TagString: Untagged
@@ -116,7 +117,7 @@ RectTransform:
   m_GameObject: {fileID: 4355687483545959547}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3687742724967463969}
@@ -127,6 +128,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 420, y: 380}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &9086598200471009580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4355687483545959547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65a3daac4f3e1a540a9e97243e549040, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  photo: {fileID: 8701618088884580409}
 --- !u!1 &7511132380774161610
 GameObject:
   m_ObjectHideFlags: 0

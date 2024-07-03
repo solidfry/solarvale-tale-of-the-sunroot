@@ -1,9 +1,11 @@
 using System.Collections;
+using System.Collections.Generic;
 using Entities;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using Events;
+using Photography;
 using UnityEngine.Events;
 using UnityEngine.Serialization;
 
@@ -37,6 +39,9 @@ namespace CameraSystem
         private Camera _mainCamera;
         private Texture2D _screenCapture;
         private Transform albumParent;
+        
+        EntityData currentEntityData;
+        EntityData previousEntityData;
 
         // Desired photo size
         private const int PhotoWidth = 800; 
@@ -141,19 +146,30 @@ namespace CameraSystem
             HandleOnRemovePhotoGlobalEvents();
         }
 
-        public void KeepPhoto()
+        private void KeepPhoto()
         {
-            //InGameMenuUI needs to be built to work
-            //GameObject albumGridLayoutGroup = GameObject.Find("Grid Layout Group");
-            //When player keeps the photo make a clone of the image and move it to the album in InGameMenuUI
-            //if (albumGridLayoutGroup != null)
-            //{
-                // photoFrameClone = Instantiate(photoFrame, albumGridLayoutGroup.transform);
-            //}
+            if (_screenCapture != null)
+            {
+                if (currentEntityData != null)
+                {
+                    PhotoData photoData = new PhotoData(_screenCapture, new List<EntityData>
+                    {
+                        currentEntityData
+                    });
+                    GlobalEvents.OnPhotoKeptEvent?.Invoke(photoData);
+
+                }
+                else
+                {
+                    PhotoData photoData = new PhotoData(_screenCapture);
+                    GlobalEvents.OnPhotoKeptEvent?.Invoke(photoData);
+                }
+
+            }
             RemovePhoto();
         }
 
-        public void DiscardPhoto()
+        private void DiscardPhoto()
         {
             RemovePhoto();
         }
@@ -183,8 +199,10 @@ namespace CameraSystem
 
         private EntityData GetEntityDataFromRayCastHit(RaycastHit hit)
         {
+            previousEntityData = currentEntityData;
             if (hit.collider != null && hit.collider.TryGetComponent(out IEntity<EntityData> entity))
             {
+                currentEntityData = entity?.GetEntityData;
                 return entity?.GetEntityData;
             }
             return null;

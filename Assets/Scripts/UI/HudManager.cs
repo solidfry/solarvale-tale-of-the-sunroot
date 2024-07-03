@@ -3,13 +3,15 @@ using DG.Tweening;
 using Events;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
 
 namespace UI
 {
     public class HudManager : MonoBehaviour
     {
+        [FormerlySerializedAs("menu")]
         [Header("Menu Settings")]
-        [SerializeField] GameObject menu;
+        [SerializeField] GameMenuUIController menuPrefab;
         [SerializeField] bool isMenuShown = false;
         [SerializeField] bool canShowMenu = true;
         [SerializeField] InputActionReference menuOpenAction;
@@ -20,7 +22,7 @@ namespace UI
         [SerializeField] float playerHUDFadeDuration = 0.5f;
         [SerializeField] bool isHUDShown = true;
         
-        GameObject _menuInstance;
+        GameMenuUIController _menuInstance;
         GameObject _playerHUDInstance;
         CanvasGroup _playerHUDCanvasGroup;
         
@@ -30,12 +32,11 @@ namespace UI
 
         private void Initialise()
         {
-            if (menu is null || playerHUD is null) return;
-            _menuInstance = Instantiate(menu, transform.position, Quaternion.identity, transform);
+            if (menuPrefab is null || playerHUD is null) return;
+            _menuInstance = Instantiate(menuPrefab, transform.position, Quaternion.identity, transform);
             _playerHUDInstance = Instantiate(playerHUD, transform.position, Quaternion.identity, transform);
-            
+            _menuInstance.ToggleFade(0);
             _playerHUDCanvasGroup = _playerHUDInstance.GetComponent<CanvasGroup>();
-            _menuInstance.SetActive(false);
         }
         
         private void OnCameraModeChanged(CameraMode mode)
@@ -75,8 +76,8 @@ namespace UI
         {
             if (!canShowMenu) return;
             isMenuShown = !isMenuShown;
-            _menuInstance.SetActive(isMenuShown);
-            // Debug.Log("show menu: " + showMenu);
+            _menuInstance.ToggleFade(0);
+            Debug.Log("show menu: " + isMenuShown);
             GlobalEvents.OnGamePausedEvent?.Invoke(isMenuShown);
             GlobalEvents.OnPlayerChangeActionMapEvent?.Invoke(isMenuShown);
             Cursor.lockState = isMenuShown ? CursorLockMode.None : CursorLockMode.Locked;

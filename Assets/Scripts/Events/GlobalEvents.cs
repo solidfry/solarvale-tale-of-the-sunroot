@@ -3,6 +3,7 @@ using CameraSystem;
 using Creatures;
 using Entities;
 using Interaction;
+using Photography;
 using QuestSystem;
 using QuestSystem.Conditions;
 using UnityEngine;
@@ -50,6 +51,10 @@ namespace Events
         #region Camera Management
         public static Action<CameraMode> OnChangeCameraModeEvent;
         public static Action<Canvas> OnRegisterUIWithCameraEvent;
+        #endregion
+        
+        #region Photography Management
+        public static Action<PhotoData> OnPhotoKeptEvent;
         #endregion
 
         #region Creature Management

@@ -73,11 +73,16 @@ namespace UI
         void FadeOut(CanvasGroup canvasGroup) => canvasGroup.DOFade(0, fadeDuration).OnComplete(() =>
         {
             canvasGroup.interactable = false;
-            canvasGroup.gameObject.SetActive(false);
+            canvasGroup.blocksRaycasts = false;
         }).SetUpdate(true);
 
         void FadeIn(CanvasGroup canvasGroup) =>
-            canvasGroup.DOFade(1, fadeDuration).OnComplete(() => { canvasGroup.interactable = true; }).SetUpdate(true);
+            canvasGroup.DOFade(1, fadeDuration).OnComplete(() =>
+            {
+                canvasGroup.interactable = true;
+                canvasGroup.blocksRaycasts = true;
+                
+            }).SetUpdate(true);
     }
 
     [Serializable]
