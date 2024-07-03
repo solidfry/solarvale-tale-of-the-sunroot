@@ -4,8 +4,8 @@ namespace Entities
 {
     public class Entity : MonoBehaviour, IEntity<EntityData>
     {
-        [SerializeField] private EntityData entityData;
+        [SerializeField] protected EntityData entityData;
         
-        public EntityData GetEntityData => entityData;
+        public virtual EntityData GetEntityData => entityData;
     }
 }

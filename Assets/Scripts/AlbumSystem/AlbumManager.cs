@@ -1,119 +1,92 @@
-using DG.Tweening.Core.Easing;
-using System.Collections;
 using System.Collections.Generic;
+using Core;
+using Photography;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class AlbumManager : MonoBehaviour
+namespace AlbumSystem
 {
-    [SerializeField] private GameObject inventoryUserInterface;
-    [SerializeField] private GameObject submitButton;
-
-    private bool _isPaused;
-    public AlbumSlots[] albumSlot;
-    public static int lupineAmount;
-
-    public static bool turnInventoryOn;
-    public static bool submitButtonOn;
-
-    [Header("Materials")]
-    [SerializeField] private GameObject buttonMaterialsTab;
-
-    [Header("Album")]
-    [SerializeField] private GameObject buttonAlbumTab;
-
-    [Header("Audio")]
-    [SerializeField] private AudioSource audioBagOpen;
-
-    [Header("HideUI")]
-    [SerializeField] private GameObject[] hideUI;
-    [SerializeField] private GameObject inGameMenuUI;
-    private void Start()
+    public class AlbumManager : MonoBehaviour
     {
-        inventoryUserInterface.SetActive(false);
-        submitButton.SetActive(false);
-        buttonMaterialsTab.SetActive(true);
-        buttonAlbumTab.SetActive(false);
-    }
+        
+        [SerializeField] AlbumPhoto albumPhotoPrefab;
+        PhotoManager _photoManager;
+        [SerializeField] GridLayoutGroup gridLayout;
+        Dictionary<AlbumPhoto, PhotoData> photoDictionary = new ();
 
-    private void Update()
-    {
-        //Check if Ui is enabled 
-        if(inGameMenuUI.activeSelf == true)
+        private void Awake()
         {
-            for (int i = 0; i < hideUI.Length; i++)
-            {
-                hideUI[i].SetActive(!hideUI[i].activeSelf);
-            }
-            audioBagOpen.Play();
-            if (turnInventoryOn)
-            {
-                submitButton.SetActive(true);
-            }
-            inventoryUserInterface.SetActive(!inventoryUserInterface.activeSelf);
-
-            //Freeze screen
-            _isPaused = !_isPaused; // Toggle the isPaused flag
-
-            Time.timeScale = _isPaused ? 0f : 1f; // If isPaused is true, set timeScale to 0, otherwise set it to 1
-            Debug.Log(_isPaused ? "Game paused" : "Game resumed");
+            if (gridLayout is null)
+                gridLayout = GetComponentInChildren<GridLayoutGroup>();
         }
-    }
 
-    public int AddItem(string nameOfInteract, int quantity, Sprite itemSprite, string itemDescription)
-    {
-        Debug.Log("item Name = " + nameOfInteract + "quantity = " + quantity);
-
-        for (int i = 0; i < albumSlot.Length; i++)
+        private void Start()
         {
-            Debug.Log(albumSlot[i].isFull);
-            if (albumSlot[i].isFull == false && albumSlot[i].nameOfInteract == nameOfInteract || albumSlot[i].quantity == 0)
-            {
-                int leftOverItems = albumSlot[i].AddItem(nameOfInteract, quantity, itemSprite, itemDescription);
-                if (leftOverItems > 0)
+            _photoManager = GameManager.Instance.PhotoManager;
+            
+            if (_photoManager.GetPhotos().Count > 0)
+                LoadPhotos(_photoManager.GetPhotos());
+            
+            _photoManager.OnPhotoAdded += AddAlbumPhoto;
+            _photoManager.OnPhotosLoaded += LoadPhotos;
+        }
 
-                    leftOverItems = AddItem(nameOfInteract, leftOverItems, itemSprite, itemDescription);
-                return leftOverItems;
+        private void OnDisable()
+        {
+            _photoManager.OnPhotosLoaded -= LoadPhotos;
+            _photoManager.OnPhotoAdded -= AddAlbumPhoto;
+        }
+
+        void AddAlbumPhoto(PhotoData photoData)
+        {
+            
+            if (albumPhotoPrefab is null)
+            {
+                Debug.LogError("AlbumPhoto prefab is null");
+                return;
             }
-        }
-        return quantity;
-    }
+            
 
-    public void DeselectAllSlots()
-    {
-        for (int i = 0; i < albumSlot.Length; i++)
-        {
-            albumSlot[i].selectedShader.SetActive(false);
-            albumSlot[i].thisItemSelected = false;
-        }
-    }
-
-    public void RemoveFirstItem()
-    {
-        if (albumSlot.Length > 0)
-        {
-            // Create a new array with length one less than the current array
-            AlbumSlots[] newAlbumSlot = new AlbumSlots[albumSlot.Length - 1];
-
-            // Shift elements to remove the first item
-            for (int i = 0; i < newAlbumSlot.Length; i++)
+            if (photoDictionary.ContainsValue(photoData))
             {
-                newAlbumSlot[i] = albumSlot[i + 1];
+                Debug.LogWarning("Photo already exists in album");
+                return;
+            }
+            
+            AlbumPhoto photo = Instantiate(albumPhotoPrefab, gridLayout.transform);
+            photoDictionary.Add(photo, photoData);
+            photo.SetSprite(SpriteFromTexture(photoData.Photo));
+        }
+        
+        private void LoadPhotos(List<PhotoData> photoData)
+        {
+            ClearPhotos();
+            
+            foreach (var photo in photoData)
+            {
+                AddAlbumPhoto(photo);
+                Debug.Log("Photo added to album");
             }
 
-            // Set the last element to null to remove it
-            albumSlot = newAlbumSlot;
+            Debug.Log(null == photoDictionary ? "Photo Dictionary is null" : "Photo Dictionary is not null");
         }
-    }
-
-    public void ButtonMaterial()
-    {
-        buttonMaterialsTab.SetActive(true);
-        buttonAlbumTab.SetActive(false);
-    }
-
-    public void ButtonAlbum()
-    {
-        buttonMaterialsTab.SetActive(false);
-        buttonAlbumTab.SetActive(true);
+        
+        public void ClearPhotos()
+        {
+            foreach (var photo in photoDictionary.Keys)
+            {
+                Destroy(photo.gameObject);
+            }
+            photoDictionary.Clear();
+        }
+        
+        
+        
+        public static Sprite SpriteFromTexture(Texture2D texture)
+        {
+            return Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), Vector2.zero);
+        }
+        
+        
     }
 }

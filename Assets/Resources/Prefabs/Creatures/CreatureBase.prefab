@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4634341430977063834}
   - component: {fileID: 6346330230864976961}
   - component: {fileID: 4464062114528373576}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: CreatureBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53,6 +53,7 @@ MonoBehaviour:
   rigidBody: {fileID: 6346330230864976961}
   agent: {fileID: 4464062114528373576}
   capsule: {fileID: 4634341430977063834}
+  <CurrentSightRange>k__BackingField: 0
   behaviourTree: {fileID: 8330634126723671534}
 --- !u!114 &8330634126723671534
 MonoBehaviour:
@@ -67,15 +68,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   creature: {fileID: 8128628987299982847}
-  currentFoodSources:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  foodLayer:
+  currentTargets: []
+  targetLayer:
     serializedVersion: 2
-    m_Bits: 8192
+    m_Bits: 0
+  sightRangeMultiplier: 1
+  sightRange: 5
+  multiplierLimit: 10
+  inDanger: 0
+  enemy: {fileID: 0}
 --- !u!136 &4634341430977063834
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -159,7 +160,7 @@ GameObject:
   - component: {fileID: 4710540982320739096}
   - component: {fileID: 1967650767365408056}
   - component: {fileID: 2202359478452459519}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: GFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}

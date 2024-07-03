@@ -1,10 +1,11 @@
 ﻿using Entities;
+using UnityEngine;
 
 namespace Creatures
 {
-    public class CreatureEntityBase : EntityBase<CreatureEntityData>
+    public class CreatureEntityBase : MonoBehaviour, IEntity<CreatureEntityData>
     {
-        public override CreatureEntityData GetEntityData => entityData;
+        public CreatureEntityData GetEntityData { get; }
     }
     
 }
