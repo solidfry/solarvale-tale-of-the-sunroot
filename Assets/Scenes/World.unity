@@ -10112,7 +10112,7 @@ MonoBehaviour:
   m_z: 0
   m_isFoldedOut: 0
   m_width: 100
-  m_height: 7
+  m_height: 5
   m_blendStrength: 0.5
   m_absoluteHeightValue: 0
   m_rotation: 0
@@ -10376,8 +10376,8 @@ MonoBehaviour:
     m_blendMode: 0
     m_imageMaskLocation: 0
     m_strength: 1
-    m_seaLevel: 30
-    m_maxWorldHeight: 66.35251
+    m_seaLevel: 0
+    m_maxWorldHeight: 0
     m_minWorldHeight: 0
     m_xOffSet: 0
     m_zOffSet: 0
@@ -10387,7 +10387,7 @@ MonoBehaviour:
     m_zScale: 1
     m_rotationDegrees: 0
     m_tiling: 0
-    m_imageMaskSpace: 1
+    m_imageMaskSpace: 0
     m_imageMaskTextureGUID: 
     m_imageMaskFilterMode: 0
     m_imageMaskColorSelectionColor: {r: 1, g: 1, b: 1, a: 1}
@@ -10531,7 +10531,7 @@ MonoBehaviour:
       m_warpIterations: 0.6973783
       m_warpStrength: 0.9334392
       m_warpOffset: {x: 131.88863, y: -790.25446, z: 9.614468, w: 0}
-    m_noiseSettings: {fileID: 328761423}
+    m_noiseSettings: {fileID: 471371874}
     m_noiseToolSettings:
       worldHeightRemap: {x: 0, y: 0}
       coordSpace: 0
@@ -10583,8 +10583,8 @@ MonoBehaviour:
     m_blendMode: 0
     m_imageMaskLocation: 0
     m_strength: 1
-    m_seaLevel: 30
-    m_maxWorldHeight: 66.35251
+    m_seaLevel: 0
+    m_maxWorldHeight: 0
     m_minWorldHeight: 0
     m_xOffSet: 0
     m_zOffSet: 0
@@ -12078,30 +12078,6 @@ MonoBehaviour:
     m_selectedWorldBiomeMaskGUID: 
     m_growAndShrinkValue: 0
     m_globalSpawnerMaskStackRT: {fileID: 0}
---- !u!114 &328761423
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cba17d399ab86974c8ef9551f6e8f8d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  transformSettings:
-    translation: {x: -219.88208, y: -311.00653, z: 1037.8025}
-    scale: {x: 2.833992, y: 1, z: 2.833992}
-    rotation: {x: 0, y: 0, z: 0}
-    flipScaleX: 0
-    flipScaleY: 0
-    flipScaleZ: 0
-  domainSettings:
-    noiseTypeName: Perlin
-    fractalTypeName: Fbm
-    noiseTypeParams: 
-    fractalTypeParams: '{"warpOffsets":{"x":131.8886260986328,"y":-790.2544555664063,"z":9.61446762084961,"w":0.0},"octavesMinMax":{"x":0.0,"y":16.0},"amplitudeMinMax":{"x":0.0,"y":1.0},"frequencyMinMax":{"x":0.0,"y":2.0},"lacunarityMinMax":{"x":0.0,"y":4.0},"persistenceMinMax":{"x":0.0,"y":1.0},"warpIterationsMinMax":{"x":0.0,"y":8.0},"warpStrengthMinMax":{"x":-2.0,"y":2.0},"octaves":8.0,"amplitude":0.48794734477996828,"frequency":1.0,"persistence":0.5,"lacunarity":0.9288221597671509,"warpIterations":0.6973782777786255,"warpStrength":0.9334391951560974,"warpEnabled":true,"warpExpanded":true}'
 --- !u!1 &330713498 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1212861422484096858, guid: 7e4a7a976af12854991a02db7fc0bf34,
@@ -20462,6 +20438,30 @@ Transform:
   - {fileID: 1972127327}
   m_Father: {fileID: 1339193820}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &471371874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cba17d399ab86974c8ef9551f6e8f8d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transformSettings:
+    translation: {x: -219.88208, y: -311.00653, z: 1037.8025}
+    scale: {x: 2.833992, y: 1, z: 2.833992}
+    rotation: {x: 0, y: 0, z: 0}
+    flipScaleX: 0
+    flipScaleY: 0
+    flipScaleZ: 0
+  domainSettings:
+    noiseTypeName: Perlin
+    fractalTypeName: Fbm
+    noiseTypeParams: 
+    fractalTypeParams: '{"warpOffsets":{"x":131.8886260986328,"y":-790.2544555664063,"z":9.61446762084961,"w":0.0},"octavesMinMax":{"x":0.0,"y":16.0},"amplitudeMinMax":{"x":0.0,"y":1.0},"frequencyMinMax":{"x":0.0,"y":2.0},"lacunarityMinMax":{"x":0.0,"y":4.0},"persistenceMinMax":{"x":0.0,"y":1.0},"warpIterationsMinMax":{"x":0.0,"y":8.0},"warpStrengthMinMax":{"x":-2.0,"y":2.0},"octaves":8.0,"amplitude":0.48794734477996828,"frequency":1.0,"persistence":0.5,"lacunarity":0.9288221597671509,"warpIterations":0.6973782777786255,"warpStrength":0.9334391951560974,"warpEnabled":true,"warpExpanded":true}'
 --- !u!1001 &471892744
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23927,7 +23927,7 @@ MonoBehaviour:
   m_showGizmos: 1
   m_showDebug: 0
   m_baseTerrainStamped: 0
-  m_updateTimeAllowed: 0.033333335
+  m_updateTimeAllowed: 0.5
   m_spawnProgress: 0
   m_spawnComplete: 1
   m_spawnerBounds:
@@ -23940,7 +23940,7 @@ MonoBehaviour:
   m_spawnRuleStampsToggleAllState: 1
   m_drawPreview: 0
   m_previewRuleIds: 
-  m_maxWorldHeight: 187.53412
+  m_maxWorldHeight: 185.34657
   m_minWorldHeight: 0
   m_showSeaLevelinStampPreview: 1
   m_terrainGeneratorPanelUnfolded: 1
@@ -23968,7 +23968,7 @@ MonoBehaviour:
     m_imageMaskLocation: 1
     m_strength: 1
     m_seaLevel: 30
-    m_maxWorldHeight: 187.53412
+    m_maxWorldHeight: 185.34657
     m_minWorldHeight: 0
     m_xOffSet: 0
     m_zOffSet: 0
@@ -24157,7 +24157,7 @@ MonoBehaviour:
     m_imageMaskLocation: 1
     m_strength: 1
     m_seaLevel: 30
-    m_maxWorldHeight: 187.53412
+    m_maxWorldHeight: 185.34657
     m_minWorldHeight: 0
     m_xOffSet: 0
     m_zOffSet: 0
@@ -26078,7 +26078,7 @@ MonoBehaviour:
   m_showSeaLevelPlane: 0
   m_showRulers: 0
   m_syncHeightmaps: 1
-  m_stampDirty: 0
+  m_stampDirty: 1
   m_worldMapStampToken: {fileID: 0}
   m_recordUndo: 0
   m_currentStamperUndoOperation: 0
@@ -55414,7 +55414,7 @@ MonoBehaviour:
   m_spawnRuleStampsToggleAllState: 1
   m_drawPreview: 0
   m_previewRuleIds: 
-  m_maxWorldHeight: 66.35251
+  m_maxWorldHeight: 0
   m_minWorldHeight: 0
   m_showSeaLevelinStampPreview: 1
   m_terrainGeneratorPanelUnfolded: 1
@@ -71337,7 +71337,7 @@ PrefabInstance:
     - target: {fileID: 380971381481859421, guid: 401c56c995cf8364e82e5581541a6f44,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.75
+      value: 7.29
       objectReference: {fileID: 0}
     - target: {fileID: 380971381481859421, guid: 401c56c995cf8364e82e5581541a6f44,
         type: 3}
@@ -72398,7 +72398,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 73d6d2c0ac3c9b7489893a1694c72fef,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 29
+      value: 30.26
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 73d6d2c0ac3c9b7489893a1694c72fef,
         type: 3}
@@ -72454,7 +72454,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 82bde0b472bc24cfdbdf5732a2f7f1d8, type: 2}
+      objectReference: {fileID: 2100000, guid: a925bed9a28d1c943a189d25c16eb3b9, type: 2}
     - target: {fileID: 919132149155446097, guid: 73d6d2c0ac3c9b7489893a1694c72fef,
         type: 3}
       propertyPath: m_Name
@@ -79475,7 +79475,7 @@ MonoBehaviour:
   m_isWorldmapSpawner: 0
   m_spawnRange: 512
   m_generateRandomSeed: 1
-  m_randomSeed: 580031840
+  m_randomSeed: 1420301884
   m_spawnDensity: 0.8
   m_resourcesPath: 
   m_spawnerRules:
@@ -79484,7 +79484,7 @@ MonoBehaviour:
     m_useExtendedSpawn: 0
     m_minRequiredFitness: 0.25
     m_minInstanceRequiredFitness: 0
-    m_failureRate: 0
+    m_failureRate: 0.681
     m_maxInstances: 40000000
     m_ignoreMaxInstances: 0
     m_minDirection: 0
@@ -79505,7 +79505,7 @@ MonoBehaviour:
       m_imageMaskLocation: 1
       m_strength: 1
       m_seaLevel: 30
-      m_maxWorldHeight: 187.53412
+      m_maxWorldHeight: 185.34657
       m_minWorldHeight: 0
       m_xOffSet: 0
       m_zOffSet: 0
@@ -79694,7 +79694,7 @@ MonoBehaviour:
       m_imageMaskLocation: 1
       m_strength: 1
       m_seaLevel: 30
-      m_maxWorldHeight: 187.53412
+      m_maxWorldHeight: 185.34657
       m_minWorldHeight: 0
       m_xOffSet: 0
       m_zOffSet: 0
@@ -79900,7 +79900,7 @@ MonoBehaviour:
     m_inactiveInstanceCnt: 0
     m_resourceSettingsFoldedOut: 1
     m_isHelpActive: 0
-    m_spawnedInstances: 0
+    m_spawnedInstances: 173
     m_goSpawnTargetMode: 0
     m_goSpawnTarget: {fileID: 0}
     m_terrainGOSpawnTargetName: Gaia Game Object Spawns
@@ -79943,7 +79943,7 @@ MonoBehaviour:
       m_imageMaskLocation: 1
       m_strength: 1
       m_seaLevel: 30
-      m_maxWorldHeight: 187.53412
+      m_maxWorldHeight: 185.34657
       m_minWorldHeight: 0
       m_xOffSet: 0
       m_zOffSet: 0
@@ -80132,7 +80132,7 @@ MonoBehaviour:
       m_imageMaskLocation: 1
       m_strength: 1
       m_seaLevel: 30
-      m_maxWorldHeight: 187.53412
+      m_maxWorldHeight: 185.34657
       m_minWorldHeight: 0
       m_xOffSet: 0
       m_zOffSet: 0
@@ -80338,7 +80338,7 @@ MonoBehaviour:
     m_inactiveInstanceCnt: 0
     m_resourceSettingsFoldedOut: 1
     m_isHelpActive: 0
-    m_spawnedInstances: 0
+    m_spawnedInstances: 22
     m_goSpawnTargetMode: 0
     m_goSpawnTarget: {fileID: 0}
     m_terrainGOSpawnTargetName: Gaia Game Object Spawns
@@ -80369,7 +80369,7 @@ MonoBehaviour:
     m_imageMaskLocation: 0
     m_strength: 1
     m_seaLevel: 30
-    m_maxWorldHeight: 187.53412
+    m_maxWorldHeight: 185.34657
     m_minWorldHeight: 0
     m_xOffSet: 0
     m_zOffSet: 0
@@ -80558,7 +80558,7 @@ MonoBehaviour:
     m_imageMaskLocation: 0
     m_strength: 1
     m_seaLevel: 30
-    m_maxWorldHeight: 187.53412
+    m_maxWorldHeight: 185.34657
     m_minWorldHeight: 0
     m_xOffSet: 0
     m_zOffSet: 0
@@ -80765,7 +80765,7 @@ MonoBehaviour:
     m_imageMaskLocation: 0
     m_strength: 1
     m_seaLevel: 30
-    m_maxWorldHeight: 187.53412
+    m_maxWorldHeight: 185.34657
     m_minWorldHeight: 0
     m_xOffSet: 0
     m_zOffSet: 0
