@@ -20,7 +20,7 @@ RenderSettings:
   m_FogDensity: 0.001
   m_LinearFogStart: 5
   m_LinearFogEnd: 1100
-  m_AmbientSkyColor: {r: 0.51255, g: 0.52611744, b: 0.603, a: 1}
+  m_AmbientSkyColor: {r: 1, g: 1, b: 1, a: 1}
   m_AmbientEquatorColor: {r: 0.3, g: 0.22584271, b: 0.20898877, a: 1}
   m_AmbientGroundColor: {r: 0.042307694, g: 0.046153847, b: 0.05, a: 1}
   m_AmbientIntensity: 0
@@ -10531,7 +10531,7 @@ MonoBehaviour:
       m_warpIterations: 0.6973783
       m_warpStrength: 0.9334392
       m_warpOffset: {x: 131.88863, y: -790.25446, z: 9.614468, w: 0}
-    m_noiseSettings: {fileID: 455704005}
+    m_noiseSettings: {fileID: 1015110638}
     m_noiseToolSettings:
       worldHeightRemap: {x: 0, y: 0}
       coordSpace: 0
@@ -19636,30 +19636,6 @@ Transform:
   - {fileID: 961018922}
   m_Father: {fileID: 1858571714}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &455704005
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cba17d399ab86974c8ef9551f6e8f8d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  transformSettings:
-    translation: {x: -219.88208, y: -311.00653, z: 1037.8025}
-    scale: {x: 2.833992, y: 1, z: 2.833992}
-    rotation: {x: 0, y: 0, z: 0}
-    flipScaleX: 0
-    flipScaleY: 0
-    flipScaleZ: 0
-  domainSettings:
-    noiseTypeName: Perlin
-    fractalTypeName: Fbm
-    noiseTypeParams: 
-    fractalTypeParams: '{"warpOffsets":{"x":131.8886260986328,"y":-790.2544555664063,"z":9.61446762084961,"w":0.0},"octavesMinMax":{"x":0.0,"y":16.0},"amplitudeMinMax":{"x":0.0,"y":1.0},"frequencyMinMax":{"x":0.0,"y":2.0},"lacunarityMinMax":{"x":0.0,"y":4.0},"persistenceMinMax":{"x":0.0,"y":1.0},"warpIterationsMinMax":{"x":0.0,"y":8.0},"warpStrengthMinMax":{"x":-2.0,"y":2.0},"octaves":8.0,"amplitude":0.48794734477996828,"frequency":1.0,"persistence":0.5,"lacunarity":0.9288221597671509,"warpIterations":0.6973782777786255,"warpStrength":0.9334391951560974,"warpEnabled":true,"warpExpanded":true}'
 --- !u!1 &455922791
 GameObject:
   m_ObjectHideFlags: 0
@@ -34103,11 +34079,12 @@ MonoBehaviour:
   _simSettingsSeaFloorDepth: {fileID: 11400000, guid: c13fdd7c1fe2467418dc47f43fa81ace,
     type: 2}
   _createFoamSim: 1
-  _simSettingsFoam: {fileID: 0}
-  _createDynamicWaveSim: 0
-  _simSettingsDynamicWaves: {fileID: 0}
-  _createFlowSim: 0
-  _simSettingsFlow: {fileID: 0}
+  _simSettingsFoam: {fileID: 11400000, guid: 39839e85f32328547a866ea2f28b9743, type: 2}
+  _createDynamicWaveSim: 1
+  _simSettingsDynamicWaves: {fileID: 11400000, guid: 0ac2b3f85e4ec7f4ab40c1bbbd074d8a,
+    type: 2}
+  _createFlowSim: 1
+  _simSettingsFlow: {fileID: 11400000, guid: a98757a6a2855434b86b2aa3f00c7fc1, type: 2}
   _createShadowData: 1
   _simSettingsShadow: {fileID: 11400000, guid: ae2ec2d96fb266f46915780cc18affd5, type: 2}
   _createClipSurfaceData: 1
@@ -34115,7 +34092,7 @@ MonoBehaviour:
   _defaultClippingState: 0
   _createAlbedoData: 1
   _settingsAlbedo: {fileID: 11400000, guid: 7a148d778870ffb4081fbf990144ead7, type: 2}
-  _surfaceSelfIntersectionFixMode: 2
+  _surfaceSelfIntersectionFixMode: 0
   _underwaterCullLimit: 0.001
   _verifyOpaqueAndDepthTexturesEnabled: 1
   _showOceanProxyPlane: 0
@@ -42307,6 +42284,30 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1013508063}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1015110638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cba17d399ab86974c8ef9551f6e8f8d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transformSettings:
+    translation: {x: -219.88208, y: -311.00653, z: 1037.8025}
+    scale: {x: 2.833992, y: 1, z: 2.833992}
+    rotation: {x: 0, y: 0, z: 0}
+    flipScaleX: 0
+    flipScaleY: 0
+    flipScaleZ: 0
+  domainSettings:
+    noiseTypeName: Perlin
+    fractalTypeName: Fbm
+    noiseTypeParams: 
+    fractalTypeParams: '{"warpOffsets":{"x":131.8886260986328,"y":-790.2544555664063,"z":9.61446762084961,"w":0.0},"octavesMinMax":{"x":0.0,"y":16.0},"amplitudeMinMax":{"x":0.0,"y":1.0},"frequencyMinMax":{"x":0.0,"y":2.0},"lacunarityMinMax":{"x":0.0,"y":4.0},"persistenceMinMax":{"x":0.0,"y":1.0},"warpIterationsMinMax":{"x":0.0,"y":8.0},"warpStrengthMinMax":{"x":-2.0,"y":2.0},"octaves":8.0,"amplitude":0.48794734477996828,"frequency":1.0,"persistence":0.5,"lacunarity":0.9288221597671509,"warpIterations":0.6973782777786255,"warpStrength":0.9334391951560974,"warpEnabled":true,"warpExpanded":true}'
 --- !u!1 &1015278034 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1212861422484096858, guid: 7e4a7a976af12854991a02db7fc0bf34,
