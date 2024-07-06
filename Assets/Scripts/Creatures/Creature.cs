@@ -13,7 +13,7 @@ namespace Creatures
         [SerializeField] Rigidbody rigidBody;
         [SerializeField] NavMeshAgent agent;
         [SerializeField] CapsuleCollider capsule;
-        
+        [SerializeField] Animator animator;
         [field:SerializeField] public float CurrentSightRange { get; set; }
         
         [FormerlySerializedAs("behaviourBehaviourTreeBase")] [SerializeField] CreatureBehaviourTree behaviourTree;
@@ -28,6 +28,7 @@ namespace Creatures
         private void Start() => RegisterWithManager();
         
         public NavMeshAgent GetAgent() => agent;
+        public Animator GetAnimator() => animator;
         
         #region Initialisation
 

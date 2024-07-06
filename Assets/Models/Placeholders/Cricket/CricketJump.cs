@@ -80,6 +80,7 @@ public class CricketJump : MonoBehaviour
         // Smoothly rotate towards the target rotation if rotating
         if (isRotating)
         {
+            // TODO ANGELA: naughty code causes error
             transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, Time.deltaTime / rotateDuration);
 
             // Check if rotation is complete

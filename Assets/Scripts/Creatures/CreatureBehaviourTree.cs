@@ -2,9 +2,9 @@
 using System.Linq;
 using Behaviour.Pathfinding;
 using Creatures.Stats;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.AI;
-using Yarn.Compiler;
 using Sequence = Behaviour.Pathfinding.Sequence;
 
 namespace Creatures
@@ -21,13 +21,20 @@ namespace Creatures
         [SerializeField] int multiplierLimit = 10;
         [SerializeField] bool inDanger;
         
+        Animator _animator;
+        
         NavMeshAgent _agent;
         
         BehaviourTree _tree;
         CreatureStatsDataBase _stats;
+        
 
         [SerializeField] private Transform enemy;
-        
+        private static readonly int IsMoving = Animator.StringToHash("isMoving");
+        private static readonly int IsSearching = Animator.StringToHash("isSearching");
+        private static readonly int IsEating = Animator.StringToHash("isEating");
+        private static readonly int Speed = Animator.StringToHash("speed");
+
         public void Initialise()
         {
             if (creature == null)
@@ -36,10 +43,13 @@ namespace Creatures
             }
             _agent = creature.GetAgent();
             _stats = creature.GetStats;
-            _tree = new BehaviourTree($"{creature.GetEntityData?.name}");
+            _animator = creature.GetAnimator();
+
+            Debug.Log(_animator);
             
             sightRange = _stats.SightRange * sightRangeMultiplier;
 
+            _tree = new BehaviourTree($"{creature.GetEntityData?.name}");
             CreateBehaviourTree();
         }
         
@@ -63,12 +73,35 @@ namespace Creatures
         {
             sightRangeMultiplier = sightRangeMultiplier < multiplierLimit ? sightRangeMultiplier + 1 : multiplierLimit;
         }
+        
+        
 
         private void Update()
         {
             _tree.Process();
+            HandleMovementAnimations();
         }
-        
+
+        private void HandleMovementAnimations()
+        {
+            if (_animator == null) return;
+
+            var speed = Mathf.Clamp01(_agent.velocity.magnitude / _stats.RunSpeedMultiplier);
+            // Debug.Log(speed);            
+            _animator.SetFloat(Speed, speed);
+            
+            switch (speed)
+            {
+                case 0:
+                    _animator.SetBool(IsMoving, false);
+                    break;
+                default:
+                    _animator.SetBool(IsMoving, true);
+                    break;
+            }
+           
+        }
+
         private void CreateBehaviourTree()
         {
             PrioritySelector actions = new PrioritySelector("Creature Logic");
@@ -101,7 +134,9 @@ namespace Creatures
             Leaf find = new Leaf("FindTarget", new Condition(() => {
             
                 Collider[] colliders = Physics.OverlapSphere(transform.position, sightRange, targetLayer);
-            
+                
+                _animator.SetBool(IsSearching, true);
+                
                 foreach (var col in colliders)
                 {
                     if (currentTargets.Contains(col.transform)) continue;
@@ -128,8 +163,10 @@ namespace Creatures
             Leaf checkTargetValid = new Leaf("CheckTargetValid", new Condition(() => currentTargets.Count > 0));
             
             Leaf moveToTarget = new Leaf("MoveToTarget", new Condition(() => {
-                if (currentTargets.Count > 0 && currentTargets[0] != null) {
-                    _agent.SetDestination(currentTargets[0].position);
+                if (currentTargets.Count > 0 && currentTargets[0] != null)
+                {
+                    RotateTowardsThenMove(currentTargets[0].position, _stats.TurningSpeed ,_stats.Speed);
+                    // I want to turn the creature over time to face the target
                     return true;
                 }
                 return false;
@@ -145,13 +182,13 @@ namespace Creatures
                 currentTargets[0].gameObject.SetActive(false);
                 currentTargets.RemoveAt(0);
                 // Debug.Log(creature + " finished eating");
-                //animator.SetBool("isEating", false);
+                _animator.SetBool(IsEating, false);
                 
                 findAndMoveToTarget.Reset();
             }, () =>
             {
                 // Debug.Log(creature + " is eating");
-                // animator.SetBool("isEating", true);
+                _animator.SetBool(IsEating, true);
             }));
             
             findAndMoveToTarget.AddChild(find);
@@ -165,7 +202,30 @@ namespace Creatures
             
             _tree.AddChild(actions);
         }
+
+        private void RotateTowardsThenMove(Vector3 position, float rotationSpeed, float speed = 1f)
+        {
+            if (_agent == null) return;
+            _agent.transform.DORotateQuaternion( 
+                Quaternion.LookRotation(position - _agent.transform.position), 
+                rotationSpeed).OnComplete(() =>
+            {
+                Move(position, speed);
+            });
+        }
+
+        private void Move(Vector3 position, float speed = 1f)
+        {
+            // _animator.SetBool(IsWalking, true);
+            _agent.SetDestination(position);
+            _agent.speed = speed;
+        }
         
+        private void Run(Vector3 position, float speed = 1f)
+        {
+            Move(position, speed * _stats.RunSpeedMultiplier);
+        }
+
         public void SetEnemy(Transform enemy)
         {
             this.enemy = enemy;

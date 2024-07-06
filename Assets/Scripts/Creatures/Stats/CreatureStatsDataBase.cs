@@ -24,6 +24,7 @@ namespace Creatures.Stats
         [field: SerializeField] public float Speed { get; protected set; }
         [field: SerializeField] public float RunSpeedMultiplier { get; protected set; }
         [field: SerializeField] public float AngularSpeed { get; protected set; }
+        [field: SerializeField] public float TurningSpeed { get; protected set; }
         [field: SerializeField] public float Acceleration { get; protected set; }
         [field: SerializeField] public float StoppingDistance { get; protected set; }
         
