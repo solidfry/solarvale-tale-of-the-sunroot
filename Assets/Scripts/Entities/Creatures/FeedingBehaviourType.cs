@@ -1,4 +1,4 @@
-namespace Creatures
+namespace Entities.Creatures
 {
     public enum FeedingBehaviourType
     {

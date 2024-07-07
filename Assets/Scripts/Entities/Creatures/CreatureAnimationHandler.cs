@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.AI;
 
-namespace Creatures
+namespace Entities.Creatures
 {
     [RequireComponent(typeof(Creature))]
     public class CreatureAnimationHandler : MonoBehaviour
@@ -55,15 +55,13 @@ namespace Creatures
         
         private void HandleRotationDuringMovement()
         {
+            if (_agent.velocity.magnitude < 0.1f) return;
             var direction = _agent.velocity.normalized;
             var lookRotation = Quaternion.LookRotation(direction);
             var rotation = Quaternion.Lerp(transform.rotation, lookRotation, Time.deltaTime * _creature.GetStats.TurningSpeed);
             transform.rotation = rotation;
         }
-
         
-        
-
         public void SetSearching(bool isSearching)
         {
             _animator.SetBool(IsSearching, isSearching);

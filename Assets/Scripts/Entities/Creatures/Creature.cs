@@ -1,11 +1,9 @@
-﻿using Creatures.Stats;
-using Entities;
+﻿using Entities.Creatures.Stats;
 using Events;
 using UnityEngine;
 using UnityEngine.AI;
-using UnityEngine.Serialization;
 
-namespace Creatures
+namespace Entities.Creatures
 {
     [RequireComponent(typeof(NavMeshAgent), typeof(Rigidbody), typeof(CapsuleCollider))]
     public class Creature : Entity
@@ -14,14 +12,13 @@ namespace Creatures
         [SerializeField] NavMeshAgent agent;
         [SerializeField] CapsuleCollider capsule;
         [SerializeField] Animator animator;
-        [field:SerializeField] public float CurrentSightRange { get; set; }
         
         [SerializeField] CreatureBehaviourTree behaviourTree;
         public CreatureBehaviourTree GetBehaviourTree => behaviourTree ??= GetComponent<CreatureBehaviourTree>();
         
-        CreatureStatsDataBase _stats;
+        CreatureStatsData _stats;
         
-        public CreatureStatsDataBase GetStats => _stats;
+        public CreatureStatsData GetStats => _stats;
 
         private void Awake() => Initialise();
 
@@ -70,7 +67,7 @@ namespace Creatures
             ConfigureAgent(_stats);
         }
 
-        private void ConfigureAgent (CreatureStatsDataBase creatureStats)
+        private void ConfigureAgent (CreatureStatsData creatureStats)
         {
             if (creatureStats is null) return;
             agent.height = creatureStats.Height;
@@ -86,7 +83,7 @@ namespace Creatures
             ConfigureColliderSize(_stats);
         }
 
-        private void ConfigureColliderSize(CreatureStatsDataBase creatureStats)
+        private void ConfigureColliderSize(CreatureStatsData creatureStats)
         {
             if (creatureStats is null) return;
             capsule.direction = (int)creatureStats.CapsuleDirection; 

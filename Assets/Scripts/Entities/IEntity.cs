@@ -1,4 +1,7 @@
-﻿using JetBrains.Annotations;
+﻿using Entities.Plants;
+using Events;
+using JetBrains.Annotations;
+using UnityEngine;
 
 namespace Entities
 {
@@ -6,5 +9,13 @@ namespace Entities
     {
         [CanBeNull] T GetEntityData { get; }
     }
- 
+
+    public interface IEdible : IEntity<PlantEntityData>
+    {
+        void Consume();
+        bool IsConsumed { get; }
+        void Reset();
+        Transform  GetTransform { get; }
+    }
+    
 }

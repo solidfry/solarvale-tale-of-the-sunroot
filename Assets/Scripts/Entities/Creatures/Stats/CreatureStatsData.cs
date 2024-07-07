@@ -1,7 +1,8 @@
-﻿using UnityEngine;
-using UnityEngine.UI;
+﻿using System.Collections.Generic;
+using Entities.Plants;
+using UnityEngine;
 
-namespace Creatures.Stats
+namespace Entities.Creatures.Stats
 {
     public enum DirectionAxis
     {
@@ -9,7 +10,7 @@ namespace Creatures.Stats
         Y = 1,
         Z = 2
     }
-    public abstract class CreatureStatsDataBase : ScriptableObject
+    public abstract class CreatureStatsData : EntityStatsBase
     {
         [field: SerializeField] public float SightRange { get; protected set; }
         
@@ -39,8 +40,11 @@ namespace Creatures.Stats
         
         [field:Header("Feeding")]
         [field: SerializeField] public float FeedRate { get; protected set; }
+        [field: SerializeField] public List<EntityData> PreferredFood { get; protected set; }
         public abstract MovementType MovementType { get; protected set; }
         public abstract FeedingBehaviourType FeedingBehaviourType { get; protected set; }
         public abstract ActivityType ActivityType { get; protected set; }
+        
+        public bool CheckIsInPreferredFood(EntityData plant) => PreferredFood.Contains(plant);
     }
 }

@@ -1,7 +1,7 @@
 ﻿using System;
 using CameraSystem;
-using Creatures;
 using Entities;
+using Entities.Creatures;
 using Interaction;
 using Photography;
 using QuestSystem;
@@ -57,9 +57,13 @@ namespace Events
         public static Action<PhotoData> OnPhotoKeptEvent;
         #endregion
 
-        #region Creature Management
+        #region Entity Management
         public static Action<Creature> OnRegisterCreatureEvent;
+        public static Action<Creature> OnDeregisterCreatureEvent;
+        public static Action<IEdible> OnRegisterEdibleEvent;
+        public static Action<IEdible> OnDeregisterEdibleEvent;
+        public static Action<IEdible> OnSendEdibleEatenEvent;
         #endregion
-      
+        
     }
 }

@@ -80,12 +80,12 @@ public class CricketJump : MonoBehaviour
         // Smoothly rotate towards the target rotation if rotating
         if (isRotating)
         {
+            // Ensure rotateDuration is positive and non-zero
+            rotateDuration = Mathf.Max(rotateDuration, 0.01f); // Adjust 0.01f as needed
 
             float t = Mathf.Clamp(Time.deltaTime / rotateDuration, 0.01f, 1f);
-            transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, t);            // fix the error above
-            
+            transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, t);
 
-            // Check if rotation is complete
             if (Quaternion.Angle(transform.rotation, targetRotation) < 0.1f)
             {
                 isRotating = false;

@@ -18,6 +18,6 @@ namespace Entities
             }
         }
 
-        public EntityType EntityType => entityType;
+        public virtual EntityType EntityType => entityType;
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace Creatures.Stats
+﻿namespace Entities.Creatures
 {
     public enum MovementType
     {

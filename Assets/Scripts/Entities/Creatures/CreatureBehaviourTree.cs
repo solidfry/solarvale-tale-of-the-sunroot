@@ -1,15 +1,14 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using Behaviour.Pathfinding;
-using Creatures.Stats;
 using DG.Tweening;
+using Entities.Creatures.Stats;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Events;
-using UnityEngine.Serialization;
 using Sequence = Behaviour.Pathfinding.Sequence;
 
-namespace Creatures
+namespace Entities.Creatures
 {
     [RequireComponent(typeof(Creature))]
     public class CreatureBehaviourTree : MonoBehaviour
@@ -26,7 +25,7 @@ namespace Creatures
         #region Members
         NavMeshAgent _agent;
         BehaviourTree _tree;
-        CreatureStatsDataBase _stats;
+        CreatureStatsData _stats;
         Tween _rotationAndMoveTween;
         #endregion
         
@@ -110,33 +109,45 @@ namespace Creatures
             Sequence findAndMoveToTarget = new Sequence("FindAndMoveToTarget", 50);
 
             Leaf find = new Leaf("FindTarget", new Condition(() => {
-            
                 Collider[] colliders = Physics.OverlapSphere(transform.position, sightRange, targetLayer);
-                
-                // _animator.SetBool(IsSearching, true);
-                
                 onFindTarget?.Invoke();
+                
+                if (colliders.Length == 0 && currentTargets.Count == 0)
+                {
+                    IncrementSightRange();
+                    MultiplySightRange();
+                    Debug.Log("No colliders found");
+                    return false;
+                }
                 
                 foreach (var col in colliders)
                 {
-                    if (currentTargets.Contains(col.transform)) continue;
-                    currentTargets.Add(col.transform);
-                    sightRangeMultiplier = 1;
-                    sightRange = _stats.SightRange;
-                    onTargetFound?.Invoke();
-                    return true;
-                }
-                
-                if (currentTargets.Count == 0 || currentTargets[0] == null)
-                {
-                    IncrementSightRange();
-                    
-                    MultiplySightRange();
-                    // Debug.Log(creature + " increased sight range to " + sightRange);
-                    return false;
+                    if (!col.TryGetComponent(out IEdible edible))
+                    {
+                        Debug.Log("No edible found");
+                        continue;
+                    }
+                    if (edible.IsConsumed || currentTargets.Contains(edible.GetTransform))
+                    {
+                        Debug.Log("Edible is consumed or already in the list");
+                        continue;
+                    }
+                    if (creature.GetStats.CheckIsInPreferredFood(edible.GetEntityData))
+                    {
+                        currentTargets.Add(edible.GetTransform);
+                        sightRangeMultiplier = 1;
+                        sightRange = _stats.SightRange;
+                        edible.Consume();
+                        onTargetFound?.Invoke();
+                        Debug.Log("Edible found");
+                        return true;
+                    }
                 }
 
+                Debug.Log("No edible found");
+                // If targets are already present, just invoke the event without changing the sight range
                 onTargetFound?.Invoke();
+    
                 return true;
             }));
             
@@ -164,7 +175,8 @@ namespace Creatures
             Leaf consume = new Leaf("ConsumeTarget", new DoActionWhileDelayingActionStrategy( _stats.FeedRate, () => {
                 if (currentTargets.Count == 0) return;
                 // This needs to be a coroutine
-                currentTargets[0].gameObject.SetActive(false);
+                
+                // currentTargets[0].gameObject.SetActive(false);
                 currentTargets.RemoveAt(0);
 
                 onConsumingEnd?.Invoke();
@@ -216,12 +228,12 @@ namespace Creatures
             // Unityevent when in danger
             if (distance)
             {
-                Debug.Log("In danger");
+                // Debug.Log("In danger");
                 onDangerEnter?.Invoke();
             }
             else
             {
-                Debug.Log("Not in danger");
+                // Debug.Log("Not in danger");
                 onDangerEnd?.Invoke();
             }
             

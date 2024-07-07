@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
-using Entities;
+using Entities.Plants;
 using UnityEngine;
 
-namespace Creatures.Stats
+namespace Entities.Creatures.Stats
 {
-    [CreateAssetMenu(fileName = "New Omnivore Stats Data", menuName = "Entities/Stats/Omnivore Stats Data", order = 0)]
-    public class OmnivoreStatsData : CreatureStatsDataBase
+    [CreateAssetMenu(fileName = "New Omnivore Stats Data", menuName = "Entities/Creatures/Stats/Omnivore Stats Data", order = 0)]
+    public class OmnivoreStatsData : CreatureStatsData
     {
         [field:Header("Omnivore Stats")]
         [field: SerializeField] public override FeedingBehaviourType FeedingBehaviourType { get; protected set; } = FeedingBehaviourType.Omnivore;

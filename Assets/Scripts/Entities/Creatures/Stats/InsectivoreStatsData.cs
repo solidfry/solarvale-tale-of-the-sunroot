@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-namespace Creatures.Stats
+namespace Entities.Creatures.Stats
 {
-    [CreateAssetMenu(fileName = "New Insectivore Stats Data", menuName = "Entities/Stats/Insectivore Stats Data",
+    [CreateAssetMenu(fileName = "New Insectivore Stats Data", menuName = "Entities/Creatures/Stats/Insectivore Stats Data",
         order = 0)]
-    public class InsectivoreStatsData : CreatureStatsDataBase
+    public class InsectivoreStatsData : CreatureStatsData
     {
         [field:Header("Insectivore Stats")]
         [field:SerializeField] public override FeedingBehaviourType FeedingBehaviourType { get; protected set; } = FeedingBehaviourType.Insectivore;

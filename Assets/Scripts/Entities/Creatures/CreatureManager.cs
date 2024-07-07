@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using Events;
 using UnityEngine;
 
-namespace Creatures
+namespace Entities.Creatures
 {
     public class CreatureManager : MonoBehaviour
     {
