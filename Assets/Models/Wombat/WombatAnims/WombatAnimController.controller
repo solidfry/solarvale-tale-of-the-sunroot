@@ -109,6 +109,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: isSearching
     m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: isEating
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -606671850087649688}
   m_Solo: 0
@@ -130,7 +133,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Sniff
+  m_Name: Search
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -339,7 +342,7 @@ AnimatorStateMachine:
     m_Position: {x: 290, y: 120, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -606671850087649688}
-    m_Position: {x: 290, y: 240, z: 0}
+    m_Position: {x: 290, y: 220, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 4213075087158888530}
     m_Position: {x: 520, y: 120, z: 0}

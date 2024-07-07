@@ -13,8 +13,11 @@
 						</Effect>
 						<Effect Name="Gentle_Program_Compressor_Minus_14dB_RMS" ID="{1595E6B0-DD58-4363-A3F0-DF0C96EC7C17}" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
 							<PropertyList>
-								<Property Name="Ratio" Type="Real32" Value="3"/>
-								<Property Name="Threshold" Type="Real32" Value="-14"/>
+								<Property Name="AttackTime" Type="Real32" Value="0.49"/>
+								<Property Name="OutputGain" Type="Real32" Value="1.1"/>
+								<Property Name="Ratio" Type="Real32" Value="2.7"/>
+								<Property Name="ReleaseTime" Type="Real32" Value="0.56"/>
+								<Property Name="Threshold" Type="Real32" Value="-26.7"/>
 							</PropertyList>
 						</Effect>
 						<Effect Name="Hard_Knee_Minus_3dB_RMS" ID="{D083BAE5-F9EF-426B-A311-D9DF8DFE8807}" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
@@ -1607,11 +1610,13 @@
 						</Effect>
 						<Effect Name="Special_Effect_1" ID="{83317D8A-9D4C-438E-BE8C-BC7D27CAD1B0}" PluginName="Wwise Flanger" CompanyID="0" PluginID="125" PluginType="3">
 							<PropertyList>
-								<Property Name="DelayTime" Type="Real32" Value="10"/>
-								<Property Name="DryLevel" Type="Real32" Value="0"/>
-								<Property Name="ModDepth" Type="Real32" Value="80"/>
-								<Property Name="ModFrequency" Type="Real32" Value="2"/>
+								<Property Name="DelayTime" Type="Real32" Value="20.5"/>
+								<Property Name="DryLevel" Type="Real32" Value="0.31"/>
+								<Property Name="FeedForwardLevel" Type="Real32" Value="0"/>
+								<Property Name="ModDepth" Type="Real32" Value="43.2"/>
+								<Property Name="ModFrequency" Type="Real32" Value="3.38"/>
 								<Property Name="ModPWM" Type="Real32" Value="0"/>
+								<Property Name="ModSmoothing" Type="Real32" Value="39"/>
 							</PropertyList>
 						</Effect>
 						<Folder Name="Static Comb Filtering" ID="{6044FF31-2237-4EC5-B94F-9C0C25CFAC44}" ShortID="504290141">
@@ -1858,12 +1863,12 @@
 					<ChildrenList>
 						<Effect Name="Say_what" ID="{E823825D-3114-4F6D-A6A4-7FB673A10A61}" PluginName="Wwise Tremolo" CompanyID="0" PluginID="131" PluginType="3">
 							<PropertyList>
-								<Property Name="ModFrequency" Type="Real32" Value="1.18"/>
-								<Property Name="ModPWM" Type="Real32" Value="27"/>
-								<Property Name="ModPhaseOffset" Type="Real32" Value="-180"/>
+								<Property Name="ModDepth" Type="Real32" Value="76.8"/>
+								<Property Name="ModFrequency" Type="Real32" Value="40.48"/>
+								<Property Name="ModPWM" Type="Real32" Value="30"/>
 								<Property Name="ModPhaseSpread" Type="Real32" Value="58"/>
-								<Property Name="ModSmoothing" Type="Real32" Value="56"/>
-								<Property Name="ModWaveform" Type="int32" Value="2"/>
+								<Property Name="ModSmoothing" Type="Real32" Value="100"/>
+								<Property Name="ModWaveform" Type="int32" Value="1"/>
 							</PropertyList>
 						</Effect>
 						<Effect Name="Rhythmic_Talk" ID="{F0F27454-4BCC-4302-A61D-C324E7187DD0}" PluginName="Wwise Tremolo" CompanyID="0" PluginID="131" PluginType="3">

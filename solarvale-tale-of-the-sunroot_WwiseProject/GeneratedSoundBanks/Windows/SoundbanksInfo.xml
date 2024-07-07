@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{035620BC-CC86-77C9-3B7D-ED34048C254C}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{198C1E84-B308-4FB1-90CC-D64AB4930C78}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -22,7 +22,7 @@
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 			</Busses>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{A6448AE5-00FC-242F-6D36-A3B036F8B833}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{7DFA99F4-11A5-1A4D-66EF-08C869A91A5D}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -42,10 +42,6 @@
 					<ShortName>BrandIntro-Birds.wav</ShortName>
 					<CachePath>SFX/BrandIntro-Birds_A7BD7755.wem</CachePath>
 				</File>
-				<File Id="954250796" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Button_Click.wav</ShortName>
-					<CachePath>SFX/Button_Click_818F3B66.wem</CachePath>
-				</File>
 				<File Id="1029364635" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>soundscape.wav</ShortName>
 					<CachePath>SFX/soundscape_9F772F2C.wem</CachePath>
@@ -53,11 +49,13 @@
 			</Media>
 			<Plugins>
 				<Custom>
-					<Plugin Id="29179224" Name="Tone Generator" LibName="Wwise Tone Generator" LibId="6684674"/>
+					<Plugin Id="684394001" Name="Tone Generator" LibName="Wwise Tone Generator" LibId="6684674"/>
 					<Plugin Id="760665764" Name="Tone Generator" LibName="Wwise Tone Generator" LibId="6684674"/>
 				</Custom>
 				<ShareSets>
-					<Plugin Id="3948262040" Name="Octave_Down" LibName="Wwise Pitch Shifter" LibId="8912899"/>
+					<Plugin Id="418265525" Name="Gentle_Program_Compressor_Minus_14dB_RMS" LibName="Wwise Compressor" LibId="7077891"/>
+					<Plugin Id="2805769450" Name="Special_Effect_1" LibName="Wwise Flanger" LibId="8192003"/>
+					<Plugin Id="3250156175" Name="Say_what" LibName="Wwise Tremolo" LibId="8585219"/>
 				</ShareSets>
 			</Plugins>
 			<Events>
@@ -66,22 +64,28 @@
 						<MediaRef Id="879010177"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1149159311" Name="Play_Button_Click" DurationType="OneShot" DurationMin="0.7894785" DurationMax="0.7894785">
-					<MediaRefs>
-						<MediaRef Id="954250796"/>
-					</MediaRefs>
+				<Event Id="1149159311" Name="Play_Button_Click" DurationType="OneShot" DurationMin="0.10683536" DurationMax="0.10683536">
 					<PluginRefs>
+						<Custom>
+							<PluginRef Id="684394001"/>
+						</Custom>
 						<ShareSets>
-							<PluginRef Id="3948262040"/>
+							<PluginRef Id="418265525"/>
+							<PluginRef Id="2805769450"/>
+							<PluginRef Id="3250156175"/>
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="4021863785" Name="Play_Button_Hover" DurationType="OneShot" DurationMin="0.101" DurationMax="0.101">
+				<Event Id="4021863785" Name="Play_Button_Hover" DurationType="OneShot" DurationMin="0.14763717" DurationMax="0.14763717">
 					<PluginRefs>
 						<Custom>
-							<PluginRef Id="29179224"/>
 							<PluginRef Id="760665764"/>
 						</Custom>
+						<ShareSets>
+							<PluginRef Id="418265525"/>
+							<PluginRef Id="2805769450"/>
+							<PluginRef Id="3250156175"/>
+						</ShareSets>
 					</PluginRefs>
 				</Event>
 				<Event Id="3337834332" Name="Play_GameIntro_SoundScape" DurationType="OneShot" DurationMin="53.70775" DurationMax="53.70775">
@@ -107,5 +111,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{8E5CDE64-0D68-6DAD-79C8-2CDFECA1CBF4}</FileHash>
+	<FileHash>{AC2B03F1-7B1B-36F4-7B89-FD0DC02664D9}</FileHash>
 </SoundBanksInfo>

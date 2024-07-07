@@ -5,6 +5,8 @@ using Creatures.Stats;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Events;
+using UnityEngine.Serialization;
 using Sequence = Behaviour.Pathfinding.Sequence;
 
 namespace Creatures
@@ -21,20 +23,22 @@ namespace Creatures
         [SerializeField] int multiplierLimit = 10;
         [SerializeField] bool inDanger;
         
-        Animator _animator;
-        
+        #region Members
         NavMeshAgent _agent;
-        
         BehaviourTree _tree;
         CreatureStatsDataBase _stats;
+        Tween _rotationAndMoveTween;
+        #endregion
         
+        [SerializeField] UnityEvent onFindTarget;
+        [SerializeField] UnityEvent onTargetFound;
+        [SerializeField] UnityEvent onConsumingEnter;
+        [SerializeField] UnityEvent onConsumingEnd;
+        [SerializeField] UnityEvent onDangerEnter;
+        [SerializeField] UnityEvent onDangerEnd;
 
         [SerializeField] private Transform enemy;
-        private static readonly int IsMoving = Animator.StringToHash("isMoving");
-        private static readonly int IsSearching = Animator.StringToHash("isSearching");
-        private static readonly int IsEating = Animator.StringToHash("isEating");
-        private static readonly int Speed = Animator.StringToHash("speed");
-
+        
         public void Initialise()
         {
             if (creature == null)
@@ -43,9 +47,6 @@ namespace Creatures
             }
             _agent = creature.GetAgent();
             _stats = creature.GetStats;
-            _animator = creature.GetAnimator();
-
-            Debug.Log(_animator);
             
             sightRange = _stats.SightRange * sightRangeMultiplier;
 
@@ -73,33 +74,10 @@ namespace Creatures
         {
             sightRangeMultiplier = sightRangeMultiplier < multiplierLimit ? sightRangeMultiplier + 1 : multiplierLimit;
         }
-        
-        
 
         private void Update()
         {
             _tree.Process();
-            HandleMovementAnimations();
-        }
-
-        private void HandleMovementAnimations()
-        {
-            if (_animator == null) return;
-
-            var speed = Mathf.Clamp01(_agent.velocity.magnitude / _stats.RunSpeedMultiplier);
-            // Debug.Log(speed);            
-            _animator.SetFloat(Speed, speed);
-            
-            switch (speed)
-            {
-                case 0:
-                    _animator.SetBool(IsMoving, false);
-                    break;
-                default:
-                    _animator.SetBool(IsMoving, true);
-                    break;
-            }
-           
         }
 
         private void CreateBehaviourTree()
@@ -135,7 +113,9 @@ namespace Creatures
             
                 Collider[] colliders = Physics.OverlapSphere(transform.position, sightRange, targetLayer);
                 
-                _animator.SetBool(IsSearching, true);
+                // _animator.SetBool(IsSearching, true);
+                
+                onFindTarget?.Invoke();
                 
                 foreach (var col in colliders)
                 {
@@ -143,7 +123,7 @@ namespace Creatures
                     currentTargets.Add(col.transform);
                     sightRangeMultiplier = 1;
                     sightRange = _stats.SightRange;
-                    // Debug.Log(creature + " found target " + col.transform);
+                    onTargetFound?.Invoke();
                     return true;
                 }
                 
@@ -156,7 +136,7 @@ namespace Creatures
                     return false;
                 }
 
-                // Debug.Log(creature + " found target " + currentTargets[0]);
+                onTargetFound?.Invoke();
                 return true;
             }));
             
@@ -165,30 +145,34 @@ namespace Creatures
             Leaf moveToTarget = new Leaf("MoveToTarget", new Condition(() => {
                 if (currentTargets.Count > 0 && currentTargets[0] != null)
                 {
-                    RotateTowardsThenMove(currentTargets[0].position, _stats.TurningSpeed ,_stats.Speed);
-                    // I want to turn the creature over time to face the target
+                    Move(currentTargets[0].position, _stats.Speed);
                     return true;
                 }
                 return false;
             }));    
             
             Leaf isTargetInRangeForAction = new Leaf("IsTargetInRangeForAction", new Condition(() => {
-                var isInRange = Vector3.Distance(_agent.transform.position, currentTargets[0].position) <= _agent.stoppingDistance + 1f && !_agent.pathPending; // + 1f to account for the stopping distance
+                // Ensure the path is complete
+                if (_agent.pathStatus != NavMeshPathStatus.PathComplete) return false;
+
+                // Check if the remaining distance is less than or equal to the stopping distance
+                var isInRange = _agent.remainingDistance <= _agent.stoppingDistance;
+
                 return isInRange;
             }));
             
             Leaf consume = new Leaf("ConsumeTarget", new DoActionWhileDelayingActionStrategy( _stats.FeedRate, () => {
                 if (currentTargets.Count == 0) return;
+                // This needs to be a coroutine
                 currentTargets[0].gameObject.SetActive(false);
                 currentTargets.RemoveAt(0);
-                // Debug.Log(creature + " finished eating");
-                _animator.SetBool(IsEating, false);
+
+                onConsumingEnd?.Invoke();
                 
                 findAndMoveToTarget.Reset();
             }, () =>
             {
-                // Debug.Log(creature + " is eating");
-                _animator.SetBool(IsEating, true);
+                onConsumingEnter?.Invoke();
             }));
             
             findAndMoveToTarget.AddChild(find);
@@ -201,17 +185,6 @@ namespace Creatures
             actions.AddChild(findAndMoveToTarget);
             
             _tree.AddChild(actions);
-        }
-
-        private void RotateTowardsThenMove(Vector3 position, float rotationSpeed, float speed = 1f)
-        {
-            if (_agent == null) return;
-            _agent.transform.DORotateQuaternion( 
-                Quaternion.LookRotation(position - _agent.transform.position), 
-                rotationSpeed).OnComplete(() =>
-            {
-                Move(position, speed);
-            });
         }
 
         private void Move(Vector3 position, float speed = 1f)
@@ -240,6 +213,18 @@ namespace Creatures
         {
             if (enemy is null) return false;
             var distance =  Vector3.Distance(transform.position, enemy.position) <= _stats.DangerDetectionRange;
+            // Unityevent when in danger
+            if (distance)
+            {
+                Debug.Log("In danger");
+                onDangerEnter?.Invoke();
+            }
+            else
+            {
+                Debug.Log("Not in danger");
+                onDangerEnd?.Invoke();
+            }
+            
             return distance;
         }
         

@@ -177,6 +177,29 @@
 									</ReferenceList>
 									<ChildrenList>
 										<Sound Name="Hover_1" ID="{E5AA1729-8BAB-4E34-B168-407A1B8DA01B}" ShortID="917007752">
+											<PropertyList>
+												<Property Name="Highpass" Type="int16">
+													<ValueList>
+														<Value>8</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Lowpass" Type="int16">
+													<ValueList>
+														<Value>57</Value>
+													</ValueList>
+												</Property>
+												<Property Name="MakeUpGain" Type="Real64">
+													<ValueList>
+														<Value>1</Value>
+													</ValueList>
+												</Property>
+												<Property Name="OverrideEffect" Type="bool" Value="True"/>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>610</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
@@ -188,48 +211,61 @@
 											<ChildrenList>
 												<SourcePlugin Name="Tone Generator" ID="{E3CC9D07-77D5-435E-A1AE-72E343D50918}" ShortID="760665764" PluginName="Wwise Tone Generator" CompanyID="0" PluginID="102">
 													<PropertyList>
-														<Property Name="AttackTime" Type="Real32" Value="0.9"/>
-														<Property Name="DecayTime" Type="Real32" Value="1.9"/>
-														<Property Name="FixDur" Type="Real32" Value="0.101"/>
-														<Property Name="StartFreq" Type="Real32" Value="34"/>
-														<Property Name="SustainLevel" Type="Real32" Value="-24.6"/>
-														<Property Name="SustainTime" Type="Real32" Value="4.7"/>
-														<Property Name="WaveGain" Type="Real32" Value="-27.6"/>
-														<Property Name="WaveType" Type="int32" Value="3"/>
+														<Property Name="AttackTime" Type="Real32" Value="0.3"/>
+														<Property Name="DecayTime" Type="Real32" Value="0.4"/>
+														<Property Name="FixDur" Type="Real32" Value="0.21"/>
+														<Property Name="StartFreq" Type="Real32" Value="190"/>
+														<Property Name="StartFreqRandMax" Type="Real32" Value="310"/>
+														<Property Name="StartFreqRandMin" Type="Real32" Value="-168"/>
+														<Property Name="StopFreq" Type="Real32" Value="69"/>
+														<Property Name="StopFreqRandMax" Type="Real32" Value="238"/>
+														<Property Name="StopFreqRandMin" Type="Real32" Value="-132"/>
+														<Property Name="SustainLevel" Type="Real32" Value="0"/>
+														<Property Name="SustainTime" Type="Real32" Value="0.2"/>
+														<Property Name="WaveGain" Type="Real32" Value="-24"/>
 													</PropertyList>
 													<Language>SFX</Language>
 												</SourcePlugin>
 											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Effects">
+													<Reference>
+														<Local>
+															<EffectSlot Name="" ID="{7B0CBE76-17F9-4EFB-9D25-26857CBF83A4}" ShortID="548120351">
+																<ReferenceList>
+																	<Reference Name="Effect" PluginName="Wwise Flanger" CompanyID="0" PluginID="125" PluginType="3">
+																		<ObjectRef Name="Special_Effect_1" ID="{83317D8A-9D4C-438E-BE8C-BC7D27CAD1B0}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+																	</Reference>
+																</ReferenceList>
+															</EffectSlot>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<EffectSlot Name="" ID="{660BCCFC-30DA-459D-87A2-542C8009595F}" ShortID="829461450">
+																<ReferenceList>
+																	<Reference Name="Effect" PluginName="Wwise Tremolo" CompanyID="0" PluginID="131" PluginType="3">
+																		<ObjectRef Name="Say_what" ID="{E823825D-3114-4F6D-A6A4-7FB673A10A61}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+																	</Reference>
+																</ReferenceList>
+															</EffectSlot>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<EffectSlot Name="" ID="{952A4EB8-A0C6-44B1-A243-668FD1EA30CA}" ShortID="201930244">
+																<ReferenceList>
+																	<Reference Name="Effect" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
+																		<ObjectRef Name="Gentle_Program_Compressor_Minus_14dB_RMS" ID="{1595E6B0-DD58-4363-A3F0-DF0C96EC7C17}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+																	</Reference>
+																</ReferenceList>
+															</EffectSlot>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
 											<ActiveSourceList>
 												<ActiveSource Name="Tone Generator" ID="{E3CC9D07-77D5-435E-A1AE-72E343D50918}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Hover_2" ID="{E52A259C-E2C9-4149-8D33-7C50BC3FA2CD}" ShortID="442377071">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<SourcePlugin Name="Tone Generator" ID="{A5B2B0BF-C0FB-4B02-BA12-0B14ADF57573}" ShortID="29179224" PluginName="Wwise Tone Generator" CompanyID="0" PluginID="102">
-													<PropertyList>
-														<Property Name="AttackTime" Type="Real32" Value="0.9"/>
-														<Property Name="DecayTime" Type="Real32" Value="1.9"/>
-														<Property Name="FixDur" Type="Real32" Value="0.101"/>
-														<Property Name="StartFreq" Type="Real32" Value="34"/>
-														<Property Name="SustainLevel" Type="Real32" Value="-24.6"/>
-														<Property Name="SustainTime" Type="Real32" Value="4.7"/>
-														<Property Name="WaveGain" Type="Real32" Value="-19.4"/>
-														<Property Name="WaveType" Type="int32" Value="3"/>
-													</PropertyList>
-													<Language>SFX</Language>
-												</SourcePlugin>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Tone Generator" ID="{A5B2B0BF-C0FB-4B02-BA12-0B14ADF57573}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
 									</ChildrenList>
@@ -244,9 +280,29 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<Sound Name="Click_1" ID="{89F8EFFF-A61B-4A00-8636-E327E0FB035F}" ShortID="621835855">
+										<Sound Name="Click" ID="{7B6898A4-A2EB-462F-AB2A-D82C66C74403}" ShortID="918283496">
 											<PropertyList>
+												<Property Name="Highpass" Type="int16">
+													<ValueList>
+														<Value>66</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Lowpass" Type="int16">
+													<ValueList>
+														<Value>55</Value>
+													</ValueList>
+												</Property>
+												<Property Name="MakeUpGain" Type="Real64">
+													<ValueList>
+														<Value>2</Value>
+													</ValueList>
+												</Property>
 												<Property Name="OverrideEffect" Type="bool" Value="True"/>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>1170</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -257,22 +313,54 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="Button_Click" ID="{E0FABE0D-4FA6-4140-A433-B5627CF6355B}">
+												<SourcePlugin Name="Tone Generator" ID="{FEB2697C-6FF2-4BAE-8FF3-A7059B14A9EC}" ShortID="684394001" PluginName="Wwise Tone Generator" CompanyID="0" PluginID="102">
+													<PropertyList>
+														<Property Name="AttackTime" Type="Real32" Value="0.3"/>
+														<Property Name="DecayTime" Type="Real32" Value="0.4"/>
+														<Property Name="FixDur" Type="Real32" Value="0.21"/>
+														<Property Name="StartFreq" Type="Real32" Value="1646"/>
+														<Property Name="StartFreqRandMax" Type="Real32" Value="236"/>
+														<Property Name="StartFreqRandMin" Type="Real32" Value="-136"/>
+														<Property Name="StopFreq" Type="Real32" Value="69"/>
+														<Property Name="StopFreqRandMax" Type="Real32" Value="238"/>
+														<Property Name="StopFreqRandMin" Type="Real32" Value="-132"/>
+														<Property Name="SustainLevel" Type="Real32" Value="0"/>
+														<Property Name="SustainTime" Type="Real32" Value="0.2"/>
+														<Property Name="WaveGain" Type="Real32" Value="-8.2"/>
+													</PropertyList>
 													<Language>SFX</Language>
-													<AudioFile>Button_Click.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="954250796"/>
-													</MediaIDList>
-												</AudioFileSource>
+												</SourcePlugin>
 											</ChildrenList>
 											<ObjectLists>
 												<ObjectList Name="Effects">
 													<Reference>
 														<Local>
-															<EffectSlot Name="" ID="{6BA306B8-65B5-4BB0-BFD5-BA7EF5E3BF67}" ShortID="73900775">
+															<EffectSlot Name="" ID="{8581195D-FDF5-4538-8D4A-FFC091F98269}" ShortID="572831225">
 																<ReferenceList>
-																	<Reference Name="Effect" PluginName="Wwise Pitch Shifter" CompanyID="0" PluginID="136" PluginType="3">
-																		<ObjectRef Name="Octave_Down" ID="{062EC4B1-5372-4D1E-917B-C757293F2B42}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+																	<Reference Name="Effect" PluginName="Wwise Flanger" CompanyID="0" PluginID="125" PluginType="3">
+																		<ObjectRef Name="Special_Effect_1" ID="{83317D8A-9D4C-438E-BE8C-BC7D27CAD1B0}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+																	</Reference>
+																</ReferenceList>
+															</EffectSlot>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<EffectSlot Name="" ID="{8F1FC23D-4031-4B88-8479-2CB21DDCCB8E}" ShortID="549977796">
+																<ReferenceList>
+																	<Reference Name="Effect" PluginName="Wwise Tremolo" CompanyID="0" PluginID="131" PluginType="3">
+																		<ObjectRef Name="Say_what" ID="{E823825D-3114-4F6D-A6A4-7FB673A10A61}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+																	</Reference>
+																</ReferenceList>
+															</EffectSlot>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<EffectSlot Name="" ID="{055A34BA-7466-4D88-98C6-0CBEF913EEAF}" ShortID="235508658">
+																<ReferenceList>
+																	<Reference Name="Effect" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
+																		<ObjectRef Name="Gentle_Program_Compressor_Minus_14dB_RMS" ID="{1595E6B0-DD58-4363-A3F0-DF0C96EC7C17}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
 																	</Reference>
 																</ReferenceList>
 															</EffectSlot>
@@ -281,29 +369,7 @@
 												</ObjectList>
 											</ObjectLists>
 											<ActiveSourceList>
-												<ActiveSource Name="Button_Click" ID="{E0FABE0D-4FA6-4140-A433-B5627CF6355B}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Click_2" ID="{758D470D-ECD3-4F68-AC9A-9D5161BDAAB5}" ShortID="417966414">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Button_Click" ID="{D1A2AC95-4AEE-4FEF-9909-3910063D09C2}">
-													<Language>SFX</Language>
-													<AudioFile>Button_Click.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="954250796"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Button_Click" ID="{D1A2AC95-4AEE-4FEF-9909-3910063D09C2}" Platform="Linked"/>
+												<ActiveSource Name="Tone Generator" ID="{FEB2697C-6FF2-4BAE-8FF3-A7059B14A9EC}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
 									</ChildrenList>

@@ -16,7 +16,7 @@ namespace Creatures
         [SerializeField] Animator animator;
         [field:SerializeField] public float CurrentSightRange { get; set; }
         
-        [FormerlySerializedAs("behaviourBehaviourTreeBase")] [SerializeField] CreatureBehaviourTree behaviourTree;
+        [SerializeField] CreatureBehaviourTree behaviourTree;
         public CreatureBehaviourTree GetBehaviourTree => behaviourTree ??= GetComponent<CreatureBehaviourTree>();
         
         CreatureStatsDataBase _stats;
