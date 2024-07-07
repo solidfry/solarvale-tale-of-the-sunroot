@@ -41,9 +41,10 @@ namespace Entities.Creatures.Stats
         [field:Header("Feeding")]
         [field: SerializeField] public float FeedRate { get; protected set; }
         [field: SerializeField] public List<EntityData> PreferredFood { get; protected set; }
-        public abstract MovementType MovementType { get; protected set; }
-        public abstract FeedingBehaviourType FeedingBehaviourType { get; protected set; }
-        public abstract ActivityType ActivityType { get; protected set; }
+        public virtual TimidityRating TimidityRating { get; protected set; }
+        public virtual MovementType MovementType { get; protected set; }
+        public virtual FeedingBehaviourType FeedingBehaviourType { get; protected set; }
+        public virtual ActivityType ActivityType { get; protected set; } 
         
         public bool CheckIsInPreferredFood(EntityData entity) => PreferredFood.Contains(entity);
     }

@@ -6,6 +6,7 @@
         Swimmer,
         Flier,
         Climber,
+        Jumper,
         None,
     }
 }

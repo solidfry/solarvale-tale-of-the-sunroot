@@ -8,6 +8,7 @@ namespace Entities.Creatures.Stats
         [field:Header("Carnivore Stats")]
         [field:SerializeField] public override FeedingBehaviourType FeedingBehaviourType { get; protected set; } = FeedingBehaviourType.Carnivore;
         [field:SerializeField] public override ActivityType ActivityType { get; protected set; } = ActivityType.Cathemeral;
+        [field:SerializeField] public override TimidityRating TimidityRating { get; protected set; } = TimidityRating.Timid;
         [field:SerializeField] public override MovementType MovementType { get; protected set; } = MovementType.Walker;
     }
 }
