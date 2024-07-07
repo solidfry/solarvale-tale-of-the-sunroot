@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-using Entities.Plants;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Entities.Creatures.Stats
 {
@@ -11,7 +9,5 @@ namespace Entities.Creatures.Stats
         [field: SerializeField] public override FeedingBehaviourType FeedingBehaviourType { get; protected set; } = FeedingBehaviourType.Omnivore;
         [field:SerializeField] public override ActivityType ActivityType { get; protected set; } = ActivityType.Diurnal;
         [field:SerializeField] public override MovementType MovementType { get; protected set; } = MovementType.Walker;
-        [field: SerializeField] public List<CreatureEntityData> FavouritePrey { get; private set; } = new();
-        [field: SerializeField] public List<PlantEntityData> FavouriteFood { get; private set; } = new();
     }
 }

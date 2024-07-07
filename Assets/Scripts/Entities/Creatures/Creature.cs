@@ -6,17 +6,18 @@ using UnityEngine.AI;
 namespace Entities.Creatures
 {
     [RequireComponent(typeof(NavMeshAgent), typeof(Rigidbody), typeof(CapsuleCollider))]
-    public class Creature : Entity
+    public class Creature : MonoBehaviour, IEntity<CreatureEntityData>
     {
+        [SerializeField] CreatureEntityData entityData;
         [SerializeField] Rigidbody rigidBody;
         [SerializeField] NavMeshAgent agent;
         [SerializeField] CapsuleCollider capsule;
         [SerializeField] Animator animator;
         
         [SerializeField] CreatureBehaviourTree behaviourTree;
-        public CreatureBehaviourTree GetBehaviourTree => behaviourTree ??= GetComponent<CreatureBehaviourTree>();
         
         CreatureStatsData _stats;
+        public CreatureBehaviourTree GetBehaviourTree => behaviourTree ??= GetComponent<CreatureBehaviourTree>();
         
         public CreatureStatsData GetStats => _stats;
 
@@ -106,6 +107,6 @@ namespace Entities.Creatures
 
         #endregion
 
-        public new CreatureEntityData GetEntityData => entityData as CreatureEntityData;
+        public CreatureEntityData GetEntityData => entityData;
     }
 }

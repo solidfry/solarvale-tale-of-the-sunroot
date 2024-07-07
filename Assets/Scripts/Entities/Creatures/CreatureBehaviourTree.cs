@@ -19,10 +19,12 @@ namespace Entities.Creatures
         [SerializeField] private LayerMask targetLayer;
         [SerializeField] int sightRangeMultiplier = 1;
         [SerializeField] float sightRange = 5;
-        [SerializeField] int multiplierLimit = 10;
+        [SerializeField] int multiplierLimit = 20;
         [SerializeField] bool inDanger;
 
         [SerializeField] private int currentTargetCount;
+        [SerializeField] Transform enemy;
+        [SerializeField] Transform target;
         
         #region Members
         List<IEdible> _currentTargets = new (5);
@@ -41,7 +43,6 @@ namespace Entities.Creatures
         [SerializeField] UnityEvent onDangerEnter;
         [SerializeField] UnityEvent onDangerEnd;
         
-        [SerializeField] private Transform enemy;
         
         public void Initialise()
         {
@@ -88,28 +89,27 @@ namespace Entities.Creatures
         {
             PrioritySelector actions = new PrioritySelector("Creature Logic");
             
-            Sequence runToSafety = new Sequence("Run to safety", 100);
+            // Sequence runToSafety = new Sequence("Run to safety", 100);
 
-            bool IsSafe()
-            {
-                if (!inDanger)
-                {
-                    runToSafety.Reset();
-                    return false;
-                }
-                
-                return true;
-            }
-            
-            runToSafety.AddChild(new Leaf("IsSafe?", new Condition(IsSafe)));
-            
-            runToSafety.AddChild( new Leaf("Run away from target", 
-                new MoveAwayFromTarget( 
-                    _agent, enemy,
-                    _stats.RunSpeedMultiplier, _stats.DangerRunTime)));
-            
-            runToSafety.AddChild( new Leaf("IsSafe?", new Condition(CheckInDanger)));
-  
+            // bool IsSafe()
+            // {
+            //     if (!inDanger)
+            //     {
+            //         runToSafety.Reset();
+            //         return false;
+            //     }
+            //     
+            //     return true;
+            // }
+            //
+            // runToSafety.AddChild(new Leaf("IsSafe?", new Condition(IsSafe)));
+            //
+            // runToSafety.AddChild( new Leaf("Run away from target", 
+            //     new MoveAwayFromTarget( 
+            //         _agent, enemy,
+            //         _stats.RunSpeedMultiplier, _stats.DangerRunTime)));
+            //
+            // runToSafety.AddChild( new Leaf("IsSafe?", new Condition(CheckInDanger)));
             
             Sequence findAndMoveToTarget = new Sequence("FindAndMoveToTarget", 50);
 
@@ -117,6 +117,7 @@ namespace Entities.Creatures
                 
                 if (_currentTargets.Count > 0)
                 {
+                    ResetSightRange();
                     onTargetFound?.Invoke();
                     return true;
                 }
@@ -128,7 +129,6 @@ namespace Entities.Creatures
                 {
                     IncrementSightRange();
                     MultiplySightRange();
-                    Debug.Log("No colliders found");
                     return false;
                 }
                 
@@ -139,19 +139,18 @@ namespace Entities.Creatures
                         if (edible.IsConsumed || edible.IsOccupied)
                         {
                             RemoveTarget(edible);
-                            return false;
+                            continue;
                         }
                         AddTarget(edible);
-                        sightRangeMultiplier = 1;
-                        sightRange = _stats.SightRange;
+                        ResetSightRange();
                         onTargetFound?.Invoke();
-                        Debug.Log("Edible found");
                         return true;
                     }
                 }
 
                 // Debug.Log("No edible found");
-                
+                ResetSightRange();
+                onTargetFound?.Invoke();
                 return true;
             }));
             
@@ -167,25 +166,31 @@ namespace Entities.Creatures
             }));    
             
             Leaf isTargetInRangeForAction = new Leaf("IsTargetInRangeForAction", new Condition(() => {
-                // Ensure the path is complete
                 if (_agent.pathStatus != NavMeshPathStatus.PathComplete) return false;
-
-                // Check if the remaining distance is less than or equal to the stopping distance
-                var isInRange = _agent.remainingDistance <= _agent.stoppingDistance + _stats.Width;
-                // _agent.destination = _agent.transform.position;
+                var isInRange = Vector3.Distance( transform.position, _currentTargets[0].GetTransform.position) <= _agent.stoppingDistance + _stats.Width;  
                 _agent.isStopped = isInRange;
                 return isInRange;
             }));
             
-            Leaf consume = new Leaf("ConsumeTarget", new DoActionWhileDelayingActionStrategy( _stats.FeedRate, () => {
+            Leaf consume = new Leaf("ConsumeTarget", new DoActionWhileDelayingActionStrategy(_stats.FeedRate, () => {
                 if (_currentTargets.Count == 0) return;
-                // This needs to be a coroutine
-                _currentTargets[0].Consume();
-                RemoveTargetAtPosition();
-                onConsumingEnd?.Invoke();
-                findAndMoveToTarget.Reset();
-            }, () =>
-            {
+
+                // Calculate the distance to the target
+                float distanceToTarget = Vector3.Distance(transform.position, _currentTargets[0].GetTransform.position);
+
+                // Check if within consuming range
+                if (distanceToTarget <= _agent.stoppingDistance + _stats.Width)
+                {
+                    _currentTargets[0].Consume();
+                    RemoveTargetAtPosition();
+                    onConsumingEnd?.Invoke();
+                    _tree.Reset();
+                }
+                else
+                {
+                    Move(_currentTargets[0].GetTransform.position, _stats.Speed);
+                }
+            }, () => {
                 onConsumingEnter?.Invoke();
             }));
             
@@ -195,28 +200,39 @@ namespace Entities.Creatures
             findAndMoveToTarget.AddChild(isTargetInRangeForAction);
             findAndMoveToTarget.AddChild(consume);
             
-            actions.AddChild(runToSafety);
+            // actions.AddChild(runToSafety);
             actions.AddChild(findAndMoveToTarget);
             
             _tree.AddChild(actions);
         }
-        
+
+        private void ResetSightRange()
+        {
+            sightRangeMultiplier = 1;
+            sightRange = _stats.SightRange;
+        }
+
         void AddTarget(IEdible targetToAdd)
         {
-            currentTargetCount++;
             _currentTargets.Add(targetToAdd);
+            UpdateCurrentTarget();
+        }
+
+        private void UpdateCurrentTarget()
+        {
+            target = _currentTargets[0].GetTransform;
         }
 
         void RemoveTargetAtPosition(int position = 0)
         {
             _currentTargets.RemoveAt(position);
-            currentTargetCount--;
+            UpdateCurrentTarget();
         }
 
         void RemoveTarget(IEdible targetToRemove)
         {
             _currentTargets.Remove(targetToRemove);
-            currentTargetCount--;
+            UpdateCurrentTarget();
         }
 
         private void Move(Vector3 position, float speed = 1f)

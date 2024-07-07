@@ -55,7 +55,6 @@ MonoBehaviour:
   agent: {fileID: 4464062114528373576}
   capsule: {fileID: 4634341430977063834}
   animator: {fileID: 0}
-  <CurrentSightRange>k__BackingField: 0
   behaviourTree: {fileID: 8330634126723671534}
 --- !u!114 &8330634126723671534
 MonoBehaviour:
@@ -70,14 +69,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   creature: {fileID: 8128628987299982847}
-  currentTargets: []
   targetLayer:
     serializedVersion: 2
     m_Bits: 0
   sightRangeMultiplier: 1
   sightRange: 5
-  multiplierLimit: 10
+  multiplierLimit: 20
   inDanger: 0
+  currentTargetCount: 0
   onFindTarget:
     m_PersistentCalls:
       m_Calls: []
@@ -90,7 +89,14 @@ MonoBehaviour:
   onConsumingEnd:
     m_PersistentCalls:
       m_Calls: []
+  onDangerEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  onDangerEnd:
+    m_PersistentCalls:
+      m_Calls: []
   enemy: {fileID: 0}
+  target: {fileID: 0}
 --- !u!136 &4634341430977063834
 CapsuleCollider:
   m_ObjectHideFlags: 0

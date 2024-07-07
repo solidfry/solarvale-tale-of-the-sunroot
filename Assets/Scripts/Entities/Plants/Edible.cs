@@ -46,11 +46,13 @@ namespace Entities.Plants
 
         private void OnTriggerEnter(Collider other)
         {
-            if (!HasSpace) return;
+            if (!HasSpace || IsOccupied) return;
             if (other.TryGetComponent(out IEntity<CreatureEntityData> entity))
             {
-                if (entity.GetEntityData != null && entity.GetEntityData.GetStats().CheckIsInPreferredFood(this.GetEntityData))
+                Debug.Log("Creature is in the trigger");
+                if (entity.GetEntityData != null)
                 {
+                    Debug.Log("Creature is in the trigger and is in preferred food");
                     currentOccupationCount++;
                 }
             }
@@ -58,10 +60,11 @@ namespace Entities.Plants
 
         private void OnTriggerExit(Collider other)
         {
-            if (!other.TryGetComponent(out IEntity<CreatureEntityData> entity)) return;
-            
-            if (entity.GetEntityData != null && entity.GetEntityData.GetStats().CheckIsInPreferredFood(this.GetEntityData))
-                currentOccupationCount--;
+            if (other.TryGetComponent(out IEntity<CreatureEntityData> entity))
+            {
+                if (entity.GetEntityData != null)
+                    currentOccupationCount--;
+            }
         }
 
         public void Consume()
