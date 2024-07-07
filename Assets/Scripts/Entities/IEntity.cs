@@ -16,6 +16,7 @@ namespace Entities
         bool IsConsumed { get; }
         void Reset();
         Transform  GetTransform { get; }
+        bool IsOccupied { get; }
     }
     
 }

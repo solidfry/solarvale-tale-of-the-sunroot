@@ -6,5 +6,7 @@ namespace Entities.Plants
     public class PlantStatsData : EntityStatsBase
     {
         [field: SerializeField] public float GrowthTime { get; protected set; } = 60f;
+        [field: SerializeField] public int OccupationCapacity { get; protected set; } = 4;
+        [field: SerializeField] public float OccupationRadius { get; protected set; } = 5f;
     }
 }

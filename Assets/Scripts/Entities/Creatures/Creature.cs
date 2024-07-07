@@ -71,7 +71,7 @@ namespace Entities.Creatures
         {
             if (creatureStats is null) return;
             agent.height = creatureStats.Height;
-            agent.radius = creatureStats.Length / 2f;
+            agent.radius = creatureStats.AvoidanceRadius;
             agent.acceleration = creatureStats.Acceleration;
             agent.speed =  creatureStats.Speed;
             agent.angularSpeed = creatureStats.AngularSpeed;

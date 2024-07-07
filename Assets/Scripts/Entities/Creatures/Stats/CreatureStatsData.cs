@@ -45,6 +45,6 @@ namespace Entities.Creatures.Stats
         public abstract FeedingBehaviourType FeedingBehaviourType { get; protected set; }
         public abstract ActivityType ActivityType { get; protected set; }
         
-        public bool CheckIsInPreferredFood(EntityData plant) => PreferredFood.Contains(plant);
+        public bool CheckIsInPreferredFood(EntityData entity) => PreferredFood.Contains(entity);
     }
 }
