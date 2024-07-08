@@ -1,7 +1,9 @@
-﻿using Entities.Creatures.Stats;
+﻿using Behaviour.ScriptableBehaviour;
+using Entities.Creatures.Stats;
 using Events;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Events;
 
 namespace Entities.Creatures
 {
@@ -14,11 +16,16 @@ namespace Entities.Creatures
         [SerializeField] CapsuleCollider capsule;
         [SerializeField] Animator animator;
         
-        [SerializeField] CreatureBehaviourTree behaviourTree;
+        [field: SerializeField] public float CurrentSightRange { get; set; } = 5;
+        [field: SerializeField] public float CurrentSightRangeMultiplier { get; set; } = 1;
+        [field: SerializeField] public int CurrentMultiplierLimit { get; private set; } = 20;
+        
+        // [SerializeField] CreatureBehaviourTree behaviourTree;
         
         CreatureStatsData _stats;
-        public CreatureBehaviourTree GetBehaviourTree => behaviourTree ??= GetComponent<CreatureBehaviourTree>();
+        // public CreatureBehaviourTree GetBehaviourTree => behaviourTree ??= GetComponent<CreatureBehaviourTree>();
         
+        [SerializeField] CreatureScriptableBehaviourTree behaviourTree;
         public CreatureStatsData GetStats => _stats;
 
         private void Awake() => Initialise();
@@ -27,6 +34,22 @@ namespace Entities.Creatures
         
         public NavMeshAgent GetAgent() => agent;
         public Animator GetAnimator() => animator;
+        
+        public Rigidbody GetRigidbody() => rigidBody;
+
+        #region Events
+
+        [Space(10)]
+        [Header("Events")]
+        [SerializeField] public UnityEvent onFindTarget = new();
+        [SerializeField] public UnityEvent onTargetFound = new();
+        [SerializeField] public UnityEvent onConsumingEnter = new();
+        [SerializeField] public UnityEvent onConsumingEnd = new();
+        [SerializeField] public UnityEvent onDangerEnter = new();
+        [SerializeField] public UnityEvent onDangerEnd = new();
+        [SerializeField] public UnityEvent onStartMove = new();
+        [SerializeField] public UnityEvent onTargetReached = new();
+        #endregion
         
         #region Initialisation
 
@@ -39,7 +62,7 @@ namespace Entities.Creatures
             SetupCollider();
             SetupAgent();
             
-            GetBehaviourTree.Initialise();
+            // GetBehaviourTree.Initialise();
         }
 
         private void CheckCrucialSystems()
@@ -52,10 +75,11 @@ namespace Entities.Creatures
             }
             
             _stats ??= GetEntityData.GetStats();
+            CurrentSightRange = _stats.SightRange;
             agent ??= GetComponent<NavMeshAgent>();
             rigidBody ??= GetComponent<Rigidbody>();
             capsule ??= GetComponent<CapsuleCollider>();
-            behaviourTree ??= GetComponent<CreatureBehaviourTree>();
+            // behaviourTree ??= GetComponent<CreatureBehaviourTree>();
         }
         private void SetupAgent()
         {
@@ -106,6 +130,28 @@ namespace Entities.Creatures
         }
 
         #endregion
+        
+        public void Move(Vector3 position, float speed = 1f)
+        {
+            agent.SetDestination(position);
+            agent.speed = speed;
+        }
+        
+        private void Run(Vector3 position, float speed = 1f)
+        {
+            Move(position, speed * _stats.RunSpeedMultiplier);
+        }
+        
+        public void IncrementSightRange(BehaviourTreeContext context)
+        {
+            context.Creature.CurrentSightRange = context.Creature.CurrentSightRangeMultiplier < context.Creature.CurrentMultiplierLimit ? context.Creature.CurrentSightRangeMultiplier + 1 : context.Creature.CurrentSightRangeMultiplier;
+            MultiplySightRange(context);
+        }
+
+        private void MultiplySightRange(BehaviourTreeContext context)
+        {
+            context.Creature.CurrentSightRange = context.Creature.GetStats.SightRange * context.Creature.CurrentSightRangeMultiplier;
+        }
 
         public CreatureEntityData GetEntityData => entityData;
     }
