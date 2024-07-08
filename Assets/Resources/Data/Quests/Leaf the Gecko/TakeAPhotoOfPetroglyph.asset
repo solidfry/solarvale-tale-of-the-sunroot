@@ -10,12 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d20fa9520fd541c8b8c885b9f8aa712c, type: 3}
-  m_Name: Search for Clues
+  m_Name: TakeAPhotoOfPetroglyph
   m_EditorClassIdentifier: 
-  <Title>k__BackingField: Tracing Leaf's Steps
-  <Description>k__BackingField: Investigate and find clues of leafs origin
+  <Title>k__BackingField: Clues to Leaf's Origin
+  <Description>k__BackingField: Take a Photo of the petroglyph on the rock
   isCompleted: 0
-  questConditions: []
+  questConditions:
+  - {fileID: 11400000, guid: a7ca1a92e0d06294b822a7bcb087d767, type: 2}
   initialisationActions: []
   cleanUpInitialisationActionsOnComplete: 0
-  nextQuest: {fileID: 0}
+  nextQuest: {fileID: 11400000, guid: 402e72f5352904e4db312a37a373fcbe, type: 2}
