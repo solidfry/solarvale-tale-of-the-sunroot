@@ -8,36 +8,18 @@ namespace Behaviour.ScriptableBehaviour
     [CreateAssetMenu(fileName = "FindTargetNode", menuName = "Behaviours/Nodes/FindTargetNode")]
     public class FindTargetNode : NodeSo
     {
-        private bool hasEntered = false;
-
-        [SerializeField]
-        public UnityEvent onFindTarget;
-        [SerializeField]
-        public UnityEvent onTargetFound;
+        
 
         public override NodeState Process(BehaviourTreeContext context)
         {
-            if (!hasEntered)
-            {
-                if (context.Creature.onFindTarget != null)
-                {
-                    onFindTarget = context.Creature.onFindTarget;
-                }
-            
-                if (context.Creature.onTargetFound != null)
-                {
-                    onTargetFound = context.Creature.onTargetFound;
-                }
-                hasEntered = true;
-            }
-            
             var t = context.CurrentTargets;
             t.Clear();
             context.Tree.UpdateCurrentTargets(t);
             
+            context.Creature.onFindTarget?.Invoke();
+            
             // Find all colliders within sight range and target layer
             Collider[] colliders = Physics.OverlapSphere(context.Agent.transform.position, context.Creature.CurrentSightRange, context.TargetLayer);
-            onFindTarget?.Invoke();
 
             foreach (var col in colliders)
             {
@@ -58,7 +40,7 @@ namespace Behaviour.ScriptableBehaviour
                 context.SetTarget(context.CurrentTargets[0].GetTransform);
                 Debug.Log($"Target found: {context.Target.name}");
                 
-                onTargetFound?.Invoke();
+                context.Creature.onTargetFound?.Invoke();
                 nodeState = NodeState.Success;
             }
             else
@@ -67,17 +49,14 @@ namespace Behaviour.ScriptableBehaviour
                 context.Creature.IncrementSightRange(context);
                 nodeState = NodeState.Failure;
             }
+            
+            if (nodeState == NodeState.Success)
+            {
+                context.Creature.ResetSightRange();
+            }
 
-            hasEntered = false;
             return nodeState;
         }
-
-        public override void Reset()
-        {
-            base.Reset();
-            hasEntered = false;
-            onFindTarget = new UnityEvent();
-            onTargetFound = new UnityEvent();
-        }
+        
     }
 }

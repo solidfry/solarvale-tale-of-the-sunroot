@@ -10,27 +10,11 @@ namespace Behaviour.ScriptableBehaviour
     {
         private bool hasEntered = false;
         
-        [SerializeField]
-        public UnityEvent onStartMove;
-
-        [SerializeField]
-        public UnityEvent onTargetReached;
-
         public override NodeState Process(BehaviourTreeContext context)
         {
             if (!hasEntered)
             {
-                if (context.Creature.onStartMove != null)
-                {
-                    onStartMove = context.Creature.onStartMove;
-                }
-                
-                if (context.Creature.onTargetReached != null)
-                {
-                    onTargetReached = context.Creature.onTargetReached;
-                }
-                
-                onStartMove?.Invoke();
+                context.Creature.onStartMove?.Invoke();
                 hasEntered = true;
             }
 
@@ -48,10 +32,16 @@ namespace Behaviour.ScriptableBehaviour
             if (CheckCondition(context))
             {
                 nodeState = NodeState.Success;
-                onTargetReached?.Invoke();
+                context.Creature.onTargetReached?.Invoke();
                 hasEntered = false;
             }
 
+            if (context.Agent.pathStatus == NavMeshPathStatus.PathPartial)
+            {
+                nodeState = NodeState.Failure;
+                // Reset();
+                hasEntered = false;
+            }
             return nodeState;
         }
 
@@ -65,8 +55,6 @@ namespace Behaviour.ScriptableBehaviour
         public override void Reset()
         {
             hasEntered = false;
-            onTargetReached = null;
-            onStartMove = null;
         }
     }
 }

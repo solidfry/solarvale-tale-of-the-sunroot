@@ -1,6 +1,5 @@
 ﻿using Behaviour.Pathfinding;
 using UnityEngine;
-using UnityEngine.Events;
 
 namespace Behaviour.ScriptableBehaviour
 {
@@ -10,25 +9,12 @@ namespace Behaviour.ScriptableBehaviour
         private float timer;
         private bool hasEntered = false;
         
-        public UnityEvent doWhileDelayingAction;
-        public UnityEvent doAfterDelayingAction;
-        
         public override NodeState Process(BehaviourTreeContext context)
         {
             if (!hasEntered)
             {
                 hasEntered = true; 
                 
-                if (context.Creature.onConsumingEnter != null)
-                {
-                    doWhileDelayingAction = context.Creature.onConsumingEnter;
-                }
-                
-                if (context.Creature.onConsumingEnd != null)
-                {
-                    doAfterDelayingAction = context.Creature.onConsumingEnd;
-                }
-
                 timer = 0f; // Reset timer when node is entered
             }
 

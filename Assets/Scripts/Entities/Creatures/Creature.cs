@@ -144,13 +144,19 @@ namespace Entities.Creatures
         
         public void IncrementSightRange(BehaviourTreeContext context)
         {
-            context.Creature.CurrentSightRange = context.Creature.CurrentSightRangeMultiplier < context.Creature.CurrentMultiplierLimit ? context.Creature.CurrentSightRangeMultiplier + 1 : context.Creature.CurrentSightRangeMultiplier;
+            CurrentSightRange = context.Creature.CurrentSightRangeMultiplier < context.Creature.CurrentMultiplierLimit ? context.Creature.CurrentSightRangeMultiplier + 1 : context.Creature.CurrentSightRangeMultiplier;
             MultiplySightRange(context);
         }
 
         private void MultiplySightRange(BehaviourTreeContext context)
         {
             context.Creature.CurrentSightRange = context.Creature.GetStats.SightRange * context.Creature.CurrentSightRangeMultiplier;
+        }
+        
+        public void ResetSightRange()
+        {
+            CurrentSightRangeMultiplier = 1;
+            CurrentSightRange = _stats.SightRange;
         }
 
         public CreatureEntityData GetEntityData => entityData;
