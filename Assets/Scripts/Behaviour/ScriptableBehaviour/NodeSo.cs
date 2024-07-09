@@ -1,46 +1,36 @@
 using System.Collections.Generic;
 using Behaviour.Pathfinding;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace Behaviour.ScriptableBehaviour
 {
     public abstract class NodeSo : ScriptableObject
     {
-        public List<NodeSo> Children = new();
-        protected int CurrentChild = 0;
-        
-        [FormerlySerializedAs("state")] [HideInInspector]
+        public List<NodeSo> Children = new List<NodeSo>();
+        [HideInInspector]
         public NodeState nodeState = NodeState.Running;
-        
-        public virtual NodeState Process(BehaviourTreeContext context)
-        {
-            if (Children.Count == 0)
-            {
-                return NodeState.Failure; // or Success, depending on your logic
-            }
 
-            while (CurrentChild < Children.Count)
-            {
-                var status = Children[CurrentChild].Process(context);
-                if (status == NodeState.Running || status == NodeState.Failure)
-                {
-                    return status;
-                }
-                CurrentChild++;
-            }
-
-            return NodeState.Success;
-        }
+        public abstract NodeState Process(BehaviourTreeContext context);
 
         public virtual void Reset()
         {
-            CurrentChild = 0;
+            nodeState = NodeState.Running;
             foreach (var child in Children)
             {
                 child.Reset();
             }
         }
         
+        protected int GetCurrentChild(BehaviourTreeContext context)
+        {
+            return context.GetNodeChildIndex(GetInstanceID());
+        }
+
+        protected void SetCurrentChild(BehaviourTreeContext context, int index)
+        {
+            context.SetNodeChildIndex(GetInstanceID(), index);
+        }
     }
+
+  
 }

@@ -1,47 +1,53 @@
 ﻿using Behaviour.Pathfinding;
 using UnityEngine;
 using UnityEngine.AI;
-using UnityEngine.Events;
 
 namespace Behaviour.ScriptableBehaviour
 {
     [CreateAssetMenu(fileName = "MoveToTargetNode", menuName = "Behaviours/Nodes/MoveToTargetNode")]
     public class MoveToTargetNode : ConditionNodeSo
     {
-        private bool hasEntered = false;
-        
         public override NodeState Process(BehaviourTreeContext context)
         {
+            int nodeId = GetInstanceID();
+            bool hasEntered = context.GetNodeState(nodeId);
+
             if (!hasEntered)
             {
                 context.Creature.onStartMove?.Invoke();
-                hasEntered = true;
+                context.SetNodeState(nodeId, true);
             }
 
             if (context.CurrentTargets.Count > 0 && context.CurrentTargets[0] != null)
             {
+                if (context.Agent.isStopped)
+                {
+                    context.Agent.isStopped = false;
+                }
+                
                 context.Creature.Move(context.CurrentTargets[0].GetTransform.position, context.Creature.GetStats.Speed);
                 nodeState = NodeState.Running;
             }
             else
             {
                 nodeState = NodeState.Failure;
-                hasEntered = false;
+                context.SetNodeState(nodeId, false);
             }
 
             if (CheckCondition(context))
             {
                 nodeState = NodeState.Success;
                 context.Creature.onTargetReached?.Invoke();
-                hasEntered = false;
+                context.Agent.isStopped = true;
+                context.SetNodeState(nodeId, false);
             }
 
             if (context.Agent.pathStatus == NavMeshPathStatus.PathPartial)
             {
                 nodeState = NodeState.Failure;
-                // Reset();
-                hasEntered = false;
+                context.SetNodeState(nodeId, false);
             }
+
             return nodeState;
         }
 
@@ -51,10 +57,10 @@ namespace Behaviour.ScriptableBehaviour
             float distanceToTarget = Vector3.Distance(context.Agent.transform.position, context.CurrentTargets[0].GetTransform.position);
             return distanceToTarget <= context.Agent.stoppingDistance + context.Creature.GetStats.Width;
         }
-        
+
         public override void Reset()
         {
-            hasEntered = false;
+            // No need to reset hasEntered here, as it is managed by the context
         }
     }
 }

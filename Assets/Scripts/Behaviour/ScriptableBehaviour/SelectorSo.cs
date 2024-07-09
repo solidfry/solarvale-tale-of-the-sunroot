@@ -8,26 +8,39 @@ namespace Behaviour.ScriptableBehaviour
     {
         public override NodeState Process(BehaviourTreeContext context)
         {
-            if (CurrentChild < Children.Count)
+            int nodeId = GetInstanceID();
+            int currentChild = context.GetNodeChildIndex(nodeId);
+
+            while (currentChild < Children.Count)
             {
-                switch (Children[CurrentChild].Process(context))
+                switch (Children[currentChild].Process(context))
                 {
                     case NodeState.Running:
+                        context.SetNodeChildIndex(nodeId, currentChild);
                         nodeState = NodeState.Running;
                         return nodeState;
                     case NodeState.Success:
-                        Reset();
+                        context.SetNodeChildIndex(nodeId, 0);
                         nodeState = NodeState.Success;
                         return nodeState;
                     default:
-                        CurrentChild++;
-                        return NodeState.Running;
+                        currentChild++;
+                        break;
                 }
             }
-            
-            Reset();
+
+            context.SetNodeChildIndex(nodeId, 0);
             nodeState = NodeState.Failure;
             return nodeState;
+        }
+
+        public override void Reset()
+        {
+            nodeState = NodeState.Running;
+            foreach (var child in Children)
+            {
+                child.Reset();
+            }
         }
     }
 }

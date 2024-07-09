@@ -1,15 +1,12 @@
 ﻿using Behaviour.Pathfinding;
 using Entities;
 using UnityEngine;
-using UnityEngine.Events;
 
 namespace Behaviour.ScriptableBehaviour
 {
     [CreateAssetMenu(fileName = "FindTargetNode", menuName = "Behaviours/Nodes/FindTargetNode")]
     public class FindTargetNode : NodeSo
     {
-        
-
         public override NodeState Process(BehaviourTreeContext context)
         {
             var t = context.CurrentTargets;
@@ -30,7 +27,6 @@ namespace Behaviour.ScriptableBehaviour
                         context.AddTarget(edible);
                     }
                 }
-                
             }
 
             // Check if any targets were found
@@ -57,6 +53,5 @@ namespace Behaviour.ScriptableBehaviour
 
             return nodeState;
         }
-        
     }
 }

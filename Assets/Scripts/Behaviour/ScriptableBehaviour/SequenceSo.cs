@@ -3,31 +3,36 @@ using UnityEngine;
 
 namespace Behaviour.ScriptableBehaviour
 {
-    [CreateAssetMenu(fileName = "New Sequence", menuName = "Behaviours/Composite/Sequence", order = 0)]
-    public class SequenceSo : NodeSo
+    [CreateAssetMenu(fileName = "SequenceNode", menuName = "BehaviourTree/Nodes/SequenceNode")]
+    public class SequenceNode : NodeSo
     {
         public override NodeState Process(BehaviourTreeContext context)
         {
-            
-            if (CurrentChild < Children.Count)
+            int currentChild = GetCurrentChild(context);
+
+            while (currentChild < Children.Count)
             {
-                switch (Children[CurrentChild].Process(context))
+                NodeState childState = Children[currentChild].Process(context);
+                if (childState == NodeState.Running)
                 {
-                    case NodeState.Running:
-                        nodeState = NodeState.Running;
-                        return nodeState;
-                    case NodeState.Failure:
-                        nodeState = NodeState.Failure;
-                        return nodeState;
-                    default:
-                        CurrentChild++;
-                        return CurrentChild == Children.Count ? NodeState.Success : NodeState.Running;
+                    SetCurrentChild(context, currentChild);
+                    return NodeState.Running;
                 }
+                if (childState == NodeState.Failure)
+                {
+                    SetCurrentChild(context, 0); // Reset for next execution
+                    return NodeState.Failure;
+                }
+                currentChild++;
             }
-            
-            Reset();
-            nodeState = NodeState.Success;
-            return nodeState;
+
+            SetCurrentChild(context, 0); // Reset for next execution
+            return NodeState.Success;
+        }
+
+        public override void Reset()
+        {
+            base.Reset();
         }
     }
 }

@@ -16,6 +16,10 @@ namespace Behaviour.ScriptableBehaviour
         public List<IEdible> CurrentTargets;
         public Transform Enemy;
         public LayerMask TargetLayer;
+        public Dictionary<int, bool> NodeStates { get; private set; } = new Dictionary<int, bool>();
+        public Dictionary<int, int> NodeChildIndices { get; private set; } = new Dictionary<int, int>();
+        private Dictionary<int, float> nodeTimers = new Dictionary<int, float>();
+
     
         public BehaviourTreeContext(CreatureScriptableBehaviourTree tree,NavMeshAgent agent, Transform target, Creature creature, List<IEdible> currentTargets, Transform enemy, LayerMask targetLayer)
         {
@@ -44,6 +48,36 @@ namespace Behaviour.ScriptableBehaviour
         {
             Target = target;
             Tree.SetTarget(target);
+        }
+        
+        public bool GetNodeState(int nodeId)
+        {
+            return NodeStates.TryGetValue(nodeId, out var state) && state;
+        }
+
+        public void SetNodeState(int nodeId, bool state)
+        {
+            NodeStates[nodeId] = state;
+        }
+        
+        public int GetNodeChildIndex(int nodeId)
+        {
+            return NodeChildIndices.TryGetValue(nodeId, out var index) ? index : 0;
+        }
+
+        public void SetNodeChildIndex(int nodeId, int index)
+        {
+            NodeChildIndices[nodeId] = index;
+        }
+        
+        public float GetNodeTimer(int nodeId)
+        {
+            return nodeTimers.TryGetValue(nodeId, out var timer) ? timer : 0f;
+        }
+        
+        public void SetNodeTimer(int nodeId, float timer)
+        {
+            nodeTimers[nodeId] = timer;
         }
         
     }

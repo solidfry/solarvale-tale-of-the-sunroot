@@ -144,7 +144,9 @@ namespace Entities.Creatures
         
         public void IncrementSightRange(BehaviourTreeContext context)
         {
-            CurrentSightRange = context.Creature.CurrentSightRangeMultiplier < context.Creature.CurrentMultiplierLimit ? context.Creature.CurrentSightRangeMultiplier + 1 : context.Creature.CurrentSightRangeMultiplier;
+            bool canIncrement = CurrentSightRangeMultiplier < CurrentMultiplierLimit;
+            float increment = canIncrement ? CurrentSightRangeMultiplier += 1 : CurrentSightRangeMultiplier;
+            CurrentSightRange = canIncrement ? _stats.SightRange * increment : _stats.SightRange;
             MultiplySightRange(context);
         }
 
