@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Behaviour.ScriptableBehaviour
 {
-    [CreateAssetMenu(fileName = "SequenceNode", menuName = "BehaviourTree/Nodes/SequenceNode")]
+    [CreateAssetMenu(fileName = "SequenceNode", menuName = "Behaviours/Composite/Sequence")]
     public class SequenceNode : NodeSo
     {
         public override NodeState Process(BehaviourTreeContext context)

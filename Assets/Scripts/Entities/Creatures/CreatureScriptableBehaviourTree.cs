@@ -15,7 +15,6 @@ namespace Entities.Creatures
         private List<IEdible> currentTargets = new ();
         [SerializeField] private Transform target;
         [SerializeField] private BehaviourTreeContext context;
-
         private Transform enemy;
 
         public LayerMask targetLayer;
@@ -33,7 +32,6 @@ namespace Entities.Creatures
             if (behaviorTreeSO != null)
             {
                 behaviorTreeSO.Process(context);
-                // Debug.Log("Processing behaviour tree");
             }
         }
         

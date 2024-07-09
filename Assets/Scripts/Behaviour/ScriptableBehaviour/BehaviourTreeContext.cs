@@ -50,6 +50,11 @@ namespace Behaviour.ScriptableBehaviour
             Tree.SetTarget(target);
         }
         
+        public void SetDesiredLocation(Vector3 location)
+        {
+            Agent.SetDestination(location);
+        }
+        
         public bool GetNodeState(int nodeId)
         {
             return NodeStates.TryGetValue(nodeId, out var state) && state;
