@@ -13,7 +13,6 @@ namespace Entities.Creatures.Stats
     }
     public abstract class CreatureStatsData : EntityStatsBase
     {
-        [field: SerializeField] public float SightRange { get; protected set; }
         
         [field: Header("Physical Attributes")]
         [field: SerializeField] public DirectionAxis CapsuleDirection { get; protected set; }
@@ -23,6 +22,10 @@ namespace Entities.Creatures.Stats
         [field: SerializeField] public float Mass { get; protected set; }
         
         [field: Header("Navigation")]
+        
+        [field: SerializeField] [field:Tooltip("The movement definition for this creature. If empty the below values will be used and it will be a walking creature.")] 
+        public CreatureMovementDefinition MovementDefinition { get; protected set; }
+        [field: SerializeField] public float SightRange { get; protected set; }
         [field: SerializeField] public float Speed { get; protected set; }
         [field: SerializeField] public float RunSpeedMultiplier { get; protected set; }
         [field: SerializeField] public float AngularSpeed { get; protected set; }
@@ -43,7 +46,6 @@ namespace Entities.Creatures.Stats
         [field: SerializeField] public float FeedRate { get; protected set; }
         [field: SerializeField] public List<EntityData> PreferredFood { get; protected set; }
         
-        [field: SerializeField] public CreatureMovementDefinition movementDefinition { get; protected set; }
         
         public bool CheckIsInPreferredFood(EntityData entity) => PreferredFood.Contains(entity);
     }

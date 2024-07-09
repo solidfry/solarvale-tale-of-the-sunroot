@@ -11,5 +11,8 @@ namespace Entities.Creatures.Movement
         public float TurningSpeed { get; protected set; }
         public float Acceleration { get; protected set; }
         public float StoppingDistance { get; protected set; }
+        
+        public abstract float GetSpecialisedSpeed();
+        public virtual float GetSpeed() => Speed;
     }
 }

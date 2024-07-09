@@ -8,5 +8,6 @@ namespace Entities.Creatures.Movement
         [field:Header("Swimmer Movement Definition")]
         [field:SerializeField] public override MovementType MovementType { get; protected set; } = MovementType.Swimmer;
         [field:SerializeField] public float SwimSpeed { get; protected set; } = 1.0f;
+        public override float GetSpecialisedSpeed() => SwimSpeed;
     }
 }

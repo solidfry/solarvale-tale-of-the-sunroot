@@ -9,5 +9,6 @@ namespace Entities.Creatures.Movement
         [field:SerializeField] public override MovementType MovementType { get; protected set; } = MovementType.Climber;
         [field:SerializeField] public float ClimbSpeed { get; protected set; } = 1.0f;
         [field:SerializeField] public float ClimbAltitude { get; protected set; } = 1.0f;
+        public override float GetSpecialisedSpeed() => ClimbSpeed;
     }
 }

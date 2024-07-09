@@ -36,7 +36,6 @@ namespace Entities.Creatures
                 behaviorTreeSo.Process(_context);
             }
         }
-        
 
         // Method to update the target in the context
         public void SetTarget(Transform newTarget)

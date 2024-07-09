@@ -1,4 +1,7 @@
-﻿using Behaviour.ScriptableBehaviour;
+﻿using System.Collections;
+using Behaviour.ScriptableBehaviour;
+using DG.Tweening;
+using Entities.Creatures.Movement;
 using Entities.Creatures.Stats;
 using Events;
 using UnityEngine;
@@ -15,6 +18,7 @@ namespace Entities.Creatures
         [SerializeField] NavMeshAgent agent;
         [SerializeField] CapsuleCollider capsule;
         [SerializeField] Animator animator;
+        [SerializeField] public GameObject model;
         
         [field: SerializeField] public float CurrentSightRange { get; set; } = 5;
         [field: SerializeField] public float CurrentSightRangeMultiplier { get; set; } = 1;
@@ -34,8 +38,8 @@ namespace Entities.Creatures
         
         public NavMeshAgent GetAgent() => agent;
         public Animator GetAnimator() => animator;
-        
         public Rigidbody GetRigidbody() => rigidBody;
+        public GameObject GetModel() => model;
 
         #region Events
 
@@ -49,6 +53,8 @@ namespace Entities.Creatures
         [SerializeField] public UnityEvent onDangerEnd = new();
         [SerializeField] public UnityEvent onStartMove = new();
         [SerializeField] public UnityEvent onTargetReached = new();
+        [SerializeField] public UnityEvent onFlightEnter = new();
+        [SerializeField] public UnityEvent onFlightEnd = new();
         #endregion
         
         #region Initialisation
@@ -61,8 +67,21 @@ namespace Entities.Creatures
             SetupRigidbody();
             SetupCollider();
             SetupAgent();
-            
+            SetupAnimator();
+
             // GetBehaviourTree.Initialise();
+        }
+
+        private void SetupAnimator()
+        {
+            if (animator is null)
+            {
+                Debug.LogError($"Animator is null in {gameObject.name}");
+                return;
+            }
+            
+            animator = GetComponentInChildren<Animator>();
+            model = animator.gameObject;
         }
 
         private void CheckCrucialSystems()
@@ -133,13 +152,110 @@ namespace Entities.Creatures
         
         public void Move(Vector3 position, float speed = 1f)
         {
+            if (_stats.MovementDefinition is not null)
+            {
+                switch (_stats.MovementDefinition)
+                {
+                    case SwimmerMovementDefinition swimmer:
+                        Swim(position, swimmer.GetSpecialisedSpeed());
+                        break;
+                    case FlyerMovementDefinition flyer:
+                        if (Vector3.Distance(transform.position, position) > _stats.SightRange / 2)
+                            Fly(position, flyer.GetSpecialisedSpeed());
+                        else 
+                            Translate(position, speed);
+                        break;
+                    case JumperMovementDefinition jumper:
+                        Jump();
+                        break;
+                    default:
+                        Translate(position, speed);
+                        break;
+                }
+            }
+            else
+            {
+                Translate(position, speed);
+            }
+        }
+        
+        public void Translate(Vector3 position, float speed = 1f)
+        {
             agent.SetDestination(position);
             agent.speed = speed;
         }
         
-        private void Run(Vector3 position, float speed = 1f)
+        public void Run(Vector3 position, float speed = 1f)
         {
             Move(position, speed * _stats.RunSpeedMultiplier);
+        }
+        
+        [ContextMenu("Jump")]
+        public void Jump()
+        {
+            // Because of the agent navmesh we can't jump, so we need to disable the agent, but it impacts some nodes in the behaviour tree
+        }
+        
+        public void Swim(Vector3 position, float speed = 1f)
+        {
+            
+        }
+        
+        public bool IsFlying { get; private set; } = false;
+
+        IEnumerator FlyToPosition(Vector3 position, float speed)
+        {
+            Ascend();
+            IsFlying = true;
+            onFlightEnter?.Invoke();
+
+            Debug.Log("Flying to position");
+            Translate(position, speed);
+
+            // Wait until the creature is close to the target position
+            while (Vector3.Distance(transform.position, position) > _stats.SightRange / 2)
+            {
+                yield return null;
+            }
+            Descend();
+        }
+
+        void Fly(Vector3 position, float speed = 1f)
+        {
+            if (IsFlying) return;
+            StartCoroutine(FlyToPosition(position, speed));
+        }
+        
+        void Ascend()
+        {
+            var flyer = (FlyerMovementDefinition)_stats.MovementDefinition;
+            float distanceToTarget = Vector3.Distance(transform.position, agent.destination);
+            float dynamicAltitude = Mathf.Min(distanceToTarget / 2, flyer.FlightAltitude);
+            float duration = CalculateDuration(dynamicAltitude, flyer.GetSpecialisedSpeed());
+            model.transform.DOMoveY(model.transform.position.y + dynamicAltitude, duration)
+                .SetEase(flyer.AltitudeChangeCurve);
+        }
+
+        void Descend()
+        {
+            var flyer = (FlyerMovementDefinition)_stats.MovementDefinition;
+            float targetAltitude = agent.destination.y;
+            float currentAltitude = model.transform.position.y;
+            float descentDistance = currentAltitude - targetAltitude;
+            float duration = CalculateDuration(descentDistance, flyer.GetSpecialisedSpeed());
+
+            model.transform.DOMoveY(targetAltitude, duration)
+                .SetEase(flyer.AltitudeChangeCurve)
+                .OnComplete(() =>
+                {
+                    onFlightEnd?.Invoke(); 
+                    IsFlying = false;
+                });
+        }
+        
+        private float CalculateDuration(float distance, float speed)
+        {
+            return Mathf.Abs(distance) / speed;
         }
         
         public void IncrementSightRange(BehaviourTreeContext context)

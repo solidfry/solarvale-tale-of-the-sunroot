@@ -4,7 +4,7 @@
     {
         Walker,
         Swimmer,
-        Flier,
+        Flyer,
         Climber,
         Jumper,
         None,
