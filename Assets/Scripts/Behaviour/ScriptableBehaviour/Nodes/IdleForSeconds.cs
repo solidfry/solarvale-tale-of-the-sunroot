@@ -1,8 +1,7 @@
-﻿using Behaviour.Pathfinding;
-using Behaviour.ScriptableBehaviour.Base;
+﻿using Behaviour.ScriptableBehaviour.Base;
 using UnityEngine;
 
-namespace Behaviour.ScriptableBehaviour
+namespace Behaviour.ScriptableBehaviour.Nodes
 {
     [CreateAssetMenu(fileName = "IdleForSeconds", menuName = "Behaviours/Nodes/IdleForSecondsNode")]
     public class IdleForSecondsNodeSo : ConditionNodeSo
@@ -18,7 +17,7 @@ namespace Behaviour.ScriptableBehaviour
                 float timeToIdle = Random.Range(minIdleTime, maxIdleTime);
                 context.SetNodeTimer(nodeId, timeToIdle);
                 context.SetNodeState(nodeId, true);
-                Debug.Log("Idling for " + timeToIdle + " seconds");
+                // Debug.Log("Idling for " + timeToIdle + " seconds");
             }
 
             float timer = context.GetNodeTimer(nodeId);

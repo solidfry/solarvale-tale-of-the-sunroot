@@ -1,37 +1,39 @@
 ﻿using System.Linq;
 using Behaviour.ScriptableBehaviour;
+using UnityEngine.Serialization;
+using UnityEngine;
+using UnityEngine.AI;
+using System.Collections.Generic;
 
 namespace Entities.Creatures
 {
-    using UnityEngine;
-    using UnityEngine.AI;
-    using System.Collections.Generic;
-
+    [RequireComponent( typeof(Creature))]
     public class CreatureScriptableBehaviourTree : MonoBehaviour
     {
-        [SerializeField] BehaviourTreeSo behaviorTreeSO;
-        private NavMeshAgent agent;
-        private Creature creature;
-        private List<IEdible> currentTargets = new ();
+        [FormerlySerializedAs("behaviorTreeSO")] [SerializeField] BehaviourTreeSo behaviorTreeSo;
         [SerializeField] private Transform target;
-        [SerializeField] private BehaviourTreeContext context;
-        private Transform enemy;
+        
+        private NavMeshAgent _agent;
+        private Creature _creature;
+        private List<IEdible> _currentTargets = new ();
+        private Transform _enemy;
+        private BehaviourTreeContext _context;
 
         public LayerMask targetLayer;
 
         void Start()
         {
-            agent = GetComponent<NavMeshAgent>();
-            creature = GetComponent<Creature>();
+            _agent = GetComponent<NavMeshAgent>();
+            _creature = GetComponent<Creature>();
 
-            context = new BehaviourTreeContext(this, agent, target, creature, currentTargets, enemy, targetLayer);
+            _context = new BehaviourTreeContext(this, _agent, target, _creature, _currentTargets, _enemy, targetLayer);
         }
 
         void Update()
         {
-            if (behaviorTreeSO != null)
+            if (behaviorTreeSo != null)
             {
-                behaviorTreeSO.Process(context);
+                behaviorTreeSo.Process(_context);
             }
         }
         
@@ -45,15 +47,15 @@ namespace Entities.Creatures
         // Method to update the current targets in the context
         public void UpdateCurrentTargets(List<IEdible> newTargets)
         {
-            currentTargets = newTargets;
+            _currentTargets = newTargets;
         }
         
         private void OnDrawGizmos()
         {
-            if (creature == null) return;
-            if (creature.GetStats == null) return;
-            Gizmos.color = context.CurrentTargets.Any(x => x is not null) ? Color.red : Color.green;
-            Gizmos.DrawWireSphere(transform.position, creature.CurrentSightRange);
+            if (_creature == null) return;
+            if (_creature.GetStats == null) return;
+            Gizmos.color = _context.CurrentTargets.Any(x => x is not null) ? Color.red : Color.green;
+            Gizmos.DrawWireSphere(transform.position, _creature.CurrentSightRange);
         }
     }
 

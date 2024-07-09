@@ -3,7 +3,7 @@ using Behaviour.ScriptableBehaviour.Base;
 using UnityEngine;
 using UnityEngine.AI;
 
-namespace Behaviour.ScriptableBehaviour
+namespace Behaviour.ScriptableBehaviour.Nodes
 {
     [CreateAssetMenu(fileName = "JumpNode", menuName = "Behaviours/Nodes/JumpNode")]
     public class JumpNode : NodeSo

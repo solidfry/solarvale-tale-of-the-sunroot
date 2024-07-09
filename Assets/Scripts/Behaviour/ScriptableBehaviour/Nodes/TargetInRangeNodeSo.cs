@@ -1,8 +1,7 @@
-﻿using Behaviour.Pathfinding;
-using Behaviour.ScriptableBehaviour.Base;
+﻿using Behaviour.ScriptableBehaviour.Base;
 using UnityEngine;
 
-namespace Behaviour.ScriptableBehaviour
+namespace Behaviour.ScriptableBehaviour.Nodes
 {
     [CreateAssetMenu(fileName = "TargetInRangeNode", menuName = "Behaviours/Nodes/TargetInRangeNode")]
     public class TargetInRangeNode : ConditionNodeSo

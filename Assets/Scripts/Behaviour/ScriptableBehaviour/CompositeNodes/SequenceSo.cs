@@ -2,7 +2,7 @@
 using Behaviour.ScriptableBehaviour.Base;
 using UnityEngine;
 
-namespace Behaviour.ScriptableBehaviour
+namespace Behaviour.ScriptableBehaviour.CompositeNodes
 {
     [CreateAssetMenu(fileName = "SequenceNode", menuName = "Behaviours/Composite/Sequence")]
     public class SequenceNode : NodeSo

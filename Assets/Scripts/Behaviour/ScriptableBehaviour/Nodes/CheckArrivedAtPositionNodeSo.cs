@@ -1,7 +1,7 @@
 ﻿using Behaviour.ScriptableBehaviour.Base;
 using UnityEngine;
 
-namespace Behaviour.ScriptableBehaviour
+namespace Behaviour.ScriptableBehaviour.Nodes
 {
     [CreateAssetMenu(fileName = "CheckMoveToPosition", menuName = "Behaviours/Nodes/CheckArrivedAtPositionNode")]
     public class CheckArrivedAtPositionNodeSo : ConditionNodeSo

@@ -3,7 +3,7 @@ using Behaviour.ScriptableBehaviour.Base;
 using Behaviour.ScriptableBehaviour.Strategy;
 using UnityEngine;
 
-namespace Behaviour.ScriptableBehaviour
+namespace Behaviour.ScriptableBehaviour.Nodes
 {
     public class LeafNodeSo : NodeSo
     {
