@@ -82,7 +82,7 @@ namespace Entities.Creatures
 
         private void Update()
         {
-            _tree.Process();
+            // _tree.Process();
         }
 
         private void CreateBehaviourTree()
