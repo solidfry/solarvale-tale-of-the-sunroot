@@ -3,7 +3,7 @@ using Behaviour.ScriptableBehaviour.Base;
 using Entities;
 using UnityEngine;
 
-namespace Behaviour.ScriptableBehaviour
+namespace Behaviour.ScriptableBehaviour.Nodes
 {
     [CreateAssetMenu(fileName = "FindTargetNode", menuName = "Behaviours/Nodes/FindTargetNode")]
     public class FindTargetNode : NodeSo

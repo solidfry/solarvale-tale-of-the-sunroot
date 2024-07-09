@@ -2,7 +2,7 @@
 using Behaviour.ScriptableBehaviour.Base;
 using UnityEngine;
 
-namespace Behaviour.ScriptableBehaviour
+namespace Behaviour.ScriptableBehaviour.Nodes
 {
     [CreateAssetMenu(fileName = "TreeResetNode", menuName = "Behaviours/Nodes/TreeResetNode")]
     public class TreeResetNode : NodeSo

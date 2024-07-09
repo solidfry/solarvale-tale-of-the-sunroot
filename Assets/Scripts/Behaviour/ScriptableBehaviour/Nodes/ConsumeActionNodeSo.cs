@@ -1,9 +1,8 @@
-﻿using System.Collections.Generic;
-using Behaviour.Pathfinding;
+﻿using Behaviour.Pathfinding;
 using Behaviour.ScriptableBehaviour.Base;
 using UnityEngine;
 
-namespace Behaviour.ScriptableBehaviour
+namespace Behaviour.ScriptableBehaviour.Nodes
 {
     [CreateAssetMenu(fileName = "DelayedActionNode", menuName = "Behaviours/Nodes/DelayedActionNode")]
     public class ConsumeActionNode : NodeSo

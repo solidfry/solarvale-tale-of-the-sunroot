@@ -2,7 +2,7 @@
 using Behaviour.ScriptableBehaviour.Base;
 using UnityEngine;
 
-namespace Behaviour.ScriptableBehaviour
+namespace Behaviour.ScriptableBehaviour.CompositeNodes
 {
     [CreateAssetMenu(fileName = "New Selector", menuName = "Behaviours/Composite/Selector", order = 0)]
     public class SelectorSo : NodeSo

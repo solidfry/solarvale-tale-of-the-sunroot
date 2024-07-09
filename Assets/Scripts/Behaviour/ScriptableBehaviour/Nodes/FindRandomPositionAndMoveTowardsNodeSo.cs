@@ -3,7 +3,7 @@ using Behaviour.ScriptableBehaviour.Base;
 using UnityEngine;
 using UnityEngine.AI;
 
-namespace Behaviour.ScriptableBehaviour
+namespace Behaviour.ScriptableBehaviour.Nodes
 {
     [CreateAssetMenu(fileName = "FindRandomPositionNode", menuName = "Behaviours/Nodes/FindRandomPositionNode")]
     public class FindRandomPositionAndMoveTowardsNode : NodeSo

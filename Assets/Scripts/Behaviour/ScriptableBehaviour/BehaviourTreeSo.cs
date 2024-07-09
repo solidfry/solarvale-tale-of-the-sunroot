@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Behaviour.ScriptableBehaviour
 {
-    [CreateAssetMenu(fileName = "BehaviourTree", menuName = "BehaviourTree/BehaviourTree")]
+    [CreateAssetMenu(fileName = "BehaviourTree", menuName = "Behaviours/Tree", order = 0)]
     public class BehaviourTreeSo : NodeSo
     {
         public override NodeState Process(BehaviourTreeContext context)

@@ -6,9 +6,8 @@ namespace Entities.Creatures.Stats
     public class CarnivoreStatsData : CreatureStatsData
     {
         [field:Header("Carnivore Stats")]
-        [field:SerializeField] public override FeedingBehaviourType FeedingBehaviourType { get; protected set; } = FeedingBehaviourType.Carnivore;
-        [field:SerializeField] public override ActivityType ActivityType { get; protected set; } = ActivityType.Cathemeral;
-        [field:SerializeField] public override TimidityRating TimidityRating { get; protected set; } = TimidityRating.Timid;
-        [field:SerializeField] public override MovementType MovementType { get; protected set; } = MovementType.Walker;
+        [field:SerializeField] public FeedingBehaviourType FeedingBehaviourType { get; protected set; } = FeedingBehaviourType.Carnivore;
+        [field:SerializeField] public ActivityType ActivityType { get; protected set; } = ActivityType.Cathemeral;
+        [field:SerializeField] public TimidityRating TimidityRating { get; protected set; } = TimidityRating.Timid;
     }
 }
