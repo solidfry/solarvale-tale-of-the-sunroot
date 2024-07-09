@@ -1,4 +1,6 @@
-﻿using Behaviour.Pathfinding;
+﻿using System.Collections.Generic;
+using Behaviour.Pathfinding;
+using Behaviour.ScriptableBehaviour.Base;
 using UnityEngine;
 
 namespace Behaviour.ScriptableBehaviour

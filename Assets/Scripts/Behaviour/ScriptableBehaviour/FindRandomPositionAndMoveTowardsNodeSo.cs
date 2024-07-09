@@ -1,4 +1,5 @@
 ﻿using Behaviour.Pathfinding;
+using Behaviour.ScriptableBehaviour.Base;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -38,5 +39,8 @@ namespace Behaviour.ScriptableBehaviour
 
             return nodeState;
         }
+        
+        
+        
     }
 }

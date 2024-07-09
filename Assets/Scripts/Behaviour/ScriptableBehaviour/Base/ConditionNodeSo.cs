@@ -1,6 +1,6 @@
 ﻿using Behaviour.Pathfinding;
 
-namespace Behaviour.ScriptableBehaviour
+namespace Behaviour.ScriptableBehaviour.Base
 {
     public abstract class ConditionNodeSo : NodeSo
     {

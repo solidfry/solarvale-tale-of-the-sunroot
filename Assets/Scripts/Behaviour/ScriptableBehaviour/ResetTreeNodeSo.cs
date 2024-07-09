@@ -1,4 +1,5 @@
 ﻿using Behaviour.Pathfinding;
+using Behaviour.ScriptableBehaviour.Base;
 using UnityEngine;
 
 namespace Behaviour.ScriptableBehaviour

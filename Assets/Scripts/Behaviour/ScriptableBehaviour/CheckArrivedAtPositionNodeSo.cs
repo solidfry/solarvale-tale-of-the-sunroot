@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Behaviour.ScriptableBehaviour.Base;
+using UnityEngine;
 
 namespace Behaviour.ScriptableBehaviour
 {

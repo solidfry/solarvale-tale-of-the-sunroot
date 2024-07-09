@@ -1,4 +1,5 @@
 using Behaviour.Pathfinding;
+using Behaviour.ScriptableBehaviour.Base;
 using Behaviour.ScriptableBehaviour.Strategy;
 using UnityEngine;
 

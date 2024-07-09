@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using Behaviour.Pathfinding;
 using UnityEngine;
 
-namespace Behaviour.ScriptableBehaviour
+namespace Behaviour.ScriptableBehaviour.Base
 {
     public abstract class NodeSo : ScriptableObject
     {
