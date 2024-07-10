@@ -183,12 +183,12 @@ MonoBehaviour:
   agent: {fileID: 6672785059445631010}
   capsule: {fileID: 6139452106987850690}
   animator: {fileID: 1392021594662505506}
-  model: {fileID: 0}
+  model: {fileID: 6240740703494306067}
   <CurrentSightRange>k__BackingField: 20
   <CurrentSightRangeMultiplier>k__BackingField: 1
   <CurrentMultiplierLimit>k__BackingField: 20
   behaviourTree: {fileID: 7544188689136426628}
-  onFindTarget:
+  onFindTargetStart:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 952772802455001651}
@@ -203,7 +203,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-  onTargetFound:
+  onFindTargetEnd:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 952772802455001651}
@@ -218,7 +218,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  onConsumingEnter:
+  onConsumingStart:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 952772802455001651}
@@ -248,16 +248,22 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  onDangerEnter:
+  onDangerStart:
     m_PersistentCalls:
       m_Calls: []
   onDangerEnd:
     m_PersistentCalls:
       m_Calls: []
-  onStartMove:
+  onMoveStart:
     m_PersistentCalls:
       m_Calls: []
-  onTargetReached:
+  onMoveEnd:
+    m_PersistentCalls:
+      m_Calls: []
+  onFlightStart:
+    m_PersistentCalls:
+      m_Calls: []
+  onFlightEnd:
     m_PersistentCalls:
       m_Calls: []
 --- !u!114 &7544188689136426628

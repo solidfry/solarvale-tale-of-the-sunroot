@@ -28,7 +28,7 @@ namespace DialogueSystem
             {
                 onAnimationStartEvent?.Invoke();
                 isPlaying = true;
-                Debug.Log(isPlaying + " is playing");
+                // Debug.Log(isPlaying + " is playing");
             }
             
             if (anim == null)

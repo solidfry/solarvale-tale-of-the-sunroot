@@ -16,7 +16,7 @@ namespace Entities.Plants
             foreach (PlantEntityData plantEntityData in plantsEntityData)
             {
                 _ediblesDictionary.Add(plantEntityData, new List<IEdible>());
-                Debug.Log(this + " added " + plantEntityData + " to the dictionary");
+                // Debug.Log(this + " added " + plantEntityData + " to the dictionary");
             }
         }
 
@@ -36,7 +36,7 @@ namespace Entities.Plants
             if (edible.GetEntityData is { } plantEntityData)
             {
                 _ediblesDictionary[plantEntityData].Add(edible);
-                Debug.Log(this + " registered " + edible + " as an edible of " + plantEntityData);
+                // Debug.Log(this + " registered " + edible + " as an edible of " + plantEntityData);
                 dictionaryCount++;
             }
         }

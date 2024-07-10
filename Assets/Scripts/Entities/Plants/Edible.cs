@@ -52,7 +52,7 @@ namespace Entities.Plants
                 Debug.Log("Creature is in the trigger");
                 if (entity.GetEntityData != null)
                 {
-                    Debug.Log("Creature is in the trigger and is in preferred food");
+                    // Debug.Log("Creature is in the trigger and is in preferred food");
                     currentOccupationCount++;
                 }
             }

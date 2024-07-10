@@ -31,8 +31,4 @@ namespace Behaviour.ScriptableBehaviour.Base
             context.SetNodeChildIndex(GetInstanceID(), index);
         }
     }
-    
-    
-
-  
 }

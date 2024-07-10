@@ -25,18 +25,10 @@ namespace Entities.Creatures
         [field: SerializeField] public float CurrentSightRangeMultiplier { get; set; } = 1;
         [field: SerializeField] public int CurrentMultiplierLimit { get; private set; } = 20;
         
-        // [SerializeField] CreatureBehaviourTree behaviourTree;
-        
         CreatureStatsData _stats;
-        // public CreatureBehaviourTree GetBehaviourTree => behaviourTree ??= GetComponent<CreatureBehaviourTree>();
-        
         [SerializeField] CreatureScriptableBehaviourTree behaviourTree;
+        public CreatureScriptableBehaviourTree GetBehaviourTree => behaviourTree ??= GetComponent<CreatureScriptableBehaviourTree>();
         public CreatureStatsData GetStats => _stats;
-
-        private void Awake() => Initialise();
-
-        private void Start() => RegisterWithManager();
-        
         public NavMeshAgent GetAgent() => agent;
         public Animator GetAnimator() => animator;
         public Rigidbody GetRigidbody() => rigidBody;
@@ -44,20 +36,23 @@ namespace Entities.Creatures
 
         #region Events
 
-        [FormerlySerializedAs("onFindTarget")]
         [Space(10)]
         [Header("Events")]
         [SerializeField] public UnityEvent onFindTargetStart = new();
-        [FormerlySerializedAs("onTargetFound")] [SerializeField] public UnityEvent onFindTargetEnd = new();
-        [FormerlySerializedAs("onConsumingEnter")] [SerializeField] public UnityEvent onConsumingStart = new();
+        [SerializeField] public UnityEvent onFindTargetEnd = new();
+        [SerializeField] public UnityEvent onConsumingStart = new();
         [SerializeField] public UnityEvent onConsumingEnd = new();
-        [FormerlySerializedAs("onDangerEnter")] [SerializeField] public UnityEvent onDangerStart = new();
+        [SerializeField] public UnityEvent onDangerStart = new();
         [SerializeField] public UnityEvent onDangerEnd = new();
-        [FormerlySerializedAs("onStartMove")] [SerializeField] public UnityEvent onMoveStart = new();
-        [FormerlySerializedAs("onTargetReached")] [SerializeField] public UnityEvent onMoveEnd = new();
-        [FormerlySerializedAs("onFlightEnter")] [SerializeField] public UnityEvent onFlightStart = new();
+        [SerializeField] public UnityEvent onMoveStart = new();
+        [SerializeField] public UnityEvent onMoveEnd = new();
+        [SerializeField] public UnityEvent onFlightStart = new();
         [SerializeField] public UnityEvent onFlightEnd = new();
         #endregion
+        
+        private void Awake() => Initialise();
+
+        private void Start() => RegisterWithManager();
         
         #region Initialisation
 
@@ -70,8 +65,6 @@ namespace Entities.Creatures
             SetupCollider();
             SetupAgent();
             SetupAnimator();
-
-            // GetBehaviourTree.Initialise();
         }
 
         private void SetupAnimator()
@@ -83,7 +76,8 @@ namespace Entities.Creatures
             }
             
             animator = GetComponentInChildren<Animator>();
-            model = animator.gameObject;
+            if (model is null)
+                model = animator.gameObject;
         }
 
         private void CheckCrucialSystems()
@@ -100,8 +94,9 @@ namespace Entities.Creatures
             agent ??= GetComponent<NavMeshAgent>();
             rigidBody ??= GetComponent<Rigidbody>();
             capsule ??= GetComponent<CapsuleCollider>();
-            // behaviourTree ??= GetComponent<CreatureBehaviourTree>();
+            behaviourTree ??= GetComponent<CreatureScriptableBehaviourTree>();
         }
+        
         private void SetupAgent()
         {
             if (agent is null)

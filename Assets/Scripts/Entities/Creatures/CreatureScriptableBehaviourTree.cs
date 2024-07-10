@@ -28,8 +28,16 @@ namespace Entities.Creatures
 
             _context = new BehaviourTreeContext(this, _agent, target, _creature, _currentTargets, _enemy, targetLayer);
         }
-
-        void Update()
+        //
+        // void Update()
+        // {
+        //     if (behaviorTreeSo != null)
+        //     {
+        //         behaviorTreeSo.Process(_context);
+        //     }
+        // }
+        
+        public void Run()
         {
             if (behaviorTreeSo != null)
             {
@@ -37,7 +45,6 @@ namespace Entities.Creatures
             }
         }
 
-        // Method to update the target in the context
         public void SetTarget(Transform newTarget)
         {
             target = newTarget;
