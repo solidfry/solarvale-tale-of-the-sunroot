@@ -11387,6 +11387,74 @@ MonoBehaviour:
   m_drawWorldDesignerRulers: 1
   m_drawWorldDesignerDensityViz: 0
   m_autoStampDensityVisualizationTimeStamp: 0
+--- !u!1001 &249319485
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2864433216122941423, guid: a4f25ee2f35406446adc2e98c3004c1c,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 254.37814
+      objectReference: {fileID: 0}
+    - target: {fileID: 2864433216122941423, guid: a4f25ee2f35406446adc2e98c3004c1c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 45.281612
+      objectReference: {fileID: 0}
+    - target: {fileID: 2864433216122941423, guid: a4f25ee2f35406446adc2e98c3004c1c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 366.17957
+      objectReference: {fileID: 0}
+    - target: {fileID: 2864433216122941423, guid: a4f25ee2f35406446adc2e98c3004c1c,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2864433216122941423, guid: a4f25ee2f35406446adc2e98c3004c1c,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2864433216122941423, guid: a4f25ee2f35406446adc2e98c3004c1c,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2864433216122941423, guid: a4f25ee2f35406446adc2e98c3004c1c,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2864433216122941423, guid: a4f25ee2f35406446adc2e98c3004c1c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2864433216122941423, guid: a4f25ee2f35406446adc2e98c3004c1c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2864433216122941423, guid: a4f25ee2f35406446adc2e98c3004c1c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7609707819895129951, guid: a4f25ee2f35406446adc2e98c3004c1c,
+        type: 3}
+      propertyPath: m_Name
+      value: ScriptableKookaburra
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a4f25ee2f35406446adc2e98c3004c1c, type: 3}
 --- !u!1001 &252575881
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13552,7 +13620,7 @@ MonoBehaviour:
       m_warpIterations: 0.6973783
       m_warpStrength: 0.9334392
       m_warpOffset: {x: 131.88863, y: -790.25446, z: 9.614468, w: 0}
-    m_noiseSettings: {fileID: 1514765266}
+    m_noiseSettings: {fileID: 1146485710}
     m_noiseToolSettings:
       worldHeightRemap: {x: 0, y: 0}
       coordSpace: 0
@@ -53037,6 +53105,30 @@ Transform:
   - {fileID: 200026635}
   m_Father: {fileID: 2118565064}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1146485710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cba17d399ab86974c8ef9551f6e8f8d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transformSettings:
+    translation: {x: -219.88208, y: -311.00653, z: 1037.8025}
+    scale: {x: 2.833992, y: 1, z: 2.833992}
+    rotation: {x: 0, y: 0, z: 0}
+    flipScaleX: 0
+    flipScaleY: 0
+    flipScaleZ: 0
+  domainSettings:
+    noiseTypeName: Perlin
+    fractalTypeName: Fbm
+    noiseTypeParams: 
+    fractalTypeParams: '{"warpOffsets":{"x":131.8886260986328,"y":-790.2544555664063,"z":9.61446762084961,"w":0.0},"octavesMinMax":{"x":0.0,"y":16.0},"amplitudeMinMax":{"x":0.0,"y":1.0},"frequencyMinMax":{"x":0.0,"y":2.0},"lacunarityMinMax":{"x":0.0,"y":4.0},"persistenceMinMax":{"x":0.0,"y":1.0},"warpIterationsMinMax":{"x":0.0,"y":8.0},"warpStrengthMinMax":{"x":-2.0,"y":2.0},"octaves":8.0,"amplitude":0.48794734477996828,"frequency":1.0,"persistence":0.5,"lacunarity":0.9288221597671509,"warpIterations":0.6973782777786255,"warpStrength":0.9334391951560974,"warpEnabled":true,"warpExpanded":true}'
 --- !u!1001 &1147622851
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -69891,30 +69983,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1513211843}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1514765266
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cba17d399ab86974c8ef9551f6e8f8d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  transformSettings:
-    translation: {x: -219.88208, y: -311.00653, z: 1037.8025}
-    scale: {x: 2.833992, y: 1, z: 2.833992}
-    rotation: {x: 0, y: 0, z: 0}
-    flipScaleX: 0
-    flipScaleY: 0
-    flipScaleZ: 0
-  domainSettings:
-    noiseTypeName: Perlin
-    fractalTypeName: Fbm
-    noiseTypeParams: 
-    fractalTypeParams: '{"warpOffsets":{"x":131.8886260986328,"y":-790.2544555664063,"z":9.61446762084961,"w":0.0},"octavesMinMax":{"x":0.0,"y":16.0},"amplitudeMinMax":{"x":0.0,"y":1.0},"frequencyMinMax":{"x":0.0,"y":2.0},"lacunarityMinMax":{"x":0.0,"y":4.0},"persistenceMinMax":{"x":0.0,"y":1.0},"warpIterationsMinMax":{"x":0.0,"y":8.0},"warpStrengthMinMax":{"x":-2.0,"y":2.0},"octaves":8.0,"amplitude":0.48794734477996828,"frequency":1.0,"persistence":0.5,"lacunarity":0.9288221597671509,"warpIterations":0.6973782777786255,"warpStrength":0.9334391951560974,"warpEnabled":true,"warpExpanded":true}'
 --- !u!4 &1516128255 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 942762337184432749, guid: b9c7a183a7a2e004cb24435cb080a708,
@@ -96077,3 +96145,4 @@ SceneRoots:
   - {fileID: 2131249015}
   - {fileID: 1654738304}
   - {fileID: 1339193820}
+  - {fileID: 249319485}

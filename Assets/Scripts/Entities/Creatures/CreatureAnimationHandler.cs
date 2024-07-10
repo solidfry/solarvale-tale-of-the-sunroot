@@ -24,7 +24,6 @@ namespace Entities.Creatures
         private static readonly int YVelocity = Animator.StringToHash("yVelocity");
         
         private Vector3 _velocity;
-        private float _smoothTime = 0.2f;
         
         private void Start()
         {
@@ -38,31 +37,6 @@ namespace Entities.Creatures
             _velocity = _creature.GetRigidbody().velocity;
             HandleMovementAnimations(_agent.velocity.magnitude);
             HandleRotationDuringMovement();
-            SmoothModelPositionWhenFlying();
-        }
-
-        private void SmoothModelPositionWhenFlying()
-        {
-            if (_creature.GetStats.MovementDefinition is null || _creature is null) return;
-            if (_creature.GetStats.MovementDefinition.MovementType != MovementType.Flyer) return;
-            // if (!_creature.IsFlying)
-            // {
-            //     // Transition back to the parent's position smoothly when not flying
-            //     var parentPosition = _creature.model.transform.parent.position;
-            //     _creature.model.transform.position = Vector3.SmoothDamp(_creature.model.transform.position, parentPosition, ref _velocity, _smoothTime);
-            //     return;
-            // }
-            //
-            // if (Physics.Raycast( _creature.model.transform.position, Vector3.down, out var hit, 1f))
-            // {
-            //     var flyer = (FlyerMovementDefinition)_creature.GetStats.MovementDefinition;
-            //
-            //     float targetAltitude = hit.point.y + Mathf.Min(Vector3.Distance(_creature.transform.position, _creature.GetAgent().destination) / 2, flyer.FlightAltitude);
-            //     Vector3 targetPosition = new Vector3(_creature.model.transform.position.x, targetAltitude, _creature.model.transform.position.z);
-            //
-            //     // Smoothly move the model to the target position
-            //     _creature.model.transform.position = Vector3.SmoothDamp(_creature.model.transform.parent.position, targetPosition, ref _velocity, _smoothTime);
-            // }
         }
         
         private void HandleMovementAnimations(float moveSpeed)

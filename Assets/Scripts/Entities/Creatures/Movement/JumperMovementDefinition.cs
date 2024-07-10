@@ -6,7 +6,6 @@ namespace Entities.Creatures.Movement
     public class JumperMovementDefinition : CreatureMovementDefinition
     {
         [field:Header("Jumper Movement Definition")]
-        [field:SerializeField] public override MovementType MovementType { get; protected set; } = MovementType.Jumper;
         [field:SerializeField] public float JumpHeight { get; protected set; } = 1.0f;
         [field:SerializeField] public float JumpDistance { get; protected set; } = 1.0f;
         public override float GetSpecialisedSpeed() => Speed;

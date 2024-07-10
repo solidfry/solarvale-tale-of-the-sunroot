@@ -6,7 +6,6 @@ namespace Entities.Creatures.Movement
     public class FlyerMovementDefinition : CreatureMovementDefinition
     {
         [field:Header("Flyer Movement Definition")]
-        [field:SerializeField] public override MovementType MovementType { get; protected set; } = MovementType.Flyer;
         [field:SerializeField] public float FlightSpeed { get; protected set; } = 1.0f;
         [field:SerializeField] public float FlightAltitude { get; protected set; } = 1.0f;
         

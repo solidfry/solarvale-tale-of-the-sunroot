@@ -157,11 +157,11 @@ namespace Entities.Creatures
                 switch (_stats.MovementDefinition)
                 {
                     case SwimmerMovementDefinition swimmer:
-                        Swim(position, swimmer.GetSpecialisedSpeed());
+                        Swim(position, swimmer);
                         break;
                     case FlyerMovementDefinition flyer:
                         if (Vector3.Distance(transform.position, position) > _stats.SightRange / 2)
-                            Fly(position, flyer.GetSpecialisedSpeed());
+                            Fly(position, flyer);
                         else 
                             Translate(position, speed);
                         break;
@@ -196,61 +196,57 @@ namespace Entities.Creatures
             // Because of the agent navmesh we can't jump, so we need to disable the agent, but it impacts some nodes in the behaviour tree
         }
         
-        public void Swim(Vector3 position, float speed = 1f)
+        public void Swim(Vector3 position, SwimmerMovementDefinition swimmer)
         {
             
         }
         
         public bool IsFlying { get; private set; } = false;
 
-        IEnumerator FlyToPosition(Vector3 position, float speed)
+        IEnumerator FlyToPosition(Vector3 position, FlyerMovementDefinition flyer)
         {
-            Ascend();
+            Ascend(position, flyer);
             IsFlying = true;
             onFlightEnter?.Invoke();
 
-            Debug.Log("Flying to position");
-            Translate(position, speed);
+            Translate(position, flyer.GetSpecialisedSpeed());
 
-            // Wait until the creature is close to the target position
             while (Vector3.Distance(transform.position, position) > _stats.SightRange / 2)
             {
                 yield return null;
             }
-            Descend();
+            Descend(position, flyer);
         }
 
-        void Fly(Vector3 position, float speed = 1f)
+        void Fly(Vector3 position, FlyerMovementDefinition flyer)
         {
             if (IsFlying) return;
-            StartCoroutine(FlyToPosition(position, speed));
+            StartCoroutine(FlyToPosition(position, flyer));
         }
         
-        void Ascend()
+        void Ascend(Vector3 position, FlyerMovementDefinition flyer)
         {
-            var flyer = (FlyerMovementDefinition)_stats.MovementDefinition;
-            float distanceToTarget = Vector3.Distance(transform.position, agent.destination);
+            float distanceToTarget = Vector3.Distance(transform.position, position);
             float dynamicAltitude = Mathf.Min(distanceToTarget / 2, flyer.FlightAltitude);
             float duration = CalculateDuration(dynamicAltitude, flyer.GetSpecialisedSpeed());
-            model.transform.DOMoveY(model.transform.position.y + dynamicAltitude, duration)
-                .SetEase(flyer.AltitudeChangeCurve);
+            
+            Vector3 targetPosition = new Vector3(model.transform.position.x, model.transform.position.y + dynamicAltitude, model.transform.position.z);
+            model.transform.DOMoveY(targetPosition.y, duration).SetEase(flyer.AltitudeChangeCurve);
         }
 
-        void Descend()
+        void Descend(Vector3 position, FlyerMovementDefinition flyer)
         {
-            var flyer = (FlyerMovementDefinition)_stats.MovementDefinition;
-            float targetAltitude = agent.destination.y;
+            float targetAltitude = transform.position.y;
             float currentAltitude = model.transform.position.y;
             float descentDistance = currentAltitude - targetAltitude;
             float duration = CalculateDuration(descentDistance, flyer.GetSpecialisedSpeed());
-
-            model.transform.DOMoveY(targetAltitude, duration)
-                .SetEase(flyer.AltitudeChangeCurve)
-                .OnComplete(() =>
-                {
-                    onFlightEnd?.Invoke(); 
-                    IsFlying = false;
-                });
+            
+            Vector3 targetPosition = new Vector3(position.x, targetAltitude, position.z);
+            model.transform.DOMoveY(targetPosition.y, duration).SetEase(flyer.AltitudeChangeCurve).OnComplete(() =>
+            {
+                onFlightEnd?.Invoke();
+                IsFlying = false;
+            });
         }
         
         private float CalculateDuration(float distance, float speed)
