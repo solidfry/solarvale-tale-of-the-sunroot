@@ -92,5 +92,11 @@ namespace Entities.Plants
                 col.radius = 1;
         }
         
+        [ContextMenu("Initialise")]
+        private void Initialise()
+        {
+            SetColliderRadius();
+        }
+        
     }
 }

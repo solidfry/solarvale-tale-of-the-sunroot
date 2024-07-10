@@ -15,7 +15,7 @@ namespace Behaviour.ScriptableBehaviour.Nodes
 
             if (!hasEntered)
             {
-                context.Creature.onStartMove?.Invoke();
+                context.Creature.onMoveStart?.Invoke();
                 context.SetNodeState(nodeId, true);
             }
 
@@ -38,7 +38,7 @@ namespace Behaviour.ScriptableBehaviour.Nodes
             if (CheckCondition(context))
             {
                 nodeState = NodeState.Success;
-                context.Creature.onTargetReached?.Invoke();
+                context.Creature.onMoveEnd?.Invoke();
                 context.Agent.isStopped = true;
                 context.SetNodeState(nodeId, false);
             }

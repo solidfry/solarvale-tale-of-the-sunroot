@@ -1,5 +1,6 @@
 ﻿using Behaviour.Pathfinding;
 using Behaviour.ScriptableBehaviour.Base;
+using Entities.Creatures.Movement;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -8,16 +9,15 @@ namespace Behaviour.ScriptableBehaviour.Nodes
     [CreateAssetMenu(fileName = "JumpNode", menuName = "Behaviours/Nodes/JumpNode")]
     public class JumpNode : NodeSo
     {
-        public float jumpForce = 10f;
-        public float jumpCooldown = 1f;
-        public float jumpDuration = 0.5f;  // Time the agent is in the air
-
         public override NodeState Process(BehaviourTreeContext context)
         {
             int nodeId = GetInstanceID();
             float lastJumpTime = context.GetNodeTimer(nodeId);
+            var movementType = (JumperMovementDefinition)context.Creature.GetStats.MovementDefinition;
+            
+            
 
-            if (Time.time - lastJumpTime < jumpCooldown)
+            if (Time.time - lastJumpTime < movementType.JumpCooldown)
             {
                 return NodeState.Failure;
             }
@@ -38,12 +38,12 @@ namespace Behaviour.ScriptableBehaviour.Nodes
             context.Agent.enabled = false; // Disable the NavMeshAgent to allow manual Rigidbody control
 
             // Apply the jump force
-            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            rb.AddForce(Vector3.up * movementType.JumpForce, ForceMode.Impulse);
 
             context.SetNodeTimer(nodeId, Time.time);
             context.SetNodeState(nodeId, true);
 
-            context.Creature.StartCoroutine(ReenableNavMeshAgent(context.Agent, jumpDuration));
+            context.Creature.StartCoroutine(ReenableNavMeshAgent(context.Agent, movementType.JumpDuration));
 
             nodeState = NodeState.Success;
             return nodeState;

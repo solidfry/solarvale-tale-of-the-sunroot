@@ -7,7 +7,9 @@ namespace Entities.Creatures.Movement
     {
         [field:Header("Jumper Movement Definition")]
         [field:SerializeField] public float JumpHeight { get; protected set; } = 1.0f;
-        [field:SerializeField] public float JumpDistance { get; protected set; } = 1.0f;
+        [field:SerializeField] public float JumpForce { get; protected set; } = 1.0f;
+        [field:SerializeField] public float JumpCooldown { get; protected set; } = 1.0f;
+        [field:SerializeField] public float JumpDuration { get; protected set; } = 1.0f;
         public override float GetSpecialisedSpeed() => Speed;
     }
 }

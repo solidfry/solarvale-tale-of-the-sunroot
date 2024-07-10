@@ -7,6 +7,7 @@ using Events;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Events;
+using UnityEngine.Serialization;
 
 namespace Entities.Creatures
 {
@@ -43,17 +44,18 @@ namespace Entities.Creatures
 
         #region Events
 
+        [FormerlySerializedAs("onFindTarget")]
         [Space(10)]
         [Header("Events")]
-        [SerializeField] public UnityEvent onFindTarget = new();
-        [SerializeField] public UnityEvent onTargetFound = new();
-        [SerializeField] public UnityEvent onConsumingEnter = new();
+        [SerializeField] public UnityEvent onFindTargetStart = new();
+        [FormerlySerializedAs("onTargetFound")] [SerializeField] public UnityEvent onFindTargetEnd = new();
+        [FormerlySerializedAs("onConsumingEnter")] [SerializeField] public UnityEvent onConsumingStart = new();
         [SerializeField] public UnityEvent onConsumingEnd = new();
-        [SerializeField] public UnityEvent onDangerEnter = new();
+        [FormerlySerializedAs("onDangerEnter")] [SerializeField] public UnityEvent onDangerStart = new();
         [SerializeField] public UnityEvent onDangerEnd = new();
-        [SerializeField] public UnityEvent onStartMove = new();
-        [SerializeField] public UnityEvent onTargetReached = new();
-        [SerializeField] public UnityEvent onFlightEnter = new();
+        [FormerlySerializedAs("onStartMove")] [SerializeField] public UnityEvent onMoveStart = new();
+        [FormerlySerializedAs("onTargetReached")] [SerializeField] public UnityEvent onMoveEnd = new();
+        [FormerlySerializedAs("onFlightEnter")] [SerializeField] public UnityEvent onFlightStart = new();
         [SerializeField] public UnityEvent onFlightEnd = new();
         #endregion
         
@@ -207,7 +209,7 @@ namespace Entities.Creatures
         {
             Ascend(position, flyer);
             IsFlying = true;
-            onFlightEnter?.Invoke();
+            onFlightStart?.Invoke();
 
             Translate(position, flyer.GetSpecialisedSpeed());
 

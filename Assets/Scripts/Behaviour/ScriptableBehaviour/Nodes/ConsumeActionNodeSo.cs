@@ -24,7 +24,7 @@ namespace Behaviour.ScriptableBehaviour.Nodes
             {
                 timer += Time.deltaTime;
                 context.SetNodeTimer(nodeId, timer);
-                context.Creature.onConsumingEnter?.Invoke();
+                context.Creature.onConsumingStart?.Invoke();
                 return NodeState.Running;
             }
 

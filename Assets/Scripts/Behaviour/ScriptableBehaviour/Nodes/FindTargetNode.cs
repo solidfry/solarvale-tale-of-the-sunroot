@@ -14,7 +14,7 @@ namespace Behaviour.ScriptableBehaviour.Nodes
             t.Clear();
             context.Tree.UpdateCurrentTargets(t);
             
-            context.Creature.onFindTarget?.Invoke();
+            context.Creature.onFindTargetStart?.Invoke();
             
             // Find all colliders within sight range and target layer
             Collider[] colliders = Physics.OverlapSphere(context.Agent.transform.position, context.Creature.CurrentSightRange, context.TargetLayer);
@@ -25,7 +25,12 @@ namespace Behaviour.ScriptableBehaviour.Nodes
                 {
                     if (!edible.IsConsumed && !edible.IsOccupied)
                     {
-                        context.AddTarget(edible);
+                        if (context.Creature.GetEntityData is not null 
+                            && context.Creature.GetEntityData.GetStats()
+                                .CheckIsInPreferredFood(edible.GetEntityData))
+                        {
+                            context.CurrentTargets.Add(edible);
+                        }
                     }
                 }
             }
@@ -37,13 +42,14 @@ namespace Behaviour.ScriptableBehaviour.Nodes
                 context.SetTarget(context.CurrentTargets[0].GetTransform);
                 Debug.Log($"Target found: {context.Target.name}");
                 
-                context.Creature.onTargetFound?.Invoke();
+                context.Creature.onFindTargetEnd?.Invoke();
                 nodeState = NodeState.Success;
             }
             else
             {
                 context.SetTarget(null);
                 context.Creature.IncrementSightRange(context);
+                context.Creature.onFindTargetEnd?.Invoke();
                 nodeState = NodeState.Failure;
             }
             
