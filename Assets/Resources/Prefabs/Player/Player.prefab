@@ -50,6 +50,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInput: {fileID: 5697976067300795143}
   starterAssetsInputs: {fileID: 8339848643099164535}
+  playerModel: {fileID: 7920658708644759289}
 --- !u!1001 &2193496360234458620
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1273,6 +1274,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4416926081852918490, guid: 64dce48905ffd9b4293e595fa6941544,
         type: 3}
+      propertyPath: BottomClamp
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4416926081852918490, guid: 64dce48905ffd9b4293e595fa6941544,
+        type: 3}
       propertyPath: FootstepAudioVolume
       value: 0.103
       objectReference: {fileID: 0}
@@ -2076,6 +2082,12 @@ MonoBehaviour:
   sendInteractEvent: 1
   interactCooldown: 0.25
   canInteract: 1
+--- !u!1 &7920658708644759289 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2284592698889629475, guid: 64dce48905ffd9b4293e595fa6941544,
+    type: 3}
+  m_PrefabInstance: {fileID: 8241400220087511514}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &8339848643099164535 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 135756642000475821, guid: 64dce48905ffd9b4293e595fa6941544,

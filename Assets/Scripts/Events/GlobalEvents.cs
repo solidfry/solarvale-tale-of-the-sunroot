@@ -6,6 +6,7 @@ using Interaction;
 using Photography;
 using QuestSystem;
 using QuestSystem.Conditions;
+using UnityEditor.PackageManager;
 using UnityEngine;
 
 namespace Events
@@ -30,6 +31,7 @@ namespace Events
         #region Player Management
         public static Action<bool> OnSetCanInteractEvent;
         public static Action<string> OnControlSchemeChangedEvent;
+        public static Action<bool> OnHidePlayerModelEvent;
         #endregion
 
         #region Dialogue

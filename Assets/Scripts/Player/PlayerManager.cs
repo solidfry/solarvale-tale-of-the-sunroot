@@ -10,6 +10,7 @@ namespace Player
     {
         [SerializeField] PlayerInput playerInput;
         [SerializeField] StarterAssetsInputs starterAssetsInputs;
+        [SerializeField] GameObject playerModel;
 
         private string _currentControlsScheme;
         Observable<string> _currentControlSchemeObservable;
@@ -34,12 +35,16 @@ namespace Player
         {
             GlobalEvents.OnPlayerChangeActionMapEvent += TogglePlayerActionMap;
             GlobalEvents.OnSetCursorInputForLookEvent += SetCursorInputForLook;
+            GlobalEvents.OnHidePlayerModelEvent += SetPlayerModelVisibility;
         }
-        
+
+
+
         private void OnDisable()
         {
             GlobalEvents.OnPlayerChangeActionMapEvent -= TogglePlayerActionMap;
             GlobalEvents.OnSetCursorInputForLookEvent -= SetCursorInputForLook; 
+            GlobalEvents.OnHidePlayerModelEvent -= SetPlayerModelVisibility;
             _currentControlSchemeObservable.ValueChanged -= OnControlsChanged;
         }
 
@@ -69,10 +74,8 @@ namespace Player
 
         public void TogglePlayerActionMap(bool isPaused) => SetPlayerControlMap(isPaused ? "UI" : "Player");
 
-        void SetPlayerControlMap(string actionMap)
-        {
-            playerInput.SwitchCurrentActionMap(actionMap);
-        }
-    
+        void SetPlayerControlMap(string actionMap) => playerInput.SwitchCurrentActionMap(actionMap);
+
+        private void SetPlayerModelVisibility(bool visibility) => playerModel.SetActive(!visibility);
     }
 }

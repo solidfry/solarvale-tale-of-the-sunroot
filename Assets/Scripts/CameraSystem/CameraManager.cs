@@ -1,14 +1,19 @@
+using System.Collections;
 using System.Collections.Generic;
+using Cinemachine;
 using Events;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Utilities;
+using Debug = UnityEngine.Debug;
 
 namespace CameraSystem
 {
     public class CameraManager : MonoBehaviour
     {
         [SerializeField] private CameraMode currentCameraMode;
+        
+        [SerializeField] private CinemachineBrain brain;
         
         [Header("Input Action to Open Camera Mode")]
         [SerializeField] private InputActionReference cameraOpenActionRef;
@@ -19,6 +24,7 @@ namespace CameraSystem
         
         private void Awake()
         {
+            brain = Camera.main.GetComponent<CinemachineBrain>();
             CurrentCameraMode = new Observable<CameraMode>(CameraMode.Exploration);
             CurrentCameraMode.ValueChanged += SendCameraMode;
         }
@@ -36,7 +42,25 @@ namespace CameraSystem
 
         private void Start()
         {
+            if (brain is not null)
+            {
+                brain.m_CameraActivatedEvent.AddListener(OnCameraActivated);
+            }
             AdjustUIVisibility();
+        }
+
+        private void OnCameraActivated(ICinemachineCamera fromCam, ICinemachineCamera toCam)
+        {
+            // GlobalEvents.OnHidePlayerModelEvent?.Invoke(CurrentCameraMode.Value == CameraMode.Photography);
+            if (CurrentCameraMode.Value == CameraMode.Photography)
+                StartCoroutine(DelayedHidePlayerModel());
+            else GlobalEvents.OnHidePlayerModelEvent?.Invoke(false);
+        }
+        
+        IEnumerator DelayedHidePlayerModel()
+        {
+            yield return new WaitForSeconds(brain.ActiveBlend.Duration - 0.2f);
+            GlobalEvents.OnHidePlayerModelEvent?.Invoke(CurrentCameraMode.Value == CameraMode.Photography);
         }
 
         private void OnEnable()
@@ -49,12 +73,17 @@ namespace CameraSystem
             cameraOpenActionRef.action.performed -= OnCameraOpen;
         }
 
+        private void Update()
+        {
+            if (!brain.IsBlending) return;
+        }
+
         private void OnCameraOpen(InputAction.CallbackContext context)
         {
             SwitchCamera();
             AdjustUIVisibility();
         }
-
+        
         private void SwitchCamera()
         {
             SetCameraMode(IsInCameraMode ? CameraMode.Exploration : CameraMode.Photography);
@@ -72,6 +101,8 @@ namespace CameraSystem
             GlobalEvents.OnSetCameraHUDVisibilityEvent?.Invoke(IsInCameraMode);
             GlobalEvents.OnSetCanInteractEvent?.Invoke(!IsInCameraMode);
         }
+        
+    
         
         
     }
