@@ -42,11 +42,11 @@ namespace Entities.Creatures
         private void Run()
         {
             if (creatures.Count == 0) return;
-            creatures.ForEach(creature =>
+            foreach (var creature in creatures)
             {
                 ToggleCreature(creature);
                 creature.GetBehaviourTree?.Run();
-            });
+            }
         }
 
         private void ToggleCreature(Creature creature)

@@ -239,18 +239,16 @@ namespace Entities.Creatures
             float duration = CalculateDuration(descentDistance, flyer.GetSpecialisedSpeed());
             
             Vector3 targetPosition = new Vector3(position.x, targetAltitude, position.z);
-            model.transform.DOMoveY(targetPosition.y, duration).SetEase(flyer.AltitudeChangeCurve).OnComplete(() =>
+            model.transform.DOMoveY(targetPosition.y, duration).OnComplete(() =>
             {
                 onFlightEnd?.Invoke();
                 IsFlying = false;
+                model.transform.localPosition = Vector3.zero;
             });
         }
         
-        private float CalculateDuration(float distance, float speed)
-        {
-            return Mathf.Abs(distance) / speed;
-        }
-        
+        private float CalculateDuration(float distance, float speed) => Mathf.Abs(distance) / speed;
+
         public void IncrementSightRange(BehaviourTreeContext context)
         {
             bool canIncrement = CurrentSightRangeMultiplier < CurrentMultiplierLimit;
