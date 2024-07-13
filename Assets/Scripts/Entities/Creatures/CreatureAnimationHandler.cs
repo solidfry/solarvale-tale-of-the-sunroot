@@ -22,6 +22,7 @@ namespace Entities.Creatures
         private static readonly int IsFlying = Animator.StringToHash("isFlying");
         private static readonly int IsJumping = Animator.StringToHash("isJumping");
         private static readonly int YVelocity = Animator.StringToHash("yVelocity");
+        private static readonly int IsCalling = Animator.StringToHash("isCalling");
         
         private Vector3 _velocity;
         
@@ -85,6 +86,11 @@ namespace Entities.Creatures
         public void SetMoving(bool isMoving)
         {
             _animator.SetBool(IsMoving, isMoving);
+        }
+        
+        public void SetCalling(bool isCalling)
+        {
+            _animator.SetBool(IsCalling, isCalling);
         }
         
         public void SetSpeed(float speed)

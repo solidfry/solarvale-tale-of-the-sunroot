@@ -6,6 +6,7 @@ namespace Behaviour.ScriptableBehaviour.Base
 {
     public abstract class NodeSo : ScriptableObject
     {
+        public int priority = 0;
         public List<NodeSo> Children = new List<NodeSo>();
         [HideInInspector]
         public NodeState nodeState = NodeState.Running;

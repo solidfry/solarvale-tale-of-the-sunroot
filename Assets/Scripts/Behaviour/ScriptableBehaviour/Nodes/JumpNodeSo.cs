@@ -15,8 +15,6 @@ namespace Behaviour.ScriptableBehaviour.Nodes
             float lastJumpTime = context.GetNodeTimer(nodeId);
             var movementType = (JumperMovementDefinition)context.Creature.GetStats.MovementDefinition;
             
-            
-
             if (Time.time - lastJumpTime < movementType.JumpCooldown)
             {
                 return NodeState.Failure;

@@ -17,7 +17,6 @@ namespace Behaviour.Pathfinding
 
         protected virtual List<Node> Sort() => Children.OrderByDescending(child => child.priority).ToList();
         
-
         public override NodeState Process()
         {
             foreach (var child in SortedChildren)

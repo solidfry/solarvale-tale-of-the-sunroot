@@ -48,6 +48,8 @@ namespace Entities.Creatures
         [SerializeField] public UnityEvent onMoveEnd = new();
         [SerializeField] public UnityEvent onFlightStart = new();
         [SerializeField] public UnityEvent onFlightEnd = new();
+        [SerializeField] public UnityEvent onAudioCallStart = new();
+        [SerializeField] public UnityEvent onAudioCallEnd = new();
         #endregion
         
         private void Awake() => Initialise();

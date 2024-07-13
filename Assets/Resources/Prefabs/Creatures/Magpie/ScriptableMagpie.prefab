@@ -243,6 +243,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8876344238144151685, guid: f5bc4980b0de7be4a952ef7424b67f7f,
         type: 3}
+      propertyPath: onAudioCallEnd.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876344238144151685, guid: f5bc4980b0de7be4a952ef7424b67f7f,
+        type: 3}
+      propertyPath: onAudioCallStart.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876344238144151685, guid: f5bc4980b0de7be4a952ef7424b67f7f,
+        type: 3}
       propertyPath: onFlightEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 6
       objectReference: {fileID: 0}
@@ -263,6 +273,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8876344238144151685, guid: f5bc4980b0de7be4a952ef7424b67f7f,
         type: 3}
+      propertyPath: onAudioCallEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876344238144151685, guid: f5bc4980b0de7be4a952ef7424b67f7f,
+        type: 3}
       propertyPath: onFlightEnter.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 7702610003586320989}
@@ -271,6 +286,16 @@ PrefabInstance:
       propertyPath: onFlightStart.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 7702610003586320989}
+    - target: {fileID: 8876344238144151685, guid: f5bc4980b0de7be4a952ef7424b67f7f,
+        type: 3}
+      propertyPath: onAudioCallEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 7702610003586320989}
+    - target: {fileID: 8876344238144151685, guid: f5bc4980b0de7be4a952ef7424b67f7f,
+        type: 3}
+      propertyPath: onAudioCallStart.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8876344238144151685, guid: f5bc4980b0de7be4a952ef7424b67f7f,
         type: 3}
       propertyPath: onFlightEnd.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
@@ -283,12 +308,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8876344238144151685, guid: f5bc4980b0de7be4a952ef7424b67f7f,
         type: 3}
+      propertyPath: onAudioCallStart.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 7702610003586320989}
+    - target: {fileID: 8876344238144151685, guid: f5bc4980b0de7be4a952ef7424b67f7f,
+        type: 3}
       propertyPath: onFlightEnter.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8876344238144151685, guid: f5bc4980b0de7be4a952ef7424b67f7f,
         type: 3}
       propertyPath: onFlightStart.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876344238144151685, guid: f5bc4980b0de7be4a952ef7424b67f7f,
+        type: 3}
+      propertyPath: onAudioCallEnd.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8876344238144151685, guid: f5bc4980b0de7be4a952ef7424b67f7f,
@@ -300,6 +335,21 @@ PrefabInstance:
         type: 3}
       propertyPath: onFlightStart.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SetFlying
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876344238144151685, guid: f5bc4980b0de7be4a952ef7424b67f7f,
+        type: 3}
+      propertyPath: onAudioCallEnd.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetCalling
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876344238144151685, guid: f5bc4980b0de7be4a952ef7424b67f7f,
+        type: 3}
+      propertyPath: onAudioCallStart.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876344238144151685, guid: f5bc4980b0de7be4a952ef7424b67f7f,
+        type: 3}
+      propertyPath: onAudioCallStart.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetCalling
       objectReference: {fileID: 0}
     - target: {fileID: 8876344238144151685, guid: f5bc4980b0de7be4a952ef7424b67f7f,
         type: 3}
@@ -318,12 +368,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8876344238144151685, guid: f5bc4980b0de7be4a952ef7424b67f7f,
         type: 3}
+      propertyPath: onAudioCallEnd.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Entities.Creatures.CreatureAnimationHandler, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876344238144151685, guid: f5bc4980b0de7be4a952ef7424b67f7f,
+        type: 3}
       propertyPath: onFlightEnter.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8876344238144151685, guid: f5bc4980b0de7be4a952ef7424b67f7f,
         type: 3}
       propertyPath: onFlightStart.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876344238144151685, guid: f5bc4980b0de7be4a952ef7424b67f7f,
+        type: 3}
+      propertyPath: onAudioCallStart.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Entities.Creatures.CreatureAnimationHandler, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876344238144151685, guid: f5bc4980b0de7be4a952ef7424b67f7f,
+        type: 3}
+      propertyPath: onAudioCallStart.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8876344238144151685, guid: f5bc4980b0de7be4a952ef7424b67f7f,
@@ -339,6 +404,16 @@ PrefabInstance:
     - target: {fileID: 8876344238144151685, guid: f5bc4980b0de7be4a952ef7424b67f7f,
         type: 3}
       propertyPath: onFlightStart.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876344238144151685, guid: f5bc4980b0de7be4a952ef7424b67f7f,
+        type: 3}
+      propertyPath: onAudioCallEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876344238144151685, guid: f5bc4980b0de7be4a952ef7424b67f7f,
+        type: 3}
+      propertyPath: onAudioCallStart.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
