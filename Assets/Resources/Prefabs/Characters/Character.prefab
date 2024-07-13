@@ -52,7 +52,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5562653932230839373}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -139,7 +139,6 @@ MonoBehaviour:
         m_CallState: 2
   isInteractable: 1
   isOneTimeUse: 0
-  isDisabledAfterUse: 0
   interactMessage: Talk to Grandma
   showCannotInteractMessage: 1
   cannotInteractMessage: Cannot interact with this object.
@@ -155,9 +154,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e66df664a164725a2fc753ac05aa3df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questAction: 0
   questData: {fileID: 11400000, guid: 861bba42769cf164692cce76382f642b, type: 2}
-  questCondition: {fileID: 0}
+  questAction: 0
 --- !u!114 &5144047520134273037
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -172,6 +170,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueNode: Start
   isOneTimeUse: 0
+  used: 0
   onDialogueStartEvent:
     m_PersistentCalls:
       m_Calls: []
