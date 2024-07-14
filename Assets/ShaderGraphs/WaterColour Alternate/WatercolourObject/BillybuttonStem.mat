@@ -8,13 +8,11 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: BillybuttonStem
-  m_Shader: {fileID: -6465566751694194690, guid: f5d373e564280e04fba4453e862386f5,
+  m_Shader: {fileID: -6465566751694194690, guid: d783dc98fee3f7949b2183ffdb7db05b,
     type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
-  m_ValidKeywords:
-  - _RECEIVE_SHADOWS_OFF
-  - _SPECULAR_SETUP
+  m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -156,6 +154,9 @@ Material:
     - _TriplanarBlend: 1
     - _TriplanarTiling: 0.01
     - _UVSec: 0
+    - _WiggleOffset: 0.5
+    - _WindSpeed: 1
+    - _WindStrength: 0.2
     - _WorkflowMode: 0
     - _ZTest: 4
     - _ZWrite: 1
@@ -171,6 +172,7 @@ Material:
     - _Fresnel_Color: {r: 0.3720881, g: 0.5377358, b: 0.30691525, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _Specular_Color: {r: 0, g: 0, b: 0, a: 0}
+    - _WindDirection: {r: 1, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &1833736384343635991
 MonoBehaviour:

@@ -21,16 +21,11 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Watercolour-WithTex-BlueGum-Leaves
-  m_Shader: {fileID: -6465566751694194690, guid: f5d373e564280e04fba4453e862386f5,
+  m_Shader: {fileID: -6465566751694194690, guid: d783dc98fee3f7949b2183ffdb7db05b,
     type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
-  - _ALPHAPREMULTIPLY_ON
-  - _MAIN_LIGHT_SHADOWS
-  - _MAIN_LIGHT_SHADOWS_CASCADE
-  - _SOFT_SHADOWS
-  - _SPECULAR_SETUP
   - _SURFACE_TYPE_TRANSPARENT
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -119,10 +114,13 @@ Material:
     - _SOFT_SHADOWS: 1
     - _Shadow_Opacity: 0.5
     - _SpecularStrength: 0
-    - _SrcBlend: 1
+    - _SrcBlend: 5
     - _Surface: 1
     - _TriplanarBlend: 1
     - _TriplanarTiling: 0.01
+    - _WiggleOffset: 0.5
+    - _WindSpeed: 1
+    - _WindStrength: 1
     - _WorkflowMode: 0
     - _ZTest: 4
     - _ZWrite: 0
@@ -134,4 +132,5 @@ Material:
     - _Emission_Color: {r: 0, g: 0, b: 0, a: 0}
     - _Fresnel_Color: {r: 0.97217375, g: 1, b: 0.4481132, a: 0}
     - _Specular_Color: {r: 0, g: 0, b: 0, a: 0}
+    - _WindDirection: {r: 2, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
