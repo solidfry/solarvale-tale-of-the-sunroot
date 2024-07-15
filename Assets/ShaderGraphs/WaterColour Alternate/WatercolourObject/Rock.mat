@@ -20,12 +20,14 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Wanderer-RocksSmall1
+  m_Name: Rock
   m_Shader: {fileID: -6465566751694194690, guid: f5d373e564280e04fba4453e862386f5,
     type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
+  m_ValidKeywords:
+  - _RECEIVE_SHADOWS_OFF
+  - _SPECULAR_SETUP
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 1
@@ -125,17 +127,19 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - Vector1_2BDF6FD9: 1
-    - Vector1_2FA10055: -0.58
+    - Vector1_2BDF6FD9: 2.85
+    - Vector1_2FA10055: 11.3
     - Vector1_46F1304E: 0.2
-    - Vector1_BBEA2355: 3.99
-    - _AO_Strength: 1
-    - _Albedo_Strength: 7.76
+    - Vector1_BBEA2355: 3.6
+    - _AO_Strength: 0.22
+    - _Albedo_Strength: 6.04
     - _AlphaClip: 0
+    - _AlphaMultiplier: 0.01
     - _AlphaToMask: 0
-    - _Alpha_Clip_Threshold: 0.702
+    - _Alpha_Clip_Threshold: 0
     - _BaseMapPremultiply: 0
     - _Blend: 0
+    - _BlendModePreserveSpecular: 1
     - _BumpScale: 1
     - _CameraDistanceImpact: 0
     - _CastShadows: 1
@@ -143,7 +147,7 @@ Material:
     - _CelNumSteps: 3
     - _CelPrimaryEnabled: 0
     - _CelPrimaryMode: 2
-    - _Cull: 0
+    - _Cull: 2
     - _Cutoff: 0.5
     - _DetailMapBlendingMode: 0
     - _DetailMapImpact: 0
@@ -182,6 +186,10 @@ Material:
     - _Metallic: 0
     - _Metallic_Strength: 0
     - _Mode: 0
+    - _Noise_1_Multiplier: 1.03
+    - _Noise_1_Scale: 20
+    - _Noise_2_Multiplier: 1.38
+    - _Noise_2_Scale: 80
     - _NormalStength: 0
     - _OcclusionStrength: 1
     - _OutlineDepthOffset: 0
@@ -195,6 +203,7 @@ Material:
     - _Parallax: 0.02
     - _QueueControl: 0
     - _QueueOffset: 0
+    - _ReceiveShadows: 0
     - _RimEnabled: 0
     - _SecondaryColor: 1
     - _SecondaryColorEnabled: 1
@@ -204,6 +213,7 @@ Material:
     - _ShadowEdgeSizeExtra: 0.175
     - _ShadowEdgeSmoothness: 0.071
     - _ShadowFalloff: 0.01
+    - _Shadow_Opacity: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularEnabled: 0
     - _SpecularHighlights: 1
@@ -212,6 +222,8 @@ Material:
     - _Surface: 0
     - _TextureBlendingMode: 0
     - _TextureImpact: 1
+    - _TriplanarBlend: 0.13
+    - _TriplanarTiling: 0.06
     - _UVSec: 0
     - _UnityShadowMode: 1
     - _UnityShadowOcclusion: 0
@@ -219,13 +231,14 @@ Material:
     - _UnityShadowSharpness: 1
     - _VertexColorsEnabled: 0
     - _VertexExtrusionSmoothNormals: 0
+    - _WorkflowMode: 0
     - _ZTest: 4
     - _ZWrite: 1
     - _ZWriteControl: 0
     m_Colors:
-    - Color_D9F05973: {r: 0.7830188, g: 0.7830188, b: 0.7830188, a: 1}
-    - Color_DB04B181: {r: 0.30371127, g: 0.5889333, b: 0.6132076, a: 0}
-    - _Albedo_Color: {r: 1, g: 1, b: 1, a: 1}
+    - Color_D9F05973: {r: 0.58739763, g: 0.69392043, b: 0.754717, a: 1}
+    - Color_DB04B181: {r: 0.34262875, g: 0.3019608, b: 0.6117647, a: 0}
+    - _Albedo_Color: {r: 0.3773585, g: 0.3773585, b: 0.3773585, a: 1}
     - _BaseColor: {r: 0.26072443, g: 0.26813543, b: 0.29245278, a: 1}
     - _Color: {r: 0.26072446, g: 0.26813546, b: 0.2924528, a: 1}
     - _ColorCelShadow: {r: 0.49056602, g: 0.34478462, b: 0.4476891, a: 1}
@@ -242,8 +255,9 @@ Material:
     - _Emission_Color: {r: 0, g: 0, b: 0, a: 0}
     - _FlatRimColor: {r: 0.38679248, g: 0.38679248, b: 0.38679248, a: 1}
     - _FlatSpecularColor: {r: 0.75294244, g: 0.111932434, b: 0.19806935, a: 1}
-    - _Fresnel_Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Fresnel_Color: {r: 0.5471698, g: 0.53000367, b: 0, a: 1}
     - _LightmapDirection: {r: 0, g: 1, b: 0, a: 0}
+    - _NoiseColor: {r: 0.6226415, g: 0.4597417, b: 0.4493592, a: 0}
     - _OutlineColor: {r: 1, g: 1, b: 1, a: 1}
     - _Specular_Color: {r: 0, g: 0, b: 0, a: 0}
     - _UnityShadowColor: {r: 0.65, g: 0.65, b: 0.65, a: 1}
