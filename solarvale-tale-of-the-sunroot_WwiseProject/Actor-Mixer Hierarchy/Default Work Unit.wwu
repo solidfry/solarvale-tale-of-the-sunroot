@@ -104,7 +104,7 @@
 								<ActiveSource Name="music_flutes_edit" ID="{07EF8BDE-5C34-443A-9C1C-95A019D91765}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="music_flutes" ID="{E0F0E640-A937-4834-8FB5-C866BEEBF766}" ShortID="769830440">
+						<Sound Name="music_game_start" ID="{FD0DD80B-19DA-49DC-A582-98B6E083E889}" ShortID="990763132">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
@@ -114,19 +114,19 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="music_flutes" ID="{94F036E0-52D8-448D-BDA1-538107161128}">
+								<AudioFileSource Name="music_game_start" ID="{19336F6A-467D-42C8-B372-A6878B8C6588}">
 									<Language>SFX</Language>
-									<AudioFile>music_flutes.wav</AudioFile>
+									<AudioFile>music_game_start.wav</AudioFile>
 									<MediaIDList>
-										<MediaID ID="1030003723"/>
+										<MediaID ID="908080785"/>
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
-								<ActiveSource Name="music_flutes" ID="{94F036E0-52D8-448D-BDA1-538107161128}" Platform="Linked"/>
+								<ActiveSource Name="music_game_start" ID="{19336F6A-467D-42C8-B372-A6878B8C6588}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="music_picolo" ID="{26EB117B-33A9-4FFB-BAFF-9E049E73D2DA}" ShortID="303729063">
+						<Sound Name="music_gecko" ID="{CC9A6D86-41D5-43E5-A72E-390AE32309A5}" ShortID="204581409">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
@@ -136,16 +136,38 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="music_picolo" ID="{8099DA46-B30A-4EC1-A6BC-9924937479FF}">
+								<AudioFileSource Name="music_gecko" ID="{ACA530D8-64A3-43D2-B5D4-E5AC68AEA4BA}">
 									<Language>SFX</Language>
-									<AudioFile>music_picolo.wav</AudioFile>
+									<AudioFile>music_gecko.wav</AudioFile>
 									<MediaIDList>
-										<MediaID ID="82482550"/>
+										<MediaID ID="508563473"/>
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
-								<ActiveSource Name="music_picolo" ID="{8099DA46-B30A-4EC1-A6BC-9924937479FF}" Platform="Linked"/>
+								<ActiveSource Name="music_gecko" ID="{ACA530D8-64A3-43D2-B5D4-E5AC68AEA4BA}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="music_grandma" ID="{6B2B6231-74F2-4CF4-B5C6-4A15198B7E4A}" ShortID="377963123">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="music_grandma" ID="{9BD9A145-A00C-4572-B16E-231E26E56EC3}">
+									<Language>SFX</Language>
+									<AudioFile>music_grandma.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="549112133"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="music_grandma" ID="{9BD9A145-A00C-4572-B16E-231E26E56EC3}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
@@ -281,7 +303,6 @@
 									</ReferenceList>
 									<ChildrenList>
 										<Sound Name="Click" ID="{7B6898A4-A2EB-462F-AB2A-D82C66C74403}" ShortID="918283496">
-											<Comment> </Comment>
 											<PropertyList>
 												<Property Name="Highpass" Type="int16">
 													<ValueList>
@@ -414,6 +435,35 @@
 									</ChildrenList>
 									<ActiveSourceList>
 										<ActiveSource Name="BrandIntro-Birds" ID="{BF7EB426-20DE-4088-A8D8-2400157607A5}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="music_flute_solo" ID="{BC78CF12-C231-4980-8F40-8F21DBCC97FF}" ShortID="1050441498">
+									<PropertyList>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="music_flute_solo" ID="{FF694CFD-F2E3-4097-8692-B398000896B6}">
+											<Language>SFX</Language>
+											<AudioFile>music_flute_solo.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="695495137"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="music_flute_solo" ID="{FF694CFD-F2E3-4097-8692-B398000896B6}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
