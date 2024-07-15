@@ -8,9 +8,9 @@ namespace Entities.Plants
     public class Edible : Entity, IEdible
     {
         public new PlantEntityData GetEntityData => (PlantEntityData)base.GetEntityData;
-        private SphereCollider col;
+        [SerializeField] private SphereCollider sphereCollider;
         public Transform GetTransform  => transform;
-        [FormerlySerializedAs("isEaten")] [SerializeField] bool isConsumed = false;
+        [SerializeField] bool isConsumed = false;
 
         [SerializeField] bool isOccupied;
         [SerializeField] private int currentOccupationCount;
@@ -84,12 +84,12 @@ namespace Entities.Plants
         
         private void SetColliderRadius()
         {
-            col = GetComponent<SphereCollider>();
+            if (sphereCollider is null) return;
 
             if (GetEntityData is not null) 
-                col.radius = GetEntityData.GetStats().OccupationRadius;
+                sphereCollider.radius = GetEntityData.GetStats().OccupationRadius;
             else 
-                col.radius = 1;
+                sphereCollider.radius = 1;
         }
         
         [ContextMenu("Initialise")]

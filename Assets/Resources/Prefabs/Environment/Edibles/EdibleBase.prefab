@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7930036169129399139}
   - component: {fileID: 846202948971152462}
   m_Layer: 13
-  m_Name: Grubs
+  m_Name: EdibleBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -48,6 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityData: {fileID: 11400000, guid: 92f2ca232a39d6c48a4353d9a96f5eba, type: 2}
+  sphereCollider: {fileID: 0}
   isConsumed: 0
   isOccupied: 0
   currentOccupationCount: 0
@@ -78,8 +79,7 @@ MeshRenderer:
   m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 8695bed9e96b41347947b20fa9984916, type: 2}
+  m_Materials: []
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
