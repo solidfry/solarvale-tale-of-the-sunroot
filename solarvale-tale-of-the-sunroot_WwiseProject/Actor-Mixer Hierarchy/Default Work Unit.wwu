@@ -281,6 +281,7 @@
 									</ReferenceList>
 									<ChildrenList>
 										<Sound Name="Click" ID="{7B6898A4-A2EB-462F-AB2A-D82C66C74403}" ShortID="918283496">
+											<Comment> </Comment>
 											<PropertyList>
 												<Property Name="Highpass" Type="int16">
 													<ValueList>
@@ -289,7 +290,7 @@
 												</Property>
 												<Property Name="Lowpass" Type="int16">
 													<ValueList>
-														<Value>55</Value>
+														<Value>41</Value>
 													</ValueList>
 												</Property>
 												<Property Name="MakeUpGain" Type="Real64">
@@ -300,7 +301,7 @@
 												<Property Name="OverrideEffect" Type="bool" Value="True"/>
 												<Property Name="Pitch" Type="int32">
 													<ValueList>
-														<Value>1170</Value>
+														<Value>610</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -318,15 +319,17 @@
 														<Property Name="AttackTime" Type="Real32" Value="0.3"/>
 														<Property Name="DecayTime" Type="Real32" Value="0.4"/>
 														<Property Name="FixDur" Type="Real32" Value="0.21"/>
-														<Property Name="StartFreq" Type="Real32" Value="1646"/>
-														<Property Name="StartFreqRandMax" Type="Real32" Value="236"/>
+														<Property Name="ReleaseTime" Type="Real32" Value="1.3"/>
+														<Property Name="StartFreq" Type="Real32" Value="146"/>
+														<Property Name="StartFreqRandMax" Type="Real32" Value="468"/>
 														<Property Name="StartFreqRandMin" Type="Real32" Value="-136"/>
 														<Property Name="StopFreq" Type="Real32" Value="69"/>
 														<Property Name="StopFreqRandMax" Type="Real32" Value="238"/>
 														<Property Name="StopFreqRandMin" Type="Real32" Value="-132"/>
 														<Property Name="SustainLevel" Type="Real32" Value="0"/>
-														<Property Name="SustainTime" Type="Real32" Value="0.2"/>
-														<Property Name="WaveGain" Type="Real32" Value="-8.2"/>
+														<Property Name="SustainTime" Type="Real32" Value="0"/>
+														<Property Name="WaveGain" Type="Real32" Value="-6.6"/>
+														<Property Name="WaveType" Type="int32" Value="2"/>
 													</PropertyList>
 													<Language>SFX</Language>
 												</SourcePlugin>
