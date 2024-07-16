@@ -254,6 +254,13 @@
 													</PropertyList>
 													<Language>SFX</Language>
 												</SourcePlugin>
+												<AudioFileSource Name="UI__Menu_Hover" ID="{C5BE404F-2C76-48EC-A530-B7BDF121F8D9}">
+													<Language>SFX</Language>
+													<AudioFile>UI__Menu_Hover.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1067857081"/>
+													</MediaIDList>
+												</AudioFileSource>
 											</ChildrenList>
 											<ObjectLists>
 												<ObjectList Name="Effects">
@@ -293,7 +300,7 @@
 												</ObjectList>
 											</ObjectLists>
 											<ActiveSourceList>
-												<ActiveSource Name="Tone Generator" ID="{E3CC9D07-77D5-435E-A1AE-72E343D50918}" Platform="Linked"/>
+												<ActiveSource Name="UI__Menu_Hover" ID="{C5BE404F-2C76-48EC-A530-B7BDF121F8D9}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
 									</ChildrenList>
@@ -360,6 +367,13 @@
 													</PropertyList>
 													<Language>SFX</Language>
 												</SourcePlugin>
+												<AudioFileSource Name="UI__Menu_Click" ID="{379292CD-7080-484B-A828-29034DCE270A}">
+													<Language>SFX</Language>
+													<AudioFile>UI__Menu_Click.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="65738593"/>
+													</MediaIDList>
+												</AudioFileSource>
 											</ChildrenList>
 											<ObjectLists>
 												<ObjectList Name="Effects">
@@ -399,7 +413,41 @@
 												</ObjectList>
 											</ObjectLists>
 											<ActiveSourceList>
-												<ActiveSource Name="Tone Generator" ID="{FEB2697C-6FF2-4BAE-8FF3-A7059B14A9EC}" Platform="Linked"/>
+												<ActiveSource Name="UI__Menu_Click" ID="{379292CD-7080-484B-A828-29034DCE270A}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Button_Select" ID="{48FCA9BA-B28B-46AF-9792-15E005217B7E}" ShortID="89515674">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="UI__Menu_Select" ID="{440ABDC0-6F1E-4F84-B95D-8F7D545416C1}" ShortID="209955484">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="UI__Menu_Select" ID="{AFF0465A-1049-4A75-9FF7-578601A2A2B6}">
+													<Language>SFX</Language>
+													<AudioFile>UI__Menu_Select.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="473953376"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="UI__Menu_Select" ID="{AFF0465A-1049-4A75-9FF7-578601A2A2B6}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
 									</ChildrenList>
@@ -454,6 +502,11 @@
 							<ChildrenList>
 								<Sound Name="GameIntro_SoundScape" ID="{3F781544-F121-4DF8-BB10-275BB72FD1E3}" ShortID="751955288">
 									<PropertyList>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
 												<Value>-2</Value>
@@ -545,6 +598,50 @@
 									</ChildrenList>
 									<ActiveSourceList>
 										<ActiveSource Name="Polaroid_photo_click_print" ID="{C77BEBE0-FCBF-4C69-A183-92DDE172F984}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="UI__Photo_Keep" ID="{B680E328-FF50-4834-B1DE-5095294D4528}" ShortID="1043325580">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="UI__Photo_Keep" ID="{ED8D34D1-E3AA-4EE3-9EA8-4E0491E4EEBD}">
+											<Language>SFX</Language>
+											<AudioFile>UI__Photo_Keep.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="407734084"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="UI__Photo_Keep" ID="{ED8D34D1-E3AA-4EE3-9EA8-4E0491E4EEBD}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="UI__Photo_Discard" ID="{85B2C8ED-4FF0-4C43-955F-118D74DC34D7}" ShortID="34186782">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="UI__Photo_Discard" ID="{DDF34DCE-0CCF-4168-957E-34DA9A25E8EC}">
+											<Language>SFX</Language>
+											<AudioFile>UI__Photo_Discard.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="109981130"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="UI__Photo_Discard" ID="{DDF34DCE-0CCF-4168-957E-34DA9A25E8EC}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
