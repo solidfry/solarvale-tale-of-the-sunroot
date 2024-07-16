@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{2DE174A0-C58B-4A2B-BA1D-C711DE10CC9F}" SchemaVersion="119">
 	<Effects>
-		<WorkUnit Name="Default Work Unit" ID="{2DE174A0-C58B-4A2B-BA1D-C711DE10CC9F}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{2DE174A0-C58B-4A2B-BA1D-C711DE10CC9F}" PersistMode="Standalone">
+			<ChildrenList>
+				<Effect Name="Compressor" ID="{900C30BB-D0CD-4036-9C30-DD1789F013BF}" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3"/>
+				<Effect Name="Reduce_Gain" ID="{4C9FF50E-B871-4409-8FEC-F57C32E2C279}" PluginName="Wwise Gain" CompanyID="0" PluginID="139" PluginType="3">
+					<PropertyList>
+						<Property Name="FullBandGain" Type="Real32" Value="-7"/>
+					</PropertyList>
+				</Effect>
+			</ChildrenList>
+		</WorkUnit>
 	</Effects>
 </WwiseDocument>
