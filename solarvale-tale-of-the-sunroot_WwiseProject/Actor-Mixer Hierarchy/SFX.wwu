@@ -3,50 +3,6 @@
 	<AudioObjects>
 		<WorkUnit Name="SFX" ID="{1A7BD965-CC17-4EA5-85D8-3938F011058F}" OwnerID="{8CB12569-B7F8-44ED-9C1B-53D0D479775D}" PersistMode="Nested">
 			<ChildrenList>
-				<Sound Name="SFX_Beach" ID="{93A00A66-5552-418B-AA4B-BB401C57338B}" ShortID="483323830">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="SFX_Beach" ID="{52C28992-CD85-429A-A4E5-6BDE54D4C9EA}">
-							<Language>SFX</Language>
-							<AudioFile>SFX_Beach.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="680661195"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="SFX_Beach" ID="{52C28992-CD85-429A-A4E5-6BDE54D4C9EA}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
-				<Sound Name="SFX_Cave" ID="{7F7F21C9-E63B-41AD-B468-39A558B6086F}" ShortID="178405283">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="SFX_Cave" ID="{3B323C48-5425-474C-8BD2-DF5C03C5C993}">
-							<Language>SFX</Language>
-							<AudioFile>SFX_Cave.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="871162155"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="SFX_Cave" ID="{3B323C48-5425-474C-8BD2-DF5C03C5C993}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
 				<Sound Name="SFX_Cricket" ID="{5BA01659-6736-4AC9-80F5-557DC39769DB}" ShortID="622342344">
 					<ReferenceList>
 						<Reference Name="Conversion">
@@ -155,72 +111,6 @@
 					</ChildrenList>
 					<ActiveSourceList>
 						<ActiveSource Name="SFX_Forest_Rustling" ID="{A6DCFA4D-805A-4272-9E36-D0E4D7C40B5C}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
-				<Sound Name="SFX_Mountain" ID="{53ECEFA6-EDBD-4B88-A282-E4BAA464877F}" ShortID="1001136616">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="SFX_Mountain" ID="{8364C8A9-4D8D-473E-BE51-E9249B168014}">
-							<Language>SFX</Language>
-							<AudioFile>SFX_Mountain.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="8902143"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="SFX_Mountain" ID="{8364C8A9-4D8D-473E-BE51-E9249B168014}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
-				<Sound Name="SFX_Plains-Scrub" ID="{8BEE56EA-04AD-4020-8357-76F378975959}" ShortID="671277990">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="SFX_Plains-Scrub" ID="{0DF759C0-E95D-47DC-807D-0BF372E1381E}">
-							<Language>SFX</Language>
-							<AudioFile>SFX_Plains-Scrub.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="596537012"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="SFX_Plains-Scrub" ID="{0DF759C0-E95D-47DC-807D-0BF372E1381E}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
-				<Sound Name="SFX_Stream" ID="{3A3BB2F6-CE11-4168-B5D6-447F3A8BC62D}" ShortID="376585675">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="SFX_Stream" ID="{75DA3C4C-60F3-4670-A708-4DC9E19EEF33}">
-							<Language>SFX</Language>
-							<AudioFile>SFX_Stream.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="533786938"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="SFX_Stream" ID="{75DA3C4C-60F3-4670-A708-4DC9E19EEF33}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="SFX_Wood_Fence" ID="{F2047D7B-9B29-4412-A720-454FA6AB9AFB}" ShortID="1049271781">
