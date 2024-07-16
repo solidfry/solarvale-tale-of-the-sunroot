@@ -16,9 +16,9 @@ namespace AK
         static const AkUniqueID PLAY_BRANDINTRO_BIRDS = 2883217168U;
         static const AkUniqueID PLAY_BUTTON_CLICK = 1149159311U;
         static const AkUniqueID PLAY_BUTTON_HOVER = 4021863785U;
+        static const AkUniqueID PLAY_CAMERA_SNAP = 1514177854U;
         static const AkUniqueID PLAY_GAMEINTRO_SOUNDSCAPE = 3337834332U;
         static const AkUniqueID PLAY_MUSIC_FLUTE_SOLO = 1150390550U;
-        static const AkUniqueID PLAY_POLAROID_PHOTO_CLICK_PRINT = 1715369302U;
         static const AkUniqueID PLAY_SFX_CRICKET = 3568461127U;
     } // namespace EVENTS
 

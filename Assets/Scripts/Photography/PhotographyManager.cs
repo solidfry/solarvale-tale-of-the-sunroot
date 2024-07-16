@@ -25,6 +25,7 @@ namespace CameraSystem
         [Header("On Photo Taken Event Handling")]
         [Space(10)]
         public UnityEvent<EntityData> onPhotoTaken;
+        // public AK.Wwise.Event onPhotoTakenWiseEvent;
 
         [Header("RayCast Settings")]
         [SerializeField] private float rayCastDistance = 300f;
@@ -42,6 +43,8 @@ namespace CameraSystem
         
         EntityData currentEntityData;
         EntityData previousEntityData;
+
+
 
         // Desired photo size
         private const int PhotoWidth = 800; 
@@ -93,6 +96,7 @@ namespace CameraSystem
             {
                 StartCoroutine(CapturePhoto());
                 photographyHUDController.SetHUDVisibility(0, 0);
+                GlobalEvents.OnSetOnboardingVisibilityEvent?.Invoke(false);
             }
         }
         
@@ -214,6 +218,7 @@ namespace CameraSystem
             GlobalEvents.OnPlayerChangeActionMapEvent.Invoke(false);
             GlobalEvents.OnSetCursorInputForLookEvent.Invoke(true);
             GlobalEvents.OnSetCanInteractEvent?.Invoke(true);
+            GlobalEvents.OnSetOnboardingVisibilityEvent?.Invoke(true);
         }
 
         private static void HandleOnShowPhotoGlobalEvents()

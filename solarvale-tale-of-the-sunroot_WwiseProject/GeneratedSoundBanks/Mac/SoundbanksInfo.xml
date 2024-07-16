@@ -22,7 +22,7 @@
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 			</Busses>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{41062238-716F-BEA0-1819-088935F4C7D4}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{265559B9-2B90-483E-B340-4CB3457B42EF}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -88,6 +88,11 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
+				<Event Id="1514177854" Name="Play_Camera_Snap" DurationType="OneShot" DurationMin="3.4249375" DurationMax="3.4249375">
+					<MediaRefs>
+						<MediaRef Id="625821779"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="3337834332" Name="Play_GameIntro_SoundScape" DurationType="OneShot" DurationMin="53.70775" DurationMax="53.70775">
 					<MediaRefs>
 						<MediaRef Id="1029364635"/>
@@ -98,11 +103,6 @@
 						<MediaRef Id="695495137"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1715369302" Name="Play_Polaroid_photo_click_print" DurationType="OneShot" DurationMin="3.4249375" DurationMax="3.4249375">
-					<MediaRefs>
-						<MediaRef Id="625821779"/>
-					</MediaRefs>
-				</Event>
 				<Event Id="3568461127" Name="Play_SFX_Cricket" DurationType="OneShot" DurationMin="0.75" DurationMax="0.75">
 					<MediaRefs>
 						<MediaRef Id="45670411"/>
@@ -111,5 +111,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{D94D0FA3-C70B-4499-4124-3DC2F7AF9215}</FileHash>
+	<FileHash>{807A57EE-89FE-DC54-2042-AA8833B591EE}</FileHash>
 </SoundBanksInfo>

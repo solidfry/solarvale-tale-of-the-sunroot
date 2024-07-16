@@ -50,6 +50,10 @@ namespace Events
         public static Action<EntityData> OnPhotographConditionUpdatedEvent;
         #endregion
         
+        #region Onboarding 
+        public static Action<bool> OnSetOnboardingVisibilityEvent;
+        #endregion
+        
         #region Camera Management
         public static Action<CameraMode> OnChangeCameraModeEvent;
         public static Action<Canvas> OnRegisterUIWithCameraEvent;
