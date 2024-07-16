@@ -9,13 +9,13 @@ namespace Behaviour.ScriptableBehaviour.Nodes
     {
         public override NodeState Process(BehaviourTreeContext context)
         {
-            Debug.Log("Tree reset");
+            // Debug.Log("Tree reset");
             return NodeState.Success;
         }
         
         public override void Reset()
         {
-            Debug.Log("Tree reset");
+            // Debug.Log("Tree reset");
         }
     }
 }
