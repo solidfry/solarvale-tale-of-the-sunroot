@@ -80,6 +80,56 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_Wombat_Chatter" ID="{0009F738-2DFE-4F22-A26F-07FD7E1CAB63}">
+					<ChildrenList>
+						<Action Name="" ID="{95531D9B-7574-4B33-8E1A-C0FB2AB36D9E}" ShortID="508298759">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Chatter" ID="{C83BB7B7-6F28-4719-88D6-605B479F94E5}" WorkUnitID="{D2C9257C-DAA1-4CB6-A024-0760DAE2D341}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Wombat_Eating" ID="{55D5057A-1113-411A-A4E9-7DB3AC7656B1}">
+					<ChildrenList>
+						<Action Name="" ID="{3D50F485-50B3-46EC-B7D3-260AD65929D4}" ShortID="445909292">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Eating" ID="{0129590B-FE12-42F9-98A6-ACCDE79D2FB3}" WorkUnitID="{D2C9257C-DAA1-4CB6-A024-0760DAE2D341}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_Wombat_Chatter" ID="{7DEA9731-9C54-4112-B1D9-E093F80F09FF}">
+					<ChildrenList>
+						<Action Name="" ID="{42052222-9D5D-4C16-808D-6B11720461B0}" ShortID="638960683">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Chatter" ID="{C83BB7B7-6F28-4719-88D6-605B479F94E5}" WorkUnitID="{D2C9257C-DAA1-4CB6-A024-0760DAE2D341}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_Wombat_Eating" ID="{8CC3C9AA-AD83-4283-AB88-4CA4CDC04B0B}">
+					<ChildrenList>
+						<Action Name="" ID="{8DA219AD-963B-4BD8-9577-A4B8A40B1A94}" ShortID="957090491">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Eating" ID="{0129590B-FE12-42F9-98A6-ACCDE79D2FB3}" WorkUnitID="{D2C9257C-DAA1-4CB6-A024-0760DAE2D341}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

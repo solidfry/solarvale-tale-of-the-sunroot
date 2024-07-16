@@ -22,13 +22,25 @@
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 			</Busses>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{265559B9-2B90-483E-B340-4CB3457B42EF}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{7E691CB2-422D-3251-62EE-ED3EEE204F00}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
 				<File Id="45670411" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_Cricket.wav</ShortName>
 					<CachePath>SFX/SFX_Cricket_818F3B66.wem</CachePath>
+				</File>
+				<File Id="188527001" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Wombat\Mono_Wombat\wombat-eating_02-mono.wav</ShortName>
+					<CachePath>SFX/Wombat/Mono_Wombat/wombat-eating_02-mono_818F3B66.wem</CachePath>
+				</File>
+				<File Id="407642542" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Wombat\Mono_Wombat\wombat-chatter_04-mono.wav</ShortName>
+					<CachePath>SFX/Wombat/Mono_Wombat/wombat-chatter_04-mono_818F3B66.wem</CachePath>
+				</File>
+				<File Id="610832515" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Wombat\Mono_Wombat\wombat-chatter_01-mono.wav</ShortName>
+					<CachePath>SFX/Wombat/Mono_Wombat/wombat-chatter_01-mono_818F3B66.wem</CachePath>
 				</File>
 				<File Id="625821779" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Camera\Polaroid_photo_click_print.wav</ShortName>
@@ -38,9 +50,21 @@
 					<ShortName>music_flute_solo.wav</ShortName>
 					<CachePath>SFX/music_flute_solo_818F3B66.wem</CachePath>
 				</File>
+				<File Id="842751414" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Wombat\Mono_Wombat\wombat-chatter_02-mono.wav</ShortName>
+					<CachePath>SFX/Wombat/Mono_Wombat/wombat-chatter_02-mono_818F3B66.wem</CachePath>
+				</File>
 				<File Id="879010177" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>BrandIntro-Birds.wav</ShortName>
 					<CachePath>SFX/BrandIntro-Birds_A7BD7755.wem</CachePath>
+				</File>
+				<File Id="913598294" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Wombat\Mono_Wombat\wombat-eating_01-mono.wav</ShortName>
+					<CachePath>SFX/Wombat/Mono_Wombat/wombat-eating_01-mono_818F3B66.wem</CachePath>
+				</File>
+				<File Id="971591174" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Wombat\Mono_Wombat\wombat-chatter_03-mono.wav</ShortName>
+					<CachePath>SFX/Wombat/Mono_Wombat/wombat-chatter_03-mono_818F3B66.wem</CachePath>
 				</File>
 				<File Id="1029364635" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>soundscape.wav</ShortName>
@@ -103,13 +127,29 @@
 						<MediaRef Id="695495137"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3568461127" Name="Play_SFX_Cricket" DurationType="OneShot" DurationMin="0.75" DurationMax="0.75">
+				<Event Id="3568461127" Name="Play_SFX_Cricket" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.75" DurationMax="0.75">
 					<MediaRefs>
 						<MediaRef Id="45670411"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="2355898552" Name="Play_Wombat_Chatter" MaxAttenuation="100" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="407642542"/>
+						<MediaRef Id="610832515"/>
+						<MediaRef Id="842751414"/>
+						<MediaRef Id="971591174"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="758826763" Name="Play_Wombat_Eating" MaxAttenuation="100" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="188527001"/>
+						<MediaRef Id="913598294"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2441382638" Name="Stop_Wombat_Chatter" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3487772253" Name="Stop_Wombat_Eating" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{2E291B29-5B98-A73A-DD70-9FC279FCC29F}</FileHash>
+	<FileHash>{F4DADBEE-D0FF-AD2C-376D-82C130450E64}</FileHash>
 </SoundBanksInfo>
