@@ -16,6 +16,7 @@ namespace Behaviour.ScriptableBehaviour.Nodes
             {
                 context.SetNodeState(nodeId, true);
                 context.SetNodeTimer(nodeId, 0f); // Reset timer when node is entered
+                context.Creature.onConsumingStart?.Invoke();
             }
 
             float timer = context.GetNodeTimer(nodeId);
@@ -24,7 +25,6 @@ namespace Behaviour.ScriptableBehaviour.Nodes
             {
                 timer += Time.deltaTime;
                 context.SetNodeTimer(nodeId, timer);
-                context.Creature.onConsumingStart?.Invoke();
                 return NodeState.Running;
             }
 

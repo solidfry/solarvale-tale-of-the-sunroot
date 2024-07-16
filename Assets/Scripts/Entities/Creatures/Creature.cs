@@ -7,7 +7,6 @@ using Events;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Events;
-using UnityEngine.Serialization;
 
 namespace Entities.Creatures
 {

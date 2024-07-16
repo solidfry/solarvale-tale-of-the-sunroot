@@ -20,6 +20,10 @@ namespace AK
         static const AkUniqueID PLAY_GAMEINTRO_SOUNDSCAPE = 3337834332U;
         static const AkUniqueID PLAY_MUSIC_FLUTE_SOLO = 1150390550U;
         static const AkUniqueID PLAY_SFX_CRICKET = 3568461127U;
+        static const AkUniqueID PLAY_WOMBAT_CHATTER = 2355898552U;
+        static const AkUniqueID PLAY_WOMBAT_EATING = 758826763U;
+        static const AkUniqueID STOP_WOMBAT_CHATTER = 2441382638U;
+        static const AkUniqueID STOP_WOMBAT_EATING = 3487772253U;
     } // namespace EVENTS
 
     namespace BANKS
