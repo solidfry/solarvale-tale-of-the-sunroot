@@ -53,6 +53,7 @@ namespace Events
         #region Camera Management
         public static Action<CameraMode> OnChangeCameraModeEvent;
         public static Action<Canvas> OnRegisterUIWithCameraEvent;
+        public static Action<MiniMapController> OnRegisterWithMapCameraEvent;
         #endregion
         
         #region Photography Management

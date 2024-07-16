@@ -1,37 +1,48 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
+using Events;
 using UnityEngine;
 
-public class MinimapManager : MonoBehaviour
+namespace UI.Minimap
 {
-    [SerializeField] private GameObject playerCharacter;
-    [SerializeField] private Transform mainCamera;
-
-    [SerializeField] private GameObject miniMap;
-
-    [SerializeField] private Animator miniMapBoarderAnimator;
-    [SerializeField] private Animator miniMapImageAnimator;
-
-
-    private void Start()
+    public class MinimapManager : MonoBehaviour
     {
-        miniMap.SetActive(false);
+        [SerializeField] private GameObject playerCharacter;
+        [SerializeField] private Transform mainCamera;
+
+        [SerializeField] private MiniMapController miniMap;
+        
+        
+        bool _miniMapUnlocked = false;
+        
+        private void Initialise(MiniMapController mapObject)
+        {
+            if (mapObject is null) return;
+            miniMap = mapObject;
+            miniMap.gameObject.SetActive(false);
+        }
+
+        private void LateUpdate()
+        {
+            if (miniMap is null)
+            {
+                miniMap = FindObjectOfType<MiniMapController>();
+                Initialise(miniMap);
+            }
+            
+            if (!_miniMapUnlocked) return;
+            transform.position = new Vector3(playerCharacter.transform.position.x, 400, playerCharacter.transform.position.z);
+
+            Vector3 rotation = new Vector3(90, mainCamera.eulerAngles.y, 0);
+            transform.rotation = Quaternion.Euler(rotation);
+        }
+
+        public void UnlockMiniMap()
+        {
+            if (miniMap is null) return;
+            miniMap.gameObject.SetActive(true);
+            _miniMapUnlocked = true;
+            miniMap.Initialise();
+        }
+
     }
-
-    private void LateUpdate()
-    {
-        transform.position = new Vector3(playerCharacter.transform.position.x, 400, playerCharacter.transform.position.z);
-
-        Vector3 rotation = new Vector3(90, mainCamera.eulerAngles.y, 0);
-        transform.rotation = Quaternion.Euler(rotation);
-    }
-
-    public void UnlockMiniMap()
-    {
-        miniMap.SetActive(true);
-        miniMapBoarderAnimator.SetBool("MinimapUnlocked", true);
-        miniMapImageAnimator.SetBool("MinimapUnlocked", true);
-
-    }
-
 }

@@ -1,47 +1,48 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class OnboardingManager : MonoBehaviour
+namespace UI.Onboarding
 {
-    [SerializeField] private GameObject boarderLowAnimationToCameraObject;
-    [SerializeField] private GameObject boarderLowAnimationToTakePhotoObject;
-
-    private bool _animationToCameraOn = false;
-    private bool _animationToTakePhotoOn = false;
-
-
-    private void Start()
+    public class OnboardingManager : MonoBehaviour
     {
-        boarderLowAnimationToCameraObject.SetActive(false);
-        boarderLowAnimationToTakePhotoObject.SetActive(false);
-    }
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Q) && _animationToCameraOn == true)
+        [SerializeField] private GameObject boarderLowAnimationToCameraObject;
+        [SerializeField] private GameObject boarderLowAnimationToTakePhotoObject;
+
+        private bool _animationToCameraOn = false;
+        private bool _animationToTakePhotoOn = false;
+
+
+        private void Start()
         {
             boarderLowAnimationToCameraObject.SetActive(false);
-            _animationToCameraOn = false;
-            _animationToTakePhotoOn = true;
+            boarderLowAnimationToTakePhotoObject.SetActive(false);
         }
-        if (_animationToTakePhotoOn)
+        private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.Q))
+            if (Input.GetKeyDown(KeyCode.Q) && _animationToCameraOn == true)
             {
-                bool isActive = boarderLowAnimationToTakePhotoObject.activeSelf;
-                boarderLowAnimationToTakePhotoObject.SetActive(!isActive);
+                boarderLowAnimationToCameraObject.SetActive(false);
+                _animationToCameraOn = false;
+                _animationToTakePhotoOn = true;
             }
-            if(Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(0))
+            if (_animationToTakePhotoOn)
             {
-                boarderLowAnimationToTakePhotoObject.SetActive(false);
-                _animationToTakePhotoOn = false;
+                if (Input.GetKeyDown(KeyCode.Q))
+                {
+                    bool isActive = boarderLowAnimationToTakePhotoObject.activeSelf;
+                    boarderLowAnimationToTakePhotoObject.SetActive(!isActive);
+                }
+                if(Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(0))
+                {
+                    boarderLowAnimationToTakePhotoObject.SetActive(false);
+                    _animationToTakePhotoOn = false;
+                }
             }
         }
-    }
 
-    public void AnimationToCamera()
-    {
-        boarderLowAnimationToCameraObject.SetActive(true);
-        _animationToCameraOn = true;
+        public void AnimationToCamera()
+        {
+            boarderLowAnimationToCameraObject.SetActive(true);
+            _animationToCameraOn = true;
+        }
     }
 }
