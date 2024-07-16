@@ -3,17 +3,6 @@
 	<Events>
 		<WorkUnit Name="Default Work Unit" ID="{6068A95E-0791-412D-ADFF-9786E1D6E4D5}" PersistMode="Standalone">
 			<ChildrenList>
-				<Event Name="Play_music_flute_solo" ID="{20C7EE6A-3D42-4D23-82ED-EE14097CD59A}">
-					<ChildrenList>
-						<Action Name="" ID="{2520CBC0-63B2-4B28-B910-E19967612D0C}" ShortID="433139140">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="music_flute_solo" ID="{19E1FC93-6D25-4895-ADF7-6491EA3262A4}" WorkUnitID="{6AACD892-8249-4CA2-BBEB-F88052A754B1}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
 				<Event Name="Play_Button_Hover" ID="{EF5D4B3E-854D-4D98-AF8A-881B4E1B802D}">
 					<ChildrenList>
 						<Action Name="" ID="{E446240E-B541-4352-87E0-41B77BFB4C84}" ShortID="517464740">
@@ -125,6 +114,28 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Eating" ID="{0129590B-FE12-42F9-98A6-ACCDE79D2FB3}" WorkUnitID="{D2C9257C-DAA1-4CB6-A024-0760DAE2D341}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_music_flute_solo" ID="{93A36ECB-6AED-4CB4-86F3-E67320208990}">
+					<ChildrenList>
+						<Action Name="" ID="{DBB39D98-53EA-4891-AE47-063AD548B1D3}" ShortID="679231090">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="music_flute_solo" ID="{FF9EB318-C2B0-44CB-AA9B-FB692A51ACC7}" WorkUnitID="{6AACD892-8249-4CA2-BBEB-F88052A754B1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_music_flute_solo_01" ID="{88ADAF69-3D39-4CED-8B59-12EFD31F3ABD}">
+					<ChildrenList>
+						<Action Name="" ID="{0D1E9C41-8109-488F-B7BB-73A9859466F6}" ShortID="670151094">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="music_flute_solo" ID="{190EFEC9-3D81-4749-A2F8-E681748BF80E}" WorkUnitID="{6AACD892-8249-4CA2-BBEB-F88052A754B1}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

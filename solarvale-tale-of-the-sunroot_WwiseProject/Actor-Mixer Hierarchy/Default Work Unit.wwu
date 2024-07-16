@@ -410,6 +410,11 @@
 							<ChildrenList>
 								<Sound Name="BrandIntro-Birds" ID="{F3A6A052-6AD7-451D-95E8-F04567AA6E00}" ShortID="814771370">
 									<PropertyList>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
 										<Property Name="Lowpass" Type="int16">
 											<ValueList>
 												<Value>12</Value>
@@ -441,35 +446,6 @@
 									</ChildrenList>
 									<ActiveSourceList>
 										<ActiveSource Name="BrandIntro-Birds" ID="{BF7EB426-20DE-4088-A8D8-2400157607A5}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="music_flute_solo" ID="{BC78CF12-C231-4980-8F40-8F21DBCC97FF}" ShortID="1050441498">
-									<PropertyList>
-										<Property Name="Inclusion" Type="bool">
-											<ValueList>
-												<Value>False</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="music_flute_solo" ID="{FF694CFD-F2E3-4097-8692-B398000896B6}">
-											<Language>SFX</Language>
-											<AudioFile>music_flute_solo.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="695495137"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="music_flute_solo" ID="{FF694CFD-F2E3-4097-8692-B398000896B6}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
@@ -510,6 +486,28 @@
 									</ChildrenList>
 									<ActiveSourceList>
 										<ActiveSource Name="soundscape" ID="{67E8BBFA-7435-49A2-A7F0-BBAD37E42B44}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="music_flute_solo" ID="{190EFEC9-3D81-4749-A2F8-E681748BF80E}" ShortID="327102789">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="music_flute_solo" ID="{7329B93F-20DA-4B70-BAFF-82503DA94100}">
+											<Language>SFX</Language>
+											<AudioFile>music_flute_solo.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="695495137"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="music_flute_solo" ID="{7329B93F-20DA-4B70-BAFF-82503DA94100}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
