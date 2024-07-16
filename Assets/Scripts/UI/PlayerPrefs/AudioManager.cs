@@ -1,14 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class AudioManager : MonoBehaviour
 {
-    public AudioClip musicClip;
-    public AudioClip sfxClip;
-
-    private AudioSource musicSource;
-    private AudioSource sfxSource;
+    public AK.Wwise.Event musicEvent;
+    public AK.Wwise.Event sfxEvent;
 
     public static AudioManager Instance;
 
@@ -19,14 +17,9 @@ public class AudioManager : MonoBehaviour
             Instance = this;
             DontDestroyOnLoad(gameObject);
 
-            musicSource = gameObject.AddComponent<AudioSource>();
-            sfxSource = gameObject.AddComponent<AudioSource>();
-
-            musicSource.clip = musicClip;
-            sfxSource.clip = sfxClip;
-
-            musicSource.loop = true;
-            musicSource.Play();
+            // Start playing the music and SFX events
+            musicEvent.Post(gameObject);
+            sfxEvent.Post(gameObject);
         }
         else
         {
@@ -36,7 +29,7 @@ public class AudioManager : MonoBehaviour
 
     private void OnEnable()
     {
-        var playerPrefs = FindObjectOfType<UpdatePlayerPrefs>();
+        UpdatePlayerPrefs playerPrefs = FindObjectOfType<UpdatePlayerPrefs>();
         if (playerPrefs != null)
         {
             playerPrefs.OnMasterVolumeChanged.AddListener(SetMasterVolume);
@@ -47,7 +40,7 @@ public class AudioManager : MonoBehaviour
 
     private void OnDisable()
     {
-        var playerPrefs = FindObjectOfType<UpdatePlayerPrefs>();
+        UpdatePlayerPrefs playerPrefs = FindObjectOfType<UpdatePlayerPrefs>();
         if (playerPrefs != null)
         {
             playerPrefs.OnMasterVolumeChanged.RemoveListener(SetMasterVolume);
@@ -58,17 +51,17 @@ public class AudioManager : MonoBehaviour
 
     public void SetMasterVolume(float volume)
     {
-        musicSource.volume = volume;
-        sfxSource.volume = volume;
+        AkSoundEngine.SetRTPCValue("MasterVolume", volume * 100f);
     }
 
     public void SetMusicVolume(float volume)
     {
-        musicSource.volume = volume;
+        AkSoundEngine.SetRTPCValue("MusicVolume", volume * 100f);
     }
 
     public void SetSfxVolume(float volume)
     {
-        sfxSource.volume = volume;
+        AkSoundEngine.SetRTPCValue("SfxVolume", volume * 100f);
     }
 }
+
