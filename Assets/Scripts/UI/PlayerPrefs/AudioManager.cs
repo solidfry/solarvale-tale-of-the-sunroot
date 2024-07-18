@@ -1,13 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class AudioManager : MonoBehaviour
 {
-    public AK.Wwise.Event musicEvent;
-    public AK.Wwise.Event sfxEvent;
-
     public static AudioManager Instance;
 
     private void Awake()
@@ -16,10 +11,6 @@ public class AudioManager : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
-
-            // Start playing the music and SFX events
-            musicEvent.Post(gameObject);
-            sfxEvent.Post(gameObject);
         }
         else
         {
@@ -35,6 +26,11 @@ public class AudioManager : MonoBehaviour
             playerPrefs.OnMasterVolumeChanged.AddListener(SetMasterVolume);
             playerPrefs.OnMusicVolumeChanged.AddListener(SetMusicVolume);
             playerPrefs.OnSfxVolumeChanged.AddListener(SetSfxVolume);
+
+            // Set initial volumes based on PlayerPrefs
+            SetMasterVolume(PlayerPrefs.GetFloat("MasterVolume", 1f));
+            SetMusicVolume(PlayerPrefs.GetFloat("MusicVolume", 1f));
+            SetSfxVolume(PlayerPrefs.GetFloat("SfxVolume", 1f));
         }
     }
 
@@ -51,17 +47,33 @@ public class AudioManager : MonoBehaviour
 
     public void SetMasterVolume(float volume)
     {
-        AkSoundEngine.SetRTPCValue("MasterVolume", volume * 100f);
+        // Store master volume in PlayerPrefs
+        PlayerPrefs.SetFloat("MasterVolume", volume);
+        PlayerPrefs.Save();
+
+        // Apply master volume if needed
+        Debug.Log("Master Volume set to: " + volume);
     }
 
     public void SetMusicVolume(float volume)
     {
-        AkSoundEngine.SetRTPCValue("MusicVolume", volume * 100f);
+        // Store music volume in PlayerPrefs
+        PlayerPrefs.SetFloat("MusicVolume", volume);
+        PlayerPrefs.Save();
+
+        // Apply music volume if needed
+        Debug.Log("Music Volume set to: " + volume);
     }
 
     public void SetSfxVolume(float volume)
     {
-        AkSoundEngine.SetRTPCValue("SfxVolume", volume * 100f);
+        // Store SFX volume in PlayerPrefs
+        PlayerPrefs.SetFloat("SfxVolume", volume);
+        PlayerPrefs.Save();
+
+        // Apply SFX volume if needed
+        Debug.Log("SFX Volume set to: " + volume);
     }
 }
+
 
