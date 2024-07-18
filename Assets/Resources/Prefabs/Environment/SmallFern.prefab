@@ -124,11 +124,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2898018752631099459}
+  - component: {fileID: 3108585604455995719}
   - component: {fileID: 2276586268474236902}
   - component: {fileID: 4070401322399083308}
   - component: {fileID: 1800073271837516116}
   - component: {fileID: 4503808899746365546}
   - component: {fileID: 1778391763543515071}
+  - component: {fileID: 6010741009115909754}
   m_Layer: 13
   m_Name: SmallFern
   m_TagString: Untagged
@@ -152,6 +154,23 @@ Transform:
   - {fileID: 3403344395677514189}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3108585604455995719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2556923223460481785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4af505d4bd14f1c48a47f41bb74e9040, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  entityData: {fileID: 11400000, guid: 66feadfd2fb431845b6b6321c7f28350, type: 2}
+  sphereCollider: {fileID: 6010741009115909754}
+  isConsumed: 0
+  isOccupied: 0
+  currentOccupationCount: 0
 --- !u!33 &2276586268474236902
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -311,6 +330,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   originalRenderers:
   - {fileID: 4070401322399083308}
+--- !u!135 &6010741009115909754
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2556923223460481785}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 5
+  m_Center: {x: 0, y: 0.64007473, z: 0.00028705597}
 --- !u!1 &3999873311515307858
 GameObject:
   m_ObjectHideFlags: 0

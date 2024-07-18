@@ -574,9 +574,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4471027759988567189}
+  - component: {fileID: 1853817732436078343}
   - component: {fileID: 2140459898917359148}
   - component: {fileID: 834343994428659302}
   - component: {fileID: 3609631041219744819}
+  - component: {fileID: 5958832878873544285}
+  - component: {fileID: 791973048231372417}
   m_Layer: 13
   m_Name: GiantFern
   m_TagString: Untagged
@@ -603,6 +606,23 @@ Transform:
   - {fileID: 9024102836481380335}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1853817732436078343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3839205036386629167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4af505d4bd14f1c48a47f41bb74e9040, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  entityData: {fileID: 11400000, guid: dd0f8250e61d24a4da9e49b9cbd674f7, type: 2}
+  sphereCollider: {fileID: 5958832878873544285}
+  isConsumed: 0
+  isOccupied: 0
+  currentOccupationCount: 0
 --- !u!114 &2140459898917359148
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -716,6 +736,50 @@ MonoBehaviour:
   - {fileID: 3188864395075672904}
   - {fileID: 6812445945983146176}
   - {fileID: 7906846760989943655}
+--- !u!135 &5958832878873544285
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3839205036386629167}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!136 &791973048231372417
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3839205036386629167}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 3.26
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.23, z: 0}
 --- !u!1 &5027090806929851399
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,6 +5,7 @@ using UnityEngine.Serialization;
 
 namespace Entities.Plants
 {
+    [RequireComponent(typeof(SphereCollider))]
     public class Edible : Entity, IEdible
     {
         public new PlantEntityData GetEntityData => (PlantEntityData)base.GetEntityData;
@@ -43,7 +44,6 @@ namespace Entities.Plants
         
         bool HasSpace => currentOccupationCount < GetEntityData?.GetStats().OccupationCapacity;
         
-
         private void OnTriggerEnter(Collider other)
         {
             if (!HasSpace || IsOccupied) return;
@@ -84,7 +84,8 @@ namespace Entities.Plants
         
         private void SetColliderRadius()
         {
-            if (sphereCollider is null) return;
+            sphereCollider ??= GetComponent<SphereCollider>();
+            sphereCollider.isTrigger = true;
 
             if (GetEntityData is not null) 
                 sphereCollider.radius = GetEntityData.GetStats().OccupationRadius;
@@ -94,6 +95,11 @@ namespace Entities.Plants
         
         [ContextMenu("Initialise")]
         private void Initialise()
+        {
+            SetColliderRadius();
+        }
+
+        private void OnValidate()
         {
             SetColliderRadius();
         }
