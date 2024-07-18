@@ -1,0 +1,140 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7fd9488000d3734a9e00ee676215985, type: 3}
+  m_Name: VolumetricFog Profile
+  m_EditorClassIdentifier: 
+  components:
+  - {fileID: 4142730035311438421}
+--- !u!114 &4142730035311438421
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9392aacf3349be549bb1fd9eece49154, type: 3}
+  m_Name: ButoVolumetricFog
+  m_EditorClassIdentifier: 
+  active: 1
+  mode:
+    m_OverrideState: 1
+    m_Value: 1
+  qualityLevel:
+    m_OverrideState: 1
+    m_Value: 4
+  gridPixelSize:
+    m_OverrideState: 1
+    m_Value: 12
+  gridSizeZ:
+    m_OverrideState: 1
+    m_Value: 64
+  maxDistanceVolumetric:
+    m_OverrideState: 1
+    m_Value: 200
+  depthRatio:
+    m_OverrideState: 0
+    m_Value: 2
+  temporalAALighting:
+    m_OverrideState: 0
+    m_Value: 0.05
+  temporalAAMedia:
+    m_OverrideState: 0
+    m_Value: 0.05
+  fogDensity:
+    m_OverrideState: 1
+    m_Value: 1.76
+  anisotropy:
+    m_OverrideState: 1
+    m_Value: 0.058
+  lightIntensity:
+    m_OverrideState: 0
+    m_Value: 1.99
+  densityInLight:
+    m_OverrideState: 0
+    m_Value: 1
+  densityInShadow:
+    m_OverrideState: 1
+    m_Value: 4.13
+  overrideDefaultMaxLightDistance:
+    m_OverrideState: 0
+    m_Value: 0
+  maxLightDistance:
+    m_OverrideState: 0
+    m_Value: 64
+  baseHeight:
+    m_OverrideState: 1
+    m_Value: 45
+  attenuationBoundarySize:
+    m_OverrideState: 1
+    m_Value: 45
+  litColor:
+    m_OverrideState: 1
+    m_Value: {r: 1, g: 1, b: 1, a: 1}
+  shadowedColor:
+    m_OverrideState: 1
+    m_Value: {r: 0.50462794, g: 0.7924528, b: 0.6147831, a: 1}
+  emitColor:
+    m_OverrideState: 0
+    m_Value: {r: 0.0625, g: 0.0625, b: 0.0625, a: 1}
+  colorRamp:
+    m_OverrideState: 0
+    m_Value: {fileID: 0}
+  colorRampId:
+    m_OverrideState: 0
+    m_Value: 0
+  colorInfluence:
+    m_OverrideState: 1
+    m_Value: 0.916
+  directionalForward:
+    m_OverrideState: 1
+    m_Value: {r: 1.5137861, g: 3.5266223, b: 3.1123946, a: 1}
+  directionalBack:
+    m_OverrideState: 1
+    m_Value: {r: 0.24937178, g: 0.4339623, b: 0.21902815, a: 1}
+  directionalRatio:
+    m_OverrideState: 0
+    m_Value: 1
+  noiseTexture:
+    m_OverrideState: 0
+    m_Value: {fileID: 0}
+  octaves:
+    m_OverrideState: 1
+    m_Value: 1
+  lacunarity:
+    m_OverrideState: 1
+    m_Value: 3.66
+  gain:
+    m_OverrideState: 1
+    m_Value: 0.553
+  noiseTiling:
+    m_OverrideState: 1
+    m_Value: 100
+  noiseWindSpeed:
+    m_OverrideState: 1
+    m_Value: {x: 3, y: 0, z: 0}
+  noiseMap:
+    m_OverrideState: 1
+    m_Value: {x: 0.30527288, y: 1}
+  volumeNoise:
+    m_OverrideState: 1
+    m_Value:
+      frequency: 3
+      octaves: 3
+      lacunarity: 5
+      gain: 0.316
+      seed: 441
+      noiseType: 6
+      noiseQuality: 3
+      invert: 1
+      userTexture: {fileID: 0}

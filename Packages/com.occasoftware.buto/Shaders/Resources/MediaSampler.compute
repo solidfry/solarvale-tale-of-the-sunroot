@@ -1,0 +1,165 @@
+#pragma kernel CSMain
+
+#include "Common.hlsl"
+
+
+RWTexture3D<float4> MediaData;
+Texture3D<float4> MediaDataPrevious;
+
+
+float _FogDensity;
+Texture3D _NoiseTexture;
+float _NoiseTiling;
+float _NoiseIntensityMin;
+float _NoiseIntensityMax;
+float3 _NoiseWindSpeed;
+float _InverseNoiseScale;
+
+float _BaseHeight;
+float _AttenuationBoundarySize;
+
+#define MAX_VOLUME_COUNT 8
+int _VolumeCountButo;
+int _VolumeShape[MAX_VOLUME_COUNT]; // 0 => Sphere, 1 => Box
+float3 _VolumePosition[MAX_VOLUME_COUNT]; // xyz world pos
+float3 _VolumeSize[MAX_VOLUME_COUNT]; // Sphere => x = radius, Box => xyz = size, 
+float _VolumeIntensityButo[MAX_VOLUME_COUNT]; // Intensity scalar
+int _VolumeBlendMode[MAX_VOLUME_COUNT]; // BlendMode per Volume
+float _VolumeBlendDistance[MAX_VOLUME_COUNT]; // Blend Distance per Volume
+
+
+float GetFogFalloff(float3 positionWS)
+{
+	// BlendMode 0 -> Multiplicative
+	// BlendMode 1 -> Exclusive
+	
+	// Shape 0 -> Sphere
+	// Shape 1 -> Box
+	
+	float a = 1.0;
+	float x = 0.0;
+	int xo = 0;
+	
+	[loop]
+	for (int i = 0; i < _VolumeCountButo; i++)
+	{
+		float d = 0;
+
+		[branch]
+		if(_VolumeShape[i] == 0)
+		{
+			Sphere sphere;
+			sphere.position = _VolumePosition[i].xyz;
+			sphere.radius = _VolumeSize[i].x;
+			d = SdSphere(positionWS, sphere);
+		}
+		else if(_VolumeShape[i] == 1)
+		{
+			Box box;
+			box.position = _VolumePosition[i].xyz;
+			box.size = _VolumeSize[i].xyz;
+			d = SdBox(positionWS, box);
+		}
+		
+		float2 staticRemapVals = float2(1, 0);
+		float2 remapVals = float2(_VolumeIntensityButo[i], 1);
+		
+		remapVals = lerp(remapVals, staticRemapVals, _VolumeBlendMode[i]);
+		xo = lerp(xo, 1, _VolumeBlendMode[i]);
+		
+		float v = Remap0N(_VolumeBlendDistance[i], remapVals.x, remapVals.y, d);
+		
+		a *= lerp(v, 1.0, _VolumeBlendMode[i]);
+		x += lerp(0.0, v, _VolumeBlendMode[i]);
+	}
+	
+	a = lerp(a, a * saturate(x), xo);
+
+	return a;
+}
+
+float _Inverse_AttenuationBoundarySize;
+float GetFogDensityByHeight(float3 positionWS)
+{
+	float height = max(positionWS.y - _BaseHeight, 0.0);
+	return exp(-height * _Inverse_AttenuationBoundarySize);
+}
+
+float _Octaves;
+float _Gain;
+float _Lacunarity;
+float3 buto_windOffset;
+float GetNoise(float3 positionWS, float invNoiseScale)
+{
+    float3 uvw = positionWS * invNoiseScale;
+	//float3 wind = _NoiseWindSpeed * invNoiseScale * _Time.y;
+	float3 wind = buto_windOffset * invNoiseScale;
+
+	float c = 0;
+	float amp = 1.0;
+	float4 value = 0;
+
+
+	[loop]
+	for (int i = 1; i <= _Octaves; i++)
+	{
+		value += amp * SAMPLE_TEXTURE3D_LOD(_NoiseTexture, buto_linear_repeat_sampler, uvw - wind, 0);
+		c += amp;
+		uvw *= _Lacunarity;
+		amp *= _Gain;
+	}
+	value /= c;
+	
+
+	float v = value.r * 0.53 + value.g * 0.27 + value.b * 0.13 + value.a * 0.07;
+	v = InverseLerp(_NoiseIntensityMin, _NoiseIntensityMax, v);
+	return saturate(v);
+}
+
+
+float buto_TemporalIntegration_Media;
+
+[numthreads(8,8,8)]
+void CSMain (uint3 id : SV_DispatchThreadID)
+{
+  if (id.x >= uint(fog_volume_size.x) || id.y >= uint(fog_volume_size.y) || id.z >= uint(fog_volume_size.z))
+      return;
+
+	float3 r = halton[GetHaltonId(id)] - 0.5;
+	
+  float3 uvw = IdToUVW(id, fog_cell_size);
+	float3 uvwJittered = uvw;
+	
+	if(buto_TemporalIntegration_Media <1.0)
+	{
+		uvwJittered = saturate(uvw + (r * fog_cell_size));
+	}
+
+  float3 rayDirectionWS = GetRayDirectionCompute(uvwJittered.xy);
+		
+	float3 positionWS = DirectionAndDistanceToWorldPosition(uvw, rayDirectionWS, uvwJittered.z);
+	float noise = GetFogFalloff(positionWS);
+	noise *= GetFogDensityByHeight(positionWS);
+	noise *= GetNoise(positionWS, _InverseNoiseScale);
+
+	// I'm using a float4 to leave space for Albedo settings in fog volumes
+	float4 newResult = float4(1.0, 1.0, 1.0, noise * _FogDensity); 
+
+	//  TAA
+	if(buto_TemporalIntegration_Media > 0.0)
+	{
+		ReprojectionData reprojectionData = CalculateReprojection(uvw);
+		float integrationAmount = 1.0;
+		float4 previousValue = 0.0;
+		
+		if(reprojectionData.isValid)
+		{
+			integrationAmount = buto_TemporalIntegration_Media; 
+			previousValue = MediaDataPrevious.SampleLevel(buto_linear_clamp_sampler, reprojectionData.uvwPrevious, 0).rgba;
+		}
+
+		newResult = lerp(previousValue, newResult, integrationAmount);
+	}
+	
+    MediaData[id.xyz] = newResult;
+}

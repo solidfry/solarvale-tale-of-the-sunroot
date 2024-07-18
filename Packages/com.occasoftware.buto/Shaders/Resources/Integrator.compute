@@ -1,0 +1,53 @@
+#pragma kernel CSMain
+
+RWTexture3D<float4> IntegratorData;
+Texture3D<float4> MediaData;
+Texture3D<float4> LightingDataTex;
+
+float _DensityInShadow;
+float _DensityInLight;
+
+#include "Common.hlsl"
+
+[numthreads(8,8,1)]
+void CSMain (uint3 id : SV_DispatchThreadID)
+{
+    if (id.x >= uint(fog_volume_size.x) || id.y >= uint(fog_volume_size.y))
+        return;
+
+
+	float3 color = float3(0,0,0);
+	float alpha = 1.0;
+
+	float distancePrevious = 0.0;
+
+    for(int z = 0; z < fog_volume_size.z; z++)
+    {
+        uint3 coord = uint3(id.x, id.y, z);
+
+		float3 uvw = IdToUVW(coord, fog_cell_size);
+		float4 lighting = LightingDataTex.SampleLevel(buto_linear_clamp_sampler, uvw, 0);
+        float4 media = MediaData.SampleLevel(buto_linear_clamp_sampler, uvw, 0);
+		
+        // Solve Transmittance
+        float sampleExtinction = media.a;
+        float shadowing = lighting.a;
+        sampleExtinction = lerp(sampleExtinction * _DensityInShadow, sampleExtinction * _DensityInLight, lighting.a);
+		sampleExtinction = max(sampleExtinction, 1e-10);
+		
+		float distance = RescaleDepth(uvw.z, _PERCENTILE, _RANGE) * _MaxDistanceVolumetric;
+		float stepLength = distance - distancePrevious;
+		float transmittance = exp(-sampleExtinction * stepLength);
+		distancePrevious = distance;
+
+			
+		// Solve Color
+		float3 scatteringData = sampleExtinction * lighting.rgb;
+        float3 integratedScattering = (scatteringData - (scatteringData * transmittance)) / (sampleExtinction + 1e-7);
+		color += alpha * integratedScattering;
+
+		// Apply Transmittance
+		alpha *= transmittance;
+        IntegratorData[coord] = float4(color.rgb, alpha);
+    }
+}

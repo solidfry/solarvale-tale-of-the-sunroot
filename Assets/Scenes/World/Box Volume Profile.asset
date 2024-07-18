@@ -1,0 +1,140 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-1516800302633045357
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9392aacf3349be549bb1fd9eece49154, type: 3}
+  m_Name: ButoVolumetricFog
+  m_EditorClassIdentifier: 
+  active: 1
+  mode:
+    m_OverrideState: 1
+    m_Value: 1
+  qualityLevel:
+    m_OverrideState: 1
+    m_Value: 4
+  gridPixelSize:
+    m_OverrideState: 1
+    m_Value: 12
+  gridSizeZ:
+    m_OverrideState: 1
+    m_Value: 128
+  maxDistanceVolumetric:
+    m_OverrideState: 0
+    m_Value: 64
+  depthRatio:
+    m_OverrideState: 0
+    m_Value: 2
+  temporalAALighting:
+    m_OverrideState: 0
+    m_Value: 0.05
+  temporalAAMedia:
+    m_OverrideState: 0
+    m_Value: 0.05
+  fogDensity:
+    m_OverrideState: 1
+    m_Value: 3.2
+  anisotropy:
+    m_OverrideState: 0
+    m_Value: 0.2
+  lightIntensity:
+    m_OverrideState: 0
+    m_Value: 1
+  densityInLight:
+    m_OverrideState: 0
+    m_Value: 1
+  densityInShadow:
+    m_OverrideState: 0
+    m_Value: 1
+  overrideDefaultMaxLightDistance:
+    m_OverrideState: 0
+    m_Value: 0
+  maxLightDistance:
+    m_OverrideState: 0
+    m_Value: 64
+  baseHeight:
+    m_OverrideState: 1
+    m_Value: 77
+  attenuationBoundarySize:
+    m_OverrideState: 1
+    m_Value: 10
+  litColor:
+    m_OverrideState: 1
+    m_Value: {r: 0.6084906, g: 1, b: 0.7397352, a: 1}
+  shadowedColor:
+    m_OverrideState: 1
+    m_Value: {r: 0, g: 0.5283019, b: 0.48637322, a: 1}
+  emitColor:
+    m_OverrideState: 1
+    m_Value: {r: 0.48713955, g: 0.7319195, b: 0.8396226, a: 1}
+  colorRamp:
+    m_OverrideState: 0
+    m_Value: {fileID: 0}
+  colorRampId:
+    m_OverrideState: 0
+    m_Value: 0
+  colorInfluence:
+    m_OverrideState: 1
+    m_Value: 1
+  directionalForward:
+    m_OverrideState: 0
+    m_Value: {r: 1, g: 1, b: 1, a: 1}
+  directionalBack:
+    m_OverrideState: 0
+    m_Value: {r: 1, g: 1, b: 1, a: 1}
+  directionalRatio:
+    m_OverrideState: 0
+    m_Value: 1
+  noiseTexture:
+    m_OverrideState: 0
+    m_Value: {fileID: 0}
+  octaves:
+    m_OverrideState: 0
+    m_Value: 2
+  lacunarity:
+    m_OverrideState: 0
+    m_Value: 3.33
+  gain:
+    m_OverrideState: 0
+    m_Value: 0.3
+  noiseTiling:
+    m_OverrideState: 1
+    m_Value: 79.4
+  noiseWindSpeed:
+    m_OverrideState: 1
+    m_Value: {x: 5, y: 0, z: 0}
+  noiseMap:
+    m_OverrideState: 0
+    m_Value: {x: 0, y: 1}
+  volumeNoise:
+    m_OverrideState: 1
+    m_Value:
+      frequency: 10
+      octaves: 4
+      lacunarity: 7
+      gain: 0.71
+      seed: 325432432
+      noiseType: 5
+      noiseQuality: 3
+      invert: 0
+      userTexture: {fileID: 0}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7fd9488000d3734a9e00ee676215985, type: 3}
+  m_Name: Box Volume Profile
+  m_EditorClassIdentifier: 
+  components:
+  - {fileID: -1516800302633045357}
