@@ -27,6 +27,7 @@ namespace CameraSystem
             brain = Camera.main.GetComponent<CinemachineBrain>();
             CurrentCameraMode = new Observable<CameraMode>(CameraMode.Exploration);
             CurrentCameraMode.ValueChanged += SendCameraMode;
+            SetCameraMode(CameraMode.Exploration);
         }
 
         private void SendCameraMode(CameraMode mode) => GlobalEvents.OnChangeCameraModeEvent?.Invoke(mode);
