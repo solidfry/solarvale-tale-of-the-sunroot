@@ -25,15 +25,14 @@ Material:
     type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
-  m_ValidKeywords:
-  - _ALPHATEST_ON
+  m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2500
+  m_CustomRenderQueue: 2050
   stringTagMap:
-    RenderType: TransparentCutout
+    RenderType: Opaque
   disabledShaderPasses: []
   m_LockedProperties: 
   m_SavedProperties:
@@ -83,15 +82,15 @@ Material:
     m_Floats:
     - Vector1_2BDF6FD9: 0.38
     - Vector1_2FA10055: 0.14
-    - Vector1_46F1304E: 0.36
+    - Vector1_46F1304E: 0.24
     - Vector1_BBEA2355: 0.14
     - _AO: 1
     - _AO_Strength: 1
     - _Albedo_Intensity: 1
-    - _Albedo_Strength: 5.31
-    - _AlphaClip: 1
-    - _AlphaMultiplier: 1
-    - _AlphaToMask: 1
+    - _Albedo_Strength: 2.83
+    - _AlphaClip: 0
+    - _AlphaMultiplier: 0.01
+    - _AlphaToMask: 0
     - _Alpha_Clip_Threshold: 0
     - _Blend: 0
     - _BlendModePreserveSpecular: 1
@@ -102,7 +101,7 @@ Material:
     - _MAIN_LIGHT_SHADOWS: 1
     - _MAIN_LIGHT_SHADOWS_CASCADE: 1
     - _Metallic_Strength: 0
-    - _Noise_1_Multiplier: 1
+    - _Noise_1_Multiplier: 0.41
     - _Noise_1_Scale: 20
     - _Noise_2_Multiplier: 0.5
     - _Noise_2_Scale: 80
@@ -126,10 +125,10 @@ Material:
     - _ZWriteControl: 0
     m_Colors:
     - Color_D9F05973: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-    - Color_DB04B181: {r: 0, g: 0.18867922, b: 0.008865031, a: 1}
+    - Color_DB04B181: {r: 0.0018351305, g: 0, b: 0.31132078, a: 1}
     - _Albedo_Color: {r: 0, g: 0.3490566, b: 0.20943393, a: 1}
     - _Emission_Color: {r: 0, g: 0, b: 0, a: 0}
-    - _Fresnel_Color: {r: 0.97217375, g: 1, b: 0.4481132, a: 0}
+    - _Fresnel_Color: {r: 0.71552974, g: 1, b: 0.4470588, a: 0}
     - _Specular_Color: {r: 0, g: 0, b: 0, a: 0}
     - _WindDirection: {r: 1, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
