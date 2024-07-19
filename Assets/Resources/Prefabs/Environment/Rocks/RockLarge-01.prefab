@@ -195,13 +195,13 @@ GameObject:
   - component: {fileID: 5647723291311641104}
   - component: {fileID: 5831593894790259620}
   - component: {fileID: 8358951087598846961}
-  - component: {fileID: 5105279245536771941}
+  - component: {fileID: 4856391202712572009}
   m_Layer: 15
   m_Name: RockLarge-01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 123
   m_IsActive: 1
 --- !u!4 &956704695105967981
 Transform:
@@ -378,8 +378,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   originalRenderers:
   - {fileID: 1901783558473270284}
---- !u!135 &5105279245536771941
-SphereCollider:
+--- !u!64 &4856391202712572009
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -396,9 +396,10 @@ SphereCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 15.098897
-  m_Center: {x: 8.233363, y: 6.428685, z: -0.4057808}
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -7426749740569863240, guid: dfc7aef5fb10e4c93828498c7b51e748, type: 3}
 --- !u!1 &7211649678135381532
 GameObject:
   m_ObjectHideFlags: 0

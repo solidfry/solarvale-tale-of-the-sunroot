@@ -38,7 +38,12 @@ namespace CameraSystem
             UpdateCamera(CurrentCameraMode.Value);
         }
         
-        private void UpdateCamera(CameraMode mode) => cameras.ForEach(c => c.SetPriority(c.Mode == mode ? 1 : 0));
+        private void UpdateCamera(CameraMode mode) =>
+            cameras.ForEach(c =>
+            {
+                c.SetPriority(c.Mode == mode ? 1 : 0);
+                c.GameObject.SetActive(c.Mode == mode);
+            });
 
         private void Start()
         {
@@ -72,12 +77,7 @@ namespace CameraSystem
         {
             cameraOpenActionRef.action.performed -= OnCameraOpen;
         }
-
-        private void Update()
-        {
-            if (!brain.IsBlending) return;
-        }
-
+        
         private void OnCameraOpen(InputAction.CallbackContext context)
         {
             SwitchCamera();

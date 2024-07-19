@@ -13,16 +13,14 @@ Material:
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
-  - _ALPHATEST_ON
-  - _RECEIVE_SHADOWS_OFF
   - _SPECULAR_SETUP
   m_InvalidKeywords: []
   m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 1
-  m_CustomRenderQueue: 2450
+  m_EnableInstancingVariants: 1
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 2000
   stringTagMap:
-    RenderType: TransparentCutout
+    RenderType: Opaque
   disabledShaderPasses:
   - SRPDEFAULTUNLIT
   m_LockedProperties: _UnityShadowOcclusion
@@ -125,9 +123,9 @@ Material:
     - Vector1_BBEA2355: 0
     - _AO_Strength: 0.169
     - _Albedo_Strength: 8.64
-    - _AlphaClip: 1
+    - _AlphaClip: 0
     - _AlphaMultiplier: 0.01
-    - _AlphaToMask: 1
+    - _AlphaToMask: 0
     - _Alpha_Clip_Threshold: 0.009
     - _BaseMapPremultiply: 1
     - _Blend: 0
@@ -187,7 +185,7 @@ Material:
     - _Parallax: 0.005
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _ReceiveShadows: 0
+    - _ReceiveShadows: 1
     - _RimEnabled: 0
     - _SelfShadingSize: 0.538
     - _SelfShadingSizeExtra: 0.6
@@ -234,6 +232,7 @@ Material:
     - _FlatSpecularColor: {r: 0.85023, g: 0.85034, b: 0.85045, a: 0.85056}
     - _Fresnel_Color: {r: 1, g: 1, b: 1, a: 0}
     - _LightmapDirection: {r: 0, g: 1, b: 0, a: 0}
+    - _NoiseColor: {r: 0, g: 0, b: 0, a: 0}
     - _OutlineColor: {r: 0.21698105, g: 0.21698105, b: 0.21698105, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _Specular_Color: {r: 0, g: 0, b: 0, a: 0}

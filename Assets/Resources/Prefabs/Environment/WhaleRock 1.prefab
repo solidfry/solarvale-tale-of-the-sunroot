@@ -1,60 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &629007617027255501
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2428064324022121566}
-  - component: {fileID: 4088306994703162515}
-  m_Layer: 0
-  m_Name: Collider (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2428064324022121566
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 629007617027255501}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0.31828985, y: -0, z: -0, w: 0.94799346}
-  m_LocalPosition: {x: -0.7, y: -18.6, z: -84.8}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2894020576237734795}
-  m_LocalEulerAnglesHint: {x: -37.119, y: 0, z: 0}
---- !u!136 &4088306994703162515
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 629007617027255501}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 18.1
-  m_Height: 105.2
-  m_Direction: 2
-  m_Center: {x: 0, y: 5.77, z: 0}
 --- !u!1 &2906786364814288763
 GameObject:
   m_ObjectHideFlags: 0
@@ -64,12 +9,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2894020576237734795}
-  m_Layer: 0
+  - component: {fileID: 3549877226968886262}
+  m_Layer: 3
   m_Name: WhaleRock 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 123
   m_IsActive: 1
 --- !u!4 &2894020576237734795
 Transform:
@@ -86,49 +32,15 @@ Transform:
   m_Children:
   - {fileID: 1965813308989900033}
   - {fileID: 496670817479880934}
-  - {fileID: 2428064324022121566}
-  - {fileID: 5385823006800065277}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &4411347952796993466
-GameObject:
+--- !u!64 &3549877226968886262
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5385823006800065277}
-  - component: {fileID: 4051682197416183447}
-  m_Layer: 0
-  m_Name: Collider (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5385823006800065277
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4411347952796993466}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0.02538417, y: 6.666207e-19, z: -0.0000000030260283, w: 0.9996778}
-  m_LocalPosition: {x: 29.1, y: -11.4, z: -33.2}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2894020576237734795}
-  m_LocalEulerAnglesHint: {x: -2.909, y: 0, z: 0}
---- !u!136 &4051682197416183447
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4411347952796993466}
+  m_GameObject: {fileID: 2906786364814288763}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -140,11 +52,10 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 19.7
-  m_Height: 127
-  m_Direction: 2
-  m_Center: {x: 0, y: 0, z: 0}
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!1 &7059193210357819499
 GameObject:
   m_ObjectHideFlags: 0
@@ -154,13 +65,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 496670817479880934}
-  - component: {fileID: 7337305468966007801}
+  - component: {fileID: 5400951498621212870}
   m_Layer: 0
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 123
   m_IsActive: 1
 --- !u!4 &496670817479880934
 Transform:
@@ -170,15 +81,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7059193210357819499}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.095104076, y: -0, z: -0, w: 0.99546736}
-  m_LocalPosition: {x: -0.7, y: 8.8, z: -7.6}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.6117018, y: 1, z: 0.5825061}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2894020576237734795}
-  m_LocalEulerAnglesHint: {x: -10.915, y: 0, z: 0}
---- !u!136 &7337305468966007801
-CapsuleCollider:
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!64 &5400951498621212870
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -195,11 +106,10 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 20.69
-  m_Height: 145.7
-  m_Direction: 2
-  m_Center: {x: 0, y: 5.77, z: 0}
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4013275331872712965, guid: 37d80fa3d116f8e4d84c7d30c76a1f50, type: 3}
 --- !u!1001 &2075387259530076906
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -260,6 +170,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 37d80fa3d116f8e4d84c7d30c76a1f50,
         type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 37d80fa3d116f8e4d84c7d30c76a1f50,
+        type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a925bed9a28d1c943a189d25c16eb3b9, type: 2}
@@ -268,7 +183,23 @@ PrefabInstance:
       propertyPath: m_Name
       value: WhaleRock 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 919132149155446097, guid: 37d80fa3d116f8e4d84c7d30c76a1f50,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 37d80fa3d116f8e4d84c7d30c76a1f50,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 123
+      objectReference: {fileID: 0}
+    - target: {fileID: 3451118302482216456, guid: 37d80fa3d116f8e4d84c7d30c76a1f50,
+        type: 3}
+      propertyPath: m_Convex
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 3451118302482216456, guid: 37d80fa3d116f8e4d84c7d30c76a1f50, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

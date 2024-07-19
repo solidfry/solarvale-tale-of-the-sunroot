@@ -1,7 +1,8 @@
 using System.Collections.Generic;
 using Events;
+using Unity.Collections;
+using Unity.Jobs;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace Entities.Creatures
 {
@@ -14,6 +15,9 @@ namespace Entities.Creatures
         [SerializeField] private Transform player;
         [SerializeField] List<Creature> creatures = new ();
         
+        private NativeArray<Vector3> creaturePositions;
+        private NativeArray<Vector3> playerPosition;
+        private NativeArray<bool> creatureStates;
         
         
         private void Awake()
@@ -42,24 +46,63 @@ namespace Entities.Creatures
         private void Run()
         {
             if (creatures.Count == 0) return;
-            foreach (var creature in creatures)
+
+            if (useCulling)
             {
-                ToggleCreature(creature);
-                creature.GetBehaviourTree?.Run();
+                InitJobsData();
+                
+                var calculateDistanceToPlayerJob = new CalculateDistanceToPlayer
+                {
+                    creaturePositions = creaturePositions,
+                    playerPosition = playerPosition,
+                    cullingDistance = cullingDistance,
+                    creatureStates = creatureStates
+                };
+                
+                JobHandle jobHandle = calculateDistanceToPlayerJob.Schedule(creatures.Count, 64);
+                jobHandle.Complete();
+
+                ApplyJobResults();
+            } else {
+                foreach (var creature in creatures)
+                {
+                    creature.GetBehaviourTree?.Run();
+                }
             }
+            
         }
 
-        private void ToggleCreature(Creature creature)
+        private void InitJobsData()
         {
-            if (!useCulling) return;
-            if (!IsWithinCullingDistance(creature.transform, player, cullingDistance))
+            if (!creaturePositions.IsCreated || creaturePositions.Length != creatures.Count)
+                creaturePositions = new NativeArray<Vector3>(creatures.Count, Allocator.Persistent);
+            if (!creatureStates.IsCreated || creatureStates.Length != creatures.Count)
+                creatureStates = new NativeArray<bool>(creatures.Count, Allocator.Persistent);
+            if (!playerPosition.IsCreated)
+                playerPosition = new NativeArray<Vector3>(1, Allocator.Persistent);
+            
+            playerPosition[0] = player.position;
+            
+            for (int i = 0; i < creatures.Count; i++)
             {
-                creature.enabled = false;
-                return;
+                creaturePositions[i] = creatures[i].transform.position;
             }
-            else
+
+        }
+
+        private void ApplyJobResults()
+        {
+            for (int i = 0; i < creatures.Count; i++)
             {
-                creature.enabled = true;
+                if (creatureStates[i])
+                {
+                    creatures[i].gameObject.SetActive(true);
+                    creatures[i].GetBehaviourTree?.Run();
+                }
+                else
+                {
+                    creatures[i].gameObject.SetActive(false);
+                }
             }
         }
 
@@ -68,23 +111,17 @@ namespace Entities.Creatures
             if (creatures.Contains(creature)) return;
             creatures.Add(creature);
         }
-
-        public void RemoveCreature(Creature creature) => creatures.Remove(creature);
-
-        public void RemoveAllCreatures()
-        {
-            creatures.Clear();
-        }
-
-        public List<Creature> GetCreatures()
-        {
-            return creatures;
-        }
         
         private void OnDestroy()
         {
             GlobalEvents.OnRegisterCreatureEvent -= AddCreature;
             creatures.Clear();
+            if (creaturePositions.IsCreated)
+                creaturePositions.Dispose();
+            if (playerPosition.IsCreated)
+                playerPosition.Dispose();
+            if (creatureStates.IsCreated)
+                creatureStates.Dispose();
         }
         
         private void OnDrawGizmos()

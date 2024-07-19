@@ -1,7 +1,6 @@
 using Entities.Creatures;
 using Events;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace Entities.Plants
 {
@@ -49,7 +48,7 @@ namespace Entities.Plants
             if (!HasSpace || IsOccupied) return;
             if (other.TryGetComponent(out IEntity<CreatureEntityData> entity))
             {
-                Debug.Log("Creature is in the trigger");
+                // Debug.Log("Creature is in the trigger");
                 if (entity.GetEntityData != null)
                 {
                     // Debug.Log("Creature is in the trigger and is in preferred food");
