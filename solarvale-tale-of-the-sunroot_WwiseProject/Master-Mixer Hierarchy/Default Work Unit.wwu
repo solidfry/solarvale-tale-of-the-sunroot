@@ -10,15 +10,16 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<Bus Name="Animals" ID="{86346DD7-0F17-4B0A-8958-784D90B60343}">
-							<PropertyList>
-								<Property Name="BusChannelConfig" Type="int32">
-									<ValueList>
-										<Value>768</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
+						<Bus Name="Animals" ID="{7F338F3F-8132-4E7B-9A3A-B8C748CF0DDE}">
+							<ChildrenList>
+								<Bus Name="Animal Atmos" ID="{F9987C84-9B33-44CC-A6C3-1E3CB4F52D3C}"/>
+							</ChildrenList>
 						</Bus>
+						<Bus Name="Atmos" ID="{E51D6CB8-01C8-48A1-8608-AE500145E9A8}"/>
+						<Bus Name="Foley" ID="{A48760D2-A777-4435-B0AC-84D31ECEEC54}"/>
+						<Bus Name="SFX" ID="{3FC18421-AC5C-4E17-B64E-3EC8FFF12898}"/>
+						<Bus Name="Music" ID="{651529B0-D00A-407F-9314-E0A35BA653FF}"/>
+						<Bus Name="UI" ID="{D87B01C4-2E82-438B-A002-5D55C31FBBFD}"/>
 					</ChildrenList>
 				</Bus>
 			</ChildrenList>
