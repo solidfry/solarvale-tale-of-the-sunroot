@@ -15,7 +15,10 @@ namespace UI.Inputs
         
         public void UpdateValue(float value)
         {
-            _text.text = value.ToString(CultureInfo.CurrentCulture);
+            value = value * 100;
+            var clamp = Mathf.FloorToInt(value);
+            _text.text = clamp.ToString(CultureInfo.CurrentCulture);
+
         }
     }
 }
