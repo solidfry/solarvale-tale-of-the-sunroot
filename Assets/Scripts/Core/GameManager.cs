@@ -22,6 +22,7 @@ namespace Core
         [SerializeField] PhotoManager photoManager;
     
         [SerializeField] bool IsPaused = false;
+        public PhotoManager PhotoManager => photoManager;
 
         readonly Observable<bool> _playerCanInteract = new(true);
 
@@ -54,8 +55,6 @@ namespace Core
             GlobalEvents.OnDialogueCompleteEvent -= SetPlayerInteractionActive;
             GlobalEvents.OnDialogueStartEvent -= SetPlayerInteractionInactive;
         }
-        
-        public PhotoManager PhotoManager => photoManager;
         
         public void SetPlayerInteractionInactive()
         {
