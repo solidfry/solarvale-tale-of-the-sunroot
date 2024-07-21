@@ -1,6 +1,7 @@
 using UnityEngine;
 using Events;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 
 public class MainMenuController : MonoBehaviour
 {
@@ -8,26 +9,39 @@ public class MainMenuController : MonoBehaviour
     private bool isMenuShown = false;
     private bool canShowMenu = true;
 
-    // References to sliders in the scene
-    public Slider masterVolumeSlider;
-    public Slider musicVolumeSlider;
-    public Slider soundsVolumeSlider;
+    // Serialize the Input Action Asset to ensure it remains assigned in the Inspector
+    [SerializeField]
+    private InputActionAsset inputActions;
 
-    void Start()
+    // Input action reference
+    private InputAction mainMenuOpenAction;
+
+    void Awake()
     {
-        // Assign references to sliders from the scene
-        masterVolumeSlider = GameObject.Find("MasterVolumeSlider").GetComponent<Slider>();
-        musicVolumeSlider = GameObject.Find("MusicVolumeSlider").GetComponent<Slider>();
-        soundsVolumeSlider = GameObject.Find("SoundsVolumeSlider").GetComponent<Slider>();
+        // Initialize the Input Action
+        mainMenuOpenAction = inputActions.FindAction("Player/MainMenuOpen");
+
+        if (mainMenuOpenAction == null)
+        {
+            Debug.LogError("MainMenuOpen action not found in the InputActionAsset.");
+            return;
+        }
+
+        mainMenuOpenAction.performed += context =>
+        {
+            Debug.Log("MainMenuOpen action performed.");
+            ToggleMenu();
+        };
     }
 
-    void Update()
+    void OnEnable()
     {
-        // Open/close menu when 'M' key is pressed
-        if (Input.GetKeyDown(KeyCode.M))
-        {
-            ToggleMenu();
-        }
+        mainMenuOpenAction?.Enable();
+    }
+
+    void OnDisable()
+    {
+        mainMenuOpenAction?.Disable();
     }
 
     void ToggleMenu()
@@ -39,7 +53,7 @@ public class MainMenuController : MonoBehaviour
         // Toggle visibility of the main menu canvas
         mainMenuCanvas.SetActive(isMenuShown);
 
-        // Example: Log menu state for debugging
+        // Log menu state for debugging
         Debug.Log("Menu Open: " + isMenuShown);
 
         // Trigger global events based on menu state
@@ -60,20 +74,6 @@ public class MainMenuController : MonoBehaviour
             Time.timeScale = 0f; // Pause game time
             GlobalEvents.OnLockCursorEvent?.Invoke(false); // Unlock cursor for UI interaction
         }
-
-        // Ensure UI elements are interactable
-        SetUIInteractivity(!isMenuShown);
-    }
-
-    void SetUIInteractivity(bool interactable)
-    {
-        // Set interactability of sliders
-        if (masterVolumeSlider != null)
-            masterVolumeSlider.interactable = interactable;
-        if (musicVolumeSlider != null)
-            musicVolumeSlider.interactable = interactable;
-        if (soundsVolumeSlider != null)
-            soundsVolumeSlider.interactable = interactable;
     }
 
     // Example function to be called elsewhere to update menu availability
