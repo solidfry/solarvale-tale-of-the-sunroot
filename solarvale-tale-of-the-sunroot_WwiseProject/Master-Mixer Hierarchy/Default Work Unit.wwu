@@ -12,15 +12,158 @@
 					<ChildrenList>
 						<Bus Name="Animals" ID="{7F338F3F-8132-4E7B-9A3A-B8C748CF0DDE}">
 							<ChildrenList>
-								<Bus Name="Animal Atmos" ID="{F9987C84-9B33-44CC-A6C3-1E3CB4F52D3C}"/>
+								<Bus Name="Animal Atmos" ID="{F9987C84-9B33-44CC-A6C3-1E3CB4F52D3C}">
+									<ObjectLists>
+										<ObjectList Name="RTPC">
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{CBD8B0D8-1465-4ACF-A9F8-07FE09B215D1}" ShortID="776711121">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="BusVolume"/>
+														</PropertyList>
+														<ReferenceList/>
+													</RTPC>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</Bus>
 							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="RTPC">
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{83A5075F-A55B-4939-8E5A-51BA6A8F39FA}" ShortID="715739461">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="BusVolume"/>
+												</PropertyList>
+												<ReferenceList/>
+											</RTPC>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
 						</Bus>
-						<Bus Name="Atmos" ID="{E51D6CB8-01C8-48A1-8608-AE500145E9A8}"/>
-						<Bus Name="Foley" ID="{A48760D2-A777-4435-B0AC-84D31ECEEC54}"/>
-						<Bus Name="SFX" ID="{3FC18421-AC5C-4E17-B64E-3EC8FFF12898}"/>
-						<Bus Name="Music" ID="{651529B0-D00A-407F-9314-E0A35BA653FF}"/>
-						<Bus Name="UI" ID="{D87B01C4-2E82-438B-A002-5D55C31FBBFD}"/>
+						<Bus Name="Atmos" ID="{E51D6CB8-01C8-48A1-8608-AE500145E9A8}">
+							<ObjectLists>
+								<ObjectList Name="RTPC">
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{FA861A08-D854-490F-BE8C-7D0E1FAB2C6A}" ShortID="606868257">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="BusVolume"/>
+												</PropertyList>
+												<ReferenceList/>
+											</RTPC>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</Bus>
+						<Bus Name="Foley" ID="{A48760D2-A777-4435-B0AC-84D31ECEEC54}">
+							<ObjectLists>
+								<ObjectList Name="RTPC">
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{0424C6C4-195F-4805-B060-13539483DB0D}" ShortID="221227651">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="BusVolume"/>
+												</PropertyList>
+												<ReferenceList/>
+											</RTPC>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</Bus>
+						<Bus Name="SFX" ID="{3FC18421-AC5C-4E17-B64E-3EC8FFF12898}">
+							<ObjectLists>
+								<ObjectList Name="RTPC">
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{0D4287EE-7938-4199-A4CB-928B37F594E3}" ShortID="565271758">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="BusVolume"/>
+												</PropertyList>
+												<ReferenceList/>
+											</RTPC>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</Bus>
+						<Bus Name="Music" ID="{651529B0-D00A-407F-9314-E0A35BA653FF}">
+							<ObjectLists>
+								<ObjectList Name="RTPC">
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{B02C8787-3160-47EA-9B13-8C6FABF0CD7B}" ShortID="1073489990">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="BusVolume"/>
+												</PropertyList>
+												<ReferenceList/>
+											</RTPC>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</Bus>
+						<Bus Name="UI" ID="{D87B01C4-2E82-438B-A002-5D55C31FBBFD}">
+							<ObjectLists>
+								<ObjectList Name="RTPC">
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{0D090148-0221-4C2A-B655-55E34048F7E5}" ShortID="890218303">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="BusVolume"/>
+												</PropertyList>
+												<ReferenceList/>
+											</RTPC>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</Bus>
 					</ChildrenList>
+					<ObjectLists>
+						<ObjectList Name="RTPC">
+							<Reference>
+								<Local>
+									<RTPC Name="" ID="{907C0D4F-5CF1-4FE3-9DC7-F8B84C55A2F0}" ShortID="834057722">
+										<PropertyList>
+											<Property Name="PropertyName" Type="string" Value="BusVolume"/>
+										</PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="MasterVolumeControl" ID="{D97E59E9-3A30-4466-B9A8-E74654A53A8A}" WorkUnitID="{5D233F1E-F8BA-44C7-8C7F-ECB2A220EE0E}"/>
+											</Reference>
+											<Reference Name="Curve">
+												<Custom>
+													<Curve Name="" ID="{07CE990F-DE45-4A3A-BDED-060F23B71226}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-200</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>0</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</Custom>
+											</Reference>
+										</ReferenceList>
+									</RTPC>
+								</Local>
+							</Reference>
+						</ObjectList>
+					</ObjectLists>
 				</Bus>
 			</ChildrenList>
 		</WorkUnit>
