@@ -1,48 +1,75 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
+using System;
+using System.Collections.Generic;
 
 public class UpdatePlayerPrefs : MonoBehaviour
 {
-    public Slider masterVolumeSlider;
-    public Slider musicVolumeSlider;
-    public Slider sfxVolumeSlider;
-    [Space(20)]
-    public UnityEvent<float> OnMasterVolumeChanged = new UnityEvent<float>();
-    public UnityEvent<float> OnMusicVolumeChanged = new UnityEvent<float>();
-    public UnityEvent<float> OnSfxVolumeChanged = new UnityEvent<float>();
+    [SerializeField]
+    List<PlayerPrefItem> preferences;
 
-    private const string MasterVolumeKey = "MasterVolume";
-    private const string MusicVolumeKey = "MusicVolume";
-    private const string SfxVolumeKey = "SfxVolume";
+   
+
+    public const float DefaultSliderValue = 0.5f;
 
     private void Awake()
-    { 
-        // Add listeners to sliders to save volume and invoke corresponding events when changed
-        masterVolumeSlider.onValueChanged.AddListener(value => SaveVolume(MasterVolumeKey, value, OnMasterVolumeChanged));
-        musicVolumeSlider.onValueChanged.AddListener(value => SaveVolume(MusicVolumeKey, value, OnMusicVolumeChanged));
-        sfxVolumeSlider.onValueChanged.AddListener(value => SaveVolume(SfxVolumeKey, value, OnSfxVolumeChanged));
-
-        // Load saved volume values from PlayerPrefs, defaulting to 1f if not set
-        masterVolumeSlider.value = PlayerPrefs.GetFloat(MasterVolumeKey, 1f);
-        musicVolumeSlider.value = PlayerPrefs.GetFloat(MusicVolumeKey, 1f);
-        sfxVolumeSlider.value = PlayerPrefs.GetFloat(SfxVolumeKey, 1f);
-
-        // Invoke events with initial values to set initial volume levels
-        OnMasterVolumeChanged.Invoke(masterVolumeSlider.value);
-        OnMusicVolumeChanged.Invoke(musicVolumeSlider.value);
-        OnSfxVolumeChanged.Invoke(sfxVolumeSlider.value);
-
+    {
+        Initialize();
     }
 
-    private void SaveVolume(string key, float value, UnityEvent<float> volumeChangedEvent)
+    private void Initialize()
     {
-        // Save the volume value to PlayerPrefs and invoke the corresponding event
+        foreach (var item in preferences)
+        {
+            item.Initialise();
+        }
+    }
+
+    public PlayerPrefItem FindValue(string key)
+    {
+        var value = preferences.Find(p => p.Key == key);
+
+        if (value == null)
+        {
+            return null;
+        }
+
+        return value;
+        
+    }
+
+    public static void SaveVolume(string key, float value, UnityEvent<float> volumeChangedEvent)
+    {
         PlayerPrefs.SetFloat(key, value);
         PlayerPrefs.Save();
-        volumeChangedEvent?.Invoke(value);
+        volumeChangedEvent.Invoke(value);
+    }
+
+    [Serializable]
+    public class PlayerPrefItem
+    {
+        public string Key;
+        public Slider slider;
+        public UnityEvent<float> OnValueChanged = new();
+        
+
+        public void Initialise()
+        {
+            if (Key == String.Empty || slider == null)
+            {
+                Debug.LogError("Slider or Key is empty");
+
+                return;
+            }
+
+            slider.onValueChanged.AddListener(value => SaveVolume(Key, value, OnValueChanged));
+
+            slider.value = PlayerPrefs.GetFloat(Key, DefaultSliderValue);
+
+            OnValueChanged.Invoke(slider.value);
+
+        }
     }
 }
 

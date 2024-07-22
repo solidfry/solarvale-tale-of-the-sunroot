@@ -1,31 +1,30 @@
 using UnityEngine;
-using UnityEngine.Events;
 
 public class SettingsManager : MonoBehaviour
 {
     [SerializeField]
-    UpdatePlayerPrefs playerPrefs;
+    private UpdatePlayerPrefs playerPrefs;
 
-
-    private void Awake()
+    private void Start()
     {
-        if (playerPrefs is null)
+        if (playerPrefs == null)
         {
             playerPrefs = GetComponent<UpdatePlayerPrefs>();
         }
     }
+
     private void OnEnable()
     {
         if (playerPrefs != null)
         {
-            playerPrefs.OnMasterVolumeChanged.AddListener(SetMasterVolume);
-            playerPrefs.OnMusicVolumeChanged.AddListener(SetMusicVolume);
-            playerPrefs.OnSfxVolumeChanged.AddListener(SetSfxVolume);
+            playerPrefs.FindValue("MasterVolume").OnValueChanged.AddListener(SetMasterVolume);
+            playerPrefs.FindValue("MusicVolume").OnValueChanged.AddListener(SetMusicVolume);
+            playerPrefs.FindValue("SfxVolume").OnValueChanged.AddListener(SetSfxVolume);
 
             // Set initial volumes based on PlayerPrefs
-            SetMasterVolume(PlayerPrefs.GetFloat("MasterVolume", 1f));
-            SetMusicVolume(PlayerPrefs.GetFloat("MusicVolume", 1f));
-            SetSfxVolume(PlayerPrefs.GetFloat("SfxVolume", 1f));
+            SetMasterVolume(PlayerPrefs.GetFloat("MasterVolume", UpdatePlayerPrefs.DefaultSliderValue));
+            SetMusicVolume(PlayerPrefs.GetFloat("MusicVolume", UpdatePlayerPrefs.DefaultSliderValue));
+            SetSfxVolume(PlayerPrefs.GetFloat("SfxVolume", UpdatePlayerPrefs.DefaultSliderValue));
         }
     }
 
@@ -33,9 +32,9 @@ public class SettingsManager : MonoBehaviour
     {
         if (playerPrefs != null)
         {
-            playerPrefs.OnMasterVolumeChanged.RemoveListener(SetMasterVolume);
-            playerPrefs.OnMusicVolumeChanged.RemoveListener(SetMusicVolume);
-            playerPrefs.OnSfxVolumeChanged.RemoveListener(SetSfxVolume);
+            playerPrefs.FindValue("MasterVolume").OnValueChanged.RemoveListener(SetMasterVolume);
+            playerPrefs.FindValue("MusicVolume").OnValueChanged.RemoveListener(SetMasterVolume);
+            playerPrefs.FindValue("SfxVolume").OnValueChanged.RemoveListener(SetMasterVolume);
         }
     }
 
@@ -45,8 +44,9 @@ public class SettingsManager : MonoBehaviour
         PlayerPrefs.SetFloat("MasterVolume", volume);
         PlayerPrefs.Save();
 
-        // Apply master volume if needed
-        Debug.Log("Master Volume set to: " + volume);
+        // Apply master volume using Wwise
+        float rtpcValue = Mathf.Lerp(-200, 0, volume); // Scale from 0 to 1
+        AkSoundEngine.SetRTPCValue("MasterVolumeControl", rtpcValue);
     }
 
     public void SetMusicVolume(float volume)
@@ -55,8 +55,9 @@ public class SettingsManager : MonoBehaviour
         PlayerPrefs.SetFloat("MusicVolume", volume);
         PlayerPrefs.Save();
 
-        // Apply music volume if needed
-        Debug.Log("Music Volume set to: " + volume);
+        // Apply music volume using Wwise
+        float rtpcValue = Mathf.Lerp(-200, 0, volume); // Scale from 0 to 1
+        AkSoundEngine.SetRTPCValue("MusicVolume", rtpcValue);
     }
 
     public void SetSfxVolume(float volume)
@@ -65,9 +66,11 @@ public class SettingsManager : MonoBehaviour
         PlayerPrefs.SetFloat("SfxVolume", volume);
         PlayerPrefs.Save();
 
-        // Apply SFX volume if needed
-        Debug.Log("SFX Volume set to: " + volume);
+        // Apply SFX volume using Wwise
+        float rtpcValue = Mathf.Lerp(-200, 0, volume); // Scale from 0 to 1
+        AkSoundEngine.SetRTPCValue("SfxVolume", rtpcValue);
     }
-}
 
+   
+}
 
