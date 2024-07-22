@@ -13,6 +13,7 @@ Material:
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
+  - _ALPHAPREMULTIPLY_ON
   - _SURFACE_TYPE_TRANSPARENT
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -112,6 +113,7 @@ Material:
     - _AO_Strength: 1
     - _Albedo_Strength: 1
     - _AlphaClip: 0
+    - _AlphaMultiplier: 1
     - _AlphaToMask: 0
     - _Alpha_Clip_Threshold: 0
     - _Blend: 0
@@ -133,19 +135,26 @@ Material:
     - _GlossyReflections: 0
     - _Metallic: 0
     - _Metallic_Strength: 0
+    - _Noise_1_Multiplier: 1
+    - _Noise_1_Scale: 20
+    - _Noise_2_Multiplier: 0.5
+    - _Noise_2_Scale: 80
     - _NormalStength: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.005
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
+    - _Shadow_Opacity: 0.5
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SpecularStrength: 0
-    - _SrcBlend: 5
+    - _SrcBlend: 1
     - _SrcBlendAlpha: 1
     - _Surface: 1
+    - _TriplanarBlend: 1
+    - _TriplanarTiling: 0.01
     - _WorkflowMode: 1
     - _ZTest: 4
     - _ZWrite: 0
@@ -159,6 +168,7 @@ Material:
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Emission_Color: {r: 0, g: 0, b: 0, a: 0}
     - _Fresnel_Color: {r: 1, g: 1, b: 1, a: 0}
+    - _NoiseColor: {r: 0, g: 0, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _Specular_Color: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
