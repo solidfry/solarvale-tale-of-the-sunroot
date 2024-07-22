@@ -458,11 +458,6 @@
 							<ChildrenList>
 								<Sound Name="BrandIntro-Birds" ID="{F3A6A052-6AD7-451D-95E8-F04567AA6E00}" ShortID="814771370">
 									<PropertyList>
-										<Property Name="Inclusion" Type="bool">
-											<ValueList>
-												<Value>False</Value>
-											</ValueList>
-										</Property>
 										<Property Name="Lowpass" Type="int16">
 											<ValueList>
 												<Value>12</Value>
@@ -497,6 +492,13 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="Atmos_Forest_Birds_Small_Breeze_02" ID="{F267AE0A-C3A3-424B-8648-80B7EA7EC0AF}" ShortID="931500148">
+									<PropertyList>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
@@ -580,10 +582,16 @@
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="music_flute_solo" ID="{7329B93F-20DA-4B70-BAFF-82503DA94100}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="3.69501466275659"/>
+												<Property Name="LoopEnd" Type="Real64" Value="42"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="42.9545454545455"/>
+											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>music_flute_solo.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="695495137"/>
+												<MediaID ID="96785413"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
