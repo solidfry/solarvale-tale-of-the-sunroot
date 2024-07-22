@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: 0ea724a16d5fe94f87531beacdd4d0d0
     GuidInternal: 
-    m_lastTime: -8584800521550558641
+    m_lastTime: -8584799934953658477
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 2b20922bdef03c418ceb65e6b9ae535b
     GuidInternal: 
-    m_lastTime: -8584800043990843685
+    m_lastTime: -8584799935069774904
     List:
     - name: Animal Atmos
       guid: 847c98f9339bcc44a6c31e3cb4f52d3c
@@ -189,7 +189,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 119a7399247785478749c0bc1477965c
     GuidInternal: 
-    m_lastTime: -8584800521550578668
+    m_lastTime: -8584799934953669191
     List:
     - name: Main
       guid: 861f12504c3aa24a9a453ff7870ae530
@@ -217,7 +217,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 5ea9686091072d41adff9786e1d6e4d5
     GuidInternal: 
-    m_lastTime: -8584800521687891464
+    m_lastTime: -8584799867678886432
     List:
     - name: Play_Atmos_Forest_Birds_Small_Breeze_02
       guid: 76053be8e94be4408e7d53fa34f1a799
@@ -355,6 +355,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 53.70775
       minDuration: 53.70775
+    - name: Play_GameStartSwitch
+      guid: d3153cdeaa7bca438313e73f1db3b8fd
+      id: 1179332500
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Play_GameStartSwitch
+        ObjectType: 3
+        guid: d3153cdeaa7bca438313e73f1db3b8fd
+      Path: Events\Default Work Unit\Play_GameStartSwitch
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Play_Hover_1
       guid: 0788c40fab9130448771b65fe8ad9615
       id: 2033520116
@@ -639,7 +656,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 1e3f235dbaf8c7448c7fecb2a220ee0e
     GuidInternal: 
-    m_lastTime: -8584800521687891464
+    m_lastTime: -8584799935072684808
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
@@ -653,8 +670,90 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 353ca83dc18ba64c819d41529ae10865
     GuidInternal: 
-    m_lastTime: -8584800521550568651
-    List: []
+    m_lastTime: -8584799867678825418
+    List:
+    - name: GameStart
+      guid: 31245c3210a4bd49b774a66e54b8091d
+      id: 4058101365
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 353ca83dc18ba64c819d41529ae10865
+      - ElementName: GameStart
+        ObjectType: 9
+        guid: 31245c3210a4bd49b774a66e54b8091d
+      Path: States\Default Work Unit\GameStart
+      values:
+      - name: GameStart
+        guid: 2f917a4ec337f749821d36699552ca51
+        id: 4058101365
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 353ca83dc18ba64c819d41529ae10865
+        - ElementName: GameStart
+          ObjectType: 9
+          guid: 31245c3210a4bd49b774a66e54b8091d
+        - ElementName: GameStart
+          ObjectType: 8
+          guid: 2f917a4ec337f749821d36699552ca51
+      - name: Intro
+        guid: d14b72905dbf7c4eba73ef33960334fa
+        id: 1125500713
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 353ca83dc18ba64c819d41529ae10865
+        - ElementName: GameStart
+          ObjectType: 9
+          guid: 31245c3210a4bd49b774a66e54b8091d
+        - ElementName: Intro
+          ObjectType: 8
+          guid: d14b72905dbf7c4eba73ef33960334fa
+      - name: MainMenu
+        guid: 16373b1a0ec3a04fbd17e456a80cd5cc
+        id: 3604647259
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 353ca83dc18ba64c819d41529ae10865
+        - ElementName: GameStart
+          ObjectType: 9
+          guid: 31245c3210a4bd49b774a66e54b8091d
+        - ElementName: MainMenu
+          ObjectType: 8
+          guid: 16373b1a0ec3a04fbd17e456a80cd5cc
+      - name: Stop
+        guid: 8653f5eb798314449c70ee2bb14a6655
+        id: 788884573
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 353ca83dc18ba64c819d41529ae10865
+        - ElementName: GameStart
+          ObjectType: 9
+          guid: 31245c3210a4bd49b774a66e54b8091d
+        - ElementName: Stop
+          ObjectType: 8
+          guid: 8653f5eb798314449c70ee2bb14a6655
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     PathAndIcons:
@@ -667,7 +766,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 42e0ffd4a5a82e4cb302f65e9ca389f3
     GuidInternal: 
-    m_lastTime: -8584800521550568651
+    m_lastTime: -8584799934953664109
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
@@ -681,7 +780,7 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: 277340ccae77074e961e5a73134a9932
     GuidInternal: 
-    m_lastTime: -8584800521550568651
+    m_lastTime: -8584799934953658477
     List: []
   ExpandedFileSystemItemIds: 
   ExpandedWaapiItemIds: 010000000500000006000000070000001100000012000000180000001a00000032150000361500003b150000
