@@ -7,7 +7,7 @@ namespace UI.Minimap
     public class MinimapManager : MonoBehaviour
     {
         [SerializeField] private GameObject playerCharacter;
-        [SerializeField] private Transform mainCamera;
+        //[SerializeField] private Transform mainCamera;
 
         [SerializeField] private MiniMapController miniMap;
         
@@ -32,8 +32,8 @@ namespace UI.Minimap
             if (!_miniMapUnlocked) return;
             transform.position = new Vector3(playerCharacter.transform.position.x, 400, playerCharacter.transform.position.z);
 
-            Vector3 rotation = new Vector3(90, mainCamera.eulerAngles.y, 0);
-            transform.rotation = Quaternion.Euler(rotation);
+            //Vector3 rotation = new Vector3(90, mainCamera.eulerAngles.y, 0);
+            //transform.rotation = Quaternion.Euler(rotation);
         }
 
         public void UnlockMiniMap()

@@ -20,18 +20,20 @@ public class QuestIconManager : MonoBehaviour
 
     private void Update()
     {
-        // Iterate through each objective marker and update its position
         foreach ((ObjectivePosition objectivePosition, RectTransform markerRectTransform) marker in currentObjectives)
         {
             // Calculate offset position relative to the player character
             Vector3 offset = marker.objectivePosition.transform.position - playerCharacter.transform.position;
 
-            // Calculate the maximum allowed offset based on the minimap's dimensions
-            float maxOffset = questIconParentRectTranform.rect.width / 2f;
+            // Normalize offset based on the camera's orthographic size
+            offset /= minimapCamera.orthographicSize;
 
-            // Clamp the x and z offsets to create a square boundary
-            offset.x = Mathf.Clamp(offset.x, -maxOffset, maxOffset);
-            offset.z = Mathf.Clamp(offset.z, -maxOffset, maxOffset);
+            // Scale to fit within the minimap parent rect's bounds
+            offset *= questIconParentRectTranform.rect.width / 2f;
+
+            // Clamp the offset to fit within a square boundary
+            offset.x = Mathf.Clamp(offset.x, -questIconParentRectTranform.rect.width / 2f, questIconParentRectTranform.rect.width / 2f);
+            offset.z = Mathf.Clamp(offset.z, -questIconParentRectTranform.rect.width / 2f, questIconParentRectTranform.rect.width / 2f);
 
             // Set the marker's anchored position
             marker.markerRectTransform.anchoredPosition = new Vector2(offset.x, offset.z);
@@ -41,23 +43,17 @@ public class QuestIconManager : MonoBehaviour
     // Add a new quest marker
     public void AddObjectiveMarker(ObjectivePosition sender)
     {
-        // Instantiate the quest icon and get its RectTransform
         RectTransform rectTransform = Instantiate(questIconPrefab, questIconParentRectTranform).GetComponent<RectTransform>();
-        // Add the objective and its RectTransform to the list
         currentObjectives.Add((sender, rectTransform));
     }
 
     // Remove an existing quest marker
     public void RemoveObjectiveMarker(ObjectivePosition sender)
     {
-        // Check if the objective exists in the list
         if (!currentObjectives.Exists(objective => objective.objectivePosition == sender))
             return;
-        // Find the objective and its RectTransform
         (ObjectivePosition pos, RectTransform rectTrans) foundObj = currentObjectives.Find(objective => objective.objectivePosition == sender);
-        // Destroy the quest icon GameObject
         Destroy(foundObj.rectTrans.gameObject);
-        // Remove the objective from the list
         currentObjectives.Remove(foundObj);
     }
 }
