@@ -51,6 +51,20 @@ namespace UI
                     _currentMenuIndex = menuItems.IndexOf(menuItem);
                 });
 
+            // var items = menuItems.Skip(0);
+            // items.ForEach(i => i.CanvasGroup.alpha = 0);
+            for (int i = 0; i < menuItems.Count; i++)
+            {
+                if (i == 0)
+                {
+                    continue;
+                }
+
+                else
+                {
+                    menuItems[i].CanvasGroup.alpha = 0;
+                }
+            }
             SetInitialTarget();
         }
 
