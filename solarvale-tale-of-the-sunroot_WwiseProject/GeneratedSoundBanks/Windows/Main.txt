@@ -1,35 +1,76 @@
 Event	ID	Name			Wwise Object Path	Notes
+	149110613	Play_UI__Photo_Discard			\Default Work Unit\Play_UI__Photo_Discard	
+	196110170	Play_music_grandma			\Default Work Unit\Play_music_grandma	
+	311910498	Play_Click			\Default Work Unit\Play_Click	
 	758826763	Play_Wombat_Eating			\Default Work Unit\Play_Wombat_Eating	
+	959936644	Play_UI__Photo_Keep_01			\Default Work Unit\Play_UI__Photo_Keep_01	
 	1149159311	Play_Button_Click			\Default Work Unit\Play_Button_Click	
 	1150390550	Play_music_flute_solo			\Default Work Unit\Play_music_flute_solo	
+	1179332500	Play_GameStartSwitch			\Default Work Unit\Play_GameStartSwitch	
+	1217678326	Play_UI__Photo_Keep			\Default Work Unit\Play_UI__Photo_Keep	
 	1514177854	Play_Camera_Snap			\Default Work Unit\Play_Camera_Snap	
+	1568956567	Play_music_gecko			\Default Work Unit\Play_music_gecko	
+	1906151857	Play_UI__Photo_Discard_01			\Default Work Unit\Play_UI__Photo_Discard_01	
+	2033520116	Play_Hover_1			\Default Work Unit\Play_Hover_1	
 	2355898552	Play_Wombat_Chatter			\Default Work Unit\Play_Wombat_Chatter	
 	2441382638	Stop_Wombat_Chatter			\Default Work Unit\Stop_Wombat_Chatter	
 	2883217168	Play_BrandIntro_Birds			\Default Work Unit\Play_BrandIntro_Birds	
+	3051820782	Play_UI__Menu_Select			\Default Work Unit\Play_UI__Menu_Select	
+	3133905178	Play_music_flutes_edit			\Default Work Unit\Play_music_flutes_edit	
+	3233888350	Play_Call			\Default Work Unit\Play_Call	
 	3337834332	Play_GameIntro_SoundScape			\Default Work Unit\Play_GameIntro_SoundScape	
 	3487772253	Stop_Wombat_Eating			\Default Work Unit\Stop_Wombat_Eating	
 	3568461127	Play_SFX_Cricket			\Default Work Unit\Play_SFX_Cricket	
+	3626787730	Play_Atmos_Forest_Birds_Small_Breeze_02			\Default Work Unit\Play_Atmos_Forest_Birds_Small_Breeze_02	
 	4021863785	Play_Button_Hover			\Default Work Unit\Play_Button_Hover	
+	4029504345	Play_music_game_start			\Default Work Unit\Play_music_game_start	
+	4116426549	Play_PianoKeys			\Default Work Unit\Play_PianoKeys	
+
+State Group	ID	Name			Wwise Object Path	Notes
+	4058101365	GameStart			\Default Work Unit\GameStart	
+
+State	ID	Name	State Group			Notes
+	748895195	None	GameStart			
+	1125500713	Intro	GameStart			
+	3604647259	MainMenu	GameStart			
+	4058101365	GameStart	GameStart			
 
 Effect plug-ins	ID	Name	Type				Notes
 	418265525	Gentle_Program_Compressor_Minus_14dB_RMS	Wwise Compressor			
 	2805769450	Special_Effect_1	Wwise Flanger			
 	3250156175	Say_what	Wwise Tremolo			
 
-Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
-	684394001	Tone Generator	Wwise Tone Generator		\Actor-Mixer Hierarchy\Default Work Unit\UI\Button\Button_Click\Click\Tone Generator	
-	760665764	Tone Generator	Wwise Tone Generator		\Actor-Mixer Hierarchy\Default Work Unit\UI\Button\Button_Hover\Hover_1\Tone Generator	
-
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	14543938	cockatoo-call_multiple_01-mono	D:\Uni\Unity\Solarvale\solarvale-tale-of-the-sunroot\solarvale-tale-of-the-sunroot_WwiseProject\.cache\Windows\SFX\Cockatoo\Mono_Cockatoo\cockatoo-call_multiple_01-mono_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Animals\Cockatoo\Call\cockatoo-call_multiple_01-mono		576096
 	45670411	SFX_Cricket	D:\Uni\Unity\Solarvale\solarvale-tale-of-the-sunroot\solarvale-tale-of-the-sunroot_WwiseProject\.cache\Windows\SFX\SFX_Cricket_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\SFX\SFX_Cricket		72096
+	65738593	Click	D:\Uni\Unity\Solarvale\solarvale-tale-of-the-sunroot\solarvale-tale-of-the-sunroot_WwiseProject\.cache\Windows\SFX\UI__Menu_Click_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Button\Button_Click\Click		192096
+	96785413	music_flute_solo	D:\Uni\Unity\Solarvale\solarvale-tale-of-the-sunroot\solarvale-tale-of-the-sunroot_WwiseProject\.cache\Windows\SFX\music_flute_solo_325CF148.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\MainMenu\music_flute_solo		8247368
+	109981130	UI__Photo_Discard	D:\Uni\Unity\Solarvale\solarvale-tale-of-the-sunroot\solarvale-tale-of-the-sunroot_WwiseProject\.cache\Windows\SFX\UI__Photo_Discard_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Camera\UI__Photo_Discard		240096
+	131892171	Piano 3	D:\Uni\Unity\Solarvale\solarvale-tale-of-the-sunroot\solarvale-tale-of-the-sunroot_WwiseProject\.cache\Windows\SFX\Piano 3_728A9DC6.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\PianoKeys\Piano 3		426636
 	188527001	wombat-eating_02-mono	D:\Uni\Unity\Solarvale\solarvale-tale-of-the-sunroot\solarvale-tale-of-the-sunroot_WwiseProject\.cache\Windows\SFX\Wombat\Mono_Wombat\wombat-eating_02-mono_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Animals\Wombat\Eating\wombat-eating_02-mono		1044096
+	213822940	cockatoo-call_and_shriek_01-mono	D:\Uni\Unity\Solarvale\solarvale-tale-of-the-sunroot\solarvale-tale-of-the-sunroot_WwiseProject\.cache\Windows\SFX\Cockatoo\Mono_Cockatoo\cockatoo-call_and_shriek_01-mono_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Animals\Cockatoo\Call\cockatoo-call_and_shriek_01-mono		216096
+	236542911	music_flutes_edit	D:\Uni\Unity\Solarvale\solarvale-tale-of-the-sunroot\solarvale-tale-of-the-sunroot_WwiseProject\.cache\Windows\SFX\music_flutes_edit_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\music_flutes_edit		18432096
+	382013164	Piano 1	D:\Uni\Unity\Solarvale\solarvale-tale-of-the-sunroot\solarvale-tale-of-the-sunroot_WwiseProject\.cache\Windows\SFX\Piano 1_95AAC353.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\PianoKeys\Piano 1		424524
 	407642542	wombat-chatter_04-mono	D:\Uni\Unity\Solarvale\solarvale-tale-of-the-sunroot\solarvale-tale-of-the-sunroot_WwiseProject\.cache\Windows\SFX\Wombat\Mono_Wombat\wombat-chatter_04-mono_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Animals\Wombat\Chatter\wombat-chatter_04-mono		228096
+	407734084	UI__Photo_Keep	D:\Uni\Unity\Solarvale\solarvale-tale-of-the-sunroot\solarvale-tale-of-the-sunroot_WwiseProject\.cache\Windows\SFX\UI__Photo_Keep_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Camera\UI__Photo_Keep		264096
+	473953376	UI__Menu_Select	D:\Uni\Unity\Solarvale\solarvale-tale-of-the-sunroot\solarvale-tale-of-the-sunroot_WwiseProject\.cache\Windows\SFX\UI__Menu_Select_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Button\Button_Select\UI__Menu_Select		264096
+	508563473	music_gecko	D:\Uni\Unity\Solarvale\solarvale-tale-of-the-sunroot\solarvale-tale-of-the-sunroot_WwiseProject\.cache\Windows\SFX\music_gecko_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\music_gecko		2304096
+	543519255	music_game_start	D:\Uni\Unity\Solarvale\solarvale-tale-of-the-sunroot\solarvale-tale-of-the-sunroot_WwiseProject\.cache\Windows\SFX\music_game_start_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\GameStartSwitch\music_game_start\music_game_start		3696096
+	549112133	music_grandma	D:\Uni\Unity\Solarvale\solarvale-tale-of-the-sunroot\solarvale-tale-of-the-sunroot_WwiseProject\.cache\Windows\SFX\music_grandma_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\music_grandma		2250096
 	610832515	wombat-chatter_01-mono	D:\Uni\Unity\Solarvale\solarvale-tale-of-the-sunroot\solarvale-tale-of-the-sunroot_WwiseProject\.cache\Windows\SFX\Wombat\Mono_Wombat\wombat-chatter_01-mono_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Animals\Wombat\Chatter\wombat-chatter_01-mono		96096
 	625821779	Polaroid_photo_click_print	D:\Uni\Unity\Solarvale\solarvale-tale-of-the-sunroot\solarvale-tale-of-the-sunroot_WwiseProject\.cache\Windows\SFX\Camera\Polaroid_photo_click_print_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Camera\Polaroid_photo_click_print		657684
-	695495137	music_flute_solo	D:\Uni\Unity\Solarvale\solarvale-tale-of-the-sunroot\solarvale-tale-of-the-sunroot_WwiseProject\.cache\Windows\SFX\music_flute_solo_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\music_flute_solo		10080096
+	637627464	music_flute_solo	D:\Uni\Unity\Solarvale\solarvale-tale-of-the-sunroot\solarvale-tale-of-the-sunroot_WwiseProject\.cache\Windows\SFX\music_flute_solo_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\GameStartSwitch\music_flute_solo\music_flute_solo		10080096
+	733414987	Atmos_Forest_Birds_Small_Breeze_02	D:\Uni\Unity\Solarvale\solarvale-tale-of-the-sunroot\solarvale-tale-of-the-sunroot_WwiseProject\.cache\Windows\SFX\Atmos_Forest_Birds_Small_Breeze_02_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\GameStartSwitch\Atmos_Forest_Birds_Small_Breeze_02\Atmos_Forest_Birds_Small_Breeze_02		13056096
+	754319843	Piano 5	D:\Uni\Unity\Solarvale\solarvale-tale-of-the-sunroot\solarvale-tale-of-the-sunroot_WwiseProject\.cache\Windows\SFX\Piano 5_C620DC1E.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\PianoKeys\Piano 5		421356
+	780783866	Piano 0	D:\Uni\Unity\Solarvale\solarvale-tale-of-the-sunroot\solarvale-tale-of-the-sunroot_WwiseProject\.cache\Windows\SFX\Piano 0_D7E02FEF.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\PianoKeys\Piano 0		428748
+	792950357	Piano 2	D:\Uni\Unity\Solarvale\solarvale-tale-of-the-sunroot\solarvale-tale-of-the-sunroot_WwiseProject\.cache\Windows\SFX\Piano 2_D9FC03C1.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\PianoKeys\Piano 2		423468
 	842751414	wombat-chatter_02-mono	D:\Uni\Unity\Solarvale\solarvale-tale-of-the-sunroot\solarvale-tale-of-the-sunroot_WwiseProject\.cache\Windows\SFX\Wombat\Mono_Wombat\wombat-chatter_02-mono_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Animals\Wombat\Chatter\wombat-chatter_02-mono		210096
+	859864887	Piano 7	D:\Uni\Unity\Solarvale\solarvale-tale-of-the-sunroot\solarvale-tale-of-the-sunroot_WwiseProject\.cache\Windows\SFX\Piano 7_B9BF4A23.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\PianoKeys\Piano 7		430860
 	879010177	BrandIntro-Birds	D:\Uni\Unity\Solarvale\solarvale-tale-of-the-sunroot\solarvale-tale-of-the-sunroot_WwiseProject\.cache\Windows\SFX\BrandIntro-Birds_A7BD7755.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Intro\BrandIntro-Birds		3096500
+	886235747	Piano 4	D:\Uni\Unity\Solarvale\solarvale-tale-of-the-sunroot\solarvale-tale-of-the-sunroot_WwiseProject\.cache\Windows\SFX\Piano 4_4F43BEC5.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\PianoKeys\Piano 4		422412
+	908080785	music_game_start	D:\Uni\Unity\Solarvale\solarvale-tale-of-the-sunroot\solarvale-tale-of-the-sunroot_WwiseProject\.cache\Windows\SFX\music_game_start_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\music_game_start		3696096
 	913598294	wombat-eating_01-mono	D:\Uni\Unity\Solarvale\solarvale-tale-of-the-sunroot\solarvale-tale-of-the-sunroot_WwiseProject\.cache\Windows\SFX\Wombat\Mono_Wombat\wombat-eating_01-mono_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Animals\Wombat\Eating\wombat-eating_01-mono		768096
 	971591174	wombat-chatter_03-mono	D:\Uni\Unity\Solarvale\solarvale-tale-of-the-sunroot\solarvale-tale-of-the-sunroot_WwiseProject\.cache\Windows\SFX\Wombat\Mono_Wombat\wombat-chatter_03-mono_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Animals\Wombat\Chatter\wombat-chatter_03-mono		216096
-	1029364635	GameIntro_SoundScape	D:\Uni\Unity\Solarvale\solarvale-tale-of-the-sunroot\solarvale-tale-of-the-sunroot_WwiseProject\.cache\Windows\SFX\soundscape_9F772F2C.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\MainMenu\GameIntro_SoundScape		10311984
+	989093546	Piano 6	D:\Uni\Unity\Solarvale\solarvale-tale-of-the-sunroot\solarvale-tale-of-the-sunroot_WwiseProject\.cache\Windows\SFX\Piano 6_B1713491.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\PianoKeys\Piano 6		423468
+	1067857081	Hover_1	D:\Uni\Unity\Solarvale\solarvale-tale-of-the-sunroot\solarvale-tale-of-the-sunroot_WwiseProject\.cache\Windows\SFX\UI__Menu_Hover_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Button\Button_Hover\Hover_1		288096
 

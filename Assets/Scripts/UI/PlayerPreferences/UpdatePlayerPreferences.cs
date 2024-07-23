@@ -10,6 +10,7 @@ namespace UI.PlayerPreferences
     {
         [SerializeField]
         List<PlayerPrefItem> preferences;
+        public List<PlayerPrefItem> Preferences => preferences;
 
    
 
@@ -73,7 +74,6 @@ namespace UI.PlayerPreferences
 
                 var f = PlayerPrefs.GetFloat(Key, DefaultSliderValue);
                 slider.value = f;
-
                 OnValueChanged.Invoke(slider.value);
 
             }

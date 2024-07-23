@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{198C1E84-B308-4FB1-90CC-D64AB4930C78}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{DC86977E-A6BC-BE67-F7A2-0146C8239592}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -19,24 +19,96 @@
 				</AudioDevices>
 			</Plugins>
 			<Busses>
+				<Bus Id="247557814" Name="Foley"/>
+				<Bus Id="393239870" Name="SFX"/>
+				<Bus Id="949388280" Name="Animals"/>
+				<Bus Id="1551306167" Name="UI"/>
+				<Bus Id="3034623661" Name="Atmos"/>
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
+				<Bus Id="3991942870" Name="Music"/>
+				<Bus Id="4065632103" Name="Animal Atmos"/>
 			</Busses>
+			<GameParameters>
+				<GameParameter Id="4159077472" Name="MasterVolumeControl"/>
+			</GameParameters>
+			<StateGroups>
+				<StateGroup Id="4058101365" Name="GameStart">
+					<States>
+						<State Id="748895195" Name="None"/>
+						<State Id="1125500713" Name="Intro"/>
+						<State Id="3604647259" Name="MainMenu"/>
+						<State Id="4058101365" Name="GameStart"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{7E691CB2-422D-3251-62EE-ED3EEE204F00}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{421A9E51-369E-9302-4AFD-508C88C2431B}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
+				<File Id="14543938" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Cockatoo\Mono_Cockatoo\cockatoo-call_multiple_01-mono.wav</ShortName>
+					<CachePath>SFX/Cockatoo/Mono_Cockatoo/cockatoo-call_multiple_01-mono_818F3B66.wem</CachePath>
+				</File>
 				<File Id="45670411" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_Cricket.wav</ShortName>
 					<CachePath>SFX/SFX_Cricket_818F3B66.wem</CachePath>
+				</File>
+				<File Id="65738593" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UI__Menu_Click.wav</ShortName>
+					<CachePath>SFX/UI__Menu_Click_818F3B66.wem</CachePath>
+				</File>
+				<File Id="96785413" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>music_flute_solo.wav</ShortName>
+					<CachePath>SFX/music_flute_solo_325CF148.wem</CachePath>
+				</File>
+				<File Id="109981130" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UI__Photo_Discard.wav</ShortName>
+					<CachePath>SFX/UI__Photo_Discard_818F3B66.wem</CachePath>
+				</File>
+				<File Id="131892171" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Piano 3.wav</ShortName>
+					<CachePath>SFX/Piano 3_728A9DC6.wem</CachePath>
 				</File>
 				<File Id="188527001" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Wombat\Mono_Wombat\wombat-eating_02-mono.wav</ShortName>
 					<CachePath>SFX/Wombat/Mono_Wombat/wombat-eating_02-mono_818F3B66.wem</CachePath>
 				</File>
+				<File Id="213822940" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Cockatoo\Mono_Cockatoo\cockatoo-call_and_shriek_01-mono.wav</ShortName>
+					<CachePath>SFX/Cockatoo/Mono_Cockatoo/cockatoo-call_and_shriek_01-mono_818F3B66.wem</CachePath>
+				</File>
+				<File Id="236542911" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>music_flutes_edit.wav</ShortName>
+					<CachePath>SFX/music_flutes_edit_818F3B66.wem</CachePath>
+				</File>
+				<File Id="382013164" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Piano 1.wav</ShortName>
+					<CachePath>SFX/Piano 1_95AAC353.wem</CachePath>
+				</File>
 				<File Id="407642542" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Wombat\Mono_Wombat\wombat-chatter_04-mono.wav</ShortName>
 					<CachePath>SFX/Wombat/Mono_Wombat/wombat-chatter_04-mono_818F3B66.wem</CachePath>
+				</File>
+				<File Id="407734084" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UI__Photo_Keep.wav</ShortName>
+					<CachePath>SFX/UI__Photo_Keep_818F3B66.wem</CachePath>
+				</File>
+				<File Id="473953376" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UI__Menu_Select.wav</ShortName>
+					<CachePath>SFX/UI__Menu_Select_818F3B66.wem</CachePath>
+				</File>
+				<File Id="508563473" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>music_gecko.wav</ShortName>
+					<CachePath>SFX/music_gecko_818F3B66.wem</CachePath>
+				</File>
+				<File Id="543519255" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>music_game_start.wav</ShortName>
+					<CachePath>SFX/music_game_start_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="549112133" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>music_grandma.wav</ShortName>
+					<CachePath>SFX/music_grandma_818F3B66.wem</CachePath>
 				</File>
 				<File Id="610832515" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Wombat\Mono_Wombat\wombat-chatter_01-mono.wav</ShortName>
@@ -46,17 +118,45 @@
 					<ShortName>Camera\Polaroid_photo_click_print.wav</ShortName>
 					<CachePath>SFX/Camera/Polaroid_photo_click_print_818F3B66.wem</CachePath>
 				</File>
-				<File Id="695495137" Language="SFX" Streaming="false" Location="Memory">
+				<File Id="637627464" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>music_flute_solo.wav</ShortName>
-					<CachePath>SFX/music_flute_solo_818F3B66.wem</CachePath>
+					<CachePath>SFX/music_flute_solo_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="733414987" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Atmos_Forest_Birds_Small_Breeze_02.wav</ShortName>
+					<CachePath>SFX/Atmos_Forest_Birds_Small_Breeze_02_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="754319843" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Piano 5.wav</ShortName>
+					<CachePath>SFX/Piano 5_C620DC1E.wem</CachePath>
+				</File>
+				<File Id="780783866" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Piano 0.wav</ShortName>
+					<CachePath>SFX/Piano 0_D7E02FEF.wem</CachePath>
+				</File>
+				<File Id="792950357" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Piano 2.wav</ShortName>
+					<CachePath>SFX/Piano 2_D9FC03C1.wem</CachePath>
 				</File>
 				<File Id="842751414" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Wombat\Mono_Wombat\wombat-chatter_02-mono.wav</ShortName>
 					<CachePath>SFX/Wombat/Mono_Wombat/wombat-chatter_02-mono_818F3B66.wem</CachePath>
 				</File>
+				<File Id="859864887" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Piano 7.wav</ShortName>
+					<CachePath>SFX/Piano 7_B9BF4A23.wem</CachePath>
+				</File>
 				<File Id="879010177" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>BrandIntro-Birds.wav</ShortName>
 					<CachePath>SFX/BrandIntro-Birds_A7BD7755.wem</CachePath>
+				</File>
+				<File Id="886235747" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Piano 4.wav</ShortName>
+					<CachePath>SFX/Piano 4_4F43BEC5.wem</CachePath>
+				</File>
+				<File Id="908080785" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>music_game_start.wav</ShortName>
+					<CachePath>SFX/music_game_start_818F3B66.wem</CachePath>
 				</File>
 				<File Id="913598294" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Wombat\Mono_Wombat\wombat-eating_01-mono.wav</ShortName>
@@ -66,16 +166,16 @@
 					<ShortName>Wombat\Mono_Wombat\wombat-chatter_03-mono.wav</ShortName>
 					<CachePath>SFX/Wombat/Mono_Wombat/wombat-chatter_03-mono_818F3B66.wem</CachePath>
 				</File>
-				<File Id="1029364635" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>soundscape.wav</ShortName>
-					<CachePath>SFX/soundscape_9F772F2C.wem</CachePath>
+				<File Id="989093546" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Piano 6.wav</ShortName>
+					<CachePath>SFX/Piano 6_B1713491.wem</CachePath>
+				</File>
+				<File Id="1067857081" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UI__Menu_Hover.wav</ShortName>
+					<CachePath>SFX/UI__Menu_Hover_818F3B66.wem</CachePath>
 				</File>
 			</Media>
 			<Plugins>
-				<Custom>
-					<Plugin Id="684394001" Name="Tone Generator" LibName="Wwise Tone Generator" LibId="6684674"/>
-					<Plugin Id="760665764" Name="Tone Generator" LibName="Wwise Tone Generator" LibId="6684674"/>
-				</Custom>
 				<ShareSets>
 					<Plugin Id="418265525" Name="Gentle_Program_Compressor_Minus_14dB_RMS" LibName="Wwise Compressor" LibId="7077891"/>
 					<Plugin Id="2805769450" Name="Special_Effect_1" LibName="Wwise Flanger" LibId="8192003"/>
@@ -83,16 +183,17 @@
 				</ShareSets>
 			</Plugins>
 			<Events>
+				<Event Id="3626787730" Name="Play_Atmos_Forest_Birds_Small_Breeze_02" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="2883217168" Name="Play_BrandIntro_Birds" DurationType="OneShot" DurationMin="16.127098" DurationMax="16.127098">
 					<MediaRefs>
 						<MediaRef Id="879010177"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1149159311" Name="Play_Button_Click" DurationType="OneShot" DurationMin="0.14763717" DurationMax="0.14763717">
+				<Event Id="1149159311" Name="Play_Button_Click" DurationType="OneShot" DurationMin="0.70303416" DurationMax="0.70303416">
+					<MediaRefs>
+						<MediaRef Id="65738593"/>
+					</MediaRefs>
 					<PluginRefs>
-						<Custom>
-							<PluginRef Id="684394001"/>
-						</Custom>
 						<ShareSets>
 							<PluginRef Id="418265525"/>
 							<PluginRef Id="2805769450"/>
@@ -100,36 +201,141 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="4021863785" Name="Play_Button_Hover" DurationType="OneShot" DurationMin="0.14763717" DurationMax="0.14763717">
+				<Event Id="4021863785" Name="Play_Button_Hover" DurationType="OneShot" DurationMin="1.0545512" DurationMax="1.0545512">
+					<MediaRefs>
+						<MediaRef Id="1067857081"/>
+					</MediaRefs>
 					<PluginRefs>
-						<Custom>
-							<PluginRef Id="760665764"/>
-						</Custom>
 						<ShareSets>
 							<PluginRef Id="418265525"/>
 							<PluginRef Id="2805769450"/>
 							<PluginRef Id="3250156175"/>
 						</ShareSets>
 					</PluginRefs>
+				</Event>
+				<Event Id="3233888350" Name="Play_Call" MaxAttenuation="100" DurationType="OneShot" DurationMin="2.25" DurationMax="6">
+					<MediaRefs>
+						<MediaRef Id="14543938"/>
+						<MediaRef Id="213822940"/>
+					</MediaRefs>
 				</Event>
 				<Event Id="1514177854" Name="Play_Camera_Snap" DurationType="OneShot" DurationMin="3.4249375" DurationMax="3.4249375">
 					<MediaRefs>
 						<MediaRef Id="625821779"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3337834332" Name="Play_GameIntro_SoundScape" DurationType="OneShot" DurationMin="53.70775" DurationMax="53.70775">
+				<Event Id="311910498" Name="Play_Click" DurationType="OneShot" DurationMin="0.70303416" DurationMax="0.70303416">
 					<MediaRefs>
-						<MediaRef Id="1029364635"/>
+						<MediaRef Id="65738593"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="418265525"/>
+							<PluginRef Id="2805769450"/>
+							<PluginRef Id="3250156175"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
+				<Event Id="3337834332" Name="Play_GameIntro_SoundScape" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1179332500" Name="Play_GameStartSwitch" DurationType="Infinite">
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4058101365" Id="1125500713"/>
+							<MediaRefs>
+								<MediaRef Id="733414987"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4058101365" Id="4058101365"/>
+							<MediaRefs>
+								<MediaRef Id="543519255"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4058101365" Id="3604647259"/>
+							<MediaRefs>
+								<MediaRef Id="637627464"/>
+							</MediaRefs>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="2033520116" Name="Play_Hover_1" DurationType="OneShot" DurationMin="1.0545512" DurationMax="1.0545512">
+					<MediaRefs>
+						<MediaRef Id="1067857081"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="418265525"/>
+							<PluginRef Id="2805769450"/>
+							<PluginRef Id="3250156175"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
+				<Event Id="1150390550" Name="Play_music_flute_solo" DurationType="OneShot" DurationMin="42.954544" DurationMax="42.954544">
+					<MediaRefs>
+						<MediaRef Id="96785413"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1150390550" Name="Play_music_flute_solo" DurationType="OneShot" DurationMin="52.5" DurationMax="52.5">
+				<Event Id="3133905178" Name="Play_music_flutes_edit" DurationType="OneShot" DurationMin="96" DurationMax="96">
 					<MediaRefs>
-						<MediaRef Id="695495137"/>
+						<MediaRef Id="236542911"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4029504345" Name="Play_music_game_start" DurationType="OneShot" DurationMin="19.25" DurationMax="19.25">
+					<MediaRefs>
+						<MediaRef Id="908080785"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1568956567" Name="Play_music_gecko" DurationType="OneShot" DurationMin="12" DurationMax="12">
+					<MediaRefs>
+						<MediaRef Id="508563473"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="196110170" Name="Play_music_grandma" DurationType="OneShot" DurationMin="11.71875" DurationMax="11.71875">
+					<MediaRefs>
+						<MediaRef Id="549112133"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4116426549" Name="Play_PianoKeys" DurationType="OneShot" DurationMin="2.3880951" DurationMax="2.4419727">
+					<MediaRefs>
+						<MediaRef Id="131892171"/>
+						<MediaRef Id="382013164"/>
+						<MediaRef Id="754319843"/>
+						<MediaRef Id="780783866"/>
+						<MediaRef Id="792950357"/>
+						<MediaRef Id="859864887"/>
+						<MediaRef Id="886235747"/>
+						<MediaRef Id="989093546"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="3568461127" Name="Play_SFX_Cricket" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.75" DurationMax="0.75">
 					<MediaRefs>
 						<MediaRef Id="45670411"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3051820782" Name="Play_UI__Menu_Select" DurationType="OneShot" DurationMin="1.375" DurationMax="1.375">
+					<MediaRefs>
+						<MediaRef Id="473953376"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="149110613" Name="Play_UI__Photo_Discard" DurationType="OneShot" DurationMin="1.25" DurationMax="1.25">
+					<MediaRefs>
+						<MediaRef Id="109981130"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1906151857" Name="Play_UI__Photo_Discard_01" DurationType="OneShot" DurationMin="1.25" DurationMax="1.25">
+					<MediaRefs>
+						<MediaRef Id="109981130"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1217678326" Name="Play_UI__Photo_Keep" DurationType="OneShot" DurationMin="1.375" DurationMax="1.375">
+					<MediaRefs>
+						<MediaRef Id="407734084"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="959936644" Name="Play_UI__Photo_Keep_01" DurationType="OneShot" DurationMin="1.375" DurationMax="1.375">
+					<MediaRefs>
+						<MediaRef Id="407734084"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="2355898552" Name="Play_Wombat_Chatter" MaxAttenuation="100" DurationType="Infinite">
@@ -149,7 +355,17 @@
 				<Event Id="2441382638" Name="Stop_Wombat_Chatter" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="3487772253" Name="Stop_Wombat_Eating" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
+			<StateGroups>
+				<StateGroup Id="4058101365" Name="GameStart">
+					<States>
+						<State Id="748895195" Name="None"/>
+						<State Id="1125500713" Name="Intro"/>
+						<State Id="3604647259" Name="MainMenu"/>
+						<State Id="4058101365" Name="GameStart"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{F4DADBEE-D0FF-AD2C-376D-82C130450E64}</FileHash>
+	<FileHash>{10133332-6FC8-AC9A-96B3-924074D01655}</FileHash>
 </SoundBanksInfo>

@@ -5,26 +5,25 @@ namespace UI
 {
     public class SelectedItemController : MonoBehaviour
     {
-        [SerializeField] RectTransform selectionIndicator;
-        [SerializeField] EventSystem eventSystem;
-        [SerializeField] Transform itemsList;
+        [SerializeField] private RectTransform selectionIndicator;
+        [SerializeField] private Transform itemsList;
     
-        CanvasGroup _selectionIndicatorCanvasGroup;
-
-        [SerializeField] RectTransform currentTarget;
+        private CanvasGroup _selectionIndicatorCanvasGroup;
+        private RectTransform _currentTarget;
+        private EventSystem _eventSystem;
 
         [SerializeField] private float interpolationValue = 0.5f;
-    
+
         private void Start()
         {
-            eventSystem = EventSystem.current;
+            _eventSystem = EventSystem.current;
             _selectionIndicatorCanvasGroup = selectionIndicator.GetComponent<CanvasGroup>();
             _selectionIndicatorCanvasGroup.alpha = 0;
         }
 
         private void Update()
         {
-            if (CanLerp()) return;
+            if (!CanLerp()) return;
             UpdateSelectorAlpha();
             UpdateTransform();
         }
@@ -40,32 +39,30 @@ namespace UI
         private bool CanLerp()
         {
             SetTarget();
-            return currentTarget == null;
+            return _currentTarget != null;
         }
 
         private void SetTarget()
         {
-            if (eventSystem.currentSelectedGameObject is null) return;
-            if (eventSystem.currentSelectedGameObject.transform == currentTarget || eventSystem.currentSelectedGameObject.transform.parent != itemsList) return;
-            if (eventSystem?.currentSelectedGameObject == null) return;
-            currentTarget = eventSystem?.currentSelectedGameObject.transform as RectTransform;
-            // Debug.Log("Setting new target" + currentTarget.name);
+            if (_eventSystem.currentSelectedGameObject == null) return;
+
+            RectTransform newTarget = _eventSystem.currentSelectedGameObject.transform as RectTransform;
+            if (newTarget == null || newTarget == _currentTarget || newTarget.transform.parent != itemsList) return;
+
+            _currentTarget = newTarget;
+            // Debug.Log("Setting new target: " + _currentTarget.name);
         }
 
         private void UpdateTransform()
         {
+            if (_currentTarget == null) return;
             
-            selectionIndicator.position = 
-                new Vector2(
-                    Lerp(selectionIndicator.position.x, 
-                        currentTarget.position.x, 
-                        interpolationValue * Time.unscaledDeltaTime), 
-                    selectionIndicator.position.y);
+            selectionIndicator.position = new Vector2(
+                Lerp(selectionIndicator.position.x, _currentTarget.position.x, interpolationValue * Time.unscaledDeltaTime), 
+                selectionIndicator.position.y);
             
-            selectionIndicator.SetSizeWithCurrentAnchors( RectTransform.Axis.Horizontal,  
-                Lerp(selectionIndicator.rect.width, 
-                    currentTarget.rect.width, 
-                    interpolationValue * Time.unscaledDeltaTime));
+            selectionIndicator.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal,  
+                Lerp(selectionIndicator.rect.width, _currentTarget.rect.width, interpolationValue * Time.unscaledDeltaTime));
         }
 
         private float Lerp(float a, float b, float t) => Mathf.Lerp(a, b, t);

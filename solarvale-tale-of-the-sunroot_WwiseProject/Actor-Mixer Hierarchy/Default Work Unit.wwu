@@ -682,6 +682,288 @@
 								</Sound>
 							</ChildrenList>
 						</Folder>
+						<RandomSequenceContainer Name="PianoKeys" ID="{27F9EE56-766C-45B6-AE23-8B3EE7302F68}" ShortID="23638457">
+							<PropertyList>
+								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="3"/>
+								<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Piano 0" ID="{DB89F987-7C9F-45C8-BD28-D906FD393B08}" ShortID="149256813">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{DB5558ED-B19C-4A1D-BD0F-E906A6563D10}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Piano 0" ID="{466A5015-75A8-4F9F-A933-77F3DA6215D8}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.758748280605227"/>
+												<Property Name="LoopBegin" Type="Real64" Value="0"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Piano 0.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="780783866"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Piano 0" ID="{466A5015-75A8-4F9F-A933-77F3DA6215D8}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Piano 1" ID="{1BE5A03E-08EA-46A8-8719-29F5173F578A}" ShortID="772431493">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Piano 1" ID="{2854A86F-A89D-4062-96BA-E410E76B3003}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.625507958341521"/>
+												<Property Name="LoopBegin" Type="Real64" Value="0"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Piano 1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="382013164"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Piano 1" ID="{2854A86F-A89D-4062-96BA-E410E76B3003}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Piano 2" ID="{E9016F0A-494D-4B16-A275-DA62ACD61509}" ShortID="292418412">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Piano 2" ID="{AC5FBC7D-F576-4CCC-A6D5-08A5D18FDAED}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.5843356820032"/>
+												<Property Name="LoopBegin" Type="Real64" Value="0"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Piano 2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="792950357"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Piano 2" ID="{AC5FBC7D-F576-4CCC-A6D5-08A5D18FDAED}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Piano 3" ID="{ECFCED80-C7D7-468E-B9B0-B706C1F349C0}" ShortID="154254459">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Piano 3" ID="{9A0A852F-D694-49DB-8DDA-BF37E1706BCC}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.834834704170527"/>
+												<Property Name="LoopBegin" Type="Real64" Value="0"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Piano 3.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="131892171"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Piano 3" ID="{9A0A852F-D694-49DB-8DDA-BF37E1706BCC}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Piano 4" ID="{E89E7E9B-091C-4987-B67A-51F706935F0E}" ShortID="631835081">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Piano 4" ID="{DF77DD85-FB2F-4211-9355-20619A957B15}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.533481739325717"/>
+												<Property Name="LoopBegin" Type="Real64" Value="0"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Piano 4.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="886235747"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Piano 4" ID="{DF77DD85-FB2F-4211-9355-20619A957B15}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Piano 5" ID="{61C77113-1175-4C62-931E-0BB03A7ECAB7}" ShortID="886493332">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Piano 5" ID="{F9E3FE10-9025-4B8E-A9A0-C8E3918AFA0F}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.456595925853147"/>
+												<Property Name="LoopBegin" Type="Real64" Value="0"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Piano 5.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="754319843"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Piano 5" ID="{F9E3FE10-9025-4B8E-A9A0-C8E3918AFA0F}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Piano 6" ID="{AD4FDBCD-5574-4791-AE02-E95016420B72}" ShortID="778444336">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Piano 6" ID="{A0364795-3182-4F0E-96DF-56537419E483}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.640458318127801"/>
+												<Property Name="LoopBegin" Type="Real64" Value="0"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Piano 6.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="989093546"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Piano 6" ID="{A0364795-3182-4F0E-96DF-56537419E483}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Piano 7" ID="{C390113F-75D2-453B-A774-D2283755317A}" ShortID="865600098">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{6E563870-2EF6-4FEE-B0A0-C6203D4A69C4}"/>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Piano 7" ID="{5A9A110C-18B3-4217-BABB-46BD7CD60FA8}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.450102274747588"/>
+												<Property Name="LoopBegin" Type="Real64" Value="0"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Piano 7.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="859864887"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Piano 7" ID="{5A9A110C-18B3-4217-BABB-46BD7CD60FA8}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Playlist">
+									<Reference>
+										<ObjectRef Name="Piano 0" ID="{DB89F987-7C9F-45C8-BD28-D906FD393B08}" WorkUnitID="{6AACD892-8249-4CA2-BBEB-F88052A754B1}"/>
+									</Reference>
+									<Reference>
+										<ObjectRef Name="Piano 1" ID="{1BE5A03E-08EA-46A8-8719-29F5173F578A}" WorkUnitID="{6AACD892-8249-4CA2-BBEB-F88052A754B1}"/>
+									</Reference>
+									<Reference>
+										<ObjectRef Name="Piano 2" ID="{E9016F0A-494D-4B16-A275-DA62ACD61509}" WorkUnitID="{6AACD892-8249-4CA2-BBEB-F88052A754B1}"/>
+									</Reference>
+									<Reference>
+										<ObjectRef Name="Piano 3" ID="{ECFCED80-C7D7-468E-B9B0-B706C1F349C0}" WorkUnitID="{6AACD892-8249-4CA2-BBEB-F88052A754B1}"/>
+									</Reference>
+									<Reference>
+										<ObjectRef Name="Piano 4" ID="{E89E7E9B-091C-4987-B67A-51F706935F0E}" WorkUnitID="{6AACD892-8249-4CA2-BBEB-F88052A754B1}"/>
+									</Reference>
+									<Reference>
+										<ObjectRef Name="Piano 5" ID="{61C77113-1175-4C62-931E-0BB03A7ECAB7}" WorkUnitID="{6AACD892-8249-4CA2-BBEB-F88052A754B1}"/>
+									</Reference>
+									<Reference>
+										<ObjectRef Name="Piano 6" ID="{AD4FDBCD-5574-4791-AE02-E95016420B72}" WorkUnitID="{6AACD892-8249-4CA2-BBEB-F88052A754B1}"/>
+									</Reference>
+									<Reference>
+										<ObjectRef Name="Piano 7" ID="{C390113F-75D2-453B-A774-D2283755317A}" WorkUnitID="{6AACD892-8249-4CA2-BBEB-F88052A754B1}"/>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</RandomSequenceContainer>
 					</ChildrenList>
 				</ActorMixer>
 			</ChildrenList>
