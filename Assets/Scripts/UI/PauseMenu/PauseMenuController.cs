@@ -1,60 +1,65 @@
-using UnityEngine;
 using Events;
-using UnityEngine.UI;
+using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PauseMenuController : MonoBehaviour
+namespace UI.PauseMenu
 {
-    public GameObject pauseMenuCanvas;
-
-    [SerializeField]
-    private bool isMenuShown = false;
-    
- 
-
-    // Input action reference
-    [SerializeField]
-    private InputActionReference pauseMenuOpenAction, pauseMenuCloseAction;
-
-
-    void Awake()
+    public class PauseMenuController : MonoBehaviour
     {
-        // Initialize the Input Action
+        [SerializeField] MenuTabManager pauseMenuCanvas;
+        
 
-        if (pauseMenuOpenAction == null)
+        [SerializeField]
+        private bool isMenuShown = false;
+    
+        // Input action reference
+        [SerializeField]
+        private InputActionReference pauseMenuOpenAction, pauseMenuCloseAction;
+
+
+        void Awake()
         {
-            Debug.LogError("MainMenuOpen action not found in the InputActionAsset.");
-            return;
+            pauseMenuCanvas = GetComponent<MenuTabManager>();
+            // Initialize the Input Action
+
+            if (pauseMenuOpenAction == null)
+            {
+                Debug.LogError("MainMenuOpen action not found in the InputActionAsset.");
+                return;
+            }
+
+            pauseMenuOpenAction.action.performed += context => ToggleMenu();
+            pauseMenuCloseAction.action.performed += context => ToggleMenu();
+
+            // ToggleMenu();
         }
 
-        pauseMenuOpenAction.action.performed += context => ToggleMenu();
-        pauseMenuCloseAction.action.performed += context => ToggleMenu();
+        public void ToggleMenu()
+        {
+            isMenuShown = !isMenuShown;
+            // Toggle visibility of the main menu canvas
 
-        pauseMenuCanvas.SetActive(false);
+            // Log menu state and time scale for debugging
+            Debug.Log($"Menu Open: {isMenuShown}");
+            Debug.Log($"Time.timeScale: {Time.timeScale}");
+            // Trigger global events based on menu state
+            GlobalEvents.OnGamePausedEvent?.Invoke(isMenuShown); // Pause game logic if menu is shown
+            GlobalEvents.OnLockCursorEvent?.Invoke(!isMenuShown);
+            GlobalEvents.OnPlayerChangeActionMapEvent?.Invoke(isMenuShown);
+            
+            if (!isMenuShown)
+            {
+                pauseMenuCanvas.CloseAllMenus();
+            }
+            else
+            {
+                pauseMenuCanvas.OpenMenu(0);
+            }
+        }
+
+
+
     }
-
-    public void ToggleMenu()
-    {
-
-
-        isMenuShown = !isMenuShown;
-
-        // Toggle visibility of the main menu canvas
-        pauseMenuCanvas.SetActive(isMenuShown);
-
-        // Log menu state and time scale for debugging
-        Debug.Log($"Menu Open: {isMenuShown}");
-        Debug.Log($"Time.timeScale: {Time.timeScale}");
-
-        // Trigger global events based on menu state
-        GlobalEvents.OnGamePausedEvent?.Invoke(isMenuShown); // Pause game logic if menu is shown
-        GlobalEvents.OnLockCursorEvent?.Invoke(!isMenuShown);
-        GlobalEvents.OnPlayerChangeActionMapEvent?.Invoke(isMenuShown); // Change player input mapping if menu is shown
-
-    }
-
-
-
 }
 
 

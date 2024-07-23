@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 3765386431793683222}
   - component: {fileID: 3296499154676596453}
   - component: {fileID: 4519955367433192265}
+  - component: {fileID: 7945429946150782141}
+  - component: {fileID: 2233316528936062594}
   m_Layer: 0
   m_Name: SettingsCanvas
   m_TagString: Untagged
@@ -62,11 +64,11 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
+  m_VertexColorAlwaysGammaSpace: 1
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1000
   m_TargetDisplay: 0
 --- !u!114 &6137179190748317367
 MonoBehaviour:
@@ -158,6 +160,31 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &7945429946150782141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 152339610992747885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 784f1902d3ba41089f2ada31715e2e84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  registerOnStart: 1
+--- !u!210 &2233316528936062594
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 152339610992747885}
+  m_Enabled: 1
+  m_SortingLayerID: -449329791
+  m_SortingLayer: -1
+  m_SortingOrder: 1000
+  m_SortAtRoot: 0
 --- !u!1 &6036817184467153589
 GameObject:
   m_ObjectHideFlags: 0

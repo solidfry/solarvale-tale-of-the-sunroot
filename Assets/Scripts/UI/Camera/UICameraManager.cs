@@ -27,17 +27,15 @@ namespace UI.Camera
         {
             if (uiCanvases.Contains(canvas)) return;
             
-            SetCameraScreenSpaceOverlay(canvas);
+            SetCameraScreenSpaceCamera(canvas);
             
             uiCanvases.Add(canvas);
             canvas.worldCamera = uiCamera;
             canvas.sortingLayerName = "UI";
+            canvas.gameObject.layer = LayerMask.NameToLayer("UI");
         }
 
-        private static void SetCameraScreenSpaceOverlay(Canvas canvas)
-        {
-            if (canvas.renderMode == RenderMode.ScreenSpaceOverlay) return;
-            canvas.renderMode = RenderMode.ScreenSpaceOverlay;
-        }
+        private static void SetCameraScreenSpaceCamera(Canvas canvas) => canvas.renderMode = RenderMode.ScreenSpaceCamera;
+        
     }
 }

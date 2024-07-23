@@ -8,17 +8,16 @@ namespace UI.Inputs
     {
         TMP_Text _text;
         
-        void Start()
+        void Awake()
         {
             _text = GetComponent<TMP_Text>();
         }
         
         public void UpdateValue(float value)
         {
-            value = value * 100;
+            value *= 100;
             var clamp = Mathf.FloorToInt(value);
             _text.text = clamp.ToString(CultureInfo.CurrentCulture);
-
         }
     }
 }

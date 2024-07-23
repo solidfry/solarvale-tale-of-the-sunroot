@@ -11,7 +11,7 @@ namespace UI
     {
         [FormerlySerializedAs("menu")]
         [Header("Menu Settings")]
-        [SerializeField] GameMenuUIController menuPrefab;
+        [SerializeField] UIOverlayController menuPrefab;
         [SerializeField] bool isMenuShown = false;
         [SerializeField] bool canShowMenu = true;
         [SerializeField] InputActionReference menuOpenAction;
@@ -22,7 +22,7 @@ namespace UI
         [SerializeField] float playerHUDFadeDuration = 0.5f;
         [SerializeField] bool isHUDShown = true;
         
-        GameMenuUIController _menuInstance;
+        UIOverlayController _menuInstance;
         GameObject _playerHUDInstance;
         CanvasGroup _playerHUDCanvasGroup;
         

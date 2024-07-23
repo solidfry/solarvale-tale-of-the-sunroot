@@ -81,7 +81,7 @@ public class CricketJump : MonoBehaviour
         if (isRotating)
         {
             // Ensure rotateDuration is positive and non-zero
-            rotateDuration = Mathf.Max(rotateDuration, 0.01f); // Adjust 0.01f as needed
+            rotateDuration = Mathf.Max(rotateDuration, 0.1f); // Adjust 0.01f as needed
 
             float t = Mathf.Clamp(Time.deltaTime / rotateDuration, 0.01f, 1f);
             transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, t);

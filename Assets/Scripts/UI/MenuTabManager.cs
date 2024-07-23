@@ -14,23 +14,22 @@ namespace UI
         private float fadeDuration = 0.5f;
         
         [Header("Menu Items")]
+        [SerializeField] bool startAllMenusClosed = false;
         [SerializeField] 
         private List<MenuItem> menuItems;
         private int _currentMenuIndex;
         
-        private void Start()
-        {
-            Initialise();
-            // Open the first menu by default
-            OpenMenu(menuItems[_currentMenuIndex].CanvasGroup);
-        }
+        Tween _fadeInTween;
+        Tween _fadeOutTween;
+
+        private void OnEnable() => Initialise();
 
         private void OnValidate()
         {
             if (menuItems.Count == 0) return;
             foreach (var menuItem in menuItems)
             {
-                if (menuItem.Button is null || menuItem.MenuPanel is null)
+                if (menuItem.ButtonToActivatePanel is null || menuItem.MenuPanel is null)
                 {
                     Debug.LogError("Menu Item is missing a reference");
                     return;
@@ -45,64 +44,102 @@ namespace UI
         private void Initialise()
         {
             foreach (var menuItem in menuItems)
-                menuItem.Button.onClick.AddListener(() =>
+                menuItem.ButtonToActivatePanel.onClick.AddListener(() =>
                 {
                     OpenMenu(menuItem.CanvasGroup);
                     _currentMenuIndex = menuItems.IndexOf(menuItem);
                 });
-
-            // var items = menuItems.Skip(0);
-            // items.ForEach(i => i.CanvasGroup.alpha = 0);
-            for (int i = 0; i < menuItems.Count; i++)
+            
+            if (startAllMenusClosed)
             {
-                if (i == 0)
-                {
-                    continue;
-                }
-
-                else
-                {
-                    menuItems[i].CanvasGroup.alpha = 0;
-                }
+                CloseAllMenus();
+            } 
+        }
+        
+        public void OpenMenu(int index)
+        {
+            if (index < 0 || index >= menuItems.Count)
+            {
+                Debug.LogError("Index out of range");
+                return;
             }
+            
+            OpenMenu(menuItems[index].CanvasGroup);
+            _currentMenuIndex = index;
             SetInitialTarget();
+        }
+
+        public void CloseAllMenus()
+        {
+            foreach (var menuItem in menuItems)
+            {
+                menuItem.CanvasGroup.alpha = 0;
+                menuItem.CanvasGroup.interactable = false;
+                menuItem.CanvasGroup.blocksRaycasts = false;
+                menuItem.CanvasGroup.gameObject.SetActive(false);
+            }
         }
 
         private void SetInitialTarget()
         {
-            EventSystem.current.SetSelectedGameObject(menuItems[_currentMenuIndex].Button.gameObject);
+            if (menuItems[_currentMenuIndex].InitialFocusObject is null)
+            {
+                EventSystem.current.SetSelectedGameObject(menuItems[_currentMenuIndex].ButtonToActivatePanel.gameObject);
+            }
+            else
+            {
+                EventSystem.current.SetSelectedGameObject(menuItems[_currentMenuIndex].InitialFocusObject);
+            }
         }
 
         void OpenMenu(CanvasGroup menuPanel)
         {
             menuPanel.gameObject.SetActive(true);
+            menuPanel.alpha = 0;
             FadeIn(menuPanel);
             foreach (var menuItem in menuItems)
-                if (menuItem.CanvasGroup != menuPanel && menuItem.MenuPanel.activeInHierarchy)
+                if (menuItem.CanvasGroup != menuPanel)
                 {
                     FadeOut(menuItem.CanvasGroup);
                 }
         }
 
-        void FadeOut(CanvasGroup canvasGroup) => canvasGroup.DOFade(0, fadeDuration).OnComplete(() =>
+        void FadeOut(CanvasGroup canvasGroup)
         {
-            canvasGroup.interactable = false;
-            canvasGroup.blocksRaycasts = false;
-        }).SetUpdate(true);
+            Debug.Log($"Fading out: {canvasGroup.gameObject.name}");
+            if (_fadeOutTween != null && _fadeOutTween.IsActive())
+                _fadeOutTween.Kill();
+            _fadeOutTween = canvasGroup.DOFade(0, fadeDuration).OnComplete(() =>
+            {
+                canvasGroup.interactable = false;
+                canvasGroup.blocksRaycasts = false;
+                canvasGroup.gameObject.SetActive(false);
+                Debug.Log("Fade out complete");
+            }).SetUpdate(isIndependentUpdate: true);
+        }
 
-        void FadeIn(CanvasGroup canvasGroup) =>
-            canvasGroup.DOFade(1, fadeDuration).OnComplete(() =>
+        void FadeIn(CanvasGroup canvasGroup)
+        {
+            Debug.Log($"Fading in: {canvasGroup.gameObject.name}");
+            if (_fadeInTween != null && _fadeInTween.IsActive())
+                _fadeInTween.Kill();
+            _fadeInTween = canvasGroup.DOFade(1, fadeDuration).OnComplete(() =>
             {
                 canvasGroup.interactable = true;
                 canvasGroup.blocksRaycasts = true;
-                
-            }).SetUpdate(true);
+                Debug.Log("Fade in complete");
+                SetInitialTarget();
+                if (canvasGroup.alpha >= 1) return;
+                canvasGroup.alpha = 1;
+            }).SetUpdate(isIndependentUpdate: true);
+        }
     }
 
     [Serializable]
     public record MenuItem
     {
-        [field:SerializeField] public Button Button { get; private set; }
+        [field:SerializeField] public Button ButtonToActivatePanel { get; private set; }
+        [field:SerializeField] public GameObject InitialFocusObject { get; private set; }
         [field:SerializeField] public GameObject MenuPanel { get; private set; }
         [field:SerializeField] public CanvasGroup CanvasGroup  { get; private set; }
         

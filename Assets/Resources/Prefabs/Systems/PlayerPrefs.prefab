@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 446e8f9512d502e41aa1adb5c9cf2030, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerPreferences: {fileID: 0}
 --- !u!114 &8441525384733409642
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57,51 +58,55 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 956467e25312ce7418c7b10e65506774, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  masterVolumeSlider: {fileID: 0}
-  musicVolumeSlider: {fileID: 0}
-  sfxVolumeSlider: {fileID: 0}
-  OnMasterVolumeChanged:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1098067243332064187}
-        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
-        m_MethodName: SetMasterVolume
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  OnMusicVolumeChanged:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1098067243332064187}
-        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
-        m_MethodName: SetMusicVolume
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  OnSfxVolumeChanged:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1098067243332064187}
-        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
-        m_MethodName: SetSfxVolume
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  preferences:
+  - Key: MasterVolume
+    slider: {fileID: 0}
+    OnValueChanged:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1098067243332064187}
+          m_TargetAssemblyTypeName: SettingsManager, Assembly-CSharp
+          m_MethodName: SetMasterVolume
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - Key: MusicVolume
+    slider: {fileID: 0}
+    OnValueChanged:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1098067243332064187}
+          m_TargetAssemblyTypeName: SettingsManager, Assembly-CSharp
+          m_MethodName: SetMusicVolume
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - Key: SfxVolume
+    slider: {fileID: 0}
+    OnValueChanged:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1098067243332064187}
+          m_TargetAssemblyTypeName: SettingsManager, Assembly-CSharp
+          m_MethodName: SetSfxVolume
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2

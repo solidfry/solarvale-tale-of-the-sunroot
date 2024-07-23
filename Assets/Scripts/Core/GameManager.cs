@@ -1,5 +1,4 @@
 using Events;
-using Gaia;
 using Photography;
 using UI;
 using UnityEngine;
@@ -7,16 +6,7 @@ using Utilities;
 
 namespace Core
 {
-    public enum GameState
-    {
-        MainMenu,
-        InGame,
-        Paused,
-        Dialogue,
-        Cutscene
-    }
-    
-    public class GameManager : SingletonPersistent<GameManager>
+    public class GameManager : MonoBehaviour
     {
         [SerializeField] HudManager hudManager;
         [SerializeField] PhotoManager photoManager;
@@ -26,10 +16,8 @@ namespace Core
 
         readonly Observable<bool> _playerCanInteract = new(true);
 
-        public override void Awake()
+        public void Awake()
         {
-            base.Awake();
-         
             if (hudManager is null)
                 hudManager = GetComponentInChildren<HudManager>();
             
@@ -73,6 +61,7 @@ namespace Core
             Debug.Log("PauseGame");
             IsPaused = pause;
             float _ = IsPaused ? Time.timeScale = 0 : Time.timeScale = 1;
+            Debug.Log($"Time.timeScale: {Time.timeScale}");
         }
     
         void LockCursor(bool _lockCursor) => Cursor.lockState = _lockCursor ? CursorLockMode.Locked : CursorLockMode.None;

@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 3210779642755284711}
   - component: {fileID: 6011422573477247999}
   - component: {fileID: 3226666657740655150}
+  - component: {fileID: 3828606326443644325}
+  - component: {fileID: 4792826427059662453}
   m_Layer: 5
   m_Name: PauseMenuUI
   m_TagString: Untagged
@@ -60,8 +62,8 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 25
+  m_VertexColorAlwaysGammaSpace: 1
+  m_AdditionalShaderChannelsFlag: 1
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
@@ -156,6 +158,31 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &3828606326443644325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4539940666993939848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 784f1902d3ba41089f2ada31715e2e84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  registerOnStart: 1
+--- !u!210 &4792826427059662453
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4539940666993939848}
+  m_Enabled: 1
+  m_SortingLayerID: -449329791
+  m_SortingLayer: -1
+  m_SortingOrder: 999
+  m_SortAtRoot: 0
 --- !u!1 &7624398481658832160
 GameObject:
   m_ObjectHideFlags: 0

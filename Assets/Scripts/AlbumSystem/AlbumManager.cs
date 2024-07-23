@@ -22,7 +22,7 @@ namespace AlbumSystem
 
         private void Start()
         {
-            _photoManager = GameManager.Instance.PhotoManager;
+            _photoManager = FindObjectOfType<GameManager>().PhotoManager;
             
             if (_photoManager.GetPhotos().Count > 0)
                 LoadPhotos(_photoManager.GetPhotos());
