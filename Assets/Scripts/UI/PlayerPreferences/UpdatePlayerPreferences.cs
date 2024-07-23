@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace UI.PlayerPreferences
@@ -46,7 +47,7 @@ namespace UI.PlayerPreferences
         {
             PlayerPrefs.SetFloat(key, value);
             PlayerPrefs.Save();
-            volumeChangedEvent.Invoke(value);
+            volumeChangedEvent?.Invoke(value);
         }
 
         [Serializable]
@@ -54,7 +55,7 @@ namespace UI.PlayerPreferences
         {
             public string Key;
             public Slider slider;
-            public UnityEvent<float> OnValueChanged = new();
+            [FormerlySerializedAs("OnValueChanged")] public UnityEvent<float> onValueChanged = new();
 
             public void Initialise()
             {
@@ -65,7 +66,7 @@ namespace UI.PlayerPreferences
                     return;
                 }
 
-                slider.onValueChanged.AddListener(value => SaveVolume(Key, value, OnValueChanged));
+                slider.onValueChanged.AddListener(value => SaveVolume(Key, value, onValueChanged));
 
                 if (!PlayerPrefs.HasKey(Key))
                 {
@@ -73,8 +74,9 @@ namespace UI.PlayerPreferences
                 }
 
                 var f = PlayerPrefs.GetFloat(Key, DefaultSliderValue);
+                Debug.Log(slider.gameObject);
                 slider.value = f;
-                OnValueChanged.Invoke(slider.value);
+                onValueChanged.Invoke(slider.value);
 
             }
         }

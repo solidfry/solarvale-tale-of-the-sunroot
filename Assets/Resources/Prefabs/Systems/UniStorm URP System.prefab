@@ -26,13 +26,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 901424478212353622}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3748655633976961460}
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &6455729437456555010
 Light:
   m_ObjectHideFlags: 0
@@ -44,8 +44,8 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 0.77205884, g: 0.7660296, b: 0.73232055, a: 1}
-  m_Intensity: 5
+  m_Color: {r: 1, g: 0.9745283, b: 0.8726415, a: 1}
+  m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -54,7 +54,7 @@ Light:
     m_Type: 2
     m_Resolution: 1
     m_CustomResolution: -1
-    m_Strength: 0.75
+    m_Strength: 0.8
     m_Bias: 0.05
     m_NormalBias: 0.15
     m_NearPlane: 0.2
@@ -76,14 +76,14 @@ Light:
       e32: 0
       e33: 1
     m_UseCullingMatrixOverride: 0
-  m_Cookie: {fileID: 0}
+  m_Cookie: {fileID: 2800000, guid: 6d9df89386f987a48986240f46742a43, type: 3}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_RenderingLayerMask: 1
+  m_RenderingLayerMask: 4294967295
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
@@ -115,7 +115,7 @@ MonoBehaviour:
   m_CustomShadowLayers: 0
   m_ShadowLayerMask: 1
   m_ShadowRenderingLayers: 1
-  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieSize: {x: 128, y: 128}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
 --- !u!1 &1761332111613689401
@@ -249,8 +249,8 @@ MonoBehaviour:
   CelestialTabNumbers: 0
   TimeFoldout: 1
   DateFoldout: 1
-  TimeSoundsFoldout: 0
-  TimeMusicFoldout: 0
+  TimeSoundsFoldout: 1
+  TimeMusicFoldout: 1
   SunFoldout: 1
   MoonFoldout: 1
   AtmosphereFoldout: 1
@@ -283,8 +283,8 @@ MonoBehaviour:
   Day: 25
   Month: 6
   Year: 2032
-  DayLength: 24
-  NightLength: 12
+  DayLength: 20
+  NightLength: 10
   TimeOfDayUpdateSeconds: 5
   UseTimeOfDayUpdateControl: 1
   m_TimeFloat: 0
@@ -313,7 +313,7 @@ MonoBehaviour:
   WeatherGenerationMethod: 0
   WeatherForecast: []
   ForceLowClouds: 0
-  LowCloudHeight: 200
+  LowCloudHeight: 298
   CloudDomeTrisCountX: 100
   CloudDomeTrisCountY: 50
   IgnoreConditions: 0
@@ -452,7 +452,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 1c574a7c95db0204d8f2627686dde9dd, type: 2}
   - {fileID: 11400000, guid: 2c22445a1c49d7f4587aad0d120738bb, type: 2}
   - {fileID: 11400000, guid: 9c9c95d0c839e12409171dc4a845551a, type: 2}
-  CurrentWeatherType: {fileID: 11400000, guid: 8564137bd991ab448bb763ee76ea290f, type: 2}
+  CurrentWeatherType: {fileID: 11400000, guid: 5e51740885cc8c14497e44041aeb303e, type: 2}
   NextWeatherType: {fileID: 0}
   ByPassCoverageTransition: 0
   m_PrecipitationOdds: 50
@@ -1094,7 +1094,7 @@ MonoBehaviour:
   LightningDetectionDistance: 20
   m_CloudSeed: 0
   CurrentFogColor: {r: 0, g: 0, b: 0, a: 0}
-  FogType: 1
+  FogType: 0
   FogMode: 1
   m_UniStormAtmosphericFog:
     isEnabled: 1
@@ -1123,7 +1123,7 @@ MonoBehaviour:
   SnowAmount: 0
   CurrentWindIntensity: 0
   MostlyCloudyFadeValue: 0
-  StormyHorizonBrightness: 1.139
+  StormyHorizonBrightness: 1.073
   SunAttenuationCurve:
     serializedVersion: 2
     m_Curve:
@@ -1962,7 +1962,7 @@ MonoBehaviour:
   SunShadowResolution: 1
   MoonShadowResolution: 1
   LightningShadowResolution: 1
-  SunShadowStrength: 0.9
+  SunShadowStrength: 0.363
   MoonShadowStrength: 0.75
   LightningShadowStrength: 0.75
   MoonPhaseList:
@@ -2429,14 +2429,14 @@ MonoBehaviour:
     m_NumAlphaKeys: 6
   FogColor:
     serializedVersion: 2
-    key0: {r: 0.1302065, g: 0.16895631, b: 0.20754719, a: 1}
-    key1: {r: 0.1302065, g: 0.16895631, b: 0.20754719, a: 1}
-    key2: {r: 0.21293165, g: 0.24325827, b: 0.2735849, a: 0}
-    key3: {r: 0.44588825, g: 0.49321982, b: 0.5660378, a: 0}
-    key4: {r: 0.44588825, g: 0.49321982, b: 0.5660378, a: 0}
-    key5: {r: 0.21293165, g: 0.24325827, b: 0.2735849, a: 0}
-    key6: {r: 0.1302065, g: 0.16895631, b: 0.20754719, a: 0}
-    key7: {r: 0.1302065, g: 0.16895631, b: 0.20754719, a: 0}
+    key0: {r: 0.15294118, g: 0.24705882, b: 0.34117648, a: 1}
+    key1: {r: 0.15294118, g: 0.24705882, b: 0.34117648, a: 1}
+    key2: {r: 0.4419643, g: 0.4640625, b: 0.495, a: 0}
+    key3: {r: 0.78431374, g: 0.8235294, b: 0.8784314, a: 0}
+    key4: {r: 0.7821734, g: 0.8202474, b: 0.8773585, a: 0}
+    key5: {r: 0.44313726, g: 0.46666667, b: 0.49803922, a: 0}
+    key6: {r: 0.15198001, g: 0.24599001, b: 0.34, a: 0}
+    key7: {r: 0.15294118, g: 0.24705882, b: 0.34117648, a: 0}
     ctime0: 0
     ctime1: 16515
     ctime2: 19398
@@ -2454,7 +2454,7 @@ MonoBehaviour:
     atime6: 0
     atime7: 0
     m_Mode: 0
-    m_ColorSpace: -1
+    m_ColorSpace: 0
     m_NumColorKeys: 8
     m_NumAlphaKeys: 2
   FogStormyColor:
@@ -2639,19 +2639,19 @@ MonoBehaviour:
     m_NumAlphaKeys: 2
   SunSpotColor:
     serializedVersion: 2
-    key0: {r: 3.5629578, g: 0.9327114, b: 0, a: 1}
-    key1: {r: 3.5629578, g: 0.9327114, b: 0, a: 1}
-    key2: {r: 3.5629578, g: 1.6602263, b: 0, a: 0}
-    key3: {r: 3.5629578, g: 1.6602263, b: 0, a: 0}
-    key4: {r: 3.5629578, g: 0.9327114, b: 0, a: 0}
-    key5: {r: 3.5629578, g: 0.9327114, b: 0, a: 0}
+    key0: {r: 3.5629578, g: 0.7077035, b: 0, a: 1}
+    key1: {r: 1.8459511, g: 1.5234692, b: 0.7227072, a: 1}
+    key2: {r: 1.3826536, g: 1.2731332, b: 1.0369903, a: 0}
+    key3: {r: 1.3826536, g: 1.2731332, b: 1.0369903, a: 0}
+    key4: {r: 1.8459511, g: 1.5234692, b: 0.7227072, a: 0}
+    key5: {r: 3.5629578, g: 0.7077035, b: 0, a: 0}
     key6: {r: 0, g: 0, b: 0, a: 0}
     key7: {r: 0, g: 0, b: 0, a: 0}
-    ctime0: 15521
+    ctime0: 13107
     ctime1: 18396
-    ctime2: 22803
-    ctime3: 45223
-    ctime4: 49630
+    ctime2: 21781
+    ctime3: 42405
+    ctime4: 47609
     ctime5: 53654
     ctime6: 0
     ctime7: 0
@@ -2664,7 +2664,7 @@ MonoBehaviour:
     atime6: 0
     atime7: 0
     m_Mode: 0
-    m_ColorSpace: -1
+    m_ColorSpace: 0
     m_NumColorKeys: 6
     m_NumAlphaKeys: 2
   FogLightColor:
@@ -3164,7 +3164,7 @@ Light:
     m_Type: 2
     m_Resolution: 1
     m_CustomResolution: -1
-    m_Strength: 0.6
+    m_Strength: 1
     m_Bias: 0.05
     m_NormalBias: 0.4
     m_NearPlane: 0.2
@@ -3186,7 +3186,7 @@ Light:
       e32: 0
       e33: 1
     m_UseCullingMatrixOverride: 0
-  m_Cookie: {fileID: 0}
+  m_Cookie: {fileID: 2800000, guid: 6d9df89386f987a48986240f46742a43, type: 3}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
   m_RenderMode: 0
@@ -3225,7 +3225,7 @@ MonoBehaviour:
   m_CustomShadowLayers: 0
   m_ShadowLayerMask: 1
   m_ShadowRenderingLayers: 1
-  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieSize: {x: 128, y: 128}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
 --- !u!1 &6162152491884792034

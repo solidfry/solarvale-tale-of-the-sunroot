@@ -6,7 +6,7 @@ namespace UI.Inputs
 {
     public class UpdateValueUI : MonoBehaviour
     {
-        TMP_Text _text;
+        [SerializeField] TMP_Text _text;
         
         void Awake()
         {

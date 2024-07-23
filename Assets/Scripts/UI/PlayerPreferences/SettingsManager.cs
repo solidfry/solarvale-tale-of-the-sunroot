@@ -46,7 +46,7 @@ namespace UI.PlayerPreferences
             var preference = playerPreferences.FindValue(key);
             if (preference != null)
             {
-                preference.OnValueChanged.AddListener(listener);
+                preference.onValueChanged.AddListener(listener);
             }
         }
 
@@ -55,7 +55,7 @@ namespace UI.PlayerPreferences
             var preference = playerPreferences.FindValue(key);
             if (preference != null)
             {
-                preference.OnValueChanged.RemoveListener(listener);
+                preference.onValueChanged.RemoveListener(listener);
             }
         }
 
