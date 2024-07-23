@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using Events;
 using QuestSystem.Conditions;
+using UnityEngine.EventSystems;
+using UnityEngine.Events;
 
 namespace QuestSystem
 {
@@ -11,6 +13,7 @@ namespace QuestSystem
         [SerializeField] private QuestData questDataToCheck;
         [SerializeField] private GameObject[] removeUsedInteractable;
         [SerializeField] private GameObject[] addNewInteractable;
+        [SerializeField] private UnityEvent DisableCompletedEvents;
 
         private void Update()
         {
@@ -25,10 +28,11 @@ namespace QuestSystem
                 {
                     addNewInteractable[i].SetActive(true);
                 }
-                for (int i=0; i< removeUsedInteractable.Length; i++)
+                for (int i = 0; i < removeUsedInteractable.Length; i++)
                 {
                     removeUsedInteractable[i].SetActive(false);
                 }
+                DisableCompletedEvents?.Invoke();
                 Destroy(this);
             }
         }
