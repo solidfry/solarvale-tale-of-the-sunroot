@@ -2,11 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ObjectivePosition : MonoBehaviour
+
+namespace UI.Minimap
 {
-    // Start is called before the first frame update
-    void Start()
+    public class ObjectivePosition : MonoBehaviour
     {
-        FindObjectOfType<QuestIconManager>().AddObjectiveMarker(this);
+        // Start is called before the first frame update
+        void Start()
+        {
+            FindObjectOfType<QuestIconManager>().AddObjectiveMarker(this);
+        }
     }
 }
