@@ -69,56 +69,6 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Play_Wombat_Chatter" ID="{0009F738-2DFE-4F22-A26F-07FD7E1CAB63}">
-					<ChildrenList>
-						<Action Name="" ID="{95531D9B-7574-4B33-8E1A-C0FB2AB36D9E}" ShortID="508298759">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Chatter" ID="{C83BB7B7-6F28-4719-88D6-605B479F94E5}" WorkUnitID="{D2C9257C-DAA1-4CB6-A024-0760DAE2D341}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Play_Wombat_Eating" ID="{55D5057A-1113-411A-A4E9-7DB3AC7656B1}">
-					<ChildrenList>
-						<Action Name="" ID="{3D50F485-50B3-46EC-B7D3-260AD65929D4}" ShortID="445909292">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Eating" ID="{0129590B-FE12-42F9-98A6-ACCDE79D2FB3}" WorkUnitID="{D2C9257C-DAA1-4CB6-A024-0760DAE2D341}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Stop_Wombat_Chatter" ID="{7DEA9731-9C54-4112-B1D9-E093F80F09FF}">
-					<ChildrenList>
-						<Action Name="" ID="{42052222-9D5D-4C16-808D-6B11720461B0}" ShortID="638960683">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="2"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Chatter" ID="{C83BB7B7-6F28-4719-88D6-605B479F94E5}" WorkUnitID="{D2C9257C-DAA1-4CB6-A024-0760DAE2D341}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Stop_Wombat_Eating" ID="{8CC3C9AA-AD83-4283-AB88-4CA4CDC04B0B}">
-					<ChildrenList>
-						<Action Name="" ID="{8DA219AD-963B-4BD8-9577-A4B8A40B1A94}" ShortID="957090491">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="2"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Eating" ID="{0129590B-FE12-42F9-98A6-ACCDE79D2FB3}" WorkUnitID="{D2C9257C-DAA1-4CB6-A024-0760DAE2D341}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
 				<Event Name="Play_music_flute_solo" ID="{0B97E2DA-6C0B-4F43-8668-71F9201AC9DD}">
 					<ChildrenList>
 						<Action Name="" ID="{F1932DCF-F8FC-4EAF-8292-4FB570EE82DA}" ShortID="575441697">
@@ -251,17 +201,6 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Play_Call" ID="{6F41A43F-E6B4-4A4F-AB55-B9C09140FE5A}">
-					<ChildrenList>
-						<Action Name="" ID="{EE2D63AB-A56B-4D55-BC47-2D9EE6655BDD}" ShortID="142991272">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Call" ID="{00731938-AD3F-4910-9D24-8612580B7915}" WorkUnitID="{D2C9257C-DAA1-4CB6-A024-0760DAE2D341}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
 				<Event Name="Play_GameStartSwitch" ID="{DE3C15D3-7BAA-43CA-8313-E73F1DB3B8FD}">
 					<ChildrenList>
 						<Action Name="" ID="{7C3C29FD-BEA5-49EB-B667-8410F404CBE3}" ShortID="514671125">
@@ -295,6 +234,164 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Folder Name="Wombat" ID="{067C2ECD-1C38-4EFC-89F9-CB73D0848C44}" ShortID="533193988">
+					<ChildrenList>
+						<Event Name="Play_Wombat_Chatter" ID="{0009F738-2DFE-4F22-A26F-07FD7E1CAB63}">
+							<ChildrenList>
+								<Action Name="" ID="{95531D9B-7574-4B33-8E1A-C0FB2AB36D9E}" ShortID="508298759">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Chatter" ID="{C83BB7B7-6F28-4719-88D6-605B479F94E5}" WorkUnitID="{D2C9257C-DAA1-4CB6-A024-0760DAE2D341}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Wombat_Eating" ID="{55D5057A-1113-411A-A4E9-7DB3AC7656B1}">
+							<ChildrenList>
+								<Action Name="" ID="{3D50F485-50B3-46EC-B7D3-260AD65929D4}" ShortID="445909292">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Eating" ID="{0129590B-FE12-42F9-98A6-ACCDE79D2FB3}" WorkUnitID="{D2C9257C-DAA1-4CB6-A024-0760DAE2D341}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stop_Wombat_Chatter" ID="{7DEA9731-9C54-4112-B1D9-E093F80F09FF}">
+							<ChildrenList>
+								<Action Name="" ID="{42052222-9D5D-4C16-808D-6B11720461B0}" ShortID="638960683">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Chatter" ID="{C83BB7B7-6F28-4719-88D6-605B479F94E5}" WorkUnitID="{D2C9257C-DAA1-4CB6-A024-0760DAE2D341}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stop_Wombat_Eating" ID="{8CC3C9AA-AD83-4283-AB88-4CA4CDC04B0B}">
+							<ChildrenList>
+								<Action Name="" ID="{8DA219AD-963B-4BD8-9577-A4B8A40B1A94}" ShortID="957090491">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Eating" ID="{0129590B-FE12-42F9-98A6-ACCDE79D2FB3}" WorkUnitID="{D2C9257C-DAA1-4CB6-A024-0760DAE2D341}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Cockatoo" ID="{ECF1AD2E-7015-40CF-A144-F5C70DD3C982}" ShortID="854794687">
+					<ChildrenList>
+						<Event Name="Play_Cockatoo_Shriek" ID="{7F6C3A70-DC44-451A-922B-F37D1653F2BD}">
+							<ChildrenList>
+								<Action Name="" ID="{14E35107-6741-4A64-A4D2-0F09A00F7276}" ShortID="49269269">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Shriek" ID="{D491FDB2-0116-4B9B-84E1-2EDEF380AA96}" WorkUnitID="{D2C9257C-DAA1-4CB6-A024-0760DAE2D341}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Cockatoo_Call" ID="{59A931C5-FA37-4D2F-B2C5-87C996E76F33}">
+							<ChildrenList>
+								<Action Name="" ID="{46E1F7CF-11B0-4E39-9473-95A00718B8DD}" ShortID="651046533">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Call" ID="{00731938-AD3F-4910-9D24-8612580B7915}" WorkUnitID="{D2C9257C-DAA1-4CB6-A024-0760DAE2D341}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Cockatoo_Squeal" ID="{3EF779CA-761C-440E-9282-6027A036E1AF}">
+							<ChildrenList>
+								<Action Name="" ID="{0162E2CE-6487-4C1D-A728-8CB5E2C27735}" ShortID="31916390">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Squeal" ID="{64512D95-413A-467A-8B24-CE76B0742A26}" WorkUnitID="{D2C9257C-DAA1-4CB6-A024-0760DAE2D341}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stop_Cockatoo_Shriek" ID="{4BEBE6E1-8335-4C52-A7CF-325C5CADAFF0}">
+							<ChildrenList>
+								<Action Name="" ID="{CAB4A42B-9C9E-4F01-BA17-004224A37573}" ShortID="530120478">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Shriek" ID="{D491FDB2-0116-4B9B-84E1-2EDEF380AA96}" WorkUnitID="{D2C9257C-DAA1-4CB6-A024-0760DAE2D341}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stop_Cockatoo_Squawk" ID="{C85E8715-A3AD-4D59-A590-AFEB570F38F6}">
+							<ChildrenList>
+								<Action Name="" ID="{6A27D297-CD9D-4FDA-B9E5-9EF2D4BA7FC1}" ShortID="637559877">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Squawk" ID="{DCD602AC-F5FC-4EAA-988E-31F05986C14F}" WorkUnitID="{D2C9257C-DAA1-4CB6-A024-0760DAE2D341}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Cockatoo_Squawk" ID="{34AEA375-DCBE-4097-970F-5B7025DA0AAE}">
+							<ChildrenList>
+								<Action Name="" ID="{EA132C7C-CB29-4D38-B867-451B4B507436}" ShortID="488860836">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Squawk" ID="{DCD602AC-F5FC-4EAA-988E-31F05986C14F}" WorkUnitID="{D2C9257C-DAA1-4CB6-A024-0760DAE2D341}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stop_Cockatoo_Squeal" ID="{2F1C1184-1FA4-416B-989B-7909CD4CAD63}">
+							<ChildrenList>
+								<Action Name="" ID="{249D7E09-EFE8-48F3-AFB5-D05B361DEDB1}" ShortID="271283039">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Squeal" ID="{64512D95-413A-467A-8B24-CE76B0742A26}" WorkUnitID="{D2C9257C-DAA1-4CB6-A024-0760DAE2D341}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stop_Cockatoo_Call" ID="{D02BD61E-182D-4CA0-8830-B2F4A0550698}">
+							<ChildrenList>
+								<Action Name="" ID="{871C5A9C-E449-48D3-B9C1-E3D07B1FE83C}" ShortID="70250181">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Call" ID="{00731938-AD3F-4910-9D24-8612580B7915}" WorkUnitID="{D2C9257C-DAA1-4CB6-A024-0760DAE2D341}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

@@ -109,9 +109,10 @@
 								<ActiveSource Name="cockatoo-walla_loop_02-stereo" ID="{218A68D0-AEE0-473A-B01C-5F9C0036DA98}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<RandomSequenceContainer Name="Shreik" ID="{D491FDB2-0116-4B9B-84E1-2EDEF380AA96}" ShortID="647729190">
+						<RandomSequenceContainer Name="Shriek" ID="{D491FDB2-0116-4B9B-84E1-2EDEF380AA96}" ShortID="647729190">
 							<PropertyList>
 								<Property Name="OverrideOutput" Type="bool" Value="True"/>
+								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -266,7 +267,9 @@
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="Squeal" ID="{64512D95-413A-467A-8B24-CE76B0742A26}" ShortID="703587716">
 							<PropertyList>
+								<Property Name="GlobalOrPerObject" Type="int16" Value="0"/>
 								<Property Name="OverrideOutput" Type="bool" Value="True"/>
+								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -509,6 +512,35 @@
 									</ChildrenList>
 									<ActiveSourceList>
 										<ActiveSource Name="cockatoo-squawk_01-mono" ID="{11868BA4-2134-4AE1-A2CD-B5F444233883}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="cockatoo-shriek_multiple_bg_bird_walla_02-stereo" ID="{BA890D80-FAAB-4EA2-BBD1-26C05AE2B7C7}" ShortID="225895017">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="OverrideOutput" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="AnimalSoundAtten" ID="{BADF60B6-F5A2-4FE1-83CA-79928673C0CD}" WorkUnitID="{05E83523-ED60-4EDF-8A61-DC39396E21A4}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Animal Atmos" ID="{F9987C84-9B33-44CC-A6C3-1E3CB4F52D3C}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="cockatoo-shriek_multiple_bg_bird_walla_02-stereo" ID="{2FF36459-6549-49B4-BAD6-14B623F84BEA}">
+											<Language>SFX</Language>
+											<AudioFile>Cockatoo\Stereo_Cockatoo\cockatoo-shriek_multiple_bg_bird_walla_02-stereo.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="974823757"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="cockatoo-shriek_multiple_bg_bird_walla_02-stereo" ID="{2FF36459-6549-49B4-BAD6-14B623F84BEA}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>

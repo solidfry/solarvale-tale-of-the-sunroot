@@ -189,7 +189,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 119a7399247785478749c0bc1477965c
     GuidInternal: 
-    m_lastTime: -8584798967210401457
+    m_lastTime: -8584798043420819706
     List:
     - name: Main
       guid: 861f12504c3aa24a9a453ff7870ae530
@@ -217,8 +217,25 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 5ea9686091072d41adff9786e1d6e4d5
     GuidInternal: 
-    m_lastTime: -8584798967345679952
+    m_lastTime: -8584798038582947788
     List:
+    - name: Cockatoo
+      guid: 2eadf1ec1570cf40a144f5c70dd3c982
+      id: 3188204408
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Cockatoo
+        ObjectType: 4
+        guid: 2eadf1ec1570cf40a144f5c70dd3c982
+      Path: Events\Default Work Unit\Cockatoo
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Play_Atmos_Forest_Birds_Small_Breeze_02
       guid: 073410084eeb52408baf540ac205f6d7
       id: 3626787730
@@ -287,23 +304,6 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 1.0545512
       minDuration: 1.0545512
-    - name: Play_Call
-      guid: 3fa4416fb4e64f4aab55b9c09140fe5a
-      id: 3233888350
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 5ea9686091072d41adff9786e1d6e4d5
-      - ElementName: Play_Call
-        ObjectType: 3
-        guid: 3fa4416fb4e64f4aab55b9c09140fe5a
-      Path: Events\Default Work Unit\Play_Call
-      maxAttenuation: 100
-      maxDuration: 6
-      minDuration: 2.25
     - name: Play_Camera_Snap
       guid: 0873e1034748ef45bce3419bd33a91c6
       id: 1514177854
@@ -338,6 +338,86 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.70303416
       minDuration: 0.70303416
+    - name: Play_Cockatoo_Call
+      guid: c531a95937fa2f4db2c587c996e76f33
+      id: 3623607370
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Cockatoo
+        ObjectType: 4
+        guid: 2eadf1ec1570cf40a144f5c70dd3c982
+      - ElementName: Play_Cockatoo_Call
+        ObjectType: 3
+        guid: c531a95937fa2f4db2c587c996e76f33
+      Path: Events\Default Work Unit\Cockatoo\Play_Cockatoo_Call
+      maxAttenuation: 100
+      maxDuration: 6
+      minDuration: 2.25
+    - name: Play_Cockatoo_Shriek
+      guid: 703a6c7f44dc1a45922bf37d1653f2bd
+      id: 3326430908
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Cockatoo
+        ObjectType: 4
+        guid: 2eadf1ec1570cf40a144f5c70dd3c982
+      - ElementName: Play_Cockatoo_Shriek
+        ObjectType: 3
+        guid: 703a6c7f44dc1a45922bf37d1653f2bd
+      Path: Events\Default Work Unit\Cockatoo\Play_Cockatoo_Shriek
+      maxAttenuation: 100
+      maxDuration: 4.5
+      minDuration: 1
+    - name: Play_Cockatoo_Squawk
+      guid: 75a3ae34bedc9740970f5b7025da0aae
+      id: 2334609214
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Cockatoo
+        ObjectType: 4
+        guid: 2eadf1ec1570cf40a144f5c70dd3c982
+      - ElementName: Play_Cockatoo_Squawk
+        ObjectType: 3
+        guid: 75a3ae34bedc9740970f5b7025da0aae
+      Path: Events\Default Work Unit\Cockatoo\Play_Cockatoo_Squawk
+      maxAttenuation: 100
+      maxDuration: 4.5
+      minDuration: 1.5625
+    - name: Play_Cockatoo_Squeal
+      guid: ca79f73e1c760e4492826027a036e1af
+      id: 2368752827
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Cockatoo
+        ObjectType: 4
+        guid: 2eadf1ec1570cf40a144f5c70dd3c982
+      - ElementName: Play_Cockatoo_Squeal
+        ObjectType: 3
+        guid: ca79f73e1c760e4492826027a036e1af
+      Path: Events\Default Work Unit\Cockatoo\Play_Cockatoo_Squeal
+      maxAttenuation: 100
+      maxDuration: 1.875
+      minDuration: 1
     - name: Play_GameIntro_SoundScape
       guid: e9cc52e4b317124fabb631b22c0ffb1d
       id: 3337834332
@@ -603,10 +683,13 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Wombat
+        ObjectType: 4
+        guid: cd2e7c06381cfc4e89f9cb73d0848c44
       - ElementName: Play_Wombat_Chatter
         ObjectType: 3
         guid: 38f70900fe2d224fa26f07fd7e1cab63
-      Path: Events\Default Work Unit\Play_Wombat_Chatter
+      Path: Events\Default Work Unit\Wombat\Play_Wombat_Chatter
       maxAttenuation: 100
       maxDuration: -1
       minDuration: -1
@@ -620,13 +703,96 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Wombat
+        ObjectType: 4
+        guid: cd2e7c06381cfc4e89f9cb73d0848c44
       - ElementName: Play_Wombat_Eating
         ObjectType: 3
         guid: 7a05d55513111a41a4e97db3ac7656b1
-      Path: Events\Default Work Unit\Play_Wombat_Eating
+      Path: Events\Default Work Unit\Wombat\Play_Wombat_Eating
       maxAttenuation: 100
       maxDuration: -1
       minDuration: -1
+    - name: Stop_Cockatoo_Call
+      guid: 1ed62bd02d18a04c8830b2f4a0550698
+      id: 2343930572
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Cockatoo
+        ObjectType: 4
+        guid: 2eadf1ec1570cf40a144f5c70dd3c982
+      - ElementName: Stop_Cockatoo_Call
+        ObjectType: 3
+        guid: 1ed62bd02d18a04c8830b2f4a0550698
+      Path: Events\Default Work Unit\Cockatoo\Stop_Cockatoo_Call
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_Cockatoo_Shriek
+      guid: e1e6eb4b3583524ca7cf325c5cadaff0
+      id: 3395320350
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Cockatoo
+        ObjectType: 4
+        guid: 2eadf1ec1570cf40a144f5c70dd3c982
+      - ElementName: Stop_Cockatoo_Shriek
+        ObjectType: 3
+        guid: e1e6eb4b3583524ca7cf325c5cadaff0
+      Path: Events\Default Work Unit\Cockatoo\Stop_Cockatoo_Shriek
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_Cockatoo_Squawk
+      guid: 15875ec8ada3594da590afeb570f38f6
+      id: 4096632592
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Cockatoo
+        ObjectType: 4
+        guid: 2eadf1ec1570cf40a144f5c70dd3c982
+      - ElementName: Stop_Cockatoo_Squawk
+        ObjectType: 3
+        guid: 15875ec8ada3594da590afeb570f38f6
+      Path: Events\Default Work Unit\Cockatoo\Stop_Cockatoo_Squawk
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_Cockatoo_Squeal
+      guid: 84111c2fa41f6b41989b7909cd4cad63
+      id: 37140365
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Cockatoo
+        ObjectType: 4
+        guid: 2eadf1ec1570cf40a144f5c70dd3c982
+      - ElementName: Stop_Cockatoo_Squeal
+        ObjectType: 3
+        guid: 84111c2fa41f6b41989b7909cd4cad63
+      Path: Events\Default Work Unit\Cockatoo\Stop_Cockatoo_Squeal
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_Wombat_Chatter
       guid: 3197ea7d549c1241b1d9e093f80f09ff
       id: 2441382638
@@ -637,10 +803,13 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Wombat
+        ObjectType: 4
+        guid: cd2e7c06381cfc4e89f9cb73d0848c44
       - ElementName: Stop_Wombat_Chatter
         ObjectType: 3
         guid: 3197ea7d549c1241b1d9e093f80f09ff
-      Path: Events\Default Work Unit\Stop_Wombat_Chatter
+      Path: Events\Default Work Unit\Wombat\Stop_Wombat_Chatter
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -654,13 +823,33 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Wombat
+        ObjectType: 4
+        guid: cd2e7c06381cfc4e89f9cb73d0848c44
       - ElementName: Stop_Wombat_Eating
         ObjectType: 3
         guid: aac9c38c83ad8342ab884ca4cdc04b0b
-      Path: Events\Default Work Unit\Stop_Wombat_Eating
+      Path: Events\Default Work Unit\Wombat\Stop_Wombat_Eating
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Wombat
+      guid: cd2e7c06381cfc4e89f9cb73d0848c44
+      id: 1835908889
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Wombat
+        ObjectType: 4
+        guid: cd2e7c06381cfc4e89f9cb73d0848c44
+      Path: Events\Default Work Unit\Wombat
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -814,7 +1003,7 @@ MonoBehaviour:
     m_lastTime: -8584798967210381452
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 0100000006000000070000005e000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

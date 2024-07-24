@@ -17,9 +17,12 @@ namespace AK
         static const AkUniqueID PLAY_BRANDINTRO_BIRDS = 2883217168U;
         static const AkUniqueID PLAY_BUTTON_CLICK = 1149159311U;
         static const AkUniqueID PLAY_BUTTON_HOVER = 4021863785U;
-        static const AkUniqueID PLAY_CALL = 3233888350U;
         static const AkUniqueID PLAY_CAMERA_SNAP = 1514177854U;
         static const AkUniqueID PLAY_CLICK = 311910498U;
+        static const AkUniqueID PLAY_COCKATOO_CALL = 3623607370U;
+        static const AkUniqueID PLAY_COCKATOO_SHRIEK = 3326430908U;
+        static const AkUniqueID PLAY_COCKATOO_SQUAWK = 2334609214U;
+        static const AkUniqueID PLAY_COCKATOO_SQUEAL = 2368752827U;
         static const AkUniqueID PLAY_GAMEINTRO_SOUNDSCAPE = 3337834332U;
         static const AkUniqueID PLAY_GAMESTARTSWITCH = 1179332500U;
         static const AkUniqueID PLAY_HOVER_1 = 2033520116U;
@@ -37,6 +40,10 @@ namespace AK
         static const AkUniqueID PLAY_UI__PHOTO_KEEP_01 = 959936644U;
         static const AkUniqueID PLAY_WOMBAT_CHATTER = 2355898552U;
         static const AkUniqueID PLAY_WOMBAT_EATING = 758826763U;
+        static const AkUniqueID STOP_COCKATOO_CALL = 2343930572U;
+        static const AkUniqueID STOP_COCKATOO_SHRIEK = 3395320350U;
+        static const AkUniqueID STOP_COCKATOO_SQUAWK = 4096632592U;
+        static const AkUniqueID STOP_COCKATOO_SQUEAL = 37140365U;
         static const AkUniqueID STOP_WOMBAT_CHATTER = 2441382638U;
         static const AkUniqueID STOP_WOMBAT_EATING = 3487772253U;
     } // namespace EVENTS
