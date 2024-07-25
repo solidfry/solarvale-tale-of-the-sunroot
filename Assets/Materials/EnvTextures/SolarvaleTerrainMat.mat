@@ -8,15 +8,14 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: SolarvaleTerrainMat
-  m_Shader: {fileID: 4800000, guid: 69c1f799e772cb6438f56c23efccb782, type: 3}
+  m_Shader: {fileID: 4800000, guid: fea9ee138d4a84d90a0c3f187fb3cd8a, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
-  - _TERRAIN_INSTANCED_PERPIXEL_NORMAL
-  m_InvalidKeywords:
   - DR_CEL_EXTRA_ON
   - _CELPRIMARYMODE_SINGLE
-  - _UNITYSHADOWMODE_COLOR
+  - _UNITYSHADOWMODE_MULTIPLY
+  m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
@@ -139,16 +138,16 @@ Material:
     - _DstBlend: 0
     - _EnableHeightBlend: 0
     - _EnableInstancedPerPixelNormal: 1
-    - _FlatRimEdgeSmoothness: 0.131
+    - _FlatRimEdgeSmoothness: 0.227
     - _FlatRimEnabled: 1
-    - _FlatRimLightAlign: 0.131
-    - _FlatRimSize: 0.066
+    - _FlatRimLightAlign: 0.548
+    - _FlatRimSize: 0.018
     - _FlatShadowsEnabled: 1
-    - _FlatSpecularEdgeSmoothness: 0
+    - _FlatSpecularEdgeSmoothness: 0.02
     - _FlatSpecularEnabled: 1
-    - _FlatSpecularSize: 0
-    - _Flatness: 0.716
-    - _FlatnessExtra: 0.683
+    - _FlatSpecularSize: 0.038
+    - _Flatness: 0.463
+    - _FlatnessExtra: 0.501
     - _FlatnessSecondary: 1
     - _GlossMapScale: 1
     - _Glossiness: 0.5
@@ -181,11 +180,11 @@ Material:
     - _RimEnabled: 0
     - _SecondaryColor: 1
     - _SecondaryColorEnabled: 1
-    - _SelfShadingSize: 0.699
-    - _SelfShadingSizeExtra: 0.699
+    - _SelfShadingSize: 0.962
+    - _SelfShadingSizeExtra: 0.511
     - _ShadowAmount: 0
-    - _ShadowEdgeSize: 0.006
-    - _ShadowEdgeSizeExtra: 0.225
+    - _ShadowEdgeSize: 0.23
+    - _ShadowEdgeSizeExtra: 0.024
     - _ShadowEdgeSmoothness: 0.5
     - _ShadowFalloff: 0.01
     - _Smoothness0: 0.5
@@ -197,26 +196,26 @@ Material:
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
-    - _UnityShadowMode: 2
+    - _UnityShadowMode: 1
     - _UnityShadowPower: 1
-    - _UnityShadowSharpness: 2.85
+    - _UnityShadowSharpness: 3.39
     - _ZWrite: 1
     m_Colors:
     - _BaseColor: {r: 0.17176926, g: 0.1743322, b: 0.18867919, a: 1}
     - _Color: {r: 0.17176929, g: 0.17433223, b: 0.18867922, a: 1}
-    - _ColorDim: {r: 0, g: 0.15151207, b: 0.38679248, a: 1}
+    - _ColorDim: {r: 1, g: 1, b: 1, a: 1}
     - _ColorDimCurve: {r: 0.0244749, g: 0.0244749, b: 0.20754719, a: 1}
-    - _ColorDimExtra: {r: 0.08637865, g: 0, b: 0.26415092, a: 1}
+    - _ColorDimExtra: {r: 0.8773585, g: 0.8773585, b: 0.8773585, a: 1}
     - _ColorDimSteps: {r: 1, g: 1, b: 1, a: 0.85}
     - _ColorGradient: {r: 1, g: 1, b: 1, a: 1}
     - _ColorSecondary: {r: 1, g: 0.55879205, b: 0, a: 1}
     - _ColorShadow: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _ColorShadows: {r: 0.4627451, g: 0.40784314, b: 0.41833144, a: 1}
     - _EmissionColor: {r: 4.9245777, g: 0, b: 0, a: 1}
-    - _FlatRimColor: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+    - _FlatRimColor: {r: 1.6121702, g: 1.6121702, b: 1.6121702, a: 1}
     - _FlatSpecularColor: {r: 1, g: 1, b: 1, a: 1}
     - _LightmapDirection: {r: 0, g: 1, b: 0, a: 0}
-    - _UnityShadowColor: {r: 0, g: 0.092991866, b: 0.6509434, a: 1}
+    - _UnityShadowColor: {r: 0, g: 0.06956111, b: 0.4811321, a: 1}
   m_BuildTextureStacks: []
 --- !u!114 &1658206231470023897
 MonoBehaviour:
