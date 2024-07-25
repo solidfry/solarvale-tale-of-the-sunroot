@@ -11,6 +11,8 @@ namespace Player
         [SerializeField] PlayerInput playerInput;
         [SerializeField] StarterAssetsInputs starterAssetsInputs;
         [SerializeField] GameObject playerModel;
+        
+        public static PlayerManager Instance { get; private set; }
 
         private string _currentControlsScheme;
         Observable<string> _currentControlSchemeObservable;
@@ -37,8 +39,6 @@ namespace Player
             GlobalEvents.OnSetCursorInputForLookEvent += SetCursorInputForLook;
             GlobalEvents.OnHidePlayerModelEvent += SetPlayerModelVisibility;
         }
-
-
 
         private void OnDisable()
         {
@@ -77,5 +77,7 @@ namespace Player
         void SetPlayerControlMap(string actionMap) => playerInput.SwitchCurrentActionMap(actionMap);
 
         private void SetPlayerModelVisibility(bool visibility) => playerModel.SetActive(!visibility);
+        
+        public Transform GetPlayerTransform() => playerModel.transform;
     }
 }

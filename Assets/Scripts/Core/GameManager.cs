@@ -1,5 +1,6 @@
 using Events;
 using Photography;
+using Progression;
 using UI;
 using UnityEngine;
 using Utilities;
@@ -10,9 +11,11 @@ namespace Core
     {
         [SerializeField] HudManager hudManager;
         [SerializeField] PhotoManager photoManager;
+        [SerializeField] CollectionManager collectionManager;
     
         [SerializeField] bool IsPaused = false;
         public PhotoManager PhotoManager => photoManager;
+        public CollectionManager CollectionManager => collectionManager;
 
         readonly Observable<bool> _playerCanInteract = new(true);
 
@@ -23,6 +26,9 @@ namespace Core
             
             if (photoManager is null)
                 photoManager = GetComponentInChildren<PhotoManager>();
+            
+            if (collectionManager is null)
+                collectionManager = GetComponentInChildren<CollectionManager>();
         }
         
 

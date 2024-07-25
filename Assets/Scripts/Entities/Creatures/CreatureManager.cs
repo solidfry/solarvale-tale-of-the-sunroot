@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using Events;
+using Player;
 using Unity.Collections;
 using Unity.Jobs;
 using UnityEngine;
@@ -19,14 +20,23 @@ namespace Entities.Creatures
         private NativeArray<Vector3> playerPosition;
         private NativeArray<bool> creatureStates;
         
-        
         private void Awake()
         {
-            if (player == null)
-                player = GameObject.FindWithTag("Player").transform;
             GlobalEvents.OnRegisterCreatureEvent += AddCreature;
         }
-        
+
+        private void Start() => GetPlayer();
+
+        private void GetPlayer()
+        {
+            if (player == null)
+            {
+                player = FindObjectOfType<PlayerManager>().GetPlayerTransform();
+            }
+        }
+
+        private void OnValidate() => GetPlayer();
+
         public static float DistanceToPlayer(Transform transform, Transform player)
         {
             return Vector3.Distance(transform.position, player.position);
