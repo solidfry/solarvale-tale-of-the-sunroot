@@ -46,11 +46,9 @@ namespace Photography
         
         private RaycastHit[] results = new RaycastHit[5];
 
+        
+        private const int DesiredPhotoSize = 800; // Desired photo width and height
 
-
-        // Desired photo size
-        private const int PhotoWidth = 800; 
-        private const int PhotoHeight = 800;
 
         private void Awake()
         {
@@ -106,19 +104,23 @@ namespace Photography
         {
             yield return new WaitForEndOfFrame();
 
+            int screenMinDimensions = Mathf.Min(Screen.width, Screen.height);
             // Calculate the center position of the screen
+            int photoSize = Mathf.Min(DesiredPhotoSize, screenMinDimensions);
             int centerX = Screen.width / 2;
             int centerY = Screen.height / 2;
-
+            
+            var floor = Mathf.FloorToInt(photoSize / 2f);
+            
             // Calculate the region to read
             var regionToRead = new Rect(
-                centerX - PhotoWidth / 2,
-                centerY - PhotoHeight / 2,
-                PhotoWidth,
-                PhotoHeight
+                centerX - floor,
+                centerY - floor,
+                photoSize,
+                photoSize
             );
 
-            _screenCapture = new Texture2D(PhotoWidth, PhotoHeight, TextureFormat.RGBA32, false);
+            _screenCapture = new Texture2D(photoSize, photoSize, TextureFormat.RGBA32, false);
             _screenCapture.ReadPixels(regionToRead, 0, 0, false);
             _screenCapture.Apply();
 
