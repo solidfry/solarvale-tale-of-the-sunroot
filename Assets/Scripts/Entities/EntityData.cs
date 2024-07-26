@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using JetBrains.Annotations;
+using UnityEngine;
 
 namespace Entities
 {
@@ -8,6 +9,7 @@ namespace Entities
         [SerializeField] private Sprite avatar;
         [field: SerializeField] public string Name { get; private set; }
         [SerializeField] private EntityType entityType;
+        
         public static EntityData Empty
         {
             get
@@ -21,6 +23,6 @@ namespace Entities
 
         public virtual EntityType EntityType => entityType;
         
-        public Sprite Avatar => avatar;
+        [CanBeNull] public Sprite Avatar => avatar;
     }
 }
