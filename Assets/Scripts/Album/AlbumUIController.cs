@@ -3,21 +3,23 @@ using AlbumSystem;
 using Core;
 using Photography;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace Album
 {
     public class AlbumUIController : MonoBehaviour
     {
-        [SerializeField] SpriteSetter spriteSetterPrefab;
+        [SerializeField]
         PhotoManager _photoManager;
-        [SerializeField] GridLayoutGroup gridLayout;
-        Dictionary<SpriteSetter, PhotoData> photoDictionary = new ();
+        [SerializeField] SpriteSetter spriteSetterPrefab;
+        [FormerlySerializedAs("gridLayout")] [SerializeField] GridLayoutGroup gridLayoutGroup;
+        readonly Dictionary<SpriteSetter, PhotoData> _photoDictionary = new ();
 
         private void Awake()
         {
-            if (gridLayout is null)
-                gridLayout = GetComponentInChildren<GridLayoutGroup>();
+            if (gridLayoutGroup is null)
+                gridLayoutGroup = GetComponentInChildren<GridLayoutGroup>();
         }
 
         private void Start()
@@ -47,14 +49,14 @@ namespace Album
             }
             
 
-            if (photoDictionary.ContainsValue(photoData))
+            if (_photoDictionary.ContainsValue(photoData))
             {
                 Debug.LogWarning("Photo already exists in album");
                 return;
             }
             
-            SpriteSetter photo = Instantiate(spriteSetterPrefab, gridLayout.transform);
-            photoDictionary.Add(photo, photoData);
+            SpriteSetter photo = Instantiate(spriteSetterPrefab, gridLayoutGroup.transform);
+            _photoDictionary.Add(photo, photoData);
             photo.SetSprite(SpriteFromTexture(photoData.Photo));
         }
         
@@ -65,19 +67,19 @@ namespace Album
             foreach (var photo in photoData)
             {
                 AddAlbumPhoto(photo);
-                Debug.Log("Photo added to album");
+                // Debug.Log("Photo added to album");
             }
 
-            Debug.Log(null == photoDictionary ? "Photo Dictionary is null" : "Photo Dictionary is not null");
+            // Debug.Log(null == _photoDictionary ? "Photo Dictionary is null" : "Photo Dictionary is not null");
         }
         
         public void ClearPhotos()
         {
-            foreach (var photo in photoDictionary.Keys)
+            foreach (var photo in _photoDictionary.Keys)
             {
                 Destroy(photo.gameObject);
             }
-            photoDictionary.Clear();
+            _photoDictionary.Clear();
         }
         
         

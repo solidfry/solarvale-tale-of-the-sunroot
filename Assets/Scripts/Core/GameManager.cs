@@ -29,6 +29,8 @@ namespace Core
             
             if (collectionManager is null)
                 collectionManager = GetComponentInChildren<CollectionManager>();
+            
+            // CollectionManager.SetGameManager(this);
         }
         
 

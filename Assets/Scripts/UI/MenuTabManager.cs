@@ -53,7 +53,12 @@ namespace UI
             if (startAllMenusClosed)
             {
                 CloseAllMenus();
-            } 
+            }
+            else
+            {
+                CloseAllMenus();
+                OpenMenu(0);
+            }
         }
         
         public void OpenMenu(int index)

@@ -62,11 +62,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc1e21b09c3944346ba10883652c720b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collectionManager: {fileID: 0}
   collectionItemPrefab: {fileID: 3097464496471702486, guid: 35710d9ddb37d4e438785f994d73b9bd,
     type: 3}
-  collectionItemParent: {fileID: 7413944572914771405}
-  entityList: {fileID: 11400000, guid: 64a7da38435a46a43bb888d370d3ad41, type: 2}
-  collectionItems: []
+  gridLayoutGroup: {fileID: 7413944572914771405}
 --- !u!1001 &6232985129155486776
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -342,10 +341,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 0
-    m_Right: 0
-    m_Top: 0
-    m_Bottom: 0
+    m_Left: 1
+    m_Right: 1
+    m_Top: 1
+    m_Bottom: 1
   m_ChildAlignment: 0
   m_StartCorner: 0
   m_StartAxis: 0

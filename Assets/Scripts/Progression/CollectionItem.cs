@@ -13,10 +13,10 @@ namespace Progression
         [SerializeField] TMP_Text titleText;
         [SerializeField] bool isDiscovered = false;
 
-        bool IsDiscovered
+        public bool IsDiscovered
         {
             get => isDiscovered;
-            set
+            private set
             {
                 isDiscovered = value;
                 titleObject.SetActive(value);
@@ -31,12 +31,16 @@ namespace Progression
                 // SetGraphic(entityData.Graphic);
                 // SetDiscovered(entityData.IsDiscovered);
                 SetName(entityData.Name);
+                if (entityData.Avatar != null)
+                    SetGraphic(entityData.Avatar);
             }
-        
-            SetDiscovered(false);
         }
-
-    
+        
+        public EntityData GetEntityData()
+        {
+            return entityData;
+        }
+        
         public void SetGraphic(Sprite sprite)
         {
             graphic.sprite = sprite;
@@ -51,21 +55,7 @@ namespace Progression
         {
             entityData = data;
         }
-    
-        [ContextMenu("Set Discovered True")]
-        public void SetDiscoveredTrue()
-        {
-            IsDiscovered = true;
-        }
-    
-        [ContextMenu("Set Discovered False")]
-        public void SetDiscoveredFalse()
-        {
-            IsDiscovered = false;
-        }
-    
-        public string EntityName => entityData.Name;
-    
+        
         void SetName(string name)
         {
             if (titleText is null)

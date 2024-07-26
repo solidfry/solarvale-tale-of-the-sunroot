@@ -1,7 +1,7 @@
 using System.Collections.Generic;
+using System.Linq;
+using Core;
 using Entities;
-using Events;
-using Photography;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,53 +9,101 @@ namespace Progression
 {
     public class CollectionUIController : MonoBehaviour
     {
+        [SerializeField] private CollectionManager collectionManager;
         [Header("UI Elements")]
-        [SerializeField] CollectionItem collectionItemPrefab;
-        [SerializeField] GridLayoutGroup collectionItemParent;
-    
-        [Header("Data")]
-        [SerializeField] EntityList entityList;
-    
-        [SerializeField] List<CollectionItem> collectionItems = new ();
-    
-        private void Start() => LoadAll();
+        [SerializeField] private CollectionItem collectionItemPrefab;
+        [SerializeField] private GridLayoutGroup gridLayoutGroup;
+
+        private Dictionary<EntityData, CollectionItem> _entitiesCollectionItems = new();
+        private bool _isFirstLoad = true;
+
+        private void Awake()
+        {
+            gridLayoutGroup ??= GetComponentInChildren<GridLayoutGroup>();
+            collectionManager = FindObjectOfType<GameManager>()?.CollectionManager;
+
+            if (collectionManager != null)
+            {
+                SubscribeToCollectionManagerEvents();
+            }
+        }
 
         private void OnEnable()
         {
-            GlobalEvents.OnPhotoKeptEvent += CheckDiscovery;
-        }
-    
-        private void OnDisable()
-        {
-            GlobalEvents.OnPhotoKeptEvent -= CheckDiscovery;
-        }
-
-        private void CheckDiscovery(PhotoData photo)
-        {
-            if (photo.EntitiesInPhoto == null) return;
-            Debug.Log("Checking discovery" + photo.EntitiesInPhoto);
-            foreach (string entityString in photo.EntitiesInPhoto)
+            if (_isFirstLoad)
             {
-                if (EntityExists(entityString))
-                {
-                    collectionItems.Find(item => item.EntityName == entityString).SetDiscovered(true);
-                    Debug.Log("Entity exists: " + entityString);
-                }
+                Debug.Log($"Initial collection manager discoveries: {collectionManager?.GetDiscoveries().Count}");
+                LoadAll(collectionManager?.GetDiscoveries());
+                UpdateOverlap();
+                SortElementsByDiscovered();
+                _isFirstLoad = false;
+            }
+            else if (collectionManager?.HasDictionaryChanged == true && !_isFirstLoad)
+            {
+                Debug.Log("Dictionary has changed and was updated from OnEnable");
+                UpdateOverlap();
+                SortElementsByDiscovered();
             }
         }
-    
-        private bool EntityExists(string entityString) => entityList.Entities.Exists(entity => entity.Name == entityString);
-    
-        private void LoadAll()
+        
+        private void SortElementsByDiscovered()
         {
-            if (entityList is null) return;
-            entityList.Entities.ForEach(AddEntityToCollection);
+            var discoveredItems = _entitiesCollectionItems.Values.Where(item => item.IsDiscovered).OrderByDescending(item => item.GetEntityData().Name).ToList();
+            var undiscoveredItems = _entitiesCollectionItems.Values.Where(item => !item.IsDiscovered).ToList();
+
+            foreach (var item in discoveredItems)
+            {
+                item.transform.SetAsFirstSibling();
+            }
+
+            foreach (var item in undiscoveredItems)
+            {
+                item.transform.SetAsLastSibling();
+            }
         }
 
-        private void AddEntityToCollection(EntityData entity)
+        private void SubscribeToCollectionManagerEvents()
         {
-            CollectionItem collectionItem = Instantiate(collectionItemPrefab, collectionItemParent.transform);
-            collectionItem.SetEntityData(entity);
+            collectionManager.OnEntityListLoaded += LoadAll;
+            collectionManager.OnEntityDiscovered += UpdateEntityUI;
+        }
+
+        private void UpdateEntityUI(EntityData entity)
+        {
+            if (!_entitiesCollectionItems.TryGetValue(entity, out var collectionItem) || collectionItem.IsDiscovered) return;
+            collectionItem.SetDiscovered(true);
+            Debug.Log($"Updated entity UI for {entity.Name} to discovered");
+        }
+
+        private void LoadAll(Dictionary<EntityData, bool> entities)
+        {
+            Debug.Log("Loading all entities");
+            if (entities == null) return;
+
+            _entitiesCollectionItems = entities.Keys.ToDictionary(
+                entity => entity,
+                entity =>
+                {
+                    var collectionItem = Instantiate(collectionItemPrefab, gridLayoutGroup.transform);
+                    collectionItem.SetEntityData(entity);
+                    collectionItem.SetDiscovered(entities[entity]);
+                    Debug.Log($"Added entity to collection: {entity.Name} and is discovered: {entities[entity]}");
+                    return collectionItem;
+                });
+        }
+
+        private void UpdateOverlap()
+        {
+            var dict = collectionManager?.GetDiscoveries();
+            if (dict == null) return;
+
+            var entitiesToUpdate = dict.Where(kv => kv.Value)
+                                       .Select(kv => kv.Key)
+                                       .ToList();
+
+            entitiesToUpdate.ForEach(UpdateEntityUI);
+            collectionManager.DictionaryUpdated();
+            Debug.Log("Updated overlap");
         }
     }
 }

@@ -188,7 +188,7 @@ namespace Photography
                     collidersHit[i] = results[i].collider;
                 }
                 
-                Debug.Log("Colliders hit: " + collidersHit.Length + " Size was " + size);
+                // Debug.Log("Colliders hit: " + collidersHit.Length + " Size was " + size);
                 return collidersHit;
             }
             else
@@ -199,33 +199,42 @@ namespace Photography
 
         private void HandlePhotographyRayForQuests()
         {
-            var hit = GetRayCastHit();
-            var entityData = GetEntityDataFromRayCastHit(hit);
-            onPhotoTaken?.Invoke(entityData);
+            var hits = GetRayCastHit();
+            if (hits != null)
+            {
+                var entities = GetEntityDataFromRayCastHit(hits);
+                onPhotoTaken?.Invoke(entities);
+            }
+            else
+            {
+                var entities = new[]
+                {
+                    EntityData.Empty
+                };
+                onPhotoTaken?.Invoke(entities);
+            }
         }
 
         private EntityData[] GetEntityDataFromRayCastHit(Collider[] hits)
         {
             previousEntities = currentEntities;
             
+            if (hits == null) return null;
+            
             foreach (var hit in hits)
             {
                 if (hit.TryGetComponent(out Entity entity))
                 {
-                    currentEntities.Add(entity?.GetEntityData);
+                    if (entity != null)
+                    {
+                        currentEntities.Add(entity.GetEntityData);
+                    }
                 }
                 
                 return currentEntities.ToArray();
             }
             
             return null;
-            
-            // if (hits.collider != null && hits.collider.TryGetComponent(out Entity entity))
-            // {
-            //     // currentEntities = entity?.GetEntityData;
-            //     return entity?.GetEntityData;
-            // }
-            // return null;
         }
 
         private static void HandleOnRemovePhotoGlobalEvents()
