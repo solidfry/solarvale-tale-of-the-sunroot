@@ -53,7 +53,12 @@ namespace UI
             if (startAllMenusClosed)
             {
                 CloseAllMenus();
-            } 
+            }
+            else
+            {
+                CloseAllMenus();
+                OpenMenu(0);
+            }
         }
         
         public void OpenMenu(int index)
@@ -106,7 +111,7 @@ namespace UI
 
         void FadeOut(CanvasGroup canvasGroup)
         {
-            Debug.Log($"Fading out: {canvasGroup.gameObject.name}");
+            // Debug.Log($"Fading out: {canvasGroup.gameObject.name}");
             if (_fadeOutTween != null && _fadeOutTween.IsActive())
                 _fadeOutTween.Kill();
             _fadeOutTween = canvasGroup.DOFade(0, fadeDuration).OnComplete(() =>
@@ -114,7 +119,7 @@ namespace UI
                 canvasGroup.interactable = false;
                 canvasGroup.blocksRaycasts = false;
                 canvasGroup.gameObject.SetActive(false);
-                Debug.Log("Fade out complete");
+                // Debug.Log("Fade out complete");
             }).SetUpdate(isIndependentUpdate: true);
         }
 
@@ -127,7 +132,7 @@ namespace UI
             {
                 canvasGroup.interactable = true;
                 canvasGroup.blocksRaycasts = true;
-                Debug.Log("Fade in complete");
+                // Debug.Log("Fade in complete");
                 SetInitialTarget();
                 if (canvasGroup.alpha >= 1) return;
                 canvasGroup.alpha = 1;

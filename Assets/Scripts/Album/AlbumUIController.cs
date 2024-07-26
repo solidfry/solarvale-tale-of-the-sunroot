@@ -1,23 +1,25 @@
 using System.Collections.Generic;
+using AlbumSystem;
 using Core;
 using Photography;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
-namespace AlbumSystem
+namespace Album
 {
-    public class AlbumManager : MonoBehaviour
+    public class AlbumUIController : MonoBehaviour
     {
-        
-        [SerializeField] AlbumPhoto albumPhotoPrefab;
+        [SerializeField]
         PhotoManager _photoManager;
-        [SerializeField] GridLayoutGroup gridLayout;
-        Dictionary<AlbumPhoto, PhotoData> photoDictionary = new ();
+        [SerializeField] SpriteSetter spriteSetterPrefab;
+        [FormerlySerializedAs("gridLayout")] [SerializeField] GridLayoutGroup gridLayoutGroup;
+        readonly Dictionary<SpriteSetter, PhotoData> _photoDictionary = new ();
 
         private void Awake()
         {
-            if (gridLayout is null)
-                gridLayout = GetComponentInChildren<GridLayoutGroup>();
+            if (gridLayoutGroup is null)
+                gridLayoutGroup = GetComponentInChildren<GridLayoutGroup>();
         }
 
         private void Start()
@@ -40,21 +42,21 @@ namespace AlbumSystem
         void AddAlbumPhoto(PhotoData photoData)
         {
             
-            if (albumPhotoPrefab is null)
+            if (spriteSetterPrefab is null)
             {
                 Debug.LogError("AlbumPhoto prefab is null");
                 return;
             }
             
 
-            if (photoDictionary.ContainsValue(photoData))
+            if (_photoDictionary.ContainsValue(photoData))
             {
                 Debug.LogWarning("Photo already exists in album");
                 return;
             }
             
-            AlbumPhoto photo = Instantiate(albumPhotoPrefab, gridLayout.transform);
-            photoDictionary.Add(photo, photoData);
+            SpriteSetter photo = Instantiate(spriteSetterPrefab, gridLayoutGroup.transform);
+            _photoDictionary.Add(photo, photoData);
             photo.SetSprite(SpriteFromTexture(photoData.Photo));
         }
         
@@ -65,19 +67,19 @@ namespace AlbumSystem
             foreach (var photo in photoData)
             {
                 AddAlbumPhoto(photo);
-                Debug.Log("Photo added to album");
+                // Debug.Log("Photo added to album");
             }
 
-            Debug.Log(null == photoDictionary ? "Photo Dictionary is null" : "Photo Dictionary is not null");
+            // Debug.Log(null == _photoDictionary ? "Photo Dictionary is null" : "Photo Dictionary is not null");
         }
         
         public void ClearPhotos()
         {
-            foreach (var photo in photoDictionary.Keys)
+            foreach (var photo in _photoDictionary.Keys)
             {
                 Destroy(photo.gameObject);
             }
-            photoDictionary.Clear();
+            _photoDictionary.Clear();
         }
         
         

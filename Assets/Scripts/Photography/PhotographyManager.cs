@@ -1,15 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using CameraSystem;
 using Entities;
+using Events;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
-using Events;
-using Photography;
-using UnityEngine.Events;
-using UnityEngine.Serialization;
 
-namespace CameraSystem
+namespace Photography
 {
     public class PhotographyManager : MonoBehaviour
     {
@@ -24,8 +24,7 @@ namespace CameraSystem
 
         [Header("On Photo Taken Event Handling")]
         [Space(10)]
-        public UnityEvent<EntityData> onPhotoTaken;
-        // public AK.Wwise.Event onPhotoTakenWiseEvent;
+        public UnityEvent<EntityData[]> onPhotoTaken;
 
         [Header("RayCast Settings")]
         [SerializeField] private float rayCastDistance = 300f;
@@ -35,14 +34,17 @@ namespace CameraSystem
         [SerializeField] private PhotographyHUDController photographyHUDController;
         
         [SerializeField] private bool IsInCameraMode;
-        [FormerlySerializedAs("_viewingPhoto")] [SerializeField] private bool viewingPhoto;
         
         private Camera _mainCamera;
         private Texture2D _screenCapture;
         private Transform albumParent;
         
-        EntityData currentEntityData;
-        EntityData previousEntityData;
+        List<EntityData> currentEntities = new();
+        List<EntityData> previousEntities = new();
+
+        private Collider[] collidersHit = new Collider[5];
+        
+        private RaycastHit[] results = new RaycastHit[5];
 
 
 
@@ -140,7 +142,6 @@ namespace CameraSystem
 
         private void RemovePhoto()
         {
-            viewingPhoto = false;
             photoFrame.SetActive(false);
             photoCanvas.gameObject.SetActive(false);
             photoDisplayArea.sprite = null;
@@ -154,14 +155,11 @@ namespace CameraSystem
         {
             if (_screenCapture != null)
             {
-                if (currentEntityData != null)
+                if (currentEntities != null)
                 {
-                    PhotoData photoData = new PhotoData(_screenCapture, new List<EntityData>
-                    {
-                        currentEntityData
-                    });
+                    PhotoData photoData = new PhotoData(_screenCapture, currentEntities);
                     GlobalEvents.OnPhotoKeptEvent?.Invoke(photoData);
-
+                    currentEntities.Clear();
                 }
                 else
                 {
@@ -178,15 +176,20 @@ namespace CameraSystem
             RemovePhoto();
         }
 
-        private RaycastHit GetRayCastHit()
+        private Collider[] GetRayCastHit()
         {
             Ray ray = _mainCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0)); // Create a ray from the center of the screen
-            RaycastHit hit;
-            bool hitSomething = Physics.BoxCast(ray.origin, Vector3.one * rayCastBoxSize, ray.direction, out hit, Quaternion.identity, rayCastDistance,  ~ignoreLayerMask);
-
-            if (hitSomething)
+            var size = Physics.BoxCastNonAlloc(ray.origin, Vector3.one * rayCastBoxSize, ray.direction, results, Quaternion.identity, rayCastDistance, ~ignoreLayerMask);
+            if (results.Length > 0 && results[0].collider != null)
             {
-                return hit; // Return the hit if something was detected
+                collidersHit = new Collider[5];
+                for (int i = 0; i < size; i++)
+                {
+                    collidersHit[i] = results[i].collider;
+                }
+                
+                // Debug.Log("Colliders hit: " + collidersHit.Length + " Size was " + size);
+                return collidersHit;
             }
             else
             {
@@ -196,19 +199,41 @@ namespace CameraSystem
 
         private void HandlePhotographyRayForQuests()
         {
-            var hit = GetRayCastHit();
-            var entityData = GetEntityDataFromRayCastHit(hit);
-            onPhotoTaken?.Invoke(entityData);
+            var hits = GetRayCastHit();
+            if (hits != null)
+            {
+                var entities = GetEntityDataFromRayCastHit(hits);
+                onPhotoTaken?.Invoke(entities);
+            }
+            else
+            {
+                var entities = new[]
+                {
+                    EntityData.Empty
+                };
+                onPhotoTaken?.Invoke(entities);
+            }
         }
 
-        private EntityData GetEntityDataFromRayCastHit(RaycastHit hit)
+        private EntityData[] GetEntityDataFromRayCastHit(Collider[] hits)
         {
-            previousEntityData = currentEntityData;
-            if (hit.collider != null && hit.collider.TryGetComponent(out IEntity<EntityData> entity))
+            previousEntities = currentEntities;
+            
+            if (hits == null) return null;
+            
+            foreach (var hit in hits)
             {
-                currentEntityData = entity?.GetEntityData;
-                return entity?.GetEntityData;
+                if (hit.TryGetComponent(out Entity entity))
+                {
+                    if (entity != null)
+                    {
+                        currentEntities.Add(entity.GetEntityData);
+                    }
+                }
+                
+                return currentEntities.ToArray();
             }
+            
             return null;
         }
 
@@ -231,20 +256,21 @@ namespace CameraSystem
 
         private void OnDrawGizmos()
         {
-            if (IsInCameraMode)
-            {
-                var hit = GetRayCastHit();
+            if (!IsInCameraMode) return;
+            
+            var hit = GetRayCastHit();
+                
+            Ray ray = _mainCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
+            Gizmos.color = Color.red;
+            Gizmos.DrawRay(ray.origin, ray.direction * rayCastDistance);
+            
+            if (hit == null) return;
 
-                Gizmos.color = Color.red;
-                if (hit.collider != null)
+            foreach (var collider in hit)
+            {
+                if (collider != null)
                 {
-                    Gizmos.DrawRay(hit.point, hit.normal * rayCastDistance);
-                    Gizmos.DrawCube(hit.point, Vector3.one * rayCastBoxSize);
-                }
-                else
-                {
-                    Ray ray = _mainCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
-                    Gizmos.DrawRay(ray.origin, ray.direction * rayCastDistance);
+                    Gizmos.DrawCube(collider.transform.position, Vector3.one * rayCastBoxSize);
                 }
             }
         }

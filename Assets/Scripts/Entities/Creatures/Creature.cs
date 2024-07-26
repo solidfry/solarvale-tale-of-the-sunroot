@@ -11,27 +11,32 @@ using UnityEngine.Events;
 namespace Entities.Creatures
 {
     [RequireComponent(typeof(NavMeshAgent), typeof(Rigidbody), typeof(CapsuleCollider))]
-    public class Creature : MonoBehaviour, IEntity<CreatureEntityData>
+    public class Creature : Entity
     {
-        [SerializeField] CreatureEntityData entityData;
+        public new CreatureEntityData GetEntityData => (CreatureEntityData)base.GetEntityData;
         [SerializeField] Rigidbody rigidBody;
         [SerializeField] NavMeshAgent agent;
         [SerializeField] CapsuleCollider capsule;
         [SerializeField] Animator animator;
-        [SerializeField] public GameObject model;
-        
+        [SerializeField] GameObject model;
         [field: SerializeField] public float CurrentSightRange { get; set; } = 5;
         [field: SerializeField] public float CurrentSightRangeMultiplier { get; set; } = 1;
         [field: SerializeField] public int CurrentMultiplierLimit { get; private set; } = 20;
         
-        CreatureStatsData _stats;
         [SerializeField] CreatureScriptableBehaviourTree behaviourTree;
+        
+        CreatureStatsData _stats;
+
+        #region Component Getters
+
         public CreatureScriptableBehaviourTree GetBehaviourTree => behaviourTree ??= GetComponent<CreatureScriptableBehaviourTree>();
         public CreatureStatsData GetStats => _stats;
         public NavMeshAgent GetAgent() => agent;
         public Animator GetAnimator() => animator;
         public Rigidbody GetRigidbody() => rigidBody;
         public GameObject GetModel() => model;
+
+        #endregion
 
         #region Events
 
@@ -196,7 +201,7 @@ namespace Entities.Creatures
         
         public void Swim(Vector3 position, SwimmerMovementDefinition swimmer)
         {
-            
+            // Swim logic
         }
         
         public bool IsFlying { get; private set; } = false;
@@ -269,6 +274,5 @@ namespace Entities.Creatures
             CurrentSightRange = _stats.SightRange;
         }
 
-        public CreatureEntityData GetEntityData => entityData;
     }
 }

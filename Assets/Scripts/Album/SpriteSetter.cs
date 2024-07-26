@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 namespace AlbumSystem
 {
-    public class AlbumPhoto : MonoBehaviour
+    public class SpriteSetter : MonoBehaviour
     {
         [SerializeField] Image photo;
         

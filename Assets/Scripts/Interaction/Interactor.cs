@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using Events;
+using Player;
 using UnityEngine;
 
 namespace Interaction
@@ -9,6 +10,7 @@ namespace Interaction
     /// </summary>
     public class Interactor : MonoBehaviour
     {
+        [SerializeField] Transform interactionRayOrigin;
         private IInteractable _currentInteractable;
         [SerializeField] LayerMask interactableLayers;
         [SerializeField] Vector3 rayOffset;
@@ -19,6 +21,12 @@ namespace Interaction
         private Coroutine _interactNullCooldown;
         private bool _isInteracting;
         [SerializeField] bool canInteract = true;
+
+        private void Start()
+        {
+            if (interactionRayOrigin == null)
+                interactionRayOrigin = GetComponentInParent<PlayerManager>().GetPlayerTransform();
+        }
 
         private void FixedUpdate() => CheckInteractable();
 
@@ -50,7 +58,7 @@ namespace Interaction
             HandleCast();
         }
 
-        private Collider[] _hits = new Collider[10]; // Adjust the size as needed
+        private Collider[] _hits = new Collider[1]; // Adjust the size as needed
 
         private void HandleCast()
         {
@@ -89,8 +97,7 @@ namespace Interaction
                 }
             }
         }
-
-
+        
         private IEnumerator SetInteractableNull()
         {
             _isInteracting = true;
@@ -112,7 +119,7 @@ namespace Interaction
             _currentInteractable.Interact();
         }
 
-        private Vector3 GetRayOrigin() => transform.position + rayOffset;
+        private Vector3 GetRayOrigin() => interactionRayOrigin.position;
         
         void ClearInteractable()
         {
@@ -124,12 +131,12 @@ namespace Interaction
         {
             if (!showDebugRay) return;
             Gizmos.color = Color.red;
-            Gizmos.DrawWireSphere(GetRayOrigin(), raycastRadius);
+            Gizmos.DrawWireSphere(GetRayOrigin() + rayOffset, raycastRadius);
 
             if (_currentInteractable != null)
             {
                 Gizmos.color = Color.green;
-                Gizmos.DrawWireSphere(GetRayOrigin(), raycastRadius);
+                Gizmos.DrawWireSphere(GetRayOrigin() + rayOffset, raycastRadius);
             }
         }
     }

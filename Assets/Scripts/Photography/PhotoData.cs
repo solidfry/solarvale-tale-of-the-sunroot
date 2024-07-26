@@ -31,6 +31,8 @@ namespace Photography
                 ConvertEntitiesToString(entities);
             }
         }
+        
+        public List<string> EntitiesInPhoto => entitiesInPhoto;
 
         private void ConvertEntitiesToString(List<EntityData> entities = null)
         {
