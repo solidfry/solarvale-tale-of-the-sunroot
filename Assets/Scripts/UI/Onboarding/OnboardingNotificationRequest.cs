@@ -7,15 +7,25 @@ namespace UI.Onboarding
     [Serializable]
     public struct OnboardingNotificationRequest
     {
-        public Vector2 Position { get; }
-        public float Width { get; }
-        public float Height { get; }
+        [field: SerializeField] public Vector2 Position { get; private set; }
+        [field: SerializeField] public float Width { get; private set;  }
+        [field: SerializeField] public float Height { get; private set;  }
+        [field: SerializeField] [Tooltip("This controls the size of the object when it spawns and how it animates")] 
+        public float SizeOffset { get; private set;  }
+        [field: SerializeField, ColorUsage(true, true)] 
+        public Color PulseColor { get; private set; }
         
-        public OnboardingNotificationRequest(Vector2 position, float width, float height)
+        public static OnboardingNotificationRequest Create(Vector2 position, float width, float height, float sizeOffset, Color pulseColor)
         {
-            Position = position;
-            Width = width;
-            Height = height;
+            return new OnboardingNotificationRequest
+            {
+                Position = position,
+                Width = width,
+                Height = height,
+                SizeOffset = sizeOffset,
+                PulseColor = pulseColor
+            };
         }
+        
     }
 }

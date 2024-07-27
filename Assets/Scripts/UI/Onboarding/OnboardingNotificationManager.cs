@@ -7,9 +7,10 @@ namespace UI.Onboarding
     public class OnboardingNotificationManager : MonoBehaviour
     {
         [SerializeField] Canvas onboardingCanvas;
-        [SerializeField] RectTransform onboardingNotificationPrefab;
-        Queue<OnboardingNotificationRequest> onboardingQueue = new();
+        [SerializeField] OnboardingNotification onboardingNotificationPrefab;
+        readonly Queue<OnboardingNotificationRequest> _onboardingQueue = new();
         
+        OnboardingNotification _currentNotification;
         
         private void OnEnable()
         {
@@ -23,8 +24,8 @@ namespace UI.Onboarding
 
         private void OnOnboardingRequest(OnboardingNotificationRequest req)
         {
-            onboardingQueue.Enqueue(req);
-            if (onboardingQueue.Count == 1)
+            _onboardingQueue.Enqueue(req);
+            if (_onboardingQueue.Count == 1)
             {
                 ShowOnboardingNotification();
             }
@@ -32,10 +33,21 @@ namespace UI.Onboarding
 
         private void ShowOnboardingNotification()
         {
-            var notification = onboardingQueue.Peek();
-            var onboardingNotification = Instantiate(onboardingNotificationPrefab, onboardingCanvas.transform);
-            onboardingNotification.anchoredPosition = notification.Position;
-            onboardingNotification.sizeDelta = new Vector2(notification.Width, notification.Height);
+            var notification = _onboardingQueue.Peek();
+            _currentNotification = Instantiate(onboardingNotificationPrefab, onboardingCanvas.transform);
+            _currentNotification.Initialise(notification);
+            _currentNotification.OnNotificationComplete += OnNotificationComplete;
+        }
+
+        private void OnNotificationComplete()
+        {
+            _currentNotification.OnNotificationComplete -= OnNotificationComplete;
+            Destroy(_currentNotification.gameObject);
+            _onboardingQueue.Dequeue();
+            if (_onboardingQueue.Count > 0)
+            {
+                ShowOnboardingNotification();
+            }
         }
     }
 }
