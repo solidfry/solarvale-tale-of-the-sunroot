@@ -22,10 +22,14 @@ namespace Interaction
         private bool _isInteracting;
         [SerializeField] bool canInteract = true;
 
-        private void Start()
+        private void Start() => GetPlayerTransform();
+
+        private void OnValidate() => GetPlayerTransform();
+
+        private void GetPlayerTransform()
         {
-            if (interactionRayOrigin == null)
-                interactionRayOrigin = GetComponentInParent<PlayerManager>().GetPlayerTransform();
+            if (interactionRayOrigin != null) return;
+            interactionRayOrigin = GetComponentInParent<PlayerManager>().GetPlayerTransform();
         }
 
         private void FixedUpdate() => CheckInteractable();
@@ -119,7 +123,7 @@ namespace Interaction
             _currentInteractable.Interact();
         }
 
-        private Vector3 GetRayOrigin() => interactionRayOrigin.position;
+        private Vector3 GetRayOrigin() => interactionRayOrigin.position + rayOffset + interactionRayOrigin.forward;
         
         void ClearInteractable()
         {
@@ -131,12 +135,12 @@ namespace Interaction
         {
             if (!showDebugRay) return;
             Gizmos.color = Color.red;
-            Gizmos.DrawWireSphere(GetRayOrigin() + rayOffset, raycastRadius);
+            Gizmos.DrawWireSphere(GetRayOrigin(), raycastRadius);
 
             if (_currentInteractable != null)
             {
                 Gizmos.color = Color.green;
-                Gizmos.DrawWireSphere(GetRayOrigin() + rayOffset, raycastRadius);
+                Gizmos.DrawWireSphere(GetRayOrigin(), raycastRadius);
             }
         }
     }

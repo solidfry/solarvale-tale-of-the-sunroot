@@ -25,7 +25,10 @@ namespace Entities.Creatures
             GlobalEvents.OnRegisterCreatureEvent += AddCreature;
         }
 
-        private void Start() => GetPlayer();
+        private void Start()
+        {
+            GetPlayer();
+        }
 
         private void GetPlayer()
         {
@@ -137,6 +140,7 @@ namespace Entities.Creatures
         private void OnDrawGizmos()
         {
             if (!useCulling) return;
+            if (player is null) return;
             Gizmos.color = Color.magenta;
             Gizmos.DrawWireSphere(player.position, cullingDistance);
         }
