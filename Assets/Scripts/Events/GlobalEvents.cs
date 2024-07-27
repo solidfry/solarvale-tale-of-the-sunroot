@@ -6,6 +6,7 @@ using Interaction;
 using Photography;
 using QuestSystem;
 using QuestSystem.Conditions;
+using UI.Onboarding;
 using UnityEngine;
 
 namespace Events
@@ -51,6 +52,7 @@ namespace Events
         
         #region Onboarding 
         public static Action<bool> OnSetOnboardingVisibilityEvent;
+        public static Action<OnboardingNotificationRequest> OnOnboardingRequestEvent;
         #endregion
         
         #region Camera Management

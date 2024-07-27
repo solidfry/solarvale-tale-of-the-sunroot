@@ -86,7 +86,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Path: {fileID: 8463239925907802189}
-  m_PathPosition: 0.6002209
+  m_PathPosition: 0
   m_PositionUnits: 2
   m_PathOffset: {x: 0, y: 0, z: 0}
   m_XDamping: 0
@@ -126,7 +126,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3107117443319197463}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.015511492, y: 0.71909404, z: -0.016059546, w: 0.69455403}
+  m_LocalRotation: {x: -0.10854982, y: 0.67501354, z: 0.1013874, w: 0.7226993}
   m_LocalPosition: {x: -543.0862, y: 220.44576, z: -411.60526}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -360,6 +360,7 @@ GameObject:
   - component: {fileID: 6269021897549293089}
   - component: {fileID: 70330616852848175}
   - component: {fileID: 2116626702155209313}
+  - component: {fileID: 4150229413584078287}
   m_Layer: 0
   m_Name: Intro Dolly
   m_TagString: Untagged
@@ -438,6 +439,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: Player.PlayerManager, Assembly-CSharp
+        m_MethodName: SetPlayerControlsLocked
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: OnboardingManager, Assembly-CSharp
+        m_MethodName: AnimationToCamera
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &70330616852848175
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -452,6 +477,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animationController: {fileID: 2044728747635313800}
   animationName: IntroDolly
+  onAnimationStartEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: Player.PlayerManager, Assembly-CSharp
+        m_MethodName: SetPlayerControlsLocked
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onAnimationEndEvent:
     m_PersistentCalls:
       m_Calls:
@@ -482,6 +522,26 @@ MonoBehaviour:
   questAction: 1
   questData: {fileID: 11400000, guid: 861bba42769cf164692cce76382f642b, type: 2}
   questCondition: {fileID: 0}
+--- !u!114 &4150229413584078287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5799094415869633562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7532e89392fcd04e80fc789c8713e06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questDataToCheck: {fileID: 11400000, guid: 861bba42769cf164692cce76382f642b, type: 2}
+  removeUsedInteractable:
+  - {fileID: 0}
+  addNewInteractable:
+  - {fileID: 0}
+  DisableCompletedEvents:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &1309301316505387048
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -604,6 +664,26 @@ PrefabInstance:
         type: 3}
       propertyPath: fadeDirection
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8944101149571327744, guid: 9d55d59b7cfa7ba4b90c0f2f2d82d978,
+        type: 3}
+      propertyPath: fadeInDuration
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8944101149571327744, guid: 9d55d59b7cfa7ba4b90c0f2f2d82d978,
+        type: 3}
+      propertyPath: timeBeforeExit
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8944101149571327744, guid: 9d55d59b7cfa7ba4b90c0f2f2d82d978,
+        type: 3}
+      propertyPath: fadeOutDuration
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8944101149571327744, guid: 9d55d59b7cfa7ba4b90c0f2f2d82d978,
+        type: 3}
+      propertyPath: fadeDelayOnStart
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8944101149571327744, guid: 9d55d59b7cfa7ba4b90c0f2f2d82d978,
         type: 3}

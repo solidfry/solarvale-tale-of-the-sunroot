@@ -23,13 +23,9 @@ namespace Entities.Creatures
         private void Awake()
         {
             GlobalEvents.OnRegisterCreatureEvent += AddCreature;
-        }
-
-        private void Start()
-        {
             GetPlayer();
         }
-
+        
         private void GetPlayer()
         {
             if (player == null)
@@ -37,9 +33,7 @@ namespace Entities.Creatures
                 player = FindObjectOfType<PlayerManager>().GetPlayerTransform();
             }
         }
-
-        private void OnValidate() => GetPlayer();
-
+        
         public static float DistanceToPlayer(Transform transform, Transform player)
         {
             return Vector3.Distance(transform.position, player.position);
