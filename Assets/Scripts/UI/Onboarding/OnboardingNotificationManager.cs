@@ -42,11 +42,21 @@ namespace UI.Onboarding
         private void OnNotificationComplete()
         {
             _currentNotification.OnNotificationComplete -= OnNotificationComplete;
-            Destroy(_currentNotification.gameObject);
             _onboardingQueue.Dequeue();
+            Destroy(_currentNotification.gameObject);
+            _currentNotification = null;
             if (_onboardingQueue.Count > 0)
             {
                 ShowOnboardingNotification();
+            }
+        }
+        
+        private void InterruptOnboarding()
+        {
+            if (_currentNotification != null)
+            {
+                _currentNotification.OnNotificationComplete -= OnNotificationComplete;
+                Destroy(_currentNotification.gameObject);
             }
         }
     }

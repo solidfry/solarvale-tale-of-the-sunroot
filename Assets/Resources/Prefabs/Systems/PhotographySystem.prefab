@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 588250152800585689}
   - component: {fileID: 3679916647279654317}
   - component: {fileID: 5541668891452357925}
+  - component: {fileID: 4597678885502615512}
   m_Layer: 0
   m_Name: PhotographySystem
   m_TagString: Untagged
@@ -56,6 +57,12 @@ MonoBehaviour:
   discardButton: {fileID: 1159786720643462100}
   takePhotoActionRef: {fileID: 3986492942688173008, guid: 78133a3448bb08445b514549337508a9,
     type: 3}
+  onCameraModeActivated:
+    m_PersistentCalls:
+      m_Calls: []
+  onCameraModeDeactivated:
+    m_PersistentCalls:
+      m_Calls: []
   onPhotoTaken:
     m_PersistentCalls:
       m_Calls:
@@ -158,6 +165,25 @@ MonoBehaviour:
   eventIdInternal: 0
   valueGuidInternal: 
   m_callbackDataInternal: {fileID: 0}
+--- !u!114 &4597678885502615512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 885230153009753124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd46ac630b0e4deaadc3a43a3f8bd993, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onboardingNotificationRequest:
+    <Position>k__BackingField: {x: 0, y: -388}
+    <Width>k__BackingField: 380
+    <Height>k__BackingField: 64
+    <SizeOffset>k__BackingField: 32
+    <PulseColor>k__BackingField: {r: 1.3826536, g: 1.2731332, b: 1.0369903, a: 1}
+    <Duration>k__BackingField: 1
 --- !u!1001 &8683211238430953377
 PrefabInstance:
   m_ObjectHideFlags: 0

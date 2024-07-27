@@ -22,8 +22,12 @@ namespace Photography
 
         [SerializeField] private InputActionReference takePhotoActionRef;
 
-        [Header("On Photo Taken Event Handling")]
+        [Header("Events")]
         [Space(10)]
+        public UnityEvent onCameraModeActivated;
+        public UnityEvent onCameraModeDeactivated;
+        
+        [Header("On Photo Taken Event Handling")]
         public UnityEvent<EntityData[]> onPhotoTaken;
 
         [Header("RayCast Settings")]
@@ -61,11 +65,13 @@ namespace Photography
             {
                 photographyHUDController.SetHUDVisibility(1, 0);
                 IsInCameraMode = true;
+                onCameraModeActivated?.Invoke();
             }
             else
             {
                 photographyHUDController.SetHUDVisibility(0, 0);
                 IsInCameraMode = false;
+                onCameraModeDeactivated?.Invoke();
             }
         }
 

@@ -95,7 +95,7 @@ MonoBehaviour:
   m_CameraUp: 0
   m_PitchDamping: 0
   m_YawDamping: 0
-  m_RollDamping: 0
+  m_RollDamping: 6.14
   m_AutoDolly:
     m_Enabled: 0
     m_PositionOffset: 0
@@ -126,7 +126,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3107117443319197463}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.10854982, y: 0.67501354, z: 0.1013874, w: 0.7226993}
+  m_LocalRotation: {x: 0.15678394, y: 0.25591308, z: -0.0421031, w: 0.9529715}
   m_LocalPosition: {x: -543.0862, y: 220.44576, z: -411.60526}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -361,6 +361,7 @@ GameObject:
   - component: {fileID: 70330616852848175}
   - component: {fileID: 2116626702155209313}
   - component: {fileID: 4150229413584078287}
+  - component: {fileID: 130060186667472396}
   m_Layer: 0
   m_Name: Intro Dolly
   m_TagString: Untagged
@@ -451,9 +452,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: OnboardingManager, Assembly-CSharp
-        m_MethodName: AnimationToCamera
+      - m_Target: {fileID: 130060186667472396}
+        m_TargetAssemblyTypeName: UI.Onboarding.OnboardingRequestSender, Assembly-CSharp
+        m_MethodName: SendOnboardingRequest
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -542,6 +543,25 @@ MonoBehaviour:
   DisableCompletedEvents:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &130060186667472396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5799094415869633562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd46ac630b0e4deaadc3a43a3f8bd993, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onboardingNotificationRequest:
+    <Position>k__BackingField: {x: -776, y: -446}
+    <Width>k__BackingField: 280
+    <Height>k__BackingField: 64
+    <SizeOffset>k__BackingField: 32
+    <PulseColor>k__BackingField: {r: 1.3826536, g: 1.2731332, b: 1.0369903, a: 1}
+    <Duration>k__BackingField: 1
 --- !u!1001 &1309301316505387048
 PrefabInstance:
   m_ObjectHideFlags: 0

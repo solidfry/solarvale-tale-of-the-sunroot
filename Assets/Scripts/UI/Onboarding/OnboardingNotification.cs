@@ -13,7 +13,6 @@ namespace UI.Onboarding
     
         [SerializeField] private Color pulseColor;
     
-        [SerializeField] float pulseDuration = 1f;
     
         OnboardingNotificationRequest _request;
     
@@ -34,10 +33,10 @@ namespace UI.Onboarding
         {
             rectTransform.anchoredPosition = _request.Position;
             rectTransform.sizeDelta = new Vector2(_request.Width + startOffset, _request.Height + startOffset);
-            image.DOFade(1, 1f).From(0).SetEase(Ease.Linear);
+            image.DOFade(1, .5f).From(0).SetEase(Ease.Linear);
             rectTransform.DOSizeDelta(
                     new Vector2(_request.Width, _request.Height), 
-                    1f)
+                    .5f)
                 .SetEase(Ease.InOutCirc)
                 .OnComplete(Pulse);
         }
@@ -49,16 +48,20 @@ namespace UI.Onboarding
                 .Append(
                     rectTransform.DOSizeDelta(
                         new Vector2(_request.Width + startOffset, _request.Height + startOffset), 
-                        pulseDuration)
+                        _request.Duration).SetEase(Ease.InOutCirc)
                 )
-                .SetEase(Ease.InOutCirc)
                 .Append(
-                    image.DOColor(_request.PulseColor, pulseDuration)).SetEase(Ease.Linear).SetLoops(6, LoopType.Yoyo).OnComplete(Hide);
+                    image.DOColor(_request.PulseColor, _request.Duration).SetEase(Ease.Linear)
+                    )
+                .SetLoops(3, LoopType.Yoyo)
+                .OnComplete(Hide)
+                .Play();
+            
         }
     
         void Hide()
         {
-            image.DOFade(0, 0.5f).SetEase(Ease.Linear).OnComplete(() =>
+            image.DOFade(0, 0.25f).SetEase(Ease.Linear).OnComplete(() =>
             {
                 OnNotificationComplete();
             });
