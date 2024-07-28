@@ -80,10 +80,13 @@ public class MinimapController : MonoBehaviour
 
     public void RemoveMinimapWorldObject(MinimapWorldObject minimapWorldObject)
     {
-        if (miniMapWorldObjectsLookup.TryGetValue(minimapWorldObject, out MinimapIcon icon))
+        if(miniMapWorldObjectsLookup.TryGetValue(minimapWorldObject, out MinimapIcon icon))
         {
             miniMapWorldObjectsLookup.Remove(minimapWorldObject);
-            Destroy(icon.gameObject);
+            if (icon != null)
+            {
+                Destroy(icon.gameObject);
+            }
         }
     }
 
@@ -143,14 +146,17 @@ public class MinimapController : MonoBehaviour
 
     private void UpdateMiniMapIcons()
     {
-        // scale icons by the inverse of the mapscale to keep them a consitent size
         float iconScale = 1 / contentRectTransform.transform.localScale.x;
         foreach (var kvp in miniMapWorldObjectsLookup)
         {
             var miniMapWorldObject = kvp.Key;
             var miniMapIcon = kvp.Value;
-            var mapPosition = WorldPositionToMapPosition(miniMapWorldObject.transform.position);
 
+            if (miniMapWorldObject == null || miniMapIcon == null)
+            {
+                continue;
+            }
+            var mapPosition = WorldPositionToMapPosition(miniMapWorldObject.transform.position);
             miniMapIcon.RectTransform.anchoredPosition = mapPosition;
             var rotation = miniMapWorldObject.transform.rotation.eulerAngles;
             miniMapIcon.IconRectTransform.localRotation = Quaternion.AngleAxis(-rotation.y, Vector3.forward);
