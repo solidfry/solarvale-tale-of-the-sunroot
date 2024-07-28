@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1647,8 +1647,8 @@ MonoBehaviour:
   questIconPrefab: {fileID: 5441098281349693632, guid: 41417f3d08f36d349a71510ebaae1b09,
     type: 3}
   playerCharacter: {fileID: 618933814}
-  questIconParentRectTranform: {fileID: 1400928904}
   minimapCamera: {fileID: 1666366949}
+  miniMap: {fileID: 0}
 --- !u!4 &1114071284
 Transform:
   m_ObjectHideFlags: 0
@@ -1895,6 +1895,16 @@ PrefabInstance:
         type: 3}
       propertyPath: far clip plane
       value: 20000
+      objectReference: {fileID: 0}
+    - target: {fileID: 7585934510880410991, guid: 8746b19db272db1499fc8f3e3e844961,
+        type: 3}
+      propertyPath: triggerList.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7585934510880410991, guid: 8746b19db272db1499fc8f3e3e844961,
+        type: 3}
+      propertyPath: triggerList.Array.data[0]
+      value: 1281810935
       objectReference: {fileID: 0}
     - target: {fileID: 8811856263115372022, guid: 8746b19db272db1499fc8f3e3e844961,
         type: 3}
@@ -2928,6 +2938,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 146025803423033102, guid: ad31ed8347b54d149a24648c29c3b603,
         type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 146025803423033102, guid: ad31ed8347b54d149a24648c29c3b603,
+        type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -3242,6 +3257,11 @@ PrefabInstance:
     - target: {fileID: 4592039912948292323, guid: 0c6092aa767a88049bb91ac3acc8c131,
         type: 3}
       propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4592039912948292323, guid: 0c6092aa767a88049bb91ac3acc8c131,
+        type: 3}
+      propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4592039912948292323, guid: 0c6092aa767a88049bb91ac3acc8c131,

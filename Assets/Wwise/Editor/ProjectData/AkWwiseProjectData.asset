@@ -189,7 +189,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 119a7399247785478749c0bc1477965c
     GuidInternal: 
-    m_lastTime: -8584798043420819706
+    m_lastTime: -8584794593824214927
     List:
     - name: Main
       guid: 861f12504c3aa24a9a453ff7870ae530
@@ -217,7 +217,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 5ea9686091072d41adff9786e1d6e4d5
     GuidInternal: 
-    m_lastTime: -8584798038582947788
+    m_lastTime: -8584794593824134856
     List:
     - name: Cockatoo
       guid: 2eadf1ec1570cf40a144f5c70dd3c982
@@ -571,6 +571,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 2.4419727
       minDuration: 2.3880951
+    - name: Play_Player_Footstep_Dirt
+      guid: 547c87782db10d40a23057474ace9a60
+      id: 3686004862
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Play_Player_Footstep_Dirt
+        ObjectType: 3
+        guid: 547c87782db10d40a23057474ace9a60
+      Path: Events\Default Work Unit\Play_Player_Footstep_Dirt
+      maxAttenuation: 100
+      maxDuration: 0
+      minDuration: 0
     - name: Play_SFX_Cricket
       guid: 347b01adf7f39c4db4a570050026300e
       id: 3568461127
@@ -988,6 +1005,53 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8584798967210391448
     List: []
+  - PhysicalPath: Switches\FootStepSwitches.wwu
+    PathAndIcons:
+    - ElementName: Switches
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: FootStepSwitches
+      ObjectType: 12
+      guid: 423a23d4d6c4c244bf77cf2cd78e1c44
+    ParentPath: Switches\FootStepSwitches
+    guid: 423a23d4d6c4c244bf77cf2cd78e1c44
+    GuidInternal: 
+    m_lastTime: -8584794592225801940
+    List:
+    - name: FootstepType
+      guid: ed56636585795245aab4cf46c04c3fb1
+      id: 1458816175
+      PathAndIcons:
+      - ElementName: Switches
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: FootStepSwitches
+        ObjectType: 12
+        guid: 423a23d4d6c4c244bf77cf2cd78e1c44
+      - ElementName: FootstepType
+        ObjectType: 11
+        guid: ed56636585795245aab4cf46c04c3fb1
+      Path: Switches\FootStepSwitches\FootstepType
+      values:
+      - name: Player_Footstep_Dirt1
+        guid: 2517516e82d56b409ae407c7062b937c
+        id: 3202047670
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: FootStepSwitches
+          ObjectType: 12
+          guid: 423a23d4d6c4c244bf77cf2cd78e1c44
+        - ElementName: FootstepType
+          ObjectType: 11
+          guid: ed56636585795245aab4cf46c04c3fb1
+        - ElementName: Player_Footstep_Dirt1
+          ObjectType: 10
+          guid: 2517516e82d56b409ae407c7062b937c
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     PathAndIcons:
@@ -1003,7 +1067,7 @@ MonoBehaviour:
     m_lastTime: -8584798967210381452
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 010000000600000007000000080000005e000000
+  ExpandedWaapiItemIds: 010000000500000006000000080000005e000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

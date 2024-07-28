@@ -32,6 +32,7 @@ namespace AK
         static const AkUniqueID PLAY_MUSIC_GECKO = 1568956567U;
         static const AkUniqueID PLAY_MUSIC_GRANDMA = 196110170U;
         static const AkUniqueID PLAY_PIANOKEYS = 4116426549U;
+        static const AkUniqueID PLAY_PLAYER_FOOTSTEP_DIRT = 3686004862U;
         static const AkUniqueID PLAY_SFX_CRICKET = 3568461127U;
         static const AkUniqueID PLAY_UI__MENU_SELECT = 3051820782U;
         static const AkUniqueID PLAY_UI__PHOTO_DISCARD = 149110613U;
@@ -64,6 +65,20 @@ namespace AK
         } // namespace GAMESTART
 
     } // namespace STATES
+
+    namespace SWITCHES
+    {
+        namespace FOOTSTEPTYPE
+        {
+            static const AkUniqueID GROUP = 1458816175U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID PLAYER_FOOTSTEP_DIRT1 = 3202047670U;
+            } // namespace SWITCH
+        } // namespace FOOTSTEPTYPE
+
+    } // namespace SWITCHES
 
     namespace GAME_PARAMETERS
     {

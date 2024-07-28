@@ -41,8 +41,15 @@
 					</States>
 				</StateGroup>
 			</StateGroups>
+			<SwitchGroups>
+				<SwitchGroup Id="1458816175" Name="FootstepType">
+					<Switches>
+						<Switch Id="3202047670" Name="Player_Footstep_Dirt1"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{0D78D326-BFF1-ADFE-A632-9721DC289523}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{057EB1A2-90BB-50D5-8B0C-96C827AA7E20}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -375,6 +382,7 @@
 						<MediaRef Id="989093546"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="3686004862" Name="Play_Player_Footstep_Dirt" MaxAttenuation="100" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="3568461127" Name="Play_SFX_Cricket" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.75" DurationMax="0.75">
 					<MediaRefs>
 						<MediaRef Id="45670411"/>
@@ -436,7 +444,14 @@
 					</States>
 				</StateGroup>
 			</StateGroups>
+			<SwitchGroups>
+				<SwitchGroup Id="1458816175" Name="FootstepType">
+					<Switches>
+						<Switch Id="3202047670" Name="Player_Footstep_Dirt1"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{F0C5D796-A07B-97BA-D1F4-8994D55DABE8}</FileHash>
+	<FileHash>{F9EDD15F-8C25-6625-02D2-CD67C2AD5136}</FileHash>
 </SoundBanksInfo>
