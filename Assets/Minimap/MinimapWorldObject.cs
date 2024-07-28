@@ -1,12 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MinimapWorldObject : MonoBehaviour
 {
-    [SerializeField] private bool followObject = false;
-    [SerializeField] private Sprite minimapIcon;
-
+    [SerializeField]
+    private bool followObject = false;
+    [SerializeField]
+    private Sprite minimapIcon;
     public Sprite MinimapIcon => minimapIcon;
 
     private void Start()
@@ -16,6 +15,6 @@ public class MinimapWorldObject : MonoBehaviour
 
     private void OnDestroy()
     {
-        MinimapController.Instance.RemoveMinimapWorldObject(this);    
+        MinimapController.Instance.RemoveMinimapWorldObject(this);
     }
 }

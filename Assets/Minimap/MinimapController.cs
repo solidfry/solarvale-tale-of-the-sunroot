@@ -6,26 +6,33 @@ public enum MinimapMode
 {
     Mini, Fullscreen
 }
-
 public class MinimapController : MonoBehaviour
 {
     public static MinimapController Instance;
 
-    [SerializeField] Vector2 worldSize;
+    [SerializeField]
+    Vector2 worldSize;
 
-    [SerializeField] Vector2 fullScreenDimensions = new Vector2(1000, 1000);
+    [SerializeField]
+    Vector2 fullScreenDimensions = new Vector2(1000, 1000);
 
-    [SerializeField] float zoomSpeed = 0.1f;
+    [SerializeField]
+    float zoomSpeed = 0.1f;
 
-    [SerializeField] float maxZoom = 10f;
+    [SerializeField]
+    float maxZoom = 10f;
 
-    [SerializeField] float minZoom = 1f;
+    [SerializeField]
+    float minZoom = 1f;
 
-    [SerializeField] RectTransform scrollViewRectTransform;
+    [SerializeField]
+    RectTransform scrollViewRectTransform;
 
-    [SerializeField] RectTransform contentRectTransform;
+    [SerializeField]
+    RectTransform contentRectTransform;
 
-    [SerializeField] MinimapIcon minimapIconPrefab;
+    [SerializeField]
+    MinimapIcon minimapIconPrefab;
 
     Matrix4x4 transformationMatrix;
 
@@ -85,7 +92,7 @@ public class MinimapController : MonoBehaviour
     public void SetMinimapMode(MinimapMode mode)
     {
         const float defaultScaleWhenFullScreen = 1.3f; // 1.3f looks good here but it could be anything
-
+        
         if (mode == currentMiniMapMode)
             return;
 
