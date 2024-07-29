@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 2b20922bdef03c418ceb65e6b9ae535b
     GuidInternal: 
-    m_lastTime: -8584793608866301975
+    m_lastTime: -8584793577209775986
     List:
     - name: Animal Atmos
       guid: 847c98f9339bcc44a6c31e3cb4f52d3c
@@ -189,7 +189,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 119a7399247785478749c0bc1477965c
     GuidInternal: 
-    m_lastTime: -8584793608866270967
+    m_lastTime: -8584793577209735655
     List:
     - name: Animals
       guid: fda00866989aac4290b9889dcb3550d6
@@ -205,6 +205,34 @@ MonoBehaviour:
         ObjectType: 7
         guid: fda00866989aac4290b9889dcb3550d6
       Path: SoundBanks\Default Work Unit\Animals
+    - name: Atmos
+      guid: 131a95d079c62941abcce26fc12c0d53
+      id: 3034623661
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 119a7399247785478749c0bc1477965c
+      - ElementName: Atmos
+        ObjectType: 7
+        guid: 131a95d079c62941abcce26fc12c0d53
+      Path: SoundBanks\Default Work Unit\Atmos
+    - name: Foley
+      guid: 9d78d0603bebbc429ebb1a4baea97922
+      id: 247557814
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 119a7399247785478749c0bc1477965c
+      - ElementName: Foley
+        ObjectType: 7
+        guid: 9d78d0603bebbc429ebb1a4baea97922
+      Path: SoundBanks\Default Work Unit\Foley
     - name: Main
       guid: 861f12504c3aa24a9a453ff7870ae530
       id: 3161908922
@@ -219,6 +247,48 @@ MonoBehaviour:
         ObjectType: 7
         guid: 861f12504c3aa24a9a453ff7870ae530
       Path: SoundBanks\Default Work Unit\Main
+    - name: Music
+      guid: d5e69d0ff9c5dc4ca03bcc4a46415543
+      id: 3991942870
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 119a7399247785478749c0bc1477965c
+      - ElementName: Music
+        ObjectType: 7
+        guid: d5e69d0ff9c5dc4ca03bcc4a46415543
+      Path: SoundBanks\Default Work Unit\Music
+    - name: SFX
+      guid: 833e43a2c7a3b14e9901f72b0a3489a2
+      id: 393239870
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 119a7399247785478749c0bc1477965c
+      - ElementName: SFX
+        ObjectType: 7
+        guid: 833e43a2c7a3b14e9901f72b0a3489a2
+      Path: SoundBanks\Default Work Unit\SFX
+    - name: UI
+      guid: 05b768792b08854a9b29bc6a9d15bb82
+      id: 1551306167
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 119a7399247785478749c0bc1477965c
+      - ElementName: UI
+        ObjectType: 7
+        guid: 05b768792b08854a9b29bc6a9d15bb82
+      Path: SoundBanks\Default Work Unit\UI
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
     PathAndIcons:
@@ -231,8 +301,461 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 5ea9686091072d41adff9786e1d6e4d5
     GuidInternal: 
-    m_lastTime: -8584793608866340098
+    m_lastTime: -8584793577209801698
     List:
+    - name: Atmos
+      guid: 996538f598acf543a6be5d9be8d02d61
+      id: 3034623661
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Atmos
+        ObjectType: 4
+        guid: 996538f598acf543a6be5d9be8d02d61
+      Path: Events\Default Work Unit\Atmos
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Cockatoo
+      guid: 2eadf1ec1570cf40a144f5c70dd3c982
+      id: 3188204408
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Cockatoo
+        ObjectType: 4
+        guid: 2eadf1ec1570cf40a144f5c70dd3c982
+      Path: Events\Default Work Unit\Cockatoo
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Foley
+      guid: 0cd9a71cf5098641a6ed2d00d7a4000d
+      id: 247557814
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Foley
+        ObjectType: 4
+        guid: 0cd9a71cf5098641a6ed2d00d7a4000d
+      Path: Events\Default Work Unit\Foley
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Ibis
+      guid: 2b3fd83a1605c045a445bdc1483010cd
+      id: 1218975960
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Ibis
+        ObjectType: 4
+        guid: 2b3fd83a1605c045a445bdc1483010cd
+      Path: Events\Default Work Unit\Ibis
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Koala
+      guid: e0ec340731d608448a027ab855a5d91e
+      id: 1209288797
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Koala
+        ObjectType: 4
+        guid: e0ec340731d608448a027ab855a5d91e
+      Path: Events\Default Work Unit\Koala
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Kookaburra
+      guid: c60b9f1e5805154bbba6a00a9968b845
+      id: 970574946
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Kookaburra
+        ObjectType: 4
+        guid: c60b9f1e5805154bbba6a00a9968b845
+      Path: Events\Default Work Unit\Kookaburra
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Lorikeet
+      guid: 97299059e2c5464080270c14caf4d18f
+      id: 549043226
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Lorikeet
+        ObjectType: 4
+        guid: 97299059e2c5464080270c14caf4d18f
+      Path: Events\Default Work Unit\Lorikeet
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Magpie
+      guid: 0edb2d9865b96c4188fbc461f95a4061
+      id: 288463428
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Magpie
+        ObjectType: 4
+        guid: 0edb2d9865b96c4188fbc461f95a4061
+      Path: Events\Default Work Unit\Magpie
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Music
+      guid: a35d8b78dd5f204aaa22b61735d06036
+      id: 3991942870
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Music
+        ObjectType: 4
+        guid: a35d8b78dd5f204aaa22b61735d06036
+      Path: Events\Default Work Unit\Music
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Atmos_Beach_Rain_01
+      guid: e10fc172b243eb42aa2205651962d2ec
+      id: 3121266873
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Atmos
+        ObjectType: 4
+        guid: 996538f598acf543a6be5d9be8d02d61
+      - ElementName: Play_Atmos_Beach_Rain_01
+        ObjectType: 3
+        guid: e10fc172b243eb42aa2205651962d2ec
+      Path: Events\Default Work Unit\Atmos\Play_Atmos_Beach_Rain_01
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Atmos_Beach_Wind_Gentle_
+      guid: 73a0deb58e79aa45aafc4055c401e6f3
+      id: 3680285438
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Atmos
+        ObjectType: 4
+        guid: 996538f598acf543a6be5d9be8d02d61
+      - ElementName: Play_Atmos_Beach_Wind_Gentle_
+        ObjectType: 3
+        guid: 73a0deb58e79aa45aafc4055c401e6f3
+      Path: Events\Default Work Unit\Atmos\Play_Atmos_Beach_Wind_Gentle_
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Atmos_Cave_01
+      guid: 4bf274126bb4bf45933e911f4ee812d0
+      id: 172525698
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Atmos
+        ObjectType: 4
+        guid: 996538f598acf543a6be5d9be8d02d61
+      - ElementName: Play_Atmos_Cave_01
+        ObjectType: 3
+        guid: 4bf274126bb4bf45933e911f4ee812d0
+      Path: Events\Default Work Unit\Atmos\Play_Atmos_Cave_01
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Atmos_Cave_Wind_Gentle
+      guid: ee59327670743e43a2fdcb849fe79297
+      id: 166362779
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Atmos
+        ObjectType: 4
+        guid: 996538f598acf543a6be5d9be8d02d61
+      - ElementName: Play_Atmos_Cave_Wind_Gentle
+        ObjectType: 3
+        guid: ee59327670743e43a2fdcb849fe79297
+      Path: Events\Default Work Unit\Atmos\Play_Atmos_Cave_Wind_Gentle
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Atmos_Forest_Birds_Small_Breeze_02
+      guid: 073410084eeb52408baf540ac205f6d7
+      id: 3626787730
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Atmos
+        ObjectType: 4
+        guid: 996538f598acf543a6be5d9be8d02d61
+      - ElementName: Play_Atmos_Forest_Birds_Small_Breeze_02
+        ObjectType: 3
+        guid: 073410084eeb52408baf540ac205f6d7
+      Path: Events\Default Work Unit\Atmos\Play_Atmos_Forest_Birds_Small_Breeze_02
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_Atmos_Mountain_Night_01
+      guid: baf6766abefbc745a18d762f9f5cab37
+      id: 2651066789
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Atmos
+        ObjectType: 4
+        guid: 996538f598acf543a6be5d9be8d02d61
+      - ElementName: Play_Atmos_Mountain_Night_01
+        ObjectType: 3
+        guid: baf6766abefbc745a18d762f9f5cab37
+      Path: Events\Default Work Unit\Atmos\Play_Atmos_Mountain_Night_01
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Atmos_Mountain_Rain_01
+      guid: 7b87feb8be3054439fb5fca6b176f5ad
+      id: 3290639863
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Atmos
+        ObjectType: 4
+        guid: 996538f598acf543a6be5d9be8d02d61
+      - ElementName: Play_Atmos_Mountain_Rain_01
+        ObjectType: 3
+        guid: 7b87feb8be3054439fb5fca6b176f5ad
+      Path: Events\Default Work Unit\Atmos\Play_Atmos_Mountain_Rain_01
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Atmos_Ocean_Night_01
+      guid: a212bb2fd1e1b647a996c8ebc412d348
+      id: 3527682894
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Atmos
+        ObjectType: 4
+        guid: 996538f598acf543a6be5d9be8d02d61
+      - ElementName: Play_Atmos_Ocean_Night_01
+        ObjectType: 3
+        guid: a212bb2fd1e1b647a996c8ebc412d348
+      Path: Events\Default Work Unit\Atmos\Play_Atmos_Ocean_Night_01
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Atmos_Plains_Night_01
+      guid: b77b42899e7f8c4aae1faa9bf3566bfa
+      id: 794347887
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Atmos
+        ObjectType: 4
+        guid: 996538f598acf543a6be5d9be8d02d61
+      - ElementName: Play_Atmos_Plains_Night_01
+        ObjectType: 3
+        guid: b77b42899e7f8c4aae1faa9bf3566bfa
+      Path: Events\Default Work Unit\Atmos\Play_Atmos_Plains_Night_01
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Atmos_Plains_Rain_01
+      guid: 0b12c90d47941b4080002af23f3c6998
+      id: 3637739725
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Atmos
+        ObjectType: 4
+        guid: 996538f598acf543a6be5d9be8d02d61
+      - ElementName: Play_Atmos_Plains_Rain_01
+        ObjectType: 3
+        guid: 0b12c90d47941b4080002af23f3c6998
+      Path: Events\Default Work Unit\Atmos\Play_Atmos_Plains_Rain_01
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Atmos_Plains_Scrub_Wind_Gentle_
+      guid: 320022052ce13944b5e23fe2620143c5
+      id: 749604250
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Atmos
+        ObjectType: 4
+        guid: 996538f598acf543a6be5d9be8d02d61
+      - ElementName: Play_Atmos_Plains_Scrub_Wind_Gentle_
+        ObjectType: 3
+        guid: 320022052ce13944b5e23fe2620143c5
+      Path: Events\Default Work Unit\Atmos\Play_Atmos_Plains_Scrub_Wind_Gentle_
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Atmos_Stream
+      guid: df192adcf14d3145bf96c62a1abc7381
+      id: 807656883
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Atmos
+        ObjectType: 4
+        guid: 996538f598acf543a6be5d9be8d02d61
+      - ElementName: Play_Atmos_Stream
+        ObjectType: 3
+        guid: df192adcf14d3145bf96c62a1abc7381
+      Path: Events\Default Work Unit\Atmos\Play_Atmos_Stream
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Atmos_Stream_Rain_01
+      guid: a8b8f870e8da1946a1c1d148b8d0c478
+      id: 4178031206
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Atmos
+        ObjectType: 4
+        guid: 996538f598acf543a6be5d9be8d02d61
+      - ElementName: Play_Atmos_Stream_Rain_01
+        ObjectType: 3
+        guid: a8b8f870e8da1946a1c1d148b8d0c478
+      Path: Events\Default Work Unit\Atmos\Play_Atmos_Stream_Rain_01
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Beach_Footsteps
+      guid: 7f3aaf9e39525d4a9cfcca2e6efa3f7f
+      id: 4033418135
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Foley
+        ObjectType: 4
+        guid: 0cd9a71cf5098641a6ed2d00d7a4000d
+      - ElementName: Play_Beach_Footsteps
+        ObjectType: 3
+        guid: 7f3aaf9e39525d4a9cfcca2e6efa3f7f
+      Path: Events\Default Work Unit\Foley\Play_Beach_Footsteps
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Beach_Waves
+      guid: 710d77ffedc395448a0fe5bea635e04f
+      id: 2745594764
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Atmos
+        ObjectType: 4
+        guid: 996538f598acf543a6be5d9be8d02d61
+      - ElementName: Play_Beach_Waves
+        ObjectType: 3
+        guid: 710d77ffedc395448a0fe5bea635e04f
+      Path: Events\Default Work Unit\Atmos\Play_Beach_Waves
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Play_BrandIntro_Birds
       guid: 17f690d5dd7414459bb656c7e37c71ec
       id: 2883217168
@@ -250,6 +773,423 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 16.127098
       minDuration: 16.127098
+    - name: Play_Button_Click
+      guid: a7540e6b31dd6f4b943d7cc85983bd49
+      id: 1149159311
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: UI
+        ObjectType: 4
+        guid: f1a6468f8175474e8ef5b68bf1e8c23e
+      - ElementName: Play_Button_Click
+        ObjectType: 3
+        guid: a7540e6b31dd6f4b943d7cc85983bd49
+      Path: Events\Default Work Unit\UI\Play_Button_Click
+      maxAttenuation: 0
+      maxDuration: 0.70303416
+      minDuration: 0.70303416
+    - name: Play_Button_Hover
+      guid: 3e4b5def4d85984daf8a881b4e1b802d
+      id: 4021863785
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: UI
+        ObjectType: 4
+        guid: f1a6468f8175474e8ef5b68bf1e8c23e
+      - ElementName: Play_Button_Hover
+        ObjectType: 3
+        guid: 3e4b5def4d85984daf8a881b4e1b802d
+      Path: Events\Default Work Unit\UI\Play_Button_Hover
+      maxAttenuation: 0
+      maxDuration: 1.0545512
+      minDuration: 1.0545512
+    - name: Play_Camera_Snap
+      guid: 0873e1034748ef45bce3419bd33a91c6
+      id: 1514177854
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: UI
+        ObjectType: 4
+        guid: f1a6468f8175474e8ef5b68bf1e8c23e
+      - ElementName: Play_Camera_Snap
+        ObjectType: 3
+        guid: 0873e1034748ef45bce3419bd33a91c6
+      Path: Events\Default Work Unit\UI\Play_Camera_Snap
+      maxAttenuation: 0
+      maxDuration: 3.4249375
+      minDuration: 3.4249375
+    - name: Play_Click
+      guid: 2c4b875fda3ea744995e65cf223e8f96
+      id: 311910498
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Play_Click
+        ObjectType: 3
+        guid: 2c4b875fda3ea744995e65cf223e8f96
+      Path: Events\Default Work Unit\Play_Click
+      maxAttenuation: 0
+      maxDuration: 0.70303416
+      minDuration: 0.70303416
+    - name: Play_Forest
+      guid: 2a54977150a4ca4ca29d47d6ac968dd2
+      id: 207755397
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Atmos
+        ObjectType: 4
+        guid: 996538f598acf543a6be5d9be8d02d61
+      - ElementName: Play_Forest
+        ObjectType: 3
+        guid: 2a54977150a4ca4ca29d47d6ac968dd2
+      Path: Events\Default Work Unit\Atmos\Play_Forest
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Forest_01
+      guid: c584c5f51e183045be0fff64d2d22b0a
+      id: 2322926753
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: SFX
+        ObjectType: 4
+        guid: 9e3dc77414655840a6a1a406ef32d278
+      - ElementName: Play_Forest_01
+        ObjectType: 3
+        guid: c584c5f51e183045be0fff64d2d22b0a
+      Path: Events\Default Work Unit\SFX\Play_Forest_01
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Forest_Footsteps
+      guid: 5aa0429a3883cc4287bd20d8c6d09e92
+      id: 1770910469
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Foley
+        ObjectType: 4
+        guid: 0cd9a71cf5098641a6ed2d00d7a4000d
+      - ElementName: Play_Forest_Footsteps
+        ObjectType: 3
+        guid: 5aa0429a3883cc4287bd20d8c6d09e92
+      Path: Events\Default Work Unit\Foley\Play_Forest_Footsteps
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Forest_Night
+      guid: cb323d78c706d94e9ac32e5c5c23fa2c
+      id: 3050359138
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Atmos
+        ObjectType: 4
+        guid: 996538f598acf543a6be5d9be8d02d61
+      - ElementName: Play_Forest_Night
+        ObjectType: 3
+        guid: cb323d78c706d94e9ac32e5c5c23fa2c
+      Path: Events\Default Work Unit\Atmos\Play_Forest_Night
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Forest_Rain
+      guid: e8b60d0f6943bd479b310a41e758667c
+      id: 1320014010
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Atmos
+        ObjectType: 4
+        guid: 996538f598acf543a6be5d9be8d02d61
+      - ElementName: Play_Forest_Rain
+        ObjectType: 3
+        guid: e8b60d0f6943bd479b310a41e758667c
+      Path: Events\Default Work Unit\Atmos\Play_Forest_Rain
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_FTS_Beach_Jump
+      guid: 8cc331fc818d9a428ea257eaaa10b947
+      id: 2238493386
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Foley
+        ObjectType: 4
+        guid: 0cd9a71cf5098641a6ed2d00d7a4000d
+      - ElementName: Play_FTS_Beach_Jump
+        ObjectType: 3
+        guid: 8cc331fc818d9a428ea257eaaa10b947
+      Path: Events\Default Work Unit\Foley\Play_FTS_Beach_Jump
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_FTS_Beach_Land
+      guid: a7119a419a1b0047b9a769fe144c8b14
+      id: 2876226093
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Foley
+        ObjectType: 4
+        guid: 0cd9a71cf5098641a6ed2d00d7a4000d
+      - ElementName: Play_FTS_Beach_Land
+        ObjectType: 3
+        guid: a7119a419a1b0047b9a769fe144c8b14
+      Path: Events\Default Work Unit\Foley\Play_FTS_Beach_Land
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_FTS_Forest_Jump
+      guid: 7dde52bf6e4fb34799b4a4cb9b0e37fd
+      id: 2735020772
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Foley
+        ObjectType: 4
+        guid: 0cd9a71cf5098641a6ed2d00d7a4000d
+      - ElementName: Play_FTS_Forest_Jump
+        ObjectType: 3
+        guid: 7dde52bf6e4fb34799b4a4cb9b0e37fd
+      Path: Events\Default Work Unit\Foley\Play_FTS_Forest_Jump
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_FTS_Forest_Land
+      guid: 6435a3285afa514d8d013409f80663a5
+      id: 2127003495
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Foley
+        ObjectType: 4
+        guid: 0cd9a71cf5098641a6ed2d00d7a4000d
+      - ElementName: Play_FTS_Forest_Land
+        ObjectType: 3
+        guid: 6435a3285afa514d8d013409f80663a5
+      Path: Events\Default Work Unit\Foley\Play_FTS_Forest_Land
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_FTS_Jump
+      guid: cdac351a33d4ca4ab4a23a4ca90c2876
+      id: 2798461258
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Foley
+        ObjectType: 4
+        guid: 0cd9a71cf5098641a6ed2d00d7a4000d
+      - ElementName: Play_FTS_Jump
+        ObjectType: 3
+        guid: cdac351a33d4ca4ab4a23a4ca90c2876
+      Path: Events\Default Work Unit\Foley\Play_FTS_Jump
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_FTS_Land
+      guid: 8ee0902474064f4280ce87a990ee4974
+      id: 3436193965
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Foley
+        ObjectType: 4
+        guid: 0cd9a71cf5098641a6ed2d00d7a4000d
+      - ElementName: Play_FTS_Land
+        ObjectType: 3
+        guid: 8ee0902474064f4280ce87a990ee4974
+      Path: Events\Default Work Unit\Foley\Play_FTS_Land
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_FTS_PlnScrb_Jump
+      guid: 3521e1634b2d4a4d906b6659b1d1bdfa
+      id: 3686191621
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Foley
+        ObjectType: 4
+        guid: 0cd9a71cf5098641a6ed2d00d7a4000d
+      - ElementName: Play_FTS_PlnScrb_Jump
+        ObjectType: 3
+        guid: 3521e1634b2d4a4d906b6659b1d1bdfa
+      Path: Events\Default Work Unit\Foley\Play_FTS_PlnScrb_Jump
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_FTS_PlnScrb_Land
+      guid: 93990bf2f8d0cd4d8ecef2d6f66f50a0
+      id: 1720407178
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Foley
+        ObjectType: 4
+        guid: 0cd9a71cf5098641a6ed2d00d7a4000d
+      - ElementName: Play_FTS_PlnScrb_Land
+        ObjectType: 3
+        guid: 93990bf2f8d0cd4d8ecef2d6f66f50a0
+      Path: Events\Default Work Unit\Foley\Play_FTS_PlnScrb_Land
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_FTS_Rock_Jump
+      guid: be6131837dacee448283043ec5ede2a1
+      id: 1492702852
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Foley
+        ObjectType: 4
+        guid: 0cd9a71cf5098641a6ed2d00d7a4000d
+      - ElementName: Play_FTS_Rock_Jump
+        ObjectType: 3
+        guid: be6131837dacee448283043ec5ede2a1
+      Path: Events\Default Work Unit\Foley\Play_FTS_Rock_Jump
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_FTS_Rock_Land
+      guid: 4c0b8f78a25e7343b111cdf5ba019a66
+      id: 926262279
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Foley
+        ObjectType: 4
+        guid: 0cd9a71cf5098641a6ed2d00d7a4000d
+      - ElementName: Play_FTS_Rock_Land
+        ObjectType: 3
+        guid: 4c0b8f78a25e7343b111cdf5ba019a66
+      Path: Events\Default Work Unit\Foley\Play_FTS_Rock_Land
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_FTS_Water_Jump
+      guid: 385e3b3eeae8cb41906f159587f7c891
+      id: 2262254134
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Foley
+        ObjectType: 4
+        guid: 0cd9a71cf5098641a6ed2d00d7a4000d
+      - ElementName: Play_FTS_Water_Jump
+        ObjectType: 3
+        guid: 385e3b3eeae8cb41906f159587f7c891
+      Path: Events\Default Work Unit\Foley\Play_FTS_Water_Jump
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_FTS_Water_Land
+      guid: 4219e89714884b4f9bbe5ffa58716216
+      id: 330024833
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Foley
+        ObjectType: 4
+        guid: 0cd9a71cf5098641a6ed2d00d7a4000d
+      - ElementName: Play_FTS_Water_Land
+        ObjectType: 3
+        guid: 4219e89714884b4f9bbe5ffa58716216
+      Path: Events\Default Work Unit\Foley\Play_FTS_Water_Land
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Play_GameIntro_SoundScape
       guid: e9cc52e4b317124fabb631b22c0ffb1d
       id: 3337834332
@@ -267,6 +1207,2561 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Play_Gecko
+      guid: f20902dae62bbf4096a34333ddd5a544
+      id: 2404663
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: SFX
+        ObjectType: 4
+        guid: 9e3dc77414655840a6a1a406ef32d278
+      - ElementName: Play_Gecko
+        ObjectType: 3
+        guid: f20902dae62bbf4096a34333ddd5a544
+      Path: Events\Default Work Unit\SFX\Play_Gecko
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Generic_Footsteps
+      guid: d87728558863684f9cccc2de37e0cc4f
+      id: 674667693
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Foley
+        ObjectType: 4
+        guid: 0cd9a71cf5098641a6ed2d00d7a4000d
+      - ElementName: Play_Generic_Footsteps
+        ObjectType: 3
+        guid: d87728558863684f9cccc2de37e0cc4f
+      Path: Events\Default Work Unit\Foley\Play_Generic_Footsteps
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Hover_1
+      guid: 0788c40fab9130448771b65fe8ad9615
+      id: 2033520116
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: UI
+        ObjectType: 4
+        guid: f1a6468f8175474e8ef5b68bf1e8c23e
+      - ElementName: Play_Hover_1
+        ObjectType: 3
+        guid: 0788c40fab9130448771b65fe8ad9615
+      Path: Events\Default Work Unit\UI\Play_Hover_1
+      maxAttenuation: 0
+      maxDuration: 1.0545512
+      minDuration: 1.0545512
+    - name: Play_ibis_walla_01_stereo
+      guid: ac244cbfdae3e5478702b484488068f3
+      id: 395191982
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Ibis
+        ObjectType: 4
+        guid: 2b3fd83a1605c045a445bdc1483010cd
+      - ElementName: Walla
+        ObjectType: 4
+        guid: ad38fa71d044e542acddefa453207651
+      - ElementName: Play_ibis_walla_01_stereo
+        ObjectType: 3
+        guid: ac244cbfdae3e5478702b484488068f3
+      Path: Events\Default Work Unit\Ibis\Walla\Play_ibis_walla_01_stereo
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_koala_walla_01_stereo
+      guid: 2462c8c14e8c624e95c8c18e4c7afffb
+      id: 4167803777
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Koala
+        ObjectType: 4
+        guid: e0ec340731d608448a027ab855a5d91e
+      - ElementName: Walla
+        ObjectType: 4
+        guid: 9a6f6af2756e1043b816715443e8f76a
+      - ElementName: Play_koala_walla_01_stereo
+        ObjectType: 3
+        guid: 2462c8c14e8c624e95c8c18e4c7afffb
+      Path: Events\Default Work Unit\Koala\Walla\Play_koala_walla_01_stereo
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Mountain
+      guid: 5fe900135b99fd40a48bca01a0993422
+      id: 825230623
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Atmos
+        ObjectType: 4
+        guid: 996538f598acf543a6be5d9be8d02d61
+      - ElementName: Play_Mountain
+        ObjectType: 3
+        guid: 5fe900135b99fd40a48bca01a0993422
+      Path: Events\Default Work Unit\Atmos\Play_Mountain
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Mountain_Rock_Footsteps
+      guid: da7ee97b40ea634bbe3a0fe1a62ef3a1
+      id: 2166410757
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Foley
+        ObjectType: 4
+        guid: 0cd9a71cf5098641a6ed2d00d7a4000d
+      - ElementName: Play_Mountain_Rock_Footsteps
+        ObjectType: 3
+        guid: da7ee97b40ea634bbe3a0fe1a62ef3a1
+      Path: Events\Default Work Unit\Foley\Play_Mountain_Rock_Footsteps
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Mountain_Wind
+      guid: 27f43a3f37dbd94898ea5e60f0c760df
+      id: 1969593572
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Atmos
+        ObjectType: 4
+        guid: 996538f598acf543a6be5d9be8d02d61
+      - ElementName: Play_Mountain_Wind
+        ObjectType: 3
+        guid: 27f43a3f37dbd94898ea5e60f0c760df
+      Path: Events\Default Work Unit\Atmos\Play_Mountain_Wind
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_music_flute_solo
+      guid: dae2970b0b6c434f866871f9201ac9dd
+      id: 1150390550
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Music
+        ObjectType: 4
+        guid: a35d8b78dd5f204aaa22b61735d06036
+      - ElementName: Play_music_flute_solo
+        ObjectType: 3
+        guid: dae2970b0b6c434f866871f9201ac9dd
+      Path: Events\Default Work Unit\Music\Play_music_flute_solo
+      maxAttenuation: 0
+      maxDuration: 42.954544
+      minDuration: 42.954544
+    - name: Play_music_flutes_edit
+      guid: 2d58873ff72ec5408c7783af2a3354ab
+      id: 3133905178
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Music
+        ObjectType: 4
+        guid: a35d8b78dd5f204aaa22b61735d06036
+      - ElementName: Play_music_flutes_edit
+        ObjectType: 3
+        guid: 2d58873ff72ec5408c7783af2a3354ab
+      Path: Events\Default Work Unit\Music\Play_music_flutes_edit
+      maxAttenuation: 0
+      maxDuration: 96
+      minDuration: 96
+    - name: Play_music_game_start
+      guid: 7403f5c69cb00444a32a44578c781491
+      id: 4029504345
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Music
+        ObjectType: 4
+        guid: a35d8b78dd5f204aaa22b61735d06036
+      - ElementName: Play_music_game_start
+        ObjectType: 3
+        guid: 7403f5c69cb00444a32a44578c781491
+      Path: Events\Default Work Unit\Music\Play_music_game_start
+      maxAttenuation: 0
+      maxDuration: 19.25
+      minDuration: 19.25
+    - name: Play_music_gecko
+      guid: d7a89b54ae81424b87360fe87935b682
+      id: 1568956567
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Music
+        ObjectType: 4
+        guid: a35d8b78dd5f204aaa22b61735d06036
+      - ElementName: Play_music_gecko
+        ObjectType: 3
+        guid: d7a89b54ae81424b87360fe87935b682
+      Path: Events\Default Work Unit\Music\Play_music_gecko
+      maxAttenuation: 0
+      maxDuration: 12
+      minDuration: 12
+    - name: Play_music_grandma
+      guid: 468f8a6f1205384385714ae61bd4cbfd
+      id: 196110170
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Music
+        ObjectType: 4
+        guid: a35d8b78dd5f204aaa22b61735d06036
+      - ElementName: Play_music_grandma
+        ObjectType: 3
+        guid: 468f8a6f1205384385714ae61bd4cbfd
+      Path: Events\Default Work Unit\Music\Play_music_grandma
+      maxAttenuation: 0
+      maxDuration: 11.71875
+      minDuration: 11.71875
+    - name: Play_PianoKeys
+      guid: dc222b28a980d944854b21a35b0b1612
+      id: 4116426549
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Play_PianoKeys
+        ObjectType: 3
+        guid: dc222b28a980d944854b21a35b0b1612
+      Path: Events\Default Work Unit\Play_PianoKeys
+      maxAttenuation: 0
+      maxDuration: 2.4419727
+      minDuration: 2.3880951
+    - name: Play_Plains_Scrub_Footsteps
+      guid: 6e20e123714568449df09f2e4114c63f
+      id: 4194555997
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Foley
+        ObjectType: 4
+        guid: 0cd9a71cf5098641a6ed2d00d7a4000d
+      - ElementName: Play_Plains_Scrub_Footsteps
+        ObjectType: 3
+        guid: 6e20e123714568449df09f2e4114c63f
+      Path: Events\Default Work Unit\Foley\Play_Plains_Scrub_Footsteps
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Player_Footstep_Dirt
+      guid: 547c87782db10d40a23057474ace9a60
+      id: 3686004862
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Foley
+        ObjectType: 4
+        guid: 0cd9a71cf5098641a6ed2d00d7a4000d
+      - ElementName: Play_Player_Footstep_Dirt
+        ObjectType: 3
+        guid: 547c87782db10d40a23057474ace9a60
+      Path: Events\Default Work Unit\Foley\Play_Player_Footstep_Dirt
+      maxAttenuation: 100
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_Rubbish
+      guid: c73afd21efb6994ab709b34210a7c302
+      id: 3836269015
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: SFX
+        ObjectType: 4
+        guid: 9e3dc77414655840a6a1a406ef32d278
+      - ElementName: Play_Rubbish
+        ObjectType: 3
+        guid: c73afd21efb6994ab709b34210a7c302
+      Path: Events\Default Work Unit\SFX\Play_Rubbish
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_SFX
+      guid: 6cde6bc9a40acf44ab138dea3ad26f76
+      id: 3141129795
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Cockatoo
+        ObjectType: 4
+        guid: 2eadf1ec1570cf40a144f5c70dd3c982
+      - ElementName: SFX
+        ObjectType: 4
+        guid: b980be14072fcd44b4adb6888b3250ad
+      - ElementName: Play_SFX
+        ObjectType: 3
+        guid: 6cde6bc9a40acf44ab138dea3ad26f76
+      Path: Events\Default Work Unit\Cockatoo\SFX\Play_SFX
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_SFX_01
+      guid: 71383da071b7e04f973f125486c4a91c
+      id: 3257337847
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Ibis
+        ObjectType: 4
+        guid: 2b3fd83a1605c045a445bdc1483010cd
+      - ElementName: SFX
+        ObjectType: 4
+        guid: 62def5233c6a764e99c23bbd5e43d6a5
+      - ElementName: Play_SFX_01
+        ObjectType: 3
+        guid: 71383da071b7e04f973f125486c4a91c
+      Path: Events\Default Work Unit\Ibis\SFX\Play_SFX_01
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_SFX_02
+      guid: bdb258e04f67204c9928bcb4d69b3a54
+      id: 3257337844
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Koala
+        ObjectType: 4
+        guid: e0ec340731d608448a027ab855a5d91e
+      - ElementName: SFX
+        ObjectType: 4
+        guid: 4dcd359fbce3c949acc05dcabe0cd83c
+      - ElementName: Play_SFX_02
+        ObjectType: 3
+        guid: bdb258e04f67204c9928bcb4d69b3a54
+      Path: Events\Default Work Unit\Koala\SFX\Play_SFX_02
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_SFX_03
+      guid: 07ea4795255455438e0e37b70ed9ba7c
+      id: 3257337845
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Kookaburra
+        ObjectType: 4
+        guid: c60b9f1e5805154bbba6a00a9968b845
+      - ElementName: SFX
+        ObjectType: 4
+        guid: 97017c477f7d3f4ea33e013d79c0e513
+      - ElementName: Play_SFX_03
+        ObjectType: 3
+        guid: 07ea4795255455438e0e37b70ed9ba7c
+      Path: Events\Default Work Unit\Kookaburra\SFX\Play_SFX_03
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_SFX_04
+      guid: 17be23903232a949a44f90471653601e
+      id: 3257337842
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Lorikeet
+        ObjectType: 4
+        guid: 97299059e2c5464080270c14caf4d18f
+      - ElementName: SFX
+        ObjectType: 4
+        guid: 4707e0fe73644d47bfbe6a2a7e380574
+      - ElementName: Play_SFX_04
+        ObjectType: 3
+        guid: 17be23903232a949a44f90471653601e
+      Path: Events\Default Work Unit\Lorikeet\SFX\Play_SFX_04
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_SFX_05
+      guid: 252f799b3401524c848c9bd4dcba24d8
+      id: 3257337843
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Magpie
+        ObjectType: 4
+        guid: 0edb2d9865b96c4188fbc461f95a4061
+      - ElementName: SFX
+        ObjectType: 4
+        guid: 55c96a76d8a8354dad87966bf5b9d997
+      - ElementName: Play_SFX_05
+        ObjectType: 3
+        guid: 252f799b3401524c848c9bd4dcba24d8
+      Path: Events\Default Work Unit\Magpie\SFX\Play_SFX_05
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_SFX_06
+      guid: f938b712cdcaf44189f75cc54d661c5c
+      id: 3257337840
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Possum
+        ObjectType: 4
+        guid: 22ef0a7340e72044baf0eb8807362586
+      - ElementName: SFX
+        ObjectType: 4
+        guid: 0e5594f89b38114ea9c24ca064971a55
+      - ElementName: Play_SFX_06
+        ObjectType: 3
+        guid: f938b712cdcaf44189f75cc54d661c5c
+      Path: Events\Default Work Unit\Possum\SFX\Play_SFX_06
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_SFX_Cricket
+      guid: 347b01adf7f39c4db4a570050026300e
+      id: 3568461127
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: SFX
+        ObjectType: 4
+        guid: 9e3dc77414655840a6a1a406ef32d278
+      - ElementName: Play_SFX_Cricket
+        ObjectType: 3
+        guid: 347b01adf7f39c4db4a570050026300e
+      Path: Events\Default Work Unit\SFX\Play_SFX_Cricket
+      maxAttenuation: 100
+      maxDuration: 0.75
+      minDuration: 0.75
+    - name: Play_SFX_Crickets
+      guid: ef0fff8205b25b4b834fe5c19ea9342d
+      id: 466972342
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Atmos
+        ObjectType: 4
+        guid: 996538f598acf543a6be5d9be8d02d61
+      - ElementName: Play_SFX_Crickets
+        ObjectType: 3
+        guid: ef0fff8205b25b4b834fe5c19ea9342d
+      Path: Events\Default Work Unit\Atmos\Play_SFX_Crickets
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_SFX_Sunroot_Tree
+      guid: 991aa51227bdca4eb47a8b6cfc40d1d3
+      id: 2907169251
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: SFX
+        ObjectType: 4
+        guid: 9e3dc77414655840a6a1a406ef32d278
+      - ElementName: Play_SFX_Sunroot_Tree
+        ObjectType: 3
+        guid: 991aa51227bdca4eb47a8b6cfc40d1d3
+      Path: Events\Default Work Unit\SFX\Play_SFX_Sunroot_Tree
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_SFX_Wings_flap
+      guid: 3d529b200d36504994f794be1bc42bef
+      id: 2000475864
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: SFX
+        ObjectType: 4
+        guid: 9e3dc77414655840a6a1a406ef32d278
+      - ElementName: Play_SFX_Wings_flap
+        ObjectType: 3
+        guid: 3d529b200d36504994f794be1bc42bef
+      Path: Events\Default Work Unit\SFX\Play_SFX_Wings_flap
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_SFX_Wood_Fence_mono
+      guid: b4f85e5921736a45a7d759f7d399baf1
+      id: 61543571
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: SFX
+        ObjectType: 4
+        guid: 9e3dc77414655840a6a1a406ef32d278
+      - ElementName: Play_SFX_Wood_Fence_mono
+        ObjectType: 3
+        guid: b4f85e5921736a45a7d759f7d399baf1
+      Path: Events\Default Work Unit\SFX\Play_SFX_Wood_Fence_mono
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Stream_Night
+      guid: 376dd914e5a6ea47bf8a59eee33dc91a
+      id: 101803377
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Atmos
+        ObjectType: 4
+        guid: 996538f598acf543a6be5d9be8d02d61
+      - ElementName: Play_Stream_Night
+        ObjectType: 3
+        guid: 376dd914e5a6ea47bf8a59eee33dc91a
+      Path: Events\Default Work Unit\Atmos\Play_Stream_Night
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_UI__Menu_Select
+      guid: fc4b9a6da87c674c9a9e17a39f43c80a
+      id: 3051820782
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: UI
+        ObjectType: 4
+        guid: f1a6468f8175474e8ef5b68bf1e8c23e
+      - ElementName: Play_UI__Menu_Select
+        ObjectType: 3
+        guid: fc4b9a6da87c674c9a9e17a39f43c80a
+      Path: Events\Default Work Unit\UI\Play_UI__Menu_Select
+      maxAttenuation: 0
+      maxDuration: 1.375
+      minDuration: 1.375
+    - name: Play_UI__Photo_Discard
+      guid: b05a158e0fce634dbb0931bc80158200
+      id: 149110613
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: UI
+        ObjectType: 4
+        guid: f1a6468f8175474e8ef5b68bf1e8c23e
+      - ElementName: Play_UI__Photo_Discard
+        ObjectType: 3
+        guid: b05a158e0fce634dbb0931bc80158200
+      Path: Events\Default Work Unit\UI\Play_UI__Photo_Discard
+      maxAttenuation: 0
+      maxDuration: 1.25
+      minDuration: 1.25
+    - name: Play_UI__Photo_Discard_01
+      guid: dea2c59ece29804ca96c35ab3a4367f6
+      id: 1906151857
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: UI
+        ObjectType: 4
+        guid: f1a6468f8175474e8ef5b68bf1e8c23e
+      - ElementName: Play_UI__Photo_Discard_01
+        ObjectType: 3
+        guid: dea2c59ece29804ca96c35ab3a4367f6
+      Path: Events\Default Work Unit\UI\Play_UI__Photo_Discard_01
+      maxAttenuation: 0
+      maxDuration: 1.25
+      minDuration: 1.25
+    - name: Play_UI__Photo_Keep
+      guid: c13af43fb2d48d4ba1eeb9387f242b9e
+      id: 1217678326
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: UI
+        ObjectType: 4
+        guid: f1a6468f8175474e8ef5b68bf1e8c23e
+      - ElementName: Play_UI__Photo_Keep
+        ObjectType: 3
+        guid: c13af43fb2d48d4ba1eeb9387f242b9e
+      Path: Events\Default Work Unit\UI\Play_UI__Photo_Keep
+      maxAttenuation: 0
+      maxDuration: 1.375
+      minDuration: 1.375
+    - name: Play_UI__Photo_Keep_01
+      guid: 6d65bcad0f0f0f44bbd49ab60768a97c
+      id: 959936644
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: UI
+        ObjectType: 4
+        guid: f1a6468f8175474e8ef5b68bf1e8c23e
+      - ElementName: Play_UI__Photo_Keep_01
+        ObjectType: 3
+        guid: 6d65bcad0f0f0f44bbd49ab60768a97c
+      Path: Events\Default Work Unit\UI\Play_UI__Photo_Keep_01
+      maxAttenuation: 0
+      maxDuration: 1.375
+      minDuration: 1.375
+    - name: Play_Walla
+      guid: 0d2a74838b16464d9d91571a5ae4cdaa
+      id: 562855495
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Cockatoo
+        ObjectType: 4
+        guid: 2eadf1ec1570cf40a144f5c70dd3c982
+      - ElementName: Walla
+        ObjectType: 4
+        guid: aa1471c71a30ff4dbe28ed2a0d5587ec
+      - ElementName: Play_Walla
+        ObjectType: 3
+        guid: 0d2a74838b16464d9d91571a5ae4cdaa
+      Path: Events\Default Work Unit\Cockatoo\Walla\Play_Walla
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Walla_01
+      guid: ad8cff129667904d944a9e312d480455
+      id: 1137965771
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Kookaburra
+        ObjectType: 4
+        guid: c60b9f1e5805154bbba6a00a9968b845
+      - ElementName: Walla
+        ObjectType: 4
+        guid: 440bfbd14559224b850a79ba50e58017
+      - ElementName: Play_Walla_01
+        ObjectType: 3
+        guid: ad8cff129667904d944a9e312d480455
+      Path: Events\Default Work Unit\Kookaburra\Walla\Play_Walla_01
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Walla_02
+      guid: 79fcb543e34364479447f2c67037f502
+      id: 1137965768
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Lorikeet
+        ObjectType: 4
+        guid: 97299059e2c5464080270c14caf4d18f
+      - ElementName: Walla
+        ObjectType: 4
+        guid: 598d165e3d07df439e78af559121cfed
+      - ElementName: Play_Walla_02
+        ObjectType: 3
+        guid: 79fcb543e34364479447f2c67037f502
+      Path: Events\Default Work Unit\Lorikeet\Walla\Play_Walla_02
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Walla_03
+      guid: 960d370dd2a26a4ba391de8d0d8d7809
+      id: 1137965769
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Magpie
+        ObjectType: 4
+        guid: 0edb2d9865b96c4188fbc461f95a4061
+      - ElementName: Walla
+        ObjectType: 4
+        guid: 8dec63df7fa2bf498714cfe5df5fd9a8
+      - ElementName: Play_Walla_03
+        ObjectType: 3
+        guid: 960d370dd2a26a4ba391de8d0d8d7809
+      Path: Events\Default Work Unit\Magpie\Walla\Play_Walla_03
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Walla_04
+      guid: 9c03c443f928a74eb2c363d3bd784e50
+      id: 1137965774
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Possum
+        ObjectType: 4
+        guid: 22ef0a7340e72044baf0eb8807362586
+      - ElementName: Walla
+        ObjectType: 4
+        guid: 4ea9b4f891169d4789550eaa4e570dff
+      - ElementName: Play_Walla_04
+        ObjectType: 3
+        guid: 9c03c443f928a74eb2c363d3bd784e50
+      Path: Events\Default Work Unit\Possum\Walla\Play_Walla_04
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Water_Stream_Footsteps
+      guid: 1cb748d6c45f3d41b84f6e7d3aeb613d
+      id: 1052829374
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Foley
+        ObjectType: 4
+        guid: 0cd9a71cf5098641a6ed2d00d7a4000d
+      - ElementName: Play_Water_Stream_Footsteps
+        ObjectType: 3
+        guid: 1cb748d6c45f3d41b84f6e7d3aeb613d
+      Path: Events\Default Work Unit\Foley\Play_Water_Stream_Footsteps
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Wombat_Chatter
+      guid: 38f70900fe2d224fa26f07fd7e1cab63
+      id: 2355898552
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Wombat
+        ObjectType: 4
+        guid: cd2e7c06381cfc4e89f9cb73d0848c44
+      - ElementName: Play_Wombat_Chatter
+        ObjectType: 3
+        guid: 38f70900fe2d224fa26f07fd7e1cab63
+      Path: Events\Default Work Unit\Wombat\Play_Wombat_Chatter
+      maxAttenuation: 100
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Wombat_Eating
+      guid: 7a05d55513111a41a4e97db3ac7656b1
+      id: 758826763
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Wombat
+        ObjectType: 4
+        guid: cd2e7c06381cfc4e89f9cb73d0848c44
+      - ElementName: Play_Wombat_Eating
+        ObjectType: 3
+        guid: 7a05d55513111a41a4e97db3ac7656b1
+      Path: Events\Default Work Unit\Wombat\Play_Wombat_Eating
+      maxAttenuation: 100
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_wombat_walla_01_stereo
+      guid: c33ed7f54ec08b4d917841590e5cc94d
+      id: 499011499
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Wombat
+        ObjectType: 4
+        guid: cd2e7c06381cfc4e89f9cb73d0848c44
+      - ElementName: Walla
+        ObjectType: 4
+        guid: 08044a9785b05f4c933d92af03e7199f
+      - ElementName: Play_wombat_walla_01_stereo
+        ObjectType: 3
+        guid: c33ed7f54ec08b4d917841590e5cc94d
+      Path: Events\Default Work Unit\Wombat\Walla\Play_wombat_walla_01_stereo
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Possum
+      guid: 22ef0a7340e72044baf0eb8807362586
+      id: 712176942
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Possum
+        ObjectType: 4
+        guid: 22ef0a7340e72044baf0eb8807362586
+      Path: Events\Default Work Unit\Possum
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: SFX
+      guid: 62def5233c6a764e99c23bbd5e43d6a5
+      id: 393239870
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Ibis
+        ObjectType: 4
+        guid: 2b3fd83a1605c045a445bdc1483010cd
+      - ElementName: SFX
+        ObjectType: 4
+        guid: 62def5233c6a764e99c23bbd5e43d6a5
+      Path: Events\Default Work Unit\Ibis\SFX
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: SFX
+      guid: 0e5594f89b38114ea9c24ca064971a55
+      id: 393239870
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Possum
+        ObjectType: 4
+        guid: 22ef0a7340e72044baf0eb8807362586
+      - ElementName: SFX
+        ObjectType: 4
+        guid: 0e5594f89b38114ea9c24ca064971a55
+      Path: Events\Default Work Unit\Possum\SFX
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: SFX
+      guid: 9e3dc77414655840a6a1a406ef32d278
+      id: 393239870
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: SFX
+        ObjectType: 4
+        guid: 9e3dc77414655840a6a1a406ef32d278
+      Path: Events\Default Work Unit\SFX
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: SFX
+      guid: 97017c477f7d3f4ea33e013d79c0e513
+      id: 393239870
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Kookaburra
+        ObjectType: 4
+        guid: c60b9f1e5805154bbba6a00a9968b845
+      - ElementName: SFX
+        ObjectType: 4
+        guid: 97017c477f7d3f4ea33e013d79c0e513
+      Path: Events\Default Work Unit\Kookaburra\SFX
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: SFX
+      guid: 4dcd359fbce3c949acc05dcabe0cd83c
+      id: 393239870
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Koala
+        ObjectType: 4
+        guid: e0ec340731d608448a027ab855a5d91e
+      - ElementName: SFX
+        ObjectType: 4
+        guid: 4dcd359fbce3c949acc05dcabe0cd83c
+      Path: Events\Default Work Unit\Koala\SFX
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: SFX
+      guid: 4707e0fe73644d47bfbe6a2a7e380574
+      id: 393239870
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Lorikeet
+        ObjectType: 4
+        guid: 97299059e2c5464080270c14caf4d18f
+      - ElementName: SFX
+        ObjectType: 4
+        guid: 4707e0fe73644d47bfbe6a2a7e380574
+      Path: Events\Default Work Unit\Lorikeet\SFX
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: SFX
+      guid: b980be14072fcd44b4adb6888b3250ad
+      id: 393239870
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Cockatoo
+        ObjectType: 4
+        guid: 2eadf1ec1570cf40a144f5c70dd3c982
+      - ElementName: SFX
+        ObjectType: 4
+        guid: b980be14072fcd44b4adb6888b3250ad
+      Path: Events\Default Work Unit\Cockatoo\SFX
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: SFX
+      guid: 55c96a76d8a8354dad87966bf5b9d997
+      id: 393239870
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Magpie
+        ObjectType: 4
+        guid: 0edb2d9865b96c4188fbc461f95a4061
+      - ElementName: SFX
+        ObjectType: 4
+        guid: 55c96a76d8a8354dad87966bf5b9d997
+      Path: Events\Default Work Unit\Magpie\SFX
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop_Atmos_Beach_Rain_01
+      guid: 4bec42d29ee0c7448f5d9148200327b5
+      id: 3613152823
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Atmos
+        ObjectType: 4
+        guid: 996538f598acf543a6be5d9be8d02d61
+      - ElementName: Stop_Atmos_Beach_Rain_01
+        ObjectType: 3
+        guid: 4bec42d29ee0c7448f5d9148200327b5
+      Path: Events\Default Work Unit\Atmos\Stop_Atmos_Beach_Rain_01
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop_Atmos_Beach_Wind_Gentle_
+      guid: 09b6843a8faa874e835ab2f679b20e61
+      id: 2003737076
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Atmos
+        ObjectType: 4
+        guid: 996538f598acf543a6be5d9be8d02d61
+      - ElementName: Stop_Atmos_Beach_Wind_Gentle_
+        ObjectType: 3
+        guid: 09b6843a8faa874e835ab2f679b20e61
+      Path: Events\Default Work Unit\Atmos\Stop_Atmos_Beach_Wind_Gentle_
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop_Atmos_Cave_01
+      guid: 243cec8bcfcdbf4f84746304a2d93562
+      id: 4282660668
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Atmos
+        ObjectType: 4
+        guid: 996538f598acf543a6be5d9be8d02d61
+      - ElementName: Stop_Atmos_Cave_01
+        ObjectType: 3
+        guid: 243cec8bcfcdbf4f84746304a2d93562
+      Path: Events\Default Work Unit\Atmos\Stop_Atmos_Cave_01
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop_Atmos_Cave_Wind_Gentle
+      guid: 69c07b8ebffdc544b17f76b5c23108b6
+      id: 528237445
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Atmos
+        ObjectType: 4
+        guid: 996538f598acf543a6be5d9be8d02d61
+      - ElementName: Stop_Atmos_Cave_Wind_Gentle
+        ObjectType: 3
+        guid: 69c07b8ebffdc544b17f76b5c23108b6
+      Path: Events\Default Work Unit\Atmos\Stop_Atmos_Cave_Wind_Gentle
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop_Atmos_Mountain_Night_01
+      guid: 014e802610883e4d9266512ad0e8d64e
+      id: 1341407327
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Atmos
+        ObjectType: 4
+        guid: 996538f598acf543a6be5d9be8d02d61
+      - ElementName: Stop_Atmos_Mountain_Night_01
+        ObjectType: 3
+        guid: 014e802610883e4d9266512ad0e8d64e
+      Path: Events\Default Work Unit\Atmos\Stop_Atmos_Mountain_Night_01
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop_Atmos_Mountain_Rain_01
+      guid: 07df2d1cb8c61a4c9d2e78eff89d5ee2
+      id: 2866427997
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Atmos
+        ObjectType: 4
+        guid: 996538f598acf543a6be5d9be8d02d61
+      - ElementName: Stop_Atmos_Mountain_Rain_01
+        ObjectType: 3
+        guid: 07df2d1cb8c61a4c9d2e78eff89d5ee2
+      Path: Events\Default Work Unit\Atmos\Stop_Atmos_Mountain_Rain_01
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop_Atmos_Ocean_Night_01
+      guid: d4b89cd07cf06a4c9f822765260d5258
+      id: 3353609564
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Atmos
+        ObjectType: 4
+        guid: 996538f598acf543a6be5d9be8d02d61
+      - ElementName: Stop_Atmos_Ocean_Night_01
+        ObjectType: 3
+        guid: d4b89cd07cf06a4c9f822765260d5258
+      Path: Events\Default Work Unit\Atmos\Stop_Atmos_Ocean_Night_01
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop_Atmos_Plains_Night_01
+      guid: a9e56d55a4a95c45884808acfc50f652
+      id: 2250174917
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Atmos
+        ObjectType: 4
+        guid: 996538f598acf543a6be5d9be8d02d61
+      - ElementName: Stop_Atmos_Plains_Night_01
+        ObjectType: 3
+        guid: a9e56d55a4a95c45884808acfc50f652
+      Path: Events\Default Work Unit\Atmos\Stop_Atmos_Plains_Night_01
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop_Atmos_Plains_Rain_01
+      guid: c6805ddf276bfd46b1056bf4eb12ed46
+      id: 1940187927
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Atmos
+        ObjectType: 4
+        guid: 996538f598acf543a6be5d9be8d02d61
+      - ElementName: Stop_Atmos_Plains_Rain_01
+        ObjectType: 3
+        guid: c6805ddf276bfd46b1056bf4eb12ed46
+      Path: Events\Default Work Unit\Atmos\Stop_Atmos_Plains_Rain_01
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop_Atmos_Plains_Scrub_Wind_Gentle_
+      guid: 0ea5455039ede8459043e2f8d533e3eb
+      id: 2006226368
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Atmos
+        ObjectType: 4
+        guid: 996538f598acf543a6be5d9be8d02d61
+      - ElementName: Stop_Atmos_Plains_Scrub_Wind_Gentle_
+        ObjectType: 3
+        guid: 0ea5455039ede8459043e2f8d533e3eb
+      Path: Events\Default Work Unit\Atmos\Stop_Atmos_Plains_Scrub_Wind_Gentle_
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop_Atmos_Stream
+      guid: 698e0c8bf9d9294ba6dad797a89792d3
+      id: 2358452373
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Atmos
+        ObjectType: 4
+        guid: 996538f598acf543a6be5d9be8d02d61
+      - ElementName: Stop_Atmos_Stream
+        ObjectType: 3
+        guid: 698e0c8bf9d9294ba6dad797a89792d3
+      Path: Events\Default Work Unit\Atmos\Stop_Atmos_Stream
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop_Atmos_Stream_Rain_01
+      guid: 93dc1f06efdb7545929959c2f012d31e
+      id: 879117416
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Atmos
+        ObjectType: 4
+        guid: 996538f598acf543a6be5d9be8d02d61
+      - ElementName: Stop_Atmos_Stream_Rain_01
+        ObjectType: 3
+        guid: 93dc1f06efdb7545929959c2f012d31e
+      Path: Events\Default Work Unit\Atmos\Stop_Atmos_Stream_Rain_01
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop_Beach_Footsteps
+      guid: 4ecec360ee42e04eb1549a29714d1cda
+      id: 3816525321
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Foley
+        ObjectType: 4
+        guid: 0cd9a71cf5098641a6ed2d00d7a4000d
+      - ElementName: Stop_Beach_Footsteps
+        ObjectType: 3
+        guid: 4ecec360ee42e04eb1549a29714d1cda
+      Path: Events\Default Work Unit\Foley\Stop_Beach_Footsteps
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop_Beach_Waves
+      guid: 5e043a9d31648a45afea49afc2c88318
+      id: 2777396158
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Atmos
+        ObjectType: 4
+        guid: 996538f598acf543a6be5d9be8d02d61
+      - ElementName: Stop_Beach_Waves
+        ObjectType: 3
+        guid: 5e043a9d31648a45afea49afc2c88318
+      Path: Events\Default Work Unit\Atmos\Stop_Beach_Waves
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop_Forest
+      guid: 737f9f3a3a088147b7dc862fd3cce7cd
+      id: 1085006091
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Atmos
+        ObjectType: 4
+        guid: 996538f598acf543a6be5d9be8d02d61
+      - ElementName: Stop_Forest
+        ObjectType: 3
+        guid: 737f9f3a3a088147b7dc862fd3cce7cd
+      Path: Events\Default Work Unit\Atmos\Stop_Forest
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop_Forest_01
+      guid: 5bdb82e2c20c2244aa7a982dc2b1b775
+      id: 938598783
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: SFX
+        ObjectType: 4
+        guid: 9e3dc77414655840a6a1a406ef32d278
+      - ElementName: Stop_Forest_01
+        ObjectType: 3
+        guid: 5bdb82e2c20c2244aa7a982dc2b1b775
+      Path: Events\Default Work Unit\SFX\Stop_Forest_01
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop_Forest_Footsteps
+      guid: 99f4f4d839ee124f95cb247f50c6b579
+      id: 3075444475
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Foley
+        ObjectType: 4
+        guid: 0cd9a71cf5098641a6ed2d00d7a4000d
+      - ElementName: Stop_Forest_Footsteps
+        ObjectType: 3
+        guid: 99f4f4d839ee124f95cb247f50c6b579
+      Path: Events\Default Work Unit\Foley\Stop_Forest_Footsteps
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop_Forest_Night
+      guid: b81c83b5d3ec744597d51fdff80960e6
+      id: 4203364660
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Atmos
+        ObjectType: 4
+        guid: 996538f598acf543a6be5d9be8d02d61
+      - ElementName: Stop_Forest_Night
+        ObjectType: 3
+        guid: b81c83b5d3ec744597d51fdff80960e6
+      Path: Events\Default Work Unit\Atmos\Stop_Forest_Night
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop_Forest_Rain
+      guid: 1dd64f6ad3fdc94c89cf746cc28be3d8
+      id: 3324295176
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Atmos
+        ObjectType: 4
+        guid: 996538f598acf543a6be5d9be8d02d61
+      - ElementName: Stop_Forest_Rain
+        ObjectType: 3
+        guid: 1dd64f6ad3fdc94c89cf746cc28be3d8
+      Path: Events\Default Work Unit\Atmos\Stop_Forest_Rain
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop_FTS_Beach_Jump
+      guid: 15937ca532dace49b1495a6119242c19
+      id: 2763739948
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Foley
+        ObjectType: 4
+        guid: 0cd9a71cf5098641a6ed2d00d7a4000d
+      - ElementName: Stop_FTS_Beach_Jump
+        ObjectType: 3
+        guid: 15937ca532dace49b1495a6119242c19
+      Path: Events\Default Work Unit\Foley\Stop_FTS_Beach_Jump
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop_FTS_Beach_Land
+      guid: 4c79869394c057449424d666a39a6eb4
+      id: 1629181519
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Foley
+        ObjectType: 4
+        guid: 0cd9a71cf5098641a6ed2d00d7a4000d
+      - ElementName: Stop_FTS_Beach_Land
+        ObjectType: 3
+        guid: 4c79869394c057449424d666a39a6eb4
+      Path: Events\Default Work Unit\Foley\Stop_FTS_Beach_Land
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop_FTS_Forest_Jump
+      guid: 43cc1f8ecc89ac4fbd24e95d8732545a
+      id: 4059673026
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Foley
+        ObjectType: 4
+        guid: 0cd9a71cf5098641a6ed2d00d7a4000d
+      - ElementName: Stop_FTS_Forest_Jump
+        ObjectType: 3
+        guid: 43cc1f8ecc89ac4fbd24e95d8732545a
+      Path: Events\Default Work Unit\Foley\Stop_FTS_Forest_Jump
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop_FTS_Forest_Land
+      guid: edb367ff33837240915325ee7c1e52e8
+      id: 939322309
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Foley
+        ObjectType: 4
+        guid: 0cd9a71cf5098641a6ed2d00d7a4000d
+      - ElementName: Stop_FTS_Forest_Land
+        ObjectType: 3
+        guid: edb367ff33837240915325ee7c1e52e8
+      Path: Events\Default Work Unit\Foley\Stop_FTS_Forest_Land
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop_FTS_Jump
+      guid: bf87f9f900379a4a9d583eed2746dffe
+      id: 4228661432
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Foley
+        ObjectType: 4
+        guid: 0cd9a71cf5098641a6ed2d00d7a4000d
+      - ElementName: Stop_FTS_Jump
+        ObjectType: 3
+        guid: bf87f9f900379a4a9d583eed2746dffe
+      Path: Events\Default Work Unit\Foley\Stop_FTS_Jump
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop_FTS_Land
+      guid: 414af04379bd5e4cbc5168930c3292dc
+      id: 1366537843
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Foley
+        ObjectType: 4
+        guid: 0cd9a71cf5098641a6ed2d00d7a4000d
+      - ElementName: Stop_FTS_Land
+        ObjectType: 3
+        guid: 414af04379bd5e4cbc5168930c3292dc
+      Path: Events\Default Work Unit\Foley\Stop_FTS_Land
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop_FTS_PlnScrb_Jump
+      guid: 9fcd32523bc97c48bf9c26eedb216e98
+      id: 842559275
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Foley
+        ObjectType: 4
+        guid: 0cd9a71cf5098641a6ed2d00d7a4000d
+      - ElementName: Stop_FTS_PlnScrb_Jump
+        ObjectType: 3
+        guid: 9fcd32523bc97c48bf9c26eedb216e98
+      Path: Events\Default Work Unit\Foley\Stop_FTS_PlnScrb_Jump
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop_FTS_PlnScrb_Land
+      guid: e8e5052c3f526946a209802522ba3002
+      id: 3963013128
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Foley
+        ObjectType: 4
+        guid: 0cd9a71cf5098641a6ed2d00d7a4000d
+      - ElementName: Stop_FTS_PlnScrb_Land
+        ObjectType: 3
+        guid: e8e5052c3f526946a209802522ba3002
+      Path: Events\Default Work Unit\Foley\Stop_FTS_PlnScrb_Land
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop_FTS_Rock_Jump
+      guid: b1e05fc85bc34648a69847b6062f8502
+      id: 3252289226
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Foley
+        ObjectType: 4
+        guid: 0cd9a71cf5098641a6ed2d00d7a4000d
+      - ElementName: Stop_FTS_Rock_Jump
+        ObjectType: 3
+        guid: b1e05fc85bc34648a69847b6062f8502
+      Path: Events\Default Work Unit\Foley\Stop_FTS_Rock_Jump
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop_FTS_Rock_Land
+      guid: b74c05f9324c7a488f3563bbf0f51253
+      id: 3890021933
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Foley
+        ObjectType: 4
+        guid: 0cd9a71cf5098641a6ed2d00d7a4000d
+      - ElementName: Stop_FTS_Rock_Land
+        ObjectType: 3
+        guid: b74c05f9324c7a488f3563bbf0f51253
+      Path: Events\Default Work Unit\Foley\Stop_FTS_Rock_Land
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop_FTS_Water_Jump
+      guid: 2310692068d3a7478246d24b38947193
+      id: 2446787112
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Foley
+        ObjectType: 4
+        guid: 0cd9a71cf5098641a6ed2d00d7a4000d
+      - ElementName: Stop_FTS_Water_Jump
+        ObjectType: 3
+        guid: 2310692068d3a7478246d24b38947193
+      Path: Events\Default Work Unit\Foley\Stop_FTS_Water_Jump
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop_FTS_Water_Land
+      guid: 8cc3262b942c0448960e7828c32b799c
+      id: 653105123
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Foley
+        ObjectType: 4
+        guid: 0cd9a71cf5098641a6ed2d00d7a4000d
+      - ElementName: Stop_FTS_Water_Land
+        ObjectType: 3
+        guid: 8cc3262b942c0448960e7828c32b799c
+      Path: Events\Default Work Unit\Foley\Stop_FTS_Water_Land
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop_Gecko
+      guid: 509acda2793dc44e9572b142d0d484d9
+      id: 1086064737
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: SFX
+        ObjectType: 4
+        guid: 9e3dc77414655840a6a1a406ef32d278
+      - ElementName: Stop_Gecko
+        ObjectType: 3
+        guid: 509acda2793dc44e9572b142d0d484d9
+      Path: Events\Default Work Unit\SFX\Stop_Gecko
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop_Generic_Footsteps
+      guid: 9599d2cd89e2a648a4a547c1e964a900
+      id: 252560463
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Foley
+        ObjectType: 4
+        guid: 0cd9a71cf5098641a6ed2d00d7a4000d
+      - ElementName: Stop_Generic_Footsteps
+        ObjectType: 3
+        guid: 9599d2cd89e2a648a4a547c1e964a900
+      Path: Events\Default Work Unit\Foley\Stop_Generic_Footsteps
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop_ibis_walla_01_stereo
+      guid: e84c7450fb01d24295fa2844d45f253b
+      id: 73987256
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Ibis
+        ObjectType: 4
+        guid: 2b3fd83a1605c045a445bdc1483010cd
+      - ElementName: Walla
+        ObjectType: 4
+        guid: ad38fa71d044e542acddefa453207651
+      - ElementName: Stop_ibis_walla_01_stereo
+        ObjectType: 3
+        guid: e84c7450fb01d24295fa2844d45f253b
+      Path: Events\Default Work Unit\Ibis\Walla\Stop_ibis_walla_01_stereo
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop_koala_walla_01_stereo
+      guid: 88adfca585e3e0479f1be7cf6aad75dc
+      id: 1183164895
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Koala
+        ObjectType: 4
+        guid: e0ec340731d608448a027ab855a5d91e
+      - ElementName: Walla
+        ObjectType: 4
+        guid: 9a6f6af2756e1043b816715443e8f76a
+      - ElementName: Stop_koala_walla_01_stereo
+        ObjectType: 3
+        guid: 88adfca585e3e0479f1be7cf6aad75dc
+      Path: Events\Default Work Unit\Koala\Walla\Stop_koala_walla_01_stereo
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop_Mountain
+      guid: 68c2c0e044b4884d9bc35d60d1c84aa8
+      id: 46972289
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Atmos
+        ObjectType: 4
+        guid: 996538f598acf543a6be5d9be8d02d61
+      - ElementName: Stop_Mountain
+        ObjectType: 3
+        guid: 68c2c0e044b4884d9bc35d60d1c84aa8
+      Path: Events\Default Work Unit\Atmos\Stop_Mountain
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop_Mountain_Rock_Footsteps
+      guid: 8ca8d857e1a91045a24890aa9b6003f9
+      id: 1637281791
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Foley
+        ObjectType: 4
+        guid: 0cd9a71cf5098641a6ed2d00d7a4000d
+      - ElementName: Stop_Mountain_Rock_Footsteps
+        ObjectType: 3
+        guid: 8ca8d857e1a91045a24890aa9b6003f9
+      Path: Events\Default Work Unit\Foley\Stop_Mountain_Rock_Footsteps
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop_Mountain_Wind
+      guid: c94ca45cb0daa947a5faf98b18982f21
+      id: 2383935630
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Atmos
+        ObjectType: 4
+        guid: 996538f598acf543a6be5d9be8d02d61
+      - ElementName: Stop_Mountain_Wind
+        ObjectType: 3
+        guid: c94ca45cb0daa947a5faf98b18982f21
+      Path: Events\Default Work Unit\Atmos\Stop_Mountain_Wind
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop_Plains_Scrub_Footsteps
+      guid: b2a4844bf4e1d547b9ca0cb3a6a2f47e
+      id: 3120313695
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Foley
+        ObjectType: 4
+        guid: 0cd9a71cf5098641a6ed2d00d7a4000d
+      - ElementName: Stop_Plains_Scrub_Footsteps
+        ObjectType: 3
+        guid: b2a4844bf4e1d547b9ca0cb3a6a2f47e
+      Path: Events\Default Work Unit\Foley\Stop_Plains_Scrub_Footsteps
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop_Rubbish
+      guid: 4c93cc2ba707774bb1bc0f6231962c45
+      id: 1345196761
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: SFX
+        ObjectType: 4
+        guid: 9e3dc77414655840a6a1a406ef32d278
+      - ElementName: Stop_Rubbish
+        ObjectType: 3
+        guid: 4c93cc2ba707774bb1bc0f6231962c45
+      Path: Events\Default Work Unit\SFX\Stop_Rubbish
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop_SFX
+      guid: 1d6ef80f989b6c489b127e4319663068
+      id: 287728669
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Cockatoo
+        ObjectType: 4
+        guid: 2eadf1ec1570cf40a144f5c70dd3c982
+      - ElementName: SFX
+        ObjectType: 4
+        guid: b980be14072fcd44b4adb6888b3250ad
+      - ElementName: Stop_SFX
+        ObjectType: 3
+        guid: 1d6ef80f989b6c489b127e4319663068
+      Path: Events\Default Work Unit\Cockatoo\SFX\Stop_SFX
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop_SFX_01
+      guid: a728c5e533635041a46960cd923e3e93
+      id: 3440786873
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Ibis
+        ObjectType: 4
+        guid: 2b3fd83a1605c045a445bdc1483010cd
+      - ElementName: SFX
+        ObjectType: 4
+        guid: 62def5233c6a764e99c23bbd5e43d6a5
+      - ElementName: Stop_SFX_01
+        ObjectType: 3
+        guid: a728c5e533635041a46960cd923e3e93
+      Path: Events\Default Work Unit\Ibis\SFX\Stop_SFX_01
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop_SFX_02
+      guid: 5af86addcee85748a6eb4e1d122a7609
+      id: 3440786874
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Koala
+        ObjectType: 4
+        guid: e0ec340731d608448a027ab855a5d91e
+      - ElementName: SFX
+        ObjectType: 4
+        guid: 4dcd359fbce3c949acc05dcabe0cd83c
+      - ElementName: Stop_SFX_02
+        ObjectType: 3
+        guid: 5af86addcee85748a6eb4e1d122a7609
+      Path: Events\Default Work Unit\Koala\SFX\Stop_SFX_02
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop_SFX_03
+      guid: ddcbe882c85d8a49bd8e1ba13e1dda61
+      id: 3440786875
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Kookaburra
+        ObjectType: 4
+        guid: c60b9f1e5805154bbba6a00a9968b845
+      - ElementName: SFX
+        ObjectType: 4
+        guid: 97017c477f7d3f4ea33e013d79c0e513
+      - ElementName: Stop_SFX_03
+        ObjectType: 3
+        guid: ddcbe882c85d8a49bd8e1ba13e1dda61
+      Path: Events\Default Work Unit\Kookaburra\SFX\Stop_SFX_03
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop_SFX_04
+      guid: 60eaed0c7afd0948a76284da62ebe541
+      id: 3440786876
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Lorikeet
+        ObjectType: 4
+        guid: 97299059e2c5464080270c14caf4d18f
+      - ElementName: SFX
+        ObjectType: 4
+        guid: 4707e0fe73644d47bfbe6a2a7e380574
+      - ElementName: Stop_SFX_04
+        ObjectType: 3
+        guid: 60eaed0c7afd0948a76284da62ebe541
+      Path: Events\Default Work Unit\Lorikeet\SFX\Stop_SFX_04
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop_SFX_05
+      guid: 2cad0999ce8cd74fb99d66277e70a3ea
+      id: 3440786877
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Magpie
+        ObjectType: 4
+        guid: 0edb2d9865b96c4188fbc461f95a4061
+      - ElementName: SFX
+        ObjectType: 4
+        guid: 55c96a76d8a8354dad87966bf5b9d997
+      - ElementName: Stop_SFX_05
+        ObjectType: 3
+        guid: 2cad0999ce8cd74fb99d66277e70a3ea
+      Path: Events\Default Work Unit\Magpie\SFX\Stop_SFX_05
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop_SFX_06
+      guid: a5313381420c604fa597400435beea54
+      id: 3440786878
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Possum
+        ObjectType: 4
+        guid: 22ef0a7340e72044baf0eb8807362586
+      - ElementName: SFX
+        ObjectType: 4
+        guid: 0e5594f89b38114ea9c24ca064971a55
+      - ElementName: Stop_SFX_06
+        ObjectType: 3
+        guid: a5313381420c604fa597400435beea54
+      Path: Events\Default Work Unit\Possum\SFX\Stop_SFX_06
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop_SFX_Crickets
+      guid: 679a1e6eac0ec04facd0d30d62aba85c
+      id: 614443940
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Atmos
+        ObjectType: 4
+        guid: 996538f598acf543a6be5d9be8d02d61
+      - ElementName: Stop_SFX_Crickets
+        ObjectType: 3
+        guid: 679a1e6eac0ec04facd0d30d62aba85c
+      Path: Events\Default Work Unit\Atmos\Stop_SFX_Crickets
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop_SFX_Sunroot_Tree
+      guid: 40d5df2a3ff8bb429dc411a2c353362a
+      id: 2133724809
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: SFX
+        ObjectType: 4
+        guid: 9e3dc77414655840a6a1a406ef32d278
+      - ElementName: Stop_SFX_Sunroot_Tree
+        ObjectType: 3
+        guid: 40d5df2a3ff8bb429dc411a2c353362a
+      Path: Events\Default Work Unit\SFX\Stop_SFX_Sunroot_Tree
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop_SFX_Wings_flap
+      guid: 18d6d44c492f7345b600340a46d36d83
+      id: 1343601762
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: SFX
+        ObjectType: 4
+        guid: 9e3dc77414655840a6a1a406ef32d278
+      - ElementName: Stop_SFX_Wings_flap
+        ObjectType: 3
+        guid: 18d6d44c492f7345b600340a46d36d83
+      Path: Events\Default Work Unit\SFX\Stop_SFX_Wings_flap
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop_SFX_Wood_Fence_mono
+      guid: 712e1a69943bfd41beb1e6a7181d97e0
+      id: 1016090557
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: SFX
+        ObjectType: 4
+        guid: 9e3dc77414655840a6a1a406ef32d278
+      - ElementName: Stop_SFX_Wood_Fence_mono
+        ObjectType: 3
+        guid: 712e1a69943bfd41beb1e6a7181d97e0
+      Path: Events\Default Work Unit\SFX\Stop_SFX_Wood_Fence_mono
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop_Stream_Night
+      guid: 3ed26b03311bd14bb343988271e51e52
+      id: 3562520283
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Atmos
+        ObjectType: 4
+        guid: 996538f598acf543a6be5d9be8d02d61
+      - ElementName: Stop_Stream_Night
+        ObjectType: 3
+        guid: 3ed26b03311bd14bb343988271e51e52
+      Path: Events\Default Work Unit\Atmos\Stop_Stream_Night
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop_Walla
+      guid: 60542f68273e734abb5058f755f74432
+      id: 202704733
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Cockatoo
+        ObjectType: 4
+        guid: 2eadf1ec1570cf40a144f5c70dd3c982
+      - ElementName: SFX
+        ObjectType: 4
+        guid: b980be14072fcd44b4adb6888b3250ad
+      - ElementName: Stop_Walla
+        ObjectType: 3
+        guid: 60542f68273e734abb5058f755f74432
+      Path: Events\Default Work Unit\Cockatoo\SFX\Stop_Walla
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop_Walla_01
+      guid: c09d7939be3c1148b8c10e7e321f7cc5
+      id: 1466473721
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Kookaburra
+        ObjectType: 4
+        guid: c60b9f1e5805154bbba6a00a9968b845
+      - ElementName: Walla
+        ObjectType: 4
+        guid: 440bfbd14559224b850a79ba50e58017
+      - ElementName: Stop_Walla_01
+        ObjectType: 3
+        guid: c09d7939be3c1148b8c10e7e321f7cc5
+      Path: Events\Default Work Unit\Kookaburra\Walla\Stop_Walla_01
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop_Walla_02
+      guid: 906d40e6b81a964483e97e13cda4aa94
+      id: 1466473722
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Lorikeet
+        ObjectType: 4
+        guid: 97299059e2c5464080270c14caf4d18f
+      - ElementName: Walla
+        ObjectType: 4
+        guid: 598d165e3d07df439e78af559121cfed
+      - ElementName: Stop_Walla_02
+        ObjectType: 3
+        guid: 906d40e6b81a964483e97e13cda4aa94
+      Path: Events\Default Work Unit\Lorikeet\Walla\Stop_Walla_02
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop_Walla_03
+      guid: e8df37016a50be4fbd7321df2aa5cfbd
+      id: 1466473723
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Magpie
+        ObjectType: 4
+        guid: 0edb2d9865b96c4188fbc461f95a4061
+      - ElementName: Walla
+        ObjectType: 4
+        guid: 8dec63df7fa2bf498714cfe5df5fd9a8
+      - ElementName: Stop_Walla_03
+        ObjectType: 3
+        guid: e8df37016a50be4fbd7321df2aa5cfbd
+      Path: Events\Default Work Unit\Magpie\Walla\Stop_Walla_03
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop_Walla_04
+      guid: 8c0ed285ebd2cb44aa2a6033b02cacdc
+      id: 1466473724
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Possum
+        ObjectType: 4
+        guid: 22ef0a7340e72044baf0eb8807362586
+      - ElementName: Walla
+        ObjectType: 4
+        guid: 4ea9b4f891169d4789550eaa4e570dff
+      - ElementName: Stop_Walla_04
+        ObjectType: 3
+        guid: 8c0ed285ebd2cb44aa2a6033b02cacdc
+      Path: Events\Default Work Unit\Possum\Walla\Stop_Walla_04
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop_Water_Stream_Footsteps
+      guid: 1aaaa66a822a4c46b7cf2b1cbdaa3eff
+      id: 88953296
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Foley
+        ObjectType: 4
+        guid: 0cd9a71cf5098641a6ed2d00d7a4000d
+      - ElementName: Stop_Water_Stream_Footsteps
+        ObjectType: 3
+        guid: 1aaaa66a822a4c46b7cf2b1cbdaa3eff
+      Path: Events\Default Work Unit\Foley\Stop_Water_Stream_Footsteps
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop_Wombat_Chatter
+      guid: 3197ea7d549c1241b1d9e093f80f09ff
+      id: 2441382638
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Wombat
+        ObjectType: 4
+        guid: cd2e7c06381cfc4e89f9cb73d0848c44
+      - ElementName: Stop_Wombat_Chatter
+        ObjectType: 3
+        guid: 3197ea7d549c1241b1d9e093f80f09ff
+      Path: Events\Default Work Unit\Wombat\Stop_Wombat_Chatter
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_Wombat_Eating
+      guid: aac9c38c83ad8342ab884ca4cdc04b0b
+      id: 3487772253
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Wombat
+        ObjectType: 4
+        guid: cd2e7c06381cfc4e89f9cb73d0848c44
+      - ElementName: Stop_Wombat_Eating
+        ObjectType: 3
+        guid: aac9c38c83ad8342ab884ca4cdc04b0b
+      Path: Events\Default Work Unit\Wombat\Stop_Wombat_Eating
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_wombat_walla_01_stereo
+      guid: ff8ddbfbc39d24428d506c53a73f22a4
+      id: 2129048537
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Wombat
+        ObjectType: 4
+        guid: cd2e7c06381cfc4e89f9cb73d0848c44
+      - ElementName: Walla
+        ObjectType: 4
+        guid: 08044a9785b05f4c933d92af03e7199f
+      - ElementName: Stop_wombat_walla_01_stereo
+        ObjectType: 3
+        guid: ff8ddbfbc39d24428d506c53a73f22a4
+      Path: Events\Default Work Unit\Wombat\Walla\Stop_wombat_walla_01_stereo
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: UI
+      guid: f1a6468f8175474e8ef5b68bf1e8c23e
+      id: 1551306167
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: UI
+        ObjectType: 4
+        guid: f1a6468f8175474e8ef5b68bf1e8c23e
+      Path: Events\Default Work Unit\UI
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Walla
+      guid: 9a6f6af2756e1043b816715443e8f76a
+      id: 2538584666
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Koala
+        ObjectType: 4
+        guid: e0ec340731d608448a027ab855a5d91e
+      - ElementName: Walla
+        ObjectType: 4
+        guid: 9a6f6af2756e1043b816715443e8f76a
+      Path: Events\Default Work Unit\Koala\Walla
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Walla
+      guid: 598d165e3d07df439e78af559121cfed
+      id: 2538584666
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Lorikeet
+        ObjectType: 4
+        guid: 97299059e2c5464080270c14caf4d18f
+      - ElementName: Walla
+        ObjectType: 4
+        guid: 598d165e3d07df439e78af559121cfed
+      Path: Events\Default Work Unit\Lorikeet\Walla
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Walla
+      guid: 4ea9b4f891169d4789550eaa4e570dff
+      id: 2538584666
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Possum
+        ObjectType: 4
+        guid: 22ef0a7340e72044baf0eb8807362586
+      - ElementName: Walla
+        ObjectType: 4
+        guid: 4ea9b4f891169d4789550eaa4e570dff
+      Path: Events\Default Work Unit\Possum\Walla
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Walla
+      guid: ad38fa71d044e542acddefa453207651
+      id: 2538584666
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Ibis
+        ObjectType: 4
+        guid: 2b3fd83a1605c045a445bdc1483010cd
+      - ElementName: Walla
+        ObjectType: 4
+        guid: ad38fa71d044e542acddefa453207651
+      Path: Events\Default Work Unit\Ibis\Walla
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Walla
+      guid: 440bfbd14559224b850a79ba50e58017
+      id: 2538584666
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Kookaburra
+        ObjectType: 4
+        guid: c60b9f1e5805154bbba6a00a9968b845
+      - ElementName: Walla
+        ObjectType: 4
+        guid: 440bfbd14559224b850a79ba50e58017
+      Path: Events\Default Work Unit\Kookaburra\Walla
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Walla
+      guid: aa1471c71a30ff4dbe28ed2a0d5587ec
+      id: 2538584666
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Cockatoo
+        ObjectType: 4
+        guid: 2eadf1ec1570cf40a144f5c70dd3c982
+      - ElementName: Walla
+        ObjectType: 4
+        guid: aa1471c71a30ff4dbe28ed2a0d5587ec
+      Path: Events\Default Work Unit\Cockatoo\Walla
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Walla
+      guid: 8dec63df7fa2bf498714cfe5df5fd9a8
+      id: 2538584666
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Magpie
+        ObjectType: 4
+        guid: 0edb2d9865b96c4188fbc461f95a4061
+      - ElementName: Walla
+        ObjectType: 4
+        guid: 8dec63df7fa2bf498714cfe5df5fd9a8
+      Path: Events\Default Work Unit\Magpie\Walla
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Walla
+      guid: 08044a9785b05f4c933d92af03e7199f
+      id: 2538584666
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Wombat
+        ObjectType: 4
+        guid: cd2e7c06381cfc4e89f9cb73d0848c44
+      - ElementName: Walla
+        ObjectType: 4
+        guid: 08044a9785b05f4c933d92af03e7199f
+      Path: Events\Default Work Unit\Wombat\Walla
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Wombat
+      guid: cd2e7c06381cfc4e89f9cb73d0848c44
+      id: 1835908889
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Wombat
+        ObjectType: 4
+        guid: cd2e7c06381cfc4e89f9cb73d0848c44
+      Path: Events\Default Work Unit\Wombat
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
