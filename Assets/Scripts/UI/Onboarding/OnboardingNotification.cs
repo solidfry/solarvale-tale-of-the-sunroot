@@ -10,71 +10,89 @@ namespace UI.Onboarding
         [SerializeField] RectTransform rectTransform;
         [SerializeField] Image image;
         [SerializeField] float startOffset = 32;
-    
         [SerializeField] private Color pulseColor;
         
-        Sequence pulseSequence;
-    
-    
+        private Tween sizeTween;
+        private Tween colorTween;
+        private Tween fade;
+        private Tween sizeTweenShow;
+        private Tween hide;
+
         OnboardingNotificationRequest _request;
-    
-        public event Action OnNotificationComplete = delegate {  }; 
+
+        public event Action OnNotificationComplete = delegate { };
 
         public void Initialise(OnboardingNotificationRequest req)
         {
-            pulseSequence = DOTween.Sequence();
-
-            pulseSequence.Append(pulseSequence
-                .Append(
-                    rectTransform.DOSizeDelta(
-                        new Vector2(_request.Width + startOffset, _request.Height + startOffset),
-                        _request.Duration).SetEase(Ease.InOutCirc)
-                )
-                .Append(
-                    image.DOColor(_request.PulseColor, _request.Duration).SetEase(Ease.Linear)
-                )
-                .SetLoops(3, LoopType.Yoyo)
-                .OnComplete(Hide));
-            
             SetRequest(req);
+            
+            
+            rectTransform.anchoredPosition = _request.Position;
+            
+            rectTransform.sizeDelta = 
+                new Vector2(_request.Width + startOffset, _request.Height + startOffset);
+            
+            
+            
+            fade = image.DOFade(1, .5f).From(0).SetEase(Ease.Linear);
+
+            sizeTweenShow = rectTransform.DOSizeDelta(
+                new Vector2(_request.Width, _request.Height), .5f);
+
+
+            
+
+            hide = image.DOFade(0, 0.25f).SetEase(Ease.Linear);
+            
             Show();
         }
-    
+
         void SetRequest(OnboardingNotificationRequest req)
         {
             _request = req;
         }
-    
+
         void Show()
         {
-            rectTransform.anchoredPosition = _request.Position;
-            rectTransform.sizeDelta = new Vector2(_request.Width + startOffset, _request.Height + startOffset);
-            image.DOFade(1, .5f).From(0).SetEase(Ease.Linear);
-            rectTransform.DOSizeDelta(
-                    new Vector2(_request.Width, _request.Height), 
-                    .5f)
-                .SetEase(Ease.InOutCirc)
-                .OnComplete(Pulse);
+            var showSequence = DOTween.Sequence();
+            showSequence.Append(fade).Append(sizeTweenShow).SetEase(Ease.InOutCirc).OnComplete(Pulse);
+
+            Debug.Log("Showing notification");
+            showSequence.Play();
         }
-    
+
         void Pulse()
         {
-            pulseSequence.Play();
+            var pulseSequence = DOTween.Sequence();
+
+            sizeTween = rectTransform.DOSizeDelta(
+                    new Vector2(_request.Width + startOffset, _request.Height + startOffset), _request.Duration)
+                .SetEase(Ease.InOutCirc);
+            
+            colorTween = image.DOColor(_request.PulseColor, _request.Duration).SetEase(Ease.Linear);
+
+            pulseSequence
+                .Append(sizeTween)
+                .Append(colorTween).OnComplete(Hide).Play().SetLoops(3, LoopType.Yoyo);
+            Debug.Log("Pulsing notification");
         }
-    
+
         void Hide()
         {
-            image.DOFade(0, 0.25f).SetEase(Ease.Linear).OnComplete(() =>
+            Debug.Log("Hiding notification");
+            hide.OnComplete(() =>
             {
-                // pulseSequence.Kill();
                 OnNotificationComplete();
-            });
+            }).Play();
         }
 
         private void OnDestroy()
         {
-            if (pulseSequence.IsActive())
-                pulseSequence.Kill();
+            sizeTween?.Kill();
+            colorTween?.Kill();
+            fade?.Kill();
+            sizeTweenShow?.Kill();
+            hide?.Kill();
         }
     }
 }

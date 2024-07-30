@@ -10,6 +10,8 @@ namespace UI.Onboarding
         [SerializeField] OnboardingNotification onboardingNotificationPrefab;
         readonly Queue<OnboardingNotificationRequest> _onboardingQueue = new();
         
+        [SerializeField] List<OnboardingNotification> _onboardingNotifications = new();
+        
         OnboardingNotification _currentNotification;
         
         private void OnEnable()
@@ -37,27 +39,31 @@ namespace UI.Onboarding
         {
             var notification = _onboardingQueue.Peek();
             _currentNotification = Instantiate(onboardingNotificationPrefab, onboardingCanvas.transform);
+            _onboardingNotifications.Add(_currentNotification);
             _currentNotification.Initialise(notification);
             _currentNotification.OnNotificationComplete += OnNotificationComplete;
         }
 
         private void OnNotificationComplete()
         {
-            // _currentNotification.OnNotificationComplete -= OnNotificationComplete;
+            _currentNotification.OnNotificationComplete -= OnNotificationComplete;
             _onboardingQueue.Dequeue();
+            Destroy(_currentNotification.gameObject);
+            _onboardingNotifications.Remove(_currentNotification);
+            
+            _currentNotification = null;
             if (_onboardingQueue.Count > 0)
             {
                 ShowOnboardingNotification();
             }
-            Destroy(_currentNotification.gameObject);
-            _currentNotification = null;
+            
         }
         
         private void InterruptOnboarding()
         {
             // if (_currentNotification != null && _onboardingQueue.Count > 1)
-            if (_onboardingQueue.Count == 0) return;
-            OnNotificationComplete();
+            if (_currentNotification != null && _onboardingQueue.Count > 0)
+                OnNotificationComplete();
         }
     }
 }
