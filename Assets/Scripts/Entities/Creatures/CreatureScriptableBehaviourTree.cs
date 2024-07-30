@@ -1,6 +1,5 @@
 ﻿using System.Linq;
 using Behaviour.ScriptableBehaviour;
-using UnityEngine.Serialization;
 using UnityEngine;
 using UnityEngine.AI;
 using System.Collections.Generic;
@@ -10,7 +9,8 @@ namespace Entities.Creatures
     [RequireComponent( typeof(Creature))]
     public class CreatureScriptableBehaviourTree : MonoBehaviour
     {
-        [FormerlySerializedAs("behaviorTreeSO")] [SerializeField] BehaviourTreeSo behaviorTreeSo;
+        [SerializeField] private bool pauseBehaviours;
+        [SerializeField] BehaviourTreeSo behaviorTreeSo;
         [SerializeField] private Transform target;
         
         private NavMeshAgent _agent;
@@ -28,17 +28,10 @@ namespace Entities.Creatures
 
             _context = new BehaviourTreeContext(this, _agent, target, _creature, _currentTargets, _enemy, targetLayer);
         }
-        //
-        // void Update()
-        // {
-        //     if (behaviorTreeSo != null)
-        //     {
-        //         behaviorTreeSo.Process(_context);
-        //     }
-        // }
         
         public void Run()
         {
+            if (pauseBehaviours) return;
             if (behaviorTreeSo != null)
             {
                 behaviorTreeSo.Process(_context);
@@ -62,6 +55,11 @@ namespace Entities.Creatures
             if (_creature.GetStats == null) return;
             Gizmos.color = _context.CurrentTargets.Any(x => x is not null) ? Color.red : Color.green;
             Gizmos.DrawWireSphere(transform.position, _creature.CurrentSightRange);
+        }
+
+        public void SetPauseBehaviours(bool value)
+        {
+            pauseBehaviours = value;
         }
     }
 

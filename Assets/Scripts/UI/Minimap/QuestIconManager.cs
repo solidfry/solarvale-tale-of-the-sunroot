@@ -8,6 +8,7 @@ namespace UI.Minimap
     public class QuestIconManager : MonoBehaviour
     {
         [SerializeField] private GameObject questIconPrefab;
+        [SerializeField] private GameObject questAreaIconPrefab;
         [SerializeField] private GameObject playerCharacter;
         [SerializeField] private Cam minimapCamera;
         [SerializeField] private MiniMapController miniMap;
@@ -54,7 +55,7 @@ namespace UI.Minimap
             {
                 miniMap.Initialise();
                 _miniMapInitialized = true;
-                miniMap.gameObject.SetActive(true);  // Ensure the minimap is active
+                miniMap.gameObject.SetActive(true);
             }
         }
 
@@ -75,6 +76,29 @@ namespace UI.Minimap
                 (ObjectivePosition pos, RectTransform rectTrans) foundObj = currentObjectives.Find(objective => objective.objectivePosition == sender);
                 Destroy(foundObj.rectTrans.gameObject);
                 currentObjectives.Remove(foundObj);
+            }
+        }
+
+        public void UpdateObjectiveMarker(ObjectivePosition sender)
+        {
+            // Find the existing marker for this objective
+            var objectiveMarker = currentObjectives.Find(obj => obj.objectivePosition == sender);
+            if (objectiveMarker != default)
+            {
+                // Destroy the old marker
+                Destroy(objectiveMarker.markerRectTransform.gameObject);
+                currentObjectives.Remove(objectiveMarker);
+
+                // Determine which prefab to use
+                GameObject prefabToInstantiate = sender.questAreaIconIsActive ? questAreaIconPrefab : questIconPrefab;
+
+                // Instantiate the new marker
+                RectTransform mapBorderRectTransform = GetMapObjectRectTransform(0);
+                if (mapBorderRectTransform != null)
+                {
+                    RectTransform newRectTransform = Instantiate(prefabToInstantiate, mapBorderRectTransform).GetComponent<RectTransform>();
+                    currentObjectives.Add((sender, newRectTransform));
+                }
             }
         }
 

@@ -14,7 +14,7 @@ namespace UI.Onboarding
         public void SendOnboardingRequest()
         {
             if (onboardingRequestSent) return;
-            
+            SendOnboardingInterrupt();
             GlobalEvents.OnOnboardingRequestEvent?.Invoke(onboardingNotificationRequest);
             Debug.Log("Onboarding request sent");
             
@@ -24,7 +24,7 @@ namespace UI.Onboarding
         public void SendOnboardingRequestWithParams(Vector2 position, float width, float height, float sizeOffset, Color pulseColor, float duration = 1f)
         {
             if (onboardingRequestSent) return;
-            
+            SendOnboardingInterrupt();
             var req = OnboardingNotificationRequest.Create(position, width, height, sizeOffset, pulseColor, duration);
             
             GlobalEvents.OnOnboardingRequestEvent?.Invoke(req);
@@ -33,5 +33,6 @@ namespace UI.Onboarding
             onboardingRequestSent = true;
         }
         
+        public void SendOnboardingInterrupt() => GlobalEvents.OnOnboardingInterruptEvent?.Invoke();
     }
 }

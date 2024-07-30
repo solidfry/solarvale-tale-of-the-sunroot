@@ -26,7 +26,17 @@ namespace Behaviour.ScriptableBehaviour.Nodes
                     context.Agent.isStopped = false;
                 }
                 
-                context.Creature.Move(context.CurrentTargets[0].GetTransform.position, context.Creature.GetStats.Speed);
+                var distanceToTarget = Vector3.Distance(context.Agent.transform.position, context.Target.position);
+                
+                if (distanceToTarget > context.Creature.GetStats.SightRange)
+                {
+                    context.Creature.MoveFast( context.Target.position, context.Creature.GetStats.Speed);
+                }
+                else
+                {
+                    context.Creature.Move(context.Target.position, context.Creature.GetStats.Speed);
+                }
+                
                 nodeState = NodeState.Running;
             }
             else

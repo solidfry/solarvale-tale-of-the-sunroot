@@ -163,7 +163,7 @@ namespace Entities.Creatures
                         Swim(position, swimmer);
                         break;
                     case FlyerMovementDefinition flyer:
-                        if (Vector3.Distance(transform.position, position) > _stats.SightRange / 2)
+                        if (Vector3.Distance(transform.position, position) > _stats.SightRange)
                             Fly(position, flyer);
                         else 
                             Translate(position, speed);
@@ -182,17 +182,14 @@ namespace Entities.Creatures
             }
         }
         
-        public void Translate(Vector3 position, float speed = 1f)
+        void Translate(Vector3 position, float speed = 1f)
         {
             agent.SetDestination(position);
             agent.speed = speed;
         }
         
-        public void Run(Vector3 position, float speed = 1f)
-        {
-            Move(position, speed * _stats.RunSpeedMultiplier);
-        }
-        
+        public void MoveFast(Vector3 position, float speed = 1f) => Move(position, speed * _stats.RunSpeedMultiplier);
+
         [ContextMenu("Jump")]
         public void Jump()
         {
