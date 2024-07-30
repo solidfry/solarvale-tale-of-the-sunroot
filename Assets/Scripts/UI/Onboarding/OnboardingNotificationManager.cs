@@ -47,6 +47,7 @@ namespace UI.Onboarding
         private void OnNotificationComplete()
         {
             _currentNotification.OnNotificationComplete -= OnNotificationComplete;
+            // _currentNotification.Cleanup();
             _onboardingQueue.Dequeue();
             Destroy(_currentNotification.gameObject);
             _onboardingNotifications.Remove(_currentNotification);

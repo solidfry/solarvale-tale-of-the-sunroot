@@ -11,88 +11,83 @@ namespace UI.Onboarding
         [SerializeField] Image image;
         [SerializeField] float startOffset = 32;
         [SerializeField] private Color pulseColor;
-        
+
         private Tween sizeTween;
         private Tween colorTween;
-        private Tween fade;
+        private Tween fadeTween;
         private Tween sizeTweenShow;
-        private Tween hide;
+        private Tween hideTween;
 
-        OnboardingNotificationRequest _request;
+        private Sequence pulseSequence;
+        private Sequence showSequence;
+
+        private OnboardingNotificationRequest _request;
 
         public event Action OnNotificationComplete = delegate { };
 
         public void Initialise(OnboardingNotificationRequest req)
         {
+            if (rectTransform == null || image == null) return;
+
             SetRequest(req);
-            
-            
+
             rectTransform.anchoredPosition = _request.Position;
-            
-            rectTransform.sizeDelta = 
-                new Vector2(_request.Width + startOffset, _request.Height + startOffset);
-            
-            
-            
-            fade = image.DOFade(1, .5f).From(0).SetEase(Ease.Linear);
+            rectTransform.sizeDelta = new Vector2(_request.Width + startOffset, _request.Height + startOffset);
 
-            sizeTweenShow = rectTransform.DOSizeDelta(
-                new Vector2(_request.Width, _request.Height), .5f);
+            fadeTween = image.DOFade(1, 0.5f).From(0).SetEase(Ease.Linear);
+            sizeTweenShow = rectTransform.DOSizeDelta(new Vector2(_request.Width, _request.Height), 0.5f).SetEase(Ease.InOutCirc);
+            hideTween = image.DOFade(0, 0.25f).SetEase(Ease.Linear);
 
-
-            
-
-            hide = image.DOFade(0, 0.25f).SetEase(Ease.Linear);
-            
             Show();
         }
 
-        void SetRequest(OnboardingNotificationRequest req)
+        private void SetRequest(OnboardingNotificationRequest req)
         {
             _request = req;
         }
 
-        void Show()
+        private void Show()
         {
-            var showSequence = DOTween.Sequence();
-            showSequence.Append(fade).Append(sizeTweenShow).SetEase(Ease.InOutCirc).OnComplete(Pulse);
+            if (rectTransform == null || image == null) return;
 
-            Debug.Log("Showing notification");
+            showSequence = DOTween.Sequence();
+            showSequence.Append(fadeTween).Append(sizeTweenShow).OnComplete(Pulse);
             showSequence.Play();
         }
 
-        void Pulse()
+        private void Pulse()
         {
-            var pulseSequence = DOTween.Sequence();
+            if (rectTransform == null || image == null) return;
 
-            sizeTween = rectTransform.DOSizeDelta(
-                    new Vector2(_request.Width + startOffset, _request.Height + startOffset), _request.Duration)
-                .SetEase(Ease.InOutCirc);
-            
+            sizeTween = rectTransform.DOSizeDelta(new Vector2(_request.Width + startOffset, _request.Height + startOffset), _request.Duration).SetEase(Ease.InOutCirc);
             colorTween = image.DOColor(_request.PulseColor, _request.Duration).SetEase(Ease.Linear);
 
-            pulseSequence
-                .Append(sizeTween)
-                .Append(colorTween).OnComplete(Hide).Play().SetLoops(3, LoopType.Yoyo);
-            Debug.Log("Pulsing notification");
+            pulseSequence = DOTween.Sequence();
+            pulseSequence.Append(sizeTween).Append(colorTween).SetLoops(3, LoopType.Yoyo).OnComplete(Hide);
+            pulseSequence.Play();
         }
 
-        void Hide()
+        private void Hide()
         {
-            Debug.Log("Hiding notification");
-            hide.OnComplete(() =>
-            {
-                OnNotificationComplete();
-            }).Play();
+            if (image == null) return;
+
+            hideTween.OnComplete(() => OnNotificationComplete()).Play();
+        }
+
+        public void Cleanup()
+        {
+            sizeTween?.Kill(false);
+            colorTween?.Kill(false);
+            fadeTween?.Kill(false);
+            sizeTweenShow?.Kill(false);
+            hideTween?.Kill(false);
+            pulseSequence?.Kill();
+            showSequence?.Kill();
         }
 
         private void OnDestroy()
         {
-            sizeTween?.Kill();
-            colorTween?.Kill();
-            fade?.Kill();
-            sizeTweenShow?.Kill();
-            hide?.Kill();
+            Cleanup();
         }
     }
 }
