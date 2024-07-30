@@ -25,14 +25,22 @@ namespace Behaviour.ScriptableBehaviour.Nodes
                 context.Agent.isStopped = false;
             }
             
-            if (Vector3.Distance(context.Agent.transform.position, context.Target.position) <= context.Agent.stoppingDistance + context.Creature.GetStats.Width)
+            var distanceToTarget = Vector3.Distance(context.Agent.transform.position, context.Target.position);
+            
+            if (distanceToTarget <= context.Agent.stoppingDistance + context.Creature.GetStats.Width)
             {
                 context.Agent.isStopped = true;
                 return NodeState.Success;
             }
             
-            context.Creature.Move(context.Target.position, context.Creature.GetStats.Speed);
-            // Debug.Log("Following target " + context.Target.name);
+            if (distanceToTarget > context.Creature.GetStats.SightRange)
+            {
+                context.Creature.MoveFast( context.Target.position, context.Creature.GetStats.Speed);
+            }
+            else
+            {
+                context.Creature.Move(context.Target.position, context.Creature.GetStats.Speed);
+            }
             
             
             return NodeState.Running;

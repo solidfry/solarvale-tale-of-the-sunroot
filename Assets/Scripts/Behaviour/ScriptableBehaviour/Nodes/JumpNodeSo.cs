@@ -34,7 +34,8 @@ namespace Behaviour.ScriptableBehaviour.Nodes
             }
 
             context.Agent.enabled = false; // Disable the NavMeshAgent to allow manual Rigidbody control
-
+            rb.isKinematic = false; // Allow the Rigidbody to be affected by physics
+            
             // Apply the jump force
             rb.AddForce(Vector3.up * movementType.JumpForce, ForceMode.Impulse);
 
