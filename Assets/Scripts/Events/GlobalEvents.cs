@@ -53,6 +53,7 @@ namespace Events
         #region Onboarding 
         public static Action<bool> OnSetOnboardingVisibilityEvent;
         public static Action<OnboardingNotificationRequest> OnOnboardingRequestEvent;
+        public static Action OnOnboardingInterruptEvent;
         #endregion
         
         #region Camera Management
@@ -72,6 +73,6 @@ namespace Events
         public static Action<IEdible> OnDeregisterEdibleEvent;
         public static Action<IEdible> OnSendEdibleEatenEvent;
         #endregion
-        
+
     }
 }

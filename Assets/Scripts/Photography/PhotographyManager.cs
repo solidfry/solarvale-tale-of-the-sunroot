@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using CameraSystem;
 using Entities;
 using Events;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace Photography
@@ -24,11 +24,12 @@ namespace Photography
 
         [Header("Events")]
         [Space(10)]
-        public UnityEvent onCameraModeActivated;
-        public UnityEvent onCameraModeDeactivated;
+        [SerializeField]  UnityEvent onCameraModeActivated;
+        [SerializeField]  UnityEvent onCameraModeDeactivated;
         
-        [Header("On Photo Taken Event Handling")]
-        public UnityEvent<EntityData[]> onPhotoTaken;
+            [Header("On Photo Taken Event Handling")]
+        [SerializeField] UnityEvent onBeforePhotoTaken;
+        [SerializeField] UnityEvent<EntityData[]> onPhotoTaken;
 
         [Header("RayCast Settings")]
         [SerializeField] private float rayCastDistance = 300f;
@@ -108,6 +109,7 @@ namespace Photography
         
         private IEnumerator CapturePhoto()
         {
+            onBeforePhotoTaken?.Invoke();
             yield return new WaitForEndOfFrame();
 
             int screenMinDimensions = Mathf.Min(Screen.width, Screen.height);

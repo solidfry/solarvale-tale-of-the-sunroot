@@ -83,8 +83,13 @@ namespace Progression
             foreach (string entityString in photo.EntitiesInPhoto)
             {
                 var entity = entityList.Entities.Find(entity => entity.Name == entityString);
-                _entitiesDiscovered[entity] = true;
-                OnEntityDiscovered?.Invoke(entity);
+                if (entity is null) return;
+                if (_entitiesDiscovered.ContainsKey(entity) && !_entitiesDiscovered[entity])
+                {
+                    _entitiesDiscovered[entity] = true;
+                    OnEntityDiscovered?.Invoke(entity);
+                    Debug.Log("Entity discovered: " + entity.Name);
+                }
                 Debug.Log("Entity discovered: " + entity.Name);
             }
             HasDictionaryChanged = true;

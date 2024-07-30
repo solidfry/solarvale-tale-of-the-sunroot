@@ -15,11 +15,13 @@ namespace UI.Onboarding
         private void OnEnable()
         {
             GlobalEvents.OnOnboardingRequestEvent += OnOnboardingRequest;
+            GlobalEvents.OnOnboardingInterruptEvent += InterruptOnboarding;
         }
         
         private void OnDisable()
         {
             GlobalEvents.OnOnboardingRequestEvent -= OnOnboardingRequest;
+            GlobalEvents.OnOnboardingInterruptEvent -= InterruptOnboarding;
         }
 
         private void OnOnboardingRequest(OnboardingNotificationRequest req)
@@ -41,23 +43,21 @@ namespace UI.Onboarding
 
         private void OnNotificationComplete()
         {
-            _currentNotification.OnNotificationComplete -= OnNotificationComplete;
+            // _currentNotification.OnNotificationComplete -= OnNotificationComplete;
             _onboardingQueue.Dequeue();
-            Destroy(_currentNotification.gameObject);
-            _currentNotification = null;
             if (_onboardingQueue.Count > 0)
             {
                 ShowOnboardingNotification();
             }
+            Destroy(_currentNotification.gameObject);
+            _currentNotification = null;
         }
         
         private void InterruptOnboarding()
         {
-            if (_currentNotification != null)
-            {
-                _currentNotification.OnNotificationComplete -= OnNotificationComplete;
-                Destroy(_currentNotification.gameObject);
-            }
+            // if (_currentNotification != null && _onboardingQueue.Count > 1)
+            if (_onboardingQueue.Count == 0) return;
+            OnNotificationComplete();
         }
     }
 }

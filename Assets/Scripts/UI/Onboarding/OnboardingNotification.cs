@@ -12,6 +12,8 @@ namespace UI.Onboarding
         [SerializeField] float startOffset = 32;
     
         [SerializeField] private Color pulseColor;
+        
+        Sequence pulseSequence;
     
     
         OnboardingNotificationRequest _request;
@@ -20,6 +22,20 @@ namespace UI.Onboarding
 
         public void Initialise(OnboardingNotificationRequest req)
         {
+            pulseSequence = DOTween.Sequence();
+
+            pulseSequence.Append(pulseSequence
+                .Append(
+                    rectTransform.DOSizeDelta(
+                        new Vector2(_request.Width + startOffset, _request.Height + startOffset),
+                        _request.Duration).SetEase(Ease.InOutCirc)
+                )
+                .Append(
+                    image.DOColor(_request.PulseColor, _request.Duration).SetEase(Ease.Linear)
+                )
+                .SetLoops(3, LoopType.Yoyo)
+                .OnComplete(Hide));
+            
             SetRequest(req);
             Show();
         }
@@ -43,29 +59,22 @@ namespace UI.Onboarding
     
         void Pulse()
         {
-            Sequence pulseSequence = DOTween.Sequence();
-            pulseSequence
-                .Append(
-                    rectTransform.DOSizeDelta(
-                        new Vector2(_request.Width + startOffset, _request.Height + startOffset), 
-                        _request.Duration).SetEase(Ease.InOutCirc)
-                )
-                .Append(
-                    image.DOColor(_request.PulseColor, _request.Duration).SetEase(Ease.Linear)
-                    )
-                .SetLoops(3, LoopType.Yoyo)
-                .OnComplete(Hide)
-                .Play();
-            
+            pulseSequence.Play();
         }
     
         void Hide()
         {
             image.DOFade(0, 0.25f).SetEase(Ease.Linear).OnComplete(() =>
             {
+                // pulseSequence.Kill();
                 OnNotificationComplete();
             });
         }
-    
+
+        private void OnDestroy()
+        {
+            if (pulseSequence.IsActive())
+                pulseSequence.Kill();
+        }
     }
 }
