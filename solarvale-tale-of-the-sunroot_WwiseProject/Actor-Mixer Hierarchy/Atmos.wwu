@@ -3,16 +3,37 @@
 	<AudioObjects>
 		<WorkUnit Name="Atmos" ID="{BF25DDCB-4F6E-4FFB-A522-CBB1CD35F4B9}" OwnerID="{8CB12569-B7F8-44ED-9C1B-53D0D479775D}" PersistMode="Nested">
 			<PropertyList>
-				<Property Name="Color" Type="int16" Value="17"/>
+				<Property Name="Color" Type="int16" Value="18"/>
 				<Property Name="OverrideColor" Type="bool" Value="True"/>
 			</PropertyList>
 			<ChildrenList>
 				<Sound Name="Atmos_Cave_01" ID="{CD4BB25D-04F8-4BE0-84DA-40FBE883DE1C}" ShortID="943698064">
 					<PropertyList>
 						<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
+						<Property Name="MakeUpGain" Type="Real64">
+							<ValueList>
+								<Value>6</Value>
+							</ValueList>
+						</Property>
 						<Property Name="OverrideGameAuxSends" Type="bool" Value="True"/>
 						<Property Name="OverrideOutput" Type="bool" Value="True"/>
 						<Property Name="OverridePositioning" Type="bool" Value="True"/>
+						<Property Name="Pitch" Type="int32">
+							<ValueList>
+								<Value>-1</Value>
+							</ValueList>
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{E2D0B654-15C8-449E-A176-D98CAD5674A2}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="50"/>
+											<Property Name="Min" Type="Real64" Value="-1"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
 						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 					</PropertyList>
 					<ReferenceList>
@@ -28,6 +49,61 @@
 					</ReferenceList>
 					<ChildrenList>
 						<AudioFileSource Name="Atmos_Cave_01" ID="{9EAB9477-5E96-420A-9114-EF5E120A3420}">
+							<PropertyList>
+								<Property Name="FadeInDuration" Type="Real64" Value="10.9458333333333"/>
+								<Property Name="FadeOutDuration" Type="Real64" Value="6.80416666666666"/>
+								<Property Name="FadeOutShape" Type="int16" Value="2"/>
+								<Property Name="OverrideConversion" Type="bool" Value="True"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<Custom CreatedFrom="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}">
+										<Conversion Name="Vorbis Quality High (Custom)" ID="{75D2A7DF-AD44-42B4-90CD-C7FD1470CED1}">
+											<PropertyList>
+												<Property Name="Channels" Type="int32">
+													<ValueList>
+														<Value Platform="Windows">4</Value>
+														<Value Platform="Mac">4</Value>
+													</ValueList>
+												</Property>
+												<Property Name="LRMix" Type="Real64">
+													<ValueList>
+														<Value Platform="Windows">0</Value>
+														<Value Platform="Mac">0</Value>
+													</ValueList>
+												</Property>
+												<Property Name="MaxSampleRate" Type="int32">
+													<ValueList>
+														<Value Platform="Windows">0</Value>
+														<Value Platform="Mac">0</Value>
+													</ValueList>
+												</Property>
+												<Property Name="MinSampleRate" Type="int32">
+													<ValueList>
+														<Value Platform="Windows">0</Value>
+														<Value Platform="Mac">0</Value>
+													</ValueList>
+												</Property>
+												<Property Name="SampleRate" Type="int32">
+													<ValueList>
+														<Value Platform="Windows">0</Value>
+														<Value Platform="Mac">0</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ConversionPluginInfoList>
+												<ConversionPluginInfo Platform="Windows">
+													<ConversionPlugin Name="" ID="{34797852-AABF-4679-880A-71794F56784C}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
+												</ConversionPluginInfo>
+												<ConversionPluginInfo Platform="Mac">
+													<ConversionPlugin Name="" ID="{C5C68C94-B36E-4C74-95D2-452532CECC0D}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
+												</ConversionPluginInfo>
+											</ConversionPluginInfoList>
+										</Conversion>
+									</Custom>
+								</Reference>
+							</ReferenceList>
 							<Language>SFX</Language>
 							<AudioFile>Atmos_Cave_01.wav</AudioFile>
 							<MediaIDList>
@@ -39,44 +115,33 @@
 						<ActiveSource Name="Atmos_Cave_01" ID="{9EAB9477-5E96-420A-9114-EF5E120A3420}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
-				<Sound Name="Atmos_Beach_Rain_01" ID="{F1CC142E-0217-44F3-B441-3A1374285B99}" ShortID="324414964">
-					<PropertyList>
-						<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
-						<Property Name="OverrideGameAuxSends" Type="bool" Value="True"/>
-						<Property Name="OverrideOutput" Type="bool" Value="True"/>
-						<Property Name="OverridePositioning" Type="bool" Value="True"/>
-						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
-					</PropertyList>
-					<ReferenceList>
-						<Reference Name="Attenuation">
-							<ObjectRef Name="Atmos" ID="{02DBC80D-A3A8-401A-BF00-768794A1700C}" WorkUnitID="{05E83523-ED60-4EDF-8A61-DC39396E21A4}"/>
-						</Reference>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Atmos" ID="{E51D6CB8-01C8-48A1-8608-AE500145E9A8}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="Atmos_Beach_Rain_01" ID="{9F3A6B8A-85DB-493D-ADD5-317235145677}">
-							<Language>SFX</Language>
-							<AudioFile>Atmos_Beach_Rain_01.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="95097102"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="Atmos_Beach_Rain_01" ID="{9F3A6B8A-85DB-493D-ADD5-317235145677}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
 				<Sound Name="Atmos_Mountain_Night_01" ID="{EC608A4E-B5F1-4762-BEA1-EB93E79B9342}" ShortID="1065709729">
 					<PropertyList>
 						<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
+						<Property Name="MakeUpGain" Type="Real64">
+							<ValueList>
+								<Value>14</Value>
+							</ValueList>
+						</Property>
 						<Property Name="OverrideGameAuxSends" Type="bool" Value="True"/>
 						<Property Name="OverrideOutput" Type="bool" Value="True"/>
 						<Property Name="OverridePositioning" Type="bool" Value="True"/>
+						<Property Name="Pitch" Type="int32">
+							<ValueList>
+								<Value>-1</Value>
+							</ValueList>
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{864CC019-8310-4443-8407-25770BDE2D93}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="50"/>
+											<Property Name="Min" Type="Real64" Value="-1"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
 						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 					</PropertyList>
 					<ReferenceList>
@@ -92,6 +157,61 @@
 					</ReferenceList>
 					<ChildrenList>
 						<AudioFileSource Name="Atmos_Mountain_Night_01" ID="{631671E1-0622-4696-A168-C6D7783C1DD7}">
+							<PropertyList>
+								<Property Name="FadeInDuration" Type="Real64" Value="13.7777777777778"/>
+								<Property Name="FadeOutDuration" Type="Real64" Value="11.5555555555555"/>
+								<Property Name="FadeOutShape" Type="int16" Value="2"/>
+								<Property Name="OverrideConversion" Type="bool" Value="True"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<Custom CreatedFrom="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}">
+										<Conversion Name="Vorbis Quality High (Custom)" ID="{8AE49277-5BFC-45B8-A53B-774915208809}">
+											<PropertyList>
+												<Property Name="Channels" Type="int32">
+													<ValueList>
+														<Value Platform="Windows">4</Value>
+														<Value Platform="Mac">4</Value>
+													</ValueList>
+												</Property>
+												<Property Name="LRMix" Type="Real64">
+													<ValueList>
+														<Value Platform="Windows">0</Value>
+														<Value Platform="Mac">0</Value>
+													</ValueList>
+												</Property>
+												<Property Name="MaxSampleRate" Type="int32">
+													<ValueList>
+														<Value Platform="Windows">0</Value>
+														<Value Platform="Mac">0</Value>
+													</ValueList>
+												</Property>
+												<Property Name="MinSampleRate" Type="int32">
+													<ValueList>
+														<Value Platform="Windows">0</Value>
+														<Value Platform="Mac">0</Value>
+													</ValueList>
+												</Property>
+												<Property Name="SampleRate" Type="int32">
+													<ValueList>
+														<Value Platform="Windows">0</Value>
+														<Value Platform="Mac">0</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ConversionPluginInfoList>
+												<ConversionPluginInfo Platform="Windows">
+													<ConversionPlugin Name="" ID="{E391C79A-5116-4196-AAE7-FB1B76ABC07A}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
+												</ConversionPluginInfo>
+												<ConversionPluginInfo Platform="Mac">
+													<ConversionPlugin Name="" ID="{9881C7AA-446E-467B-B738-2F430A093DAF}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
+												</ConversionPluginInfo>
+											</ConversionPluginInfoList>
+										</Conversion>
+									</Custom>
+								</Reference>
+							</ReferenceList>
 							<Language>SFX</Language>
 							<AudioFile>Atmos_Mountain_Night_01.wav</AudioFile>
 							<MediaIDList>
@@ -106,9 +226,30 @@
 				<Sound Name="Atmos_Mountain_Rain_01" ID="{A85357AC-26B0-4E13-9BDE-AE0748CB261B}" ShortID="587823357">
 					<PropertyList>
 						<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
+						<Property Name="MakeUpGain" Type="Real64">
+							<ValueList>
+								<Value>12</Value>
+							</ValueList>
+						</Property>
 						<Property Name="OverrideGameAuxSends" Type="bool" Value="True"/>
 						<Property Name="OverrideOutput" Type="bool" Value="True"/>
 						<Property Name="OverridePositioning" Type="bool" Value="True"/>
+						<Property Name="Pitch" Type="int32">
+							<ValueList>
+								<Value>-1</Value>
+							</ValueList>
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{B49A5143-9F10-4DC0-B768-7DF6207392D9}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="50"/>
+											<Property Name="Min" Type="Real64" Value="-1"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
 						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 					</PropertyList>
 					<ReferenceList>
@@ -124,6 +265,66 @@
 					</ReferenceList>
 					<ChildrenList>
 						<AudioFileSource Name="Atmos_Mountain_Rain_01" ID="{E9792D28-B489-4782-83BE-4FF0F84A10AD}">
+							<PropertyList>
+								<Property Name="FadeInDuration" Type="Real64" Value="9.82839506172839"/>
+								<Property Name="FadeOutDuration" Type="Real64" Value="10.6043209876543"/>
+								<Property Name="FadeOutShape" Type="int16" Value="2"/>
+								<Property Name="OverrideConversion" Type="bool" Value="True"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<Custom CreatedFrom="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}">
+										<Conversion Name="Vorbis Quality High (Custom)" ID="{B8BE7D86-2B50-46B5-B301-E72F32EB87CD}">
+											<PropertyList>
+												<Property Name="Channels" Type="int32">
+													<ValueList>
+														<Value Platform="Windows">4</Value>
+														<Value Platform="Mac">4</Value>
+													</ValueList>
+												</Property>
+												<Property Name="LRMix" Type="Real64">
+													<ValueList>
+														<Value Platform="Windows">0</Value>
+														<Value Platform="Mac">0</Value>
+													</ValueList>
+												</Property>
+												<Property Name="MaxSampleRate" Type="int32">
+													<ValueList>
+														<Value Platform="Windows">0</Value>
+														<Value Platform="Mac">0</Value>
+													</ValueList>
+												</Property>
+												<Property Name="MinSampleRate" Type="int32">
+													<ValueList>
+														<Value Platform="Windows">0</Value>
+														<Value Platform="Mac">0</Value>
+													</ValueList>
+												</Property>
+												<Property Name="SRConversionQuality" Type="int32">
+													<ValueList>
+														<Value>1</Value>
+													</ValueList>
+												</Property>
+												<Property Name="SampleRate" Type="int32">
+													<ValueList>
+														<Value Platform="Windows">0</Value>
+														<Value Platform="Mac">0</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ConversionPluginInfoList>
+												<ConversionPluginInfo Platform="Windows">
+													<ConversionPlugin Name="" ID="{4088D93F-AD68-420D-AA8E-6ECA55211737}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
+												</ConversionPluginInfo>
+												<ConversionPluginInfo Platform="Mac">
+													<ConversionPlugin Name="" ID="{B6211B7E-BDAD-4A4E-ABB0-C89A77B6724A}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
+												</ConversionPluginInfo>
+											</ConversionPluginInfoList>
+										</Conversion>
+									</Custom>
+								</Reference>
+							</ReferenceList>
 							<Language>SFX</Language>
 							<AudioFile>Atmos_Mountain_Rain_01.wav</AudioFile>
 							<MediaIDList>
@@ -135,44 +336,33 @@
 						<ActiveSource Name="Atmos_Mountain_Rain_01" ID="{E9792D28-B489-4782-83BE-4FF0F84A10AD}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
-				<Sound Name="Atmos_Ocean_Night_01" ID="{A3D9F6C4-FEEF-48B2-9951-36002F7474EC}" ShortID="740307133">
-					<PropertyList>
-						<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
-						<Property Name="OverrideGameAuxSends" Type="bool" Value="True"/>
-						<Property Name="OverrideOutput" Type="bool" Value="True"/>
-						<Property Name="OverridePositioning" Type="bool" Value="True"/>
-						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
-					</PropertyList>
-					<ReferenceList>
-						<Reference Name="Attenuation">
-							<ObjectRef Name="Atmos" ID="{02DBC80D-A3A8-401A-BF00-768794A1700C}" WorkUnitID="{05E83523-ED60-4EDF-8A61-DC39396E21A4}"/>
-						</Reference>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Atmos" ID="{E51D6CB8-01C8-48A1-8608-AE500145E9A8}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="Atmos_Ocean_Night_01" ID="{482F8D38-7F2C-4F3F-91A7-1D1DC089A128}">
-							<Language>SFX</Language>
-							<AudioFile>Atmos_Ocean_Night_01.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="983979847"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="Atmos_Ocean_Night_01" ID="{482F8D38-7F2C-4F3F-91A7-1D1DC089A128}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
 				<Sound Name="Atmos_Plains_Night_01" ID="{6FD090FB-D088-4099-97F6-155E3B71A741}" ShortID="682708340">
 					<PropertyList>
 						<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
+						<Property Name="MakeUpGain" Type="Real64">
+							<ValueList>
+								<Value>10</Value>
+							</ValueList>
+						</Property>
 						<Property Name="OverrideGameAuxSends" Type="bool" Value="True"/>
 						<Property Name="OverrideOutput" Type="bool" Value="True"/>
 						<Property Name="OverridePositioning" Type="bool" Value="True"/>
+						<Property Name="Pitch" Type="int32">
+							<ValueList>
+								<Value>-1</Value>
+							</ValueList>
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{1890B7D0-6203-4FED-925A-F9D2A261D760}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="50"/>
+											<Property Name="Min" Type="Real64" Value="-1"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
 						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 					</PropertyList>
 					<ReferenceList>
@@ -188,6 +378,61 @@
 					</ReferenceList>
 					<ChildrenList>
 						<AudioFileSource Name="Atmos_Plains_Night_01" ID="{71753E04-E0DF-4547-95C6-CB2B59280BE9}">
+							<PropertyList>
+								<Property Name="FadeInDuration" Type="Real64" Value="4.37345679012346"/>
+								<Property Name="FadeOutDuration" Type="Real64" Value="6.34151234567901"/>
+								<Property Name="FadeOutShape" Type="int16" Value="2"/>
+								<Property Name="OverrideConversion" Type="bool" Value="True"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<Custom CreatedFrom="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}">
+										<Conversion Name="Vorbis Quality High (Custom)" ID="{5C07FC8F-7A1C-4761-8CFD-5E6F4EB0D77D}">
+											<PropertyList>
+												<Property Name="Channels" Type="int32">
+													<ValueList>
+														<Value Platform="Windows">4</Value>
+														<Value Platform="Mac">4</Value>
+													</ValueList>
+												</Property>
+												<Property Name="LRMix" Type="Real64">
+													<ValueList>
+														<Value Platform="Windows">0</Value>
+														<Value Platform="Mac">0</Value>
+													</ValueList>
+												</Property>
+												<Property Name="MaxSampleRate" Type="int32">
+													<ValueList>
+														<Value Platform="Windows">0</Value>
+														<Value Platform="Mac">0</Value>
+													</ValueList>
+												</Property>
+												<Property Name="MinSampleRate" Type="int32">
+													<ValueList>
+														<Value Platform="Windows">0</Value>
+														<Value Platform="Mac">0</Value>
+													</ValueList>
+												</Property>
+												<Property Name="SampleRate" Type="int32">
+													<ValueList>
+														<Value Platform="Windows">0</Value>
+														<Value Platform="Mac">0</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ConversionPluginInfoList>
+												<ConversionPluginInfo Platform="Windows">
+													<ConversionPlugin Name="" ID="{568DA65C-CF99-4111-888E-0E36334A9687}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
+												</ConversionPluginInfo>
+												<ConversionPluginInfo Platform="Mac">
+													<ConversionPlugin Name="" ID="{548B66BB-AA64-4F71-875F-413A3C499450}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
+												</ConversionPluginInfo>
+											</ConversionPluginInfoList>
+										</Conversion>
+									</Custom>
+								</Reference>
+							</ReferenceList>
 							<Language>SFX</Language>
 							<AudioFile>Atmos_Plains_Night_01.wav</AudioFile>
 							<MediaIDList>
@@ -201,11 +446,39 @@
 				</Sound>
 				<Sound Name="Atmos_Plains_Rain_01" ID="{35A17D53-A265-4FDE-B32C-C6C408C2C522}" ShortID="403205212">
 					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
 						<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
+						<Property Name="MakeUpGain" Type="Real64">
+							<ValueList>
+								<Value>3</Value>
+							</ValueList>
+						</Property>
 						<Property Name="OverrideGameAuxSends" Type="bool" Value="True"/>
 						<Property Name="OverrideOutput" Type="bool" Value="True"/>
 						<Property Name="OverridePositioning" Type="bool" Value="True"/>
+						<Property Name="Pitch" Type="int32">
+							<ValueList>
+								<Value>-1</Value>
+							</ValueList>
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{F1C19A3F-9602-4965-B730-0C0C7195A278}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="50"/>
+											<Property Name="Min" Type="Real64" Value="-1"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="30"/>
 						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-1</Value>
+							</ValueList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Attenuation">
@@ -220,6 +493,66 @@
 					</ReferenceList>
 					<ChildrenList>
 						<AudioFileSource Name="Atmos_Plains_Rain_01" ID="{1D446EA0-C355-418E-B52E-F54C7FFE8152}">
+							<PropertyList>
+								<Property Name="FadeInDuration" Type="Real64" Value="8.11373456790124"/>
+								<Property Name="FadeOutDuration" Type="Real64" Value="5.92083333333333"/>
+								<Property Name="FadeOutShape" Type="int16" Value="2"/>
+								<Property Name="OverrideConversion" Type="bool" Value="True"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<Custom CreatedFrom="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}">
+										<Conversion Name="Vorbis Quality High (Custom)" ID="{E156E308-D960-4742-9BB6-ECAA4D69DDFC}">
+											<PropertyList>
+												<Property Name="Channels" Type="int32">
+													<ValueList>
+														<Value Platform="Windows">4</Value>
+														<Value Platform="Mac">4</Value>
+													</ValueList>
+												</Property>
+												<Property Name="LRMix" Type="Real64">
+													<ValueList>
+														<Value Platform="Windows">0</Value>
+														<Value Platform="Mac">0</Value>
+													</ValueList>
+												</Property>
+												<Property Name="MaxSampleRate" Type="int32">
+													<ValueList>
+														<Value Platform="Windows">0</Value>
+														<Value Platform="Mac">0</Value>
+													</ValueList>
+												</Property>
+												<Property Name="MinSampleRate" Type="int32">
+													<ValueList>
+														<Value Platform="Windows">0</Value>
+														<Value Platform="Mac">0</Value>
+													</ValueList>
+												</Property>
+												<Property Name="SRConversionQuality" Type="int32">
+													<ValueList>
+														<Value>1</Value>
+													</ValueList>
+												</Property>
+												<Property Name="SampleRate" Type="int32">
+													<ValueList>
+														<Value Platform="Windows">0</Value>
+														<Value Platform="Mac">0</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ConversionPluginInfoList>
+												<ConversionPluginInfo Platform="Windows">
+													<ConversionPlugin Name="" ID="{6B6E3BCB-3E4C-4F7C-A290-CD27F7F6E4E6}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
+												</ConversionPluginInfo>
+												<ConversionPluginInfo Platform="Mac">
+													<ConversionPlugin Name="" ID="{87FF797D-1250-4369-AA20-D1C330AB21B4}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
+												</ConversionPluginInfo>
+											</ConversionPluginInfoList>
+										</Conversion>
+									</Custom>
+								</Reference>
+							</ReferenceList>
 							<Language>SFX</Language>
 							<AudioFile>Atmos_Plains_Rain_01.wav</AudioFile>
 							<MediaIDList>
@@ -233,10 +566,33 @@
 				</Sound>
 				<Sound Name="Atmos_Stream_Rain_01" ID="{9202ACE8-3115-4B65-9C4E-E60C0618BF2B}" ShortID="672141564">
 					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
 						<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
+						<Property Name="MakeUpGain" Type="Real64">
+							<ValueList>
+								<Value>7</Value>
+							</ValueList>
+						</Property>
 						<Property Name="OverrideGameAuxSends" Type="bool" Value="True"/>
 						<Property Name="OverrideOutput" Type="bool" Value="True"/>
 						<Property Name="OverridePositioning" Type="bool" Value="True"/>
+						<Property Name="Pitch" Type="int32">
+							<ValueList>
+								<Value>-1</Value>
+							</ValueList>
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{EFAA2692-38A4-456A-9369-D70B11252CEF}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="50"/>
+											<Property Name="Min" Type="Real64" Value="-1"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="25"/>
 						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 					</PropertyList>
 					<ReferenceList>
@@ -252,6 +608,61 @@
 					</ReferenceList>
 					<ChildrenList>
 						<AudioFileSource Name="Atmos_Stream_Rain_01" ID="{3B85E92C-B5EF-42D2-85BA-382A0016ABB2}">
+							<PropertyList>
+								<Property Name="FadeInDuration" Type="Real64" Value="10.9490740740741"/>
+								<Property Name="FadeOutDuration" Type="Real64" Value="8.54027777777779"/>
+								<Property Name="FadeOutShape" Type="int16" Value="2"/>
+								<Property Name="OverrideConversion" Type="bool" Value="True"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<Custom CreatedFrom="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}">
+										<Conversion Name="Vorbis Quality High (Custom)" ID="{17A4BA73-FD34-4E45-9BB8-E7BBC39C0400}">
+											<PropertyList>
+												<Property Name="Channels" Type="int32">
+													<ValueList>
+														<Value Platform="Windows">4</Value>
+														<Value Platform="Mac">4</Value>
+													</ValueList>
+												</Property>
+												<Property Name="LRMix" Type="Real64">
+													<ValueList>
+														<Value Platform="Windows">0</Value>
+														<Value Platform="Mac">0</Value>
+													</ValueList>
+												</Property>
+												<Property Name="MaxSampleRate" Type="int32">
+													<ValueList>
+														<Value Platform="Windows">0</Value>
+														<Value Platform="Mac">0</Value>
+													</ValueList>
+												</Property>
+												<Property Name="MinSampleRate" Type="int32">
+													<ValueList>
+														<Value Platform="Windows">0</Value>
+														<Value Platform="Mac">0</Value>
+													</ValueList>
+												</Property>
+												<Property Name="SampleRate" Type="int32">
+													<ValueList>
+														<Value Platform="Windows">0</Value>
+														<Value Platform="Mac">0</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ConversionPluginInfoList>
+												<ConversionPluginInfo Platform="Windows">
+													<ConversionPlugin Name="" ID="{A0EDEFFE-4AD3-405F-9B45-19B4C1B4CC17}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
+												</ConversionPluginInfo>
+												<ConversionPluginInfo Platform="Mac">
+													<ConversionPlugin Name="" ID="{2741F836-C127-4739-8BA4-BFE8D7699A9A}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
+												</ConversionPluginInfo>
+											</ConversionPluginInfoList>
+										</Conversion>
+									</Custom>
+								</Reference>
+							</ReferenceList>
 							<Language>SFX</Language>
 							<AudioFile>Atmos_Stream_Rain_01.wav</AudioFile>
 							<MediaIDList>
@@ -265,10 +676,33 @@
 				</Sound>
 				<Sound Name="Atmos_Stream" ID="{E1F61D13-192C-462C-838F-EF59F65619AD}" ShortID="1006102672">
 					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
 						<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
+						<Property Name="MakeUpGain" Type="Real64">
+							<ValueList>
+								<Value>10</Value>
+							</ValueList>
+						</Property>
 						<Property Name="OverrideGameAuxSends" Type="bool" Value="True"/>
 						<Property Name="OverrideOutput" Type="bool" Value="True"/>
 						<Property Name="OverridePositioning" Type="bool" Value="True"/>
+						<Property Name="Pitch" Type="int32">
+							<ValueList>
+								<Value>-1</Value>
+							</ValueList>
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{9DCB5610-0792-4AC1-97D5-C21CECFB6EFB}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="50"/>
+											<Property Name="Min" Type="Real64" Value="-1"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="30"/>
 						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 					</PropertyList>
 					<ReferenceList>
@@ -284,6 +718,66 @@
 					</ReferenceList>
 					<ChildrenList>
 						<AudioFileSource Name="Atmos_Stream" ID="{CA7D6662-DABC-41AD-9E2E-4D938A9BD498}">
+							<PropertyList>
+								<Property Name="FadeInDuration" Type="Real64" Value="17.4621913580247"/>
+								<Property Name="FadeOutDuration" Type="Real64" Value="11.4506172839506"/>
+								<Property Name="FadeOutShape" Type="int16" Value="2"/>
+								<Property Name="OverrideConversion" Type="bool" Value="True"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<Custom CreatedFrom="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}">
+										<Conversion Name="Vorbis Quality High (Custom)" ID="{3994C143-9FD3-4433-A948-B8343D61B696}">
+											<PropertyList>
+												<Property Name="Channels" Type="int32">
+													<ValueList>
+														<Value Platform="Windows">4</Value>
+														<Value Platform="Mac">4</Value>
+													</ValueList>
+												</Property>
+												<Property Name="LRMix" Type="Real64">
+													<ValueList>
+														<Value Platform="Windows">0</Value>
+														<Value Platform="Mac">0</Value>
+													</ValueList>
+												</Property>
+												<Property Name="MaxSampleRate" Type="int32">
+													<ValueList>
+														<Value Platform="Windows">0</Value>
+														<Value Platform="Mac">0</Value>
+													</ValueList>
+												</Property>
+												<Property Name="MinSampleRate" Type="int32">
+													<ValueList>
+														<Value Platform="Windows">0</Value>
+														<Value Platform="Mac">0</Value>
+													</ValueList>
+												</Property>
+												<Property Name="SRConversionQuality" Type="int32">
+													<ValueList>
+														<Value>1</Value>
+													</ValueList>
+												</Property>
+												<Property Name="SampleRate" Type="int32">
+													<ValueList>
+														<Value Platform="Windows">0</Value>
+														<Value Platform="Mac">0</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ConversionPluginInfoList>
+												<ConversionPluginInfo Platform="Windows">
+													<ConversionPlugin Name="" ID="{330A0DB5-132D-4AFC-8912-C31DF0D25463}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
+												</ConversionPluginInfo>
+												<ConversionPluginInfo Platform="Mac">
+													<ConversionPlugin Name="" ID="{12B05A5E-B0C7-4E3A-B426-C3BD9BB07CC6}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
+												</ConversionPluginInfo>
+											</ConversionPluginInfoList>
+										</Conversion>
+									</Custom>
+								</Reference>
+							</ReferenceList>
 							<Language>SFX</Language>
 							<AudioFile>Atmos_Stream.wav</AudioFile>
 							<MediaIDList>
@@ -298,9 +792,30 @@
 				<Sound Name="Atmos_Cave_Wind_Gentle" ID="{1F67AE59-EF6B-4C11-A150-51E630B31DD3}" ShortID="1016240996">
 					<PropertyList>
 						<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
+						<Property Name="MakeUpGain" Type="Real64">
+							<ValueList>
+								<Value>15</Value>
+							</ValueList>
+						</Property>
 						<Property Name="OverrideGameAuxSends" Type="bool" Value="True"/>
 						<Property Name="OverrideOutput" Type="bool" Value="True"/>
 						<Property Name="OverridePositioning" Type="bool" Value="True"/>
+						<Property Name="Pitch" Type="int32">
+							<ValueList>
+								<Value>-1</Value>
+							</ValueList>
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{9CA684D5-1AEB-4899-A43B-48E323FD67FB}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="50"/>
+											<Property Name="Min" Type="Real64" Value="-1"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
 						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 					</PropertyList>
 					<ReferenceList>
@@ -316,6 +831,65 @@
 					</ReferenceList>
 					<ChildrenList>
 						<AudioFileSource Name="Atmos_Cave_Wind_Gentle" ID="{54089683-FE7D-4E77-BDA8-89B47A84F186}">
+							<PropertyList>
+								<Property Name="FadeInDuration" Type="Real64" Value="5.6266975308642"/>
+								<Property Name="FadeOutDuration" Type="Real64" Value="8.58811728395062"/>
+								<Property Name="OverrideConversion" Type="bool" Value="True"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<Custom CreatedFrom="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}">
+										<Conversion Name="Vorbis Quality High (Custom)" ID="{34B5CBB7-3DB8-4F34-BCC8-6315A950AB77}">
+											<PropertyList>
+												<Property Name="Channels" Type="int32">
+													<ValueList>
+														<Value Platform="Windows">4</Value>
+														<Value Platform="Mac">4</Value>
+													</ValueList>
+												</Property>
+												<Property Name="LRMix" Type="Real64">
+													<ValueList>
+														<Value Platform="Windows">0</Value>
+														<Value Platform="Mac">0</Value>
+													</ValueList>
+												</Property>
+												<Property Name="MaxSampleRate" Type="int32">
+													<ValueList>
+														<Value Platform="Windows">0</Value>
+														<Value Platform="Mac">0</Value>
+													</ValueList>
+												</Property>
+												<Property Name="MinSampleRate" Type="int32">
+													<ValueList>
+														<Value Platform="Windows">0</Value>
+														<Value Platform="Mac">0</Value>
+													</ValueList>
+												</Property>
+												<Property Name="SRConversionQuality" Type="int32">
+													<ValueList>
+														<Value>1</Value>
+													</ValueList>
+												</Property>
+												<Property Name="SampleRate" Type="int32">
+													<ValueList>
+														<Value Platform="Windows">0</Value>
+														<Value Platform="Mac">0</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ConversionPluginInfoList>
+												<ConversionPluginInfo Platform="Windows">
+													<ConversionPlugin Name="" ID="{8D5D9457-DCF3-41D2-A6B3-497EEADFF9E7}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
+												</ConversionPluginInfo>
+												<ConversionPluginInfo Platform="Mac">
+													<ConversionPlugin Name="" ID="{332ADDE7-CDAC-4CB7-802E-C3A07C7367DD}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
+												</ConversionPluginInfo>
+											</ConversionPluginInfoList>
+										</Conversion>
+									</Custom>
+								</Reference>
+							</ReferenceList>
 							<Language>SFX</Language>
 							<AudioFile>Atmos_Cave_Wind_Gentle.wav</AudioFile>
 							<MediaIDList>
@@ -330,9 +904,30 @@
 				<Sound Name="Atmos_Plains-Scrub_Wind_Gentle_" ID="{E7AB3C41-4143-4C31-86CB-0F448720AA7C}" ShortID="1035024170">
 					<PropertyList>
 						<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
+						<Property Name="MakeUpGain" Type="Real64">
+							<ValueList>
+								<Value>16</Value>
+							</ValueList>
+						</Property>
 						<Property Name="OverrideGameAuxSends" Type="bool" Value="True"/>
 						<Property Name="OverrideOutput" Type="bool" Value="True"/>
 						<Property Name="OverridePositioning" Type="bool" Value="True"/>
+						<Property Name="Pitch" Type="int32">
+							<ValueList>
+								<Value>-1</Value>
+							</ValueList>
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{50B69DE3-ED08-4CBF-BF99-677678BE9011}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="50"/>
+											<Property Name="Min" Type="Real64" Value="-1"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
 						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 					</PropertyList>
 					<ReferenceList>
@@ -348,6 +943,65 @@
 					</ReferenceList>
 					<ChildrenList>
 						<AudioFileSource Name="Atmos_Plains-Scrub_Wind_Gentle_" ID="{6CE6FCBC-CFAB-49D7-8E03-A2DDE9BEDBC7}">
+							<PropertyList>
+								<Property Name="FadeInDuration" Type="Real64" Value="4.0570987654321"/>
+								<Property Name="FadeOutDuration" Type="Real64" Value="9.58950617283951"/>
+								<Property Name="OverrideConversion" Type="bool" Value="True"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<Custom CreatedFrom="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}">
+										<Conversion Name="Vorbis Quality High (Custom)" ID="{0DB742C6-9B1F-499A-912C-5B8F86D85F6E}">
+											<PropertyList>
+												<Property Name="Channels" Type="int32">
+													<ValueList>
+														<Value Platform="Windows">4</Value>
+														<Value Platform="Mac">4</Value>
+													</ValueList>
+												</Property>
+												<Property Name="LRMix" Type="Real64">
+													<ValueList>
+														<Value Platform="Windows">0</Value>
+														<Value Platform="Mac">0</Value>
+													</ValueList>
+												</Property>
+												<Property Name="MaxSampleRate" Type="int32">
+													<ValueList>
+														<Value Platform="Windows">0</Value>
+														<Value Platform="Mac">0</Value>
+													</ValueList>
+												</Property>
+												<Property Name="MinSampleRate" Type="int32">
+													<ValueList>
+														<Value Platform="Windows">0</Value>
+														<Value Platform="Mac">0</Value>
+													</ValueList>
+												</Property>
+												<Property Name="SRConversionQuality" Type="int32">
+													<ValueList>
+														<Value>1</Value>
+													</ValueList>
+												</Property>
+												<Property Name="SampleRate" Type="int32">
+													<ValueList>
+														<Value Platform="Windows">0</Value>
+														<Value Platform="Mac">0</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ConversionPluginInfoList>
+												<ConversionPluginInfo Platform="Windows">
+													<ConversionPlugin Name="" ID="{CD5A16C4-2D18-4B12-A62A-46A820E3B635}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
+												</ConversionPluginInfo>
+												<ConversionPluginInfo Platform="Mac">
+													<ConversionPlugin Name="" ID="{11B73B9E-5C8D-4EEA-AF7C-A2816D8B00D3}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
+												</ConversionPluginInfo>
+											</ConversionPluginInfoList>
+										</Conversion>
+									</Custom>
+								</Reference>
+							</ReferenceList>
 							<Language>SFX</Language>
 							<AudioFile>Atmos_Plains-Scrub_Wind_Gentle..wav</AudioFile>
 							<MediaIDList>
@@ -362,9 +1016,30 @@
 				<Sound Name="Atmos_Beach_Wind_Gentle_" ID="{F92E7873-BDAE-4273-9F4E-43925CE42975}" ShortID="684301429">
 					<PropertyList>
 						<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
+						<Property Name="MakeUpGain" Type="Real64">
+							<ValueList>
+								<Value>20</Value>
+							</ValueList>
+						</Property>
 						<Property Name="OverrideGameAuxSends" Type="bool" Value="True"/>
 						<Property Name="OverrideOutput" Type="bool" Value="True"/>
 						<Property Name="OverridePositioning" Type="bool" Value="True"/>
+						<Property Name="Pitch" Type="int32">
+							<ValueList>
+								<Value>-1</Value>
+							</ValueList>
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{3F6BE9DC-D88A-40EE-A5DA-3487FA0B26CB}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="50"/>
+											<Property Name="Min" Type="Real64" Value="-1"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
 						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 					</PropertyList>
 					<ReferenceList>
@@ -380,6 +1055,61 @@
 					</ReferenceList>
 					<ChildrenList>
 						<AudioFileSource Name="Atmos_Beach_Wind_Gentle_" ID="{5C7C05D7-2FF6-4478-BD47-E22E448F417F}">
+							<PropertyList>
+								<Property Name="FadeInDuration" Type="Real64" Value="3.09259259259259"/>
+								<Property Name="FadeOutDuration" Type="Real64" Value="3.71111111111111"/>
+								<Property Name="FadeOutShape" Type="int16" Value="2"/>
+								<Property Name="OverrideConversion" Type="bool" Value="True"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<Custom CreatedFrom="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}">
+										<Conversion Name="Vorbis Quality High (Custom)" ID="{2DD21E58-2229-4968-A9AC-09A02CF37321}">
+											<PropertyList>
+												<Property Name="Channels" Type="int32">
+													<ValueList>
+														<Value Platform="Windows">4</Value>
+														<Value Platform="Mac">4</Value>
+													</ValueList>
+												</Property>
+												<Property Name="LRMix" Type="Real64">
+													<ValueList>
+														<Value Platform="Windows">0</Value>
+														<Value Platform="Mac">0</Value>
+													</ValueList>
+												</Property>
+												<Property Name="MaxSampleRate" Type="int32">
+													<ValueList>
+														<Value Platform="Windows">0</Value>
+														<Value Platform="Mac">0</Value>
+													</ValueList>
+												</Property>
+												<Property Name="MinSampleRate" Type="int32">
+													<ValueList>
+														<Value Platform="Windows">0</Value>
+														<Value Platform="Mac">0</Value>
+													</ValueList>
+												</Property>
+												<Property Name="SampleRate" Type="int32">
+													<ValueList>
+														<Value Platform="Windows">0</Value>
+														<Value Platform="Mac">0</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ConversionPluginInfoList>
+												<ConversionPluginInfo Platform="Windows">
+													<ConversionPlugin Name="" ID="{9EC06051-5FE7-4B9D-AD71-E930A4DC2EC3}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
+												</ConversionPluginInfo>
+												<ConversionPluginInfo Platform="Mac">
+													<ConversionPlugin Name="" ID="{56637141-C135-467B-A2AC-C610A8A2C1C3}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
+												</ConversionPluginInfo>
+											</ConversionPluginInfoList>
+										</Conversion>
+									</Custom>
+								</Reference>
+							</ReferenceList>
 							<Language>SFX</Language>
 							<AudioFile>Atmos_Beach_Wind_Gentle..wav</AudioFile>
 							<MediaIDList>
@@ -391,118 +1121,16 @@
 						<ActiveSource Name="Atmos_Beach_Wind_Gentle_" ID="{5C7C05D7-2FF6-4478-BD47-E22E448F417F}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
-				<RandomSequenceContainer Name="Beach Waves" ID="{25E3F518-D52C-4352-A4BE-E04E8D2212F0}" ShortID="469423366">
-					<PropertyList>
-						<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
-						<Property Name="OverrideGameAuxSends" Type="bool" Value="True"/>
-						<Property Name="OverrideOutput" Type="bool" Value="True"/>
-						<Property Name="OverridePositioning" Type="bool" Value="True"/>
-						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
-					</PropertyList>
-					<ReferenceList>
-						<Reference Name="Attenuation">
-							<ObjectRef Name="Atmos" ID="{02DBC80D-A3A8-401A-BF00-768794A1700C}" WorkUnitID="{05E83523-ED60-4EDF-8A61-DC39396E21A4}"/>
-						</Reference>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Atmos" ID="{E51D6CB8-01C8-48A1-8608-AE500145E9A8}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<Sound Name="Atmos_Beach_Lapping_Waves_01" ID="{A1B51EE3-3D07-4691-812A-430CFBC85110}" ShortID="483714815">
-							<PropertyList>
-								<Property Name="3DSpatialization" Type="int16" Value="1"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Attenuation">
-									<ObjectRef Name="AnimalSoundAtten" ID="{BADF60B6-F5A2-4FE1-83CA-79928673C0CD}" WorkUnitID="{05E83523-ED60-4EDF-8A61-DC39396E21A4}"/>
-								</Reference>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="Atmos_Beach_Lapping_Waves_01" ID="{33A0F024-22E0-4701-84C1-A09D759BBE5F}">
-									<Language>SFX</Language>
-									<AudioFile>Atmos_Beach_Lapping_Waves_01.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="8120661"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="Atmos_Beach_Lapping_Waves_01" ID="{33A0F024-22E0-4701-84C1-A09D759BBE5F}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="Atmos_Beach_Lapping_Waves_02" ID="{DB198A3C-E9D6-47E2-8089-55DB486DAC23}" ShortID="210236971">
-							<PropertyList>
-								<Property Name="3DSpatialization" Type="int16" Value="1"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Attenuation">
-									<ObjectRef Name="AnimalSoundAtten" ID="{BADF60B6-F5A2-4FE1-83CA-79928673C0CD}" WorkUnitID="{05E83523-ED60-4EDF-8A61-DC39396E21A4}"/>
-								</Reference>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="Atmos_Beach_Lapping_Waves_02" ID="{E3099FA5-1D97-4670-B813-2A1B7219BEC3}">
-									<Language>SFX</Language>
-									<AudioFile>Atmos_Beach_Lapping_Waves_02.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="389401695"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="Atmos_Beach_Lapping_Waves_02" ID="{E3099FA5-1D97-4670-B813-2A1B7219BEC3}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="Atmos_Beach_Loud_Waves_Seagulls_01" ID="{7A64942F-5786-4EFA-BD29-CA078F4CD89E}" ShortID="404203639">
-							<PropertyList>
-								<Property Name="3DSpatialization" Type="int16" Value="1"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Attenuation">
-									<ObjectRef Name="AnimalSoundAtten" ID="{BADF60B6-F5A2-4FE1-83CA-79928673C0CD}" WorkUnitID="{05E83523-ED60-4EDF-8A61-DC39396E21A4}"/>
-								</Reference>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="Atmos_Beach_Loud_Waves_Seagulls_01" ID="{DABB2821-F870-498B-8263-5771A0CA6657}">
-									<Language>SFX</Language>
-									<AudioFile>Atmos_Beach_Loud_Waves_Seagulls_01.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="306597703"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="Atmos_Beach_Loud_Waves_Seagulls_01" ID="{DABB2821-F870-498B-8263-5771A0CA6657}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-					</ChildrenList>
-				</RandomSequenceContainer>
 				<RandomSequenceContainer Name="Forest" ID="{F07571FA-17B9-48E9-9BE4-C1A155048430}" ShortID="993414136">
 					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
 						<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
+						<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
 						<Property Name="OverrideGameAuxSends" Type="bool" Value="True"/>
 						<Property Name="OverrideOutput" Type="bool" Value="True"/>
 						<Property Name="OverridePositioning" Type="bool" Value="True"/>
+						<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+						<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="50"/>
 						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 					</PropertyList>
 					<ReferenceList>
@@ -520,6 +1148,27 @@
 						<Sound Name="Atmos_Forest_Birds_Small_Breeze_01" ID="{643E5EED-33D9-45A5-BE82-876838089DC1}" ShortID="661059939">
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>28</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-2</Value>
+									</ValueList>
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{ABAE6BB3-612F-4A91-818F-719F67B36C0A}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="75"/>
+													<Property Name="Min" Type="Real64" Value="-1"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Attenuation">
@@ -534,6 +1183,62 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="Atmos_Forest_Birds_Small_Breeze_01" ID="{725F6235-BAD6-409B-91B0-45C80FBF2622}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.362277587584713"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.182153369019218"/>
+										<Property Name="OverrideConversion" Type="bool" Value="True"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.909869427742598"/>
+										<Property Name="TrimEnd" Type="Real64" Value="40.9423857485793"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<Custom CreatedFrom="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}">
+												<Conversion Name="Vorbis Quality High (Custom)" ID="{C5EA0434-122B-4851-8CB3-62E4F13EBF8B}">
+													<PropertyList>
+														<Property Name="Channels" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">4</Value>
+																<Value Platform="Mac">4</Value>
+															</ValueList>
+														</Property>
+														<Property Name="LRMix" Type="Real64">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+														<Property Name="MaxSampleRate" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+														<Property Name="MinSampleRate" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+														<Property Name="SampleRate" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ConversionPluginInfoList>
+														<ConversionPluginInfo Platform="Windows">
+															<ConversionPlugin Name="" ID="{D3876BFE-0489-4091-B026-59D458DE848B}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
+														</ConversionPluginInfo>
+														<ConversionPluginInfo Platform="Mac">
+															<ConversionPlugin Name="" ID="{090B9618-268F-44F8-92C7-934014DCE136}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
+														</ConversionPluginInfo>
+													</ConversionPluginInfoList>
+												</Conversion>
+											</Custom>
+										</Reference>
+									</ReferenceList>
 									<Language>SFX</Language>
 									<AudioFile>Atmos_Forest_Birds_Small_Breeze_01.wav</AudioFile>
 									<MediaIDList>
@@ -548,6 +1253,24 @@
 						<Sound Name="Atmos_Forest_Birds_Small_Breeze_02" ID="{0A5614E9-CBA8-4228-98FB-6589F4EBD8C8}" ShortID="872090844">
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>19</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{C3F9AD40-3D00-4F6E-806D-B050BC64FD4B}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="75"/>
+													<Property Name="Min" Type="Real64" Value="-1"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Attenuation">
@@ -562,6 +1285,67 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="Atmos_Forest_Birds_Small_Breeze_02" ID="{CD53C613-8B74-4106-A72A-D6BB2A10C3C8}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0806251172359911"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.471137674807522"/>
+										<Property Name="OverrideConversion" Type="bool" Value="True"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.134375195393319"/>
+										<Property Name="TrimEnd" Type="Real64" Value="67.6971257804809"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<Custom CreatedFrom="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}">
+												<Conversion Name="Vorbis Quality High (Custom)" ID="{B0F16760-AD3C-42DB-901D-0BF7CA114DE7}">
+													<PropertyList>
+														<Property Name="Channels" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">4</Value>
+																<Value Platform="Mac">4</Value>
+															</ValueList>
+														</Property>
+														<Property Name="LRMix" Type="Real64">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+														<Property Name="MaxSampleRate" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+														<Property Name="MinSampleRate" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+														<Property Name="SRConversionQuality" Type="int32">
+															<ValueList>
+																<Value>1</Value>
+															</ValueList>
+														</Property>
+														<Property Name="SampleRate" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ConversionPluginInfoList>
+														<ConversionPluginInfo Platform="Windows">
+															<ConversionPlugin Name="" ID="{43ECC38B-80CA-41F8-9DA6-426F5CF1C87D}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
+														</ConversionPluginInfo>
+														<ConversionPluginInfo Platform="Mac">
+															<ConversionPlugin Name="" ID="{3B751EE2-A660-4126-917A-94D3C888E3B7}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
+														</ConversionPluginInfo>
+													</ConversionPluginInfoList>
+												</Conversion>
+											</Custom>
+										</Reference>
+									</ReferenceList>
 									<Language>SFX</Language>
 									<AudioFile>Atmos_Forest_Birds_Small_Breeze_02.wav</AudioFile>
 									<MediaIDList>
@@ -576,6 +1360,24 @@
 						<Sound Name="Atmos_Forest_Birds_Small_Breeze_03" ID="{6C0C851E-028E-4E0C-920A-100738F069F5}" ShortID="664592643">
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>5</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{17B10487-48A0-4216-AC22-0B9656F1EF6F}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="75"/>
+													<Property Name="Min" Type="Real64" Value="-1"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Attenuation">
@@ -590,6 +1392,67 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="Atmos_Forest_Birds_Small_Breeze_03" ID="{03790574-5F44-40F2-A53D-C252C8D36915}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.341968911917099"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.355820498171795"/>
+										<Property Name="OverrideConversion" Type="bool" Value="True"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="2.05181347150259"/>
+										<Property Name="TrimEnd" Type="Real64" Value="98.4408535028729"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<Custom CreatedFrom="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}">
+												<Conversion Name="Vorbis Quality High (Custom)" ID="{7F887FD7-E97A-4E93-B204-055CA36C1627}">
+													<PropertyList>
+														<Property Name="Channels" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">4</Value>
+																<Value Platform="Mac">4</Value>
+															</ValueList>
+														</Property>
+														<Property Name="LRMix" Type="Real64">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+														<Property Name="MaxSampleRate" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+														<Property Name="MinSampleRate" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+														<Property Name="SRConversionQuality" Type="int32">
+															<ValueList>
+																<Value>1</Value>
+															</ValueList>
+														</Property>
+														<Property Name="SampleRate" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ConversionPluginInfoList>
+														<ConversionPluginInfo Platform="Windows">
+															<ConversionPlugin Name="" ID="{57B87260-3F24-4B24-8F5F-ACC8F77A7C9C}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
+														</ConversionPluginInfo>
+														<ConversionPluginInfo Platform="Mac">
+															<ConversionPlugin Name="" ID="{A2FCE80A-7990-47D9-A549-D6EAE66323D5}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
+														</ConversionPluginInfo>
+													</ConversionPluginInfoList>
+												</Conversion>
+											</Custom>
+										</Reference>
+									</ReferenceList>
 									<Language>SFX</Language>
 									<AudioFile>Atmos_Forest_Birds_Small_Breeze_03.wav</AudioFile>
 									<MediaIDList>
@@ -605,10 +1468,14 @@
 				</RandomSequenceContainer>
 				<RandomSequenceContainer Name="Forest Night" ID="{DFCB4999-B04C-4D9D-A1EC-2FC88FEAB143}" ShortID="348370019">
 					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
 						<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
+						<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
 						<Property Name="OverrideGameAuxSends" Type="bool" Value="True"/>
 						<Property Name="OverrideOutput" Type="bool" Value="True"/>
 						<Property Name="OverridePositioning" Type="bool" Value="True"/>
+						<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+						<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="31"/>
 						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 					</PropertyList>
 					<ReferenceList>
@@ -626,6 +1493,27 @@
 						<Sound Name="Atmos_Forest_Night_01" ID="{1553014C-355C-494C-A85D-0FC5B22D9A20}" ShortID="998020143">
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>11</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-1</Value>
+									</ValueList>
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{8B2F63C8-8937-4458-B2A9-44F118014E66}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="50"/>
+													<Property Name="Min" Type="Real64" Value="-1"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Attenuation">
@@ -640,6 +1528,62 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="Atmos_Forest_Night_01" ID="{DB1E0231-6D74-41D3-BDAD-F09D201314B3}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="2.49774436352456"/>
+										<Property Name="FadeInShape" Type="int16" Value="7"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="3.5049191747685"/>
+										<Property Name="FadeOutShape" Type="int16" Value="2"/>
+										<Property Name="OverrideConversion" Type="bool" Value="True"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<Custom CreatedFrom="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}">
+												<Conversion Name="Vorbis Quality High (Custom)" ID="{ACB055A8-752A-4327-BC19-58C01ECAD9F9}">
+													<PropertyList>
+														<Property Name="Channels" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">4</Value>
+																<Value Platform="Mac">4</Value>
+															</ValueList>
+														</Property>
+														<Property Name="LRMix" Type="Real64">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+														<Property Name="MaxSampleRate" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+														<Property Name="MinSampleRate" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+														<Property Name="SampleRate" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ConversionPluginInfoList>
+														<ConversionPluginInfo Platform="Windows">
+															<ConversionPlugin Name="" ID="{38D3F471-E930-4D3A-AEE2-5198BBE2D574}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
+														</ConversionPluginInfo>
+														<ConversionPluginInfo Platform="Mac">
+															<ConversionPlugin Name="" ID="{0DDE2B41-ECA0-49EC-B354-F37F2D2CD0EE}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
+														</ConversionPluginInfo>
+													</ConversionPluginInfoList>
+												</Conversion>
+											</Custom>
+										</Reference>
+									</ReferenceList>
 									<Language>SFX</Language>
 									<AudioFile>Atmos_Forest_Night_01.wav</AudioFile>
 									<MediaIDList>
@@ -654,6 +1598,27 @@
 						<Sound Name="Atmos_Forest_Night_02" ID="{6A1DA17C-A1FF-40CA-A7B2-3D4BBB82ADC8}" ShortID="748965880">
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>12</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-1</Value>
+									</ValueList>
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{4F72BC1C-E26E-4A04-8BD0-128F620A6CF5}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="50"/>
+													<Property Name="Min" Type="Real64" Value="-1"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Attenuation">
@@ -668,6 +1633,67 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="Atmos_Forest_Night_02" ID="{8DF96492-EF25-4A06-B8E0-5DE692CC229E}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="6.39969135802469"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="1.73904127054753"/>
+										<Property Name="FadeOutShape" Type="int16" Value="2"/>
+										<Property Name="OverrideConversion" Type="bool" Value="True"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<Custom CreatedFrom="{6D51666E-9C7A-40E4-831D-C445512EBABD}">
+												<Conversion Name="ADPCM Auto Detect High (Custom)" ID="{83E31283-2B46-4C43-8ABF-3D21FE0A2F64}">
+													<PropertyList>
+														<Property Name="Channels" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">4</Value>
+																<Value Platform="Mac">4</Value>
+															</ValueList>
+														</Property>
+														<Property Name="LRMix" Type="Real64">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+														<Property Name="MaxSampleRate" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+														<Property Name="MinSampleRate" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+														<Property Name="SRConversionQuality" Type="int32">
+															<ValueList>
+																<Value>1</Value>
+															</ValueList>
+														</Property>
+														<Property Name="SampleRate" Type="int32">
+															<ValueList>
+																<Value>3</Value>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ConversionPluginInfoList>
+														<ConversionPluginInfo Platform="Windows">
+															<ConversionPlugin Name="" ID="{9CD1C4C1-D4C5-44F0-8389-5D6431E27B0B}" PluginName="ADPCM" CompanyID="0" PluginID="2"/>
+														</ConversionPluginInfo>
+														<ConversionPluginInfo Platform="Mac">
+															<ConversionPlugin Name="" ID="{5A00BBAA-FD39-4AD0-A2BC-0EE036EC1FDD}" PluginName="ADPCM" CompanyID="0" PluginID="2"/>
+														</ConversionPluginInfo>
+													</ConversionPluginInfoList>
+												</Conversion>
+											</Custom>
+										</Reference>
+									</ReferenceList>
 									<Language>SFX</Language>
 									<AudioFile>Atmos_Forest_Night_02.wav</AudioFile>
 									<MediaIDList>
@@ -683,10 +1709,14 @@
 				</RandomSequenceContainer>
 				<RandomSequenceContainer Name="Forest Rain" ID="{C2930233-76FC-49BC-BE41-1856B53D18A7}" ShortID="984851990">
 					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
 						<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
+						<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
 						<Property Name="OverrideGameAuxSends" Type="bool" Value="True"/>
 						<Property Name="OverrideOutput" Type="bool" Value="True"/>
 						<Property Name="OverridePositioning" Type="bool" Value="True"/>
+						<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+						<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="35"/>
 						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 					</PropertyList>
 					<ReferenceList>
@@ -704,6 +1734,27 @@
 						<Sound Name="Atmos_Forest_Rain_01" ID="{E5B22F95-A874-495D-B2DD-87599BE69542}" ShortID="440679412">
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>16</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-1</Value>
+									</ValueList>
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{24137412-BFE1-4B37-96CC-F457601CC161}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="50"/>
+													<Property Name="Min" Type="Real64" Value="-1"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Attenuation">
@@ -718,6 +1769,65 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="Atmos_Forest_Rain_01" ID="{406B7E25-4FC3-4435-B9AD-B07B9AEDB98D}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="5.02083333333333"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="34.7739197530864"/>
+										<Property Name="OverrideConversion" Type="bool" Value="True"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<Custom CreatedFrom="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}">
+												<Conversion Name="Vorbis Quality High (Custom)" ID="{8EC804DD-85AC-4744-86E9-010C346E5C01}">
+													<PropertyList>
+														<Property Name="Channels" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">4</Value>
+																<Value Platform="Mac">4</Value>
+															</ValueList>
+														</Property>
+														<Property Name="LRMix" Type="Real64">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+														<Property Name="MaxSampleRate" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+														<Property Name="MinSampleRate" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+														<Property Name="SRConversionQuality" Type="int32">
+															<ValueList>
+																<Value>1</Value>
+															</ValueList>
+														</Property>
+														<Property Name="SampleRate" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ConversionPluginInfoList>
+														<ConversionPluginInfo Platform="Windows">
+															<ConversionPlugin Name="" ID="{6C1A3975-EAD2-44F4-83C1-0668A018E388}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
+														</ConversionPluginInfo>
+														<ConversionPluginInfo Platform="Mac">
+															<ConversionPlugin Name="" ID="{9A53C68F-FAE0-46AF-8E0E-4B250B9D2B1C}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
+														</ConversionPluginInfo>
+													</ConversionPluginInfoList>
+												</Conversion>
+											</Custom>
+										</Reference>
+									</ReferenceList>
 									<Language>SFX</Language>
 									<AudioFile>Atmos_Forest_Rain_01.wav</AudioFile>
 									<MediaIDList>
@@ -732,6 +1842,27 @@
 						<Sound Name="Atmos_Forest_Rain_02" ID="{7D14DB77-5E58-46DD-8DA9-2C9847CE804F}" ShortID="389791995">
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>11</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-1</Value>
+									</ValueList>
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{72ACC321-165D-45D1-8B19-5F2D54D755C1}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="50"/>
+													<Property Name="Min" Type="Real64" Value="-1"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Attenuation">
@@ -746,6 +1877,66 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="Atmos_Forest_Rain_02" ID="{31D146CB-2349-4D60-9628-6048C5176809}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="2.93179012345679"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="16.0482232796282"/>
+										<Property Name="OverrideConversion" Type="bool" Value="True"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<Custom CreatedFrom="{6D51666E-9C7A-40E4-831D-C445512EBABD}">
+												<Conversion Name="ADPCM Auto Detect High (Custom)" ID="{DE77E317-0C77-479A-A032-8382218EB2FA}">
+													<PropertyList>
+														<Property Name="Channels" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">4</Value>
+																<Value Platform="Mac">4</Value>
+															</ValueList>
+														</Property>
+														<Property Name="LRMix" Type="Real64">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+														<Property Name="MaxSampleRate" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+														<Property Name="MinSampleRate" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+														<Property Name="SRConversionQuality" Type="int32">
+															<ValueList>
+																<Value>1</Value>
+															</ValueList>
+														</Property>
+														<Property Name="SampleRate" Type="int32">
+															<ValueList>
+																<Value>3</Value>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ConversionPluginInfoList>
+														<ConversionPluginInfo Platform="Windows">
+															<ConversionPlugin Name="" ID="{C88746E2-6E8C-4A9E-A050-B6ABA5574FFC}" PluginName="ADPCM" CompanyID="0" PluginID="2"/>
+														</ConversionPluginInfo>
+														<ConversionPluginInfo Platform="Mac">
+															<ConversionPlugin Name="" ID="{271FCF01-77D0-4885-8130-3D04B67CD479}" PluginName="ADPCM" CompanyID="0" PluginID="2"/>
+														</ConversionPluginInfo>
+													</ConversionPluginInfoList>
+												</Conversion>
+											</Custom>
+										</Reference>
+									</ReferenceList>
 									<Language>SFX</Language>
 									<AudioFile>Atmos_Forest_Rain_02.wav</AudioFile>
 									<MediaIDList>
@@ -761,10 +1952,14 @@
 				</RandomSequenceContainer>
 				<RandomSequenceContainer Name="Mountain" ID="{9F735164-87F0-4FC5-BF39-AE60BDD2BD82}" ShortID="635137867">
 					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
 						<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
+						<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
 						<Property Name="OverrideGameAuxSends" Type="bool" Value="True"/>
 						<Property Name="OverrideOutput" Type="bool" Value="True"/>
 						<Property Name="OverridePositioning" Type="bool" Value="True"/>
+						<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+						<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="35"/>
 						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 					</PropertyList>
 					<ReferenceList>
@@ -782,6 +1977,27 @@
 						<Sound Name="Atmos_Mountain_Birds_Cicadas_01" ID="{30337BD3-1AA7-40E9-ACDD-562B1603ADEC}" ShortID="220651899">
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>14</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-1</Value>
+									</ValueList>
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{34B6B70B-370A-4C1B-9AE2-4C0C8C6F2E48}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="50"/>
+													<Property Name="Min" Type="Real64" Value="-1"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Attenuation">
@@ -796,6 +2012,65 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="Atmos_Mountain_Birds_Cicadas_01" ID="{6310FA41-6671-40AB-A455-979679D067CB}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="7.44444444444445"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="6.00797470702156"/>
+										<Property Name="OverrideConversion" Type="bool" Value="True"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<Custom CreatedFrom="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}">
+												<Conversion Name="Vorbis Quality High (Custom)" ID="{9ED15833-87F5-4D41-A8D4-E2717CA057AA}">
+													<PropertyList>
+														<Property Name="Channels" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">4</Value>
+																<Value Platform="Mac">4</Value>
+															</ValueList>
+														</Property>
+														<Property Name="LRMix" Type="Real64">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+														<Property Name="MaxSampleRate" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+														<Property Name="MinSampleRate" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+														<Property Name="SRConversionQuality" Type="int32">
+															<ValueList>
+																<Value>1</Value>
+															</ValueList>
+														</Property>
+														<Property Name="SampleRate" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ConversionPluginInfoList>
+														<ConversionPluginInfo Platform="Windows">
+															<ConversionPlugin Name="" ID="{6B9EEA1E-821D-41FF-8D35-900219A8BA39}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
+														</ConversionPluginInfo>
+														<ConversionPluginInfo Platform="Mac">
+															<ConversionPlugin Name="" ID="{FE32E022-FDC0-4FA6-8FBF-CA54935AB83D}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
+														</ConversionPluginInfo>
+													</ConversionPluginInfoList>
+												</Conversion>
+											</Custom>
+										</Reference>
+									</ReferenceList>
 									<Language>SFX</Language>
 									<AudioFile>Atmos_Mountain_Birds_Cicadas_01.wav</AudioFile>
 									<MediaIDList>
@@ -810,6 +2085,27 @@
 						<Sound Name="Atmos_Mountain_Birds_Small_Breeze_01" ID="{0E3C1758-4180-437D-BA62-228296527630}" ShortID="678488851">
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>14</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-1</Value>
+									</ValueList>
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{7F510A64-7B75-486E-A83A-28F298F67A2B}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="50"/>
+													<Property Name="Min" Type="Real64" Value="-1"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Attenuation">
@@ -824,6 +2120,66 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="Atmos_Mountain_Birds_Small_Breeze_01" ID="{48927395-3D97-42E1-A161-4EFC4D49C584}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="4.8375"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="7.70416666666667"/>
+										<Property Name="OverrideConversion" Type="bool" Value="True"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<Custom CreatedFrom="{6D51666E-9C7A-40E4-831D-C445512EBABD}">
+												<Conversion Name="ADPCM Auto Detect High (Custom)" ID="{7C5B0A5D-B202-489D-B451-8ED45C28E2BB}">
+													<PropertyList>
+														<Property Name="Channels" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">4</Value>
+																<Value Platform="Mac">4</Value>
+															</ValueList>
+														</Property>
+														<Property Name="LRMix" Type="Real64">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+														<Property Name="MaxSampleRate" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+														<Property Name="MinSampleRate" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+														<Property Name="SRConversionQuality" Type="int32">
+															<ValueList>
+																<Value>1</Value>
+															</ValueList>
+														</Property>
+														<Property Name="SampleRate" Type="int32">
+															<ValueList>
+																<Value>3</Value>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ConversionPluginInfoList>
+														<ConversionPluginInfo Platform="Windows">
+															<ConversionPlugin Name="" ID="{31B576E7-3F2A-4B0A-BC84-F0DD174EDBB8}" PluginName="ADPCM" CompanyID="0" PluginID="2"/>
+														</ConversionPluginInfo>
+														<ConversionPluginInfo Platform="Mac">
+															<ConversionPlugin Name="" ID="{2E348DAE-3614-47CF-A5FC-2AEB40520684}" PluginName="ADPCM" CompanyID="0" PluginID="2"/>
+														</ConversionPluginInfo>
+													</ConversionPluginInfoList>
+												</Conversion>
+											</Custom>
+										</Reference>
+									</ReferenceList>
 									<Language>SFX</Language>
 									<AudioFile>Atmos_Mountain_Birds_Small_Breeze_01.wav</AudioFile>
 									<MediaIDList>
@@ -839,10 +2195,14 @@
 				</RandomSequenceContainer>
 				<RandomSequenceContainer Name="Mountain Wind" ID="{9D6D012A-D4DB-41C4-B9E0-F39C3B4856DA}" ShortID="488002475">
 					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
 						<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
+						<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
 						<Property Name="OverrideGameAuxSends" Type="bool" Value="True"/>
 						<Property Name="OverrideOutput" Type="bool" Value="True"/>
 						<Property Name="OverridePositioning" Type="bool" Value="True"/>
+						<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+						<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="41"/>
 						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 					</PropertyList>
 					<ReferenceList>
@@ -860,6 +2220,27 @@
 						<Sound Name="Atmos_Mountain_Wind_Gentle_" ID="{AE9DF8A7-CEDE-4DCC-8F1B-6F7CEBD5E221}" ShortID="868408632">
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>10</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-1</Value>
+									</ValueList>
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{73CFD165-CC98-4E81-A774-780E5FC6967C}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="50"/>
+													<Property Name="Min" Type="Real64" Value="-1"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Attenuation">
@@ -874,6 +2255,67 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="Atmos_Mountain_Wind_Gentle_" ID="{76A86632-1954-42A0-B420-2078A19E4B26}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="6.1962962962963"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="7.08148148148148"/>
+										<Property Name="FadeOutShape" Type="int16" Value="2"/>
+										<Property Name="OverrideConversion" Type="bool" Value="True"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<Custom CreatedFrom="{6D51666E-9C7A-40E4-831D-C445512EBABD}">
+												<Conversion Name="ADPCM Auto Detect High (Custom)" ID="{DC52EA2A-2BD5-45F8-A8BC-ABBF3D8122DD}">
+													<PropertyList>
+														<Property Name="Channels" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">4</Value>
+																<Value Platform="Mac">4</Value>
+															</ValueList>
+														</Property>
+														<Property Name="LRMix" Type="Real64">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+														<Property Name="MaxSampleRate" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+														<Property Name="MinSampleRate" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+														<Property Name="SRConversionQuality" Type="int32">
+															<ValueList>
+																<Value>1</Value>
+															</ValueList>
+														</Property>
+														<Property Name="SampleRate" Type="int32">
+															<ValueList>
+																<Value>3</Value>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ConversionPluginInfoList>
+														<ConversionPluginInfo Platform="Windows">
+															<ConversionPlugin Name="" ID="{52C178D7-5564-4381-B3BF-A23A5487AB34}" PluginName="ADPCM" CompanyID="0" PluginID="2"/>
+														</ConversionPluginInfo>
+														<ConversionPluginInfo Platform="Mac">
+															<ConversionPlugin Name="" ID="{8F3DDB8D-8160-436B-9312-32FA628F61B8}" PluginName="ADPCM" CompanyID="0" PluginID="2"/>
+														</ConversionPluginInfo>
+													</ConversionPluginInfoList>
+												</Conversion>
+											</Custom>
+										</Reference>
+									</ReferenceList>
 									<Language>SFX</Language>
 									<AudioFile>Atmos_Mountain_Wind_Gentle..wav</AudioFile>
 									<MediaIDList>
@@ -888,6 +2330,27 @@
 						<Sound Name="Atmos_Mountain__Small_Breeze_Distant_Water_01" ID="{35203EF2-3D4C-47FC-8532-B7D714E773E0}" ShortID="568119724">
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>9</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-1</Value>
+									</ValueList>
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{FE9F7056-8826-4738-ACEB-1F5607FC39B7}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="50"/>
+													<Property Name="Min" Type="Real64" Value="-1"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Attenuation">
@@ -902,6 +2365,60 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="Atmos_Mountain__Small_Breeze_Distant_Water_01" ID="{FC95E888-C9B1-4103-9F79-0E2A3EF6051C}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="10.7"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="11.1458333333333"/>
+										<Property Name="OverrideConversion" Type="bool" Value="True"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<Custom CreatedFrom="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}">
+												<Conversion Name="Vorbis Quality High (Custom)" ID="{64837137-155A-4109-AF6C-61713FE489A7}">
+													<PropertyList>
+														<Property Name="Channels" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">4</Value>
+																<Value Platform="Mac">4</Value>
+															</ValueList>
+														</Property>
+														<Property Name="LRMix" Type="Real64">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+														<Property Name="MaxSampleRate" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+														<Property Name="MinSampleRate" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+														<Property Name="SampleRate" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ConversionPluginInfoList>
+														<ConversionPluginInfo Platform="Windows">
+															<ConversionPlugin Name="" ID="{1D26B949-FADA-445F-BFF2-710EBA7F1510}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
+														</ConversionPluginInfo>
+														<ConversionPluginInfo Platform="Mac">
+															<ConversionPlugin Name="" ID="{64DE6B1A-157D-4933-A105-05731C1EB4C7}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
+														</ConversionPluginInfo>
+													</ConversionPluginInfoList>
+												</Conversion>
+											</Custom>
+										</Reference>
+									</ReferenceList>
 									<Language>SFX</Language>
 									<AudioFile>Atmos_Mountain__Small_Breeze_Distant_Water_01.wav</AudioFile>
 									<MediaIDList>
@@ -917,10 +2434,14 @@
 				</RandomSequenceContainer>
 				<RandomSequenceContainer Name="Stream Night" ID="{4AA8A309-2044-4311-843F-F22606B60628}" ShortID="428061138">
 					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
 						<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
+						<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
 						<Property Name="OverrideGameAuxSends" Type="bool" Value="True"/>
 						<Property Name="OverrideOutput" Type="bool" Value="True"/>
 						<Property Name="OverridePositioning" Type="bool" Value="True"/>
+						<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+						<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="37"/>
 						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 					</PropertyList>
 					<ReferenceList>
@@ -938,6 +2459,27 @@
 						<Sound Name="Atmos_Stream_Night_01" ID="{FD919C8D-FE21-482B-92DC-C0ADFD0940D5}" ShortID="175891849">
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>11</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-1</Value>
+									</ValueList>
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{1AB2F79A-0BD7-4D20-A711-671066857CD3}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="50"/>
+													<Property Name="Min" Type="Real64" Value="-1"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Attenuation">
@@ -952,6 +2494,61 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="Atmos_Stream_Night_01" ID="{85D85E93-D20E-414D-8944-5079FB9FF510}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="5.18055555555556"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="5.35324074074074"/>
+										<Property Name="FadeOutShape" Type="int16" Value="2"/>
+										<Property Name="OverrideConversion" Type="bool" Value="True"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<Custom CreatedFrom="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}">
+												<Conversion Name="Vorbis Quality High (Custom)" ID="{B044BE5E-E304-46B1-B85D-34A3EC98EC99}">
+													<PropertyList>
+														<Property Name="Channels" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">4</Value>
+																<Value Platform="Mac">4</Value>
+															</ValueList>
+														</Property>
+														<Property Name="LRMix" Type="Real64">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+														<Property Name="MaxSampleRate" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+														<Property Name="MinSampleRate" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+														<Property Name="SampleRate" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ConversionPluginInfoList>
+														<ConversionPluginInfo Platform="Windows">
+															<ConversionPlugin Name="" ID="{D37751C0-BC5E-4585-8865-DA54FCAF0541}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
+														</ConversionPluginInfo>
+														<ConversionPluginInfo Platform="Mac">
+															<ConversionPlugin Name="" ID="{3C7DF419-FAB3-4DE4-9EA1-65E1B46AEB50}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
+														</ConversionPluginInfo>
+													</ConversionPluginInfoList>
+												</Conversion>
+											</Custom>
+										</Reference>
+									</ReferenceList>
 									<Language>SFX</Language>
 									<AudioFile>Atmos_Stream_Night_01.wav</AudioFile>
 									<MediaIDList>
@@ -966,6 +2563,27 @@
 						<Sound Name="Atmos_Stream_Night_02" ID="{CE40029D-E5A2-4A0F-B283-671F1C046638}" ShortID="480077507">
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>14</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-1</Value>
+									</ValueList>
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{94FD7429-790E-49C6-A1D4-7CD399E18329}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="50"/>
+													<Property Name="Min" Type="Real64" Value="-1"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Attenuation">
@@ -980,6 +2598,66 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="Atmos_Stream_Night_02" ID="{6606E717-75F0-410A-A993-9C2FDFACF975}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="3.97175925925926"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="5.00787037037037"/>
+										<Property Name="FadeOutShape" Type="int16" Value="2"/>
+										<Property Name="OverrideConversion" Type="bool" Value="True"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<Custom CreatedFrom="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}">
+												<Conversion Name="Vorbis Quality High (Custom)" ID="{DB1BE6F7-8097-45EC-815A-AA5DEB132591}">
+													<PropertyList>
+														<Property Name="Channels" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">4</Value>
+																<Value Platform="Mac">4</Value>
+															</ValueList>
+														</Property>
+														<Property Name="LRMix" Type="Real64">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+														<Property Name="MaxSampleRate" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+														<Property Name="MinSampleRate" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+														<Property Name="SRConversionQuality" Type="int32">
+															<ValueList>
+																<Value>1</Value>
+															</ValueList>
+														</Property>
+														<Property Name="SampleRate" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ConversionPluginInfoList>
+														<ConversionPluginInfo Platform="Windows">
+															<ConversionPlugin Name="" ID="{1AA1A745-F429-40E8-A2CA-16109056254D}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
+														</ConversionPluginInfo>
+														<ConversionPluginInfo Platform="Mac">
+															<ConversionPlugin Name="" ID="{50EA2EDA-C246-4058-A750-8FA3C1BBE4BD}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
+														</ConversionPluginInfo>
+													</ConversionPluginInfoList>
+												</Conversion>
+											</Custom>
+										</Reference>
+									</ReferenceList>
 									<Language>SFX</Language>
 									<AudioFile>Atmos_Stream_Night_02.wav</AudioFile>
 									<MediaIDList>

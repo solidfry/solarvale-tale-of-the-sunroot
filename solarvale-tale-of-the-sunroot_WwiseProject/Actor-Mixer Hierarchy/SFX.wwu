@@ -2,6 +2,10 @@
 <WwiseDocument Type="WorkUnit" ID="{1A7BD965-CC17-4EA5-85D8-3938F011058F}" SchemaVersion="119" RootDocumentID="{6AACD892-8249-4CA2-BBEB-F88052A754B1}" ParentDocumentID="{6AACD892-8249-4CA2-BBEB-F88052A754B1}">
 	<AudioObjects>
 		<WorkUnit Name="SFX" ID="{1A7BD965-CC17-4EA5-85D8-3938F011058F}" OwnerID="{8CB12569-B7F8-44ED-9C1B-53D0D479775D}" PersistMode="Nested">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="1"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
 			<ChildrenList>
 				<Sound Name="SFX_Cricket" ID="{5BA01659-6736-4AC9-80F5-557DC39769DB}" ShortID="622342344">
 					<PropertyList>
@@ -9,6 +13,19 @@
 						<Property Name="OverrideGameAuxSends" Type="bool" Value="True"/>
 						<Property Name="OverrideOutput" Type="bool" Value="True"/>
 						<Property Name="OverridePositioning" Type="bool" Value="True"/>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{727E8237-C5F5-474F-922C-624E572FA200}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="75"/>
+											<Property Name="Min" Type="Real64" Value="-1"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
 						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 					</PropertyList>
 					<ReferenceList>
@@ -24,6 +41,68 @@
 					</ReferenceList>
 					<ChildrenList>
 						<AudioFileSource Name="SFX_Cricket" ID="{584A0FBA-DB4F-4C5D-9E50-AF4EC16B3B13}">
+							<PropertyList>
+								<Property Name="FadeInDuration" Type="Real64" Value="0.00647668393782383"/>
+								<Property Name="FadeOutDuration" Type="Real64" Value="0.0453367875647669"/>
+								<Property Name="FadeOutShape" Type="int16" Value="2"/>
+								<Property Name="OverrideConversion" Type="bool" Value="True"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+								<Property Name="TrimEnd" Type="Real64" Value="0.691709844559585"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<Custom CreatedFrom="{6D51666E-9C7A-40E4-831D-C445512EBABD}">
+										<Conversion Name="ADPCM Auto Detect High (Custom)" ID="{7237CD1A-4CBB-45D2-BC5E-EEE5AA9A113C}">
+											<PropertyList>
+												<Property Name="Channels" Type="int32">
+													<ValueList>
+														<Value Platform="Windows">4</Value>
+														<Value Platform="Mac">4</Value>
+													</ValueList>
+												</Property>
+												<Property Name="LRMix" Type="Real64">
+													<ValueList>
+														<Value Platform="Windows">0</Value>
+														<Value Platform="Mac">0</Value>
+													</ValueList>
+												</Property>
+												<Property Name="MaxSampleRate" Type="int32">
+													<ValueList>
+														<Value Platform="Windows">0</Value>
+														<Value Platform="Mac">0</Value>
+													</ValueList>
+												</Property>
+												<Property Name="MinSampleRate" Type="int32">
+													<ValueList>
+														<Value Platform="Windows">0</Value>
+														<Value Platform="Mac">0</Value>
+													</ValueList>
+												</Property>
+												<Property Name="SRConversionQuality" Type="int32">
+													<ValueList>
+														<Value>1</Value>
+													</ValueList>
+												</Property>
+												<Property Name="SampleRate" Type="int32">
+													<ValueList>
+														<Value>3</Value>
+														<Value Platform="Windows">0</Value>
+														<Value Platform="Mac">0</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ConversionPluginInfoList>
+												<ConversionPluginInfo Platform="Windows">
+													<ConversionPlugin Name="" ID="{17F1534F-4274-4A0F-9D9B-2B6E7B965504}" PluginName="ADPCM" CompanyID="0" PluginID="2"/>
+												</ConversionPluginInfo>
+												<ConversionPluginInfo Platform="Mac">
+													<ConversionPlugin Name="" ID="{273922D3-DC1E-4A05-B805-A5E6A9FD97A3}" PluginName="ADPCM" CompanyID="0" PluginID="2"/>
+												</ConversionPluginInfo>
+											</ConversionPluginInfoList>
+										</Conversion>
+									</Custom>
+								</Reference>
+							</ReferenceList>
 							<Language>SFX</Language>
 							<AudioFile>SFX_Cricket.wav</AudioFile>
 							<MediaIDList>
@@ -40,6 +119,19 @@
 						<Property Name="OverrideGameAuxSends" Type="bool" Value="True"/>
 						<Property Name="OverrideOutput" Type="bool" Value="True"/>
 						<Property Name="OverridePositioning" Type="bool" Value="True"/>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{0BDAAB3A-C8BD-42C0-86FF-EB7106473B2E}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="100"/>
+											<Property Name="Min" Type="Real64" Value="-1"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
 						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 					</PropertyList>
 					<ReferenceList>
@@ -55,6 +147,65 @@
 					</ReferenceList>
 					<ChildrenList>
 						<AudioFileSource Name="SFX_Crickets" ID="{989AB19E-647A-487C-B5C6-7C6985508FCD}">
+							<PropertyList>
+								<Property Name="FadeInDuration" Type="Real64" Value="0.755613126079449"/>
+								<Property Name="FadeOutDuration" Type="Real64" Value="0.377806563039726"/>
+								<Property Name="OverrideConversion" Type="bool" Value="True"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<Custom CreatedFrom="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}">
+										<Conversion Name="Vorbis Quality High (Custom)" ID="{C83E3437-1B40-4F84-A06D-61ED7D66FBAB}">
+											<PropertyList>
+												<Property Name="Channels" Type="int32">
+													<ValueList>
+														<Value Platform="Windows">4</Value>
+														<Value Platform="Mac">4</Value>
+													</ValueList>
+												</Property>
+												<Property Name="LRMix" Type="Real64">
+													<ValueList>
+														<Value Platform="Windows">0</Value>
+														<Value Platform="Mac">0</Value>
+													</ValueList>
+												</Property>
+												<Property Name="MaxSampleRate" Type="int32">
+													<ValueList>
+														<Value Platform="Windows">0</Value>
+														<Value Platform="Mac">0</Value>
+													</ValueList>
+												</Property>
+												<Property Name="MinSampleRate" Type="int32">
+													<ValueList>
+														<Value Platform="Windows">0</Value>
+														<Value Platform="Mac">0</Value>
+													</ValueList>
+												</Property>
+												<Property Name="SRConversionQuality" Type="int32">
+													<ValueList>
+														<Value>1</Value>
+													</ValueList>
+												</Property>
+												<Property Name="SampleRate" Type="int32">
+													<ValueList>
+														<Value Platform="Windows">0</Value>
+														<Value Platform="Mac">0</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ConversionPluginInfoList>
+												<ConversionPluginInfo Platform="Windows">
+													<ConversionPlugin Name="" ID="{0B878DA9-428E-436A-858E-1810260BC9C2}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
+												</ConversionPluginInfo>
+												<ConversionPluginInfo Platform="Mac">
+													<ConversionPlugin Name="" ID="{C3A385CC-C4B8-4222-A842-D71960EBEF6B}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
+												</ConversionPluginInfo>
+											</ConversionPluginInfoList>
+										</Conversion>
+									</Custom>
+								</Reference>
+							</ReferenceList>
 							<Language>SFX</Language>
 							<AudioFile>SFX_Crickets.wav</AudioFile>
 							<MediaIDList>
@@ -69,9 +220,21 @@
 				<Sound Name="SFX_Sunroot_Tree" ID="{BC5DBE26-66C0-4F95-9832-5E0174F5E1F9}" ShortID="146346767">
 					<PropertyList>
 						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+						<Property Name="MakeUpGain" Type="Real64">
+							<ValueList>
+								<Value>20</Value>
+							</ValueList>
+						</Property>
 						<Property Name="OverrideGameAuxSends" Type="bool" Value="True"/>
 						<Property Name="OverrideOutput" Type="bool" Value="True"/>
 						<Property Name="OverridePositioning" Type="bool" Value="True"/>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{D4F61551-B191-4E47-81E4-5F95BB58533C}"/>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
 						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 					</PropertyList>
 					<ReferenceList>
@@ -87,6 +250,67 @@
 					</ReferenceList>
 					<ChildrenList>
 						<AudioFileSource Name="SFX_Sunroot_Tree" ID="{EBB3A168-ADC7-46CF-88B6-ECE466A34959}">
+							<PropertyList>
+								<Property Name="FadeOutDuration" Type="Real64" Value="1.2573402417962"/>
+								<Property Name="FadeOutShape" Type="int16" Value="2"/>
+								<Property Name="OverrideConversion" Type="bool" Value="True"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+								<Property Name="TrimEnd" Type="Real64" Value="5.11226252158895"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<Custom CreatedFrom="{6D51666E-9C7A-40E4-831D-C445512EBABD}">
+										<Conversion Name="ADPCM Auto Detect High (Custom)" ID="{9330D895-5FD2-4778-BF5B-5E736401E8CE}">
+											<PropertyList>
+												<Property Name="Channels" Type="int32">
+													<ValueList>
+														<Value Platform="Windows">4</Value>
+														<Value Platform="Mac">4</Value>
+													</ValueList>
+												</Property>
+												<Property Name="LRMix" Type="Real64">
+													<ValueList>
+														<Value Platform="Windows">0</Value>
+														<Value Platform="Mac">0</Value>
+													</ValueList>
+												</Property>
+												<Property Name="MaxSampleRate" Type="int32">
+													<ValueList>
+														<Value Platform="Windows">0</Value>
+														<Value Platform="Mac">0</Value>
+													</ValueList>
+												</Property>
+												<Property Name="MinSampleRate" Type="int32">
+													<ValueList>
+														<Value Platform="Windows">0</Value>
+														<Value Platform="Mac">0</Value>
+													</ValueList>
+												</Property>
+												<Property Name="SRConversionQuality" Type="int32">
+													<ValueList>
+														<Value>1</Value>
+													</ValueList>
+												</Property>
+												<Property Name="SampleRate" Type="int32">
+													<ValueList>
+														<Value>3</Value>
+														<Value Platform="Windows">0</Value>
+														<Value Platform="Mac">0</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ConversionPluginInfoList>
+												<ConversionPluginInfo Platform="Windows">
+													<ConversionPlugin Name="" ID="{E801594D-975D-40F0-B256-B223327191D3}" PluginName="ADPCM" CompanyID="0" PluginID="2"/>
+												</ConversionPluginInfo>
+												<ConversionPluginInfo Platform="Mac">
+													<ConversionPlugin Name="" ID="{37CADC8F-DC13-4513-9DB1-606C145D061C}" PluginName="ADPCM" CompanyID="0" PluginID="2"/>
+												</ConversionPluginInfo>
+											</ConversionPluginInfoList>
+										</Conversion>
+									</Custom>
+								</Reference>
+							</ReferenceList>
 							<Language>SFX</Language>
 							<AudioFile>SFX_Sunroot_Tree.wav</AudioFile>
 							<MediaIDList>
@@ -101,9 +325,38 @@
 				<Sound Name="SFX_Wings_flap" ID="{8041C211-6019-4708-AE82-DCB590860103}" ShortID="209684317">
 					<PropertyList>
 						<Property Name="3DSpatialization" Type="int16" Value="2"/>
+						<Property Name="MakeUpGain" Type="Real64">
+							<ValueList>
+								<Value>10</Value>
+							</ValueList>
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{5B06DFF5-AE88-443C-BA0A-E311DB9B1B3A}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="5"/>
+											<Property Name="Min" Type="Real64" Value="-1"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
 						<Property Name="OverrideGameAuxSends" Type="bool" Value="True"/>
 						<Property Name="OverrideOutput" Type="bool" Value="True"/>
 						<Property Name="OverridePositioning" Type="bool" Value="True"/>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{D43340B1-69B3-4C5D-AF10-D5CD92E7750E}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="100"/>
+											<Property Name="Min" Type="Real64" Value="-1"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
 						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 					</PropertyList>
 					<ReferenceList>
@@ -119,6 +372,68 @@
 					</ReferenceList>
 					<ChildrenList>
 						<AudioFileSource Name="SFX_Wings_flap" ID="{3645DC61-4CED-4CAD-A9A9-E4F9A80B9D84}">
+							<PropertyList>
+								<Property Name="FadeInDuration" Type="Real64" Value="0.0317357512953368"/>
+								<Property Name="FadeOutDuration" Type="Real64" Value="0.137521588946459"/>
+								<Property Name="FadeOutShape" Type="int16" Value="2"/>
+								<Property Name="OverrideConversion" Type="bool" Value="True"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+								<Property Name="TrimBegin" Type="Real64" Value="0.0483592400690846"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<Custom CreatedFrom="{6D51666E-9C7A-40E4-831D-C445512EBABD}">
+										<Conversion Name="ADPCM Auto Detect High (Custom)" ID="{E7855A1E-05AB-4550-AE36-50FDD6C1B67C}">
+											<PropertyList>
+												<Property Name="Channels" Type="int32">
+													<ValueList>
+														<Value Platform="Windows">4</Value>
+														<Value Platform="Mac">4</Value>
+													</ValueList>
+												</Property>
+												<Property Name="LRMix" Type="Real64">
+													<ValueList>
+														<Value Platform="Windows">0</Value>
+														<Value Platform="Mac">0</Value>
+													</ValueList>
+												</Property>
+												<Property Name="MaxSampleRate" Type="int32">
+													<ValueList>
+														<Value Platform="Windows">0</Value>
+														<Value Platform="Mac">0</Value>
+													</ValueList>
+												</Property>
+												<Property Name="MinSampleRate" Type="int32">
+													<ValueList>
+														<Value Platform="Windows">0</Value>
+														<Value Platform="Mac">0</Value>
+													</ValueList>
+												</Property>
+												<Property Name="SRConversionQuality" Type="int32">
+													<ValueList>
+														<Value>1</Value>
+													</ValueList>
+												</Property>
+												<Property Name="SampleRate" Type="int32">
+													<ValueList>
+														<Value>3</Value>
+														<Value Platform="Windows">0</Value>
+														<Value Platform="Mac">0</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ConversionPluginInfoList>
+												<ConversionPluginInfo Platform="Windows">
+													<ConversionPlugin Name="" ID="{893760E1-DF9B-4AA4-81E3-AF8F95E9244D}" PluginName="ADPCM" CompanyID="0" PluginID="2"/>
+												</ConversionPluginInfo>
+												<ConversionPluginInfo Platform="Mac">
+													<ConversionPlugin Name="" ID="{2CF3E9B2-7B1B-4208-B84A-0BA2103D6216}" PluginName="ADPCM" CompanyID="0" PluginID="2"/>
+												</ConversionPluginInfo>
+											</ConversionPluginInfoList>
+										</Conversion>
+									</Custom>
+								</Reference>
+							</ReferenceList>
 							<Language>SFX</Language>
 							<AudioFile>SFX_Wings_flap.wav</AudioFile>
 							<MediaIDList>
@@ -134,9 +449,27 @@
 					<PropertyList>
 						<Property Name="3DSpatialization" Type="int16" Value="1"/>
 						<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
+						<Property Name="MakeUpGain" Type="Real64">
+							<ValueList>
+								<Value>5</Value>
+							</ValueList>
+						</Property>
 						<Property Name="OverrideGameAuxSends" Type="bool" Value="True"/>
 						<Property Name="OverrideOutput" Type="bool" Value="True"/>
 						<Property Name="OverridePositioning" Type="bool" Value="True"/>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{C3D34AAF-C16A-4EAD-919D-B3A1C7EFA671}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="100"/>
+											<Property Name="Min" Type="Real64" Value="-1"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
 						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 					</PropertyList>
 					<ReferenceList>
@@ -152,6 +485,65 @@
 					</ReferenceList>
 					<ChildrenList>
 						<AudioFileSource Name="SFX_Wood_Fence_mono" ID="{945EA9A4-A431-44CD-9610-3223D6AA5846}">
+							<PropertyList>
+								<Property Name="FadeInDuration" Type="Real64" Value="0.380829015544041"/>
+								<Property Name="FadeOutDuration" Type="Real64" Value="0.507772020725398"/>
+								<Property Name="OverrideConversion" Type="bool" Value="True"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<Custom CreatedFrom="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}">
+										<Conversion Name="Vorbis Quality High (Custom)" ID="{32E3A626-07FE-43C8-A4E2-25E3915BA1CD}">
+											<PropertyList>
+												<Property Name="Channels" Type="int32">
+													<ValueList>
+														<Value Platform="Windows">4</Value>
+														<Value Platform="Mac">4</Value>
+													</ValueList>
+												</Property>
+												<Property Name="LRMix" Type="Real64">
+													<ValueList>
+														<Value Platform="Windows">0</Value>
+														<Value Platform="Mac">0</Value>
+													</ValueList>
+												</Property>
+												<Property Name="MaxSampleRate" Type="int32">
+													<ValueList>
+														<Value Platform="Windows">0</Value>
+														<Value Platform="Mac">0</Value>
+													</ValueList>
+												</Property>
+												<Property Name="MinSampleRate" Type="int32">
+													<ValueList>
+														<Value Platform="Windows">0</Value>
+														<Value Platform="Mac">0</Value>
+													</ValueList>
+												</Property>
+												<Property Name="SRConversionQuality" Type="int32">
+													<ValueList>
+														<Value>1</Value>
+													</ValueList>
+												</Property>
+												<Property Name="SampleRate" Type="int32">
+													<ValueList>
+														<Value Platform="Windows">0</Value>
+														<Value Platform="Mac">0</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ConversionPluginInfoList>
+												<ConversionPluginInfo Platform="Windows">
+													<ConversionPlugin Name="" ID="{3F2AB4F1-1B9D-4BFF-8A4B-CFC2BE22171D}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
+												</ConversionPluginInfo>
+												<ConversionPluginInfo Platform="Mac">
+													<ConversionPlugin Name="" ID="{FB65391B-2E99-4E0A-9ED5-DE1FE9791EDC}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
+												</ConversionPluginInfo>
+											</ConversionPluginInfoList>
+										</Conversion>
+									</Custom>
+								</Reference>
+							</ReferenceList>
 							<Language>SFX</Language>
 							<AudioFile>SFX_Wood_Fence_mono.wav</AudioFile>
 							<MediaIDList>
@@ -165,9 +557,23 @@
 				</Sound>
 				<RandomSequenceContainer Name="Forest" ID="{45829E48-39DD-45CF-9A53-8D6C0696C901}" ShortID="655024495">
 					<PropertyList>
+						<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
 						<Property Name="OverrideGameAuxSends" Type="bool" Value="True"/>
 						<Property Name="OverrideOutput" Type="bool" Value="True"/>
 						<Property Name="OverridePositioning" Type="bool" Value="True"/>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{750D044E-0806-4E6E-B20A-1AA67E75FFEE}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="75"/>
+											<Property Name="Min" Type="Real64" Value="-1"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
 						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 					</PropertyList>
 					<ReferenceList>
@@ -199,6 +605,66 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="SFX_Forest_Rustling_Long" ID="{7EBC0B69-3FA8-4C5D-BCEC-174081A37747}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="4.9447322970639"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="3.94982440999215"/>
+										<Property Name="FadeOutShape" Type="int16" Value="2"/>
+										<Property Name="OverrideConversion" Type="bool" Value="True"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<Custom CreatedFrom="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}">
+												<Conversion Name="Vorbis Quality High (Custom)" ID="{2E20184E-3825-47B9-A250-A13048596D93}">
+													<PropertyList>
+														<Property Name="Channels" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">4</Value>
+																<Value Platform="Mac">4</Value>
+															</ValueList>
+														</Property>
+														<Property Name="LRMix" Type="Real64">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+														<Property Name="MaxSampleRate" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+														<Property Name="MinSampleRate" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+														<Property Name="SRConversionQuality" Type="int32">
+															<ValueList>
+																<Value>1</Value>
+															</ValueList>
+														</Property>
+														<Property Name="SampleRate" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ConversionPluginInfoList>
+														<ConversionPluginInfo Platform="Windows">
+															<ConversionPlugin Name="" ID="{8FFCBADD-1DCA-4F89-B12A-B83809E0593E}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
+														</ConversionPluginInfo>
+														<ConversionPluginInfo Platform="Mac">
+															<ConversionPlugin Name="" ID="{9D45DCD0-DB48-42DB-A427-A6F6B896B071}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
+														</ConversionPluginInfo>
+													</ConversionPluginInfoList>
+												</Conversion>
+											</Custom>
+										</Reference>
+									</ReferenceList>
 									<Language>SFX</Language>
 									<AudioFile>SFX_Forest_Rustling_Long.wav</AudioFile>
 									<MediaIDList>
@@ -212,6 +678,11 @@
 						</Sound>
 						<Sound Name="SFX_Forest_Rustling" ID="{DC0562C1-A98C-4865-A196-02A78D6E01CF}" ShortID="948237668">
 							<PropertyList>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>4</Value>
+									</ValueList>
+								</Property>
 								<Property Name="OverridePositioning" Type="bool" Value="True"/>
 							</PropertyList>
 							<ReferenceList>
@@ -227,6 +698,66 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="SFX_Forest_Rustling" ID="{A6DCFA4D-805A-4272-9E36-D0E4D7C40B5C}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="1.02072538860104"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="1.88852383487778"/>
+										<Property Name="FadeOutShape" Type="int16" Value="2"/>
+										<Property Name="OverrideConversion" Type="bool" Value="True"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<Custom CreatedFrom="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}">
+												<Conversion Name="Vorbis Quality High (Custom)" ID="{B2A45F7F-9F26-46B0-A027-17869B082615}">
+													<PropertyList>
+														<Property Name="Channels" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">4</Value>
+																<Value Platform="Mac">4</Value>
+															</ValueList>
+														</Property>
+														<Property Name="LRMix" Type="Real64">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+														<Property Name="MaxSampleRate" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+														<Property Name="MinSampleRate" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+														<Property Name="SRConversionQuality" Type="int32">
+															<ValueList>
+																<Value>1</Value>
+															</ValueList>
+														</Property>
+														<Property Name="SampleRate" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ConversionPluginInfoList>
+														<ConversionPluginInfo Platform="Windows">
+															<ConversionPlugin Name="" ID="{8979D9F3-60D7-4521-84AF-A0D5CDAB45D8}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
+														</ConversionPluginInfo>
+														<ConversionPluginInfo Platform="Mac">
+															<ConversionPlugin Name="" ID="{39F35C09-F885-47C3-AF26-D604408DC428}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
+														</ConversionPluginInfo>
+													</ConversionPluginInfoList>
+												</Conversion>
+											</Custom>
+										</Reference>
+									</ReferenceList>
 									<Language>SFX</Language>
 									<AudioFile>SFX_Forest_Rustling.wav</AudioFile>
 									<MediaIDList>
@@ -240,6 +771,11 @@
 						</Sound>
 						<Sound Name="SFX_Forest_Creaking" ID="{FAB5708A-E58F-4B0A-8088-419430979E3D}" ShortID="985779400">
 							<PropertyList>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>3</Value>
+									</ValueList>
+								</Property>
 								<Property Name="OverridePositioning" Type="bool" Value="True"/>
 							</PropertyList>
 							<ReferenceList>
@@ -255,6 +791,67 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="SFX_Forest_Creaking" ID="{86DB2B0A-3A38-477C-8F2B-5F31080E7A5F}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="1.0255829015544"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="5.66846389152565"/>
+										<Property Name="FadeOutShape" Type="int16" Value="2"/>
+										<Property Name="OverrideConversion" Type="bool" Value="True"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="197.022821820041"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<Custom CreatedFrom="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}">
+												<Conversion Name="Vorbis Quality High (Custom)" ID="{AB69D831-D258-48C1-84AC-9985078E0136}">
+													<PropertyList>
+														<Property Name="Channels" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">4</Value>
+																<Value Platform="Mac">4</Value>
+															</ValueList>
+														</Property>
+														<Property Name="LRMix" Type="Real64">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+														<Property Name="MaxSampleRate" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+														<Property Name="MinSampleRate" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+														<Property Name="SRConversionQuality" Type="int32">
+															<ValueList>
+																<Value>1</Value>
+															</ValueList>
+														</Property>
+														<Property Name="SampleRate" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ConversionPluginInfoList>
+														<ConversionPluginInfo Platform="Windows">
+															<ConversionPlugin Name="" ID="{9048E314-1CB2-48F0-952B-86676DD5F6D9}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
+														</ConversionPluginInfo>
+														<ConversionPluginInfo Platform="Mac">
+															<ConversionPlugin Name="" ID="{88C3D2EE-D8DF-49AA-829C-01865B60CC78}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
+														</ConversionPluginInfo>
+													</ConversionPluginInfoList>
+												</Conversion>
+											</Custom>
+										</Reference>
+									</ReferenceList>
 									<Language>SFX</Language>
 									<AudioFile>SFX_Forest_Creaking.wav</AudioFile>
 									<MediaIDList>
@@ -273,6 +870,19 @@
 						<Property Name="OverrideGameAuxSends" Type="bool" Value="True"/>
 						<Property Name="OverrideOutput" Type="bool" Value="True"/>
 						<Property Name="OverridePositioning" Type="bool" Value="True"/>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{9DAC689C-3101-42E7-B04F-C046E589D1EC}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="100"/>
+											<Property Name="Min" Type="Real64" Value="-1"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
 						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 					</PropertyList>
 					<ReferenceList>
@@ -301,6 +911,69 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="SFX_Rubbish_01" ID="{5B25D4CA-52DC-406B-A614-F8140E26E600}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0647668393782383"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.26176597582038"/>
+										<Property Name="FadeOutShape" Type="int16" Value="2"/>
+										<Property Name="OverrideConversion" Type="bool" Value="True"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.121437823834197"/>
+										<Property Name="TrimEnd" Type="Real64" Value="1.22247409326425"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<Custom CreatedFrom="{6D51666E-9C7A-40E4-831D-C445512EBABD}">
+												<Conversion Name="ADPCM Auto Detect High (Custom)" ID="{D90B4F20-9BC1-474E-9EBE-CD77BE7E78CE}">
+													<PropertyList>
+														<Property Name="Channels" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">4</Value>
+																<Value Platform="Mac">4</Value>
+															</ValueList>
+														</Property>
+														<Property Name="LRMix" Type="Real64">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+														<Property Name="MaxSampleRate" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+														<Property Name="MinSampleRate" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+														<Property Name="SRConversionQuality" Type="int32">
+															<ValueList>
+																<Value>1</Value>
+															</ValueList>
+														</Property>
+														<Property Name="SampleRate" Type="int32">
+															<ValueList>
+																<Value>3</Value>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ConversionPluginInfoList>
+														<ConversionPluginInfo Platform="Windows">
+															<ConversionPlugin Name="" ID="{725A4B60-DD5B-4B96-86C8-2FD2796C2BDA}" PluginName="ADPCM" CompanyID="0" PluginID="2"/>
+														</ConversionPluginInfo>
+														<ConversionPluginInfo Platform="Mac">
+															<ConversionPlugin Name="" ID="{785C9B65-12C2-4DE4-B997-C67197EB7674}" PluginName="ADPCM" CompanyID="0" PluginID="2"/>
+														</ConversionPluginInfo>
+													</ConversionPluginInfoList>
+												</Conversion>
+											</Custom>
+										</Reference>
+									</ReferenceList>
 									<Language>SFX</Language>
 									<AudioFile>SFX_Rubbish_01.wav</AudioFile>
 									<MediaIDList>
@@ -329,6 +1002,69 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="SFX_Rubbish_02" ID="{3D2B311F-C8B0-43D3-8718-24525C681A25}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0498704663212435"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.224417098445596"/>
+										<Property Name="FadeOutShape" Type="int16" Value="2"/>
+										<Property Name="OverrideConversion" Type="bool" Value="True"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.135362694300518"/>
+										<Property Name="TrimEnd" Type="Real64" Value="1.72765544041451"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<Custom CreatedFrom="{6D51666E-9C7A-40E4-831D-C445512EBABD}">
+												<Conversion Name="ADPCM Auto Detect High (Custom)" ID="{F41184A6-7A8F-46D7-A84B-7074C1CB9A0A}">
+													<PropertyList>
+														<Property Name="Channels" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">4</Value>
+																<Value Platform="Mac">4</Value>
+															</ValueList>
+														</Property>
+														<Property Name="LRMix" Type="Real64">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+														<Property Name="MaxSampleRate" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+														<Property Name="MinSampleRate" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+														<Property Name="SRConversionQuality" Type="int32">
+															<ValueList>
+																<Value>1</Value>
+															</ValueList>
+														</Property>
+														<Property Name="SampleRate" Type="int32">
+															<ValueList>
+																<Value>3</Value>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ConversionPluginInfoList>
+														<ConversionPluginInfo Platform="Windows">
+															<ConversionPlugin Name="" ID="{F91882A9-90D8-424A-A86C-0B42C377FA12}" PluginName="ADPCM" CompanyID="0" PluginID="2"/>
+														</ConversionPluginInfo>
+														<ConversionPluginInfo Platform="Mac">
+															<ConversionPlugin Name="" ID="{7F147069-AC3D-4869-B354-CE94359F788B}" PluginName="ADPCM" CompanyID="0" PluginID="2"/>
+														</ConversionPluginInfo>
+													</ConversionPluginInfoList>
+												</Conversion>
+											</Custom>
+										</Reference>
+									</ReferenceList>
 									<Language>SFX</Language>
 									<AudioFile>SFX_Rubbish_02.wav</AudioFile>
 									<MediaIDList>
@@ -357,6 +1093,69 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="SFX_Rubbish_03" ID="{D81BA646-7058-42F5-BD91-BA16E3899A98}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.072538860103627"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.435233160621762"/>
+										<Property Name="FadeOutShape" Type="int16" Value="2"/>
+										<Property Name="OverrideConversion" Type="bool" Value="True"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.223661485319516"/>
+										<Property Name="TrimEnd" Type="Real64" Value="1.4779792746114"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<Custom CreatedFrom="{6D51666E-9C7A-40E4-831D-C445512EBABD}">
+												<Conversion Name="ADPCM Auto Detect High (Custom)" ID="{3A8D4593-6A0A-4B1A-ADDE-A26ABEE8FD8D}">
+													<PropertyList>
+														<Property Name="Channels" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">4</Value>
+																<Value Platform="Mac">4</Value>
+															</ValueList>
+														</Property>
+														<Property Name="LRMix" Type="Real64">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+														<Property Name="MaxSampleRate" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+														<Property Name="MinSampleRate" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+														<Property Name="SRConversionQuality" Type="int32">
+															<ValueList>
+																<Value>1</Value>
+															</ValueList>
+														</Property>
+														<Property Name="SampleRate" Type="int32">
+															<ValueList>
+																<Value>3</Value>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ConversionPluginInfoList>
+														<ConversionPluginInfo Platform="Windows">
+															<ConversionPlugin Name="" ID="{CCF86D47-D2B4-4F6D-B4E6-2BD441BDC878}" PluginName="ADPCM" CompanyID="0" PluginID="2"/>
+														</ConversionPluginInfo>
+														<ConversionPluginInfo Platform="Mac">
+															<ConversionPlugin Name="" ID="{F203A6A9-D60F-4959-B3D0-3691C84ACF9F}" PluginName="ADPCM" CompanyID="0" PluginID="2"/>
+														</ConversionPluginInfo>
+													</ConversionPluginInfoList>
+												</Conversion>
+											</Custom>
+										</Reference>
+									</ReferenceList>
 									<Language>SFX</Language>
 									<AudioFile>SFX_Rubbish_03.wav</AudioFile>
 									<MediaIDList>
@@ -371,12 +1170,33 @@
 					</ChildrenList>
 				</RandomSequenceContainer>
 				<RandomSequenceContainer Name="Gecko" ID="{F6C9B350-4D6C-441C-8F67-4A3B3E8DE815}" ShortID="998650338">
+					<PropertyList>
+						<Property Name="MakeUpGain" Type="Real64">
+							<ValueList>
+								<Value>7</Value>
+							</ValueList>
+						</Property>
+						<Property Name="OverrideOutput" Type="bool" Value="True"/>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{C40599EB-F871-4B98-8079-2FD1F7F8F016}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="100"/>
+											<Property Name="Min" Type="Real64" Value="-1"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+							<ObjectRef Name="SFX" ID="{3FC18421-AC5C-4E17-B64E-3EC8FFF12898}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
@@ -401,6 +1221,69 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="SFX_Gecko_03" ID="{01513783-81AA-407F-BAA8-FD9CDA1082EA}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0340025906735751"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.230462003454231"/>
+										<Property Name="FadeOutShape" Type="int16" Value="2"/>
+										<Property Name="OverrideConversion" Type="bool" Value="True"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.0453367875647668"/>
+										<Property Name="TrimEnd" Type="Real64" Value="1.99481865284974"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<Custom CreatedFrom="{6D51666E-9C7A-40E4-831D-C445512EBABD}">
+												<Conversion Name="ADPCM Auto Detect High (Custom)" ID="{7C76869D-67FF-40EE-A3B7-20538395653D}">
+													<PropertyList>
+														<Property Name="Channels" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">4</Value>
+																<Value Platform="Mac">4</Value>
+															</ValueList>
+														</Property>
+														<Property Name="LRMix" Type="Real64">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+														<Property Name="MaxSampleRate" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+														<Property Name="MinSampleRate" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+														<Property Name="SRConversionQuality" Type="int32">
+															<ValueList>
+																<Value>1</Value>
+															</ValueList>
+														</Property>
+														<Property Name="SampleRate" Type="int32">
+															<ValueList>
+																<Value>3</Value>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ConversionPluginInfoList>
+														<ConversionPluginInfo Platform="Windows">
+															<ConversionPlugin Name="" ID="{DD1B21A9-8C69-4C7D-BCA8-FC9CB0AB08D1}" PluginName="ADPCM" CompanyID="0" PluginID="2"/>
+														</ConversionPluginInfo>
+														<ConversionPluginInfo Platform="Mac">
+															<ConversionPlugin Name="" ID="{8407723F-146F-4059-959F-4BA38510D027}" PluginName="ADPCM" CompanyID="0" PluginID="2"/>
+														</ConversionPluginInfo>
+													</ConversionPluginInfoList>
+												</Conversion>
+											</Custom>
+										</Reference>
+									</ReferenceList>
 									<Language>SFX</Language>
 									<AudioFile>SFX_Gecko_03.wav</AudioFile>
 									<MediaIDList>
@@ -433,6 +1316,65 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="SFX_Gecko_02" ID="{2E8F6030-51B2-4287-B018-5AC3EFB51857}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.120070523891767"/>
+										<Property Name="OverrideConversion" Type="bool" Value="True"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<Custom CreatedFrom="{6D51666E-9C7A-40E4-831D-C445512EBABD}">
+												<Conversion Name="ADPCM Auto Detect High (Custom)" ID="{C4CDDF50-A6FD-4441-9156-7E128C12BCEB}">
+													<PropertyList>
+														<Property Name="Channels" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">4</Value>
+																<Value Platform="Mac">4</Value>
+															</ValueList>
+														</Property>
+														<Property Name="LRMix" Type="Real64">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+														<Property Name="MaxSampleRate" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+														<Property Name="MinSampleRate" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+														<Property Name="SRConversionQuality" Type="int32">
+															<ValueList>
+																<Value>1</Value>
+															</ValueList>
+														</Property>
+														<Property Name="SampleRate" Type="int32">
+															<ValueList>
+																<Value>3</Value>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ConversionPluginInfoList>
+														<ConversionPluginInfo Platform="Windows">
+															<ConversionPlugin Name="" ID="{71F9AAD1-2A91-4B20-BCD6-BBC5A210727F}" PluginName="ADPCM" CompanyID="0" PluginID="2"/>
+														</ConversionPluginInfo>
+														<ConversionPluginInfo Platform="Mac">
+															<ConversionPlugin Name="" ID="{B9BC7E19-C1B6-4FC7-8C03-AEBD2D2E04A6}" PluginName="ADPCM" CompanyID="0" PluginID="2"/>
+														</ConversionPluginInfo>
+													</ConversionPluginInfoList>
+												</Conversion>
+											</Custom>
+										</Reference>
+									</ReferenceList>
 									<Language>SFX</Language>
 									<AudioFile>SFX_Gecko_02.wav</AudioFile>
 									<MediaIDList>
@@ -465,6 +1407,67 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="SFX_Gecko_01" ID="{EC285B3E-5206-41CD-AD6F-F6CBD29F5040}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0291450777202072"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.00971502590673579"/>
+										<Property Name="OverrideConversion" Type="bool" Value="True"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.0518134715025907"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<Custom CreatedFrom="{6D51666E-9C7A-40E4-831D-C445512EBABD}">
+												<Conversion Name="ADPCM Auto Detect High (Custom)" ID="{AD2AFBBB-74A8-4D37-8B16-D639B3DA082C}">
+													<PropertyList>
+														<Property Name="Channels" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">4</Value>
+																<Value Platform="Mac">4</Value>
+															</ValueList>
+														</Property>
+														<Property Name="LRMix" Type="Real64">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+														<Property Name="MaxSampleRate" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+														<Property Name="MinSampleRate" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+														<Property Name="SRConversionQuality" Type="int32">
+															<ValueList>
+																<Value>1</Value>
+															</ValueList>
+														</Property>
+														<Property Name="SampleRate" Type="int32">
+															<ValueList>
+																<Value>3</Value>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ConversionPluginInfoList>
+														<ConversionPluginInfo Platform="Windows">
+															<ConversionPlugin Name="" ID="{88D462B5-1B8F-4B35-B9E1-C6B54D45CE85}" PluginName="ADPCM" CompanyID="0" PluginID="2"/>
+														</ConversionPluginInfo>
+														<ConversionPluginInfo Platform="Mac">
+															<ConversionPlugin Name="" ID="{45D5C2AE-3E9C-43D5-8AA9-BAF86C6D6A5A}" PluginName="ADPCM" CompanyID="0" PluginID="2"/>
+														</ConversionPluginInfo>
+													</ConversionPluginInfoList>
+												</Conversion>
+											</Custom>
+										</Reference>
+									</ReferenceList>
 									<Language>SFX</Language>
 									<AudioFile>SFX_Gecko_01.wav</AudioFile>
 									<MediaIDList>

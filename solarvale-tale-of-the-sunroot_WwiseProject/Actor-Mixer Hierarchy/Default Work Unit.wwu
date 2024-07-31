@@ -5,7 +5,9 @@
 			<ChildrenList>
 				<ActorMixer Name="World" ID="{8CB12569-B7F8-44ED-9C1B-53D0D479775D}" ShortID="262813964">
 					<PropertyList>
+						<Property Name="Color" Type="int16" Value="15"/>
 						<Property Name="EnableAttenuation" Type="bool" Value="False"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Attenuation">
@@ -25,6 +27,7 @@
 						<WorkUnit Name="Animals" ID="{D2C9257C-DAA1-4CB6-A024-0760DAE2D341}" PersistMode="Reference"/>
 						<WorkUnit Name="SFX" ID="{1A7BD965-CC17-4EA5-85D8-3938F011058F}" PersistMode="Reference"/>
 						<WorkUnit Name="Foley" ID="{E09976D1-5D68-4EB6-B066-673F4F9844F1}" PersistMode="Reference"/>
+						<WorkUnit Name="AtmosOcean" ID="{9CCFE6D6-BF4C-4F3A-BF1F-C42DE46CC289}" PersistMode="Reference"/>
 					</ChildrenList>
 				</ActorMixer>
 				<ActorMixer Name="Music" ID="{EF4ECDC6-4458-4D55-A868-89E5D1A6F1F6}" ShortID="879711763">
@@ -40,39 +43,19 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<Sound Name="Lounge it" ID="{74AEA00C-14E3-4495-B9A7-172A8451F0D4}" ShortID="395072240">
+						<Sound Name="music_flute_solo" ID="{19E1FC93-6D25-4895-ADF7-6491EA3262A4}" ShortID="426584283">
 							<PropertyList>
-								<Property Name="Inclusion" Type="bool">
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="MakeUpGain" Type="Real64">
 									<ValueList>
-										<Value>False</Value>
+										<Value>23</Value>
 									</ValueList>
 								</Property>
+								<Property Name="OverrideConversion" Type="bool" Value="True"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="Lounge it" ID="{0ECD0BD3-93C0-4CAC-A44C-08F0025690C5}">
-									<Language>SFX</Language>
-									<AudioFile>Lounge it.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="943215775"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="Lounge it" ID="{0ECD0BD3-93C0-4CAC-A44C-08F0025690C5}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="music_flute_solo" ID="{19E1FC93-6D25-4895-ADF7-6491EA3262A4}" ShortID="426584283">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
+									<ObjectRef Name="ADPCM Auto Detect High" ID="{6D51666E-9C7A-40E4-831D-C445512EBABD}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
@@ -80,6 +63,62 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="music_flute_solo" ID="{AD6CB23B-F8CE-46C4-BD29-6CF590EC4A3C}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.362694300518135"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="1.9786432160804"/>
+										<Property Name="FadeOutShape" Type="int16" Value="2"/>
+										<Property Name="OverrideConversion" Type="bool" Value="True"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="43.5124964263207"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<Custom CreatedFrom="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}">
+												<Conversion Name="Vorbis Quality High (Custom)" ID="{05286F48-766B-4751-B184-D76D6AA62382}">
+													<PropertyList>
+														<Property Name="Channels" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">4</Value>
+																<Value Platform="Mac">4</Value>
+															</ValueList>
+														</Property>
+														<Property Name="LRMix" Type="Real64">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+														<Property Name="MaxSampleRate" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+														<Property Name="MinSampleRate" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+														<Property Name="SampleRate" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ConversionPluginInfoList>
+														<ConversionPluginInfo Platform="Windows">
+															<ConversionPlugin Name="" ID="{19BBE62D-2A1A-4596-863A-8D69C7CE10A1}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
+														</ConversionPluginInfo>
+														<ConversionPluginInfo Platform="Mac">
+															<ConversionPlugin Name="" ID="{0E93E082-07AE-434E-BAC1-447BFBFD1096}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
+														</ConversionPluginInfo>
+													</ConversionPluginInfoList>
+												</Conversion>
+											</Custom>
+										</Reference>
+									</ReferenceList>
 									<Language>SFX</Language>
 									<AudioFile>music_flute_solo.wav</AudioFile>
 									<MediaIDList>
@@ -92,9 +131,17 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="music_flutes_edit" ID="{5CD7F791-2127-406D-8712-9551503B4E60}" ShortID="446237596">
+							<PropertyList>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>23</Value>
+									</ValueList>
+								</Property>
+								<Property Name="OverrideConversion" Type="bool" Value="True"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
+									<ObjectRef Name="ADPCM Auto Detect High" ID="{6D51666E-9C7A-40E4-831D-C445512EBABD}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
@@ -102,6 +149,67 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="music_flutes_edit" ID="{07EF8BDE-5C34-443A-9C1C-95A019D91765}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.829015544041451"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="4.1499662639559"/>
+										<Property Name="FadeOutShape" Type="int16" Value="2"/>
+										<Property Name="OverrideConversion" Type="bool" Value="True"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="86.7683925093251"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<Custom CreatedFrom="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}">
+												<Conversion Name="Vorbis Quality High (Custom)" ID="{E615B480-AC4F-4AC5-9BF3-05E749DBCCA5}">
+													<PropertyList>
+														<Property Name="Channels" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">4</Value>
+																<Value Platform="Mac">4</Value>
+															</ValueList>
+														</Property>
+														<Property Name="LRMix" Type="Real64">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+														<Property Name="MaxSampleRate" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+														<Property Name="MinSampleRate" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+														<Property Name="SRConversionQuality" Type="int32">
+															<ValueList>
+																<Value>1</Value>
+															</ValueList>
+														</Property>
+														<Property Name="SampleRate" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ConversionPluginInfoList>
+														<ConversionPluginInfo Platform="Windows">
+															<ConversionPlugin Name="" ID="{811A808C-5CAC-4036-88F4-84B086D13D63}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
+														</ConversionPluginInfo>
+														<ConversionPluginInfo Platform="Mac">
+															<ConversionPlugin Name="" ID="{913B64C5-46C3-49E2-AA69-41D5331298AF}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
+														</ConversionPluginInfo>
+													</ConversionPluginInfoList>
+												</Conversion>
+											</Custom>
+										</Reference>
+									</ReferenceList>
 									<Language>SFX</Language>
 									<AudioFile>music_flutes_edit.wav</AudioFile>
 									<MediaIDList>
@@ -114,9 +222,17 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="music_game_start" ID="{FD0DD80B-19DA-49DC-A582-98B6E083E889}" ShortID="990763132">
+							<PropertyList>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>20</Value>
+									</ValueList>
+								</Property>
+								<Property Name="OverrideConversion" Type="bool" Value="True"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
+									<ObjectRef Name="ADPCM Auto Detect High" ID="{6D51666E-9C7A-40E4-831D-C445512EBABD}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
@@ -124,6 +240,62 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="music_game_start" ID="{19336F6A-467D-42C8-B372-A6878B8C6588}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0332469775474957"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="3.33731155778894"/>
+										<Property Name="FadeOutShape" Type="int16" Value="2"/>
+										<Property Name="OverrideConversion" Type="bool" Value="True"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="8.9238062072018"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<Custom CreatedFrom="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}">
+												<Conversion Name="Vorbis Quality High (Custom)" ID="{F35430DE-9D69-4D39-A819-0CEA40DD0A32}">
+													<PropertyList>
+														<Property Name="Channels" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">4</Value>
+																<Value Platform="Mac">4</Value>
+															</ValueList>
+														</Property>
+														<Property Name="LRMix" Type="Real64">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+														<Property Name="MaxSampleRate" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+														<Property Name="MinSampleRate" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+														<Property Name="SampleRate" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ConversionPluginInfoList>
+														<ConversionPluginInfo Platform="Windows">
+															<ConversionPlugin Name="" ID="{18C2C953-8D30-4C41-93C1-826B0F15E59C}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
+														</ConversionPluginInfo>
+														<ConversionPluginInfo Platform="Mac">
+															<ConversionPlugin Name="" ID="{2C7D04DA-05C1-4094-BDD5-46FC0595086D}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
+														</ConversionPluginInfo>
+													</ConversionPluginInfoList>
+												</Conversion>
+											</Custom>
+										</Reference>
+									</ReferenceList>
 									<Language>SFX</Language>
 									<AudioFile>music_game_start.wav</AudioFile>
 									<MediaIDList>
@@ -136,9 +308,17 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="music_gecko" ID="{CC9A6D86-41D5-43E5-A72E-390AE32309A5}" ShortID="204581409">
+							<PropertyList>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>17</Value>
+									</ValueList>
+								</Property>
+								<Property Name="OverrideConversion" Type="bool" Value="True"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
+									<ObjectRef Name="ADPCM Auto Detect High" ID="{6D51666E-9C7A-40E4-831D-C445512EBABD}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
@@ -146,6 +326,66 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="music_gecko" ID="{ACA530D8-64A3-43D2-B5D4-E5AC68AEA4BA}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0621761658031088"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.737100737100736"/>
+										<Property Name="OverrideConversion" Type="bool" Value="True"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="11.6904176904177"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<Custom CreatedFrom="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}">
+												<Conversion Name="Vorbis Quality High (Custom)" ID="{9D9685FB-9145-43D3-A0A6-E068B3BDFCEA}">
+													<PropertyList>
+														<Property Name="Channels" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">4</Value>
+																<Value Platform="Mac">4</Value>
+															</ValueList>
+														</Property>
+														<Property Name="LRMix" Type="Real64">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+														<Property Name="MaxSampleRate" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+														<Property Name="MinSampleRate" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+														<Property Name="SRConversionQuality" Type="int32">
+															<ValueList>
+																<Value>1</Value>
+															</ValueList>
+														</Property>
+														<Property Name="SampleRate" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ConversionPluginInfoList>
+														<ConversionPluginInfo Platform="Windows">
+															<ConversionPlugin Name="" ID="{A49496CF-5ECE-4B19-AE25-00CEEFF871C0}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
+														</ConversionPluginInfo>
+														<ConversionPluginInfo Platform="Mac">
+															<ConversionPlugin Name="" ID="{E69A617A-166E-42F0-84F1-09A4B4250EED}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
+														</ConversionPluginInfo>
+													</ConversionPluginInfoList>
+												</Conversion>
+											</Custom>
+										</Reference>
+									</ReferenceList>
 									<Language>SFX</Language>
 									<AudioFile>music_gecko.wav</AudioFile>
 									<MediaIDList>
@@ -158,9 +398,20 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="music_grandma" ID="{6B2B6231-74F2-4CF4-B5C6-4A15198B7E4A}" ShortID="377963123">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="IsLoopingInfinite" Type="bool" Value="False"/>
+								<Property Name="LoopCount" Type="int32" Value="4"/>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>20</Value>
+									</ValueList>
+								</Property>
+								<Property Name="OverrideConversion" Type="bool" Value="True"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
+									<ObjectRef Name="ADPCM Auto Detect High" ID="{6D51666E-9C7A-40E4-831D-C445512EBABD}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
@@ -168,6 +419,60 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="music_grandma" ID="{9BD9A145-A00C-4572-B16E-231E26E56EC3}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0404792746113989"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0863789926289922"/>
+										<Property Name="OverrideConversion" Type="bool" Value="True"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<Custom CreatedFrom="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}">
+												<Conversion Name="Vorbis Quality High (Custom)" ID="{A2952F53-D8EB-4BB3-919E-4D90663611EA}">
+													<PropertyList>
+														<Property Name="Channels" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">4</Value>
+																<Value Platform="Mac">4</Value>
+															</ValueList>
+														</Property>
+														<Property Name="LRMix" Type="Real64">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+														<Property Name="MaxSampleRate" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+														<Property Name="MinSampleRate" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+														<Property Name="SampleRate" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ConversionPluginInfoList>
+														<ConversionPluginInfo Platform="Windows">
+															<ConversionPlugin Name="" ID="{94660A36-E1EE-4375-8BFE-04927D3A7E8F}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
+														</ConversionPluginInfo>
+														<ConversionPluginInfo Platform="Mac">
+															<ConversionPlugin Name="" ID="{97F0CD7F-6CEE-4C6E-9F32-D4149616474D}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
+														</ConversionPluginInfo>
+													</ConversionPluginInfoList>
+												</Conversion>
+											</Custom>
+										</Reference>
+									</ReferenceList>
 									<Language>SFX</Language>
 									<AudioFile>music_grandma.wav</AudioFile>
 									<MediaIDList>
@@ -183,7 +488,7 @@
 				</ActorMixer>
 				<ActorMixer Name="UI" ID="{9DAF00FE-32C5-4298-9286-5C5DAFBFB287}" ShortID="631225493">
 					<PropertyList>
-						<Property Name="Color" Type="int16" Value="17"/>
+						<Property Name="Color" Type="int16" Value="27"/>
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
 					</PropertyList>
 					<ReferenceList>
@@ -201,9 +506,17 @@
 						<Folder Name="Button" ID="{990BB504-AA24-4B5D-99CB-A4EB0F483C79}" ShortID="959053400">
 							<ChildrenList>
 								<RandomSequenceContainer Name="Button_Hover" ID="{0B500D55-F764-45D8-926F-DD141C27F7A4}" ShortID="39104138">
+									<PropertyList>
+										<Property Name="MakeUpGain" Type="Real64">
+											<ValueList>
+												<Value>5</Value>
+											</ValueList>
+										</Property>
+										<Property Name="OverrideConversion" Type="bool" Value="True"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
+											<ObjectRef Name="ADPCM Auto Detect High" ID="{6D51666E-9C7A-40E4-831D-C445512EBABD}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
 										</Reference>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
@@ -224,10 +537,11 @@
 												</Property>
 												<Property Name="MakeUpGain" Type="Real64">
 													<ValueList>
-														<Value>1</Value>
+														<Value>21</Value>
 													</ValueList>
 												</Property>
 												<Property Name="OverrideEffect" Type="bool" Value="True"/>
+												<Property Name="OverrideOutput" Type="bool" Value="True"/>
 												<Property Name="Pitch" Type="int32">
 													<ValueList>
 														<Value>610</Value>
@@ -239,7 +553,7 @@
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
 												</Reference>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+													<ObjectRef Name="UI" ID="{D87B01C4-2E82-438B-A002-5D55C31FBBFD}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
@@ -261,6 +575,68 @@
 													<Language>SFX</Language>
 												</SourcePlugin>
 												<AudioFileSource Name="UI__Menu_Hover" ID="{C5BE404F-2C76-48EC-A530-B7BDF121F8D9}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00720112912966705"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.195331695331695"/>
+														<Property Name="OverrideConversion" Type="bool" Value="True"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0241449623759425"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.772113022113022"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<Custom CreatedFrom="{6D51666E-9C7A-40E4-831D-C445512EBABD}">
+																<Conversion Name="ADPCM Auto Detect High (Custom)" ID="{5CC551FA-4409-4C6A-BD65-3E3E01D6E3DA}">
+																	<PropertyList>
+																		<Property Name="Channels" Type="int32">
+																			<ValueList>
+																				<Value Platform="Windows">4</Value>
+																				<Value Platform="Mac">4</Value>
+																			</ValueList>
+																		</Property>
+																		<Property Name="LRMix" Type="Real64">
+																			<ValueList>
+																				<Value Platform="Windows">0</Value>
+																				<Value Platform="Mac">0</Value>
+																			</ValueList>
+																		</Property>
+																		<Property Name="MaxSampleRate" Type="int32">
+																			<ValueList>
+																				<Value Platform="Windows">0</Value>
+																				<Value Platform="Mac">0</Value>
+																			</ValueList>
+																		</Property>
+																		<Property Name="MinSampleRate" Type="int32">
+																			<ValueList>
+																				<Value Platform="Windows">0</Value>
+																				<Value Platform="Mac">0</Value>
+																			</ValueList>
+																		</Property>
+																		<Property Name="SRConversionQuality" Type="int32">
+																			<ValueList>
+																				<Value>1</Value>
+																			</ValueList>
+																		</Property>
+																		<Property Name="SampleRate" Type="int32">
+																			<ValueList>
+																				<Value>3</Value>
+																				<Value Platform="Windows">0</Value>
+																				<Value Platform="Mac">0</Value>
+																			</ValueList>
+																		</Property>
+																	</PropertyList>
+																	<ConversionPluginInfoList>
+																		<ConversionPluginInfo Platform="Windows">
+																			<ConversionPlugin Name="" ID="{A8DA8F7D-3865-4B36-BCC5-93798B981025}" PluginName="ADPCM" CompanyID="0" PluginID="2"/>
+																		</ConversionPluginInfo>
+																		<ConversionPluginInfo Platform="Mac">
+																			<ConversionPlugin Name="" ID="{B5A03F46-A4A6-4C0C-B4B8-BC35A625F64A}" PluginName="ADPCM" CompanyID="0" PluginID="2"/>
+																		</ConversionPluginInfo>
+																	</ConversionPluginInfoList>
+																</Conversion>
+															</Custom>
+														</Reference>
+													</ReferenceList>
 													<Language>SFX</Language>
 													<AudioFile>UI__Menu_Hover.wav</AudioFile>
 													<MediaIDList>
@@ -312,9 +688,17 @@
 									</ChildrenList>
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="Button_Click" ID="{01E4BD82-33B8-40FE-9B38-B7DFD676894F}" ShortID="263029197">
+									<PropertyList>
+										<Property Name="MakeUpGain" Type="Real64">
+											<ValueList>
+												<Value>10</Value>
+											</ValueList>
+										</Property>
+										<Property Name="OverrideConversion" Type="bool" Value="True"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
+											<ObjectRef Name="ADPCM Auto Detect High" ID="{6D51666E-9C7A-40E4-831D-C445512EBABD}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
 										</Reference>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
@@ -330,15 +714,16 @@
 												</Property>
 												<Property Name="Lowpass" Type="int16">
 													<ValueList>
-														<Value>41</Value>
+														<Value>35</Value>
 													</ValueList>
 												</Property>
 												<Property Name="MakeUpGain" Type="Real64">
 													<ValueList>
-														<Value>2</Value>
+														<Value>22</Value>
 													</ValueList>
 												</Property>
 												<Property Name="OverrideEffect" Type="bool" Value="True"/>
+												<Property Name="OverrideOutput" Type="bool" Value="True"/>
 												<Property Name="Pitch" Type="int32">
 													<ValueList>
 														<Value>610</Value>
@@ -350,7 +735,7 @@
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
 												</Reference>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+													<ObjectRef Name="UI" ID="{D87B01C4-2E82-438B-A002-5D55C31FBBFD}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
@@ -374,6 +759,68 @@
 													<Language>SFX</Language>
 												</SourcePlugin>
 												<AudioFileSource Name="UI__Menu_Click" ID="{379292CD-7080-484B-A828-29034DCE270A}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0127911958410692"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.158476658476658"/>
+														<Property Name="OverrideConversion" Type="bool" Value="True"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.00490970076658648"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.485257985257985"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<Custom CreatedFrom="{6D51666E-9C7A-40E4-831D-C445512EBABD}">
+																<Conversion Name="ADPCM Auto Detect High (Custom)" ID="{C39053FA-252C-48A1-80BD-9595BF5D36FF}">
+																	<PropertyList>
+																		<Property Name="Channels" Type="int32">
+																			<ValueList>
+																				<Value Platform="Windows">4</Value>
+																				<Value Platform="Mac">4</Value>
+																			</ValueList>
+																		</Property>
+																		<Property Name="LRMix" Type="Real64">
+																			<ValueList>
+																				<Value Platform="Windows">0</Value>
+																				<Value Platform="Mac">0</Value>
+																			</ValueList>
+																		</Property>
+																		<Property Name="MaxSampleRate" Type="int32">
+																			<ValueList>
+																				<Value Platform="Windows">0</Value>
+																				<Value Platform="Mac">0</Value>
+																			</ValueList>
+																		</Property>
+																		<Property Name="MinSampleRate" Type="int32">
+																			<ValueList>
+																				<Value Platform="Windows">0</Value>
+																				<Value Platform="Mac">0</Value>
+																			</ValueList>
+																		</Property>
+																		<Property Name="SRConversionQuality" Type="int32">
+																			<ValueList>
+																				<Value>1</Value>
+																			</ValueList>
+																		</Property>
+																		<Property Name="SampleRate" Type="int32">
+																			<ValueList>
+																				<Value>3</Value>
+																				<Value Platform="Windows">0</Value>
+																				<Value Platform="Mac">0</Value>
+																			</ValueList>
+																		</Property>
+																	</PropertyList>
+																	<ConversionPluginInfoList>
+																		<ConversionPluginInfo Platform="Windows">
+																			<ConversionPlugin Name="" ID="{8291AFFC-C7BB-4279-BCA4-FA8E6E6DF323}" PluginName="ADPCM" CompanyID="0" PluginID="2"/>
+																		</ConversionPluginInfo>
+																		<ConversionPluginInfo Platform="Mac">
+																			<ConversionPlugin Name="" ID="{23B757AB-3001-4E6B-BF1F-4A83AA8507BD}" PluginName="ADPCM" CompanyID="0" PluginID="2"/>
+																		</ConversionPluginInfo>
+																	</ConversionPluginInfoList>
+																</Conversion>
+															</Custom>
+														</Reference>
+													</ReferenceList>
 													<Language>SFX</Language>
 													<AudioFile>UI__Menu_Click.wav</AudioFile>
 													<MediaIDList>
@@ -425,9 +872,12 @@
 									</ChildrenList>
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="Button_Select" ID="{48FCA9BA-B28B-46AF-9792-15E005217B7E}" ShortID="89515674">
+									<PropertyList>
+										<Property Name="OverrideConversion" Type="bool" Value="True"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
+											<ObjectRef Name="ADPCM Auto Detect High" ID="{6D51666E-9C7A-40E4-831D-C445512EBABD}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
 										</Reference>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
@@ -435,16 +885,86 @@
 									</ReferenceList>
 									<ChildrenList>
 										<Sound Name="UI__Menu_Select" ID="{440ABDC0-6F1E-4F84-B95D-8F7D545416C1}" ShortID="209955484">
+											<PropertyList>
+												<Property Name="MakeUpGain" Type="Real64">
+													<ValueList>
+														<Value>20</Value>
+													</ValueList>
+												</Property>
+												<Property Name="OverrideOutput" Type="bool" Value="True"/>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
 												</Reference>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+													<ObjectRef Name="UI" ID="{D87B01C4-2E82-438B-A002-5D55C31FBBFD}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="UI__Menu_Select" ID="{AFF0465A-1049-4A75-9FF7-578601A2A2B6}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00291732666086009"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.305743243243243"/>
+														<Property Name="OverrideConversion" Type="bool" Value="True"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.016443113906666"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.75"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<Custom CreatedFrom="{6D51666E-9C7A-40E4-831D-C445512EBABD}">
+																<Conversion Name="ADPCM Auto Detect High (Custom)" ID="{68772966-F2BD-4857-BC49-9EA3B671A4C7}">
+																	<PropertyList>
+																		<Property Name="Channels" Type="int32">
+																			<ValueList>
+																				<Value Platform="Windows">4</Value>
+																				<Value Platform="Mac">4</Value>
+																			</ValueList>
+																		</Property>
+																		<Property Name="LRMix" Type="Real64">
+																			<ValueList>
+																				<Value Platform="Windows">0</Value>
+																				<Value Platform="Mac">0</Value>
+																			</ValueList>
+																		</Property>
+																		<Property Name="MaxSampleRate" Type="int32">
+																			<ValueList>
+																				<Value Platform="Windows">0</Value>
+																				<Value Platform="Mac">0</Value>
+																			</ValueList>
+																		</Property>
+																		<Property Name="MinSampleRate" Type="int32">
+																			<ValueList>
+																				<Value Platform="Windows">0</Value>
+																				<Value Platform="Mac">0</Value>
+																			</ValueList>
+																		</Property>
+																		<Property Name="SRConversionQuality" Type="int32">
+																			<ValueList>
+																				<Value>1</Value>
+																			</ValueList>
+																		</Property>
+																		<Property Name="SampleRate" Type="int32">
+																			<ValueList>
+																				<Value>3</Value>
+																				<Value Platform="Windows">0</Value>
+																				<Value Platform="Mac">0</Value>
+																			</ValueList>
+																		</Property>
+																	</PropertyList>
+																	<ConversionPluginInfoList>
+																		<ConversionPluginInfo Platform="Windows">
+																			<ConversionPlugin Name="" ID="{C5D3DF0D-F51E-491F-A970-E8FF133D5AB3}" PluginName="ADPCM" CompanyID="0" PluginID="2"/>
+																		</ConversionPluginInfo>
+																		<ConversionPluginInfo Platform="Mac">
+																			<ConversionPlugin Name="" ID="{E98A59CA-8C49-418E-BFCA-A4A189F07B46}" PluginName="ADPCM" CompanyID="0" PluginID="2"/>
+																		</ConversionPluginInfo>
+																	</ConversionPluginInfoList>
+																</Conversion>
+															</Custom>
+														</Reference>
+													</ReferenceList>
 													<Language>SFX</Language>
 													<AudioFile>UI__Menu_Select.wav</AudioFile>
 													<MediaIDList>
@@ -469,23 +989,89 @@
 												<Value>12</Value>
 											</ValueList>
 										</Property>
+										<Property Name="MakeUpGain" Type="Real64">
+											<ValueList>
+												<Value>22</Value>
+											</ValueList>
+										</Property>
+										<Property Name="OverrideConversion" Type="bool" Value="True"/>
+										<Property Name="OverrideEffect" Type="bool" Value="True"/>
+										<Property Name="OverrideOutput" Type="bool" Value="True"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
+											<ObjectRef Name="ADPCM Auto Detect High" ID="{6D51666E-9C7A-40E4-831D-C445512EBABD}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+											<ObjectRef Name="UI" ID="{D87B01C4-2E82-438B-A002-5D55C31FBBFD}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="BrandIntro-Birds" ID="{BF7EB426-20DE-4088-A8D8-2400157607A5}">
 											<PropertyList>
-												<Property Name="FadeInDuration" Type="Real64" Value="6.09988672041294"/>
+												<Property Name="FadeInDuration" Type="Real64" Value="3.79466726877218"/>
+												<Property Name="FadeInShape" Type="int16" Value="7"/>
 												<Property Name="FadeOutDuration" Type="Real64" Value="3.82705221636864"/>
+												<Property Name="FadeOutShape" Type="int16" Value="2"/>
+												<Property Name="OverrideConversion" Type="bool" Value="True"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.813606865284974"/>
 												<Property Name="TrimEnd" Type="Real64" Value="16.1270977676671"/>
 											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<Custom CreatedFrom="{6D51666E-9C7A-40E4-831D-C445512EBABD}">
+														<Conversion Name="ADPCM Auto Detect High (Custom)" ID="{7A1BCB94-61F4-4BB8-BEB2-F0148A9A9062}">
+															<PropertyList>
+																<Property Name="Channels" Type="int32">
+																	<ValueList>
+																		<Value Platform="Windows">4</Value>
+																		<Value Platform="Mac">4</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="LRMix" Type="Real64">
+																	<ValueList>
+																		<Value Platform="Windows">0</Value>
+																		<Value Platform="Mac">0</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="MaxSampleRate" Type="int32">
+																	<ValueList>
+																		<Value Platform="Windows">0</Value>
+																		<Value Platform="Mac">0</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="MinSampleRate" Type="int32">
+																	<ValueList>
+																		<Value Platform="Windows">0</Value>
+																		<Value Platform="Mac">0</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="SRConversionQuality" Type="int32">
+																	<ValueList>
+																		<Value>1</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="SampleRate" Type="int32">
+																	<ValueList>
+																		<Value>3</Value>
+																		<Value Platform="Windows">0</Value>
+																		<Value Platform="Mac">0</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ConversionPluginInfoList>
+																<ConversionPluginInfo Platform="Windows">
+																	<ConversionPlugin Name="" ID="{20EB82BC-A41A-4BBA-B283-359AE259BECB}" PluginName="ADPCM" CompanyID="0" PluginID="2"/>
+																</ConversionPluginInfo>
+																<ConversionPluginInfo Platform="Mac">
+																	<ConversionPlugin Name="" ID="{503B86F6-3436-4790-BAD1-958EA45A5707}" PluginName="ADPCM" CompanyID="0" PluginID="2"/>
+																</ConversionPluginInfo>
+															</ConversionPluginInfoList>
+														</Conversion>
+													</Custom>
+												</Reference>
+											</ReferenceList>
 											<Language>SFX</Language>
 											<AudioFile>BrandIntro-Birds.wav</AudioFile>
 											<MediaIDList>
@@ -493,17 +1079,41 @@
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Effects">
+											<Reference>
+												<Local>
+													<EffectSlot Name="" ID="{89151925-6679-411F-BE64-380B077DA563}" ShortID="372449786">
+														<ReferenceList>
+															<Reference Name="Effect" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+																<ObjectRef Name="Space_Dreaming" ID="{4FF7C4B2-37B0-4DFF-8E8A-1420102AE2DD}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+															</Reference>
+														</ReferenceList>
+													</EffectSlot>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
 									<ActiveSourceList>
 										<ActiveSource Name="BrandIntro-Birds" ID="{BF7EB426-20DE-4088-A8D8-2400157607A5}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="Atmos_Forest_Birds_Small_Breeze_02" ID="{F267AE0A-C3A3-424B-8648-80B7EA7EC0AF}" ShortID="931500148">
+									<PropertyList>
+										<Property Name="MakeUpGain" Type="Real64">
+											<ValueList>
+												<Value>25</Value>
+											</ValueList>
+										</Property>
+										<Property Name="OverrideConversion" Type="bool" Value="True"/>
+										<Property Name="OverrideOutput" Type="bool" Value="True"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
+											<ObjectRef Name="ADPCM Auto Detect High" ID="{6D51666E-9C7A-40E4-831D-C445512EBABD}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+											<ObjectRef Name="UI" ID="{D87B01C4-2E82-438B-A002-5D55C31FBBFD}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -511,9 +1121,64 @@
 											<PropertyList>
 												<Property Name="FadeInDuration" Type="Real64" Value="5.4468085106383"/>
 												<Property Name="FadeOutDuration" Type="Real64" Value="5.19148936170213"/>
+												<Property Name="OverrideConversion" Type="bool" Value="True"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
 												<Property Name="TrimEnd" Type="Real64" Value="16.9361702127661"/>
 											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<Custom CreatedFrom="{6D51666E-9C7A-40E4-831D-C445512EBABD}">
+														<Conversion Name="ADPCM Auto Detect High (Custom)" ID="{0F206B36-19EC-4F96-8640-67F752D0BCBB}">
+															<PropertyList>
+																<Property Name="Channels" Type="int32">
+																	<ValueList>
+																		<Value Platform="Windows">4</Value>
+																		<Value Platform="Mac">4</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="LRMix" Type="Real64">
+																	<ValueList>
+																		<Value Platform="Windows">0</Value>
+																		<Value Platform="Mac">0</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="MaxSampleRate" Type="int32">
+																	<ValueList>
+																		<Value Platform="Windows">0</Value>
+																		<Value Platform="Mac">0</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="MinSampleRate" Type="int32">
+																	<ValueList>
+																		<Value Platform="Windows">0</Value>
+																		<Value Platform="Mac">0</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="SRConversionQuality" Type="int32">
+																	<ValueList>
+																		<Value>1</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="SampleRate" Type="int32">
+																	<ValueList>
+																		<Value>3</Value>
+																		<Value Platform="Windows">0</Value>
+																		<Value Platform="Mac">0</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ConversionPluginInfoList>
+																<ConversionPluginInfo Platform="Windows">
+																	<ConversionPlugin Name="" ID="{062D4F02-D773-49DF-9912-BEA6992A6843}" PluginName="ADPCM" CompanyID="0" PluginID="2"/>
+																</ConversionPluginInfo>
+																<ConversionPluginInfo Platform="Mac">
+																	<ConversionPlugin Name="" ID="{45FF64A0-D7FA-4138-B2F3-E75C6400ADF5}" PluginName="ADPCM" CompanyID="0" PluginID="2"/>
+																</ConversionPluginInfo>
+															</ConversionPluginInfoList>
+														</Conversion>
+													</Custom>
+												</Reference>
+											</ReferenceList>
 											<Language>SFX</Language>
 											<AudioFile>Atmos_Forest_Birds_Small_Breeze_02.wav</AudioFile>
 											<MediaIDList>
@@ -529,64 +1194,88 @@
 						</Folder>
 						<Folder Name="MainMenu" ID="{849BC614-4B5A-4741-84D9-EDDA43C3FE9E}" ShortID="516522916">
 							<ChildrenList>
-								<Sound Name="GameIntro_SoundScape" ID="{3F781544-F121-4DF8-BB10-275BB72FD1E3}" ShortID="751955288">
+								<Sound Name="music_flute_solo" ID="{190EFEC9-3D81-4749-A2F8-E681748BF80E}" ShortID="327102789">
 									<PropertyList>
-										<Property Name="Inclusion" Type="bool">
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="MakeUpGain" Type="Real64">
 											<ValueList>
-												<Value>False</Value>
+												<Value>20</Value>
 											</ValueList>
 										</Property>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>-2</Value>
-											</ValueList>
-										</Property>
+										<Property Name="OverrideConversion" Type="bool" Value="True"/>
+										<Property Name="OverrideOutput" Type="bool" Value="True"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
+											<ObjectRef Name="ADPCM Auto Detect High" ID="{6D51666E-9C7A-40E4-831D-C445512EBABD}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="soundscape" ID="{67E8BBFA-7435-49A2-A7F0-BBAD37E42B44}">
-											<PropertyList>
-												<Property Name="FadeInDuration" Type="Real64" Value="6.27619300766284"/>
-												<Property Name="FadeOutDuration" Type="Real64" Value="6.10471232439336"/>
-												<Property Name="LoopBegin" Type="Real64" Value="18.8285790229885"/>
-												<Property Name="LoopEnd" Type="Real64" Value="32.2726645913155"/>
-												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-											</PropertyList>
-											<Language>SFX</Language>
-											<AudioFile>soundscape.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="1029364635"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="soundscape" ID="{67E8BBFA-7435-49A2-A7F0-BBAD37E42B44}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="music_flute_solo" ID="{190EFEC9-3D81-4749-A2F8-E681748BF80E}" ShortID="327102789">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+											<ObjectRef Name="Music" ID="{651529B0-D00A-407F-9314-E0A35BA653FF}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="music_flute_solo" ID="{7329B93F-20DA-4B70-BAFF-82503DA94100}">
 											<PropertyList>
-												<Property Name="FadeOutDuration" Type="Real64" Value="3.69501466275659"/>
-												<Property Name="LoopEnd" Type="Real64" Value="42"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="1.75972603843463"/>
+												<Property Name="FadeOutShape" Type="int16" Value="2"/>
+												<Property Name="OverrideConversion" Type="bool" Value="True"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimEnd" Type="Real64" Value="42.9545454545455"/>
+												<Property Name="TrimEnd" Type="Real64" Value="42.438574938575"/>
 											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<Custom CreatedFrom="{6D51666E-9C7A-40E4-831D-C445512EBABD}">
+														<Conversion Name="ADPCM Auto Detect High (Custom)" ID="{47D6F07F-2C07-4733-B511-B262657DA9AB}">
+															<PropertyList>
+																<Property Name="Channels" Type="int32">
+																	<ValueList>
+																		<Value Platform="Windows">4</Value>
+																		<Value Platform="Mac">4</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="LRMix" Type="Real64">
+																	<ValueList>
+																		<Value Platform="Windows">0</Value>
+																		<Value Platform="Mac">0</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="MaxSampleRate" Type="int32">
+																	<ValueList>
+																		<Value Platform="Windows">0</Value>
+																		<Value Platform="Mac">0</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="MinSampleRate" Type="int32">
+																	<ValueList>
+																		<Value Platform="Windows">0</Value>
+																		<Value Platform="Mac">0</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="SRConversionQuality" Type="int32">
+																	<ValueList>
+																		<Value>1</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="SampleRate" Type="int32">
+																	<ValueList>
+																		<Value>3</Value>
+																		<Value Platform="Windows">0</Value>
+																		<Value Platform="Mac">0</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ConversionPluginInfoList>
+																<ConversionPluginInfo Platform="Windows">
+																	<ConversionPlugin Name="" ID="{532EFAD2-B50F-4BC8-9D54-A3A85E96D557}" PluginName="ADPCM" CompanyID="0" PluginID="2"/>
+																</ConversionPluginInfo>
+																<ConversionPluginInfo Platform="Mac">
+																	<ConversionPlugin Name="" ID="{3343715C-5C6F-4426-8341-3BDD3586DC3F}" PluginName="ADPCM" CompanyID="0" PluginID="2"/>
+																</ConversionPluginInfo>
+															</ConversionPluginInfoList>
+														</Conversion>
+													</Custom>
+												</Reference>
+											</ReferenceList>
 											<Language>SFX</Language>
 											<AudioFile>music_flute_solo.wav</AudioFile>
 											<MediaIDList>
@@ -609,21 +1298,88 @@
 												<Value>45</Value>
 											</ValueList>
 										</Property>
+										<Property Name="MakeUpGain" Type="Real64">
+											<ValueList>
+												<Value>25</Value>
+											</ValueList>
+										</Property>
+										<Property Name="OverrideConversion" Type="bool" Value="True"/>
+										<Property Name="OverrideEffect" Type="bool" Value="True"/>
+										<Property Name="OverrideOutput" Type="bool" Value="True"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
+											<ObjectRef Name="ADPCM Auto Detect High" ID="{6D51666E-9C7A-40E4-831D-C445512EBABD}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+											<ObjectRef Name="UI" ID="{D87B01C4-2E82-438B-A002-5D55C31FBBFD}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="Polaroid_photo_click_print" ID="{C77BEBE0-FCBF-4C69-A183-92DDE172F984}">
 											<PropertyList>
-												<Property Name="LoopEnd" Type="Real64" Value="2.84060818804483"/>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0177457901554404"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.210376996314496"/>
+												<Property Name="FadeOutShape" Type="int16" Value="2"/>
+												<Property Name="OverrideConversion" Type="bool" Value="True"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0532373704663213"/>
+												<Property Name="TrimEnd" Type="Real64" Value="2.46049522642933"/>
 											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<Custom CreatedFrom="{6D51666E-9C7A-40E4-831D-C445512EBABD}">
+														<Conversion Name="ADPCM Auto Detect High (Custom)" ID="{7D2F19A7-DD98-485F-BEFD-877F3AA97E11}">
+															<PropertyList>
+																<Property Name="Channels" Type="int32">
+																	<ValueList>
+																		<Value Platform="Windows">4</Value>
+																		<Value Platform="Mac">4</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="LRMix" Type="Real64">
+																	<ValueList>
+																		<Value Platform="Windows">0</Value>
+																		<Value Platform="Mac">0</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="MaxSampleRate" Type="int32">
+																	<ValueList>
+																		<Value Platform="Windows">0</Value>
+																		<Value Platform="Mac">0</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="MinSampleRate" Type="int32">
+																	<ValueList>
+																		<Value Platform="Windows">0</Value>
+																		<Value Platform="Mac">0</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="SRConversionQuality" Type="int32">
+																	<ValueList>
+																		<Value>1</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="SampleRate" Type="int32">
+																	<ValueList>
+																		<Value>3</Value>
+																		<Value Platform="Windows">0</Value>
+																		<Value Platform="Mac">0</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ConversionPluginInfoList>
+																<ConversionPluginInfo Platform="Windows">
+																	<ConversionPlugin Name="" ID="{C9AFCB57-05DB-4E28-B9B7-EE2A9D37BB76}" PluginName="ADPCM" CompanyID="0" PluginID="2"/>
+																</ConversionPluginInfo>
+																<ConversionPluginInfo Platform="Mac">
+																	<ConversionPlugin Name="" ID="{39CD6793-444C-4109-864C-9133F847FE77}" PluginName="ADPCM" CompanyID="0" PluginID="2"/>
+																</ConversionPluginInfo>
+															</ConversionPluginInfoList>
+														</Conversion>
+													</Custom>
+												</Reference>
+											</ReferenceList>
 											<Language>SFX</Language>
 											<AudioFile>Camera\Polaroid_photo_click_print.wav</AudioFile>
 											<MediaIDList>
@@ -631,21 +1387,107 @@
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Effects">
+											<Reference>
+												<Local>
+													<EffectSlot Name="" ID="{171AB06D-61EC-4666-8F14-FF9E30337BF5}" ShortID="841553204">
+														<ReferenceList>
+															<Reference Name="Effect" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+																<ObjectRef Name="Have_U_Ever_Been_Outside" ID="{FE29AE8D-FD86-4652-A95D-68D32F5760EC}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+															</Reference>
+														</ReferenceList>
+													</EffectSlot>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
 									<ActiveSourceList>
 										<ActiveSource Name="Polaroid_photo_click_print" ID="{C77BEBE0-FCBF-4C69-A183-92DDE172F984}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="UI__Photo_Keep" ID="{B680E328-FF50-4834-B1DE-5095294D4528}" ShortID="1043325580">
+									<PropertyList>
+										<Property Name="MakeUpGain" Type="Real64">
+											<ValueList>
+												<Value>17</Value>
+											</ValueList>
+										</Property>
+										<Property Name="OverrideConversion" Type="bool" Value="True"/>
+										<Property Name="OverrideOutput" Type="bool" Value="True"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
+											<ObjectRef Name="ADPCM Auto Detect High" ID="{6D51666E-9C7A-40E4-831D-C445512EBABD}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+											<ObjectRef Name="UI" ID="{D87B01C4-2E82-438B-A002-5D55C31FBBFD}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="UI__Photo_Keep" ID="{ED8D34D1-E3AA-4EE3-9EA8-4E0491E4EEBD}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.00704998199798819"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.251689189189189"/>
+												<Property Name="OverrideConversion" Type="bool" Value="True"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.00604284171256131"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.684121621621621"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<Custom CreatedFrom="{6D51666E-9C7A-40E4-831D-C445512EBABD}">
+														<Conversion Name="ADPCM Auto Detect High (Custom)" ID="{04D023A6-DD29-46B3-9A8B-696BB45F561C}">
+															<PropertyList>
+																<Property Name="Channels" Type="int32">
+																	<ValueList>
+																		<Value Platform="Windows">4</Value>
+																		<Value Platform="Mac">4</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="LRMix" Type="Real64">
+																	<ValueList>
+																		<Value Platform="Windows">0</Value>
+																		<Value Platform="Mac">0</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="MaxSampleRate" Type="int32">
+																	<ValueList>
+																		<Value Platform="Windows">0</Value>
+																		<Value Platform="Mac">0</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="MinSampleRate" Type="int32">
+																	<ValueList>
+																		<Value Platform="Windows">0</Value>
+																		<Value Platform="Mac">0</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="SRConversionQuality" Type="int32">
+																	<ValueList>
+																		<Value>1</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="SampleRate" Type="int32">
+																	<ValueList>
+																		<Value>3</Value>
+																		<Value Platform="Windows">0</Value>
+																		<Value Platform="Mac">0</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ConversionPluginInfoList>
+																<ConversionPluginInfo Platform="Windows">
+																	<ConversionPlugin Name="" ID="{5FC6F0E7-A092-466F-8773-3340E851D84A}" PluginName="ADPCM" CompanyID="0" PluginID="2"/>
+																</ConversionPluginInfo>
+																<ConversionPluginInfo Platform="Mac">
+																	<ConversionPlugin Name="" ID="{501260EB-2976-4300-944C-62B36EF8D304}" PluginName="ADPCM" CompanyID="0" PluginID="2"/>
+																</ConversionPluginInfo>
+															</ConversionPluginInfoList>
+														</Conversion>
+													</Custom>
+												</Reference>
+											</ReferenceList>
 											<Language>SFX</Language>
 											<AudioFile>UI__Photo_Keep.wav</AudioFile>
 											<MediaIDList>
@@ -658,16 +1500,86 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="UI__Photo_Discard" ID="{85B2C8ED-4FF0-4C43-955F-118D74DC34D7}" ShortID="34186782">
+									<PropertyList>
+										<Property Name="MakeUpGain" Type="Real64">
+											<ValueList>
+												<Value>14</Value>
+											</ValueList>
+										</Property>
+										<Property Name="OverrideConversion" Type="bool" Value="True"/>
+										<Property Name="OverrideOutput" Type="bool" Value="True"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
+											<ObjectRef Name="ADPCM Auto Detect High" ID="{6D51666E-9C7A-40E4-831D-C445512EBABD}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+											<ObjectRef Name="UI" ID="{D87B01C4-2E82-438B-A002-5D55C31FBBFD}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="UI__Photo_Discard" ID="{DDF34DCE-0CCF-4168-957E-34DA9A25E8EC}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.00227401774012159"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.191953316953317"/>
+												<Property Name="OverrideConversion" Type="bool" Value="True"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.555896805896805"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<Custom CreatedFrom="{6D51666E-9C7A-40E4-831D-C445512EBABD}">
+														<Conversion Name="ADPCM Auto Detect High (Custom)" ID="{070D8E0C-59F9-4A7E-A973-F36E427A9963}">
+															<PropertyList>
+																<Property Name="Channels" Type="int32">
+																	<ValueList>
+																		<Value Platform="Windows">4</Value>
+																		<Value Platform="Mac">4</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="LRMix" Type="Real64">
+																	<ValueList>
+																		<Value Platform="Windows">0</Value>
+																		<Value Platform="Mac">0</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="MaxSampleRate" Type="int32">
+																	<ValueList>
+																		<Value Platform="Windows">0</Value>
+																		<Value Platform="Mac">0</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="MinSampleRate" Type="int32">
+																	<ValueList>
+																		<Value Platform="Windows">0</Value>
+																		<Value Platform="Mac">0</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="SRConversionQuality" Type="int32">
+																	<ValueList>
+																		<Value>1</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="SampleRate" Type="int32">
+																	<ValueList>
+																		<Value>3</Value>
+																		<Value Platform="Windows">0</Value>
+																		<Value Platform="Mac">0</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ConversionPluginInfoList>
+																<ConversionPluginInfo Platform="Windows">
+																	<ConversionPlugin Name="" ID="{8F93923D-887D-43F1-94F1-70F0F08F2DA8}" PluginName="ADPCM" CompanyID="0" PluginID="2"/>
+																</ConversionPluginInfo>
+																<ConversionPluginInfo Platform="Mac">
+																	<ConversionPlugin Name="" ID="{639290C9-9A70-4011-9013-0E74A57C2300}" PluginName="ADPCM" CompanyID="0" PluginID="2"/>
+																</ConversionPluginInfo>
+															</ConversionPluginInfoList>
+														</Conversion>
+													</Custom>
+												</Reference>
+											</ReferenceList>
 											<Language>SFX</Language>
 											<AudioFile>UI__Photo_Discard.wav</AudioFile>
 											<MediaIDList>
@@ -683,20 +1595,29 @@
 						</Folder>
 						<RandomSequenceContainer Name="PianoKeys" ID="{27F9EE56-766C-45B6-AE23-8B3EE7302F68}" ShortID="23638457">
 							<PropertyList>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>17</Value>
+									</ValueList>
+								</Property>
+								<Property Name="OverrideEffect" Type="bool" Value="True"/>
+								<Property Name="OverrideOutput" Type="bool" Value="True"/>
 								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="3"/>
 								<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+									<ObjectRef Name="MenuPiano" ID="{048AFFEC-1C85-40C8-A0D2-687FD5D91A09}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
 								<Sound Name="Piano 0" ID="{DB89F987-7C9F-45C8-BD28-D906FD393B08}" ShortID="149256813">
 									<PropertyList>
+										<Property Name="OverrideConversion" Type="bool" Value="True"/>
 										<Property Name="Pitch" Type="int32">
 											<ModifierList>
 												<ModifierInfo>
@@ -711,7 +1632,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
+											<ObjectRef Name="ADPCM Auto Detect High" ID="{6D51666E-9C7A-40E4-831D-C445512EBABD}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
 										</Reference>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
@@ -720,10 +1641,67 @@
 									<ChildrenList>
 										<AudioFileSource Name="Piano 0" ID="{466A5015-75A8-4F9F-A933-77F3DA6215D8}">
 											<PropertyList>
-												<Property Name="FadeOutDuration" Type="Real64" Value="0.758748280605227"/>
-												<Property Name="LoopBegin" Type="Real64" Value="0"/>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.00882590855688894"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.976986622574139"/>
+												<Property Name="FadeOutShape" Type="int16" Value="2"/>
+												<Property Name="OverrideConversion" Type="bool" Value="True"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0340487125548089"/>
 											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<Custom CreatedFrom="{6D51666E-9C7A-40E4-831D-C445512EBABD}">
+														<Conversion Name="ADPCM Auto Detect High (Custom)" ID="{08D58054-3FB5-430E-9988-C04C1D79EA20}">
+															<PropertyList>
+																<Property Name="Channels" Type="int32">
+																	<ValueList>
+																		<Value Platform="Windows">4</Value>
+																		<Value Platform="Mac">4</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="LRMix" Type="Real64">
+																	<ValueList>
+																		<Value Platform="Windows">0</Value>
+																		<Value Platform="Mac">0</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="MaxSampleRate" Type="int32">
+																	<ValueList>
+																		<Value Platform="Windows">0</Value>
+																		<Value Platform="Mac">0</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="MinSampleRate" Type="int32">
+																	<ValueList>
+																		<Value Platform="Windows">0</Value>
+																		<Value Platform="Mac">0</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="SRConversionQuality" Type="int32">
+																	<ValueList>
+																		<Value>1</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="SampleRate" Type="int32">
+																	<ValueList>
+																		<Value>3</Value>
+																		<Value Platform="Windows">0</Value>
+																		<Value Platform="Mac">0</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ConversionPluginInfoList>
+																<ConversionPluginInfo Platform="Windows">
+																	<ConversionPlugin Name="" ID="{9737E592-0E29-48F8-9C28-9EAFFB32477A}" PluginName="ADPCM" CompanyID="0" PluginID="2"/>
+																</ConversionPluginInfo>
+																<ConversionPluginInfo Platform="Mac">
+																	<ConversionPlugin Name="" ID="{844FC253-3533-4F45-821E-DF828DCD2E31}" PluginName="ADPCM" CompanyID="0" PluginID="2"/>
+																</ConversionPluginInfo>
+															</ConversionPluginInfoList>
+														</Conversion>
+													</Custom>
+												</Reference>
+											</ReferenceList>
 											<Language>SFX</Language>
 											<AudioFile>Piano 0.wav</AudioFile>
 											<MediaIDList>
@@ -736,9 +1714,12 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="Piano 1" ID="{1BE5A03E-08EA-46A8-8719-29F5173F578A}" ShortID="772431493">
+									<PropertyList>
+										<Property Name="OverrideConversion" Type="bool" Value="True"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
+											<ObjectRef Name="ADPCM Auto Detect High" ID="{6D51666E-9C7A-40E4-831D-C445512EBABD}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
 										</Reference>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
@@ -747,10 +1728,67 @@
 									<ChildrenList>
 										<AudioFileSource Name="Piano 1" ID="{2854A86F-A89D-4062-96BA-E410E76B3003}">
 											<PropertyList>
-												<Property Name="FadeOutDuration" Type="Real64" Value="0.625507958341521"/>
-												<Property Name="LoopBegin" Type="Real64" Value="0"/>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.00510490669971357"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.791729334629515"/>
+												<Property Name="FadeOutShape" Type="int16" Value="2"/>
+												<Property Name="OverrideConversion" Type="bool" Value="True"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0194914619443609"/>
 											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<Custom CreatedFrom="{6D51666E-9C7A-40E4-831D-C445512EBABD}">
+														<Conversion Name="ADPCM Auto Detect High (Custom)" ID="{A3F563A4-7464-4C59-877F-77E56819B51E}">
+															<PropertyList>
+																<Property Name="Channels" Type="int32">
+																	<ValueList>
+																		<Value Platform="Windows">4</Value>
+																		<Value Platform="Mac">4</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="LRMix" Type="Real64">
+																	<ValueList>
+																		<Value Platform="Windows">0</Value>
+																		<Value Platform="Mac">0</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="MaxSampleRate" Type="int32">
+																	<ValueList>
+																		<Value Platform="Windows">0</Value>
+																		<Value Platform="Mac">0</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="MinSampleRate" Type="int32">
+																	<ValueList>
+																		<Value Platform="Windows">0</Value>
+																		<Value Platform="Mac">0</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="SRConversionQuality" Type="int32">
+																	<ValueList>
+																		<Value>1</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="SampleRate" Type="int32">
+																	<ValueList>
+																		<Value>3</Value>
+																		<Value Platform="Windows">0</Value>
+																		<Value Platform="Mac">0</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ConversionPluginInfoList>
+																<ConversionPluginInfo Platform="Windows">
+																	<ConversionPlugin Name="" ID="{340F40A8-1436-4464-A311-DC2E4ACDA629}" PluginName="ADPCM" CompanyID="0" PluginID="2"/>
+																</ConversionPluginInfo>
+																<ConversionPluginInfo Platform="Mac">
+																	<ConversionPlugin Name="" ID="{7A4B1548-4FC8-4552-8145-5BB954EC394A}" PluginName="ADPCM" CompanyID="0" PluginID="2"/>
+																</ConversionPluginInfo>
+															</ConversionPluginInfoList>
+														</Conversion>
+													</Custom>
+												</Reference>
+											</ReferenceList>
 											<Language>SFX</Language>
 											<AudioFile>Piano 1.wav</AudioFile>
 											<MediaIDList>
@@ -763,9 +1801,12 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="Piano 2" ID="{E9016F0A-494D-4B16-A275-DA62ACD61509}" ShortID="292418412">
+									<PropertyList>
+										<Property Name="OverrideConversion" Type="bool" Value="True"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
+											<ObjectRef Name="ADPCM Auto Detect High" ID="{6D51666E-9C7A-40E4-831D-C445512EBABD}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
 										</Reference>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
@@ -774,10 +1815,67 @@
 									<ChildrenList>
 										<AudioFileSource Name="Piano 2" ID="{AC5FBC7D-F576-4CCC-A6D5-08A5D18FDAED}">
 											<PropertyList>
-												<Property Name="FadeOutDuration" Type="Real64" Value="0.5843356820032"/>
-												<Property Name="LoopBegin" Type="Real64" Value="0"/>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0105478045002288"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.733562709601804"/>
+												<Property Name="FadeOutShape" Type="int16" Value="2"/>
+												<Property Name="OverrideConversion" Type="bool" Value="True"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0105478045002288"/>
 											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<Custom CreatedFrom="{6D51666E-9C7A-40E4-831D-C445512EBABD}">
+														<Conversion Name="ADPCM Auto Detect High (Custom)" ID="{A2498761-491A-42BA-A393-95EBE60268F0}">
+															<PropertyList>
+																<Property Name="Channels" Type="int32">
+																	<ValueList>
+																		<Value Platform="Windows">4</Value>
+																		<Value Platform="Mac">4</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="LRMix" Type="Real64">
+																	<ValueList>
+																		<Value Platform="Windows">0</Value>
+																		<Value Platform="Mac">0</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="MaxSampleRate" Type="int32">
+																	<ValueList>
+																		<Value Platform="Windows">0</Value>
+																		<Value Platform="Mac">0</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="MinSampleRate" Type="int32">
+																	<ValueList>
+																		<Value Platform="Windows">0</Value>
+																		<Value Platform="Mac">0</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="SRConversionQuality" Type="int32">
+																	<ValueList>
+																		<Value>1</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="SampleRate" Type="int32">
+																	<ValueList>
+																		<Value>3</Value>
+																		<Value Platform="Windows">0</Value>
+																		<Value Platform="Mac">0</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ConversionPluginInfoList>
+																<ConversionPluginInfo Platform="Windows">
+																	<ConversionPlugin Name="" ID="{27CB5198-5220-46FD-9003-9A35682B44A1}" PluginName="ADPCM" CompanyID="0" PluginID="2"/>
+																</ConversionPluginInfo>
+																<ConversionPluginInfo Platform="Mac">
+																	<ConversionPlugin Name="" ID="{DEAAC75B-A2CB-4AA7-AA47-DB4A775FBCB5}" PluginName="ADPCM" CompanyID="0" PluginID="2"/>
+																</ConversionPluginInfo>
+															</ConversionPluginInfoList>
+														</Conversion>
+													</Custom>
+												</Reference>
+											</ReferenceList>
 											<Language>SFX</Language>
 											<AudioFile>Piano 2.wav</AudioFile>
 											<MediaIDList>
@@ -790,9 +1888,12 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="Piano 3" ID="{ECFCED80-C7D7-468E-B9B0-B706C1F349C0}" ShortID="154254459">
+									<PropertyList>
+										<Property Name="OverrideConversion" Type="bool" Value="True"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
+											<ObjectRef Name="ADPCM Auto Detect High" ID="{6D51666E-9C7A-40E4-831D-C445512EBABD}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
 										</Reference>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
@@ -801,10 +1902,67 @@
 									<ChildrenList>
 										<AudioFileSource Name="Piano 3" ID="{9A0A852F-D694-49DB-8DDA-BF37E1706BCC}">
 											<PropertyList>
-												<Property Name="FadeOutDuration" Type="Real64" Value="0.834834704170527"/>
-												<Property Name="LoopBegin" Type="Real64" Value="0"/>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.00153909278159958"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="1.11276166597425"/>
+												<Property Name="FadeOutShape" Type="int16" Value="2"/>
+												<Property Name="OverrideConversion" Type="bool" Value="True"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.014877896888796"/>
 											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<Custom CreatedFrom="{6D51666E-9C7A-40E4-831D-C445512EBABD}">
+														<Conversion Name="ADPCM Auto Detect High (Custom)" ID="{CD614773-B965-48BB-A602-2AF0A1B4A9D9}">
+															<PropertyList>
+																<Property Name="Channels" Type="int32">
+																	<ValueList>
+																		<Value Platform="Windows">4</Value>
+																		<Value Platform="Mac">4</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="LRMix" Type="Real64">
+																	<ValueList>
+																		<Value Platform="Windows">0</Value>
+																		<Value Platform="Mac">0</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="MaxSampleRate" Type="int32">
+																	<ValueList>
+																		<Value Platform="Windows">0</Value>
+																		<Value Platform="Mac">0</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="MinSampleRate" Type="int32">
+																	<ValueList>
+																		<Value Platform="Windows">0</Value>
+																		<Value Platform="Mac">0</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="SRConversionQuality" Type="int32">
+																	<ValueList>
+																		<Value>1</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="SampleRate" Type="int32">
+																	<ValueList>
+																		<Value>3</Value>
+																		<Value Platform="Windows">0</Value>
+																		<Value Platform="Mac">0</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ConversionPluginInfoList>
+																<ConversionPluginInfo Platform="Windows">
+																	<ConversionPlugin Name="" ID="{00B889AA-4503-4DB0-8F06-78695F2C7FD3}" PluginName="ADPCM" CompanyID="0" PluginID="2"/>
+																</ConversionPluginInfo>
+																<ConversionPluginInfo Platform="Mac">
+																	<ConversionPlugin Name="" ID="{B584B815-0B30-44E8-B979-0528EB27535A}" PluginName="ADPCM" CompanyID="0" PluginID="2"/>
+																</ConversionPluginInfo>
+															</ConversionPluginInfoList>
+														</Conversion>
+													</Custom>
+												</Reference>
+											</ReferenceList>
 											<Language>SFX</Language>
 											<AudioFile>Piano 3.wav</AudioFile>
 											<MediaIDList>
@@ -817,9 +1975,12 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="Piano 4" ID="{E89E7E9B-091C-4987-B67A-51F706935F0E}" ShortID="631835081">
+									<PropertyList>
+										<Property Name="OverrideConversion" Type="bool" Value="True"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
+											<ObjectRef Name="ADPCM Auto Detect High" ID="{6D51666E-9C7A-40E4-831D-C445512EBABD}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
 										</Reference>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
@@ -828,10 +1989,66 @@
 									<ChildrenList>
 										<AudioFileSource Name="Piano 4" ID="{DF77DD85-FB2F-4211-9355-20619A957B15}">
 											<PropertyList>
-												<Property Name="FadeOutDuration" Type="Real64" Value="0.533481739325717"/>
-												<Property Name="LoopBegin" Type="Real64" Value="0"/>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.00203180165097142"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="1.20746326976173"/>
+												<Property Name="FadeOutShape" Type="int16" Value="2"/>
+												<Property Name="OverrideConversion" Type="bool" Value="True"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
 											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<Custom CreatedFrom="{6D51666E-9C7A-40E4-831D-C445512EBABD}">
+														<Conversion Name="ADPCM Auto Detect High (Custom)" ID="{4746C0A9-FDEB-4A04-B13E-7873A6467930}">
+															<PropertyList>
+																<Property Name="Channels" Type="int32">
+																	<ValueList>
+																		<Value Platform="Windows">4</Value>
+																		<Value Platform="Mac">4</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="LRMix" Type="Real64">
+																	<ValueList>
+																		<Value Platform="Windows">0</Value>
+																		<Value Platform="Mac">0</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="MaxSampleRate" Type="int32">
+																	<ValueList>
+																		<Value Platform="Windows">0</Value>
+																		<Value Platform="Mac">0</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="MinSampleRate" Type="int32">
+																	<ValueList>
+																		<Value Platform="Windows">0</Value>
+																		<Value Platform="Mac">0</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="SRConversionQuality" Type="int32">
+																	<ValueList>
+																		<Value>1</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="SampleRate" Type="int32">
+																	<ValueList>
+																		<Value>3</Value>
+																		<Value Platform="Windows">0</Value>
+																		<Value Platform="Mac">0</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ConversionPluginInfoList>
+																<ConversionPluginInfo Platform="Windows">
+																	<ConversionPlugin Name="" ID="{5B7CFC32-C481-4897-8AE7-5D14E0541EBF}" PluginName="ADPCM" CompanyID="0" PluginID="2"/>
+																</ConversionPluginInfo>
+																<ConversionPluginInfo Platform="Mac">
+																	<ConversionPlugin Name="" ID="{44CBCF0F-1B53-40ED-BFF2-4ACA44A86C40}" PluginName="ADPCM" CompanyID="0" PluginID="2"/>
+																</ConversionPluginInfo>
+															</ConversionPluginInfoList>
+														</Conversion>
+													</Custom>
+												</Reference>
+											</ReferenceList>
 											<Language>SFX</Language>
 											<AudioFile>Piano 4.wav</AudioFile>
 											<MediaIDList>
@@ -844,9 +2061,12 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="Piano 5" ID="{61C77113-1175-4C62-931E-0BB03A7ECAB7}" ShortID="886493332">
+									<PropertyList>
+										<Property Name="OverrideConversion" Type="bool" Value="True"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
+											<ObjectRef Name="ADPCM Auto Detect High" ID="{6D51666E-9C7A-40E4-831D-C445512EBABD}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
 										</Reference>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
@@ -855,10 +2075,67 @@
 									<ChildrenList>
 										<AudioFileSource Name="Piano 5" ID="{F9E3FE10-9025-4B8E-A9A0-C8E3918AFA0F}">
 											<PropertyList>
-												<Property Name="FadeOutDuration" Type="Real64" Value="0.456595925853147"/>
-												<Property Name="LoopBegin" Type="Real64" Value="0"/>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.00209372018234959"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="1.14951475141446"/>
+												<Property Name="FadeOutShape" Type="int16" Value="2"/>
+												<Property Name="OverrideConversion" Type="bool" Value="True"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.00251246421881951"/>
 											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<Custom CreatedFrom="{6D51666E-9C7A-40E4-831D-C445512EBABD}">
+														<Conversion Name="ADPCM Auto Detect High (Custom)" ID="{5916FDFA-A3E9-40AE-85A8-CE8ECDDFB327}">
+															<PropertyList>
+																<Property Name="Channels" Type="int32">
+																	<ValueList>
+																		<Value Platform="Windows">4</Value>
+																		<Value Platform="Mac">4</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="LRMix" Type="Real64">
+																	<ValueList>
+																		<Value Platform="Windows">0</Value>
+																		<Value Platform="Mac">0</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="MaxSampleRate" Type="int32">
+																	<ValueList>
+																		<Value Platform="Windows">0</Value>
+																		<Value Platform="Mac">0</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="MinSampleRate" Type="int32">
+																	<ValueList>
+																		<Value Platform="Windows">0</Value>
+																		<Value Platform="Mac">0</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="SRConversionQuality" Type="int32">
+																	<ValueList>
+																		<Value>1</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="SampleRate" Type="int32">
+																	<ValueList>
+																		<Value>3</Value>
+																		<Value Platform="Windows">0</Value>
+																		<Value Platform="Mac">0</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ConversionPluginInfoList>
+																<ConversionPluginInfo Platform="Windows">
+																	<ConversionPlugin Name="" ID="{4EA8FDA4-CF6C-47DE-BAD4-90860127EAD0}" PluginName="ADPCM" CompanyID="0" PluginID="2"/>
+																</ConversionPluginInfo>
+																<ConversionPluginInfo Platform="Mac">
+																	<ConversionPlugin Name="" ID="{E3E0CA14-D649-4884-BB30-F881CAA7568C}" PluginName="ADPCM" CompanyID="0" PluginID="2"/>
+																</ConversionPluginInfo>
+															</ConversionPluginInfoList>
+														</Conversion>
+													</Custom>
+												</Reference>
+											</ReferenceList>
 											<Language>SFX</Language>
 											<AudioFile>Piano 5.wav</AudioFile>
 											<MediaIDList>
@@ -871,9 +2148,12 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="Piano 6" ID="{AD4FDBCD-5574-4791-AE02-E95016420B72}" ShortID="778444336">
+									<PropertyList>
+										<Property Name="OverrideConversion" Type="bool" Value="True"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
+											<ObjectRef Name="ADPCM Auto Detect High" ID="{6D51666E-9C7A-40E4-831D-C445512EBABD}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
 										</Reference>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
@@ -882,10 +2162,67 @@
 									<ChildrenList>
 										<AudioFileSource Name="Piano 6" ID="{A0364795-3182-4F0E-96DF-56537419E483}">
 											<PropertyList>
-												<Property Name="FadeOutDuration" Type="Real64" Value="0.640458318127801"/>
-												<Property Name="LoopBegin" Type="Real64" Value="0"/>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.00727227552217212"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.980364325435733"/>
+												<Property Name="FadeOutShape" Type="int16" Value="2"/>
+												<Property Name="OverrideConversion" Type="bool" Value="True"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.00126474356907341"/>
 											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<Custom CreatedFrom="{6D51666E-9C7A-40E4-831D-C445512EBABD}">
+														<Conversion Name="ADPCM Auto Detect High (Custom)" ID="{87F7CF02-6806-4600-ACFD-B79C98EC12BA}">
+															<PropertyList>
+																<Property Name="Channels" Type="int32">
+																	<ValueList>
+																		<Value Platform="Windows">4</Value>
+																		<Value Platform="Mac">4</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="LRMix" Type="Real64">
+																	<ValueList>
+																		<Value Platform="Windows">0</Value>
+																		<Value Platform="Mac">0</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="MaxSampleRate" Type="int32">
+																	<ValueList>
+																		<Value Platform="Windows">0</Value>
+																		<Value Platform="Mac">0</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="MinSampleRate" Type="int32">
+																	<ValueList>
+																		<Value Platform="Windows">0</Value>
+																		<Value Platform="Mac">0</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="SRConversionQuality" Type="int32">
+																	<ValueList>
+																		<Value>1</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="SampleRate" Type="int32">
+																	<ValueList>
+																		<Value>3</Value>
+																		<Value Platform="Windows">0</Value>
+																		<Value Platform="Mac">0</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ConversionPluginInfoList>
+																<ConversionPluginInfo Platform="Windows">
+																	<ConversionPlugin Name="" ID="{85F08928-A796-44BD-B435-C0F6D8DD0E55}" PluginName="ADPCM" CompanyID="0" PluginID="2"/>
+																</ConversionPluginInfo>
+																<ConversionPluginInfo Platform="Mac">
+																	<ConversionPlugin Name="" ID="{61FC1E2F-9CE4-47BF-9A46-809687F1321A}" PluginName="ADPCM" CompanyID="0" PluginID="2"/>
+																</ConversionPluginInfo>
+															</ConversionPluginInfoList>
+														</Conversion>
+													</Custom>
+												</Reference>
+											</ReferenceList>
 											<Language>SFX</Language>
 											<AudioFile>Piano 6.wav</AudioFile>
 											<MediaIDList>
@@ -899,6 +2236,7 @@
 								</Sound>
 								<Sound Name="Piano 7" ID="{C390113F-75D2-453B-A774-D2283755317A}" ShortID="865600098">
 									<PropertyList>
+										<Property Name="OverrideConversion" Type="bool" Value="True"/>
 										<Property Name="Pitch" Type="int32">
 											<ModifierList>
 												<ModifierInfo>
@@ -909,7 +2247,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
+											<ObjectRef Name="ADPCM Auto Detect High" ID="{6D51666E-9C7A-40E4-831D-C445512EBABD}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
 										</Reference>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
@@ -918,10 +2256,67 @@
 									<ChildrenList>
 										<AudioFileSource Name="Piano 7" ID="{5A9A110C-18B3-4217-BABB-46BD7CD60FA8}">
 											<PropertyList>
-												<Property Name="FadeOutDuration" Type="Real64" Value="0.450102274747588"/>
-												<Property Name="LoopBegin" Type="Real64" Value="0"/>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.00495427920442331"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.989951181495089"/>
+												<Property Name="FadeOutShape" Type="int16" Value="2"/>
+												<Property Name="OverrideConversion" Type="bool" Value="True"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0116779438389978"/>
 											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<Custom CreatedFrom="{6D51666E-9C7A-40E4-831D-C445512EBABD}">
+														<Conversion Name="ADPCM Auto Detect High (Custom)" ID="{A378FB59-A04D-4085-8AC3-B262A15D4C92}">
+															<PropertyList>
+																<Property Name="Channels" Type="int32">
+																	<ValueList>
+																		<Value Platform="Windows">4</Value>
+																		<Value Platform="Mac">4</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="LRMix" Type="Real64">
+																	<ValueList>
+																		<Value Platform="Windows">0</Value>
+																		<Value Platform="Mac">0</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="MaxSampleRate" Type="int32">
+																	<ValueList>
+																		<Value Platform="Windows">0</Value>
+																		<Value Platform="Mac">0</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="MinSampleRate" Type="int32">
+																	<ValueList>
+																		<Value Platform="Windows">0</Value>
+																		<Value Platform="Mac">0</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="SRConversionQuality" Type="int32">
+																	<ValueList>
+																		<Value>1</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="SampleRate" Type="int32">
+																	<ValueList>
+																		<Value>3</Value>
+																		<Value Platform="Windows">0</Value>
+																		<Value Platform="Mac">0</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ConversionPluginInfoList>
+																<ConversionPluginInfo Platform="Windows">
+																	<ConversionPlugin Name="" ID="{6CD73AE0-624E-428F-91CC-D19C9EA6BB0C}" PluginName="ADPCM" CompanyID="0" PluginID="2"/>
+																</ConversionPluginInfo>
+																<ConversionPluginInfo Platform="Mac">
+																	<ConversionPlugin Name="" ID="{B3C70A06-9518-4D2C-B094-802C6C53B167}" PluginName="ADPCM" CompanyID="0" PluginID="2"/>
+																</ConversionPluginInfo>
+															</ConversionPluginInfoList>
+														</Conversion>
+													</Custom>
+												</Reference>
+											</ReferenceList>
 											<Language>SFX</Language>
 											<AudioFile>Piano 7.wav</AudioFile>
 											<MediaIDList>
@@ -935,6 +2330,41 @@
 								</Sound>
 							</ChildrenList>
 							<ObjectLists>
+								<ObjectList Name="Effects">
+									<Reference>
+										<Local>
+											<EffectSlot Name="" ID="{11964FC5-0394-4180-84B3-C6851D00071B}" ShortID="321090226">
+												<ReferenceList>
+													<Reference Name="Effect" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+														<ObjectRef Name="Born_In_1950" ID="{3B3A31C2-C9A6-430E-A3CF-62963E332052}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+													</Reference>
+												</ReferenceList>
+											</EffectSlot>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<EffectSlot Name="" ID="{98DB7720-5E26-45F9-9558-61B23A96426B}" ShortID="449883818">
+												<ReferenceList>
+													<Reference Name="Effect" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
+														<ObjectRef Name="Gentle_Program_Compressor_Minus_14dB_RMS" ID="{1595E6B0-DD58-4363-A3F0-DF0C96EC7C17}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+													</Reference>
+												</ReferenceList>
+											</EffectSlot>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<EffectSlot Name="" ID="{6F4CA4CF-66DF-4DD2-AF22-9257F7186364}" ShortID="877790643">
+												<ReferenceList>
+													<Reference Name="Effect" PluginName="Wwise Matrix Reverb" CompanyID="0" PluginID="115" PluginType="3">
+														<ObjectRef Name="Large_Church1" ID="{9B6E8B78-EF8C-494C-AADA-D01CF51B5FAC}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+													</Reference>
+												</ReferenceList>
+											</EffectSlot>
+										</Local>
+									</Reference>
+								</ObjectList>
 								<ObjectList Name="Playlist">
 									<Reference>
 										<ObjectRef Name="Piano 0" ID="{DB89F987-7C9F-45C8-BD28-D906FD393B08}" WorkUnitID="{6AACD892-8249-4CA2-BBEB-F88052A754B1}"/>

@@ -571,7 +571,7 @@
 								<Action Name="" ID="{60F724EF-7EA7-4E4A-9D99-E32A5E7DC22F}" ShortID="750242578">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Beach Waves" ID="{25E3F518-D52C-4352-A4BE-E04E8D2212F0}" WorkUnitID="{BF25DDCB-4F6E-4FFB-A522-CBB1CD35F4B9}"/>
+											<ObjectRef Name="Beach Waves" ID="{25E3F518-D52C-4352-A4BE-E04E8D2212F0}" WorkUnitID="{9CCFE6D6-BF4C-4F3A-BF1F-C42DE46CC289}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -693,7 +693,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Beach Waves" ID="{25E3F518-D52C-4352-A4BE-E04E8D2212F0}" WorkUnitID="{BF25DDCB-4F6E-4FFB-A522-CBB1CD35F4B9}"/>
+											<ObjectRef Name="Beach Waves" ID="{25E3F518-D52C-4352-A4BE-E04E8D2212F0}" WorkUnitID="{9CCFE6D6-BF4C-4F3A-BF1F-C42DE46CC289}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -757,7 +757,7 @@
 								<Action Name="" ID="{3403A2EB-9ED9-40A3-84D2-0880A697E000}" ShortID="928444210">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Atmos_Beach_Rain_01" ID="{F1CC142E-0217-44F3-B441-3A1374285B99}" WorkUnitID="{BF25DDCB-4F6E-4FFB-A522-CBB1CD35F4B9}"/>
+											<ObjectRef Name="Atmos_Beach_Rain_01" ID="{F1CC142E-0217-44F3-B441-3A1374285B99}" WorkUnitID="{9CCFE6D6-BF4C-4F3A-BF1F-C42DE46CC289}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -878,7 +878,7 @@
 								<Action Name="" ID="{DE8F78DD-3EE4-4367-B14B-90E6616091B6}" ShortID="207982764">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Atmos_Ocean_Night_01" ID="{A3D9F6C4-FEEF-48B2-9951-36002F7474EC}" WorkUnitID="{BF25DDCB-4F6E-4FFB-A522-CBB1CD35F4B9}"/>
+											<ObjectRef Name="Atmos_Ocean_Night_01" ID="{A3D9F6C4-FEEF-48B2-9951-36002F7474EC}" WorkUnitID="{9CCFE6D6-BF4C-4F3A-BF1F-C42DE46CC289}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -1018,7 +1018,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Atmos_Beach_Rain_01" ID="{F1CC142E-0217-44F3-B441-3A1374285B99}" WorkUnitID="{BF25DDCB-4F6E-4FFB-A522-CBB1CD35F4B9}"/>
+											<ObjectRef Name="Atmos_Beach_Rain_01" ID="{F1CC142E-0217-44F3-B441-3A1374285B99}" WorkUnitID="{9CCFE6D6-BF4C-4F3A-BF1F-C42DE46CC289}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -1046,7 +1046,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Atmos_Ocean_Night_01" ID="{A3D9F6C4-FEEF-48B2-9951-36002F7474EC}" WorkUnitID="{BF25DDCB-4F6E-4FFB-A522-CBB1CD35F4B9}"/>
+											<ObjectRef Name="Atmos_Ocean_Night_01" ID="{A3D9F6C4-FEEF-48B2-9951-36002F7474EC}" WorkUnitID="{9CCFE6D6-BF4C-4F3A-BF1F-C42DE46CC289}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -1077,471 +1077,350 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Stop_Atmos_Stream_01" ID="{5761DC87-681D-41A6-80FD-2CDF2B1BCCA7}">
+							<ChildrenList>
+								<Action Name="" ID="{D9DE973C-4BFD-4DBB-87A5-54438EADEC03}" ShortID="846092663">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Atmos_Stream" ID="{E1F61D13-192C-462C-838F-EF59F65619AD}" WorkUnitID="{BF25DDCB-4F6E-4FFB-A522-CBB1CD35F4B9}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Atmos_Stream_01" ID="{EAC69B7B-676E-44AA-B85F-A65E76BA2A49}">
+							<ChildrenList>
+								<Action Name="" ID="{058D5344-C270-493B-B80E-6DA69A9E78B8}" ShortID="738229531">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Atmos_Stream" ID="{E1F61D13-192C-462C-838F-EF59F65619AD}" WorkUnitID="{BF25DDCB-4F6E-4FFB-A522-CBB1CD35F4B9}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Foley" ID="{1CA7D90C-09F5-4186-A6ED-2D00D7A4000D}" ShortID="166960355">
 					<ChildrenList>
-						<Event Name="Play_FTS_Rock_Land" ID="{788F0B4C-5EA2-4373-B111-CDF5BA019A66}">
+						<Event Name="Footsteps" ID="{751E890F-ACEC-482B-9CB5-88E00C7DCEBB}">
 							<ChildrenList>
-								<Action Name="" ID="{38EE97E8-4152-4014-BBB3-4646F8ED8315}" ShortID="692130860">
+								<Action Name="" ID="{F5876B40-7EA1-4D3D-A6AE-834A7A70120C}" ShortID="182367468">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="FTS_Rock_Land" ID="{F1019003-B950-42DE-882D-B8BF62C6B6B9}" WorkUnitID="{E09976D1-5D68-4EB6-B066-673F4F9844F1}"/>
+											<ObjectRef Name="FootstepsSwitch" ID="{58A66D9C-04DE-4828-8537-EB3729816CC0}" WorkUnitID="{E09976D1-5D68-4EB6-B066-673F4F9844F1}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="Play_FTS_PlnScrb_Land" ID="{F20B9993-D0F8-4DCD-8ECE-F2D6F66F50A0}">
+						<Folder Name="Jump" ID="{BC95D9E6-E0A4-4A94-B27E-69F18BFE4B78}" ShortID="560966560">
 							<ChildrenList>
-								<Action Name="" ID="{E7734F65-5AC7-4ADF-A252-71912F5E8B08}" ShortID="577965108">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="FTS_PlnScrb_Land" ID="{E0F30A22-929D-4064-ABD1-63F38F86299B}" WorkUnitID="{E09976D1-5D68-4EB6-B066-673F4F9844F1}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
+								<Event Name="Play_FTS_Rock_Land" ID="{788F0B4C-5EA2-4373-B111-CDF5BA019A66}">
+									<ChildrenList>
+										<Action Name="" ID="{38EE97E8-4152-4014-BBB3-4646F8ED8315}" ShortID="692130860">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="FTS_Rock_Land" ID="{F1019003-B950-42DE-882D-B8BF62C6B6B9}" WorkUnitID="{E09976D1-5D68-4EB6-B066-673F4F9844F1}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Stop_FTS_Rock_Jump" ID="{C85FE0B1-C35B-4846-A698-47B6062F8502}">
+									<ChildrenList>
+										<Action Name="" ID="{3F8A79DF-B337-40FD-A810-9DF5A302A6F6}" ShortID="750811735">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="FTS_Rock_Jump" ID="{8C2D0F96-099D-4ED1-868F-2AD6EDAE4FAD}" WorkUnitID="{E09976D1-5D68-4EB6-B066-673F4F9844F1}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_FTS_PlnScrb_Land" ID="{F20B9993-D0F8-4DCD-8ECE-F2D6F66F50A0}">
+									<ChildrenList>
+										<Action Name="" ID="{E7734F65-5AC7-4ADF-A252-71912F5E8B08}" ShortID="577965108">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="FTS_PlnScrb_Land" ID="{E0F30A22-929D-4064-ABD1-63F38F86299B}" WorkUnitID="{E09976D1-5D68-4EB6-B066-673F4F9844F1}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Stop_FTS_Water_Jump" ID="{20691023-D368-47A7-8246-D24B38947193}">
+									<ChildrenList>
+										<Action Name="" ID="{485A8C6B-730B-46C4-9DC7-45D980F272D6}" ShortID="551153135">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="FTS_Water_Jump" ID="{3456B6F2-4DD2-4551-855E-DF3EA5E58A8A}" WorkUnitID="{E09976D1-5D68-4EB6-B066-673F4F9844F1}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_FTS_PlnScrb_Jump" ID="{63E12135-2D4B-4D4A-906B-6659B1D1BDFA}">
+									<ChildrenList>
+										<Action Name="" ID="{4E4CF93D-381E-40F2-9896-143DEF74D5B3}" ShortID="280466782">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="FTS_PlnScrb_Jump" ID="{0A3FE271-CB6E-48C3-B35C-D9BD89B202EE}" WorkUnitID="{E09976D1-5D68-4EB6-B066-673F4F9844F1}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Stop_FTS_PlnScrb_Land" ID="{2C05E5E8-523F-4669-A209-802522BA3002}">
+									<ChildrenList>
+										<Action Name="" ID="{7E50059F-3DEE-493E-BC32-0B413F410957}" ShortID="637951554">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="FTS_PlnScrb_Land" ID="{E0F30A22-929D-4064-ABD1-63F38F86299B}" WorkUnitID="{E09976D1-5D68-4EB6-B066-673F4F9844F1}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Stop_FTS_Water_Land" ID="{2B26C38C-2C94-4804-960E-7828C32B799C}">
+									<ChildrenList>
+										<Action Name="" ID="{02CFB71B-D42B-442C-8376-682DA1818EBB}" ShortID="313768787">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="FTS_Water_Land" ID="{3B27F97D-A670-4535-9B3F-7B6940553B94}" WorkUnitID="{E09976D1-5D68-4EB6-B066-673F4F9844F1}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_FTS_Rock_Jump" ID="{833161BE-AC7D-44EE-8283-043EC5EDE2A1}">
+									<ChildrenList>
+										<Action Name="" ID="{C67BA532-B539-4284-9C99-31F0A674C0A5}" ShortID="428706126">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="FTS_Rock_Jump" ID="{8C2D0F96-099D-4ED1-868F-2AD6EDAE4FAD}" WorkUnitID="{E09976D1-5D68-4EB6-B066-673F4F9844F1}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_FTS_Land" ID="{2490E08E-0674-424F-80CE-87A990EE4974}">
+									<ChildrenList>
+										<Action Name="" ID="{DBB66190-8AAB-4983-BFA0-09C41BB0D0FA}" ShortID="1031204220">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="FTS_Land" ID="{A83D55C9-F30D-42AC-89BB-469895C7B216}" WorkUnitID="{E09976D1-5D68-4EB6-B066-673F4F9844F1}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Stop_FTS_Rock_Land" ID="{F9054CB7-4C32-487A-8F35-63BBF0F51253}">
+									<ChildrenList>
+										<Action Name="" ID="{E48944CD-8523-4EB8-9D8A-795B6DA3666F}" ShortID="560046246">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="FTS_Rock_Land" ID="{F1019003-B950-42DE-882D-B8BF62C6B6B9}" WorkUnitID="{E09976D1-5D68-4EB6-B066-673F4F9844F1}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_FTS_Water_Jump" ID="{3E3B5E38-E8EA-41CB-906F-159587F7C891}">
+									<ChildrenList>
+										<Action Name="" ID="{30A62747-77C0-48ED-87D4-CB034156C40F}" ShortID="863226919">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="FTS_Water_Jump" ID="{3456B6F2-4DD2-4551-855E-DF3EA5E58A8A}" WorkUnitID="{E09976D1-5D68-4EB6-B066-673F4F9844F1}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_FTS_Water_Land" ID="{97E81942-8814-4F4B-9BBE-5FFA58716216}">
+									<ChildrenList>
+										<Action Name="" ID="{311B8136-E449-46EC-B66D-4E98A47BE1CE}" ShortID="998063016">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="FTS_Water_Land" ID="{3B27F97D-A670-4535-9B3F-7B6940553B94}" WorkUnitID="{E09976D1-5D68-4EB6-B066-673F4F9844F1}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Stop_FTS_PlnScrb_Jump" ID="{5232CD9F-C93B-487C-BF9C-26EEDB216E98}">
+									<ChildrenList>
+										<Action Name="" ID="{FE821E08-9B87-46A3-9CA5-B63C60E1484A}" ShortID="795400299">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="FTS_PlnScrb_Jump" ID="{0A3FE271-CB6E-48C3-B35C-D9BD89B202EE}" WorkUnitID="{E09976D1-5D68-4EB6-B066-673F4F9844F1}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Stop_FTS_Land" ID="{43F04A41-BD79-4C5E-BC51-68930C3292DC}">
+									<ChildrenList>
+										<Action Name="" ID="{C83DCEA5-4428-4E1B-A1E0-F09B912932B7}" ShortID="786584546">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="FTS_Land" ID="{A83D55C9-F30D-42AC-89BB-469895C7B216}" WorkUnitID="{E09976D1-5D68-4EB6-B066-673F4F9844F1}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Stop_FTS_Jump" ID="{F9F987BF-3700-4A9A-9D58-3EED2746DFFE}">
+									<ChildrenList>
+										<Action Name="" ID="{8F01478A-6ED4-49F1-A8A2-931ADF8414FB}" ShortID="700090472">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="FTS_Jump" ID="{1C9EC75F-D271-4E4A-8C7D-0150B1987070}" WorkUnitID="{E09976D1-5D68-4EB6-B066-673F4F9844F1}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Stop_FTS_Forest_Jump" ID="{8E1FCC43-89CC-4FAC-BD24-E95D8732545A}">
+									<ChildrenList>
+										<Action Name="" ID="{BC03F085-543B-4748-BA42-82696789653B}" ShortID="732551081">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="FTS_Forest_Jump" ID="{16587D15-504A-4C42-8C1D-D8F8F98BE2B7}" WorkUnitID="{E09976D1-5D68-4EB6-B066-673F4F9844F1}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Stop_FTS_Forest_Land" ID="{FF67B3ED-8333-4072-9153-25EE7C1E52E8}">
+									<ChildrenList>
+										<Action Name="" ID="{14E3997E-F3C2-4A1B-A6AC-B287D64E12CD}" ShortID="951734350">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="FTS_Forest_Land" ID="{6C5812BC-D354-43DD-B784-DEEFE1408656}" WorkUnitID="{E09976D1-5D68-4EB6-B066-673F4F9844F1}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_FTS_Beach_Jump" ID="{FC31C38C-8D81-429A-8EA2-57EAAA10B947}">
+									<ChildrenList>
+										<Action Name="" ID="{3E0FA12B-35F1-44CB-AAC4-341805F63D65}" ShortID="888829932">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="FTS_Beach_Jump" ID="{C78CCD2F-AB6C-4CFE-A5C5-6B56034BFFDA}" WorkUnitID="{E09976D1-5D68-4EB6-B066-673F4F9844F1}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_FTS_Beach_Land" ID="{419A11A7-1B9A-4700-B9A7-69FE144C8B14}">
+									<ChildrenList>
+										<Action Name="" ID="{6C1E4561-6F03-40DE-953B-AA7684EC12AD}" ShortID="167124934">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="FTS_Beach_Land" ID="{EDA8E494-780F-44B4-AF8C-0EE83871C483}" WorkUnitID="{E09976D1-5D68-4EB6-B066-673F4F9844F1}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_FTS_Forest_Land" ID="{28A33564-FA5A-4D51-8D01-3409F80663A5}">
+									<ChildrenList>
+										<Action Name="" ID="{AC58CEB7-B3CA-49DF-B6EE-66683F390976}" ShortID="276084381">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="FTS_Forest_Land" ID="{6C5812BC-D354-43DD-B784-DEEFE1408656}" WorkUnitID="{E09976D1-5D68-4EB6-B066-673F4F9844F1}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_FTS_Forest_Jump" ID="{BF52DE7D-4F6E-47B3-99B4-A4CB9B0E37FD}">
+									<ChildrenList>
+										<Action Name="" ID="{ECEBD76A-7944-436B-85EA-1DEE4D7E8E00}" ShortID="910113121">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="FTS_Forest_Jump" ID="{16587D15-504A-4C42-8C1D-D8F8F98BE2B7}" WorkUnitID="{E09976D1-5D68-4EB6-B066-673F4F9844F1}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Stop_FTS_Beach_Jump" ID="{A57C9315-DA32-49CE-B149-5A6119242C19}">
+									<ChildrenList>
+										<Action Name="" ID="{1B7B9B32-E73C-4C9D-9483-57D2D7F85A7C}" ShortID="911435780">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="FTS_Beach_Jump" ID="{C78CCD2F-AB6C-4CFE-A5C5-6B56034BFFDA}" WorkUnitID="{E09976D1-5D68-4EB6-B066-673F4F9844F1}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Stop_FTS_Beach_Land" ID="{9386794C-C094-4457-9424-D666A39A6EB4}">
+									<ChildrenList>
+										<Action Name="" ID="{8740C402-3687-49AE-906E-6B1C8877FB46}" ShortID="468352335">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="FTS_Beach_Land" ID="{EDA8E494-780F-44B4-AF8C-0EE83871C483}" WorkUnitID="{E09976D1-5D68-4EB6-B066-673F4F9844F1}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_FTS_Jump" ID="{1A35ACCD-D433-4ACA-B4A2-3A4CA90C2876}">
+									<ChildrenList>
+										<Action Name="" ID="{6FE04B76-7FC2-4942-ABCE-00A080115B68}" ShortID="523776063">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="FTS_Jump" ID="{1C9EC75F-D271-4E4A-8C7D-0150B1987070}" WorkUnitID="{E09976D1-5D68-4EB6-B066-673F4F9844F1}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
 							</ChildrenList>
-						</Event>
-						<Event Name="Play_FTS_PlnScrb_Jump" ID="{63E12135-2D4B-4D4A-906B-6659B1D1BDFA}">
-							<ChildrenList>
-								<Action Name="" ID="{4E4CF93D-381E-40F2-9896-143DEF74D5B3}" ShortID="280466782">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="FTS_PlnScrb_Jump" ID="{0A3FE271-CB6E-48C3-B35C-D9BD89B202EE}" WorkUnitID="{E09976D1-5D68-4EB6-B066-673F4F9844F1}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="Play_FTS_Rock_Jump" ID="{833161BE-AC7D-44EE-8283-043EC5EDE2A1}">
-							<ChildrenList>
-								<Action Name="" ID="{C67BA532-B539-4284-9C99-31F0A674C0A5}" ShortID="428706126">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="FTS_Rock_Jump" ID="{8C2D0F96-099D-4ED1-868F-2AD6EDAE4FAD}" WorkUnitID="{E09976D1-5D68-4EB6-B066-673F4F9844F1}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="Play_FTS_Land" ID="{2490E08E-0674-424F-80CE-87A990EE4974}">
-							<ChildrenList>
-								<Action Name="" ID="{DBB66190-8AAB-4983-BFA0-09C41BB0D0FA}" ShortID="1031204220">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="FTS_Land" ID="{A83D55C9-F30D-42AC-89BB-469895C7B216}" WorkUnitID="{E09976D1-5D68-4EB6-B066-673F4F9844F1}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="Play_FTS_Water_Jump" ID="{3E3B5E38-E8EA-41CB-906F-159587F7C891}">
-							<ChildrenList>
-								<Action Name="" ID="{30A62747-77C0-48ED-87D4-CB034156C40F}" ShortID="863226919">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="FTS_Water_Jump" ID="{3456B6F2-4DD2-4551-855E-DF3EA5E58A8A}" WorkUnitID="{E09976D1-5D68-4EB6-B066-673F4F9844F1}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="Play_FTS_Water_Land" ID="{97E81942-8814-4F4B-9BBE-5FFA58716216}">
-							<ChildrenList>
-								<Action Name="" ID="{311B8136-E449-46EC-B66D-4E98A47BE1CE}" ShortID="998063016">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="FTS_Water_Land" ID="{3B27F97D-A670-4535-9B3F-7B6940553B94}" WorkUnitID="{E09976D1-5D68-4EB6-B066-673F4F9844F1}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="Play_FTS_Beach_Jump" ID="{FC31C38C-8D81-429A-8EA2-57EAAA10B947}">
-							<ChildrenList>
-								<Action Name="" ID="{3E0FA12B-35F1-44CB-AAC4-341805F63D65}" ShortID="888829932">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="FTS_Beach_Jump" ID="{C78CCD2F-AB6C-4CFE-A5C5-6B56034BFFDA}" WorkUnitID="{E09976D1-5D68-4EB6-B066-673F4F9844F1}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="Play_FTS_Beach_Land" ID="{419A11A7-1B9A-4700-B9A7-69FE144C8B14}">
-							<ChildrenList>
-								<Action Name="" ID="{6C1E4561-6F03-40DE-953B-AA7684EC12AD}" ShortID="167124934">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="FTS_Beach_Land" ID="{EDA8E494-780F-44B4-AF8C-0EE83871C483}" WorkUnitID="{E09976D1-5D68-4EB6-B066-673F4F9844F1}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="Play_FTS_Forest_Land" ID="{28A33564-FA5A-4D51-8D01-3409F80663A5}">
-							<ChildrenList>
-								<Action Name="" ID="{AC58CEB7-B3CA-49DF-B6EE-66683F390976}" ShortID="276084381">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="FTS_Forest_Land" ID="{6C5812BC-D354-43DD-B784-DEEFE1408656}" WorkUnitID="{E09976D1-5D68-4EB6-B066-673F4F9844F1}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="Play_FTS_Forest_Jump" ID="{BF52DE7D-4F6E-47B3-99B4-A4CB9B0E37FD}">
-							<ChildrenList>
-								<Action Name="" ID="{ECEBD76A-7944-436B-85EA-1DEE4D7E8E00}" ShortID="910113121">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="FTS_Forest_Jump" ID="{16587D15-504A-4C42-8C1D-D8F8F98BE2B7}" WorkUnitID="{E09976D1-5D68-4EB6-B066-673F4F9844F1}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="Play_Forest_Footsteps" ID="{9A42A05A-8338-42CC-87BD-20D8C6D09E92}">
-							<ChildrenList>
-								<Action Name="" ID="{1F42B583-3595-46A1-A585-77773D16A194}" ShortID="806012485">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Forest Footsteps" ID="{1E7FABE5-972F-4B0F-91C6-B90EE38A0EFB}" WorkUnitID="{E09976D1-5D68-4EB6-B066-673F4F9844F1}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="Play_FTS_Jump" ID="{1A35ACCD-D433-4ACA-B4A2-3A4CA90C2876}">
-							<ChildrenList>
-								<Action Name="" ID="{6FE04B76-7FC2-4942-ABCE-00A080115B68}" ShortID="523776063">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="FTS_Jump" ID="{1C9EC75F-D271-4E4A-8C7D-0150B1987070}" WorkUnitID="{E09976D1-5D68-4EB6-B066-673F4F9844F1}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="Stop_FTS_Rock_Jump" ID="{C85FE0B1-C35B-4846-A698-47B6062F8502}">
-							<ChildrenList>
-								<Action Name="" ID="{3F8A79DF-B337-40FD-A810-9DF5A302A6F6}" ShortID="750811735">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="2"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="FTS_Rock_Jump" ID="{8C2D0F96-099D-4ED1-868F-2AD6EDAE4FAD}" WorkUnitID="{E09976D1-5D68-4EB6-B066-673F4F9844F1}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="Stop_FTS_Water_Jump" ID="{20691023-D368-47A7-8246-D24B38947193}">
-							<ChildrenList>
-								<Action Name="" ID="{485A8C6B-730B-46C4-9DC7-45D980F272D6}" ShortID="551153135">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="2"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="FTS_Water_Jump" ID="{3456B6F2-4DD2-4551-855E-DF3EA5E58A8A}" WorkUnitID="{E09976D1-5D68-4EB6-B066-673F4F9844F1}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="Stop_FTS_PlnScrb_Land" ID="{2C05E5E8-523F-4669-A209-802522BA3002}">
-							<ChildrenList>
-								<Action Name="" ID="{7E50059F-3DEE-493E-BC32-0B413F410957}" ShortID="637951554">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="2"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="FTS_PlnScrb_Land" ID="{E0F30A22-929D-4064-ABD1-63F38F86299B}" WorkUnitID="{E09976D1-5D68-4EB6-B066-673F4F9844F1}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="Stop_FTS_Water_Land" ID="{2B26C38C-2C94-4804-960E-7828C32B799C}">
-							<ChildrenList>
-								<Action Name="" ID="{02CFB71B-D42B-442C-8376-682DA1818EBB}" ShortID="313768787">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="2"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="FTS_Water_Land" ID="{3B27F97D-A670-4535-9B3F-7B6940553B94}" WorkUnitID="{E09976D1-5D68-4EB6-B066-673F4F9844F1}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="Stop_FTS_Rock_Land" ID="{F9054CB7-4C32-487A-8F35-63BBF0F51253}">
-							<ChildrenList>
-								<Action Name="" ID="{E48944CD-8523-4EB8-9D8A-795B6DA3666F}" ShortID="560046246">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="2"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="FTS_Rock_Land" ID="{F1019003-B950-42DE-882D-B8BF62C6B6B9}" WorkUnitID="{E09976D1-5D68-4EB6-B066-673F4F9844F1}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="Stop_FTS_PlnScrb_Jump" ID="{5232CD9F-C93B-487C-BF9C-26EEDB216E98}">
-							<ChildrenList>
-								<Action Name="" ID="{FE821E08-9B87-46A3-9CA5-B63C60E1484A}" ShortID="795400299">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="2"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="FTS_PlnScrb_Jump" ID="{0A3FE271-CB6E-48C3-B35C-D9BD89B202EE}" WorkUnitID="{E09976D1-5D68-4EB6-B066-673F4F9844F1}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="Stop_FTS_Land" ID="{43F04A41-BD79-4C5E-BC51-68930C3292DC}">
-							<ChildrenList>
-								<Action Name="" ID="{C83DCEA5-4428-4E1B-A1E0-F09B912932B7}" ShortID="786584546">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="2"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="FTS_Land" ID="{A83D55C9-F30D-42AC-89BB-469895C7B216}" WorkUnitID="{E09976D1-5D68-4EB6-B066-673F4F9844F1}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="Stop_FTS_Jump" ID="{F9F987BF-3700-4A9A-9D58-3EED2746DFFE}">
-							<ChildrenList>
-								<Action Name="" ID="{8F01478A-6ED4-49F1-A8A2-931ADF8414FB}" ShortID="700090472">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="2"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="FTS_Jump" ID="{1C9EC75F-D271-4E4A-8C7D-0150B1987070}" WorkUnitID="{E09976D1-5D68-4EB6-B066-673F4F9844F1}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="Stop_FTS_Forest_Jump" ID="{8E1FCC43-89CC-4FAC-BD24-E95D8732545A}">
-							<ChildrenList>
-								<Action Name="" ID="{BC03F085-543B-4748-BA42-82696789653B}" ShortID="732551081">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="2"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="FTS_Forest_Jump" ID="{16587D15-504A-4C42-8C1D-D8F8F98BE2B7}" WorkUnitID="{E09976D1-5D68-4EB6-B066-673F4F9844F1}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="Stop_FTS_Forest_Land" ID="{FF67B3ED-8333-4072-9153-25EE7C1E52E8}">
-							<ChildrenList>
-								<Action Name="" ID="{14E3997E-F3C2-4A1B-A6AC-B287D64E12CD}" ShortID="951734350">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="2"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="FTS_Forest_Land" ID="{6C5812BC-D354-43DD-B784-DEEFE1408656}" WorkUnitID="{E09976D1-5D68-4EB6-B066-673F4F9844F1}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="Stop_Beach_Footsteps" ID="{60C3CE4E-42EE-4EE0-B154-9A29714D1CDA}">
-							<ChildrenList>
-								<Action Name="" ID="{C98CFF02-956F-4AA2-97F6-B04F0AE2C8FD}" ShortID="466190623">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="2"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Beach Footsteps" ID="{0FFD895C-566A-433E-9FBF-92A95C826EA1}" WorkUnitID="{E09976D1-5D68-4EB6-B066-673F4F9844F1}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="Stop_Forest_Footsteps" ID="{D8F4F499-EE39-4F12-95CB-247F50C6B579}">
-							<ChildrenList>
-								<Action Name="" ID="{D90B606F-3B4F-4182-8D03-A36A95FA9CDD}" ShortID="827743080">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="2"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Forest Footsteps" ID="{1E7FABE5-972F-4B0F-91C6-B90EE38A0EFB}" WorkUnitID="{E09976D1-5D68-4EB6-B066-673F4F9844F1}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="Stop_Generic_Footsteps" ID="{CDD29995-E289-48A6-A4A5-47C1E964A900}">
-							<ChildrenList>
-								<Action Name="" ID="{913F428F-3633-48C3-96F9-7CAD6FBC13A5}" ShortID="966181397">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="2"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Generic Footsteps" ID="{CE7CA417-49D5-4194-84F9-3CA67F5FB6FC}" WorkUnitID="{E09976D1-5D68-4EB6-B066-673F4F9844F1}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="Stop_Mountain_Rock_Footsteps" ID="{57D8A88C-A9E1-4510-A248-90AA9B6003F9}">
-							<ChildrenList>
-								<Action Name="" ID="{7E947F21-8F01-4FAB-9E5A-1E78F7085F79}" ShortID="930306976">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="2"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Mountain-Rock Footsteps" ID="{F241AE27-FFA7-4AE3-B584-CA0E7AD1C9A2}" WorkUnitID="{E09976D1-5D68-4EB6-B066-673F4F9844F1}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="Stop_Plains_Scrub_Footsteps" ID="{4B84A4B2-E1F4-47D5-B9CA-0CB3A6A2F47E}">
-							<ChildrenList>
-								<Action Name="" ID="{0C5E188F-5BC1-42BD-8D68-4B0AE268CDC8}" ShortID="139717543">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="2"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Plains-Scrub Footsteps" ID="{2F77D091-0151-411A-A93B-1B03233B9AFC}" WorkUnitID="{E09976D1-5D68-4EB6-B066-673F4F9844F1}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="Stop_Water_Stream_Footsteps" ID="{6AA6AA1A-2A82-464C-B7CF-2B1CBDAA3EFF}">
-							<ChildrenList>
-								<Action Name="" ID="{614D01A2-7855-4451-9638-B28EB2FF6B10}" ShortID="728331304">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="2"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Water-Stream Footsteps" ID="{3FDB826F-D866-40BE-A6E2-F38197F34967}" WorkUnitID="{E09976D1-5D68-4EB6-B066-673F4F9844F1}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="Play_Water_Stream_Footsteps" ID="{D648B71C-5FC4-413D-B84F-6E7D3AEB613D}">
-							<ChildrenList>
-								<Action Name="" ID="{1559FABD-A8A1-4897-9281-B2FDCF8081CB}" ShortID="468645515">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Water-Stream Footsteps" ID="{3FDB826F-D866-40BE-A6E2-F38197F34967}" WorkUnitID="{E09976D1-5D68-4EB6-B066-673F4F9844F1}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="Stop_FTS_Beach_Jump" ID="{A57C9315-DA32-49CE-B149-5A6119242C19}">
-							<ChildrenList>
-								<Action Name="" ID="{1B7B9B32-E73C-4C9D-9483-57D2D7F85A7C}" ShortID="911435780">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="2"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="FTS_Beach_Jump" ID="{C78CCD2F-AB6C-4CFE-A5C5-6B56034BFFDA}" WorkUnitID="{E09976D1-5D68-4EB6-B066-673F4F9844F1}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="Stop_FTS_Beach_Land" ID="{9386794C-C094-4457-9424-D666A39A6EB4}">
-							<ChildrenList>
-								<Action Name="" ID="{8740C402-3687-49AE-906E-6B1C8877FB46}" ShortID="468352335">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="2"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="FTS_Beach_Land" ID="{EDA8E494-780F-44B4-AF8C-0EE83871C483}" WorkUnitID="{E09976D1-5D68-4EB6-B066-673F4F9844F1}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="Play_Player_Footstep_Dirt" ID="{78877C54-B12D-400D-A230-57474ACE9A60}">
-							<ChildrenList>
-								<Action Name="" ID="{35BBD1E1-209C-4510-A35A-B29169C01A67}" ShortID="92509525">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Player_Footstep_Dirt" ID="{6590933F-7C46-4F7C-9836-7F5CF686CCF2}" WorkUnitID="{29288FA7-6AE1-4C2C-BA16-84B49B35B5C2}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="Play_Beach_Footsteps" ID="{9EAF3A7F-5239-4A5D-9CFC-CA2E6EFA3F7F}">
-							<ChildrenList>
-								<Action Name="" ID="{D86C9CEE-8278-4EF9-B1CE-C94332933895}" ShortID="547019181">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Beach Footsteps" ID="{0FFD895C-566A-433E-9FBF-92A95C826EA1}" WorkUnitID="{E09976D1-5D68-4EB6-B066-673F4F9844F1}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="Play_Mountain_Rock_Footsteps" ID="{7BE97EDA-EA40-4B63-BE3A-0FE1A62EF3A1}">
-							<ChildrenList>
-								<Action Name="" ID="{2C519445-A023-4AA9-9C10-AA2CE5F1DEE8}" ShortID="935841744">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Mountain-Rock Footsteps" ID="{F241AE27-FFA7-4AE3-B584-CA0E7AD1C9A2}" WorkUnitID="{E09976D1-5D68-4EB6-B066-673F4F9844F1}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="Play_Generic_Footsteps" ID="{552877D8-6388-4F68-9CCC-C2DE37E0CC4F}">
-							<ChildrenList>
-								<Action Name="" ID="{99F6BC91-9BDE-45AD-AA4F-F27064E1FC21}" ShortID="44139667">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Generic Footsteps" ID="{CE7CA417-49D5-4194-84F9-3CA67F5FB6FC}" WorkUnitID="{E09976D1-5D68-4EB6-B066-673F4F9844F1}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="Play_Plains_Scrub_Footsteps" ID="{23E1206E-4571-4468-9DF0-9F2E4114C63F}">
-							<ChildrenList>
-								<Action Name="" ID="{4A422832-B47D-42CA-AD64-B577CB2DCF7E}" ShortID="768638989">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Plains-Scrub Footsteps" ID="{2F77D091-0151-411A-A93B-1B03233B9AFC}" WorkUnitID="{E09976D1-5D68-4EB6-B066-673F4F9844F1}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
+						</Folder>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="SFX" ID="{74C73D9E-6514-4058-A6A1-A406EF32D278}" ShortID="304914868">
@@ -1707,6 +1586,17 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_SFX_Wood_Fence_mono_01" ID="{294D0617-CF76-429D-AC0F-BA500C307264}">
+							<ChildrenList>
+								<Action Name="" ID="{5462BEFC-5DA1-4BA8-9F06-79103FFCCEA5}" ShortID="490092747">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SFX_Wood_Fence_mono" ID="{DEC05576-BC84-4C1D-83FF-2593FCA9A984}" WorkUnitID="{1A7BD965-CC17-4EA5-85D8-3938F011058F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Music" ID="{788B5DA3-5FDD-4A20-AA22-B61735D06036}" ShortID="1004504641">
@@ -1770,28 +1660,6 @@
 				</Folder>
 				<Folder Name="UI" ID="{8F46A6F1-7581-4E47-8EF5-B68BF1E8C23E}" ShortID="376011255">
 					<ChildrenList>
-						<Event Name="Play_UI__Photo_Keep_01" ID="{ADBC656D-0F0F-440F-BBD4-9AB60768A97C}">
-							<ChildrenList>
-								<Action Name="" ID="{22BCFCFA-7768-4389-89D4-ADF928A085AF}" ShortID="608184711">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="UI__Photo_Keep" ID="{B680E328-FF50-4834-B1DE-5095294D4528}" WorkUnitID="{6AACD892-8249-4CA2-BBEB-F88052A754B1}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="Play_UI__Photo_Discard_01" ID="{9EC5A2DE-29CE-4C80-A96C-35AB3A4367F6}">
-							<ChildrenList>
-								<Action Name="" ID="{F3B7EEA1-CE00-4A1A-86BB-B35230C60221}" ShortID="961779360">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="UI__Photo_Discard" ID="{85B2C8ED-4FF0-4C43-955F-118D74DC34D7}" WorkUnitID="{6AACD892-8249-4CA2-BBEB-F88052A754B1}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
 						<Event Name="Play_UI__Photo_Keep" ID="{3FF43AC1-D4B2-4B8D-A1EE-B9387F242B9E}">
 							<ChildrenList>
 								<Action Name="" ID="{B3DFC664-B929-432C-B1D8-052451EF13B3}" ShortID="964826210">
@@ -1864,6 +1732,75 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="Button_Click" ID="{01E4BD82-33B8-40FE-9B38-B7DFD676894F}" WorkUnitID="{6AACD892-8249-4CA2-BBEB-F88052A754B1}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Polaroid_photo_click_print" ID="{C9D91DF4-4159-422C-ABAB-FC1D684E54D6}">
+							<ChildrenList>
+								<Action Name="" ID="{56D0F040-9AE4-4CCB-9D5D-85CCB7EBF961}" ShortID="201116514">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Polaroid_photo_click_print" ID="{9E5814BE-1A22-46B0-BAEC-F270B423B85E}" WorkUnitID="{6AACD892-8249-4CA2-BBEB-F88052A754B1}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="AtmosOcean" ID="{09269F3A-AB8C-4F48-954C-AD1D1A73CCCE}" ShortID="543093325">
+					<ChildrenList>
+						<Event Name="Play_Ocean" ID="{409906A6-AFE2-42C7-929F-E322F09A70BB}">
+							<ChildrenList>
+								<Action Name="" ID="{00555013-191B-451D-8020-DC0553533971}" ShortID="570738723">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Ocean" ID="{F2737846-7A83-44D4-8557-055938649C77}" WorkUnitID="{9CCFE6D6-BF4C-4F3A-BF1F-C42DE46CC289}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stop_Ocean" ID="{419519C4-69B0-4BF0-B75D-A5114B92C1F3}">
+							<ChildrenList>
+								<Action Name="" ID="{A8C777CF-DE01-43D2-B9FD-35F8FD76A5E9}" ShortID="483231066">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Ocean" ID="{F2737846-7A83-44D4-8557-055938649C77}" WorkUnitID="{9CCFE6D6-BF4C-4F3A-BF1F-C42DE46CC289}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="AtmosOceanNight" ID="{2E2D575C-97EC-4968-A64F-E6C874B8C88D}" ShortID="560953809">
+					<ChildrenList>
+						<Event Name="Play_Atmos_Ocean_Night_02" ID="{08C6D91C-790E-4F1C-89A9-C3AE48EB5474}">
+							<ChildrenList>
+								<Action Name="" ID="{ACB2607C-299C-4B4E-B9B4-8E19B79C1C14}" ShortID="966516474">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Atmos_Ocean_Night_01" ID="{A3D9F6C4-FEEF-48B2-9951-36002F7474EC}" WorkUnitID="{9CCFE6D6-BF4C-4F3A-BF1F-C42DE46CC289}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stop_Atmos_Ocean_Night_02" ID="{A95C3E62-5ABF-4193-9744-7E997A2332F8}">
+							<ChildrenList>
+								<Action Name="" ID="{F7D0FA17-68D6-4587-A3A1-CBE8E8330259}" ShortID="181927958">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Atmos_Ocean_Night_01" ID="{A3D9F6C4-FEEF-48B2-9951-36002F7474EC}" WorkUnitID="{9CCFE6D6-BF4C-4F3A-BF1F-C42DE46CC289}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
