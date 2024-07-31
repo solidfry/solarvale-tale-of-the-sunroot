@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 2b20922bdef03c418ceb65e6b9ae535b
     GuidInternal: 
-    m_lastTime: -8584793438869629111
+    m_lastTime: -8584791970552043380
     List:
     - name: AnimalAtmos
       guid: 847c98f9339bcc44a6c31e3cb4f52d3c
@@ -91,6 +91,23 @@ MonoBehaviour:
         ObjectType: 2
         guid: b86c1de5c801a1488608ae500145e9a8
       Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Atmos
+    - name: AtmosOcean
+      guid: f572c64bb42b00458663bc762bb45a3d
+      id: 1352063017
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 2b20922bdef03c418ceb65e6b9ae535b
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: AtmosOcean
+        ObjectType: 2
+        guid: f572c64bb42b00458663bc762bb45a3d
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\AtmosOcean
     - name: Foley
       guid: d26087a477a73544b0ac84d31eceec54
       id: 247557814
@@ -122,6 +139,23 @@ MonoBehaviour:
         ObjectType: 2
         guid: d8a41415a61d2a41a17e75ca0c2149f3
       Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus
+    - name: MenuPiano
+      guid: ecff8a04851cc840a0d2687fd5d91a09
+      id: 2232408543
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 2b20922bdef03c418ceb65e6b9ae535b
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: MenuPiano
+        ObjectType: 2
+        guid: ecff8a04851cc840a0d2687fd5d91a09
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\MenuPiano
     - name: Music
       guid: b02915650ad07f409314e0a35ba653ff
       id: 3991942870
@@ -185,7 +219,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 119a7399247785478749c0bc1477965c
     GuidInternal: 
-    m_lastTime: -8584793436321046461
+    m_lastTime: -8584791970551270423
     List:
     - name: Animals
       guid: 6da0da3caf628f4a902f8d9f4ea805bd
@@ -229,6 +263,20 @@ MonoBehaviour:
         ObjectType: 7
         guid: 131a95d079c62941abcce26fc12c0d53
       Path: SoundBanks\Default Work Unit\Atmos
+    - name: AtmosOcean
+      guid: 07c1c8522e668c46a7d45867b06beb64
+      id: 1352063017
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 119a7399247785478749c0bc1477965c
+      - ElementName: AtmosOcean
+        ObjectType: 7
+        guid: 07c1c8522e668c46a7d45867b06beb64
+      Path: SoundBanks\Default Work Unit\AtmosOcean
     - name: Foley
       guid: 9d78d0603bebbc429ebb1a4baea97922
       id: 247557814
@@ -311,7 +359,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 5ea9686091072d41adff9786e1d6e4d5
     GuidInternal: 
-    m_lastTime: -8584793479367664813
+    m_lastTime: -8584791970572793111
     List:
     - name: Atmos
       guid: 996538f598acf543a6be5d9be8d02d61
@@ -327,6 +375,40 @@ MonoBehaviour:
         ObjectType: 4
         guid: 996538f598acf543a6be5d9be8d02d61
       Path: Events\Default Work Unit\Atmos
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: AtmosOcean
+      guid: 3a9f26098cab484f954cad1d1a73ccce
+      id: 1352063017
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: AtmosOcean
+        ObjectType: 4
+        guid: 3a9f26098cab484f954cad1d1a73ccce
+      Path: Events\Default Work Unit\AtmosOcean
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: AtmosOceanNight
+      guid: 5c572d2eec976849a64fe6c874b8c88d
+      id: 1591668513
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: AtmosOceanNight
+        ObjectType: 4
+        guid: 5c572d2eec976849a64fe6c874b8c88d
+      Path: Events\Default Work Unit\AtmosOceanNight
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -382,8 +464,8 @@ MonoBehaviour:
         guid: 0f891e75ecac2b489cb588e00c7dcebb
       Path: Events\Default Work Unit\Foley\Footsteps
       maxAttenuation: 0
-      maxDuration: 1.3427129
-      minDuration: 0.7021168
+      maxDuration: 1.0631155
+      minDuration: 0.3905778
     - name: Ibis
       guid: 2b3fd83a1605c045a445bdc1483010cd
       id: 1218975960
@@ -524,8 +606,8 @@ MonoBehaviour:
         guid: e10fc172b243eb42aa2205651962d2ec
       Path: Events\Default Work Unit\Atmos\Play_Atmos_Beach_Rain_01
       maxAttenuation: 100
-      maxDuration: 123.875
-      minDuration: 123.875
+      maxDuration: -1
+      minDuration: -1
     - name: Play_Atmos_Beach_Wind_Gentle_
       guid: 73a0deb58e79aa45aafc4055c401e6f3
       id: 3680285438
@@ -544,8 +626,8 @@ MonoBehaviour:
         guid: 73a0deb58e79aa45aafc4055c401e6f3
       Path: Events\Default Work Unit\Atmos\Play_Atmos_Beach_Wind_Gentle_
       maxAttenuation: 100
-      maxDuration: 83.5
-      minDuration: 83.5
+      maxDuration: 83.59653
+      minDuration: 81.16979
     - name: Play_Atmos_Cave_01
       guid: 4bf274126bb4bf45933e911f4ee812d0
       id: 172525698
@@ -564,8 +646,8 @@ MonoBehaviour:
         guid: 4bf274126bb4bf45933e911f4ee812d0
       Path: Events\Default Work Unit\Atmos\Play_Atmos_Cave_01
       maxAttenuation: 100
-      maxDuration: 119.8125
-      minDuration: 119.8125
+      maxDuration: 119.951
+      minDuration: 116.468925
     - name: Play_Atmos_Cave_Wind_Gentle
       guid: ee59327670743e43a2fdcb849fe79297
       id: 166362779
@@ -584,8 +666,8 @@ MonoBehaviour:
         guid: ee59327670743e43a2fdcb849fe79297
       Path: Events\Default Work Unit\Atmos\Play_Atmos_Cave_Wind_Gentle
       maxAttenuation: 100
-      maxDuration: 119.9375
-      minDuration: 119.9375
+      maxDuration: 120.07614
+      minDuration: 116.59044
     - name: Play_Atmos_Forest_Birds_Small_Breeze_02
       guid: 073410084eeb52408baf540ac205f6d7
       id: 3626787730
@@ -624,8 +706,8 @@ MonoBehaviour:
         guid: baf6766abefbc745a18d762f9f5cab37
       Path: Events\Default Work Unit\Atmos\Play_Atmos_Mountain_Night_01
       maxAttenuation: 100
-      maxDuration: 180
-      minDuration: 180
+      maxDuration: 180.20807
+      minDuration: 174.97679
     - name: Play_Atmos_Mountain_Rain_01
       guid: 7b87feb8be3054439fb5fca6b176f5ad
       id: 3290639863
@@ -644,8 +726,8 @@ MonoBehaviour:
         guid: 7b87feb8be3054439fb5fca6b176f5ad
       Path: Events\Default Work Unit\Atmos\Play_Atmos_Mountain_Rain_01
       maxAttenuation: 100
-      maxDuration: 104.75
-      minDuration: 104.75
+      maxDuration: 104.871086
+      minDuration: 101.826775
     - name: Play_Atmos_Ocean_Night_01
       guid: a212bb2fd1e1b647a996c8ebc412d348
       id: 3527682894
@@ -664,8 +746,28 @@ MonoBehaviour:
         guid: a212bb2fd1e1b647a996c8ebc412d348
       Path: Events\Default Work Unit\Atmos\Play_Atmos_Ocean_Night_01
       maxAttenuation: 100
-      maxDuration: 180
-      minDuration: 180
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Atmos_Ocean_Night_02
+      guid: 1cd9c6080e791c4f89a9c3ae48eb5474
+      id: 3527682893
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: AtmosOceanNight
+        ObjectType: 4
+        guid: 5c572d2eec976849a64fe6c874b8c88d
+      - ElementName: Play_Atmos_Ocean_Night_02
+        ObjectType: 3
+        guid: 1cd9c6080e791c4f89a9c3ae48eb5474
+      Path: Events\Default Work Unit\AtmosOceanNight\Play_Atmos_Ocean_Night_02
+      maxAttenuation: 100
+      maxDuration: -1
+      minDuration: -1
     - name: Play_Atmos_Plains_Night_01
       guid: b77b42899e7f8c4aae1faa9bf3566bfa
       id: 794347887
@@ -684,8 +786,8 @@ MonoBehaviour:
         guid: b77b42899e7f8c4aae1faa9bf3566bfa
       Path: Events\Default Work Unit\Atmos\Play_Atmos_Plains_Night_01
       maxAttenuation: 100
-      maxDuration: 88.5625
-      minDuration: 88.5625
+      maxDuration: 88.66488
+      minDuration: 86.09101
     - name: Play_Atmos_Plains_Rain_01
       guid: 0b12c90d47941b4080002af23f3c6998
       id: 3637739725
@@ -704,8 +806,8 @@ MonoBehaviour:
         guid: 0b12c90d47941b4080002af23f3c6998
       Path: Events\Default Work Unit\Atmos\Play_Atmos_Plains_Rain_01
       maxAttenuation: 100
-      maxDuration: 88.8125
-      minDuration: 88.8125
+      maxDuration: 88.91516
+      minDuration: 86.33404
     - name: Play_Atmos_Plains_Scrub_Wind_Gentle_
       guid: 320022052ce13944b5e23fe2620143c5
       id: 749604250
@@ -724,8 +826,8 @@ MonoBehaviour:
         guid: 320022052ce13944b5e23fe2620143c5
       Path: Events\Default Work Unit\Atmos\Play_Atmos_Plains_Scrub_Wind_Gentle_
       maxAttenuation: 100
-      maxDuration: 149.375
-      minDuration: 149.375
+      maxDuration: 149.54767
+      minDuration: 145.20644
     - name: Play_Atmos_Stream
       guid: df192adcf14d3145bf96c62a1abc7381
       id: 807656883
@@ -744,8 +846,28 @@ MonoBehaviour:
         guid: df192adcf14d3145bf96c62a1abc7381
       Path: Events\Default Work Unit\Atmos\Play_Atmos_Stream
       maxAttenuation: 100
-      maxDuration: 115.9375
-      minDuration: 115.9375
+      maxDuration: 116.07152
+      minDuration: 112.702065
+    - name: Play_Atmos_Stream_01
+      guid: 7b9bc6ea6e67aa44b85fa65e76ba2a49
+      id: 349806695
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Atmos
+        ObjectType: 4
+        guid: 996538f598acf543a6be5d9be8d02d61
+      - ElementName: Play_Atmos_Stream_01
+        ObjectType: 3
+        guid: 7b9bc6ea6e67aa44b85fa65e76ba2a49
+      Path: Events\Default Work Unit\Atmos\Play_Atmos_Stream_01
+      maxAttenuation: 100
+      maxDuration: 116.07152
+      minDuration: 112.702065
     - name: Play_Atmos_Stream_Rain_01
       guid: a8b8f870e8da1946a1c1d148b8d0c478
       id: 4178031206
@@ -764,8 +886,8 @@ MonoBehaviour:
         guid: a8b8f870e8da1946a1c1d148b8d0c478
       Path: Events\Default Work Unit\Atmos\Play_Atmos_Stream_Rain_01
       maxAttenuation: 100
-      maxDuration: 88.6875
-      minDuration: 88.6875
+      maxDuration: 88.79002
+      minDuration: 86.212524
     - name: Play_Beach_Waves
       guid: 710d77ffedc395448a0fe5bea635e04f
       id: 2745594764
@@ -783,9 +905,9 @@ MonoBehaviour:
         ObjectType: 3
         guid: 710d77ffedc395448a0fe5bea635e04f
       Path: Events\Default Work Unit\Atmos\Play_Beach_Waves
-      maxAttenuation: 100
-      maxDuration: 183.375
-      minDuration: 56
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Play_BrandIntro_Birds
       guid: 17f690d5dd7414459bb656c7e37c71ec
       id: 2883217168
@@ -801,8 +923,8 @@ MonoBehaviour:
         guid: 17f690d5dd7414459bb656c7e37c71ec
       Path: Events\Default Work Unit\Play_BrandIntro_Birds
       maxAttenuation: 100
-      maxDuration: 16.127098
-      minDuration: 16.127098
+      maxDuration: 15.313491
+      minDuration: 15.313491
     - name: Play_Button_Click
       guid: a7540e6b31dd6f4b943d7cc85983bd49
       id: 1149159311
@@ -821,8 +943,8 @@ MonoBehaviour:
         guid: a7540e6b31dd6f4b943d7cc85983bd49
       Path: Events\Default Work Unit\UI\Play_Button_Click
       maxAttenuation: 100
-      maxDuration: 0.70303416
-      minDuration: 0.70303416
+      maxDuration: 0.33770126
+      minDuration: 0.33770126
     - name: Play_Button_Hover
       guid: 3e4b5def4d85984daf8a881b4e1b802d
       id: 4021863785
@@ -841,8 +963,8 @@ MonoBehaviour:
         guid: 3e4b5def4d85984daf8a881b4e1b802d
       Path: Events\Default Work Unit\UI\Play_Button_Hover
       maxAttenuation: 100
-      maxDuration: 1.0545512
-      minDuration: 1.0545512
+      maxDuration: 0.52584714
+      minDuration: 0.52584714
     - name: Play_Camera_Snap
       guid: 0873e1034748ef45bce3419bd33a91c6
       id: 1514177854
@@ -861,8 +983,8 @@ MonoBehaviour:
         guid: 0873e1034748ef45bce3419bd33a91c6
       Path: Events\Default Work Unit\UI\Play_Camera_Snap
       maxAttenuation: 100
-      maxDuration: 3.4249375
-      minDuration: 3.4249375
+      maxDuration: 2.4072578
+      minDuration: 2.4072578
     - name: Play_Click
       guid: 2c4b875fda3ea744995e65cf223e8f96
       id: 311910498
@@ -878,8 +1000,8 @@ MonoBehaviour:
         guid: 2c4b875fda3ea744995e65cf223e8f96
       Path: Events\Default Work Unit\Play_Click
       maxAttenuation: 100
-      maxDuration: 0.70303416
-      minDuration: 0.70303416
+      maxDuration: 0.33770126
+      minDuration: 0.33770126
     - name: Play_Forest
       guid: 2a54977150a4ca4ca29d47d6ac968dd2
       id: 207755397
@@ -898,8 +1020,8 @@ MonoBehaviour:
         guid: 2a54977150a4ca4ca29d47d6ac968dd2
       Path: Events\Default Work Unit\Atmos\Play_Forest
       maxAttenuation: 100
-      maxDuration: 99
-      minDuration: 41.375
+      maxDuration: 204.14847
+      minDuration: 195.38037
     - name: Play_Forest_01
       guid: c584c5f51e183045be0fff64d2d22b0a
       id: 2322926753
@@ -918,8 +1040,8 @@ MonoBehaviour:
         guid: c584c5f51e183045be0fff64d2d22b0a
       Path: Events\Default Work Unit\SFX\Play_Forest_01
       maxAttenuation: 100
-      maxDuration: 204.5
-      minDuration: 49.25
+      maxDuration: 204.61816
+      minDuration: 47.161964
     - name: Play_Forest_Night
       guid: cb323d78c706d94e9ac32e5c5c23fa2c
       id: 3050359138
@@ -938,8 +1060,8 @@ MonoBehaviour:
         guid: cb323d78c706d94e9ac32e5c5c23fa2c
       Path: Events\Default Work Unit\Atmos\Play_Forest_Night
       maxAttenuation: 100
-      maxDuration: 44.875
-      minDuration: 44.6875
+      maxDuration: 89.66603
+      minDuration: 87.0631
     - name: Play_Forest_Rain
       guid: e8b60d0f6943bd479b310a41e758667c
       id: 1320014010
@@ -958,8 +1080,8 @@ MonoBehaviour:
         guid: e8b60d0f6943bd479b310a41e758667c
       Path: Events\Default Work Unit\Atmos\Play_Forest_Rain
       maxAttenuation: 100
-      maxDuration: 84.8125
-      minDuration: 75.3125
+      maxDuration: 160.31009
+      minDuration: 155.65643
     - name: Play_FTS_Beach_Jump
       guid: 8cc331fc818d9a428ea257eaaa10b947
       id: 2238493386
@@ -981,8 +1103,8 @@ MonoBehaviour:
         guid: 8cc331fc818d9a428ea257eaaa10b947
       Path: Events\Default Work Unit\Foley\Jump\Play_FTS_Beach_Jump
       maxAttenuation: 0
-      maxDuration: 0.8125
-      minDuration: 0.8125
+      maxDuration: 0.47317913
+      minDuration: 0.42131123
     - name: Play_FTS_Beach_Land
       guid: a7119a419a1b0047b9a769fe144c8b14
       id: 2876226093
@@ -1004,8 +1126,8 @@ MonoBehaviour:
         guid: a7119a419a1b0047b9a769fe144c8b14
       Path: Events\Default Work Unit\Foley\Jump\Play_FTS_Beach_Land
       maxAttenuation: 0
-      maxDuration: 0.8125
-      minDuration: 0.8125
+      maxDuration: 0.65992343
+      minDuration: 0.5875854
     - name: Play_FTS_Forest_Jump
       guid: 7dde52bf6e4fb34799b4a4cb9b0e37fd
       id: 2735020772
@@ -1027,8 +1149,8 @@ MonoBehaviour:
         guid: 7dde52bf6e4fb34799b4a4cb9b0e37fd
       Path: Events\Default Work Unit\Foley\Jump\Play_FTS_Forest_Jump
       maxAttenuation: 0
-      maxDuration: 0.625
-      minDuration: 0.625
+      maxDuration: 0.36290386
+      minDuration: 0.32312387
     - name: Play_FTS_Forest_Land
       guid: 6435a3285afa514d8d013409f80663a5
       id: 2127003495
@@ -1050,8 +1172,8 @@ MonoBehaviour:
         guid: 6435a3285afa514d8d013409f80663a5
       Path: Events\Default Work Unit\Foley\Jump\Play_FTS_Forest_Land
       maxAttenuation: 0
-      maxDuration: 0.625
-      minDuration: 0.625
+      maxDuration: 0.502233
+      minDuration: 0.47377107
     - name: Play_FTS_Jump
       guid: cdac351a33d4ca4ab4a23a4ca90c2876
       id: 2798461258
@@ -1073,8 +1195,8 @@ MonoBehaviour:
         guid: cdac351a33d4ca4ab4a23a4ca90c2876
       Path: Events\Default Work Unit\Foley\Jump\Play_FTS_Jump
       maxAttenuation: 0
-      maxDuration: 0.75
-      minDuration: 0.75
+      maxDuration: 0.41993162
+      minDuration: 0.39613375
     - name: Play_FTS_Land
       guid: 8ee0902474064f4280ce87a990ee4974
       id: 3436193965
@@ -1096,8 +1218,8 @@ MonoBehaviour:
         guid: 8ee0902474064f4280ce87a990ee4974
       Path: Events\Default Work Unit\Foley\Jump\Play_FTS_Land
       maxAttenuation: 0
-      maxDuration: 0.75
-      minDuration: 0.75
+      maxDuration: 0.4134512
+      minDuration: 0.39002058
     - name: Play_FTS_PlnScrb_Jump
       guid: 3521e1634b2d4a4d906b6659b1d1bdfa
       id: 3686191621
@@ -1119,8 +1241,8 @@ MonoBehaviour:
         guid: 3521e1634b2d4a4d906b6659b1d1bdfa
       Path: Events\Default Work Unit\Foley\Jump\Play_FTS_PlnScrb_Jump
       maxAttenuation: 0
-      maxDuration: 0.8125
-      minDuration: 0.8125
+      maxDuration: 0.46756276
+      minDuration: 0.4410656
     - name: Play_FTS_PlnScrb_Land
       guid: 93990bf2f8d0cd4d8ecef2d6f66f50a0
       id: 1720407178
@@ -1142,8 +1264,8 @@ MonoBehaviour:
         guid: 93990bf2f8d0cd4d8ecef2d6f66f50a0
       Path: Events\Default Work Unit\Foley\Jump\Play_FTS_PlnScrb_Land
       maxAttenuation: 0
-      maxDuration: 0.8125
-      minDuration: 0.8125
+      maxDuration: 0.4029745
+      minDuration: 0.3801376
     - name: Play_FTS_Rock_Jump
       guid: be6131837dacee448283043ec5ede2a1
       id: 1492702852
@@ -1165,8 +1287,8 @@ MonoBehaviour:
         guid: be6131837dacee448283043ec5ede2a1
       Path: Events\Default Work Unit\Foley\Jump\Play_FTS_Rock_Jump
       maxAttenuation: 0
-      maxDuration: 0.9375
-      minDuration: 0.9375
+      maxDuration: 0.30782026
+      minDuration: 0.2821094
     - name: Play_FTS_Rock_Land
       guid: 4c0b8f78a25e7343b111cdf5ba019a66
       id: 926262279
@@ -1188,8 +1310,8 @@ MonoBehaviour:
         guid: 4c0b8f78a25e7343b111cdf5ba019a66
       Path: Events\Default Work Unit\Foley\Jump\Play_FTS_Rock_Land
       maxAttenuation: 0
-      maxDuration: 0.9375
-      minDuration: 0.9375
+      maxDuration: 0.60086507
+      minDuration: 0.55067754
     - name: Play_FTS_Water_Jump
       guid: 385e3b3eeae8cb41906f159587f7c891
       id: 2262254134
@@ -1211,8 +1333,8 @@ MonoBehaviour:
         guid: 385e3b3eeae8cb41906f159587f7c891
       Path: Events\Default Work Unit\Foley\Jump\Play_FTS_Water_Jump
       maxAttenuation: 0
-      maxDuration: 1.0625
-      minDuration: 1.0625
+      maxDuration: 0.63346165
+      minDuration: 0.58055145
     - name: Play_FTS_Water_Land
       guid: 4219e89714884b4f9bbe5ffa58716216
       id: 330024833
@@ -1234,8 +1356,8 @@ MonoBehaviour:
         guid: 4219e89714884b4f9bbe5ffa58716216
       Path: Events\Default Work Unit\Foley\Jump\Play_FTS_Water_Land
       maxAttenuation: 0
-      maxDuration: 1.25
-      minDuration: 1.25
+      maxDuration: 0.970956
+      minDuration: 0.88985646
     - name: Play_GameIntro_SoundScape
       guid: e9cc52e4b317124fabb631b22c0ffb1d
       id: 3337834332
@@ -1250,7 +1372,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: e9cc52e4b317124fabb631b22c0ffb1d
       Path: Events\Default Work Unit\Play_GameIntro_SoundScape
-      maxAttenuation: 100
+      maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
     - name: Play_Gecko
@@ -1271,8 +1393,8 @@ MonoBehaviour:
         guid: f20902dae62bbf4096a34333ddd5a544
       Path: Events\Default Work Unit\SFX\Play_Gecko
       maxAttenuation: 100
-      maxDuration: 2.1875
-      minDuration: 1.7380208
+      maxDuration: 1.9506083
+      minDuration: 1.640473
     - name: Play_Hover_1
       guid: 0788c40fab9130448771b65fe8ad9615
       id: 2033520116
@@ -1291,8 +1413,8 @@ MonoBehaviour:
         guid: 0788c40fab9130448771b65fe8ad9615
       Path: Events\Default Work Unit\UI\Play_Hover_1
       maxAttenuation: 100
-      maxDuration: 1.0545512
-      minDuration: 1.0545512
+      maxDuration: 0.52584714
+      minDuration: 0.52584714
     - name: Play_ibis_walla_01_stereo
       guid: ac244cbfdae3e5478702b484488068f3
       id: 395191982
@@ -1337,8 +1459,8 @@ MonoBehaviour:
         guid: 2462c8c14e8c624e95c8c18e4c7afffb
       Path: Events\Default Work Unit\Koala\Walla\Play_koala_walla_01_stereo
       maxAttenuation: 100
-      maxDuration: 34
-      minDuration: 34
+      maxDuration: 34.019646
+      minDuration: 32.86081
     - name: Play_Mountain
       guid: 5fe900135b99fd40a48bca01a0993422
       id: 825230623
@@ -1357,8 +1479,8 @@ MonoBehaviour:
         guid: 5fe900135b99fd40a48bca01a0993422
       Path: Events\Default Work Unit\Atmos\Play_Mountain
       maxAttenuation: 100
-      maxDuration: 125.625
-      minDuration: 72.5625
+      maxDuration: 198.4166
+      minDuration: 192.65674
     - name: Play_Mountain_Wind
       guid: 27f43a3f37dbd94898ea5e60f0c760df
       id: 1969593572
@@ -1377,8 +1499,8 @@ MonoBehaviour:
         guid: 27f43a3f37dbd94898ea5e60f0c760df
       Path: Events\Default Work Unit\Atmos\Play_Mountain_Wind
       maxAttenuation: 100
-      maxDuration: 180.5625
-      minDuration: 119.5
+      maxDuration: 300.40936
+      minDuration: 291.68872
     - name: Play_music_flute_solo
       guid: dae2970b0b6c434f866871f9201ac9dd
       id: 1150390550
@@ -1397,8 +1519,8 @@ MonoBehaviour:
         guid: dae2970b0b6c434f866871f9201ac9dd
       Path: Events\Default Work Unit\Music\Play_music_flute_solo
       maxAttenuation: 100
-      maxDuration: 42.954544
-      minDuration: 42.954544
+      maxDuration: -1
+      minDuration: -1
     - name: Play_music_flutes_edit
       guid: 2d58873ff72ec5408c7783af2a3354ab
       id: 3133905178
@@ -1417,8 +1539,8 @@ MonoBehaviour:
         guid: 2d58873ff72ec5408c7783af2a3354ab
       Path: Events\Default Work Unit\Music\Play_music_flutes_edit
       maxAttenuation: 0
-      maxDuration: 96
-      minDuration: 96
+      maxDuration: 86.768394
+      minDuration: 86.768394
     - name: Play_music_game_start
       guid: 7403f5c69cb00444a32a44578c781491
       id: 4029504345
@@ -1437,8 +1559,8 @@ MonoBehaviour:
         guid: 7403f5c69cb00444a32a44578c781491
       Path: Events\Default Work Unit\Music\Play_music_game_start
       maxAttenuation: 0
-      maxDuration: 19.25
-      minDuration: 19.25
+      maxDuration: 8.923806
+      minDuration: 8.923806
     - name: Play_music_gecko
       guid: d7a89b54ae81424b87360fe87935b682
       id: 1568956567
@@ -1457,8 +1579,8 @@ MonoBehaviour:
         guid: d7a89b54ae81424b87360fe87935b682
       Path: Events\Default Work Unit\Music\Play_music_gecko
       maxAttenuation: 0
-      maxDuration: 12
-      minDuration: 12
+      maxDuration: 11.690417
+      minDuration: 11.690417
     - name: Play_music_grandma
       guid: 468f8a6f1205384385714ae61bd4cbfd
       id: 196110170
@@ -1477,8 +1599,28 @@ MonoBehaviour:
         guid: 468f8a6f1205384385714ae61bd4cbfd
       Path: Events\Default Work Unit\Music\Play_music_grandma
       maxAttenuation: 0
-      maxDuration: 11.71875
-      minDuration: 11.71875
+      maxDuration: 46.875
+      minDuration: 46.875
+    - name: Play_Ocean
+      guid: a6069940e2afc742929fe322f09a70bb
+      id: 1724638476
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: AtmosOcean
+        ObjectType: 4
+        guid: 3a9f26098cab484f954cad1d1a73ccce
+      - ElementName: Play_Ocean
+        ObjectType: 3
+        guid: a6069940e2afc742929fe322f09a70bb
+      Path: Events\Default Work Unit\AtmosOcean\Play_Ocean
+      maxAttenuation: 100
+      maxDuration: 412.97614
+      minDuration: 385.95306
     - name: Play_PianoKeys
       guid: dc222b28a980d944854b21a35b0b1612
       id: 4116426549
@@ -1494,8 +1636,28 @@ MonoBehaviour:
         guid: dc222b28a980d944854b21a35b0b1612
       Path: Events\Default Work Unit\Play_PianoKeys
       maxAttenuation: 100
-      maxDuration: 2.4419727
-      minDuration: 2.3880951
+      maxDuration: 2.4302948
+      minDuration: 2.3855827
+    - name: Play_Polaroid_photo_click_print
+      guid: f41dd9c959412c42ababfc1d684e54d6
+      id: 1715369302
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: UI
+        ObjectType: 4
+        guid: f1a6468f8175474e8ef5b68bf1e8c23e
+      - ElementName: Play_Polaroid_photo_click_print
+        ObjectType: 3
+        guid: f41dd9c959412c42ababfc1d684e54d6
+      Path: Events\Default Work Unit\UI\Play_Polaroid_photo_click_print
+      maxAttenuation: 100
+      maxDuration: 2.4072578
+      minDuration: 2.4072578
     - name: Play_Rubbish
       guid: c73afd21efb6994ab709b34210a7c302
       id: 3836269015
@@ -1514,8 +1676,8 @@ MonoBehaviour:
         guid: c73afd21efb6994ab709b34210a7c302
       Path: Events\Default Work Unit\SFX\Play_Rubbish
       maxAttenuation: 0
-      maxDuration: 2.0625
-      minDuration: 1.5625
+      maxDuration: 1.5932128
+      minDuration: 1.0392398
     - name: Play_SFX
       guid: 6cde6bc9a40acf44ab138dea3ad26f76
       id: 3141129795
@@ -1537,8 +1699,8 @@ MonoBehaviour:
         guid: 6cde6bc9a40acf44ab138dea3ad26f76
       Path: Events\Default Work Unit\Cockatoo\SFX\Play_SFX
       maxAttenuation: 100
-      maxDuration: 6
-      minDuration: 1
+      maxDuration: 3.825553
+      minDuration: 0.45208845
     - name: Play_SFX_01
       guid: 71383da071b7e04f973f125486c4a91c
       id: 3257337847
@@ -1561,7 +1723,7 @@ MonoBehaviour:
       Path: Events\Default Work Unit\Ibis\SFX\Play_SFX_01
       maxAttenuation: 100
       maxDuration: 1.9375
-      minDuration: 1.75
+      minDuration: 1.3567609
     - name: Play_SFX_02
       guid: bdb258e04f67204c9928bcb4d69b3a54
       id: 3257337844
@@ -1583,8 +1745,8 @@ MonoBehaviour:
         guid: bdb258e04f67204c9928bcb4d69b3a54
       Path: Events\Default Work Unit\Koala\SFX\Play_SFX_02
       maxAttenuation: 100
-      maxDuration: 12
-      minDuration: 0.7800625
+      maxDuration: 12.538527
+      minDuration: 0.6015082
     - name: Play_SFX_03
       guid: 07ea4795255455438e0e37b70ed9ba7c
       id: 3257337845
@@ -1606,8 +1768,8 @@ MonoBehaviour:
         guid: 07ea4795255455438e0e37b70ed9ba7c
       Path: Events\Default Work Unit\Kookaburra\SFX\Play_SFX_03
       maxAttenuation: 100
-      maxDuration: 15.5
-      minDuration: 1.125
+      maxDuration: 15.981854
+      minDuration: 0.911924
     - name: Play_SFX_04
       guid: 17be23903232a949a44f90471653601e
       id: 3257337842
@@ -1629,8 +1791,8 @@ MonoBehaviour:
         guid: 17be23903232a949a44f90471653601e
       Path: Events\Default Work Unit\Lorikeet\SFX\Play_SFX_04
       maxAttenuation: 100
-      maxDuration: 2.125
-      minDuration: 0.5
+      maxDuration: 1.921781
+      minDuration: 0.30176008
     - name: Play_SFX_05
       guid: 252f799b3401524c848c9bd4dcba24d8
       id: 3257337843
@@ -1652,8 +1814,8 @@ MonoBehaviour:
         guid: 252f799b3401524c848c9bd4dcba24d8
       Path: Events\Default Work Unit\Magpie\SFX\Play_SFX_05
       maxAttenuation: 100
-      maxDuration: 3.9815834
-      minDuration: 0.5
+      maxDuration: 3.9658499
+      minDuration: 0.34654686
     - name: Play_SFX_06
       guid: f938b712cdcaf44189f75cc54d661c5c
       id: 3257337840
@@ -1675,8 +1837,8 @@ MonoBehaviour:
         guid: f938b712cdcaf44189f75cc54d661c5c
       Path: Events\Default Work Unit\Possum\SFX\Play_SFX_06
       maxAttenuation: 100
-      maxDuration: 8.5
-      minDuration: 0.625
+      maxDuration: 8.32986
+      minDuration: 0.36159813
     - name: Play_SFX_Cricket
       guid: 347b01adf7f39c4db4a570050026300e
       id: 3568461127
@@ -1695,8 +1857,8 @@ MonoBehaviour:
         guid: 347b01adf7f39c4db4a570050026300e
       Path: Events\Default Work Unit\SFX\Play_SFX_Cricket
       maxAttenuation: 100
-      maxDuration: 0.75
-      minDuration: 0.75
+      maxDuration: 0.69210947
+      minDuration: 0.6623836
     - name: Play_SFX_Crickets
       guid: ef0fff8205b25b4b834fe5c19ea9342d
       id: 466972342
@@ -1715,8 +1877,8 @@ MonoBehaviour:
         guid: ef0fff8205b25b4b834fe5c19ea9342d
       Path: Events\Default Work Unit\Atmos\Play_SFX_Crickets
       maxAttenuation: 100
-      maxDuration: 109.375
-      minDuration: 109.375
+      maxDuration: 109.438194
+      minDuration: 103.236244
     - name: Play_SFX_Sunroot_Tree
       guid: 991aa51227bdca4eb47a8b6cfc40d1d3
       id: 2907169251
@@ -1735,8 +1897,8 @@ MonoBehaviour:
         guid: 991aa51227bdca4eb47a8b6cfc40d1d3
       Path: Events\Default Work Unit\SFX\Play_SFX_Sunroot_Tree
       maxAttenuation: 100
-      maxDuration: 8
-      minDuration: 8
+      maxDuration: 5.1122627
+      minDuration: 5.1122627
     - name: Play_SFX_Wings_flap
       guid: 3d529b200d36504994f794be1bc42bef
       id: 2000475864
@@ -1755,8 +1917,8 @@ MonoBehaviour:
         guid: 3d529b200d36504994f794be1bc42bef
       Path: Events\Default Work Unit\SFX\Play_SFX_Wings_flap
       maxAttenuation: 100
-      maxDuration: 0.875
-      minDuration: 0.875
+      maxDuration: 0.8271184
+      minDuration: 0.78024495
     - name: Play_SFX_Wood_Fence_mono
       guid: b4f85e5921736a45a7d759f7d399baf1
       id: 61543571
@@ -1775,8 +1937,28 @@ MonoBehaviour:
         guid: b4f85e5921736a45a7d759f7d399baf1
       Path: Events\Default Work Unit\SFX\Play_SFX_Wood_Fence_mono
       maxAttenuation: 100
-      maxDuration: 73.5
-      minDuration: 73.5
+      maxDuration: 73.542465
+      minDuration: 69.374756
+    - name: Play_SFX_Wood_Fence_mono_01
+      guid: 17064d2976cf9d42ac0fba500c307264
+      id: 1712699527
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: SFX
+        ObjectType: 4
+        guid: 9e3dc77414655840a6a1a406ef32d278
+      - ElementName: Play_SFX_Wood_Fence_mono_01
+        ObjectType: 3
+        guid: 17064d2976cf9d42ac0fba500c307264
+      Path: Events\Default Work Unit\SFX\Play_SFX_Wood_Fence_mono_01
+      maxAttenuation: 100
+      maxDuration: 73.542465
+      minDuration: 69.374756
     - name: Play_Stream_Night
       guid: 376dd914e5a6ea47bf8a59eee33dc91a
       id: 101803377
@@ -1795,8 +1977,8 @@ MonoBehaviour:
         guid: 376dd914e5a6ea47bf8a59eee33dc91a
       Path: Events\Default Work Unit\Atmos\Play_Stream_Night
       maxAttenuation: 100
-      maxDuration: 69.9375
-      minDuration: 69.9375
+      maxDuration: 140.0367
+      minDuration: 135.97154
     - name: Play_UI__Menu_Select
       guid: fc4b9a6da87c674c9a9e17a39f43c80a
       id: 3051820782
@@ -1815,8 +1997,8 @@ MonoBehaviour:
         guid: fc4b9a6da87c674c9a9e17a39f43c80a
       Path: Events\Default Work Unit\UI\Play_UI__Menu_Select
       maxAttenuation: 100
-      maxDuration: 1.375
-      minDuration: 1.375
+      maxDuration: 0.73355687
+      minDuration: 0.73355687
     - name: Play_UI__Photo_Discard
       guid: b05a158e0fce634dbb0931bc80158200
       id: 149110613
@@ -1835,28 +2017,8 @@ MonoBehaviour:
         guid: b05a158e0fce634dbb0931bc80158200
       Path: Events\Default Work Unit\UI\Play_UI__Photo_Discard
       maxAttenuation: 100
-      maxDuration: 1.25
-      minDuration: 1.25
-    - name: Play_UI__Photo_Discard_01
-      guid: dea2c59ece29804ca96c35ab3a4367f6
-      id: 1906151857
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 5ea9686091072d41adff9786e1d6e4d5
-      - ElementName: UI
-        ObjectType: 4
-        guid: f1a6468f8175474e8ef5b68bf1e8c23e
-      - ElementName: Play_UI__Photo_Discard_01
-        ObjectType: 3
-        guid: dea2c59ece29804ca96c35ab3a4367f6
-      Path: Events\Default Work Unit\UI\Play_UI__Photo_Discard_01
-      maxAttenuation: 100
-      maxDuration: 1.25
-      minDuration: 1.25
+      maxDuration: 0.5558968
+      minDuration: 0.5558968
     - name: Play_UI__Photo_Keep
       guid: c13af43fb2d48d4ba1eeb9387f242b9e
       id: 1217678326
@@ -1875,28 +2037,8 @@ MonoBehaviour:
         guid: c13af43fb2d48d4ba1eeb9387f242b9e
       Path: Events\Default Work Unit\UI\Play_UI__Photo_Keep
       maxAttenuation: 100
-      maxDuration: 1.375
-      minDuration: 1.375
-    - name: Play_UI__Photo_Keep_01
-      guid: 6d65bcad0f0f0f44bbd49ab60768a97c
-      id: 959936644
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 5ea9686091072d41adff9786e1d6e4d5
-      - ElementName: UI
-        ObjectType: 4
-        guid: f1a6468f8175474e8ef5b68bf1e8c23e
-      - ElementName: Play_UI__Photo_Keep_01
-        ObjectType: 3
-        guid: 6d65bcad0f0f0f44bbd49ab60768a97c
-      Path: Events\Default Work Unit\UI\Play_UI__Photo_Keep_01
-      maxAttenuation: 100
-      maxDuration: 1.375
-      minDuration: 1.375
+      maxDuration: 0.6780788
+      minDuration: 0.6780788
     - name: Play_Walla
       guid: 0d2a74838b16464d9d91571a5ae4cdaa
       id: 562855495
@@ -1919,7 +2061,7 @@ MonoBehaviour:
       Path: Events\Default Work Unit\Cockatoo\Walla\Play_Walla
       maxAttenuation: 100
       maxDuration: 43.75
-      minDuration: 4
+      minDuration: 2.25
     - name: Play_Walla_01
       guid: ad8cff129667904d944a9e312d480455
       id: 1137965771
@@ -1942,7 +2084,7 @@ MonoBehaviour:
       Path: Events\Default Work Unit\Kookaburra\Walla\Play_Walla_01
       maxAttenuation: 100
       maxDuration: 31.0625
-      minDuration: 14.067312
+      minDuration: 12.844068
     - name: Play_Walla_02
       guid: 79fcb543e34364479447f2c67037f502
       id: 1137965768
@@ -1964,8 +2106,8 @@ MonoBehaviour:
         guid: 79fcb543e34364479447f2c67037f502
       Path: Events\Default Work Unit\Lorikeet\Walla\Play_Walla_02
       maxAttenuation: 100
-      maxDuration: 40.5
-      minDuration: 40.5
+      maxDuration: 40.546818
+      minDuration: 39.369778
     - name: Play_Walla_03
       guid: 960d370dd2a26a4ba391de8d0d8d7809
       id: 1137965769
@@ -1987,8 +2129,8 @@ MonoBehaviour:
         guid: 960d370dd2a26a4ba391de8d0d8d7809
       Path: Events\Default Work Unit\Magpie\Walla\Play_Walla_03
       maxAttenuation: 100
-      maxDuration: 30.5625
-      minDuration: 6.625
+      maxDuration: 29.690567
+      minDuration: 6.440118
     - name: Play_Walla_04
       guid: 9c03c443f928a74eb2c363d3bd784e50
       id: 1137965774
@@ -2010,8 +2152,8 @@ MonoBehaviour:
         guid: 9c03c443f928a74eb2c363d3bd784e50
       Path: Events\Default Work Unit\Possum\Walla\Play_Walla_04
       maxAttenuation: 100
-      maxDuration: 25.3125
-      minDuration: 17.6875
+      maxDuration: 25.34176
+      minDuration: 17.1939
     - name: Play_Wombat_Chatter
       guid: 38f70900fe2d224fa26f07fd7e1cab63
       id: 2355898552
@@ -2073,8 +2215,8 @@ MonoBehaviour:
         guid: c33ed7f54ec08b4d917841590e5cc94d
       Path: Events\Default Work Unit\Wombat\Walla\Play_wombat_walla_01_stereo
       maxAttenuation: 100
-      maxDuration: 48.875
-      minDuration: 48.875
+      maxDuration: 45.531425
+      minDuration: 44.209686
     - name: Possum
       guid: 22ef0a7340e72044baf0eb8807362586
       id: 712176942
@@ -2089,6 +2231,26 @@ MonoBehaviour:
         ObjectType: 4
         guid: 22ef0a7340e72044baf0eb8807362586
       Path: Events\Default Work Unit\Possum
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: SFX
+      guid: b980be14072fcd44b4adb6888b3250ad
+      id: 393239870
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Cockatoo
+        ObjectType: 4
+        guid: 2eadf1ec1570cf40a144f5c70dd3c982
+      - ElementName: SFX
+        ObjectType: 4
+        guid: b980be14072fcd44b4adb6888b3250ad
+      Path: Events\Default Work Unit\Cockatoo\SFX
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -2113,26 +2275,6 @@ MonoBehaviour:
       maxDuration: -1
       minDuration: -1
     - name: SFX
-      guid: 62def5233c6a764e99c23bbd5e43d6a5
-      id: 393239870
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 5ea9686091072d41adff9786e1d6e4d5
-      - ElementName: Ibis
-        ObjectType: 4
-        guid: 2b3fd83a1605c045a445bdc1483010cd
-      - ElementName: SFX
-        ObjectType: 4
-        guid: 62def5233c6a764e99c23bbd5e43d6a5
-      Path: Events\Default Work Unit\Ibis\SFX
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
-    - name: SFX
       guid: 0e5594f89b38114ea9c24ca064971a55
       id: 393239870
       PathAndIcons:
@@ -2149,6 +2291,23 @@ MonoBehaviour:
         ObjectType: 4
         guid: 0e5594f89b38114ea9c24ca064971a55
       Path: Events\Default Work Unit\Possum\SFX
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: SFX
+      guid: 9e3dc77414655840a6a1a406ef32d278
+      id: 393239870
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: SFX
+        ObjectType: 4
+        guid: 9e3dc77414655840a6a1a406ef32d278
+      Path: Events\Default Work Unit\SFX
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -2173,7 +2332,7 @@ MonoBehaviour:
       maxDuration: -1
       minDuration: -1
     - name: SFX
-      guid: 9e3dc77414655840a6a1a406ef32d278
+      guid: 62def5233c6a764e99c23bbd5e43d6a5
       id: 393239870
       PathAndIcons:
       - ElementName: Events
@@ -2182,30 +2341,13 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Ibis
+        ObjectType: 4
+        guid: 2b3fd83a1605c045a445bdc1483010cd
       - ElementName: SFX
         ObjectType: 4
-        guid: 9e3dc77414655840a6a1a406ef32d278
-      Path: Events\Default Work Unit\SFX
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
-    - name: SFX
-      guid: 4707e0fe73644d47bfbe6a2a7e380574
-      id: 393239870
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 5ea9686091072d41adff9786e1d6e4d5
-      - ElementName: Lorikeet
-        ObjectType: 4
-        guid: 97299059e2c5464080270c14caf4d18f
-      - ElementName: SFX
-        ObjectType: 4
-        guid: 4707e0fe73644d47bfbe6a2a7e380574
-      Path: Events\Default Work Unit\Lorikeet\SFX
+        guid: 62def5233c6a764e99c23bbd5e43d6a5
+      Path: Events\Default Work Unit\Ibis\SFX
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -2230,7 +2372,7 @@ MonoBehaviour:
       maxDuration: -1
       minDuration: -1
     - name: SFX
-      guid: b980be14072fcd44b4adb6888b3250ad
+      guid: 4707e0fe73644d47bfbe6a2a7e380574
       id: 393239870
       PathAndIcons:
       - ElementName: Events
@@ -2239,13 +2381,13 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 5ea9686091072d41adff9786e1d6e4d5
-      - ElementName: Cockatoo
+      - ElementName: Lorikeet
         ObjectType: 4
-        guid: 2eadf1ec1570cf40a144f5c70dd3c982
+        guid: 97299059e2c5464080270c14caf4d18f
       - ElementName: SFX
         ObjectType: 4
-        guid: b980be14072fcd44b4adb6888b3250ad
-      Path: Events\Default Work Unit\Cockatoo\SFX
+        guid: 4707e0fe73644d47bfbe6a2a7e380574
+      Path: Events\Default Work Unit\Lorikeet\SFX
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -2389,6 +2531,26 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Stop_Atmos_Ocean_Night_02
+      guid: 623e5ca9bf5a934197447e997a2332f8
+      id: 3353609567
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: AtmosOceanNight
+        ObjectType: 4
+        guid: 5c572d2eec976849a64fe6c874b8c88d
+      - ElementName: Stop_Atmos_Ocean_Night_02
+        ObjectType: 3
+        guid: 623e5ca9bf5a934197447e997a2332f8
+      Path: Events\Default Work Unit\AtmosOceanNight\Stop_Atmos_Ocean_Night_02
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_Atmos_Plains_Night_01
       guid: a9e56d55a4a95c45884808acfc50f652
       id: 2250174917
@@ -2466,6 +2628,26 @@ MonoBehaviour:
         ObjectType: 3
         guid: 698e0c8bf9d9294ba6dad797a89792d3
       Path: Events\Default Work Unit\Atmos\Stop_Atmos_Stream
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_Atmos_Stream_01
+      guid: 87dc61571d68a64180fd2cdf2b1bcca7
+      id: 3781264369
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Atmos
+        ObjectType: 4
+        guid: 996538f598acf543a6be5d9be8d02d61
+      - ElementName: Stop_Atmos_Stream_01
+        ObjectType: 3
+        guid: 87dc61571d68a64180fd2cdf2b1bcca7
+      Path: Events\Default Work Unit\Atmos\Stop_Atmos_Stream_01
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -2971,6 +3153,26 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Stop_Ocean
+      guid: c4199541b069f04bb75da5114b92c1f3
+      id: 4196961906
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: AtmosOcean
+        ObjectType: 4
+        guid: 3a9f26098cab484f954cad1d1a73ccce
+      - ElementName: Stop_Ocean
+        ObjectType: 3
+        guid: c4199541b069f04bb75da5114b92c1f3
+      Path: Events\Default Work Unit\AtmosOcean\Stop_Ocean
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_Rubbish
       guid: 4c93cc2ba707774bb1bc0f6231962c45
       id: 1345196761
@@ -3448,6 +3650,86 @@ MonoBehaviour:
       maxDuration: -1
       minDuration: -1
     - name: Walla
+      guid: 598d165e3d07df439e78af559121cfed
+      id: 2538584666
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Lorikeet
+        ObjectType: 4
+        guid: 97299059e2c5464080270c14caf4d18f
+      - ElementName: Walla
+        ObjectType: 4
+        guid: 598d165e3d07df439e78af559121cfed
+      Path: Events\Default Work Unit\Lorikeet\Walla
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Walla
+      guid: 440bfbd14559224b850a79ba50e58017
+      id: 2538584666
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Kookaburra
+        ObjectType: 4
+        guid: c60b9f1e5805154bbba6a00a9968b845
+      - ElementName: Walla
+        ObjectType: 4
+        guid: 440bfbd14559224b850a79ba50e58017
+      Path: Events\Default Work Unit\Kookaburra\Walla
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Walla
+      guid: 4ea9b4f891169d4789550eaa4e570dff
+      id: 2538584666
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Possum
+        ObjectType: 4
+        guid: 22ef0a7340e72044baf0eb8807362586
+      - ElementName: Walla
+        ObjectType: 4
+        guid: 4ea9b4f891169d4789550eaa4e570dff
+      Path: Events\Default Work Unit\Possum\Walla
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Walla
+      guid: ad38fa71d044e542acddefa453207651
+      id: 2538584666
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Ibis
+        ObjectType: 4
+        guid: 2b3fd83a1605c045a445bdc1483010cd
+      - ElementName: Walla
+        ObjectType: 4
+        guid: ad38fa71d044e542acddefa453207651
+      Path: Events\Default Work Unit\Ibis\Walla
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Walla
       guid: aa1471c71a30ff4dbe28ed2a0d5587ec
       id: 2538584666
       PathAndIcons:
@@ -3488,26 +3770,6 @@ MonoBehaviour:
       maxDuration: -1
       minDuration: -1
     - name: Walla
-      guid: 598d165e3d07df439e78af559121cfed
-      id: 2538584666
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 5ea9686091072d41adff9786e1d6e4d5
-      - ElementName: Lorikeet
-        ObjectType: 4
-        guid: 97299059e2c5464080270c14caf4d18f
-      - ElementName: Walla
-        ObjectType: 4
-        guid: 598d165e3d07df439e78af559121cfed
-      Path: Events\Default Work Unit\Lorikeet\Walla
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
-    - name: Walla
       guid: 08044a9785b05f4c933d92af03e7199f
       id: 2538584666
       PathAndIcons:
@@ -3524,66 +3786,6 @@ MonoBehaviour:
         ObjectType: 4
         guid: 08044a9785b05f4c933d92af03e7199f
       Path: Events\Default Work Unit\Wombat\Walla
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
-    - name: Walla
-      guid: 4ea9b4f891169d4789550eaa4e570dff
-      id: 2538584666
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 5ea9686091072d41adff9786e1d6e4d5
-      - ElementName: Possum
-        ObjectType: 4
-        guid: 22ef0a7340e72044baf0eb8807362586
-      - ElementName: Walla
-        ObjectType: 4
-        guid: 4ea9b4f891169d4789550eaa4e570dff
-      Path: Events\Default Work Unit\Possum\Walla
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
-    - name: Walla
-      guid: 440bfbd14559224b850a79ba50e58017
-      id: 2538584666
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 5ea9686091072d41adff9786e1d6e4d5
-      - ElementName: Kookaburra
-        ObjectType: 4
-        guid: c60b9f1e5805154bbba6a00a9968b845
-      - ElementName: Walla
-        ObjectType: 4
-        guid: 440bfbd14559224b850a79ba50e58017
-      Path: Events\Default Work Unit\Kookaburra\Walla
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
-    - name: Walla
-      guid: ad38fa71d044e542acddefa453207651
-      id: 2538584666
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 5ea9686091072d41adff9786e1d6e4d5
-      - ElementName: Ibis
-        ObjectType: 4
-        guid: 2b3fd83a1605c045a445bdc1483010cd
-      - ElementName: Walla
-        ObjectType: 4
-        guid: ad38fa71d044e542acddefa453207651
-      Path: Events\Default Work Unit\Ibis\Walla
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -3664,90 +3866,8 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 353ca83dc18ba64c819d41529ae10865
     GuidInternal: 
-    m_lastTime: -8584793685722189983
-    List:
-    - name: GameStart
-      guid: 31245c3210a4bd49b774a66e54b8091d
-      id: 4058101365
-      PathAndIcons:
-      - ElementName: States
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 353ca83dc18ba64c819d41529ae10865
-      - ElementName: GameStart
-        ObjectType: 9
-        guid: 31245c3210a4bd49b774a66e54b8091d
-      Path: States\Default Work Unit\GameStart
-      values:
-      - name: GameStart
-        guid: 2f917a4ec337f749821d36699552ca51
-        id: 4058101365
-        PathAndIcons:
-        - ElementName: States
-          ObjectType: 5
-          guid: 00000000000000000000000000000000
-        - ElementName: Default Work Unit
-          ObjectType: 12
-          guid: 353ca83dc18ba64c819d41529ae10865
-        - ElementName: GameStart
-          ObjectType: 9
-          guid: 31245c3210a4bd49b774a66e54b8091d
-        - ElementName: GameStart
-          ObjectType: 8
-          guid: 2f917a4ec337f749821d36699552ca51
-      - name: Intro
-        guid: d14b72905dbf7c4eba73ef33960334fa
-        id: 1125500713
-        PathAndIcons:
-        - ElementName: States
-          ObjectType: 5
-          guid: 00000000000000000000000000000000
-        - ElementName: Default Work Unit
-          ObjectType: 12
-          guid: 353ca83dc18ba64c819d41529ae10865
-        - ElementName: GameStart
-          ObjectType: 9
-          guid: 31245c3210a4bd49b774a66e54b8091d
-        - ElementName: Intro
-          ObjectType: 8
-          guid: d14b72905dbf7c4eba73ef33960334fa
-      - name: MainMenu
-        guid: 16373b1a0ec3a04fbd17e456a80cd5cc
-        id: 3604647259
-        PathAndIcons:
-        - ElementName: States
-          ObjectType: 5
-          guid: 00000000000000000000000000000000
-        - ElementName: Default Work Unit
-          ObjectType: 12
-          guid: 353ca83dc18ba64c819d41529ae10865
-        - ElementName: GameStart
-          ObjectType: 9
-          guid: 31245c3210a4bd49b774a66e54b8091d
-        - ElementName: MainMenu
-          ObjectType: 8
-          guid: 16373b1a0ec3a04fbd17e456a80cd5cc
-      - name: None
-        guid: 5a72871e2d2bd64cba459fae490d5aa3
-        id: 748895195
-        PathAndIcons:
-        - ElementName: States
-          ObjectType: 5
-          guid: 00000000000000000000000000000000
-        - ElementName: Default Work Unit
-          ObjectType: 12
-          guid: 353ca83dc18ba64c819d41529ae10865
-        - ElementName: GameStart
-          ObjectType: 9
-          guid: 31245c3210a4bd49b774a66e54b8091d
-        - ElementName: None
-          ObjectType: 8
-          guid: 5a72871e2d2bd64cba459fae490d5aa3
-      ValueGuids: []
-      ValueIcons: []
-      valuesInternal: []
+    m_lastTime: -8584791970551265345
+    List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     PathAndIcons:
@@ -3773,7 +3893,7 @@ MonoBehaviour:
     ParentPath: Switches\FootStepSwitches
     guid: 423a23d4d6c4c244bf77cf2cd78e1c44
     GuidInternal: 
-    m_lastTime: -8584793479367709896
+    m_lastTime: -8584791970551239741
     List:
     - name: FootstepType
       guid: ed56636585795245aab4cf46c04c3fb1
