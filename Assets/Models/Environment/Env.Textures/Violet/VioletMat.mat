@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: VioletMat
-  m_Shader: {fileID: -6465566751694194690, guid: f5d373e564280e04fba4453e862386f5,
+  m_Shader: {fileID: -6465566751694194690, guid: d783dc98fee3f7949b2183ffdb7db05b,
     type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -109,8 +109,8 @@ Material:
     - Vector1_2FA10055: 0.24
     - Vector1_46F1304E: 0.03
     - Vector1_BBEA2355: 0.1
-    - _AO_Strength: 1
-    - _Albedo_Strength: 1.06
+    - _AO_Strength: 0
+    - _Albedo_Strength: 2.9
     - _AlphaClip: 1
     - _AlphaMultiplier: 0.678
     - _AlphaToMask: 1
@@ -154,6 +154,9 @@ Material:
     - _Surface: 0
     - _TriplanarBlend: 0.12
     - _TriplanarTiling: 1.7
+    - _WiggleOffset: 1
+    - _WindSpeed: 1
+    - _WindStrength: 0.2
     - _WorkflowMode: 0
     - _ZTest: 4
     - _ZWrite: 1
@@ -161,7 +164,7 @@ Material:
     m_Colors:
     - Color_D9F05973: {r: 1, g: 1, b: 1, a: 0}
     - Color_DB04B181: {r: 0.15674433, g: 0, b: 0.22264141, a: 0}
-    - _Albedo_Color: {r: 1, g: 0.9389668, b: 0.9009434, a: 0}
+    - _Albedo_Color: {r: 0.9245283, g: 0.8425418, b: 0.8425418, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0.5396226, g: 0.5396226, b: 0.5396226, a: 1}
@@ -170,6 +173,7 @@ Material:
     - _NoiseColor: {r: 0, g: 0, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _Specular_Color: {r: 0, g: 0, b: 0, a: 0}
+    - _WindDirection: {r: 1, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &8076666781427258855
 MonoBehaviour:
