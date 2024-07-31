@@ -22,7 +22,8 @@ Material:
   m_CustomRenderQueue: 2450
   stringTagMap:
     RenderType: TransparentCutout
-  disabledShaderPasses: []
+  disabledShaderPasses:
+  - SHADOWCASTER
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
@@ -60,11 +61,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Emission_Texture:
-        m_Texture: {fileID: 2800000, guid: 882b0d4b0d380cf48a322d8b617961af, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: d4e1fe0b62eaba44fbbfb9b7bf03f9d1, type: 3}
+        m_Texture: {fileID: 2800000, guid: cbe0210491686f942b8a4edce71ec440, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -110,7 +111,7 @@ Material:
     - Vector1_46F1304E: 0.03
     - Vector1_BBEA2355: 0.1
     - _AO_Strength: 0
-    - _Albedo_Strength: 2.9
+    - _Albedo_Strength: 1.42
     - _AlphaClip: 1
     - _AlphaMultiplier: 0.678
     - _AlphaToMask: 1
@@ -118,7 +119,7 @@ Material:
     - _Blend: 0
     - _BlendModePreserveSpecular: 1
     - _BumpScale: 1
-    - _CastShadows: 1
+    - _CastShadows: 0
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
     - _Cull: 0
@@ -162,14 +163,14 @@ Material:
     - _ZWrite: 1
     - _ZWriteControl: 0
     m_Colors:
-    - Color_D9F05973: {r: 1, g: 1, b: 1, a: 0}
-    - Color_DB04B181: {r: 0.15674433, g: 0, b: 0.22264141, a: 0}
-    - _Albedo_Color: {r: 0.9245283, g: 0.8425418, b: 0.8425418, a: 0}
+    - Color_D9F05973: {r: 0, g: 0, b: 0, a: 0}
+    - Color_DB04B181: {r: 0.17271712, g: 0.15312387, b: 0.3490566, a: 0}
+    - _Albedo_Color: {r: 0.6792453, g: 0.6792453, b: 0.6792453, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0.5396226, g: 0.5396226, b: 0.5396226, a: 1}
-    - _Emission_Color: {r: 0.1342479, g: 1, b: 0, a: 0}
-    - _Fresnel_Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Emission_Color: {r: 1, g: 1, b: 1, a: 0}
+    - _Fresnel_Color: {r: 0.4433962, g: 0.4433962, b: 0.4433962, a: 1}
     - _NoiseColor: {r: 0, g: 0, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _Specular_Color: {r: 0, g: 0, b: 0, a: 0}
