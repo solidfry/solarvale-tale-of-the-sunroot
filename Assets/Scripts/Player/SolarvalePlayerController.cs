@@ -124,6 +124,8 @@ namespace Player
             }
         }
 
+        public float footstepInterval = 0.5f; // Time between footsteps
+        private float footstepTimer = 0.0f;
 
         private void Awake()
         {
@@ -161,6 +163,8 @@ namespace Player
             JumpAndGravity();
             GroundedCheck();
             Move();
+
+           
         }
 
         private void LateUpdate()
@@ -385,6 +389,11 @@ namespace Player
             {
                 OnLandEvent?.Invoke();
             }
+        }
+        bool IsWalking()
+        {
+            // Implement your walking condition
+            return true; // Placeholder
         }
     }
 }
