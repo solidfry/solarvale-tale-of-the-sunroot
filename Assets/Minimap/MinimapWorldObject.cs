@@ -1,18 +1,21 @@
 using UnityEngine;
 
-public class MinimapWorldObject : MonoBehaviour
+namespace Minimap
 {
-    [SerializeField] private bool followObject = false;
-    [SerializeField] private Sprite minimapIcon;
-    public Sprite MinimapIcon => minimapIcon;
-
-    private void Start()
+    public class MinimapWorldObject : MonoBehaviour
     {
-        MinimapController.Instance.RegisterMinimapWorldObject(this, followObject);
-    }
+        [SerializeField] private bool followObject = false;
+        [SerializeField] private Sprite minimapIcon;
+        public Sprite MinimapIcon => minimapIcon;
 
-    private void OnDestroy()
-    {
-        MinimapController.Instance.RemoveMinimapWorldObject(this);
+        private void Start()
+        {
+            MinimapController.Instance.RegisterMinimapWorldObject(this, followObject);
+        }
+
+        private void OnDestroy()
+        {
+            MinimapController.Instance.RemoveMinimapWorldObject(this);
+        }
     }
 }

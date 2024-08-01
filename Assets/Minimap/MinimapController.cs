@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using Minimap;
 using UnityEngine;
+using UnityEngine.InputSystem;
+
 public enum MinimapMode
 {
     Mini, Fullscreen
@@ -19,6 +22,8 @@ public class MinimapController : MonoBehaviour
     [SerializeField] RectTransform contentRectTransform;
     [SerializeField] MinimapIcon minimapIconPrefab;
 
+    [SerializeField] private InputActionReference toggleMiniMapMode; 
+
     Matrix4x4 transformationMatrix;
 
     private MinimapMode currentMiniMapMode = MinimapMode.Mini;
@@ -34,6 +39,11 @@ public class MinimapController : MonoBehaviour
         scrollViewDefaultPosition = scrollViewRectTransform.anchoredPosition;
     }
 
+    private void OnEnable()
+    {
+        toggleMiniMapMode.action.performed += ctx => SetMinimapMode(currentMiniMapMode == MinimapMode.Mini ? MinimapMode.Fullscreen : MinimapMode.Mini);
+    }
+
     private void Start()
     {
         CalculateTransformationMatrix();
@@ -41,11 +51,6 @@ public class MinimapController : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.M))
-        {
-            SetMinimapMode(currentMiniMapMode == MinimapMode.Mini ? MinimapMode.Fullscreen : MinimapMode.Mini);
-        }
-
         float zoom = Input.GetAxis("Mouse ScrollWheel");
         ZoomMap(zoom);
         UpdateMiniMapIcons();
@@ -54,8 +59,7 @@ public class MinimapController : MonoBehaviour
 
     public void RegisterMinimapWorldObject(MinimapWorldObject miniMapWorldObject, bool followObject = false)
     {
-        var minimapIcon = Instantiate(minimapIconPrefab);
-        minimapIcon.transform.SetParent(contentRectTransform);
+        var minimapIcon = Instantiate(minimapIconPrefab, contentRectTransform);
         minimapIcon.Image.sprite = miniMapWorldObject.MinimapIcon;
         miniMapWorldObjectsLookup[miniMapWorldObject] = minimapIcon;
 
