@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: 0ea724a16d5fe94f87531beacdd4d0d0
     GuidInternal: 
-    m_lastTime: -8584829882348951365
+    m_lastTime: -8584799934953658477
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 2b20922bdef03c418ceb65e6b9ae535b
     GuidInternal: 
-    m_lastTime: -8584791308443111487
+    m_lastTime: -8584791171414475664
     List:
     - name: AnimalAtmos
       guid: 847c98f9339bcc44a6c31e3cb4f52d3c
@@ -219,7 +219,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 119a7399247785478749c0bc1477965c
     GuidInternal: 
-    m_lastTime: -8584791308440138989
+    m_lastTime: -8584791172714687682
     List:
     - name: Animals
       guid: 6da0da3caf628f4a902f8d9f4ea805bd
@@ -359,7 +359,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 5ea9686091072d41adff9786e1d6e4d5
     GuidInternal: 
-    m_lastTime: -8584791308468036827
+    m_lastTime: -8584791172727838313
     List:
     - name: Atmos
       guid: 996538f598acf543a6be5d9be8d02d61
@@ -605,7 +605,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: e10fc172b243eb42aa2205651962d2ec
       Path: Events\Default Work Unit\Atmos\Play_Atmos_Beach_Rain_01
-      maxAttenuation: 100
+      maxAttenuation: 1024
       maxDuration: -1
       minDuration: -1
     - name: Play_Atmos_Beach_Wind_Gentle_
@@ -745,7 +745,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: a212bb2fd1e1b647a996c8ebc412d348
       Path: Events\Default Work Unit\Atmos\Play_Atmos_Ocean_Night_01
-      maxAttenuation: 100
+      maxAttenuation: 1024
       maxDuration: -1
       minDuration: -1
     - name: Play_Atmos_Ocean_Night_02
@@ -765,7 +765,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 1cd9c6080e791c4f89a9c3ae48eb5474
       Path: Events\Default Work Unit\AtmosOceanNight\Play_Atmos_Ocean_Night_02
-      maxAttenuation: 100
+      maxAttenuation: 1024
       maxDuration: -1
       minDuration: -1
     - name: Play_Atmos_Plains_Night_01
@@ -888,26 +888,6 @@ MonoBehaviour:
       maxAttenuation: 100
       maxDuration: 88.79002
       minDuration: 86.212524
-    - name: Play_Beach_Waves
-      guid: 710d77ffedc395448a0fe5bea635e04f
-      id: 2745594764
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 5ea9686091072d41adff9786e1d6e4d5
-      - ElementName: Atmos
-        ObjectType: 4
-        guid: 996538f598acf543a6be5d9be8d02d61
-      - ElementName: Play_Beach_Waves
-        ObjectType: 3
-        guid: 710d77ffedc395448a0fe5bea635e04f
-      Path: Events\Default Work Unit\Atmos\Play_Beach_Waves
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
     - name: Play_BrandIntro_Birds
       guid: 17f690d5dd7414459bb656c7e37c71ec
       id: 2883217168
@@ -1358,23 +1338,6 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.970956
       minDuration: 0.88985646
-    - name: Play_GameIntro_SoundScape
-      guid: e9cc52e4b317124fabb631b22c0ffb1d
-      id: 3337834332
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 5ea9686091072d41adff9786e1d6e4d5
-      - ElementName: Play_GameIntro_SoundScape
-        ObjectType: 3
-        guid: e9cc52e4b317124fabb631b22c0ffb1d
-      Path: Events\Default Work Unit\Play_GameIntro_SoundScape
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
     - name: Play_Gecko
       guid: f20902dae62bbf4096a34333ddd5a544
       id: 2404663
@@ -1618,7 +1581,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: a6069940e2afc742929fe322f09a70bb
       Path: Events\Default Work Unit\AtmosOcean\Play_Ocean
-      maxAttenuation: 100
+      maxAttenuation: 1024
       maxDuration: 412.97614
       minDuration: 385.95306
     - name: Play_PianoKeys
@@ -2235,7 +2198,7 @@ MonoBehaviour:
       maxDuration: -1
       minDuration: -1
     - name: SFX
-      guid: b980be14072fcd44b4adb6888b3250ad
+      guid: 9e3dc77414655840a6a1a406ef32d278
       id: 393239870
       PathAndIcons:
       - ElementName: Events
@@ -2244,33 +2207,10 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 5ea9686091072d41adff9786e1d6e4d5
-      - ElementName: Cockatoo
-        ObjectType: 4
-        guid: 2eadf1ec1570cf40a144f5c70dd3c982
       - ElementName: SFX
         ObjectType: 4
-        guid: b980be14072fcd44b4adb6888b3250ad
-      Path: Events\Default Work Unit\Cockatoo\SFX
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
-    - name: SFX
-      guid: 55c96a76d8a8354dad87966bf5b9d997
-      id: 393239870
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 5ea9686091072d41adff9786e1d6e4d5
-      - ElementName: Magpie
-        ObjectType: 4
-        guid: 0edb2d9865b96c4188fbc461f95a4061
-      - ElementName: SFX
-        ObjectType: 4
-        guid: 55c96a76d8a8354dad87966bf5b9d997
-      Path: Events\Default Work Unit\Magpie\SFX
+        guid: 9e3dc77414655840a6a1a406ef32d278
+      Path: Events\Default Work Unit\SFX
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -2295,7 +2235,7 @@ MonoBehaviour:
       maxDuration: -1
       minDuration: -1
     - name: SFX
-      guid: 9e3dc77414655840a6a1a406ef32d278
+      guid: 97017c477f7d3f4ea33e013d79c0e513
       id: 393239870
       PathAndIcons:
       - ElementName: Events
@@ -2304,30 +2244,13 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Kookaburra
+        ObjectType: 4
+        guid: c60b9f1e5805154bbba6a00a9968b845
       - ElementName: SFX
         ObjectType: 4
-        guid: 9e3dc77414655840a6a1a406ef32d278
-      Path: Events\Default Work Unit\SFX
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
-    - name: SFX
-      guid: 4dcd359fbce3c949acc05dcabe0cd83c
-      id: 393239870
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 5ea9686091072d41adff9786e1d6e4d5
-      - ElementName: Koala
-        ObjectType: 4
-        guid: e0ec340731d608448a027ab855a5d91e
-      - ElementName: SFX
-        ObjectType: 4
-        guid: 4dcd359fbce3c949acc05dcabe0cd83c
-      Path: Events\Default Work Unit\Koala\SFX
+        guid: 97017c477f7d3f4ea33e013d79c0e513
+      Path: Events\Default Work Unit\Kookaburra\SFX
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -2352,7 +2275,7 @@ MonoBehaviour:
       maxDuration: -1
       minDuration: -1
     - name: SFX
-      guid: 97017c477f7d3f4ea33e013d79c0e513
+      guid: 4dcd359fbce3c949acc05dcabe0cd83c
       id: 393239870
       PathAndIcons:
       - ElementName: Events
@@ -2361,13 +2284,53 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 5ea9686091072d41adff9786e1d6e4d5
-      - ElementName: Kookaburra
+      - ElementName: Koala
         ObjectType: 4
-        guid: c60b9f1e5805154bbba6a00a9968b845
+        guid: e0ec340731d608448a027ab855a5d91e
       - ElementName: SFX
         ObjectType: 4
-        guid: 97017c477f7d3f4ea33e013d79c0e513
-      Path: Events\Default Work Unit\Kookaburra\SFX
+        guid: 4dcd359fbce3c949acc05dcabe0cd83c
+      Path: Events\Default Work Unit\Koala\SFX
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: SFX
+      guid: 55c96a76d8a8354dad87966bf5b9d997
+      id: 393239870
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Magpie
+        ObjectType: 4
+        guid: 0edb2d9865b96c4188fbc461f95a4061
+      - ElementName: SFX
+        ObjectType: 4
+        guid: 55c96a76d8a8354dad87966bf5b9d997
+      Path: Events\Default Work Unit\Magpie\SFX
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: SFX
+      guid: b980be14072fcd44b4adb6888b3250ad
+      id: 393239870
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Cockatoo
+        ObjectType: 4
+        guid: 2eadf1ec1570cf40a144f5c70dd3c982
+      - ElementName: SFX
+        ObjectType: 4
+        guid: b980be14072fcd44b4adb6888b3250ad
+      Path: Events\Default Work Unit\Cockatoo\SFX
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -2689,8 +2652,8 @@ MonoBehaviour:
         guid: 5e043a9d31648a45afea49afc2c88318
       Path: Events\Default Work Unit\Atmos\Stop_Beach_Waves
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Stop_Forest
       guid: 737f9f3a3a088147b7dc862fd3cce7cd
       id: 1085006091
@@ -3670,26 +3633,6 @@ MonoBehaviour:
       maxDuration: -1
       minDuration: -1
     - name: Walla
-      guid: 440bfbd14559224b850a79ba50e58017
-      id: 2538584666
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 5ea9686091072d41adff9786e1d6e4d5
-      - ElementName: Kookaburra
-        ObjectType: 4
-        guid: c60b9f1e5805154bbba6a00a9968b845
-      - ElementName: Walla
-        ObjectType: 4
-        guid: 440bfbd14559224b850a79ba50e58017
-      Path: Events\Default Work Unit\Kookaburra\Walla
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
-    - name: Walla
       guid: 4ea9b4f891169d4789550eaa4e570dff
       id: 2538584666
       PathAndIcons:
@@ -3706,6 +3649,46 @@ MonoBehaviour:
         ObjectType: 4
         guid: 4ea9b4f891169d4789550eaa4e570dff
       Path: Events\Default Work Unit\Possum\Walla
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Walla
+      guid: 08044a9785b05f4c933d92af03e7199f
+      id: 2538584666
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Wombat
+        ObjectType: 4
+        guid: cd2e7c06381cfc4e89f9cb73d0848c44
+      - ElementName: Walla
+        ObjectType: 4
+        guid: 08044a9785b05f4c933d92af03e7199f
+      Path: Events\Default Work Unit\Wombat\Walla
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Walla
+      guid: 8dec63df7fa2bf498714cfe5df5fd9a8
+      id: 2538584666
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5ea9686091072d41adff9786e1d6e4d5
+      - ElementName: Magpie
+        ObjectType: 4
+        guid: 0edb2d9865b96c4188fbc461f95a4061
+      - ElementName: Walla
+        ObjectType: 4
+        guid: 8dec63df7fa2bf498714cfe5df5fd9a8
+      Path: Events\Default Work Unit\Magpie\Walla
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -3750,7 +3733,7 @@ MonoBehaviour:
       maxDuration: -1
       minDuration: -1
     - name: Walla
-      guid: 8dec63df7fa2bf498714cfe5df5fd9a8
+      guid: 440bfbd14559224b850a79ba50e58017
       id: 2538584666
       PathAndIcons:
       - ElementName: Events
@@ -3759,33 +3742,13 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 5ea9686091072d41adff9786e1d6e4d5
-      - ElementName: Magpie
+      - ElementName: Kookaburra
         ObjectType: 4
-        guid: 0edb2d9865b96c4188fbc461f95a4061
+        guid: c60b9f1e5805154bbba6a00a9968b845
       - ElementName: Walla
         ObjectType: 4
-        guid: 8dec63df7fa2bf498714cfe5df5fd9a8
-      Path: Events\Default Work Unit\Magpie\Walla
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
-    - name: Walla
-      guid: 08044a9785b05f4c933d92af03e7199f
-      id: 2538584666
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 5ea9686091072d41adff9786e1d6e4d5
-      - ElementName: Wombat
-        ObjectType: 4
-        guid: cd2e7c06381cfc4e89f9cb73d0848c44
-      - ElementName: Walla
-        ObjectType: 4
-        guid: 08044a9785b05f4c933d92af03e7199f
-      Path: Events\Default Work Unit\Wombat\Walla
+        guid: 440bfbd14559224b850a79ba50e58017
+      Path: Events\Default Work Unit\Kookaburra\Walla
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -3838,7 +3801,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 1e3f235dbaf8c7448c7fecb2a220ee0e
     GuidInternal: 
-    m_lastTime: -8584799747287136239
+    m_lastTime: -8584799752925943473
     List:
     - name: MasterVolumeControl
       guid: e9597ed9303a6644b9a8e74654a53a8a
@@ -3866,7 +3829,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 353ca83dc18ba64c819d41529ae10865
     GuidInternal: 
-    m_lastTime: -8584791308440133991
+    m_lastTime: -8584791970551265345
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
@@ -3880,7 +3843,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 42e0ffd4a5a82e4cb302f65e9ca389f3
     GuidInternal: 
-    m_lastTime: -8584829882348956368
+    m_lastTime: -8584799934953664109
     List: []
   - PhysicalPath: Switches\FootStepSwitches.wwu
     PathAndIcons:
@@ -3893,7 +3856,7 @@ MonoBehaviour:
     ParentPath: Switches\FootStepSwitches
     guid: 423a23d4d6c4c244bf77cf2cd78e1c44
     GuidInternal: 
-    m_lastTime: -8584791308440128982
+    m_lastTime: -8584791970551239741
     List:
     - name: FootstepType
       guid: ed56636585795245aab4cf46c04c3fb1
@@ -4021,7 +3984,7 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: 277340ccae77074e961e5a73134a9932
     GuidInternal: 
-    m_lastTime: -8584829882348951365
+    m_lastTime: -8584799934953658477
     List: []
   ExpandedFileSystemItemIds: 
   ExpandedWaapiItemIds: 

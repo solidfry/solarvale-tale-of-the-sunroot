@@ -1192,103 +1192,7 @@
 								</Sound>
 							</ChildrenList>
 						</Folder>
-						<Folder Name="MainMenu" ID="{849BC614-4B5A-4741-84D9-EDDA43C3FE9E}" ShortID="516522916">
-							<ChildrenList>
-								<Sound Name="music_flute_solo" ID="{190EFEC9-3D81-4749-A2F8-E681748BF80E}" ShortID="327102789">
-									<PropertyList>
-										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-										<Property Name="MakeUpGain" Type="Real64">
-											<ValueList>
-												<Value>20</Value>
-											</ValueList>
-										</Property>
-										<Property Name="OverrideConversion" Type="bool" Value="True"/>
-										<Property Name="OverrideOutput" Type="bool" Value="True"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="ADPCM Auto Detect High" ID="{6D51666E-9C7A-40E4-831D-C445512EBABD}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Music" ID="{651529B0-D00A-407F-9314-E0A35BA653FF}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="music_flute_solo" ID="{7329B93F-20DA-4B70-BAFF-82503DA94100}">
-											<PropertyList>
-												<Property Name="FadeOutDuration" Type="Real64" Value="1.75972603843463"/>
-												<Property Name="FadeOutShape" Type="int16" Value="2"/>
-												<Property Name="OverrideConversion" Type="bool" Value="True"/>
-												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimEnd" Type="Real64" Value="42.438574938575"/>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<Custom CreatedFrom="{6D51666E-9C7A-40E4-831D-C445512EBABD}">
-														<Conversion Name="ADPCM Auto Detect High (Custom)" ID="{47D6F07F-2C07-4733-B511-B262657DA9AB}">
-															<PropertyList>
-																<Property Name="Channels" Type="int32">
-																	<ValueList>
-																		<Value Platform="Windows">4</Value>
-																		<Value Platform="Mac">4</Value>
-																	</ValueList>
-																</Property>
-																<Property Name="LRMix" Type="Real64">
-																	<ValueList>
-																		<Value Platform="Windows">0</Value>
-																		<Value Platform="Mac">0</Value>
-																	</ValueList>
-																</Property>
-																<Property Name="MaxSampleRate" Type="int32">
-																	<ValueList>
-																		<Value Platform="Windows">0</Value>
-																		<Value Platform="Mac">0</Value>
-																	</ValueList>
-																</Property>
-																<Property Name="MinSampleRate" Type="int32">
-																	<ValueList>
-																		<Value Platform="Windows">0</Value>
-																		<Value Platform="Mac">0</Value>
-																	</ValueList>
-																</Property>
-																<Property Name="SRConversionQuality" Type="int32">
-																	<ValueList>
-																		<Value>1</Value>
-																	</ValueList>
-																</Property>
-																<Property Name="SampleRate" Type="int32">
-																	<ValueList>
-																		<Value>3</Value>
-																		<Value Platform="Windows">0</Value>
-																		<Value Platform="Mac">0</Value>
-																	</ValueList>
-																</Property>
-															</PropertyList>
-															<ConversionPluginInfoList>
-																<ConversionPluginInfo Platform="Windows">
-																	<ConversionPlugin Name="" ID="{532EFAD2-B50F-4BC8-9D54-A3A85E96D557}" PluginName="ADPCM" CompanyID="0" PluginID="2"/>
-																</ConversionPluginInfo>
-																<ConversionPluginInfo Platform="Mac">
-																	<ConversionPlugin Name="" ID="{3343715C-5C6F-4426-8341-3BDD3586DC3F}" PluginName="ADPCM" CompanyID="0" PluginID="2"/>
-																</ConversionPluginInfo>
-															</ConversionPluginInfoList>
-														</Conversion>
-													</Custom>
-												</Reference>
-											</ReferenceList>
-											<Language>SFX</Language>
-											<AudioFile>music_flute_solo.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="96785413"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="music_flute_solo" ID="{7329B93F-20DA-4B70-BAFF-82503DA94100}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-							</ChildrenList>
-						</Folder>
+						<Folder Name="MainMenu" ID="{849BC614-4B5A-4741-84D9-EDDA43C3FE9E}" ShortID="516522916"/>
 						<Folder Name="Camera" ID="{4A169875-33DD-47D0-919F-5863656B364C}" ShortID="760734479">
 							<ChildrenList>
 								<Sound Name="Polaroid_photo_click_print" ID="{9E5814BE-1A22-46B0-BAEC-F270B423B85E}" ShortID="535097387">
@@ -1605,13 +1509,18 @@
 								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="3"/>
 								<Property Name="RandomOrSequence" Type="int16" Value="0"/>
 								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-13</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="MenuPiano" ID="{048AFFEC-1C85-40C8-A0D2-687FD5D91A09}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+									<ObjectRef Name="UI" ID="{D87B01C4-2E82-438B-A002-5D55C31FBBFD}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
