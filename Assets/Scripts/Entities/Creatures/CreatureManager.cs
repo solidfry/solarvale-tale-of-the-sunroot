@@ -105,6 +105,7 @@ namespace Entities.Creatures
                 if (creatureStates[i])
                 {
                     creatures[i].gameObject.SetActive(true);
+                    if (creatures[i].GetBehaviourTree.IsBehavioursPaused) continue;
                     creatures[i].GetBehaviourTree?.Run();
                 }
                 else

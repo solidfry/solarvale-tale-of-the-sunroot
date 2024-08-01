@@ -210,7 +210,7 @@ namespace Photography
         private void HandlePhotographyRayForQuests()
         {
             var hits = GetRayCastHit();
-            if (hits != null)
+            if (hits != null && hits.Length > 0)
             {
                 var entities = GetEntityDataFromRayCastHit(hits);
                 onPhotoTaken?.Invoke(entities);
@@ -233,18 +233,15 @@ namespace Photography
             
             foreach (var hit in hits)
             {
+                if (hit == null) continue;
                 if (hit.TryGetComponent(out Entity entity))
                 {
-                    if (entity != null)
-                    {
-                        currentEntities.Add(entity.GetEntityData);
-                    }
+                    if (entity == null) continue;
+                    currentEntities.Add(entity.GetEntityData);
                 }
                 
-                return currentEntities.ToArray();
             }
-            
-            return null;
+            return currentEntities?.ToArray();
         }
 
         private static void HandleOnRemovePhotoGlobalEvents()
