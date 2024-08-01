@@ -73,6 +73,7 @@ namespace Entities.Creatures
             } else {
                 foreach (var creature in creatures)
                 {
+                    if (creature.GetBehaviourTree.IsBehavioursPaused) continue;
                     creature.GetBehaviourTree?.Run();
                 }
             }

@@ -13,6 +13,8 @@ namespace Entities.Creatures
         [SerializeField] BehaviourTreeSo behaviorTreeSo;
         [SerializeField] private Transform target;
         
+        public bool IsBehavioursPaused => pauseBehaviours;
+        
         private NavMeshAgent _agent;
         private Creature _creature;
         private List<IEdible> _currentTargets = new ();
@@ -31,7 +33,7 @@ namespace Entities.Creatures
         
         public void Run()
         {
-            if (pauseBehaviours) return;
+            if (IsBehavioursPaused) return;
             if (behaviorTreeSo != null)
             {
                 behaviorTreeSo.Process(_context);
