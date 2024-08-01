@@ -24,7 +24,7 @@ namespace Entities.Plants
         private void Start()
         {
             GlobalEvents.OnRegisterEdibleEvent?.Invoke(this);
-            Debug.Log(this + " registered as an edible");
+            // Debug.Log(this + " registered as an edible");
         }
         
         public void OnDisable()

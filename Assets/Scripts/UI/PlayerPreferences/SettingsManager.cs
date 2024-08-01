@@ -64,7 +64,7 @@ namespace UI.PlayerPreferences
             PlayerPrefs.SetFloat(key, volume);
             PlayerPrefs.Save();
 
-            float rtpcValue = Mathf.Lerp(-200, 0, volume); // Scale from 0 to 1
+            var rtpcValue = volume * 100;
             AkSoundEngine.SetRTPCValue(key + "Control", rtpcValue);
         }
 

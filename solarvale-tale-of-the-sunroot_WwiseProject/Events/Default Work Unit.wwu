@@ -14,17 +14,6 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Play_GameIntro_SoundScape" ID="{E452CCE9-17B3-4F12-ABB6-31B22C0FFB1D}">
-					<ChildrenList>
-						<Action Name="" ID="{C4FC395E-4534-4277-9F77-4DC36A60EB33}" ShortID="82819717">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="GameIntro_SoundScape" ID="{3F781544-F121-4DF8-BB10-275BB72FD1E3}" WorkUnitID="{6AACD892-8249-4CA2-BBEB-F88052A754B1}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
 				<Event Name="Play_Click" ID="{5F874B2C-3EDA-44A7-995E-65CF223E8F96}">
 					<ChildrenList>
 						<Action Name="" ID="{F1A17A4B-847C-4802-A778-D85ED96F3B64}" ShortID="20347509">
@@ -566,17 +555,6 @@
 				</Folder>
 				<Folder Name="Atmos" ID="{F5386599-AC98-43F5-A6BE-5D9BE8D02D61}" ShortID="937904835">
 					<ChildrenList>
-						<Event Name="Play_Beach_Waves" ID="{FF770D71-C3ED-4495-8A0F-E5BEA635E04F}">
-							<ChildrenList>
-								<Action Name="" ID="{60F724EF-7EA7-4E4A-9D99-E32A5E7DC22F}" ShortID="750242578">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Beach Waves" ID="{25E3F518-D52C-4352-A4BE-E04E8D2212F0}" WorkUnitID="{9CCFE6D6-BF4C-4F3A-BF1F-C42DE46CC289}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
 						<Event Name="Play_Forest" ID="{7197542A-A450-4CCA-A29D-47D6AC968DD2}">
 							<ChildrenList>
 								<Action Name="" ID="{97D25AE7-3D56-4374-B366-C3215C39801D}" ShortID="251642870">
@@ -686,6 +664,9 @@
 							</ChildrenList>
 						</Event>
 						<Event Name="Stop_Beach_Waves" ID="{9D3A045E-6431-458A-AFEA-49AFC2C88318}">
+							<PropertyList>
+								<Property Name="Inclusion" Type="bool" Value="False"/>
+							</PropertyList>
 							<ChildrenList>
 								<Action Name="" ID="{182A10A5-7BFD-40FC-B3A0-81810097B5DF}" ShortID="962817121">
 									<PropertyList>

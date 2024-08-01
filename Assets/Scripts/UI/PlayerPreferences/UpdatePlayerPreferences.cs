@@ -43,7 +43,7 @@ namespace UI.PlayerPreferences
         
         }
 
-        public static void SaveVolume(string key, float value, UnityEvent<float> volumeChangedEvent)
+        static void SaveVolume(string key, float value, UnityEvent<float> volumeChangedEvent)
         {
             PlayerPrefs.SetFloat(key, value);
             PlayerPrefs.Save();
@@ -55,7 +55,7 @@ namespace UI.PlayerPreferences
         {
             public string Key;
             public Slider slider;
-            [FormerlySerializedAs("OnValueChanged")] public UnityEvent<float> onValueChanged = new();
+            public UnityEvent<float> onValueChanged = new();
 
             public void Initialise()
             {
