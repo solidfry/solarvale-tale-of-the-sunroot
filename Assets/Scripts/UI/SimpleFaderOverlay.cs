@@ -3,7 +3,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
 using DG.Tweening;
-using UnityEngine.Serialization;
 
 public enum FadeDirection
 {
@@ -17,18 +16,25 @@ public class SimpleFaderOverlay : MonoBehaviour
     [SerializeField] private CanvasGroup canvasGroup;
     [SerializeField] private Image image;
     [SerializeField] private float fadeInDuration = 1f;
-    [SerializeField] private float fadeOutDuration = 1f;
+    [SerializeField] private float fadeOutDuration = 6f;
     [SerializeField] private float fadeDelayOnStart = 1f;
     [SerializeField] private bool fadeOnStart = false;
     [SerializeField] private FadeDirection fadeDirection = FadeDirection.In;
     [SerializeField] private bool autoFade = false;
     [SerializeField] private float timeBeforeExit = 1f;
 
-    [FormerlySerializedAs("OnComplete")] public UnityEvent FadeInAndOutOnComplete;
+    public UnityEvent FadeInAndOutOnComplete;
     public UnityEvent FadeInOnComplete;
     public UnityEvent FadeOutOnComplete;
 
+    private void Awake()
+    {
+        if (canvasGroup == null) canvasGroup = GetComponent<CanvasGroup>();
+        if (image == null) image = GetComponent<Image>();
+    }
+    
     private void Start() => FadeOnStart();
+
 
     private void FadeOnStart()
     {
@@ -59,12 +65,14 @@ public class SimpleFaderOverlay : MonoBehaviour
             yield return PerformFadeRoutine(FadeDirection.In);
             yield return new WaitForSeconds(timeBeforeExit);
             yield return PerformFadeRoutine(FadeDirection.Out);
+            yield return new WaitForSeconds(fadeOutDuration);
         }
         else
         {
             yield return PerformFadeRoutine(FadeDirection.Out);
             yield return new WaitForSeconds(timeBeforeExit);
             yield return PerformFadeRoutine(FadeDirection.In);
+            yield return new WaitForSeconds(fadeInDuration);
         }
 
         FadeInAndOutOnComplete?.Invoke();
@@ -81,11 +89,11 @@ public class SimpleFaderOverlay : MonoBehaviour
         switch (direction)
         {
             case FadeDirection.In:
-                CheckKeyComponentsEnabled();
+                // CheckKeyComponentsEnabled();
                 FadeIn();
                 break;
             case FadeDirection.Out:
-                CheckKeyComponentsEnabled();
+                // CheckKeyComponentsEnabled();
                 FadeOut();
                 break;
             default:
@@ -100,7 +108,18 @@ public class SimpleFaderOverlay : MonoBehaviour
         if (!canvasGroup.enabled) canvasGroup.enabled = true;
     }
 
-    public void FadeIn() => canvasGroup.DOFade(1, fadeInDuration).From(0).OnComplete( () => FadeInOnComplete?.Invoke() );
+    void FadeIn()
+    {
+        canvasGroup.alpha = 0;
+        canvasGroup.DOFade(1, fadeInDuration).SetDelay(fadeDelayOnStart).SetEase(Ease.Linear)
+            .OnComplete(() => FadeInOnComplete?.Invoke()).SetAutoKill(true).Delay();
+    }
 
-    public void FadeOut() => canvasGroup.DOFade(0, fadeOutDuration).From(1).OnComplete( () => FadeOutOnComplete?.Invoke() );
+    void FadeOut()
+    {
+        canvasGroup.alpha = 1;
+        canvasGroup.DOFade(0, fadeOutDuration).SetEase(Ease.Linear).SetDelay(fadeDelayOnStart)
+            .OnComplete(() => FadeOutOnComplete?.Invoke()).SetAutoKill(true).Delay();
+        Debug.Log("Fading out for " + fadeOutDuration + " seconds");
+    }
 }

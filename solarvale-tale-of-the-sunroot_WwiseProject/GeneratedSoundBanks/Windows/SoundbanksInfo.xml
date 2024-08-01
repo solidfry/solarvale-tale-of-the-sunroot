@@ -1437,7 +1437,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{068D1757-BF51-CCEE-8500-67FC8879FD7E}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{BAD71611-1AF0-229C-3093-7AA0AF1D7BEF}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -1690,7 +1690,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3034623661" Type="User" Language="SFX" Hash="{DC84833A-C79F-978F-E896-67CEBE73B986}">
+		<SoundBank Id="3034623661" Type="User" Language="SFX" Hash="{988564B3-FC7B-26BE-DD83-1DFF74C8FAED}">
 			<ShortName>Atmos</ShortName>
 			<Path>Atmos.bnk</Path>
 			<Media>
@@ -2012,7 +2012,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{70A80A36-C33F-FBB5-1653-AD5BAE588993}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{2725F264-6D6C-8B04-B6EB-8DDB3E39C4C9}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -2611,6 +2611,10 @@
 				<File Id="693676674" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Possum\Mono\possum-chatter_01-mono.wav</ShortName>
 					<CachePath>SFX/Possum/Mono/possum-chatter_01-mono_97BB9738.wem</CachePath>
+				</File>
+				<File Id="695495137" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>music_flute_solo.wav</ShortName>
+					<CachePath>SFX/music_flute_solo_ED297061.wem</CachePath>
 				</File>
 				<File Id="695504823" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>FTS_Forest_04.wav</ShortName>
@@ -3259,7 +3263,11 @@
 						<MediaRef Id="996077951"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1150390550" Name="Play_music_flute_solo" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1150390550" Name="Play_music_flute_solo" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="695495137"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="3133905178" Name="Play_music_flutes_edit" DurationType="OneShot" DurationMin="86.768394" DurationMax="86.768394">
 					<MediaRefs>
 						<MediaRef Id="236542911"/>
@@ -3626,7 +3634,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3991942870" Type="User" Language="SFX" Hash="{305ACEFB-A506-C84D-1C20-93CE4E0951C9}">
+		<SoundBank Id="3991942870" Type="User" Language="SFX" Hash="{9CAD9AC7-7D9A-17FD-4BAA-87AB03C3E7BB}">
 			<ShortName>Music</ShortName>
 			<Path>Music.bnk</Path>
 			<Media>
@@ -3652,6 +3660,11 @@
 				</File>
 			</Media>
 			<Events>
+				<Event Id="1150390550" Name="Play_music_flute_solo" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="695495137"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="3133905178" Name="Play_music_flutes_edit" DurationType="OneShot" DurationMin="86.768394" DurationMax="86.768394">
 					<MediaRefs>
 						<MediaRef Id="236542911"/>
@@ -3675,5 +3688,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{BE67C4B6-79BB-99F7-CBC3-6AE6457B62E1}</FileHash>
+	<FileHash>{DB730F9E-E42F-8DE1-EFEB-1716C3314C22}</FileHash>
 </SoundBanksInfo>
