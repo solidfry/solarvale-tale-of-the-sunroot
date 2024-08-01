@@ -171,6 +171,9 @@ namespace AK
     namespace GAME_PARAMETERS
     {
         static const AkUniqueID MASTERVOLUMECONTROL = 4159077472U;
+        static const AkUniqueID MUSICVOLUMECONTROL = 3634237315U;
+        static const AkUniqueID SFXVOLUMECONTROL = 3549143979U;
+        static const AkUniqueID UIVOLUMECONTROL = 2186657264U;
     } // namespace GAME_PARAMETERS
 
     namespace BANKS
@@ -195,7 +198,6 @@ namespace AK
         static const AkUniqueID ATMOSOCEAN = 1352063017U;
         static const AkUniqueID FOLEY = 247557814U;
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
-        static const AkUniqueID MENUPIANO = 2232408543U;
         static const AkUniqueID MUSIC = 3991942870U;
         static const AkUniqueID SFX = 393239870U;
         static const AkUniqueID UI = 1551306167U;
