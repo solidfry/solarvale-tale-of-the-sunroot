@@ -23,11 +23,15 @@ namespace UI.PlayerPreferences
                 AddVolumeListener("MasterVolume", SetMasterVolume);
                 AddVolumeListener("MusicVolume", SetMusicVolume);
                 AddVolumeListener("SfxVolume", SetSfxVolume);
+                AddVolumeListener("UIVolume", SetSfxVolume);
+
 
                 // Set initial volumes based on PlayerPrefs
                 SetVolume("MasterVolume", PlayerPrefs.GetFloat("MasterVolume", UpdatePlayerPreferences.DefaultSliderValue));
                 SetVolume("MusicVolume", PlayerPrefs.GetFloat("MusicVolume", UpdatePlayerPreferences.DefaultSliderValue));
                 SetVolume("SfxVolume", PlayerPrefs.GetFloat("SfxVolume", UpdatePlayerPreferences.DefaultSliderValue));
+                SetVolume("UIVolume", PlayerPrefs.GetFloat("UIVolume", UpdatePlayerPreferences.DefaultSliderValue));
+
             }
         }
 
@@ -38,6 +42,7 @@ namespace UI.PlayerPreferences
                 RemoveVolumeListener("MasterVolume", SetMasterVolume);
                 RemoveVolumeListener("MusicVolume", SetMusicVolume);
                 RemoveVolumeListener("SfxVolume", SetSfxVolume);
+                RemoveVolumeListener("UIVolume", SetSfxVolume);
             }
         }
 
@@ -81,6 +86,11 @@ namespace UI.PlayerPreferences
         public void SetSfxVolume(float volume)
         {
             SetVolume("SfxVolume", volume);
+        }
+
+        public void SetUIVolume(float volume)
+        {
+            SetVolume("UIVolume", volume);
         }
     }
 }
