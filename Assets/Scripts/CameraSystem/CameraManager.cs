@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
+using Core;
 using Events;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -24,13 +25,27 @@ namespace CameraSystem
         
         private void Awake()
         {
-            brain = Camera.main.GetComponent<CinemachineBrain>();
+            brain = Camera.main?.GetComponent<CinemachineBrain>();
             CurrentCameraMode = new Observable<CameraMode>(CameraMode.Exploration);
             CurrentCameraMode.ValueChanged += SendCameraMode;
             SetCameraMode(CameraMode.Exploration);
         }
 
-        private void SendCameraMode(CameraMode mode) => GlobalEvents.OnChangeCameraModeEvent?.Invoke(mode);
+        private void SendCameraMode(CameraMode mode)
+        {
+            GlobalEvents.OnChangeCameraModeEvent?.Invoke(mode);
+            switch (mode)
+            {
+                case CameraMode.Exploration:
+                    GlobalEvents.OnGameStateChangeEvent?.Invoke(GameState.Exploration);
+                    break;
+                case CameraMode.Photography:
+                    GlobalEvents.OnGameStateChangeEvent?.Invoke(GameState.Photography);
+                    break;
+                default:
+                    break;
+            }
+        }
 
         private void SetCameraMode(CameraMode mode)
         {

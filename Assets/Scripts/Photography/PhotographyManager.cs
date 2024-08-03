@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using CameraSystem;
+using Core;
 using Entities;
 using Events;
 using UnityEngine;
@@ -246,7 +247,8 @@ namespace Photography
 
         private static void HandleOnRemovePhotoGlobalEvents()
         {
-            GlobalEvents.OnLockCursorEvent?.Invoke(true);
+            // GlobalEvents.OnLockCursorEvent?.Invoke(true);
+            GlobalEvents.OnGameStateChangeEvent?.Invoke(GameState.Photography);
             GlobalEvents.OnPlayerChangeActionMapEvent.Invoke(false);
             GlobalEvents.OnSetCursorInputForLookEvent.Invoke(true);
             GlobalEvents.OnSetCanInteractEvent?.Invoke(true);
@@ -255,7 +257,8 @@ namespace Photography
 
         private static void HandleOnShowPhotoGlobalEvents()
         {
-            GlobalEvents.OnLockCursorEvent?.Invoke(false);
+            // GlobalEvents.OnLockCursorEvent?.Invoke(false);
+            GlobalEvents.OnGameStateChangeEvent?.Invoke(GameState.EditingPhoto);
             GlobalEvents.OnPlayerChangeActionMapEvent.Invoke(true);
             GlobalEvents.OnSetCursorInputForLookEvent.Invoke(false);
             GlobalEvents.OnSetCanInteractEvent?.Invoke(false);

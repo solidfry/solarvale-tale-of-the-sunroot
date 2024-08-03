@@ -1,5 +1,6 @@
 ﻿using System;
 using CameraSystem;
+using Core;
 using Entities;
 using Entities.Creatures;
 using Interaction;
@@ -14,7 +15,9 @@ namespace Events
     public static class GlobalEvents
     {
         #region Game Management
+        public static Action<GameState> OnGameStateChangeEvent;
         public static Action<bool> OnGamePausedEvent;
+        public static Action<bool> OnPauseMenuAvailabilityEvent;
         public static Action<bool> OnPlayerChangeActionMapEvent;
         public static Action<bool> OnSetPlayerControlsLockedEvent;
         public static Action<bool> OnLockCursorEvent;

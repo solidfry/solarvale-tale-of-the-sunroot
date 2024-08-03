@@ -1,3 +1,4 @@
+using Core;
 using Events;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -36,8 +37,10 @@ namespace DialogueSystem
         void OnDialogueStart()
         {
             GlobalEvents.OnPlayerChangeActionMapEvent?.Invoke(true);
-            GlobalEvents.OnLockCursorEvent?.Invoke(false);
+            // GlobalEvents.OnLockCursorEvent?.Invoke(false);
             GlobalEvents.OnSetPlayerControlMapEvent?.Invoke("UI");
+            GlobalEvents.OnPauseMenuAvailabilityEvent?.Invoke(false);
+            GlobalEvents.OnGameStateChangeEvent?.Invoke(GameState.Dialogue);
             SetFocusObject(initialFocusObject);
         }
     
@@ -57,10 +60,12 @@ namespace DialogueSystem
         void OnDialogueComplete()
         {
             GlobalEvents.OnPlayerChangeActionMapEvent?.Invoke(false);
-            GlobalEvents.OnLockCursorEvent?.Invoke(true);
+            // GlobalEvents.OnLockCursorEvent?.Invoke(true);
             GlobalEvents.OnSetPlayerControlMapEvent?.Invoke("Player");
             GlobalEvents.OnDialogueCompleteEvent?.Invoke();
+            GlobalEvents.OnPauseMenuAvailabilityEvent?.Invoke(true);
             GlobalEvents.OnDialogueCompleteWithNodeEvent?.Invoke(currentDialogueRunner.startNode);
+            GlobalEvents.OnGameStateChangeEvent?.Invoke(GameState.Exploration);
             ClearFocusObject();
         }
     
@@ -70,5 +75,21 @@ namespace DialogueSystem
             currentDialogueRunner.StartDialogue(node);
         }
 
+        // private void Update()
+        // {
+        //     if (!currentDialogueRunner.IsDialogueRunning) return;
+        //     if (Cursor.lockState != CursorLockMode.None)
+        //     {
+        //         Cursor.lockState = CursorLockMode.None;
+        //         Cursor.visible = true;
+        //         
+        //         if (EventSystem.current.currentSelectedGameObject is null)
+        //         {
+        //             var selectable = gameObject.GetComponentInChildren<Selectable>();
+        //             SetFocusObject(selectable.gameObject);
+        //             selectable.Select();
+        //         }
+        //     }
+        // }
     }
 }

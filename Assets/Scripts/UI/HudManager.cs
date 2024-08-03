@@ -1,4 +1,5 @@
 using CameraSystem;
+using Core;
 using DG.Tweening;
 using Events;
 using UnityEngine;
@@ -9,7 +10,6 @@ namespace UI
 {
     public class HudManager : MonoBehaviour
     {
-        [FormerlySerializedAs("menu")]
         [Header("Menu Settings")]
         [SerializeField] UIOverlayController menuPrefab;
         [SerializeField] bool isMenuShown = false;
@@ -42,14 +42,16 @@ namespace UI
         private void OnCameraModeChanged(CameraMode mode)
         {
             var check = mode == CameraMode.Exploration;
+            canShowMenu = check;
             SetHUDVisibility(check);
+            
         }
 
         private void OnEnable()
         {
             GlobalEvents.OnChangeCameraModeEvent += OnCameraModeChanged;
-            menuOpenAction.action.performed += _ => OnMenu();
-            menuCloseAction.action.performed += _ => OnMenu();
+            menuOpenAction.action.performed += _ => ToggleMenu();
+            menuCloseAction.action.performed += _ => ToggleMenu();
         }
 
         private void OnDisable()
@@ -72,7 +74,7 @@ namespace UI
                 _playerHUDInstance.SetActive(value);
         }
 
-        void OnMenu()
+        void ToggleMenu()
         {
             if (!canShowMenu) return;
             isMenuShown = !isMenuShown;
@@ -80,7 +82,9 @@ namespace UI
             Debug.Log("show menu: " + isMenuShown);
             GlobalEvents.OnGamePausedEvent?.Invoke(isMenuShown);
             GlobalEvents.OnPlayerChangeActionMapEvent?.Invoke(isMenuShown);
-            Cursor.lockState = isMenuShown ? CursorLockMode.None : CursorLockMode.Locked;
+            GlobalEvents.OnPauseMenuAvailabilityEvent?.Invoke(!isMenuShown);
+            // GlobalEvents.OnLockCursorEvent?.Invoke(!isMenuShown);
+            GlobalEvents.OnGameStateChangeEvent?.Invoke(isMenuShown ? GameState.Menu : GameState.Exploration);
         }
 
         private void OnDestroy()

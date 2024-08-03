@@ -12,8 +12,6 @@ namespace Player
         [SerializeField] StarterAssetsInputs starterAssetsInputs;
         [SerializeField] GameObject playerModel;
         
-        public static PlayerManager Instance { get; private set; }
-
         private string _currentControlsScheme;
         Observable<string> _currentControlSchemeObservable;
         
