@@ -22055,21 +22055,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1279112673609006814, guid: 8746b19db272db1499fc8f3e3e844961,
-        type: 3}
-      propertyPath: rayOffset.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1279112673609006814, guid: 8746b19db272db1499fc8f3e3e844961,
-        type: 3}
-      propertyPath: rayOffset.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1279112673609006814, guid: 8746b19db272db1499fc8f3e3e844961,
-        type: 3}
-      propertyPath: rayOffset.z
-      value: -0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 1958394100996140248, guid: 8746b19db272db1499fc8f3e3e844961,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -22120,10 +22105,50 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3390411381462688183, guid: 8746b19db272db1499fc8f3e3e844961,
+    - target: {fileID: 7084293734041802467, guid: 8746b19db272db1499fc8f3e3e844961,
         type: 3}
-      propertyPath: m_Cameras.Array.size
+      propertyPath: m_LocalPosition.x
+      value: 0.2000122
+      objectReference: {fileID: 0}
+    - target: {fileID: 7084293734041802467, guid: 8746b19db272db1499fc8f3e3e844961,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.375
+      objectReference: {fileID: 0}
+    - target: {fileID: 7084293734041802467, guid: 8746b19db272db1499fc8f3e3e844961,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7084293734041802467, guid: 8746b19db272db1499fc8f3e3e844961,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7084293734041802467, guid: 8746b19db272db1499fc8f3e3e844961,
+        type: 3}
+      propertyPath: m_LocalRotation.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7084293734041802467, guid: 8746b19db272db1499fc8f3e3e844961,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7084293734041802467, guid: 8746b19db272db1499fc8f3e3e844961,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7084293734041802468, guid: 8746b19db272db1499fc8f3e3e844961,
+        type: 3}
+      propertyPath: field of view
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 7084293734041802468, guid: 8746b19db272db1499fc8f3e3e844961,
+        type: 3}
+      propertyPath: far clip plane
+      value: 20000
       objectReference: {fileID: 0}
     - target: {fileID: 8811856263115372022, guid: 8746b19db272db1499fc8f3e3e844961,
         type: 3}
@@ -28340,7 +28365,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_RenderingLayerMask: 1
+  m_RenderingLayerMask: 4294967295
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
@@ -28383,7 +28408,7 @@ MonoBehaviour:
   m_UsePipelineSettings: 1
   m_AdditionalLightsShadowResolutionTier: 2
   m_LightLayerMask: 1
-  m_RenderingLayers: 1
+  m_RenderingLayers: 4294967295
   m_CustomShadowLayers: 0
   m_ShadowLayerMask: 1
   m_ShadowRenderingLayers: 1
