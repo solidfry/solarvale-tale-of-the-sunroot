@@ -56,6 +56,7 @@ namespace AK
         static const AkUniqueID PLAY_KOALA_WALLA_01_STEREO = 4167803777U;
         static const AkUniqueID PLAY_MOUNTAIN = 825230623U;
         static const AkUniqueID PLAY_MOUNTAIN_WIND = 1969593572U;
+        static const AkUniqueID PLAY_MUMBLES = 75253099U;
         static const AkUniqueID PLAY_MUSIC_FLUTE_SOLO = 1150390550U;
         static const AkUniqueID PLAY_MUSIC_FLUTES_EDIT = 3133905178U;
         static const AkUniqueID PLAY_MUSIC_GAME_START = 4029504345U;

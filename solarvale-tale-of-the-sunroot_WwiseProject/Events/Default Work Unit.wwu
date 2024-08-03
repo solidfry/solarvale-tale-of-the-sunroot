@@ -1789,6 +1789,20 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
+				<Event Name="Play_Mumbles" ID="{AE11B8C4-B734-4BAD-9F4B-C2764DA7B316}">
+					<ChildrenList>
+						<Action Name="" ID="{95EEAA8D-1D4D-4AF5-A53C-7856B064B88E}" ShortID="688301301">
+							<PropertyList>
+								<Property Name="Probability" Type="Real64" Value="10"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Mumbles" ID="{D58332CB-EBAD-4747-A407-0801355D85A2}" WorkUnitID="{28783CC2-5E3B-4DAA-A4CF-C9B8588D73B2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

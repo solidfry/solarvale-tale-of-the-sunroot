@@ -334,7 +334,7 @@ MonoBehaviour:
   m_Elasticity: 0.1
   m_Inertia: 1
   m_DecelerationRate: 0.135
-  m_ScrollSensitivity: 1
+  m_ScrollSensitivity: 15
   m_Viewport: {fileID: 108700745545203334}
   m_HorizontalScrollbar: {fileID: 488669188068436973}
   m_VerticalScrollbar: {fileID: 3166357023725553485}
@@ -618,17 +618,22 @@ PrefabInstance:
     - target: {fileID: 8909841578509756020, guid: 1c97b2e44767b0945ab9b5fe1468ce54,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8909841578509756020, guid: 1c97b2e44767b0945ab9b5fe1468ce54,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9134700750533622100, guid: 1c97b2e44767b0945ab9b5fe1468ce54,
         type: 3}
       propertyPath: m_Name
       value: Scrollbar Vertical
+      objectReference: {fileID: 0}
+    - target: {fileID: 9134700750533622100, guid: 1c97b2e44767b0945ab9b5fe1468ce54,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
