@@ -1639,7 +1639,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="1551306167" Type="User" Language="SFX" Hash="{92DE8D33-586F-C658-D86B-7CEEB116A8E3}">
+		<SoundBank Id="1551306167" Type="User" Language="SFX" Hash="{88379BCA-E601-7C56-C8BF-D63D42D55FB0}">
 			<ShortName>UI</ShortName>
 			<Path>UI.bnk</Path>
 			<Media>
@@ -1693,7 +1693,7 @@
 				</File>
 				<File Id="879010177" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>BrandIntro-Birds.wav</ShortName>
-					<CachePath>SFX/BrandIntro-Birds_536A3E04.wem</CachePath>
+					<CachePath>SFX/BrandIntro-Birds_8AF16F76.wem</CachePath>
 				</File>
 				<File Id="886235747" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Piano 4.wav</ShortName>
@@ -1712,6 +1712,7 @@
 				<ShareSets>
 					<Plugin Id="48620415" Name="Have_U_Ever_Been_Outside" LibName="Wwise RoomVerb" LibId="7733251"/>
 					<Plugin Id="418265525" Name="Gentle_Program_Compressor_Minus_14dB_RMS" LibName="Wwise Compressor" LibId="7077891"/>
+					<Plugin Id="733302481" Name="New_Time_Stretch_01" LibName="Wwise Time Stretch" LibId="8519683"/>
 					<Plugin Id="776837744" Name="Born_In_1950" LibName="Wwise Parametric EQ" LibId="6881283"/>
 					<Plugin Id="2662085913" Name="Large_Church1" LibName="Wwise Matrix Reverb" LibId="7536643"/>
 					<Plugin Id="2805769450" Name="Special_Effect_1" LibName="Wwise Flanger" LibId="8192003"/>
@@ -1725,12 +1726,13 @@
 						<MediaRef Id="323340590"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2883217168" Name="Play_BrandIntro_Birds" MaxAttenuation="100" DurationType="OneShot" DurationMin="15.313491" DurationMax="15.313491">
+				<Event Id="2883217168" Name="Play_BrandIntro_Birds" MaxAttenuation="100" DurationType="OneShot" DurationMin="14.138732" DurationMax="14.138732">
 					<MediaRefs>
 						<MediaRef Id="879010177"/>
 					</MediaRefs>
 					<PluginRefs>
 						<ShareSets>
+							<PluginRef Id="733302481"/>
 							<PluginRef Id="3216246379"/>
 						</ShareSets>
 					</PluginRefs>
@@ -1836,6 +1838,17 @@
 					<MediaRefs>
 						<MediaRef Id="407734084"/>
 					</MediaRefs>
+				</Event>
+				<Event Id="1999114582" Name="Stop_BrandIntro_Birds" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<MediaRefs>
+						<MediaRef Id="879010177"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="733302481"/>
+							<PluginRef Id="3216246379"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 			</Events>
 		</SoundBank>
@@ -2161,7 +2174,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{5ED1EA3D-2B8A-9FD5-6A3E-02793E600D80}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{D035A30F-E953-797F-5209-1BA4DDCA4407}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -3019,7 +3032,7 @@
 				</File>
 				<File Id="879010177" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>BrandIntro-Birds.wav</ShortName>
-					<CachePath>SFX/BrandIntro-Birds_536A3E04.wem</CachePath>
+					<CachePath>SFX/BrandIntro-Birds_8AF16F76.wem</CachePath>
 				</File>
 				<File Id="886235747" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Piano 4.wav</ShortName>
@@ -3202,6 +3215,7 @@
 				<ShareSets>
 					<Plugin Id="48620415" Name="Have_U_Ever_Been_Outside" LibName="Wwise RoomVerb" LibId="7733251"/>
 					<Plugin Id="418265525" Name="Gentle_Program_Compressor_Minus_14dB_RMS" LibName="Wwise Compressor" LibId="7077891"/>
+					<Plugin Id="733302481" Name="New_Time_Stretch_01" LibName="Wwise Time Stretch" LibId="8519683"/>
 					<Plugin Id="776837744" Name="Born_In_1950" LibName="Wwise Parametric EQ" LibId="6881283"/>
 					<Plugin Id="1724990773" Name="New_Time_Stretch" LibName="Wwise Time Stretch" LibId="8519683"/>
 					<Plugin Id="2662085913" Name="Large_Church1" LibName="Wwise Matrix Reverb" LibId="7536643"/>
@@ -3350,12 +3364,13 @@
 						<MediaRef Id="303866217"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2883217168" Name="Play_BrandIntro_Birds" MaxAttenuation="100" DurationType="OneShot" DurationMin="15.313491" DurationMax="15.313491">
+				<Event Id="2883217168" Name="Play_BrandIntro_Birds" MaxAttenuation="100" DurationType="OneShot" DurationMin="14.138732" DurationMax="14.138732">
 					<MediaRefs>
 						<MediaRef Id="879010177"/>
 					</MediaRefs>
 					<PluginRefs>
 						<ShareSets>
+							<PluginRef Id="733302481"/>
 							<PluginRef Id="3216246379"/>
 						</ShareSets>
 					</PluginRefs>
@@ -3890,6 +3905,7 @@
 				<Event Id="2358452373" Name="Stop_Atmos_Stream" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="3781264369" Name="Stop_Atmos_Stream_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="879117416" Name="Stop_Atmos_Stream_Rain_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1999114582" Name="Stop_BrandIntro_Birds" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="1085006091" Name="Stop_Forest" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="938598783" Name="Stop_Forest_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="4203364660" Name="Stop_Forest_Night" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
@@ -4047,5 +4063,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{40D2E67A-0369-C4F5-7B8A-E68D62B94A22}</FileHash>
+	<FileHash>{FC2A7A47-E36B-8964-2FEA-FF04D3CB76F6}</FileHash>
 </SoundBanksInfo>

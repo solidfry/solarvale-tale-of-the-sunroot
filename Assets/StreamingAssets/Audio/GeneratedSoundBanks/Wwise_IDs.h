@@ -106,6 +106,7 @@ namespace AK
         static const AkUniqueID STOP_ATMOS_STREAM = 2358452373U;
         static const AkUniqueID STOP_ATMOS_STREAM_01 = 3781264369U;
         static const AkUniqueID STOP_ATMOS_STREAM_RAIN_01 = 879117416U;
+        static const AkUniqueID STOP_BRANDINTRO_BIRDS = 1999114582U;
         static const AkUniqueID STOP_FOREST = 1085006091U;
         static const AkUniqueID STOP_FOREST_01 = 938598783U;
         static const AkUniqueID STOP_FOREST_NIGHT = 4203364660U;

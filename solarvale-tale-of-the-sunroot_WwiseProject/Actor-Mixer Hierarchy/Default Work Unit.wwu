@@ -1103,7 +1103,7 @@
 										</Property>
 										<Property Name="MakeUpGain" Type="Real64">
 											<ValueList>
-												<Value>22</Value>
+												<Value>15</Value>
 											</ValueList>
 										</Property>
 										<Property Name="OverrideConversion" Type="bool" Value="True"/>
@@ -1127,13 +1127,13 @@
 												<Property Name="FadeOutShape" Type="int16" Value="2"/>
 												<Property Name="OverrideConversion" Type="bool" Value="True"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimBegin" Type="Real64" Value="0.813606865284974"/>
-												<Property Name="TrimEnd" Type="Real64" Value="16.1270977676671"/>
+												<Property Name="TrimBegin" Type="Real64" Value="1.11337627012836"/>
+												<Property Name="TrimEnd" Type="Real64" Value="15.1481319010836"/>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
-													<Custom CreatedFrom="{6D51666E-9C7A-40E4-831D-C445512EBABD}">
-														<Conversion Name="ADPCM Auto Detect High (Custom)" ID="{7A1BCB94-61F4-4BB8-BEB2-F0148A9A9062}">
+													<Custom CreatedFrom="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}">
+														<Conversion Name="Vorbis Quality High (Custom)" ID="{18851BE3-D943-4219-BB5B-36331DA54169}">
 															<PropertyList>
 																<Property Name="Channels" Type="int32">
 																	<ValueList>
@@ -1159,14 +1159,8 @@
 																		<Value Platform="Mac">0</Value>
 																	</ValueList>
 																</Property>
-																<Property Name="SRConversionQuality" Type="int32">
-																	<ValueList>
-																		<Value>1</Value>
-																	</ValueList>
-																</Property>
 																<Property Name="SampleRate" Type="int32">
 																	<ValueList>
-																		<Value>3</Value>
 																		<Value Platform="Windows">0</Value>
 																		<Value Platform="Mac">0</Value>
 																	</ValueList>
@@ -1174,10 +1168,10 @@
 															</PropertyList>
 															<ConversionPluginInfoList>
 																<ConversionPluginInfo Platform="Windows">
-																	<ConversionPlugin Name="" ID="{20EB82BC-A41A-4BBA-B283-359AE259BECB}" PluginName="ADPCM" CompanyID="0" PluginID="2"/>
+																	<ConversionPlugin Name="" ID="{21C3945B-9342-42C1-A747-0EDCB5B54A96}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
 																</ConversionPluginInfo>
 																<ConversionPluginInfo Platform="Mac">
-																	<ConversionPlugin Name="" ID="{503B86F6-3436-4790-BAD1-958EA45A5707}" PluginName="ADPCM" CompanyID="0" PluginID="2"/>
+																	<ConversionPlugin Name="" ID="{84E08EA9-20A9-43A5-AA9A-CB75F269397E}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
 																</ConversionPluginInfo>
 															</ConversionPluginInfoList>
 														</Conversion>
@@ -1199,6 +1193,17 @@
 														<ReferenceList>
 															<Reference Name="Effect" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
 																<ObjectRef Name="Space_Dreaming" ID="{4FF7C4B2-37B0-4DFF-8E8A-1420102AE2DD}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+															</Reference>
+														</ReferenceList>
+													</EffectSlot>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<EffectSlot Name="" ID="{A4EBB86F-8869-40E1-B054-F6B4D168A5A4}" ShortID="196552779">
+														<ReferenceList>
+															<Reference Name="Effect" PluginName="Wwise Time Stretch" CompanyID="0" PluginID="130" PluginType="3">
+																<ObjectRef Name="New_Time_Stretch_01" ID="{0CCA29D4-46B6-4E43-AB87-9D87242061FD}" WorkUnitID="{2DE174A0-C58B-4A2B-BA1D-C711DE10CC9F}"/>
 															</Reference>
 														</ReferenceList>
 													</EffectSlot>

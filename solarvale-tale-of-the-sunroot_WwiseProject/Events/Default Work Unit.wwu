@@ -1901,6 +1901,22 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Stop_BrandIntro_Birds" ID="{D111FA25-5281-4D89-8DC9-40AE1EF43332}">
+					<ChildrenList>
+						<Action Name="" ID="{FDBB9B90-3A43-4B94-B812-278F987F9B31}" ShortID="1007091448">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeOutCurve" Type="int16" Value="6"/>
+								<Property Name="FadeTime" Type="Real64" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="BrandIntro-Birds" ID="{F3A6A052-6AD7-451D-95E8-F04567AA6E00}" WorkUnitID="{6AACD892-8249-4CA2-BBEB-F88052A754B1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
