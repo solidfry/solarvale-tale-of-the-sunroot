@@ -132,6 +132,7 @@ namespace AK
         static const AkUniqueID STOP_MUSIC_GAME_START = 4182453923U;
         static const AkUniqueID STOP_MUSIC_GECKO = 2954834333U;
         static const AkUniqueID STOP_MUSIC_GRANDMA = 365191676U;
+        static const AkUniqueID STOP_MUSIC_GRANDMA_2 = 3879116483U;
         static const AkUniqueID STOP_OCEAN = 4196961906U;
         static const AkUniqueID STOP_RUBBISH = 1345196761U;
         static const AkUniqueID STOP_SFX = 287728669U;
