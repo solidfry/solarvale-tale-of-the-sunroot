@@ -1586,7 +1586,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{FBEEA27C-A929-47F9-5D20-872EEE1C7F49}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{F33EBE9E-6E0F-9DD8-8768-E9AB64BEFFA0}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -2161,7 +2161,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{576A579B-13E0-60CE-9EF3-C32A683D1723}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{5ED1EA3D-2B8A-9FD5-6A3E-02793E600D80}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -3203,6 +3203,7 @@
 					<Plugin Id="48620415" Name="Have_U_Ever_Been_Outside" LibName="Wwise RoomVerb" LibId="7733251"/>
 					<Plugin Id="418265525" Name="Gentle_Program_Compressor_Minus_14dB_RMS" LibName="Wwise Compressor" LibId="7077891"/>
 					<Plugin Id="776837744" Name="Born_In_1950" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="1724990773" Name="New_Time_Stretch" LibName="Wwise Time Stretch" LibId="8519683"/>
 					<Plugin Id="2662085913" Name="Large_Church1" LibName="Wwise Matrix Reverb" LibId="7536643"/>
 					<Plugin Id="2805769450" Name="Special_Effect_1" LibName="Wwise Flanger" LibId="8192003"/>
 					<Plugin Id="3216246379" Name="Space_Dreaming" LibName="Wwise RoomVerb" LibId="7733251"/>
@@ -3579,6 +3580,11 @@
 					<MediaRefs>
 						<MediaRef Id="908080785"/>
 					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="1724990773"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 				<Event Id="1568956567" Name="Play_music_gecko" DurationType="OneShot" DurationMin="11.690417" DurationMax="11.690417">
 					<MediaRefs>
@@ -3947,7 +3953,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3991942870" Type="User" Language="SFX" Hash="{FC46F168-D47B-D97E-A405-FE3D57FD8D9A}">
+		<SoundBank Id="3991942870" Type="User" Language="SFX" Hash="{C9CC1B34-767C-72F4-130A-0BA66D6D79C4}">
 			<ShortName>Music</ShortName>
 			<Path>Music.bnk</Path>
 			<Media>
@@ -3972,6 +3978,11 @@
 					<CachePath>SFX/music_game_start_93C3D18F.wem</CachePath>
 				</File>
 			</Media>
+			<Plugins>
+				<ShareSets>
+					<Plugin Id="1724990773" Name="New_Time_Stretch" LibName="Wwise Time Stretch" LibId="8519683"/>
+				</ShareSets>
+			</Plugins>
 			<Events>
 				<Event Id="1150390550" Name="Play_music_flute_solo" DurationType="Infinite">
 					<MediaRefs>
@@ -3987,6 +3998,11 @@
 					<MediaRefs>
 						<MediaRef Id="908080785"/>
 					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="1724990773"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 				<Event Id="1568956567" Name="Play_music_gecko" DurationType="OneShot" DurationMin="11.690417" DurationMax="11.690417">
 					<MediaRefs>
@@ -4012,6 +4028,11 @@
 					<MediaRefs>
 						<MediaRef Id="908080785"/>
 					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="1724990773"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 				<Event Id="2954834333" Name="Stop_music_gecko" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
 					<MediaRefs>
@@ -4026,5 +4047,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{83D1E5D3-C34E-FA50-3D3E-676898B5DA9D}</FileHash>
+	<FileHash>{4501A6BB-8DD1-BE2C-1093-E8C3FAE5B866}</FileHash>
 </SoundBanksInfo>

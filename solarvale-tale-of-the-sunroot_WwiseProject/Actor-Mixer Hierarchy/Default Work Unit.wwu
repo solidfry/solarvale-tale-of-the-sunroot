@@ -216,6 +216,7 @@
 						<Sound Name="music_game_start" ID="{FD0DD80B-19DA-49DC-A582-98B6E083E889}" ShortID="990763132">
 							<PropertyList>
 								<Property Name="OverrideConversion" Type="bool" Value="True"/>
+								<Property Name="OverrideEffect" Type="bool" Value="True"/>
 								<Property Name="OverrideOutput" Type="bool" Value="True"/>
 							</PropertyList>
 							<ReferenceList>
@@ -223,7 +224,7 @@
 									<ObjectRef Name="ADPCM Auto Detect High" ID="{6D51666E-9C7A-40E4-831D-C445512EBABD}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Music" ID="{651529B0-D00A-407F-9314-E0A35BA653FF}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -291,6 +292,21 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Effects">
+									<Reference>
+										<Local>
+											<EffectSlot Name="" ID="{966DB89A-3A53-4ED7-B734-50C20F851807}" ShortID="958801962">
+												<ReferenceList>
+													<Reference Name="Effect" PluginName="Wwise Time Stretch" CompanyID="0" PluginID="130" PluginType="3">
+														<ObjectRef Name="New_Time_Stretch" ID="{F7F91D43-5AFE-4BBF-A726-8C2DCF6C8807}" WorkUnitID="{2DE174A0-C58B-4A2B-BA1D-C711DE10CC9F}"/>
+													</Reference>
+												</ReferenceList>
+											</EffectSlot>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
 							<ActiveSourceList>
 								<ActiveSource Name="music_game_start" ID="{19336F6A-467D-42C8-B372-A6878B8C6588}" Platform="Linked"/>
 							</ActiveSourceList>
