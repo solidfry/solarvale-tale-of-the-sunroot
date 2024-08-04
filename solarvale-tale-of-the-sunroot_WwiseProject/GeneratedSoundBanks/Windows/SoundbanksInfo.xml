@@ -1552,7 +1552,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1352063017" Type="User" Language="SFX" Hash="{7873346A-3FE6-3E80-3020-107DE69F0935}">
+		<SoundBank Id="1352063017" Type="User" Language="SFX" Hash="{A83C53E8-A8FA-1A9F-0CCF-83131B1ECE18}">
 			<ShortName>AtmosOcean</ShortName>
 			<Path>AtmosOcean.bnk</Path>
 			<Media>
@@ -1586,7 +1586,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{BAD71611-1AF0-229C-3093-7AA0AF1D7BEF}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{91C7F443-2248-B15F-B2FC-DF744C97AA87}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -1601,7 +1601,7 @@
 				<Bus Id="247557814" Name="Foley"/>
 				<Bus Id="393239870" Name="SFX"/>
 				<Bus Id="949388280" Name="Animals"/>
-				<Bus Id="1352063017" Name="AtmosOcean">
+				<Bus Id="1352063017" Name="AtmosOcean" MaxAttenuation="1024">
 					<PluginRefs>
 						<ShareSets>
 							<PluginRef Id="48620415"/>
@@ -1839,7 +1839,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3034623661" Type="User" Language="SFX" Hash="{988564B3-FC7B-26BE-DD83-1DFF74C8FAED}">
+		<SoundBank Id="3034623661" Type="User" Language="SFX" Hash="{BF7802D8-BFA1-487E-3622-A1D3FBCBEF50}">
 			<ShortName>Atmos</ShortName>
 			<Path>Atmos.bnk</Path>
 			<Media>
@@ -2161,7 +2161,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{864E3EE3-F809-B9C3-3823-241F471FE117}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{852AE2B4-C4DA-AAF4-C773-A302607A1BEE}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -2949,6 +2949,10 @@
 					<ShortName>Magpie\Stereo\magpie-raven_walla_01-stereo.wav</ShortName>
 					<CachePath>SFX/Magpie/Stereo/magpie-raven_walla_01-stereo_37A4EECC.wem</CachePath>
 				</File>
+				<File Id="811932731" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>music_grandma_2.wav</ShortName>
+					<CachePath>SFX/music_grandma_2_56CEF360.wem</CachePath>
+				</File>
 				<File Id="822408853" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>FTS_Water_03.wav</ShortName>
 					<CachePath>SFX/FTS_Water_03_9E12AB17.wem</CachePath>
@@ -3586,6 +3590,11 @@
 						<MediaRef Id="549112133"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="1246736721" Name="Play_music_grandma_2" DurationType="OneShot" DurationMin="50.666668" DurationMax="50.666668">
+					<MediaRefs>
+						<MediaRef Id="811932731"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="1724638476" Name="Play_Ocean" MaxAttenuation="1024" DurationType="OneShot" DurationMin="385.95306" DurationMax="412.97614">
 					<MediaRefs>
 						<MediaRef Id="8120661"/>
@@ -3896,6 +3905,11 @@
 				<Event Id="1183164895" Name="Stop_koala_walla_01_stereo" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="46972289" Name="Stop_Mountain" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="2383935630" Name="Stop_Mountain_Wind" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1521500452" Name="Stop_music_flute_solo" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2536381516" Name="Stop_music_flutes_edit" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="4182453923" Name="Stop_music_game_start" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2954834333" Name="Stop_music_gecko" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="365191676" Name="Stop_music_grandma" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="4196961906" Name="Stop_Ocean" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="1345196761" Name="Stop_Rubbish" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="287728669" Name="Stop_SFX" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
@@ -3932,7 +3946,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3991942870" Type="User" Language="SFX" Hash="{9CAD9AC7-7D9A-17FD-4BAA-87AB03C3E7BB}">
+		<SoundBank Id="3991942870" Type="User" Language="SFX" Hash="{6D1D515F-5EF3-69CB-AD83-2C884DA363FA}">
 			<ShortName>Music</ShortName>
 			<Path>Music.bnk</Path>
 			<Media>
@@ -3983,8 +3997,33 @@
 						<MediaRef Id="549112133"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="1521500452" Name="Stop_music_flute_solo" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<MediaRefs>
+						<MediaRef Id="695495137"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2536381516" Name="Stop_music_flutes_edit" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<MediaRefs>
+						<MediaRef Id="236542911"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4182453923" Name="Stop_music_game_start" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<MediaRefs>
+						<MediaRef Id="908080785"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2954834333" Name="Stop_music_gecko" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<MediaRefs>
+						<MediaRef Id="508563473"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="365191676" Name="Stop_music_grandma" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<MediaRefs>
+						<MediaRef Id="549112133"/>
+					</MediaRefs>
+				</Event>
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{C11436B0-4158-5F8E-BFE3-A295E6B48627}</FileHash>
+	<FileHash>{CC57765D-02C5-7829-F47E-584D26DC8E04}</FileHash>
 </SoundBanksInfo>
