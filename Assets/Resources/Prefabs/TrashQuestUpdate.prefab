@@ -1,0 +1,205 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4385662399619348881
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1015295672316557031}
+  - component: {fileID: 3832124117526196777}
+  - component: {fileID: 3500065602767515212}
+  - component: {fileID: 7344019399571756749}
+  m_Layer: 6
+  m_Name: TrashQuestUpdate
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1015295672316557031
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4385662399619348881}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 106.137, y: 19.282, z: 10.726}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2060558302930609901}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &3832124117526196777
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4385662399619348881}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3500065602767515212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4385662399619348881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e66df664a164725a2fc753ac05aa3df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questAction: 2
+  questData: {fileID: 0}
+  questCondition: {fileID: 11400000, guid: b11962fcd22c3f941ace371b0feae131, type: 2}
+--- !u!114 &7344019399571756749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4385662399619348881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb414b4c47224dc2bf6b1e25c2b95690, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3500065602767515212}
+        m_TargetAssemblyTypeName: QuestSystem.QuestUpdater, Assembly-CSharp
+        m_MethodName: UpdateQuest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  isInteractable: 1
+  isOneTimeUse: 1
+  isDisabledAfterUse: 1
+  interactMessage: Pick up trash
+  showCannotInteractMessage: 1
+  cannotInteractMessage: Cannot interact with this object.
+--- !u!1001 &8485052409782824359
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1015295672316557031}
+    m_Modifications:
+    - target: {fileID: 2716860590655128386, guid: 68a928c6bb7c57e46bf83b5bceb1871f,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300000, guid: e8086b2f4cb52f349ac5e6561afd0569, type: 2}
+    - target: {fileID: 7590928145105308490, guid: 68a928c6bb7c57e46bf83b5bceb1871f,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7590928145105308490, guid: 68a928c6bb7c57e46bf83b5bceb1871f,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7590928145105308490, guid: 68a928c6bb7c57e46bf83b5bceb1871f,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7590928145105308490, guid: 68a928c6bb7c57e46bf83b5bceb1871f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7590928145105308490, guid: 68a928c6bb7c57e46bf83b5bceb1871f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7590928145105308490, guid: 68a928c6bb7c57e46bf83b5bceb1871f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7590928145105308490, guid: 68a928c6bb7c57e46bf83b5bceb1871f,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7590928145105308490, guid: 68a928c6bb7c57e46bf83b5bceb1871f,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7590928145105308490, guid: 68a928c6bb7c57e46bf83b5bceb1871f,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7590928145105308490, guid: 68a928c6bb7c57e46bf83b5bceb1871f,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7590928145105308490, guid: 68a928c6bb7c57e46bf83b5bceb1871f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7590928145105308490, guid: 68a928c6bb7c57e46bf83b5bceb1871f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7590928145105308490, guid: 68a928c6bb7c57e46bf83b5bceb1871f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7590928145105308490, guid: 68a928c6bb7c57e46bf83b5bceb1871f,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8652873406722748179, guid: 68a928c6bb7c57e46bf83b5bceb1871f,
+        type: 3}
+      propertyPath: m_Name
+      value: TrashBag_A.005
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 68a928c6bb7c57e46bf83b5bceb1871f, type: 3}
+--- !u!4 &2060558302930609901 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7590928145105308490, guid: 68a928c6bb7c57e46bf83b5bceb1871f,
+    type: 3}
+  m_PrefabInstance: {fileID: 8485052409782824359}
+  m_PrefabAsset: {fileID: 0}
