@@ -24,22 +24,22 @@ namespace UI
 
         private void OnEnable() => Initialise();
 
-        private void OnValidate()
-        {
-            if (menuItems.Count == 0) return;
-            foreach (var menuItem in menuItems)
-            {
-                if (menuItem.ButtonToActivatePanel is null || menuItem.MenuPanel is null)
-                {
-                    Debug.LogError("Menu Item is missing a reference");
-                    return;
-                } 
-                else if (menuItem.CanvasGroup == null)
-                {
-                    menuItem.SetCanvasGroup(menuItem.MenuPanel.GetComponent<CanvasGroup>());
-                }
-            }
-        }
+        // private void OnValidate()
+        // {
+        //     if (menuItems.Count == 0) return;
+        //     foreach (var menuItem in menuItems)
+        //     {
+        //         if (menuItem.ButtonToActivatePanel is null || menuItem.MenuPanel is null)
+        //         {
+        //             Debug.LogError($"Menu Item is missing a reference, {gameObject.name}");
+        //             return;
+        //         } 
+        //         else if (menuItem.CanvasGroup == null)
+        //         {
+        //             menuItem.SetCanvasGroup(menuItem.MenuPanel.GetComponent<CanvasGroup>());
+        //         }
+        //     }
+        // }
 
         private void Initialise()
         {
