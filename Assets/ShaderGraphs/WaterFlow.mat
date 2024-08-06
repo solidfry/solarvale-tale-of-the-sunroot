@@ -15,7 +15,7 @@ Material:
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 1
-  m_EnableInstancingVariants: 0
+  m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
@@ -28,12 +28,16 @@ Material:
         m_Texture: {fileID: 2800000, guid: f0cd61c8574a9fb449b4ba27c58c2364, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _FoamNoise:
+        m_Texture: {fileID: 2800000, guid: 941e92bfb0a133645bb34c2addde5728, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 7c9a9e61182164e718cf07887b5b8f07, type: 3}
+        m_Texture: {fileID: 2800000, guid: ba939c7999e7fd04897ba004edaf45e4, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalsTex:
-        m_Texture: {fileID: 2800000, guid: 89b9b1ac9b0de486fa2d56bea6f1e5ee, type: 3}
+        m_Texture: {fileID: 2800000, guid: 40a64cc64b984bf4392264ba8188027c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -52,9 +56,9 @@ Material:
     m_Floats:
     - _Alpha: 0.73
     - _FlowMapTiling: 1
-    - _FoamAmount: 0.3
+    - _FoamAmount: 0.86
     - _FoamCutoff: 1.12
-    - _FoamScale: 500
+    - _FoamScale: 7.92
     - _FoamSpeed: -0.007
     - _Metallic: 0.23
     - _QueueControl: 0
@@ -63,15 +67,15 @@ Material:
     - _RippleSpeed: 1
     - _RippleWidth: 8
     - _Smoothness: 0.475
-    - _Speed: 1
+    - _Speed: 1.43
     - _Strength: 5
-    - _TextureTiling: 50
+    - _TextureTiling: 20
     - _Tiling: 4
-    - _WaveScale: 0.12
-    - _WaveSpeed: 0.005
-    - _YOffset: 0.18
+    - _WaveScale: 0
+    - _WaveSpeed: 0
+    - _YOffset: 0.08
     m_Colors:
-    - _FoamColour: {r: 0.6415094, g: 0.6415094, b: 0.6415094, a: 1}
+    - _FoamColour: {r: 0.3457636, g: 0.6981132, b: 0.5377968, a: 1}
     - _RippleColour: {r: 0, g: 0.82978725, b: 1, a: 0}
     - _Tint: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
