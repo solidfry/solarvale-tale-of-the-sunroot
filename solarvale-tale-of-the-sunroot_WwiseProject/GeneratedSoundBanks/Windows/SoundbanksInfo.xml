@@ -1852,7 +1852,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3034623661" Type="User" Language="SFX" Hash="{9BE91E9D-E133-79A7-DE0B-EEAA8F014BB5}">
+		<SoundBank Id="3034623661" Type="User" Language="SFX" Hash="{4E77DD24-DF7B-3CC3-8C15-AC00E1A78E63}">
 			<ShortName>Atmos</ShortName>
 			<Path>Atmos.bnk</Path>
 			<Media>
@@ -2152,7 +2152,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{9F98CC9B-603C-4F71-4607-528B15D01110}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{618423C0-6614-34CD-472A-5C956485D5ED}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -3334,6 +3334,12 @@
 						<MediaRef Id="303866217"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="2006186431" Name="Play_Beach" MaxAttenuation="1024" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="864119437"/>
+						<MediaRef Id="983979847"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="2883217168" Name="Play_BrandIntro_Birds" MaxAttenuation="100" DurationType="OneShot" DurationMin="14.034756" DurationMax="14.034756">
 					<MediaRefs>
 						<MediaRef Id="879010177"/>
@@ -3378,6 +3384,12 @@
 							<PluginRef Id="48620415"/>
 						</ShareSets>
 					</PluginRefs>
+				</Event>
+				<Event Id="3602995889" Name="Play_Cave" MaxAttenuation="500" DurationType="OneShot" DurationMin="233.05936" DurationMax="240.02713">
+					<MediaRefs>
+						<MediaRef Id="4175530"/>
+						<MediaRef Id="910494700"/>
+					</MediaRefs>
 				</Event>
 				<Event Id="311910498" Name="Play_Click" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.33770126" DurationMax="0.33770126">
 					<MediaRefs>
@@ -3877,7 +3889,9 @@
 				<Event Id="2358452373" Name="Stop_Atmos_Stream" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="3781264369" Name="Stop_Atmos_Stream_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="879117416" Name="Stop_Atmos_Stream_Rain_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="378774161" Name="Stop_Beach" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="1999114582" Name="Stop_BrandIntro_Birds" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1127247799" Name="Stop_Cave" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="1085006091" Name="Stop_Forest" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="938598783" Name="Stop_Forest_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="4203364660" Name="Stop_Forest_Night" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
@@ -4030,5 +4044,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{C0ED833A-CAFD-DA89-4CDE-A5C3A1D3292D}</FileHash>
+	<FileHash>{2FDF29BE-A618-BB30-C812-BAE2F81DEBD4}</FileHash>
 </SoundBanksInfo>

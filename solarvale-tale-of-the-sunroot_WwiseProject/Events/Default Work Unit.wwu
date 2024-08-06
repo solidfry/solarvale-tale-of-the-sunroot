@@ -1083,6 +1083,59 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Stop_Cave" ID="{A7E9B3B8-9DF3-4137-A8A8-7E8D519D3347}">
+							<ChildrenList>
+								<Action Name="" ID="{AE25570F-9424-43E0-8123-24E628A504E5}" ShortID="657993781">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeOutCurve" Type="int16" Value="8"/>
+										<Property Name="FadeTime" Type="Real64" Value="3"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Cave" ID="{121E3A8D-E496-4B9F-B6EE-1103E2E0C744}" WorkUnitID="{BF25DDCB-4F6E-4FFB-A522-CBB1CD35F4B9}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Cave" ID="{C7DCC747-77D7-46AB-8052-340D3D02086F}">
+							<ChildrenList>
+								<Action Name="" ID="{E79E07FE-15C7-4924-BE01-3A206A01C87E}" ShortID="1006834384">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Cave" ID="{121E3A8D-E496-4B9F-B6EE-1103E2E0C744}" WorkUnitID="{BF25DDCB-4F6E-4FFB-A522-CBB1CD35F4B9}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Beach" ID="{659DB860-1B47-401D-8CC1-4D46271A9579}">
+							<ChildrenList>
+								<Action Name="" ID="{64CB713B-B115-4106-BCF9-25B0086CA9BF}" ShortID="123335423">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Beach" ID="{62A806BC-A45C-4442-8F26-F7E3ACDCE727}" WorkUnitID="{BF25DDCB-4F6E-4FFB-A522-CBB1CD35F4B9}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stop_Beach" ID="{FD04FA06-C6BD-48FE-83D7-D0CA5B4D8F13}">
+							<ChildrenList>
+								<Action Name="" ID="{4EBA6845-0F0D-4617-9318-929348BDD645}" ShortID="209144560">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="3"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Beach" ID="{62A806BC-A45C-4442-8F26-F7E3ACDCE727}" WorkUnitID="{BF25DDCB-4F6E-4FFB-A522-CBB1CD35F4B9}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Foley" ID="{1CA7D90C-09F5-4186-A6ED-2D00D7A4000D}" ShortID="166960355">

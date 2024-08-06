@@ -29,10 +29,12 @@ namespace AK
         static const AkUniqueID PLAY_ATMOS_STREAM = 807656883U;
         static const AkUniqueID PLAY_ATMOS_STREAM_01 = 349806695U;
         static const AkUniqueID PLAY_ATMOS_STREAM_RAIN_01 = 4178031206U;
+        static const AkUniqueID PLAY_BEACH = 2006186431U;
         static const AkUniqueID PLAY_BRANDINTRO_BIRDS = 2883217168U;
         static const AkUniqueID PLAY_BUTTON_CLICK = 1149159311U;
         static const AkUniqueID PLAY_BUTTON_HOVER = 4021863785U;
         static const AkUniqueID PLAY_CAMERA_SNAP = 1514177854U;
+        static const AkUniqueID PLAY_CAVE = 3602995889U;
         static const AkUniqueID PLAY_CLICK = 311910498U;
         static const AkUniqueID PLAY_FOREST = 207755397U;
         static const AkUniqueID PLAY_FOREST_01 = 2322926753U;
@@ -107,7 +109,9 @@ namespace AK
         static const AkUniqueID STOP_ATMOS_STREAM = 2358452373U;
         static const AkUniqueID STOP_ATMOS_STREAM_01 = 3781264369U;
         static const AkUniqueID STOP_ATMOS_STREAM_RAIN_01 = 879117416U;
+        static const AkUniqueID STOP_BEACH = 378774161U;
         static const AkUniqueID STOP_BRANDINTRO_BIRDS = 1999114582U;
+        static const AkUniqueID STOP_CAVE = 1127247799U;
         static const AkUniqueID STOP_FOREST = 1085006091U;
         static const AkUniqueID STOP_FOREST_01 = 938598783U;
         static const AkUniqueID STOP_FOREST_NIGHT = 4203364660U;
