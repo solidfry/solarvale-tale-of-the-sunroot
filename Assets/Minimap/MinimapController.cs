@@ -19,10 +19,10 @@ public class MinimapController : MonoBehaviour
     [SerializeField] float maxZoom = 10f;
     [SerializeField] float minZoom = 1f;
     [SerializeField] RectTransform scrollViewRectTransform;
-    [SerializeField] RectTransform contentRectTransform;
+    [SerializeField] public RectTransform contentRectTransform;
     [SerializeField] MinimapIcon minimapIconPrefab;
 
-    [SerializeField] private InputActionReference toggleMiniMapMode; 
+    [SerializeField] private InputActionReference toggleMiniMapMode;
 
     Matrix4x4 transformationMatrix;
 
@@ -32,6 +32,22 @@ public class MinimapController : MonoBehaviour
     private Vector2 scrollViewDefaultPosition;
     Dictionary<MinimapWorldObject, MinimapIcon> miniMapWorldObjectsLookup = new Dictionary<MinimapWorldObject, MinimapIcon>();
 
+    [SerializeField] GameObject[] mapObjects;
+    public void Initialise()
+    {
+        foreach (var mapObject in mapObjects)
+        {
+            mapObject.SetActive(true);
+        }
+    }
+    public GameObject GetMapObject(int index)
+    {
+        if (index >= 0 && index < mapObjects.Length)
+        {
+            return mapObjects[index];
+        }
+        return null;
+    }
     private void Awake()
     {
         Instance = this;
@@ -150,7 +166,7 @@ public class MinimapController : MonoBehaviour
         }
     }
 
-    private Vector2 WorldPositionToMapPosition(Vector3 worldPos)
+    public Vector2 WorldPositionToMapPosition(Vector3 worldPos)
     {
         // Adjust worldPos to account for the offset
         Vector2 adjustedPos = new Vector2(worldPos.x + 512f, worldPos.z + 512f);

@@ -15,7 +15,6 @@ namespace UI.Minimap
         void Start()
         {
             questIconManager = FindObjectOfType<QuestIconManager>();
-            questIconManager.AddObjectiveMarker(this);
 
             if (isAreaQuest)
             {

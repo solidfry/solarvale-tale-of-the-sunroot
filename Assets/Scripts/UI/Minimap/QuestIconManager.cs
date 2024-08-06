@@ -1,7 +1,5 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Cam = UnityEngine.Camera;
 
 namespace UI.Minimap
 {
@@ -10,8 +8,7 @@ namespace UI.Minimap
         [SerializeField] private GameObject questIconPrefab;
         [SerializeField] private GameObject questAreaIconPrefab;
         [SerializeField] private GameObject playerCharacter;
-        [SerializeField] private Cam minimapCamera;
-        [SerializeField] private MiniMapController miniMap;
+        [SerializeField] private MinimapController miniMap; // Updated to use MinimapController
 
         private List<(ObjectivePosition objectivePosition, RectTransform markerRectTransform)> currentObjectives;
         private bool _miniMapInitialized = false;
@@ -30,21 +27,20 @@ namespace UI.Minimap
         {
             if (miniMap == null)
             {
-                miniMap = FindObjectOfType<MiniMapController>();
+                miniMap = MinimapController.Instance;
                 InitialiseMiniMap();
             }
 
-            RectTransform mapBorderRectTransform = GetMapObjectRectTransform(0);
-            if (mapBorderRectTransform != null)
+            if (miniMap != null)
             {
-                foreach ((ObjectivePosition objectivePosition, RectTransform markerRectTransform) marker in currentObjectives)
+                RectTransform contentRectTransform = miniMap.contentRectTransform; // Use property or method
+                if (contentRectTransform != null)
                 {
-                    Vector3 offset = marker.objectivePosition.transform.position - playerCharacter.transform.position;
-                    offset /= minimapCamera.orthographicSize;
-                    offset *= mapBorderRectTransform.rect.width / 2f;
-                    offset.x = Mathf.Clamp(offset.x, -mapBorderRectTransform.rect.width / 2f, mapBorderRectTransform.rect.width / 2f);
-                    offset.z = Mathf.Clamp(offset.z, -mapBorderRectTransform.rect.width / 2f, mapBorderRectTransform.rect.width / 2f);
-                    marker.markerRectTransform.anchoredPosition = new Vector2(offset.x, offset.z);
+                    foreach ((ObjectivePosition objectivePosition, RectTransform markerRectTransform) marker in currentObjectives)
+                    {
+                        Vector2 minimapPosition = miniMap.WorldPositionToMapPosition(marker.objectivePosition.transform.position);
+                        marker.markerRectTransform.anchoredPosition = minimapPosition;
+                    }
                 }
             }
         }
@@ -53,66 +49,66 @@ namespace UI.Minimap
         {
             if (miniMap != null && !_miniMapInitialized)
             {
-                miniMap.Initialise();
-                _miniMapInitialized = true;
                 miniMap.gameObject.SetActive(true);
+                _miniMapInitialized = true;
             }
         }
 
         public void AddObjectiveMarker(ObjectivePosition sender)
         {
-            RectTransform mapBorderRectTransform = GetMapObjectRectTransform(0);
-            if (mapBorderRectTransform != null)
+            if (miniMap == null)
             {
-                RectTransform rectTransform = Instantiate(questIconPrefab, mapBorderRectTransform).GetComponent<RectTransform>();
-                currentObjectives.Add((sender, rectTransform));
+                miniMap = MinimapController.Instance;
+                InitialiseMiniMap();
+            }
+
+            RectTransform contentRectTransform = miniMap.contentRectTransform; // Use property or method
+            if (contentRectTransform != null)
+            {
+                if (questIconPrefab != null)
+                {
+                    RectTransform rectTransform = Instantiate(questIconPrefab, contentRectTransform).GetComponent<RectTransform>();
+                    if (rectTransform != null)
+                    {
+                        currentObjectives.Add((sender, rectTransform));
+                    }
+                }
             }
         }
 
         public void RemoveObjectiveMarker(ObjectivePosition sender)
         {
-            if (currentObjectives.Exists(objective => objective.objectivePosition == sender))
+            var objectiveMarker = currentObjectives.Find(objective => objective.objectivePosition == sender);
+            if (objectiveMarker != default)
             {
-                (ObjectivePosition pos, RectTransform rectTrans) foundObj = currentObjectives.Find(objective => objective.objectivePosition == sender);
-                Destroy(foundObj.rectTrans.gameObject);
-                currentObjectives.Remove(foundObj);
+                Destroy(objectiveMarker.markerRectTransform.gameObject);
+                currentObjectives.Remove(objectiveMarker);
             }
         }
 
         public void UpdateObjectiveMarker(ObjectivePosition sender)
         {
-            // Find the existing marker for this objective
             var objectiveMarker = currentObjectives.Find(obj => obj.objectivePosition == sender);
             if (objectiveMarker != default)
             {
-                // Destroy the old marker
                 Destroy(objectiveMarker.markerRectTransform.gameObject);
                 currentObjectives.Remove(objectiveMarker);
 
-                // Determine which prefab to use
                 GameObject prefabToInstantiate = sender.questAreaIconIsActive ? questAreaIconPrefab : questIconPrefab;
 
-                // Instantiate the new marker
-                RectTransform mapBorderRectTransform = GetMapObjectRectTransform(0);
-                if (mapBorderRectTransform != null)
+                RectTransform contentRectTransform = miniMap.contentRectTransform; // Use property or method
+                if (contentRectTransform != null)
                 {
-                    RectTransform newRectTransform = Instantiate(prefabToInstantiate, mapBorderRectTransform).GetComponent<RectTransform>();
-                    currentObjectives.Add((sender, newRectTransform));
+                    if (prefabToInstantiate != null)
+                    {
+                        RectTransform newRectTransform = Instantiate(prefabToInstantiate, contentRectTransform).GetComponent<RectTransform>();
+                        if (newRectTransform != null)
+                        {
+                            currentObjectives.Add((sender, newRectTransform));
+                        }
+                    }
                 }
             }
-        }
-
-        private RectTransform GetMapObjectRectTransform(int index)
-        {
-            if (miniMap != null)
-            {
-                GameObject mapObject = miniMap.GetMapObject(index);
-                if (mapObject != null)
-                {
-                    return mapObject.GetComponent<RectTransform>();
-                }
-            }
-            return null;
         }
     }
 }
