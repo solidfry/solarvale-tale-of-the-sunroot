@@ -27,7 +27,6 @@ namespace AK
         static const AkUniqueID PLAY_ATMOS_PLAINS_RAIN_01 = 3637739725U;
         static const AkUniqueID PLAY_ATMOS_PLAINS_SCRUB_WIND_GENTLE_ = 749604250U;
         static const AkUniqueID PLAY_ATMOS_STREAM = 807656883U;
-        static const AkUniqueID PLAY_ATMOS_STREAM_01 = 349806695U;
         static const AkUniqueID PLAY_ATMOS_STREAM_RAIN_01 = 4178031206U;
         static const AkUniqueID PLAY_BEACH = 2006186431U;
         static const AkUniqueID PLAY_BRANDINTRO_BIRDS = 2883217168U;
@@ -107,7 +106,6 @@ namespace AK
         static const AkUniqueID STOP_ATMOS_PLAINS_RAIN_01 = 1940187927U;
         static const AkUniqueID STOP_ATMOS_PLAINS_SCRUB_WIND_GENTLE_ = 2006226368U;
         static const AkUniqueID STOP_ATMOS_STREAM = 2358452373U;
-        static const AkUniqueID STOP_ATMOS_STREAM_01 = 3781264369U;
         static const AkUniqueID STOP_ATMOS_STREAM_RAIN_01 = 879117416U;
         static const AkUniqueID STOP_BEACH = 378774161U;
         static const AkUniqueID STOP_BRANDINTRO_BIRDS = 1999114582U;

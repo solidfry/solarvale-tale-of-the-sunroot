@@ -38,10 +38,10 @@ MonoBehaviour:
     m_Value: 12
   gridSizeZ:
     m_OverrideState: 1
-    m_Value: 64
+    m_Value: 32
   maxDistanceVolumetric:
-    m_OverrideState: 1
-    m_Value: 200
+    m_OverrideState: 0
+    m_Value: 10
   depthRatio:
     m_OverrideState: 0
     m_Value: 2
@@ -53,19 +53,19 @@ MonoBehaviour:
     m_Value: 0.05
   fogDensity:
     m_OverrideState: 1
-    m_Value: 0.48
+    m_Value: 2
   anisotropy:
     m_OverrideState: 1
-    m_Value: 0.058
+    m_Value: 0
   lightIntensity:
     m_OverrideState: 1
     m_Value: 1
   densityInLight:
     m_OverrideState: 1
-    m_Value: 0.11
+    m_Value: 0.5
   densityInShadow:
     m_OverrideState: 1
-    m_Value: 4
+    m_Value: 1.5
   overrideDefaultMaxLightDistance:
     m_OverrideState: 0
     m_Value: 0
@@ -74,16 +74,16 @@ MonoBehaviour:
     m_Value: 64
   baseHeight:
     m_OverrideState: 1
-    m_Value: 400
+    m_Value: 200
   attenuationBoundarySize:
     m_OverrideState: 1
-    m_Value: 250
+    m_Value: 220
   litColor:
     m_OverrideState: 1
-    m_Value: {r: 0.6313726, g: 0.8784314, b: 0.7217671, a: 1}
+    m_Value: {r: 1.754717, g: 1.2568562, b: 0.93529725, a: 1}
   shadowedColor:
     m_OverrideState: 1
-    m_Value: {r: 0.010768958, g: 0.09038499, b: 0.20754719, a: 1}
+    m_Value: {r: 0, g: 0.09771351, b: 0.21568628, a: 1}
   emitColor:
     m_OverrideState: 0
     m_Value: {r: 0.0625, g: 0.0625, b: 0.0625, a: 1}
@@ -95,13 +95,13 @@ MonoBehaviour:
     m_Value: 0
   colorInfluence:
     m_OverrideState: 1
-    m_Value: 0.659
+    m_Value: 1
   directionalForward:
     m_OverrideState: 1
-    m_Value: {r: 1.5140471, g: 3.526622, b: 2.6309547, a: 1}
+    m_Value: {r: 3.8199556, g: 2.4743392, b: 1.7117727, a: 1}
   directionalBack:
     m_OverrideState: 1
-    m_Value: {r: 0, g: 0.114408255, b: 0.2735849, a: 1}
+    m_Value: {r: 0, g: 0.45763302, b: 1.0943396, a: 1}
   directionalRatio:
     m_OverrideState: 0
     m_Value: 1
@@ -119,13 +119,13 @@ MonoBehaviour:
     m_Value: 0.553
   noiseTiling:
     m_OverrideState: 1
-    m_Value: 100
+    m_Value: 50
   noiseWindSpeed:
     m_OverrideState: 1
     m_Value: {x: 3, y: 0, z: 0}
   noiseMap:
-    m_OverrideState: 1
-    m_Value: {x: 0.45746523, y: 1}
+    m_OverrideState: 0
+    m_Value: {x: 0, y: 0.58227074}
   volumeNoise:
     m_OverrideState: 1
     m_Value:
@@ -133,8 +133,8 @@ MonoBehaviour:
       octaves: 3
       lacunarity: 5
       gain: 0.316
-      seed: 441
+      seed: 4978
       noiseType: 6
-      noiseQuality: 3
+      noiseQuality: 2
       invert: 1
       userTexture: {fileID: 0}
