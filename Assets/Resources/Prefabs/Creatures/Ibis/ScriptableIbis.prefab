@@ -79,6 +79,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2879389747620711354}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &5121088655465556195 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 6981818879531754329, guid: c604e6942081058438b3642e5f9ec8fa,
+    type: 3}
+  m_PrefabInstance: {fileID: 2879389747620711354}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3811648602099490222
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -207,7 +213,7 @@ PrefabInstance:
         type: 3}
       propertyPath: animator
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 5121088655465556195}
     - target: {fileID: 8876344238144151685, guid: f5bc4980b0de7be4a952ef7424b67f7f,
         type: 3}
       propertyPath: entityData
@@ -640,7 +646,8 @@ MonoBehaviour:
   MultiPositionType: 1
   multiPositionTypeLabel: 0
   attenuationSphereColor: {r: 1, g: 0, b: 0, a: 0.1}
-  LargeModePositions: []
+  LargeModePositions:
+  - {fileID: 0}
   multiPositionArray: []
 --- !u!114 &3879916607857175986
 MonoBehaviour:
@@ -675,5 +682,6 @@ MonoBehaviour:
   MultiPositionType: 1
   multiPositionTypeLabel: 0
   attenuationSphereColor: {r: 1, g: 0, b: 0, a: 0.1}
-  LargeModePositions: []
+  LargeModePositions:
+  - {fileID: 0}
   multiPositionArray: []
