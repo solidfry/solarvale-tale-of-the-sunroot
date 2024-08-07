@@ -10,12 +10,12 @@ namespace Minimap
 
         private void Start()
         {
-            MinimapController.Instance.RegisterMinimapWorldObject(this, followObject);
+            MinimapController.Instance?.RegisterMinimapWorldObject(this, followObject);
         }
 
         private void OnDestroy()
         {
-            MinimapController.Instance.RemoveMinimapWorldObject(this);
+            MinimapController.Instance?.RemoveMinimapWorldObject(this);
         }
     }
 }

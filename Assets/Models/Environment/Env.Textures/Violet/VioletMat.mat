@@ -8,13 +8,12 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: VioletMat
-  m_Shader: {fileID: -6465566751694194690, guid: d783dc98fee3f7949b2183ffdb7db05b,
+  m_Shader: {fileID: -6465566751694194690, guid: 5689a2a1912c34543890a016eb78fc50,
     type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
   - _ALPHATEST_ON
-  - _SPECULAR_SETUP
   m_InvalidKeywords: []
   m_LightmapFlags: 1
   m_EnableInstancingVariants: 1
@@ -106,18 +105,19 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - Vector1_2BDF6FD9: 0.02
-    - Vector1_2FA10055: 0.24
-    - Vector1_46F1304E: 0.03
-    - Vector1_BBEA2355: 0.1
-    - _AO_Strength: 0
-    - _Albedo_Strength: 0.27
+    - Vector1_2BDF6FD9: 0.15
+    - Vector1_2FA10055: 1.27
+    - Vector1_46F1304E: 0.01
+    - Vector1_BBEA2355: 0.68
+    - _AO_Strength: 0.502
+    - _Albedo_Strength: 0.64
     - _AlphaClip: 1
     - _AlphaMultiplier: 0.678
     - _AlphaToMask: 1
-    - _Alpha_Clip_Threshold: 0.332
+    - _Alpha_Clip_Threshold: 0.132
     - _Blend: 0
     - _BlendModePreserveSpecular: 1
+    - _BottomColourPosition: 1
     - _BumpScale: 1
     - _CastShadows: 0
     - _ClearCoatMask: 0
@@ -133,6 +133,8 @@ Material:
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
+    - _InteractionDistance: 1
+    - _InteractionStrength: 1
     - _Metallic: 0
     - _Metallic_Strength: 0
     - _Noise_1_Multiplier: 0.51
@@ -145,7 +147,7 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _Shadow_Opacity: 0.5
+    - _Shadow_Opacity: 0.56
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
@@ -153,9 +155,9 @@ Material:
     - _SrcBlend: 1
     - _SrcBlendAlpha: 1
     - _Surface: 0
-    - _TriplanarBlend: 0.12
-    - _TriplanarTiling: 1.7
-    - _WiggleOffset: 1
+    - _TriplanarBlend: 0
+    - _TriplanarTiling: 0.11
+    - _WiggleOffset: 0.6
     - _WindSpeed: 1
     - _WindStrength: 0.2
     - _WorkflowMode: 0
@@ -163,14 +165,15 @@ Material:
     - _ZWrite: 1
     - _ZWriteControl: 0
     m_Colors:
-    - Color_D9F05973: {r: 0.7735849, g: 0.7735849, b: 0.7735849, a: 0}
-    - Color_DB04B181: {r: 0.17271712, g: 0.15312387, b: 0.3490566, a: 0}
-    - _Albedo_Color: {r: 0.6792453, g: 0.6792453, b: 0.6792453, a: 0}
+    - Color_D9F05973: {r: 0.5566038, g: 0.5566038, b: 0.5566038, a: 0}
+    - Color_DB04B181: {r: 0, g: 0.08886027, b: 0.2830189, a: 0}
+    - _Albedo_Color: {r: 1, g: 1, b: 1, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - _BottomColour: {r: 0, g: 0, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0.5396226, g: 0.5396226, b: 0.5396226, a: 1}
-    - _Emission_Color: {r: 1, g: 1, b: 1, a: 0}
-    - _Fresnel_Color: {r: 0.4433962, g: 0.4433962, b: 0.4433962, a: 1}
+    - _Emission_Color: {r: 0, g: 0, b: 0, a: 0}
+    - _Fresnel_Color: {r: 0, g: 0, b: 0, a: 1}
     - _NoiseColor: {r: 0, g: 0, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _Specular_Color: {r: 0, g: 0, b: 0, a: 0}
