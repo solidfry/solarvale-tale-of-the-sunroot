@@ -7,6 +7,8 @@ public class CollisionAudioTrigger : MonoBehaviour
     private AkAmbient akAmbient;
     private float fadeOutDuration = 2.0f;
     [SerializeField] private string wwiseEventName;
+    [SerializeField] private float minTimeWait;
+    [SerializeField] private float maxTimeWait;
 
     private Coroutine playSoundCoroutine;
 
@@ -48,7 +50,7 @@ public class CollisionAudioTrigger : MonoBehaviour
             akAmbient.HandleEvent(gameObject);
 
             // Wait for a random time between 0.75 and 2 seconds
-            float waitTime = Random.Range(0.75f, 2.0f);
+            float waitTime = Random.Range(minTimeWait, maxTimeWait);
             yield return new WaitForSeconds(waitTime);
         }
     }
