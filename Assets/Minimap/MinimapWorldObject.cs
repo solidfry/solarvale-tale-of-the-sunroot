@@ -8,12 +8,12 @@ namespace Minimap
         [SerializeField] private Sprite minimapIcon;
         public Sprite MinimapIcon => minimapIcon;
 
-        private void Start()
+        private void OnEnable()
         {
             MinimapController.Instance?.RegisterMinimapWorldObject(this, followObject);
         }
 
-        private void OnDestroy()
+        private void OnDisable()
         {
             MinimapController.Instance?.RemoveMinimapWorldObject(this);
         }

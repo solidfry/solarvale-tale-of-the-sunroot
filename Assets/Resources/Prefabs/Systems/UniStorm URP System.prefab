@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7790436489762643848}
   - component: {fileID: 6455729437456555010}
   - component: {fileID: 2899264278958861392}
+  - component: {fileID: 8310521910541035836}
   m_Layer: 0
   m_Name: UniStorm Sun
   m_TagString: Untagged
@@ -118,6 +119,25 @@ MonoBehaviour:
   m_LightCookieSize: {x: 128, y: 128}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
+--- !u!114 &8310521910541035836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 901424478212353622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96e8a465dca0cc54fae4c8c200c201f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inheritDataFromLightComponent: 1
+  lightComponent: {fileID: 6455729437456555010}
+  areaSizeCached: {x: 1, y: 1, z: 0, w: 0}
+  lightColor: {r: 1, g: 1, b: 1, a: 1}
+  bias: 0
+  lightRange: 0
+  lightIntensity: 10
 --- !u!1 &1761332111613689401
 GameObject:
   m_ObjectHideFlags: 0
