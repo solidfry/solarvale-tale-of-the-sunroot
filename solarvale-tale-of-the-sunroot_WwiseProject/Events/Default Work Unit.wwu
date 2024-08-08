@@ -1536,6 +1536,7 @@
 								<Action Name="" ID="{C4E7C6D8-2793-4F04-BB6A-68A95EBAEEF5}" ShortID="882725636">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="2"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
@@ -1550,6 +1551,8 @@
 								<Action Name="" ID="{0972D73E-A6F1-43B2-98DD-F16C2262EAB5}" ShortID="559739898">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeOutCurve" Type="int16" Value="6"/>
+										<Property Name="FadeTime" Type="Real64" Value="3"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
@@ -1598,9 +1601,39 @@
 						<Event Name="Play_SFX_Wood_Fence_mono_01" ID="{294D0617-CF76-429D-AC0F-BA500C307264}">
 							<ChildrenList>
 								<Action Name="" ID="{5462BEFC-5DA1-4BA8-9F06-79103FFCCEA5}" ShortID="490092747">
+									<PropertyList>
+										<Property Name="FadeInCurve" Type="int16" Value="6"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="SFX_Wood_Fence_mono" ID="{DEC05576-BC84-4C1D-83FF-2593FCA9A984}" WorkUnitID="{1A7BD965-CC17-4EA5-85D8-3938F011058F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_SFX_Crickets_01" ID="{C0EA7CD9-1F76-43A2-A9D8-628A72FF5A76}">
+							<ChildrenList>
+								<Action Name="" ID="{BECB7DDF-2557-49B5-876D-44DBB419E479}" ShortID="186680715">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SFX_Crickets" ID="{ECE39EA0-FCD3-4F28-91A3-D9EB2C82AE90}" WorkUnitID="{1A7BD965-CC17-4EA5-85D8-3938F011058F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stop_SFX_Crickets_01" ID="{A9F0D184-B1C2-4E50-A329-46DFA733F273}">
+							<ChildrenList>
+								<Action Name="" ID="{A8233B6A-19CD-497F-B4CB-A0CFA06903FC}" ShortID="463640692">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeOutCurve" Type="int16" Value="7"/>
+										<Property Name="FadeTime" Type="Real64" Value="3"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SFX_Crickets" ID="{ECE39EA0-FCD3-4F28-91A3-D9EB2C82AE90}" WorkUnitID="{1A7BD965-CC17-4EA5-85D8-3938F011058F}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
