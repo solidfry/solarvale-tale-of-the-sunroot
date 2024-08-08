@@ -78,6 +78,7 @@ namespace AK
         static const AkUniqueID PLAY_SFX_06 = 3257337840U;
         static const AkUniqueID PLAY_SFX_CRICKET = 3568461127U;
         static const AkUniqueID PLAY_SFX_CRICKETS = 466972342U;
+        static const AkUniqueID PLAY_SFX_CRICKETS_01 = 1649810244U;
         static const AkUniqueID PLAY_SFX_SUNROOT_TREE = 2907169251U;
         static const AkUniqueID PLAY_SFX_WINGS_FLAP = 2000475864U;
         static const AkUniqueID PLAY_SFX_WOOD_FENCE_MONO = 61543571U;
@@ -147,6 +148,7 @@ namespace AK
         static const AkUniqueID STOP_SFX_05 = 3440786877U;
         static const AkUniqueID STOP_SFX_06 = 3440786878U;
         static const AkUniqueID STOP_SFX_CRICKETS = 614443940U;
+        static const AkUniqueID STOP_SFX_CRICKETS_01 = 131281802U;
         static const AkUniqueID STOP_SFX_SUNROOT_TREE = 2133724809U;
         static const AkUniqueID STOP_SFX_WINGS_FLAP = 1343601762U;
         static const AkUniqueID STOP_SFX_WOOD_FENCE_MONO = 1016090557U;
