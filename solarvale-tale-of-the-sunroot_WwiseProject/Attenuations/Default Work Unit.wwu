@@ -314,7 +314,7 @@
 				</Attenuation>
 				<Attenuation Name="AtmosOcean" ID="{8A9E1632-CA9C-44B6-ACEC-8E6358757A7F}" ShortID="952771869">
 					<PropertyList>
-						<Property Name="RadiusMax" Type="Real64" Value="1024"/>
+						<Property Name="RadiusMax" Type="Real64" Value="3000"/>
 					</PropertyList>
 					<CurveUsageInfoList>
 						<VolumeDryUsage>
@@ -326,13 +326,13 @@
 									<PointList>
 										<Point>
 											<XPos>0</XPos>
-											<YPos>0</YPos>
+											<YPos>-15.82232</YPos>
 											<Flags>5</Flags>
-											<SegmentShape>Log3</SegmentShape>
+											<SegmentShape>Exp2</SegmentShape>
 										</Point>
 										<Point>
-											<XPos>1024</XPos>
-											<YPos>-200</YPos>
+											<XPos>3000</XPos>
+											<YPos>-0.12868</YPos>
 											<Flags>37</Flags>
 										</Point>
 									</PointList>
@@ -346,7 +346,26 @@
 							<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
 						</VolumeWetUserUsage>
 						<LowPassFilterUsage>
-							<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+							<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
+								<Curve Name="LowPassFilter" ID="{E7BA4B44-5343-487F-B76F-DDA82FA8C9BB}">
+									<PropertyList>
+										<Property Name="Flags" Type="int32" Value="65537"/>
+									</PropertyList>
+									<PointList>
+										<Point>
+											<XPos>0</XPos>
+											<YPos>100</YPos>
+											<Flags>5</Flags>
+											<SegmentShape>Log3</SegmentShape>
+										</Point>
+										<Point>
+											<XPos>3000</XPos>
+											<YPos>0</YPos>
+											<Flags>37</Flags>
+										</Point>
+									</PointList>
+								</Curve>
+							</CurveUsageInfo>
 						</LowPassFilterUsage>
 						<HighPassFilterUsage>
 							<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
