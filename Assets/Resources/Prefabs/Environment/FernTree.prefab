@@ -394,17 +394,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: cf35f9abd86ef0d47ba443a0e8806b77,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -101.1484
+      value: -285.69305
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cf35f9abd86ef0d47ba443a0e8806b77,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 55.282906
+      value: 60.782787
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cf35f9abd86ef0d47ba443a0e8806b77,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 173.5
+      value: -54.272827
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cf35f9abd86ef0d47ba443a0e8806b77,
         type: 3}
@@ -451,7 +451,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: FernTree
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 3451118302482216456, guid: cf35f9abd86ef0d47ba443a0e8806b77,
+        type: 3}
+      propertyPath: m_Convex
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3451118302482216456, guid: cf35f9abd86ef0d47ba443a0e8806b77,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 3451118302482216456, guid: cf35f9abd86ef0d47ba443a0e8806b77, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: cf35f9abd86ef0d47ba443a0e8806b77,
@@ -471,6 +482,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 3973824746716599947}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cf35f9abd86ef0d47ba443a0e8806b77,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4755039390322810673}
   m_SourcePrefab: {fileID: 100100000, guid: cf35f9abd86ef0d47ba443a0e8806b77, type: 3}
 --- !u!1 &7319273773464909856 stripped
 GameObject:
@@ -587,6 +602,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   originalRenderers:
   - {fileID: 9120832441300998645}
+--- !u!136 &4755039390322810673
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7319273773464909856}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.51
+  m_Height: 9.956733
+  m_Direction: 1
+  m_Center: {x: -0.1, y: 3.43, z: -0.21}
 --- !u!4 &7987301182408565402 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: cf35f9abd86ef0d47ba443a0e8806b77,
