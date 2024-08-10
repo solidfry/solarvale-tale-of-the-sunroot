@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using Core;
 using Entities;
+using Events;
 using Photography;
 using UnityEngine;
 
@@ -29,13 +30,11 @@ namespace Progression
         private void Start()
         {
             CreateEntityDictionary();
-            // gameManager.PhotoManager.OnPhotosLoaded += UpdateAll;
             gameManager.PhotoManager.OnPhotoAdded += UpdateDiscovery;
         }
         
         private void OnDisable()
         {
-            // gameManager.PhotoManager.OnPhotosLoaded -= UpdateAll;
             gameManager.PhotoManager.OnPhotoAdded -= UpdateDiscovery;
         }
         
@@ -88,6 +87,7 @@ namespace Progression
                 {
                     _entitiesDiscovered[entity] = true;
                     OnEntityDiscovered?.Invoke(entity);
+                    GlobalEvents.OnNewEntityDiscovered?.Invoke(entity);
                     Debug.Log("Entity discovered: " + entity.Name);
                 }
                 Debug.Log("Entity discovered: " + entity.Name);

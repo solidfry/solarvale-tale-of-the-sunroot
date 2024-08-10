@@ -184,6 +184,7 @@ namespace Entities.Creatures
         
         void Translate(Vector3 position, float speed = 1f)
         {
+            Debug.Log($"{agent} Moving to {position}");
             agent.SetDestination(position);
             agent.speed = speed;
         }
@@ -193,6 +194,7 @@ namespace Entities.Creatures
         [ContextMenu("Jump")]
         public void Jump()
         {
+            
             // Because of the agent navmesh we can't jump, so we need to disable the agent, but it impacts some nodes in the behaviour tree
         }
         
@@ -242,12 +244,18 @@ namespace Entities.Creatures
             float duration = CalculateDuration(descentDistance, flyer.GetSpecialisedSpeed());
             
             Vector3 targetPosition = new Vector3(position.x, targetAltitude, position.z);
-            model.transform.DOMoveY(targetPosition.y, duration).OnComplete(() =>
+            var level = model.transform.DOMoveY(targetPosition.y, duration).OnComplete(() =>
             {
                 onFlightEnd?.Invoke();
                 IsFlying = false;
                 model.transform.localPosition = Vector3.zero;
             });
+            
+            if (level.IsComplete() && Mathf.Approximately(model.transform.position.y, targetPosition.y))
+            {
+                model.transform.position = targetPosition;
+                IsFlying = false;
+            }
         }
         
         private float CalculateDuration(float distance, float speed) => Mathf.Abs(distance) / speed;

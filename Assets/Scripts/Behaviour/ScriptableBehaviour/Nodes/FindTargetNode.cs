@@ -40,7 +40,7 @@ namespace Behaviour.ScriptableBehaviour.Nodes
             {
                 // Set the first target as the current target
                 context.SetTarget(context.CurrentTargets[0].GetTransform);
-                Debug.Log($"Target found: {context.Target.name}");
+                // Debug.Log($"Target found: {context.Target.name}");
                 
                 context.Creature.onFindTargetEnd?.Invoke();
                 nodeState = NodeState.Success;

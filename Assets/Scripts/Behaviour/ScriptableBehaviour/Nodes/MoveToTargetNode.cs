@@ -21,6 +21,7 @@ namespace Behaviour.ScriptableBehaviour.Nodes
 
             if (context.CurrentTargets.Count > 0 && context.CurrentTargets[0] != null)
             {
+                // Debug.Log(context.Agent);
                 if (context.Agent.isStopped)
                 {
                     context.Agent.isStopped = false;

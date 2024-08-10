@@ -68,9 +68,23 @@ namespace Entities.Creatures
         {
             if (_agent.velocity.magnitude < 0.1f) return;
             var direction = _agent.velocity.normalized;
-            var lookRotation = Quaternion.LookRotation(direction);
-            var rotation = Quaternion.Lerp(transform.rotation, lookRotation, Time.deltaTime * _creature.GetStats.TurningSpeed);
-            transform.rotation = rotation;
+            // Raycast to the ground using the groundLayer mask
+            RaycastHit hit;
+            if (Physics.Raycast(transform.position, -Vector3.up, out hit, Mathf.Infinity, LayerMask.GetMask("Ground")))
+            {
+                // Calculate the rotation to align with the terrain normal
+                var terrainNormal = hit.normal;
+                var lookRotation = Quaternion.LookRotation(direction, terrainNormal);
+                var rotation = Quaternion.Lerp(transform.rotation, lookRotation, Time.deltaTime * _creature.GetStats.TurningSpeed);
+                transform.rotation = rotation;
+            }
+            else
+            {
+                // If no terrain is hit, just rotate based on movement direction
+                var lookRotation = Quaternion.LookRotation(direction);
+                var rotation = Quaternion.Lerp(transform.rotation, lookRotation, Time.deltaTime * _creature.GetStats.TurningSpeed);
+                transform.rotation = rotation;
+            }
         }
         
         public void SetSearching(bool isSearching)

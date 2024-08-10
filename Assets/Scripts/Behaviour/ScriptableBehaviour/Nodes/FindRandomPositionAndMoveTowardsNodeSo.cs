@@ -12,11 +12,11 @@ namespace Behaviour.ScriptableBehaviour.Nodes
         {
             if (context.Agent == null)
             {
-                Debug.LogError("NavMeshAgent not set in FindRandomPositionNode");
+                // Debug.LogError("NavMeshAgent not set in FindRandomPositionNode");
                 return NodeState.Failure;
             }
 
-            Debug.Log("Finding random position");
+            // Debug.Log("Finding random position");
 
             Vector3 randomDirection = Random.insideUnitSphere * context.Creature.GetStats.SightRange;
             randomDirection += context.Agent.transform.position;
@@ -28,12 +28,12 @@ namespace Behaviour.ScriptableBehaviour.Nodes
                 if (context.Agent.isStopped) context.Agent.isStopped = false;
                 context.Agent.SetDestination(finalPosition);
                 context.SetDesiredLocation(finalPosition);
-                Debug.Log("Moving to random position");
+                // Debug.Log("Moving to random position");
                 nodeState = NodeState.Success;
             }
             else
             {
-                Debug.Log("Failed to find random position");
+                // Debug.Log("Failed to find random position");
                 nodeState = NodeState.Failure;
             }
 

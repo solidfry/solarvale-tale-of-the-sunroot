@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using DG.Tweening;
 using Events;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace QuestSystem.UI
 {
@@ -18,12 +19,14 @@ namespace QuestSystem.UI
         [SerializeField] RectTransform questLogParent;
         [SerializeField] CanvasGroup headerCanvasGroup;
 
+        [FormerlySerializedAs("notificationModal")]
+        [FormerlySerializedAs("questNotificationModal")]
         [Header("Quest Notifications")]
-        [SerializeField] private QuestNotificationModal questNotificationModal;
+        [SerializeField] private QuestModal questModal;
         [SerializeField] float notificationDuration = 3f;
         [SerializeField] float notificationFadeDuration = 2f;
         [SerializeField] float headerFadeDuration = 0.5f;
-        private QuestNotificationModal _questNotificationInstance;
+        private QuestModal _questInstance;
         
         Tween _fadeTween;
         
@@ -59,8 +62,8 @@ namespace QuestSystem.UI
 
         private void DestroyQuestNotification()
         {
-            if (_questNotificationInstance is null) return;
-            Destroy(_questNotificationInstance.gameObject);
+            if (_questInstance is null) return;
+            Destroy(_questInstance.gameObject);
         }
 
         private void CheckQuestsCompleted(QuestData questData)
@@ -77,11 +80,7 @@ namespace QuestSystem.UI
             }
         }
         
-        private void InitialiseQuestNotificationModal()
-        {
-            if (questNotificationModal is null) return;
-            _questNotificationInstance = Instantiate(questNotificationModal, questUICanvas);
-        }
+        
         
         public void UpdateQuestLog(QuestData questData)
         {
@@ -99,12 +98,18 @@ namespace QuestSystem.UI
             AddQuestNodeElement(questData);
             ShowQuestNotification(questData);
         }
+        
+        private void InitialiseQuestNotificationModal()
+        {
+            if (questModal is null) return;
+            _questInstance = Instantiate(questModal, questUICanvas);
+        }
 
         private void ShowQuestNotification(QuestData questData)
         {
-            if (_questNotificationInstance is null) return;
-            _questNotificationInstance.SetQuestData(questData);
-            _questNotificationInstance.SetActive();
+            if (_questInstance is null) return;
+            _questInstance.SetData(questData);
+            _questInstance.SetActive();
             
             PlayHideQuestNotification();
         }
@@ -114,7 +119,7 @@ namespace QuestSystem.UI
         IEnumerator HideQuestNotification()
         {
             yield return new WaitForSeconds(notificationDuration);
-            _questNotificationInstance.CanvasGroup.DOFade(0, notificationFadeDuration).OnComplete(() => _questNotificationInstance.gameObject.SetActive(false));
+            _questInstance.CanvasGroup.DOFade(0, notificationFadeDuration).OnComplete(() => _questInstance.gameObject.SetActive(false));
         }
 
         public void AddQuestNodeElement(QuestData questData)

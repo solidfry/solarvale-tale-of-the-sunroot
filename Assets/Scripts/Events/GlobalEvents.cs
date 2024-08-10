@@ -64,6 +64,11 @@ namespace Events
         public static Action<Canvas> OnRegisterUIWithCameraEvent;
         public static Action<MiniMapController> OnRegisterWithMapCameraEvent;
         #endregion
+
+        #region Discovery Management    
+        public static Action<EntityData> OnNewEntityDiscovered;
+
+        #endregion
         
         #region Photography Management
         public static Action<PhotoData> OnPhotoKeptEvent;

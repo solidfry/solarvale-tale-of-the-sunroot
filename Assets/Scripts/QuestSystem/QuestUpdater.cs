@@ -1,9 +1,6 @@
-﻿using System.ComponentModel;
-using Events;
-using ExternPropertyAttributes;
+﻿using Events;
 using QuestSystem.Conditions;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace QuestSystem
 {
@@ -16,7 +13,7 @@ namespace QuestSystem
     
     public class QuestUpdater : MonoBehaviour
     {
-        [FormerlySerializedAs("QuestAction")] public QuestAction questAction = QuestAction.Complete;
+        public QuestAction questAction = QuestAction.Complete;
         [HideInInspector] public QuestData questData;
         [Header("Quest Condition")]
         [Tooltip("The condition to update. This will only update the condition below if the Quest Action is set to Update.")]
