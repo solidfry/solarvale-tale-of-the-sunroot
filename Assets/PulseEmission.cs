@@ -11,18 +11,18 @@ public class PulseEmission : MonoBehaviour
     
     private float _currentEmission;
     private static readonly int EmissionColor = Shader.PropertyToID("_EmissionColor");
-    Tween _tween;
-
-    private void Awake()
-    {
-        if (rend == null)
-            rend = GetComponent<Renderer>();
-
-        rend.material.SetColor(EmissionColor, fromColor);
-        
-        _tween = rend.material.DOColor(toColor, "_EmissionColor", pulseSpeed).SetLoops(-1, LoopType.Yoyo);
-
-    }
+    // Tween _tween;
+    //
+    // private void Awake()
+    // {
+    //     if (rend == null)
+    //         rend = GetComponent<Renderer>();
+    //
+    //     rend.material.SetColor(EmissionColor, fromColor);
+    //     
+    //     _tween = rend.material.DOColor(toColor, "_EmissionColor", pulseSpeed).SetLoops(-1, LoopType.Yoyo);
+    //
+    // }
 
     // private void Update()
     // {
@@ -35,10 +35,10 @@ public class PulseEmission : MonoBehaviour
     //
     
 
-    private void Update()
-    {
-        if (rend == null) return;
-        if (_tween.IsPlaying() == false)
-            _tween.Play();
-    }
+    // private void Update()
+    // {
+    //     if (rend == null) return;
+    //     if (_tween.IsPlaying() == false)
+    //         _tween.Play();
+    // }
 }
