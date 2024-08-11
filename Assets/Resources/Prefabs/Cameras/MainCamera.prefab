@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: -5657096858025755573}
   - component: {fileID: 2250606497782758568}
   - component: {fileID: 3797277320552021567}
+  - component: {fileID: 1862396944844607036}
+  - component: {fileID: 3559517725029291584}
   - component: {fileID: 7991736528076538925}
   - component: {fileID: 5496966728786339457}
   m_Layer: 0
@@ -191,6 +193,40 @@ MonoBehaviour:
   listenerMask: 1
 --- !u!81 &3797277320552021567
 AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8944336655422409498}
+  m_Enabled: 1
+--- !u!114 &1862396944844607036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8944336655422409498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16142cfdd81ca46f8ac6acd18ae44068, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _opacity: 1
+  _edgeColor: {r: 0.24207903, g: 0.32891756, b: 0.6037736, a: 0.41960785}
+  _edgeContrast: 4
+  _fillColor: {r: 1, g: 1, b: 1, a: 1}
+  _blurWidth: 0.017
+  _blurFrequency: 0.023
+  _hueShift: 0.0044
+  _interval: 0.28
+  _iteration: 6
+  _overlayMode: 1
+  _overlayTexture: {fileID: 2800000, guid: 4eac155aa83d46146b45d2ca1ed7cf26, type: 3}
+  _overlayOpacity: 0.702
+  _shader: {fileID: -6465566751694194690, guid: 3e152a7c1e1bb4527901f4b4a55fbbc3,
+    type: 3}
+--- !u!124 &3559517725029291584
+Behaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
