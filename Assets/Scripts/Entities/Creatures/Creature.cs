@@ -184,7 +184,7 @@ namespace Entities.Creatures
         
         void Translate(Vector3 position, float speed = 1f)
         {
-            Debug.Log($"{agent} Moving to {position}");
+            // Debug.Log($"{agent} Moving to {position}");
             agent.SetDestination(position);
             agent.speed = speed;
         }

@@ -27,13 +27,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 901424478212353622}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0.26667345, y: 0.5286943, z: -0.17946747, w: 0.7855948}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3748655633976961460}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 37.5, y: 67.88, z: 0}
 --- !u!108 &6455729437456555010
 Light:
   m_ObjectHideFlags: 0
@@ -46,7 +46,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 0.9745283, b: 0.8726415, a: 1}
-  m_Intensity: 1
+  m_Intensity: 2
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -55,7 +55,7 @@ Light:
     m_Type: 2
     m_Resolution: 1
     m_CustomResolution: -1
-    m_Strength: 0.9
+    m_Strength: 0.95
     m_Bias: 0.05
     m_NormalBias: 0.15
     m_NearPlane: 0.2
@@ -84,11 +84,11 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_RenderingLayerMask: 0
+  m_RenderingLayerMask: 4294967295
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
+  m_BounceIntensity: 1.2
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
@@ -253,8 +253,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   WeatherSoundsVolume: 1
-  AmbienceVolume: 1
-  MusicVolume: 1
+  AmbienceVolume: 0
+  MusicVolume: 0
   TimeSlider: {fileID: 0}
   WeatherButtonGameObject: {fileID: 0}
   TimeSliderGameObject: {fileID: 0}
@@ -263,20 +263,20 @@ MonoBehaviour:
   UniStormMenuKey: 27
   UniStormCanvas: {fileID: 0}
   m_MenuToggle: 0
-  TabNumber: 3
+  TabNumber: 0
   TimeTabNumbers: 0
   WeatherTabNumbers: 1
   CelestialTabNumbers: 0
   TimeFoldout: 1
   DateFoldout: 1
-  TimeSoundsFoldout: 1
-  TimeMusicFoldout: 1
+  TimeSoundsFoldout: 0
+  TimeMusicFoldout: 0
   SunFoldout: 1
   MoonFoldout: 1
   AtmosphereFoldout: 1
   FogFoldout: 1
   WeatherFoldout: 1
-  LightningFoldout: 1
+  LightningFoldout: 0
   CameraFoldout: 1
   SettingsFoldout: 1
   CloudsFoldout: 1
@@ -303,16 +303,16 @@ MonoBehaviour:
   Day: 25
   Month: 6
   Year: 2032
-  DayLength: 1
-  NightLength: 1
+  DayLength: 30
+  NightLength: 10
   TimeOfDayUpdateSeconds: 5
   UseTimeOfDayUpdateControl: 1
   m_TimeFloat: 0
   TimeFlow: 0
   RealWorldTime: 1
   m_HourUpdate: 0
-  TimeOfDaySoundsSecondsMin: 2
-  TimeOfDaySoundsSecondsMax: 10
+  TimeOfDaySoundsSecondsMin: 0
+  TimeOfDaySoundsSecondsMax: 0
   MorningSounds: []
   DaySounds: []
   EveningSounds: []
@@ -323,7 +323,7 @@ MonoBehaviour:
   EveningMusic: []
   NightMusic: []
   TimeOfDayMusicAudioSource: {fileID: 0}
-  TimeOfDayMusicDelay: 1
+  TimeOfDayMusicDelay: 0
   TimeOfDaySoundsDuringPrecipitationWeather: 1
   TransitionMusicOnTimeOfDayChange: 1
   m_UpdateTimeOfDayMusic: 0
@@ -333,7 +333,7 @@ MonoBehaviour:
   WeatherGenerationMethod: 0
   WeatherForecast: []
   ForceLowClouds: 0
-  LowCloudHeight: 298
+  LowCloudHeight: 250
   CloudDomeTrisCountX: 100
   CloudDomeTrisCountY: 50
   IgnoreConditions: 0
@@ -460,19 +460,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e9e48507f8ad9544193e97f1973cf946, type: 2}
   - {fileID: 11400000, guid: 817c2abbadfb7c04cbd380d43ef46e06, type: 2}
   - {fileID: 11400000, guid: b1712a7ceb8a9954dab341bacd44f5a8, type: 2}
-  - {fileID: 11400000, guid: 7f28b4fe748968e4c8d41edb0be40828, type: 2}
-  - {fileID: 11400000, guid: bad5e6801a6223942b1fb7cd7cf611d6, type: 2}
-  - {fileID: 11400000, guid: 796fbe4839cd13f4f91aba26ad35ebf0, type: 2}
-  - {fileID: 11400000, guid: b4b7d963b44ee6244a1db2ecb60efdab, type: 2}
-  - {fileID: 11400000, guid: 189387f15363c854481e654b3ea19abb, type: 2}
-  - {fileID: 11400000, guid: ec37544ca0d8b3640b920a1f69c80705, type: 2}
-  - {fileID: 11400000, guid: a9bd836f3fecbe4469f275559ee76f01, type: 2}
-  - {fileID: 11400000, guid: 601a6938fd2feec47bb7c99a5497ae9b, type: 2}
   - {fileID: 11400000, guid: 3ef2a1c3a25ed764bb57de3be8960e7a, type: 2}
   - {fileID: 11400000, guid: 1c574a7c95db0204d8f2627686dde9dd, type: 2}
-  - {fileID: 11400000, guid: 2c22445a1c49d7f4587aad0d120738bb, type: 2}
   - {fileID: 11400000, guid: 9c9c95d0c839e12409171dc4a845551a, type: 2}
-  CurrentWeatherType: {fileID: 11400000, guid: 5e51740885cc8c14497e44041aeb303e, type: 2}
+  CurrentWeatherType: {fileID: 11400000, guid: 865815ce607d94c4cb41162c44555e7c, type: 2}
   NextWeatherType: {fileID: 0}
   ByPassCoverageTransition: 0
   m_PrecipitationOdds: 50
@@ -1064,20 +1055,14 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
-  ThunderSounds:
-  - {fileID: 8300000, guid: 23b13aaf17568db44b8fb69388dbc767, type: 3}
-  - {fileID: 8300000, guid: 1a9d5ec856146464482f7c164641c3dc, type: 3}
-  - {fileID: 8300000, guid: b34eab9b1c1c05849a01cebc398289ac, type: 3}
-  - {fileID: 8300000, guid: b133ec583693b6743a5b76f9c3a38f67, type: 3}
-  - {fileID: 8300000, guid: 93d5321dafdd3604dac0e96715076e61, type: 3}
-  - {fileID: 8300000, guid: 51b0c86fc3ef05048b1bb7652f63d525, type: 3}
+  ThunderSounds: []
   LightningGroundStrikeOdds: 0
   LightningStrikeEffect: {fileID: 1535608796004206, guid: 5fef780c945f5f14488871b19748cf32,
     type: 3}
   LightningStrikeFire: {fileID: 1364074241210124, guid: 6ab6b768af98858439bce16dbf6c68ad,
     type: 3}
   WeatherGeneration: 0
-  LightningStrikes: 0
+  LightningStrikes: 1
   CloudShadows: 0
   LightningStrikesEmeraldAI: 1
   EmeraldAITag: Respawn
@@ -1105,8 +1090,7 @@ MonoBehaviour:
   DetectionLayerMask:
     serializedVersion: 2
     m_Bits: 8193
-  LightningFireTags:
-  - Respawn
+  LightningFireTags: []
   LightningLightIntensityMin: 1
   LightningLightIntensityMax: 2.5
   CurrentFogAmount: 0
@@ -1338,26 +1322,26 @@ MonoBehaviour:
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 6.6303854
-      value: -0.015934877
-      inSlope: 0.0012840834
-      outSlope: 0.0012840834
+      time: 5.887021
+      value: 0.32417834
+      inSlope: 0.19004504
+      outSlope: 0.19004504
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
-      outWeight: 0.33333334
+      outWeight: 1
     - serializedVersion: 3
       time: 7.018123
       value: 1.75
-      inSlope: 0.00529797
-      outSlope: 0.00529797
+      inSlope: 0.1289978
+      outSlope: 0.1289978
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
+      inWeight: 1
       outWeight: 0.33333334
     - serializedVersion: 3
       time: 12.760666
-      value: 1.75
+      value: 1.993515
       inSlope: -0.0005448237
       outSlope: -0.0005448237
       tangentMode: 0
@@ -1367,20 +1351,20 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 18.260645
       value: 1.75
-      inSlope: -0.0053261714
-      outSlope: -0.0053261714
+      inSlope: -0.11462243
+      outSlope: -0.11462243
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
-      outWeight: 0.33333334
+      outWeight: 1
     - serializedVersion: 3
-      time: 18.898924
-      value: -0.018975977
-      inSlope: -0.0023423703
-      outSlope: -0.0023423703
+      time: 19.191776
+      value: 0.22592288
+      inSlope: -0.15746395
+      outSlope: -0.15746395
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
+      inWeight: 1
       outWeight: 0.33333334
     - serializedVersion: 3
       time: 23.977945
@@ -1733,7 +1717,7 @@ MonoBehaviour:
   AtmosphericFogMultiplier: 1
   m_MoonLight: {fileID: 0}
   MoonPhaseIndex: 4
-  MoonBrightness: 0.55
+  MoonBrightness: 0.6
   m_MoonPhaseMaterial: {fileID: 0}
   MoonIntensity: 1
   MoonPhaseIntensity: 1
@@ -1750,14 +1734,14 @@ MonoBehaviour:
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 5.8063354
-      value: 0.9899561
-      inSlope: 0
-      outSlope: 0
+      time: 4.942124
+      value: 0.80090535
+      inSlope: -0.10486218
+      outSlope: -0.10486218
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
-      outWeight: 0.33333334
+      outWeight: 1
     - serializedVersion: 3
       time: 6.3791146
       value: -0.011564111
@@ -1777,13 +1761,13 @@ MonoBehaviour:
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 19.538858
-      value: 0.9920052
-      inSlope: 0.0023841858
-      outSlope: 0.0023841858
+      time: 19.780838
+      value: 0.8149197
+      inSlope: 0.1276446
+      outSlope: 0.1276446
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
+      inWeight: 1
       outWeight: 0.33333334
     - serializedVersion: 3
       time: 23.9773
@@ -1811,7 +1795,7 @@ MonoBehaviour:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0.45
+      value: 0.47240564
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -1820,7 +1804,7 @@ MonoBehaviour:
       outWeight: 0.33333334
     - serializedVersion: 3
       time: 24
-      value: 0.45
+      value: 0.47240564
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -1978,12 +1962,12 @@ MonoBehaviour:
   Hemisphere: 1
   SunShadowType: 2
   MoonShadowType: 2
-  LightningShadowType: 2
+  LightningShadowType: 0
   SunShadowResolution: 1
   MoonShadowResolution: 1
   LightningShadowResolution: 1
-  SunShadowStrength: 0.9
-  MoonShadowStrength: 0.9
+  SunShadowStrength: 0.8
+  MoonShadowStrength: 0.903
   LightningShadowStrength: 0.75
   MoonPhaseList:
   - MoonPhaseTexture: {fileID: 2800000, guid: f46314eb7ec20a94bae5fd6248610896, type: 3}
@@ -2004,7 +1988,7 @@ MonoBehaviour:
     MoonPhaseIntensity: 1.32
   m_AuroraParent: {fileID: 0}
   StarmapType: 0
-  CloudRenderType: 0
+  CloudRenderType: 1
   SunLightShaftIntensity:
     serializedVersion: 2
     m_Curve:
@@ -2179,8 +2163,8 @@ MonoBehaviour:
     m_NumAlphaKeys: 2
   MoonColor:
     serializedVersion: 2
-    key0: {r: 0.26561943, g: 0.37040937, b: 0.4433962, a: 1}
-    key1: {r: 0.26561943, g: 0.37040937, b: 0.4433962, a: 1}
+    key0: {r: 0.20287469, g: 0.26852897, b: 0.4433962, a: 1}
+    key1: {r: 0.1966892, g: 0.23033756, b: 0.49056602, a: 1}
     key2: {r: 0, g: 0, b: 0, a: 0}
     key3: {r: 0, g: 0, b: 0, a: 0}
     key4: {r: 0, g: 0, b: 0, a: 0}
@@ -2204,7 +2188,7 @@ MonoBehaviour:
     atime6: 0
     atime7: 0
     m_Mode: 0
-    m_ColorSpace: -1
+    m_ColorSpace: 0
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   SkyColor:
@@ -2419,8 +2403,8 @@ MonoBehaviour:
     m_NumAlphaKeys: 2
   StarLightColor:
     serializedVersion: 2
-    key0: {r: 1, g: 1, b: 1, a: 1}
-    key1: {r: 1, g: 1, b: 1, a: 1}
+    key0: {r: 0.4009434, g: 0.99017984, b: 1, a: 1}
+    key1: {r: 1, g: 0.98784566, b: 0.5990566, a: 1}
     key2: {r: 0, g: 0, b: 0, a: 0}
     key3: {r: 0, g: 0, b: 0, a: 0}
     key4: {r: 0, g: 0, b: 0, a: 1}
@@ -2748,7 +2732,7 @@ MonoBehaviour:
     m_NumColorKeys: 6
     m_NumAlphaKeys: 2
   MoonPhaseColor: {r: 1, g: 1, b: 1, a: 1}
-  MoonlightColor: {r: 0.33023313, g: 0.36793935, b: 0.38679242, a: 1}
+  MoonlightColor: {r: 0.4012549, g: 0.5232147, b: 0.6698113, a: 1}
   DefaultCloudBaseColor:
     serializedVersion: 2
     key0: {r: 1, g: 1, b: 1, a: 1}
@@ -3027,7 +3011,7 @@ Transform:
   m_GameObject: {fileID: 5730936182224284921}
   serializedVersion: 2
   m_LocalRotation: {x: 0.08715578, y: -0, z: -0, w: 0.9961947}
-  m_LocalPosition: {x: -625, y: -95.14903, z: -1038}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3141,6 +3125,7 @@ GameObject:
   - component: {fileID: 4604863798379350138}
   - component: {fileID: 1322890600680016017}
   - component: {fileID: 811673774033230645}
+  - component: {fileID: 4005699428666983174}
   m_Layer: 0
   m_Name: UniStorm Moon
   m_TagString: Untagged
@@ -3248,6 +3233,25 @@ MonoBehaviour:
   m_LightCookieSize: {x: 128, y: 128}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
+--- !u!114 &4005699428666983174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5943550126136867928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96e8a465dca0cc54fae4c8c200c201f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inheritDataFromLightComponent: 1
+  lightComponent: {fileID: 1322890600680016017}
+  areaSizeCached: {x: 1, y: 1, z: 0, w: 0}
+  lightColor: {r: 1, g: 1, b: 1, a: 1}
+  bias: 0
+  lightRange: 0
+  lightIntensity: 10
 --- !u!1 &6162152491884792034
 GameObject:
   m_ObjectHideFlags: 0
