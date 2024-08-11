@@ -60,6 +60,7 @@ namespace Player
         [Header("Events")]
         public UnityEvent OnLandEvent;
         public UnityEvent OnFootstepEvent;
+        public UnityEvent OnJumpEvent;
 
         [Header("Cinemachine")]
         [Tooltip("The follow target set in the Cinemachine Virtual Camera that the camera will follow")]
@@ -386,6 +387,14 @@ namespace Player
             if (animationEvent.animatorClipInfo.weight > 0.5f)
             {
                 OnLandEvent?.Invoke();
+            }
+        }
+
+        private void OnJumpStart(AnimationEvent animationEvent)
+        {
+            if (animationEvent.animatorClipInfo.weight > 0.5f)
+            {
+                OnJumpEvent?.Invoke();
             }
         }
     }

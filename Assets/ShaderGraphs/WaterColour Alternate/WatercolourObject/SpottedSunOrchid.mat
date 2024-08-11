@@ -21,17 +21,16 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: SpottedSunOrchid
-  m_Shader: {fileID: -6465566751694194690, guid: d783dc98fee3f7949b2183ffdb7db05b,
+  m_Shader: {fileID: -6465566751694194690, guid: 5689a2a1912c34543890a016eb78fc50,
     type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
   - _ALPHATEST_ON
-  - _SPECULAR_SETUP
   m_InvalidKeywords: []
   m_LightmapFlags: 1
   m_EnableInstancingVariants: 1
-  m_DoubleSidedGI: 1
+  m_DoubleSidedGI: 0
   m_CustomRenderQueue: 2450
   stringTagMap:
     RenderType: TransparentCutout
@@ -120,17 +119,18 @@ Material:
     m_Ints: []
     m_Floats:
     - Vector1_2BDF6FD9: 0.31
-    - Vector1_2FA10055: 1
+    - Vector1_2FA10055: 1.73
     - Vector1_46F1304E: 0.21
-    - Vector1_BBEA2355: 1
+    - Vector1_BBEA2355: 0.79
     - _AO_Strength: 1
-    - _Albedo_Strength: 0.51
+    - _Albedo_Strength: 1
     - _AlphaClip: 1
     - _AlphaMultiplier: 0.332
     - _AlphaToMask: 1
     - _Alpha_Clip_Threshold: 0.198
     - _Blend: 0
     - _BlendModePreserveSpecular: 1
+    - _BottomColourPosition: 1
     - _BumpScale: 1
     - _CastShadows: 0
     - _ClearCoatMask: 0
@@ -146,6 +146,8 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
+    - _InteractionDistance: 1
+    - _InteractionStrength: 1
     - _Metallic: 0
     - _Metallic_Strength: 0
     - _Mode: 0
@@ -178,10 +180,11 @@ Material:
     - _ZWrite: 1
     - _ZWriteControl: 0
     m_Colors:
-    - Color_D9F05973: {r: 0.41509432, g: 0.41509432, b: 0.41509432, a: 1}
+    - Color_D9F05973: {r: 0, g: 0, b: 0, a: 1}
     - Color_DB04B181: {r: 0.04205233, g: 0.1592349, b: 0.254717, a: 1}
     - _Albedo_Color: {r: 1, g: 1, b: 1, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - _BottomColour: {r: 0, g: 0, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Emission_Color: {r: 0, g: 0, b: 0, a: 0}
