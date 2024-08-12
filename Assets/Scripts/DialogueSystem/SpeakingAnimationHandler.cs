@@ -40,11 +40,11 @@ namespace DialogueSystem
         public void SetAnimationState(string newState, string newEmotion)
         {
             ResetState();
-            Debug.Log($"SetAnimationState: {newState} {newEmotion}");
+            // Debug.Log($"SetAnimationState: {newState} {newEmotion}");
             state = ParseState(newState);
             emotion = ParseEmotion(newEmotion);
 
-            Debug.Log($"SetAnimationState: {state} {emotion}");
+            // Debug.Log($"SetAnimationState: {state} {emotion}");
             UpdateAnimation();
         }
     
