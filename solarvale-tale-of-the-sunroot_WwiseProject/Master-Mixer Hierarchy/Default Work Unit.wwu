@@ -20,7 +20,9 @@
 					<ChildrenList>
 						<Bus Name="Animals" ID="{7F338F3F-8132-4E7B-9A3A-B8C748CF0DDE}">
 							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
 								<Property Name="Color" Type="int16" Value="26"/>
+								<Property Name="ListenerRelativeRouting" Type="bool" Value="True"/>
 								<Property Name="MaxSoundPerInstance" Type="int16">
 									<ValueList>
 										<Value>3</Value>
@@ -33,6 +35,11 @@
 									</ValueList>
 								</Property>
 							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="AnimalSoundAtten" ID="{BADF60B6-F5A2-4FE1-83CA-79928673C0CD}" WorkUnitID="{05E83523-ED60-4EDF-8A61-DC39396E21A4}"/>
+								</Reference>
+							</ReferenceList>
 							<ObjectLists>
 								<ObjectList Name="RTPC">
 									<Reference>
@@ -116,6 +123,7 @@
 									</ValueList>
 								</Property>
 								<Property Name="Color" Type="int16" Value="18"/>
+								<Property Name="ListenerRelativeRouting" Type="bool" Value="True"/>
 								<Property Name="MaxSoundPerInstance" Type="int16">
 									<ValueList>
 										<Value>10</Value>
@@ -123,6 +131,11 @@
 								</Property>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
 							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="Atmos" ID="{02DBC80D-A3A8-401A-BF00-768794A1700C}" WorkUnitID="{05E83523-ED60-4EDF-8A61-DC39396E21A4}"/>
+								</Reference>
+							</ReferenceList>
 							<ObjectLists>
 								<ObjectList Name="Effects">
 									<Reference>
@@ -254,7 +267,10 @@
 						</Bus>
 						<Bus Name="SFX" ID="{3FC18421-AC5C-4E17-B64E-3EC8FFF12898}">
 							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
 								<Property Name="Color" Type="int16" Value="1"/>
+								<Property Name="IgnoreParentMaxSoundInstance" Type="bool" Value="True"/>
+								<Property Name="ListenerRelativeRouting" Type="bool" Value="True"/>
 								<Property Name="MaxSoundPerInstance" Type="int16">
 									<ValueList>
 										<Value>3</Value>
@@ -267,6 +283,11 @@
 									</ValueList>
 								</Property>
 							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="SFX" ID="{63D4284B-9C54-4804-A4EE-9E10CCD1F143}" WorkUnitID="{05E83523-ED60-4EDF-8A61-DC39396E21A4}"/>
+								</Reference>
+							</ReferenceList>
 							<ObjectLists>
 								<ObjectList Name="RTPC">
 									<Reference>
@@ -350,8 +371,14 @@
 									</ValueList>
 								</Property>
 								<Property Name="Color" Type="int16" Value="24"/>
+								<Property Name="ListenerRelativeRouting" Type="bool" Value="True"/>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
 							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="Music" ID="{0C2B7C28-9841-42C4-A082-7AB24B6CB828}" WorkUnitID="{05E83523-ED60-4EDF-8A61-DC39396E21A4}"/>
+								</Reference>
+							</ReferenceList>
 							<ObjectLists>
 								<ObjectList Name="RTPC">
 									<Reference>
@@ -510,8 +537,14 @@
 						<Bus Name="AnimalAtmos" ID="{F9987C84-9B33-44CC-A6C3-1E3CB4F52D3C}">
 							<PropertyList>
 								<Property Name="Color" Type="int16" Value="26"/>
+								<Property Name="ListenerRelativeRouting" Type="bool" Value="True"/>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
 							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="Atmos" ID="{02DBC80D-A3A8-401A-BF00-768794A1700C}" WorkUnitID="{05E83523-ED60-4EDF-8A61-DC39396E21A4}"/>
+								</Reference>
+							</ReferenceList>
 							<ObjectLists>
 								<ObjectList Name="RTPC">
 									<Reference>
