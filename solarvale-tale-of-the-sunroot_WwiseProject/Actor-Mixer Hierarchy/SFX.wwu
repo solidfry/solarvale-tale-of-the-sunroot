@@ -222,7 +222,7 @@
 						<Property Name="3DSpatialization" Type="int16" Value="1"/>
 						<Property Name="MakeUpGain" Type="Real64">
 							<ValueList>
-								<Value>20</Value>
+								<Value>30</Value>
 							</ValueList>
 						</Property>
 						<Property Name="OverrideGameAuxSends" Type="bool" Value="True"/>
@@ -327,7 +327,7 @@
 						<Property Name="3DSpatialization" Type="int16" Value="2"/>
 						<Property Name="MakeUpGain" Type="Real64">
 							<ValueList>
-								<Value>10</Value>
+								<Value>15</Value>
 							</ValueList>
 							<ModifierList>
 								<ModifierInfo>
@@ -345,12 +345,15 @@
 						<Property Name="OverrideOutput" Type="bool" Value="True"/>
 						<Property Name="OverridePositioning" Type="bool" Value="True"/>
 						<Property Name="Pitch" Type="int32">
+							<ValueList>
+								<Value>3</Value>
+							</ValueList>
 							<ModifierList>
 								<ModifierInfo>
 									<Modifier Name="" ID="{D43340B1-69B3-4C5D-AF10-D5CD92E7750E}">
 										<PropertyList>
 											<Property Name="Enabled" Type="bool" Value="True"/>
-											<Property Name="Max" Type="Real64" Value="100"/>
+											<Property Name="Max" Type="Real64" Value="200"/>
 											<Property Name="Min" Type="Real64" Value="-1"/>
 										</PropertyList>
 									</Modifier>
@@ -451,19 +454,22 @@
 						<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
 						<Property Name="MakeUpGain" Type="Real64">
 							<ValueList>
-								<Value>5</Value>
+								<Value>15</Value>
 							</ValueList>
 						</Property>
 						<Property Name="OverrideGameAuxSends" Type="bool" Value="True"/>
 						<Property Name="OverrideOutput" Type="bool" Value="True"/>
 						<Property Name="OverridePositioning" Type="bool" Value="True"/>
 						<Property Name="Pitch" Type="int32">
+							<ValueList>
+								<Value>2</Value>
+							</ValueList>
 							<ModifierList>
 								<ModifierInfo>
 									<Modifier Name="" ID="{C3D34AAF-C16A-4EAD-919D-B3A1C7EFA671}">
 										<PropertyList>
 											<Property Name="Enabled" Type="bool" Value="True"/>
-											<Property Name="Max" Type="Real64" Value="100"/>
+											<Property Name="Max" Type="Real64" Value="150"/>
 											<Property Name="Min" Type="Real64" Value="-1"/>
 										</PropertyList>
 									</Modifier>
@@ -557,6 +563,11 @@
 				</Sound>
 				<RandomSequenceContainer Name="Forest" ID="{45829E48-39DD-45CF-9A53-8D6C0696C901}" ShortID="655024495">
 					<PropertyList>
+						<Property Name="MakeUpGain" Type="Real64">
+							<ValueList>
+								<Value>7</Value>
+							</ValueList>
+						</Property>
 						<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
 						<Property Name="OverrideGameAuxSends" Type="bool" Value="True"/>
 						<Property Name="OverrideOutput" Type="bool" Value="True"/>
@@ -867,6 +878,11 @@
 				</RandomSequenceContainer>
 				<RandomSequenceContainer Name="Rubbish" ID="{8FCB4D8C-3178-48E5-9FC8-E2756629AD46}" ShortID="100751659">
 					<PropertyList>
+						<Property Name="MakeUpGain" Type="Real64">
+							<ValueList>
+								<Value>7</Value>
+							</ValueList>
+						</Property>
 						<Property Name="OverrideGameAuxSends" Type="bool" Value="True"/>
 						<Property Name="OverrideOutput" Type="bool" Value="True"/>
 						<Property Name="OverridePositioning" Type="bool" Value="True"/>
@@ -1173,7 +1189,7 @@
 					<PropertyList>
 						<Property Name="MakeUpGain" Type="Real64">
 							<ValueList>
-								<Value>7</Value>
+								<Value>10</Value>
 							</ValueList>
 						</Property>
 						<Property Name="OverrideOutput" Type="bool" Value="True"/>

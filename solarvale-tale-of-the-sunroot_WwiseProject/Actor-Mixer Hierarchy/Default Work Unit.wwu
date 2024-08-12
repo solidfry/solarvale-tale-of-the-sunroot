@@ -56,6 +56,11 @@
 						<Sound Name="music_flute_solo" ID="{19E1FC93-6D25-4895-ADF7-6491EA3262A4}" ShortID="426584283">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>20</Value>
+									</ValueList>
+								</Property>
 								<Property Name="OverrideConversion" Type="bool" Value="True"/>
 								<Property Name="OverrideOutput" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
@@ -144,6 +149,11 @@
 						<Sound Name="music_flutes_edit" ID="{5CD7F791-2127-406D-8712-9551503B4E60}" ShortID="446237596">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>5</Value>
+									</ValueList>
+								</Property>
 								<Property Name="OverrideConversion" Type="bool" Value="True"/>
 								<Property Name="OverrideOutput" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
@@ -339,6 +349,11 @@
 						</Sound>
 						<Sound Name="music_gecko" ID="{CC9A6D86-41D5-43E5-A72E-390AE32309A5}" ShortID="204581409">
 							<PropertyList>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>7</Value>
+									</ValueList>
+								</Property>
 								<Property Name="OverrideConversion" Type="bool" Value="True"/>
 								<Property Name="OverrideOutput" Type="bool" Value="True"/>
 							</PropertyList>
@@ -426,16 +441,11 @@
 						<RandomSequenceContainer Name="Grandma" ID="{AA4076EC-02F5-4AB1-96AF-E5CDC39AC5A2}" ShortID="523208289">
 							<PropertyList>
 								<Property Name="GlobalOrPerObject" Type="int16" Value="0"/>
-								<Property Name="InitialDelay" Type="Real64">
-									<ValueList>
-										<Value>10</Value>
-									</ValueList>
-								</Property>
 								<Property Name="OverrideOutput" Type="bool" Value="True"/>
 								<Property Name="PlayMechanismInfiniteOrNumberOfLoops" Type="int16" Value="0"/>
 								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
 								<Property Name="PlayMechanismLoopCount" Type="int32" Value="4"/>
-								<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismResetPlaylistEachPlay" Type="bool" Value="False"/>
 								<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="5"/>
 								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 								<Property Name="RandomOrSequence" Type="int16" Value="0"/>
@@ -456,7 +466,7 @@
 										<Property Name="LoopCount" Type="int32" Value="4"/>
 										<Property Name="MakeUpGain" Type="Real64">
 											<ValueList>
-												<Value>10</Value>
+												<Value>25</Value>
 											</ValueList>
 										</Property>
 										<Property Name="MaxSoundPerInstance" Type="int16">
@@ -1657,11 +1667,6 @@
 								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="3"/>
 								<Property Name="RandomOrSequence" Type="int16" Value="0"/>
 								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>-13</Value>
-									</ValueList>
-								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">

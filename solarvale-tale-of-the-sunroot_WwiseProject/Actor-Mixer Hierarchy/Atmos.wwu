@@ -573,7 +573,7 @@
 						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 						<Property Name="MakeUpGain" Type="Real64">
 							<ValueList>
-								<Value>10</Value>
+								<Value>13</Value>
 							</ValueList>
 						</Property>
 						<Property Name="MaxSoundPerInstance" Type="int16">
@@ -593,8 +593,7 @@
 									<Modifier Name="" ID="{9DCB5610-0792-4AC1-97D5-C21CECFB6EFB}">
 										<PropertyList>
 											<Property Name="Enabled" Type="bool" Value="True"/>
-											<Property Name="Max" Type="Real64" Value="50"/>
-											<Property Name="Min" Type="Real64" Value="-1"/>
+											<Property Name="Max" Type="Real64" Value="454"/>
 										</PropertyList>
 									</Modifier>
 								</ModifierInfo>
@@ -697,7 +696,7 @@
 						<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
 						<Property Name="MakeUpGain" Type="Real64">
 							<ValueList>
-								<Value>23</Value>
+								<Value>27</Value>
 							</ValueList>
 						</Property>
 						<Property Name="OverrideGameAuxSends" Type="bool" Value="True"/>
@@ -1292,6 +1291,11 @@
 					<PropertyList>
 						<Property Name="3DSpatialization" Type="int16" Value="1"/>
 						<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
+						<Property Name="MakeUpGain" Type="Real64">
+							<ValueList>
+								<Value>10</Value>
+							</ValueList>
+						</Property>
 						<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
 						<Property Name="OverrideGameAuxSends" Type="bool" Value="True"/>
 						<Property Name="OverrideOutput" Type="bool" Value="True"/>
@@ -1994,6 +1998,11 @@
 						<Property Name="3DSpatialization" Type="int16" Value="1"/>
 						<Property Name="GlobalOrPerObject" Type="int16" Value="0"/>
 						<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
+						<Property Name="MakeUpGain" Type="Real64">
+							<ValueList>
+								<Value>12</Value>
+							</ValueList>
+						</Property>
 						<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
 						<Property Name="OverrideGameAuxSends" Type="bool" Value="True"/>
 						<Property Name="OverrideOutput" Type="bool" Value="True"/>
@@ -2345,6 +2354,11 @@
 						<Property Name="3DSpatialization" Type="int16" Value="1"/>
 						<Property Name="GlobalOrPerObject" Type="int16" Value="0"/>
 						<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
+						<Property Name="MakeUpGain" Type="Real64">
+							<ValueList>
+								<Value>20</Value>
+							</ValueList>
+						</Property>
 						<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
 						<Property Name="OverrideGameAuxSends" Type="bool" Value="True"/>
 						<Property Name="OverrideOutput" Type="bool" Value="True"/>
@@ -2370,7 +2384,7 @@
 								<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
 								<Property Name="MakeUpGain" Type="Real64">
 									<ValueList>
-										<Value>25</Value>
+										<Value>15</Value>
 									</ValueList>
 								</Property>
 								<Property Name="OverrideGameAuxSends" Type="bool" Value="True"/>
@@ -2378,14 +2392,14 @@
 								<Property Name="OverridePositioning" Type="bool" Value="True"/>
 								<Property Name="Pitch" Type="int32">
 									<ValueList>
-										<Value>-1</Value>
+										<Value>-3</Value>
 									</ValueList>
 									<ModifierList>
 										<ModifierInfo>
 											<Modifier Name="" ID="{3F6BE9DC-D88A-40EE-A5DA-3487FA0B26CB}">
 												<PropertyList>
 													<Property Name="Enabled" Type="bool" Value="True"/>
-													<Property Name="Max" Type="Real64" Value="50"/>
+													<Property Name="Max" Type="Real64" Value="403"/>
 													<Property Name="Min" Type="Real64" Value="-1"/>
 												</PropertyList>
 											</Modifier>
@@ -2473,133 +2487,6 @@
 								<ActiveSource Name="Atmos_Beach_Wind_Gentle_" ID="{5C7C05D7-2FF6-4478-BD47-E22E448F417F}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="Atmos_Ocean_Night_01" ID="{A3D9F6C4-FEEF-48B2-9951-36002F7474EC}" ShortID="740307133">
-							<PropertyList>
-								<Property Name="3DSpatialization" Type="int16" Value="1"/>
-								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-								<Property Name="MakeUpGain" Type="Real64">
-									<ValueList>
-										<Value>14</Value>
-									</ValueList>
-									<ModifierList>
-										<ModifierInfo>
-											<Modifier Name="" ID="{8CF73339-33B4-4CC5-BF3A-2D9D2CF37CCB}">
-												<PropertyList>
-													<Property Name="Enabled" Type="bool" Value="True"/>
-													<Property Name="Max" Type="Real64" Value="4"/>
-													<Property Name="Min" Type="Real64" Value="-1"/>
-												</PropertyList>
-											</Modifier>
-										</ModifierInfo>
-									</ModifierList>
-								</Property>
-								<Property Name="OverrideGameAuxSends" Type="bool" Value="True"/>
-								<Property Name="OverrideOutput" Type="bool" Value="True"/>
-								<Property Name="OverridePositioning" Type="bool" Value="True"/>
-								<Property Name="Pitch" Type="int32">
-									<ValueList>
-										<Value>-2</Value>
-									</ValueList>
-									<ModifierList>
-										<ModifierInfo>
-											<Modifier Name="" ID="{47E784E8-77A2-47EE-9B41-F40F62C62D39}">
-												<PropertyList>
-													<Property Name="Enabled" Type="bool" Value="True"/>
-													<Property Name="Max" Type="Real64" Value="150"/>
-													<Property Name="Min" Type="Real64" Value="-2"/>
-												</PropertyList>
-											</Modifier>
-										</ModifierInfo>
-									</ModifierList>
-								</Property>
-								<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="35"/>
-								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Attenuation">
-									<ObjectRef Name="AtmosOcean" ID="{8A9E1632-CA9C-44B6-ACEC-8E6358757A7F}" WorkUnitID="{05E83523-ED60-4EDF-8A61-DC39396E21A4}"/>
-								</Reference>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="AtmosOcean" ID="{4BC672F5-2BB4-4500-8663-BC762BB45A3D}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="Atmos_Ocean_Night_01" ID="{482F8D38-7F2C-4F3F-91A7-1D1DC089A128}">
-									<PropertyList>
-										<Property Name="FadeInDuration" Type="Real64" Value="0.149165249579093"/>
-										<Property Name="FadeOutDuration" Type="Real64" Value="1.53416459192101"/>
-										<Property Name="FadeOutShape" Type="int16" Value="2"/>
-										<Property Name="OverrideConversion" Type="bool" Value="True"/>
-										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-										<Property Name="TrimEnd" Type="Real64" Value="179.639020096019"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<Custom CreatedFrom="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}">
-												<Conversion Name="Vorbis Quality High (Custom)" ID="{D09301BB-7DBD-4FAE-9416-C0DA1A416E6B}">
-													<PropertyList>
-														<Property Name="Channels" Type="int32">
-															<ValueList>
-																<Value Platform="Windows">4</Value>
-																<Value Platform="Mac">4</Value>
-															</ValueList>
-														</Property>
-														<Property Name="LRMix" Type="Real64">
-															<ValueList>
-																<Value Platform="Windows">0</Value>
-																<Value Platform="Mac">0</Value>
-															</ValueList>
-														</Property>
-														<Property Name="MaxSampleRate" Type="int32">
-															<ValueList>
-																<Value Platform="Windows">0</Value>
-																<Value Platform="Mac">0</Value>
-															</ValueList>
-														</Property>
-														<Property Name="MinSampleRate" Type="int32">
-															<ValueList>
-																<Value Platform="Windows">0</Value>
-																<Value Platform="Mac">0</Value>
-															</ValueList>
-														</Property>
-														<Property Name="SRConversionQuality" Type="int32">
-															<ValueList>
-																<Value>1</Value>
-															</ValueList>
-														</Property>
-														<Property Name="SampleRate" Type="int32">
-															<ValueList>
-																<Value Platform="Windows">0</Value>
-																<Value Platform="Mac">0</Value>
-															</ValueList>
-														</Property>
-													</PropertyList>
-													<ConversionPluginInfoList>
-														<ConversionPluginInfo Platform="Windows">
-															<ConversionPlugin Name="" ID="{BC327002-AD82-4B81-9ECD-BDD6CE5730E8}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
-														</ConversionPluginInfo>
-														<ConversionPluginInfo Platform="Mac">
-															<ConversionPlugin Name="" ID="{99E50E30-AC6F-41DA-B75E-B53223ECA2BF}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
-														</ConversionPluginInfo>
-													</ConversionPluginInfoList>
-												</Conversion>
-											</Custom>
-										</Reference>
-									</ReferenceList>
-									<Language>SFX</Language>
-									<AudioFile>Atmos_Ocean_Night_01.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="983979847"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="Atmos_Ocean_Night_01" ID="{482F8D38-7F2C-4F3F-91A7-1D1DC089A128}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
 					</ChildrenList>
 				</RandomSequenceContainer>
 				<RandomSequenceContainer Name="Cave" ID="{121E3A8D-E496-4B9F-B6EE-1103E2E0C744}" ShortID="767162390">
@@ -2630,7 +2517,7 @@
 								<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
 								<Property Name="MakeUpGain" Type="Real64">
 									<ValueList>
-										<Value>6</Value>
+										<Value>15</Value>
 									</ValueList>
 								</Property>
 								<Property Name="OverrideGameAuxSends" Type="bool" Value="True"/>
@@ -2738,7 +2625,7 @@
 								<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
 								<Property Name="MakeUpGain" Type="Real64">
 									<ValueList>
-										<Value>15</Value>
+										<Value>20</Value>
 									</ValueList>
 								</Property>
 								<Property Name="OverrideGameAuxSends" Type="bool" Value="True"/>
