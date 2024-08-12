@@ -24,7 +24,6 @@ namespace AK
         static const AkUniqueID PLAY_BRANDINTRO_BIRDS = 2883217168U;
         static const AkUniqueID PLAY_CAMERA_SNAP = 1514177854U;
         static const AkUniqueID PLAY_CAVE = 3602995889U;
-        static const AkUniqueID PLAY_CLICK = 311910498U;
         static const AkUniqueID PLAY_FOREST = 207755397U;
         static const AkUniqueID PLAY_FOREST_01 = 2322926753U;
         static const AkUniqueID PLAY_FTS_BEACH_JUMP = 2238493386U;
