@@ -43,10 +43,10 @@ namespace DialogueSystem
                 yield return null;
             }
 
-            Debug.Log("Animation ended");
+            // Debug.Log("Animation ended");
             onAnimationEndEvent?.Invoke();
             isPlaying = false;
-            Debug.Log(anim + " is playing: " + isPlaying);
+            // Debug.Log(anim + " is playing: " + isPlaying);
         }
     }
 }

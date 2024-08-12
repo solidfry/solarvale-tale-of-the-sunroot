@@ -9,10 +9,10 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: isHappy
+    m_ConditionEvent: IsHappy
     m_EventTreshold: 0
   - m_ConditionMode: 1
-    m_ConditionEvent: isConversing
+    m_ConditionEvent: IsConversing
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 5579334795028162266}
@@ -93,7 +93,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: isHappy
+    m_ConditionEvent: IsHappy
     m_EventTreshold: 0
   - m_ConditionMode: 4
     m_ConditionEvent: speed
@@ -124,7 +124,7 @@ AnimatorStateTransition:
     m_ConditionEvent: speed
     m_EventTreshold: 0.1
   - m_ConditionMode: 1
-    m_ConditionEvent: isMoving
+    m_ConditionEvent: IsMoving
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -2818103412531187049}
@@ -149,10 +149,10 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: isConcerned
+    m_ConditionEvent: IsConcerned
     m_EventTreshold: 0
   - m_ConditionMode: 1
-    m_ConditionEvent: isConversing
+    m_ConditionEvent: IsConversing
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -7937315971249519915}
@@ -250,25 +250,25 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
-  - m_Name: isMoving
+  - m_Name: IsMoving
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
-  - m_Name: isHappy
+  - m_Name: IsConversing
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
-  - m_Name: isConcerned
+  - m_Name: IsHappy
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
-  - m_Name: isConversing
+  - m_Name: IsConcerned
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -296,7 +296,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: isConversing
+    m_ConditionEvent: IsConversing
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 2102301216360388480}
@@ -349,7 +349,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: isMoving
+    m_ConditionEvent: IsMoving
     m_EventTreshold: 0
   - m_ConditionMode: 4
     m_ConditionEvent: speed
@@ -406,7 +406,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: isConcerned
+    m_ConditionEvent: IsConcerned
     m_EventTreshold: 0
   - m_ConditionMode: 4
     m_ConditionEvent: speed
@@ -434,10 +434,10 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: isConversing
+    m_ConditionEvent: IsConversing
     m_EventTreshold: 0
   - m_ConditionMode: 1
-    m_ConditionEvent: isConcerned
+    m_ConditionEvent: IsConcerned
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -7937315971249519915}
@@ -492,7 +492,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: isConversing
+    m_ConditionEvent: IsConversing
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 3330958161806250696}
@@ -517,10 +517,10 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: isConversing
+    m_ConditionEvent: IsConversing
     m_EventTreshold: 0
   - m_ConditionMode: 2
-    m_ConditionEvent: isConcerned
+    m_ConditionEvent: IsConcerned
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 2102301216360388480}
@@ -545,7 +545,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: isConversing
+    m_ConditionEvent: IsConversing
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 3330958161806250696}
@@ -570,10 +570,10 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: isConversing
+    m_ConditionEvent: IsConversing
     m_EventTreshold: 0
   - m_ConditionMode: 1
-    m_ConditionEvent: isHappy
+    m_ConditionEvent: IsHappy
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 5579334795028162266}
@@ -626,7 +626,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: isHappy
+    m_ConditionEvent: IsHappy
     m_EventTreshold: 0
   - m_ConditionMode: 4
     m_ConditionEvent: speed
@@ -654,10 +654,10 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: isConversing
+    m_ConditionEvent: IsConversing
     m_EventTreshold: 0
   - m_ConditionMode: 2
-    m_ConditionEvent: isHappy
+    m_ConditionEvent: IsHappy
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 2102301216360388480}
@@ -682,7 +682,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: isConcerned
+    m_ConditionEvent: IsConcerned
     m_EventTreshold: 0
   - m_ConditionMode: 4
     m_ConditionEvent: speed
@@ -710,7 +710,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: isConversing
+    m_ConditionEvent: IsConversing
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 3330958161806250696}
