@@ -36,6 +36,7 @@ namespace UI
             _menuInstance = Instantiate(menuPrefab, transform.position, Quaternion.identity, transform);
             _playerHUDInstance = Instantiate(playerHUD, transform.position, Quaternion.identity, transform);
             _menuInstance.ToggleFade(0);
+            SetHUDVisibility(false);
             _playerHUDCanvasGroup = _playerHUDInstance.GetComponent<CanvasGroup>();
         }
         
@@ -44,12 +45,12 @@ namespace UI
             var check = mode == CameraMode.Exploration;
             canShowMenu = check;
             SetHUDVisibility(check);
-            
         }
 
         private void OnEnable()
         {
             GlobalEvents.OnChangeCameraModeEvent += OnCameraModeChanged;
+            GlobalEvents.OnActivateHUDVisibilityEvent += SetHUDVisibility;
             menuOpenAction.action.performed += _ => ToggleMenu();
             menuCloseAction.action.performed += _ => ToggleMenu();
         }
@@ -57,12 +58,11 @@ namespace UI
         private void OnDisable()
         {
             GlobalEvents.OnChangeCameraModeEvent -= OnCameraModeChanged;
+            GlobalEvents.OnActivateHUDVisibilityEvent -= SetHUDVisibility;
         }
         
         private void SetHUDVisibility(bool value)
         {
-            // Debug.Log("Toggle HUD: " + value);
-            //
             isHUDShown = value;
             
             if (_playerHUDCanvasGroup is not null) 

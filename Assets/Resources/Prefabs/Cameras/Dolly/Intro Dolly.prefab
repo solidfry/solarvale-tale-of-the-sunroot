@@ -616,6 +616,7 @@ GameObject:
   - component: {fileID: 8777190979314470187}
   - component: {fileID: 2044728747635313800}
   - component: {fileID: 6269021897549293089}
+  - component: {fileID: 4976769204432194879}
   - component: {fileID: 70330616852848175}
   - component: {fileID: 2116626702155209313}
   - component: {fileID: 4150229413584078287}
@@ -723,6 +724,31 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 4976769204432194879}
+        m_TargetAssemblyTypeName: HUDVisibilityRequest, Assembly-CSharp
+        m_MethodName: RequestHUDVisibility
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+--- !u!114 &4976769204432194879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5799094415869633562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c468386a82b3b5c4789704abce32eb5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <SetVisible>k__BackingField: 1
 --- !u!114 &70330616852848175
 MonoBehaviour:
   m_ObjectHideFlags: 0

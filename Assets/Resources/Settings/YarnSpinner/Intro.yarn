@@ -4,10 +4,10 @@ tags:
 <<set_animation_state LilacRig "conversing" "happy">>
 Grandma: Surprise! Happy 9th birthday, my little naturalist. I hope you have a wonderful day filled with joy and adventures
 Grandma: Here is a special gift from me to you. It's a camera! This will help you capture all the beautiful moments and discoveries in Solarvale
-    -> Take the gift
-Grandma: Here is an album as well, Lola. You can put your photos here and look back on them whenever you want
+    -> Take the gift.
+Grandma: Here is an album as well, Lola. You can put your photos here and look back on them whenever you want.
 <<set_animation_state LilacRig "idle" "happy">>
-Lola: Thank you so much, Grandma! I can't wait to explore Solarvale and capture all its beauty with this camera. I'll make sure to fill this album with the most amazing photos!
+Lola: Thank you so much, Grandma! I can't wait to explore and photograph all the animals on the island. I'll make sure to fill this album with the most amazing photos!
 <<set_animation_state LilacRig "conversing" "happy">>
 Grandma: That's the spirit! Remember, I'll always be here if you need help or want to share your discoveries. Now, go and explore, but stay safe!
 <<set_animation_state LilacRig "idle" "neutral">>
@@ -34,15 +34,16 @@ Grandma: Why don't you take your camera and head over there? Cleaning up will he
 title: LolaHearsAGecko
 tags:
 ---
-Huh what's that sound
+Huh what's that sound. It's coming from that ledge below Whale Rock. 
+    -> Investigate the sound.
 ===
 
 title: LolaMeetsLeaf
 tags:
 ---
-Lola: Oh dear! It looks like you're hurt, little lizard
-Lola: Please don't worry, I'm here to help you
-Lola: I'll take you to my grandma, she will know what to do
+Lola: Oh dear! It looks like you're hurt, little lizard.
+Lola: Please don't worry, I'm here to help you.
+Lola: I'll take you to my grandma, she will know what to do.
 ===
 
 title: GrandmaSharesHerKnowledgeAboutGeckos

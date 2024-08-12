@@ -27,6 +27,7 @@ namespace Events
         #endregion
 
         #region UI Management
+        public static Action<bool> OnActivateHUDVisibilityEvent;
         public static Action<bool> OnSetHUDVisibilityEvent;
         public static Action<bool> OnSetCameraHUDVisibilityEvent;
         #endregion
