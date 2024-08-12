@@ -1,12 +1,16 @@
-﻿title: Start
+﻿title: Introduction
 tags:
 ---
+<<set_animation_state LilacRig "conversing" "happy">>
 Grandma: Surprise! Happy 9th birthday, my little naturalist. I hope you have a wonderful day filled with joy and adventures
 Grandma: Here is a special gift from me to you. It's a camera! This will help you capture all the beautiful moments and discoveries in Solarvale
     -> Take the gift
 Grandma: Here is an album as well, Lola. You can put your photos here and look back on them whenever you want
+<<set_animation_state LilacRig "idle" "happy">>
 Lola: Thank you so much, Grandma! I can't wait to explore Solarvale and capture all its beauty with this camera. I'll make sure to fill this album with the most amazing photos!
+<<set_animation_state LilacRig "conversing" "happy">>
 Grandma: That's the spirit! Remember, I'll always be here if you need help or want to share your discoveries. Now, go and explore, but stay safe!
+<<set_animation_state LilacRig "idle" "neutral">>
 Lola: I will, Grandma! This is the best birthday ever!
 ===
 
@@ -14,13 +18,17 @@ title: ShowGrandmaYourPhotos
 tags:
 ---
 Lola: Hey Grandma, check out the photo I took!
+<<set_animation_state LilacRig "conversing" "happy">>
 Grandma: Wow, look at this! It's are amazing! You have such a great eye.
+<<set_animation_state LilacRig "idle" "happy">>
 Lola: Thanks, Grandma. I was hoping you'd like it.
+<<set_animation_state LilacRig "conversing" "happy">>
 Grandma: Oh dear, like it? I love it!
 Grandma: By the way, Lola, it's been a while since we last cleaned up Whale Rock.
 Grandma: I know it has been challenging. More trash has been washing up on the shores from neighbouring islands, and I fear that it's disrupting our safe home for wildlife.
 Grandma: It's important to keep places like Whale Rock clean. Trash can harm the animals and plants that live here. It can also spoil the natural beauty you've captured in your photos.
 Grandma: Why don't you take your camera and head over there? Cleaning up will help protect the environment and give you a chance to capture some interesting shots while you're at it.
+<<set_animation_state LilacRig "idle" "neutral">>
 ===
 
 title: LolaHearsAGecko
@@ -41,30 +49,49 @@ title: GrandmaSharesHerKnowledgeAboutGeckos
 tags:
 ---
 Lola: Grandma, help I found a lizard and it's hurt.
+<<set_animation_state LilacRig "conversing" "concerned">>
 Grandma: Oh my, Lola! It's a gecko. Where did you find it? 
+<<set_animation_state LilacRig "idle" "concerned">>
 Lola: By the beach, at Whale Rock.
-Grandma: That's rather interesting. Hmm they usually live in warm, dry places, not by the beach.
+<<set_animation_state LilacRig "conversing" "concerned">>
+Grandma: That's rather interesting. Hmm they usually live in warm, dry places, 
+not by the beach.
+<<set_animation_state LilacRig "idle" "concerned">>
 Lola: Then why was it there?
+<<set_animation_state LilacRig "conversing" "concerned">>
 Grandma: That's a good question, Lola. Sometimes, when animals are found in unusual places, it could mean something isn't right.
 Grandma: You know, Lola, we usually don't take insects from their habitats because they play a vital role in the environment.
 Grandma: But for our sick gecko, it's okay. After we've helped Leaf, we'll make sure to put the rest of the insects back where they belong.
+<<set_animation_state LilacRig "idle" "concerned">>
 Lola: Okay, Grandma! I'll be right back.
+<<set_animation_state LilacRig "conversing" "concerned">>
 Grandma: Don't worry, little one. You're in good hands.
+<<set_animation_state LilacRig "idle" "neutral">>
 ===
 
 title: BringCricketstoGrandma
 tags:
 ---
 Lola: Grandma, I got a cricket!
+<<set_animation_state LilacRig "conversing" "happy">>
 Grandma: Wonderful, Lola! Now, let's feed our little friend.
 Grandma: First, we need to be gentle. Hold a cricket close to the gecko's mouth. Be patient, and it will eat when it's ready.
+<<set_animation_state LilacRig "idle" "happy">>
 Lola: Like this, Grandma?
+<<set_animation_state LilacRig "conversing" "neutral">>
 Grandma: Yes, just like that. See? It's already eating!
+<<set_animation_state LilacRig "idle" "happy">>
 Lola: Aww, it’s so cute when it eats.
+<<set_animation_state LilacRig "conversing" "happy">>
 Grandma: Lola. It looks like it’s becoming quite fond of you.
 Grandma: I think it’s time to give our little friend a name.
+<<set_animation_state LilacRig "idle" "happy">>
 Lola: Hmm, how about… Leaf? Because it's small and green, just like a leaf.
-Grandma: Now that Leaf is getting better, let's look for clues.
+<<set_animation_state LilacRig "conversing" "neutral">>
+Grandma: Now that Leaf is getting better, let's look for clues. We need to find out why he was at Whale Rock.
+Grandma: Hmm... you know, my great grandma used to say... when in doubt, follow the path.
+<<set_animation_state LilacRig "idle" "neutral">>
+Grandma motions to the path leading to the forest.
 ===
 
 title: DiscoveringPetroglyphs
@@ -83,27 +110,44 @@ Lola: I should take a picture and show it to Grandma. Maybe she can tell me more
 title: UncoveringPetroglyphs
 tags:
 ---
+<<set_animation_state LilacRig "conversing" "happy">>
 Grandma: Look at these petroglyphs, Lola. They tell a story from long ago.
+<<set_animation_state LilacRig "idle" "happy">>
 Lola: What do they say, Grandma?
+<<set_animation_state LilacRig "conversing" "happy">>
 Grandma: These symbols here are about geckos, creatures known for being territorial. Just like those drawings, geckos can be quite protective of their homes.
+<<set_animation_state LilacRig "idle" "happy">>
 Lola: Are all geckos like that?
+<<set_animation_state LilacRig "conversing" "concerned">>
 Grandma: Mostly, yes. They mark their territories and defend them fiercely.
+<<set_animation_state LilacRig "idle" "concerned">>
 Lola: But we can see geckos living together peacefully here.
+<<set_animation_state LilacRig "conversing" "concerned">>
 Grandma: Ah, that appears to be true. They're younger geckos that are seen to gather under the Sunroot tree. It seems they haven't developed their territorial instincts fully yet.
 Grandma: Lola. Look closely at this gecko in the drawing. It looks a lot like Leaf, doesn't it? See how peacefully they're all living under the Sunroot tree.
+<<set_animation_state LilacRig "idle" "concerned">>
 Lola: You're right, Grandma! Maybe that's where we need to bring Leaf, to a place where he can be with other geckos like these.
+<<set_animation_state LilacRig "conversing" "happy">>
 Grandma: Exactly, Lola. Bringing Leaf to where he can be with others of his kind might be just what he needs to feel at home again.
 ===
 
 title: ReleasingLeafAtTheSunRootTree
 tags:
 ---
+<<set_animation_state LilacRig "conversing" "happy">>
 Grandma: Here we are, Lola. The Sunroot tree. This is the place where Leaf belongs.
+<<set_animation_state LilacRig "idle" "happy">>
 Lola: There you go, Leaf. This is your home.
+<<set_animation_state LilacRig "conversing" "happy">>
 Grandma: You did a wonderful thing, Lola. Look how happy Leaf is.
+<<set_animation_state LilacRig "idle" "happy">>
 Lola: I’ll miss him, but I know this is where he belongs.
+<<set_animation_state LilacRig "conversing" "happy">>
 Grandma: You’ve created a special bond with Leaf, Lola. He’ll always be part of your heart.
+<<set_animation_state LilacRig "idle" "happy">>
 Lola: And I’ll always remember what we learned together.
+<<set_animation_state LilacRig "conversing" "happy">>
 Grandma: You’ve shown kindness and wisdom. Let’s carry that with us as we head home.
+<<set_animation_state LilacRig "idle" "happy">>
 ===
 
