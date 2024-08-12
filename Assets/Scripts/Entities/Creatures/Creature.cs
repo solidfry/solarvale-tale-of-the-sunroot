@@ -241,10 +241,10 @@ namespace Entities.Creatures
             float targetAltitude = transform.position.y;
             float currentAltitude = model.transform.position.y;
             float descentDistance = currentAltitude - targetAltitude;
-            float duration = CalculateDuration(descentDistance, flyer.GetSpecialisedSpeed());
+            float duration = CalculateDuration(descentDistance, flyer.GetSpecialisedSpeed() * 0.3f);
             
             Vector3 targetPosition = new Vector3(position.x, targetAltitude, position.z);
-            var level = model.transform.DOMoveY(targetPosition.y, duration).OnComplete(() =>
+            var level = model.transform.DOMoveY(targetPosition.y, duration).SetEase(Ease.OutExpo).OnComplete(() =>
             {
                 onFlightEnd?.Invoke();
                 IsFlying = false;
