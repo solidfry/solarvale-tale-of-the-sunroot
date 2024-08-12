@@ -317,7 +317,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="393239870" Type="User" Language="SFX" Hash="{3B882ECE-E825-9DE0-74E7-6F4C76D1AF76}">
+		<SoundBank Id="393239870" Type="User" Language="SFX" Hash="{6F34282D-99C9-BE13-AB59-382783103704}">
 			<ShortName>SFX</ShortName>
 			<Path>SFX.bnk</Path>
 			<Media>
@@ -495,7 +495,7 @@
 				</File>
 			</Media>
 			<Events>
-				<Event Id="2322926753" Name="Play_Forest_01" MaxAttenuation="50" DurationType="OneShot" DurationMin="47.161964" DurationMax="204.61816">
+				<Event Id="2322926753" Name="Play_Forest_01" MaxAttenuation="30" DurationType="OneShot" DurationMin="47.161964" DurationMax="204.61816">
 					<MediaRefs>
 						<MediaRef Id="128914294"/>
 						<MediaRef Id="185360626"/>
@@ -564,22 +564,22 @@
 						<MediaRef Id="81084723"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2907169251" Name="Play_SFX_Sunroot_Tree" MaxAttenuation="50" DurationType="OneShot" DurationMin="5.1122627" DurationMax="5.1122627">
+				<Event Id="2907169251" Name="Play_SFX_Sunroot_Tree" MaxAttenuation="30" DurationType="OneShot" DurationMin="5.1122627" DurationMax="5.1122627">
 					<MediaRefs>
 						<MediaRef Id="864995489"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2000475864" Name="Play_SFX_Wings_flap" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.78024495" DurationMax="0.8271184">
+				<Event Id="2000475864" Name="Play_SFX_Wings_flap" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.7351781" DurationMax="0.8256863">
 					<MediaRefs>
 						<MediaRef Id="955632935"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="61543571" Name="Play_SFX_Wood_Fence_mono" MaxAttenuation="50" DurationType="OneShot" DurationMin="69.374756" DurationMax="73.542465">
+				<Event Id="61543571" Name="Play_SFX_Wood_Fence_mono" MaxAttenuation="30" DurationType="OneShot" DurationMin="67.321976" DurationMax="73.45756">
 					<MediaRefs>
 						<MediaRef Id="503808030"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1712699527" Name="Play_SFX_Wood_Fence_mono_01" MaxAttenuation="50" DurationType="OneShot" DurationMin="69.374756" DurationMax="73.542465">
+				<Event Id="1712699527" Name="Play_SFX_Wood_Fence_mono_01" MaxAttenuation="30" DurationType="OneShot" DurationMin="67.321976" DurationMax="73.45756">
 					<MediaRefs>
 						<MediaRef Id="503808030"/>
 					</MediaRefs>
@@ -1562,7 +1562,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1352063017" Type="User" Language="SFX" Hash="{FF52E3BA-191C-A793-26A8-D8A662D364EF}">
+		<SoundBank Id="1352063017" Type="User" Language="SFX" Hash="{EA181AE6-D5CA-346E-5F1B-FAD89D969E8A}">
 			<ShortName>AtmosOcean</ShortName>
 			<Path>AtmosOcean.bnk</Path>
 			<Media>
@@ -1596,7 +1596,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{BE9A6FC2-2926-9B4D-7A2E-1947195A559F}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{7936339D-B73B-7583-981C-D251E2E7B2F2}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -1649,7 +1649,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="1551306167" Type="User" Language="SFX" Hash="{1CE272D7-B7A1-DCD6-B4B0-1420D7C0E489}">
+		<SoundBank Id="1551306167" Type="User" Language="SFX" Hash="{A59C395B-C185-9CBA-BE2D-127F8F6C00FF}">
 			<ShortName>UI</ShortName>
 			<Path>UI.bnk</Path>
 			<Media>
@@ -1862,7 +1862,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3034623661" Type="User" Language="SFX" Hash="{E6D373BB-53A5-1A1F-B7E8-F02FE8DD910A}">
+		<SoundBank Id="3034623661" Type="User" Language="SFX" Hash="{291B9D57-8150-23DA-F43C-B3EA86DAA499}">
 			<ShortName>Atmos</ShortName>
 			<Path>Atmos.bnk</Path>
 			<Media>
@@ -1946,10 +1946,6 @@
 					<ShortName>Atmos_Cave_Wind_Gentle.wav</ShortName>
 					<CachePath>SFX/Atmos_Cave_Wind_Gentle_EF4CA2DC.wem</CachePath>
 				</File>
-				<File Id="983979847" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Atmos_Ocean_Night_01.wav</ShortName>
-					<CachePath>SFX/Atmos_Ocean_Night_01_C6B9FDE7.wem</CachePath>
-				</File>
 				<File Id="996077951" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Atmos_Mountain_Wind_Gentle..wav</ShortName>
 					<CachePath>SFX/Atmos_Mountain_Wind_Gentle._11E5FCD8.wem</CachePath>
@@ -1964,86 +1960,76 @@
 				</File>
 			</Media>
 			<Events>
-				<Event Id="3680285438" Name="Play_Atmos_Beach_Wind_Gentle_" MaxAttenuation="50" DurationType="OneShot" DurationMin="81.16979" DurationMax="83.59653">
+				<Event Id="3680285438" Name="Play_Atmos_Beach_Wind_Gentle_" MaxAttenuation="30" DurationType="OneShot" DurationMin="66.273994" DurationMax="83.693146">
 					<MediaRefs>
 						<MediaRef Id="864119437"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="172525698" Name="Play_Atmos_Cave_01" MaxAttenuation="50" DurationType="OneShot" DurationMin="116.468925" DurationMax="119.951">
+				<Event Id="172525698" Name="Play_Atmos_Cave_01" MaxAttenuation="30" DurationType="OneShot" DurationMin="116.468925" DurationMax="119.951">
 					<MediaRefs>
 						<MediaRef Id="4175530"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="166362779" Name="Play_Atmos_Cave_Wind_Gentle" MaxAttenuation="50" DurationType="OneShot" DurationMin="116.59044" DurationMax="120.07614">
+				<Event Id="166362779" Name="Play_Atmos_Cave_Wind_Gentle" MaxAttenuation="30" DurationType="OneShot" DurationMin="116.59044" DurationMax="120.07614">
 					<MediaRefs>
 						<MediaRef Id="910494700"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2651066789" Name="Play_Atmos_Mountain_Night_01" MaxAttenuation="50" DurationType="OneShot" DurationMin="174.97679" DurationMax="180.20807">
+				<Event Id="2651066789" Name="Play_Atmos_Mountain_Night_01" MaxAttenuation="30" DurationType="OneShot" DurationMin="174.97679" DurationMax="180.20807">
 					<MediaRefs>
 						<MediaRef Id="679679450"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3290639863" Name="Play_Atmos_Mountain_Rain_01" MaxAttenuation="50" DurationType="OneShot" DurationMin="101.826775" DurationMax="104.871086">
+				<Event Id="3290639863" Name="Play_Atmos_Mountain_Rain_01" MaxAttenuation="30" DurationType="OneShot" DurationMin="101.826775" DurationMax="104.871086">
 					<MediaRefs>
 						<MediaRef Id="302701566"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3527682894" Name="Play_Atmos_Ocean_Night_01" MaxAttenuation="3000" DurationType="Infinite">
-					<MediaRefs>
-						<MediaRef Id="983979847"/>
-					</MediaRefs>
-				</Event>
-				<Event Id="3527682893" Name="Play_Atmos_Ocean_Night_02" MaxAttenuation="3000" DurationType="Infinite">
-					<MediaRefs>
-						<MediaRef Id="983979847"/>
-					</MediaRefs>
-				</Event>
-				<Event Id="794347887" Name="Play_Atmos_Plains_Night_01" MaxAttenuation="50" DurationType="OneShot" DurationMin="86.09101" DurationMax="88.66488">
+				<Event Id="794347887" Name="Play_Atmos_Plains_Night_01" MaxAttenuation="30" DurationType="OneShot" DurationMin="86.09101" DurationMax="88.66488">
 					<MediaRefs>
 						<MediaRef Id="865383717"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3637739725" Name="Play_Atmos_Plains_Rain_01" MaxAttenuation="50" DurationType="OneShot" DurationMin="86.33404" DurationMax="88.91516">
+				<Event Id="3637739725" Name="Play_Atmos_Plains_Rain_01" MaxAttenuation="30" DurationType="OneShot" DurationMin="86.33404" DurationMax="88.91516">
 					<MediaRefs>
 						<MediaRef Id="256322658"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="749604250" Name="Play_Atmos_Plains_Scrub_Wind_Gentle_" MaxAttenuation="50" DurationType="OneShot" DurationMin="145.20644" DurationMax="149.54767">
+				<Event Id="749604250" Name="Play_Atmos_Plains_Scrub_Wind_Gentle_" MaxAttenuation="30" DurationType="OneShot" DurationMin="145.20644" DurationMax="149.54767">
 					<MediaRefs>
 						<MediaRef Id="55608537"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="807656883" Name="Play_Atmos_Stream" MaxAttenuation="50" DurationType="Infinite">
+				<Event Id="807656883" Name="Play_Atmos_Stream" MaxAttenuation="30" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="455223534"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="4178031206" Name="Play_Atmos_Stream_Rain_01" MaxAttenuation="50" DurationType="OneShot" DurationMin="86.212524" DurationMax="88.79002">
+				<Event Id="4178031206" Name="Play_Atmos_Stream_Rain_01" MaxAttenuation="30" DurationType="OneShot" DurationMin="86.212524" DurationMax="88.79002">
 					<MediaRefs>
 						<MediaRef Id="303866217"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="207755397" Name="Play_Forest" MaxAttenuation="50" DurationType="OneShot" DurationMin="195.38037" DurationMax="204.14847">
+				<Event Id="207755397" Name="Play_Forest" MaxAttenuation="30" DurationType="OneShot" DurationMin="195.38037" DurationMax="204.14847">
 					<MediaRefs>
 						<MediaRef Id="104055436"/>
 						<MediaRef Id="411556468"/>
 						<MediaRef Id="440551792"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3050359138" Name="Play_Forest_Night" MaxAttenuation="50" DurationType="OneShot" DurationMin="87.0631" DurationMax="89.66603">
+				<Event Id="3050359138" Name="Play_Forest_Night" MaxAttenuation="30" DurationType="OneShot" DurationMin="87.0631" DurationMax="89.66603">
 					<MediaRefs>
 						<MediaRef Id="358346763"/>
 						<MediaRef Id="1063015699"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1320014010" Name="Play_Forest_Rain" MaxAttenuation="50" DurationType="OneShot" DurationMin="155.65643" DurationMax="160.31009">
+				<Event Id="1320014010" Name="Play_Forest_Rain" MaxAttenuation="30" DurationType="OneShot" DurationMin="155.65643" DurationMax="160.31009">
 					<MediaRefs>
 						<MediaRef Id="743838069"/>
 						<MediaRef Id="1059327981"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="825230623" Name="Play_Mountain" MaxAttenuation="50" DurationType="OneShot" DurationMin="484.34546" DurationMax="498.82593">
+				<Event Id="825230623" Name="Play_Mountain" MaxAttenuation="30" DurationType="OneShot" DurationMin="484.34546" DurationMax="498.82593">
 					<MediaRefs>
 						<MediaRef Id="171262632"/>
 						<MediaRef Id="719415462"/>
@@ -2051,7 +2037,7 @@
 						<MediaRef Id="996077951"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="101803377" Name="Play_Stream_Night" MaxAttenuation="50" DurationType="OneShot" DurationMin="135.97154" DurationMax="140.0367">
+				<Event Id="101803377" Name="Play_Stream_Night" MaxAttenuation="30" DurationType="OneShot" DurationMin="135.97154" DurationMax="140.0367">
 					<MediaRefs>
 						<MediaRef Id="278352414"/>
 						<MediaRef Id="409145320"/>
@@ -2080,16 +2066,6 @@
 				<Event Id="2866427997" Name="Stop_Atmos_Mountain_Rain_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
 					<MediaRefs>
 						<MediaRef Id="302701566"/>
-					</MediaRefs>
-				</Event>
-				<Event Id="3353609564" Name="Stop_Atmos_Ocean_Night_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
-					<MediaRefs>
-						<MediaRef Id="983979847"/>
-					</MediaRefs>
-				</Event>
-				<Event Id="3353609567" Name="Stop_Atmos_Ocean_Night_02" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
-					<MediaRefs>
-						<MediaRef Id="983979847"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="2250174917" Name="Stop_Atmos_Plains_Night_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
@@ -2152,7 +2128,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{1A15C053-EDB9-B10C-B5B5-46E72BD9C345}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{0522954A-7F4A-D02E-BBAB-015EA9581970}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -3108,10 +3084,6 @@
 					<ShortName>23.wav</ShortName>
 					<CachePath>SFX/23_818F3B66.wem</CachePath>
 				</File>
-				<File Id="983979847" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Atmos_Ocean_Night_01.wav</ShortName>
-					<CachePath>SFX/Atmos_Ocean_Night_01_C6B9FDE7.wem</CachePath>
-				</File>
 				<File Id="985933154" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Possum\Mono\possum-chatter_02-mono.wav</ShortName>
 					<CachePath>SFX/Possum/Mono/possum-chatter_02-mono_B0486264.wem</CachePath>
@@ -3264,17 +3236,17 @@
 					</SwitchContainers>
 				</Event>
 				<Event Id="3121266873" Name="Play_Atmos_Beach_Rain_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="3680285438" Name="Play_Atmos_Beach_Wind_Gentle_" MaxAttenuation="50" DurationType="OneShot" DurationMin="81.16979" DurationMax="83.59653">
+				<Event Id="3680285438" Name="Play_Atmos_Beach_Wind_Gentle_" MaxAttenuation="30" DurationType="OneShot" DurationMin="66.273994" DurationMax="83.693146">
 					<MediaRefs>
 						<MediaRef Id="864119437"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="172525698" Name="Play_Atmos_Cave_01" MaxAttenuation="50" DurationType="OneShot" DurationMin="116.468925" DurationMax="119.951">
+				<Event Id="172525698" Name="Play_Atmos_Cave_01" MaxAttenuation="30" DurationType="OneShot" DurationMin="116.468925" DurationMax="119.951">
 					<MediaRefs>
 						<MediaRef Id="4175530"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="166362779" Name="Play_Atmos_Cave_Wind_Gentle" MaxAttenuation="50" DurationType="OneShot" DurationMin="116.59044" DurationMax="120.07614">
+				<Event Id="166362779" Name="Play_Atmos_Cave_Wind_Gentle" MaxAttenuation="30" DurationType="OneShot" DurationMin="116.59044" DurationMax="120.07614">
 					<MediaRefs>
 						<MediaRef Id="910494700"/>
 					</MediaRefs>
@@ -3284,55 +3256,46 @@
 						<MediaRef Id="323340590"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2651066789" Name="Play_Atmos_Mountain_Night_01" MaxAttenuation="50" DurationType="OneShot" DurationMin="174.97679" DurationMax="180.20807">
+				<Event Id="2651066789" Name="Play_Atmos_Mountain_Night_01" MaxAttenuation="30" DurationType="OneShot" DurationMin="174.97679" DurationMax="180.20807">
 					<MediaRefs>
 						<MediaRef Id="679679450"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3290639863" Name="Play_Atmos_Mountain_Rain_01" MaxAttenuation="50" DurationType="OneShot" DurationMin="101.826775" DurationMax="104.871086">
+				<Event Id="3290639863" Name="Play_Atmos_Mountain_Rain_01" MaxAttenuation="30" DurationType="OneShot" DurationMin="101.826775" DurationMax="104.871086">
 					<MediaRefs>
 						<MediaRef Id="302701566"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3527682894" Name="Play_Atmos_Ocean_Night_01" MaxAttenuation="3000" DurationType="Infinite">
-					<MediaRefs>
-						<MediaRef Id="983979847"/>
-					</MediaRefs>
-				</Event>
-				<Event Id="3527682893" Name="Play_Atmos_Ocean_Night_02" MaxAttenuation="3000" DurationType="Infinite">
-					<MediaRefs>
-						<MediaRef Id="983979847"/>
-					</MediaRefs>
-				</Event>
-				<Event Id="794347887" Name="Play_Atmos_Plains_Night_01" MaxAttenuation="50" DurationType="OneShot" DurationMin="86.09101" DurationMax="88.66488">
+				<Event Id="3527682894" Name="Play_Atmos_Ocean_Night_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3527682893" Name="Play_Atmos_Ocean_Night_02" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="794347887" Name="Play_Atmos_Plains_Night_01" MaxAttenuation="30" DurationType="OneShot" DurationMin="86.09101" DurationMax="88.66488">
 					<MediaRefs>
 						<MediaRef Id="865383717"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3637739725" Name="Play_Atmos_Plains_Rain_01" MaxAttenuation="50" DurationType="OneShot" DurationMin="86.33404" DurationMax="88.91516">
+				<Event Id="3637739725" Name="Play_Atmos_Plains_Rain_01" MaxAttenuation="30" DurationType="OneShot" DurationMin="86.33404" DurationMax="88.91516">
 					<MediaRefs>
 						<MediaRef Id="256322658"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="749604250" Name="Play_Atmos_Plains_Scrub_Wind_Gentle_" MaxAttenuation="50" DurationType="OneShot" DurationMin="145.20644" DurationMax="149.54767">
+				<Event Id="749604250" Name="Play_Atmos_Plains_Scrub_Wind_Gentle_" MaxAttenuation="30" DurationType="OneShot" DurationMin="145.20644" DurationMax="149.54767">
 					<MediaRefs>
 						<MediaRef Id="55608537"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="807656883" Name="Play_Atmos_Stream" MaxAttenuation="50" DurationType="Infinite">
+				<Event Id="807656883" Name="Play_Atmos_Stream" MaxAttenuation="30" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="455223534"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="4178031206" Name="Play_Atmos_Stream_Rain_01" MaxAttenuation="50" DurationType="OneShot" DurationMin="86.212524" DurationMax="88.79002">
+				<Event Id="4178031206" Name="Play_Atmos_Stream_Rain_01" MaxAttenuation="30" DurationType="OneShot" DurationMin="86.212524" DurationMax="88.79002">
 					<MediaRefs>
 						<MediaRef Id="303866217"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2006186431" Name="Play_Beach" MaxAttenuation="3000" DurationType="Infinite">
+				<Event Id="2006186431" Name="Play_Beach" MaxAttenuation="30" DurationType="OneShot" DurationMin="66.273994" DurationMax="83.693146">
 					<MediaRefs>
 						<MediaRef Id="864119437"/>
-						<MediaRef Id="983979847"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="2883217168" Name="Play_BrandIntro_Birds" MaxAttenuation="100" DurationType="OneShot" DurationMin="14.034756" DurationMax="14.034756">
@@ -3380,7 +3343,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="3602995889" Name="Play_Cave" MaxAttenuation="50" DurationType="OneShot" DurationMin="233.05936" DurationMax="240.02713">
+				<Event Id="3602995889" Name="Play_Cave" MaxAttenuation="30" DurationType="OneShot" DurationMin="233.05936" DurationMax="240.02713">
 					<MediaRefs>
 						<MediaRef Id="4175530"/>
 						<MediaRef Id="910494700"/>
@@ -3398,27 +3361,27 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="207755397" Name="Play_Forest" MaxAttenuation="50" DurationType="OneShot" DurationMin="195.38037" DurationMax="204.14847">
+				<Event Id="207755397" Name="Play_Forest" MaxAttenuation="30" DurationType="OneShot" DurationMin="195.38037" DurationMax="204.14847">
 					<MediaRefs>
 						<MediaRef Id="104055436"/>
 						<MediaRef Id="411556468"/>
 						<MediaRef Id="440551792"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2322926753" Name="Play_Forest_01" MaxAttenuation="50" DurationType="OneShot" DurationMin="47.161964" DurationMax="204.61816">
+				<Event Id="2322926753" Name="Play_Forest_01" MaxAttenuation="30" DurationType="OneShot" DurationMin="47.161964" DurationMax="204.61816">
 					<MediaRefs>
 						<MediaRef Id="128914294"/>
 						<MediaRef Id="185360626"/>
 						<MediaRef Id="419629795"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3050359138" Name="Play_Forest_Night" MaxAttenuation="50" DurationType="OneShot" DurationMin="87.0631" DurationMax="89.66603">
+				<Event Id="3050359138" Name="Play_Forest_Night" MaxAttenuation="30" DurationType="OneShot" DurationMin="87.0631" DurationMax="89.66603">
 					<MediaRefs>
 						<MediaRef Id="358346763"/>
 						<MediaRef Id="1063015699"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1320014010" Name="Play_Forest_Rain" MaxAttenuation="50" DurationType="OneShot" DurationMin="155.65643" DurationMax="160.31009">
+				<Event Id="1320014010" Name="Play_Forest_Rain" MaxAttenuation="30" DurationType="OneShot" DurationMin="155.65643" DurationMax="160.31009">
 					<MediaRefs>
 						<MediaRef Id="743838069"/>
 						<MediaRef Id="1059327981"/>
@@ -3518,7 +3481,7 @@
 						<MediaRef Id="779082508"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="825230623" Name="Play_Mountain" MaxAttenuation="50" DurationType="OneShot" DurationMin="484.34546" DurationMax="498.82593">
+				<Event Id="825230623" Name="Play_Mountain" MaxAttenuation="30" DurationType="OneShot" DurationMin="484.34546" DurationMax="498.82593">
 					<MediaRefs>
 						<MediaRef Id="171262632"/>
 						<MediaRef Id="719415462"/>
@@ -3774,27 +3737,27 @@
 						<MediaRef Id="81084723"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2907169251" Name="Play_SFX_Sunroot_Tree" MaxAttenuation="50" DurationType="OneShot" DurationMin="5.1122627" DurationMax="5.1122627">
+				<Event Id="2907169251" Name="Play_SFX_Sunroot_Tree" MaxAttenuation="30" DurationType="OneShot" DurationMin="5.1122627" DurationMax="5.1122627">
 					<MediaRefs>
 						<MediaRef Id="864995489"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2000475864" Name="Play_SFX_Wings_flap" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.78024495" DurationMax="0.8271184">
+				<Event Id="2000475864" Name="Play_SFX_Wings_flap" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.7351781" DurationMax="0.8256863">
 					<MediaRefs>
 						<MediaRef Id="955632935"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="61543571" Name="Play_SFX_Wood_Fence_mono" MaxAttenuation="50" DurationType="OneShot" DurationMin="69.374756" DurationMax="73.542465">
+				<Event Id="61543571" Name="Play_SFX_Wood_Fence_mono" MaxAttenuation="30" DurationType="OneShot" DurationMin="67.321976" DurationMax="73.45756">
 					<MediaRefs>
 						<MediaRef Id="503808030"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1712699527" Name="Play_SFX_Wood_Fence_mono_01" MaxAttenuation="50" DurationType="OneShot" DurationMin="69.374756" DurationMax="73.542465">
+				<Event Id="1712699527" Name="Play_SFX_Wood_Fence_mono_01" MaxAttenuation="30" DurationType="OneShot" DurationMin="67.321976" DurationMax="73.45756">
 					<MediaRefs>
 						<MediaRef Id="503808030"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="101803377" Name="Play_Stream_Night" MaxAttenuation="50" DurationType="OneShot" DurationMin="135.97154" DurationMax="140.0367">
+				<Event Id="101803377" Name="Play_Stream_Night" MaxAttenuation="30" DurationType="OneShot" DurationMin="135.97154" DurationMax="140.0367">
 					<MediaRefs>
 						<MediaRef Id="278352414"/>
 						<MediaRef Id="409145320"/>
@@ -3955,7 +3918,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3991942870" Type="User" Language="SFX" Hash="{563A7359-93A1-9712-04EE-335C71E3A844}">
+		<SoundBank Id="3991942870" Type="User" Language="SFX" Hash="{D35D7A27-D508-523D-5816-71D359297138}">
 			<ShortName>Music</ShortName>
 			<Path>Music.bnk</Path>
 			<Media>
@@ -4044,5 +4007,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{1AEEFB4C-E563-6E5B-BA37-9110F0548B8C}</FileHash>
+	<FileHash>{FFD581F4-104D-B6F6-4BA9-EDA67961F2ED}</FileHash>
 </SoundBanksInfo>
