@@ -18,6 +18,12 @@ public class DollyLookAtManager : MonoBehaviour
     private float switchTime5 = 58f; // Look at home 
     private float switchTime6 = 59f; // Set speed to 5
 
+    [SerializeField] private Animator outroText1;
+    [SerializeField] private Animator outroText2;
+    [SerializeField] private Animator outroText3;
+    [SerializeField] private Animator outroText4;
+    [SerializeField] private Animator outroText5;
+
 
     void Update()
     {
@@ -27,7 +33,9 @@ public class DollyLookAtManager : MonoBehaviour
             //Look at Grandma
             currentTargetIndex = 0;
             virtualCamera.LookAt = lookAtTargets[currentTargetIndex].transform;
-            Debug.Log("Look at Grandma");
+
+            //Fade in outro 1
+            outroText1.SetBool("Fade", true);
         }
 
         if (currentTime >= switchTime0 && currentTime < switchTime1)
@@ -35,7 +43,8 @@ public class DollyLookAtManager : MonoBehaviour
             //Look at Sunroot
             currentTargetIndex = 1;
             virtualCamera.LookAt = lookAtTargets[currentTargetIndex].transform;
-            Debug.Log("Look at Sunroot");
+
+            outroText2.SetBool("Fade", true);
         }
 
         if (currentTime >= switchTime1 && currentTime < switchTime2)
@@ -44,14 +53,13 @@ public class DollyLookAtManager : MonoBehaviour
             currentTargetIndex = 2;
             virtualCamera.LookAt = lookAtTargets[currentTargetIndex].transform;
             dollyCart.m_Speed = 200;
-            Debug.Log("Look at Cave painting and set speed to 200");
         }
 
         if (currentTime >= switchTime2 && currentTime < switchTime3)
         {
             // Set speed to 5 
             dollyCart.m_Speed = 4;
-            Debug.Log("Set speed to 5");
+            outroText3.SetBool("Fade", true);
         }
 
         if (currentTime >= switchTime3 && currentTime < switchTime4)
@@ -67,7 +75,7 @@ public class DollyLookAtManager : MonoBehaviour
         {
             // Set speed to 5 
             dollyCart.m_Speed = 20;
-            Debug.Log("Set speed to 5 ");
+            outroText4.SetBool("Fade", true);
         }
 
         if (currentTime >= switchTime5 && currentTime < switchTime6)
@@ -83,7 +91,7 @@ public class DollyLookAtManager : MonoBehaviour
         {
             // Set speed to 5
             dollyCart.m_Speed = 5;
-            Debug.Log("Set speed to 5");
+            outroText5.SetBool("Fade", true);
         }
     }
 }
