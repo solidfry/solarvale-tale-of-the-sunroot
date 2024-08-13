@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: PA_SF_WindSway
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor\n// Available at the Unity
+    Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=18935\n0;73;1743;855;2850.611;409.3185;1.710232;True;False\nNode;AmplifyShaderEditor.CommentaryNode;31;-2573.415,-198.163;Inherit;False;1859.394;607.1444;Comment;18;38;11;20;30;10;9;34;17;21;15;18;3;1;4;29;39;40;41;;1,1,1,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;28;-2690.042,-729.4368;Inherit;False;1919.815;397.9948;Comment;11;35;37;27;33;12;22;19;16;14;7;8;;1,1,1,1;0;0\nNode;AmplifyShaderEditor.FunctionInput;30;-2509.871,-151.163;Inherit;False;Sway
+    Direction;2;2;False;1;0;FLOAT2;1,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;19;-1086.377,-633.3317;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;39;-1907.975,315.1257;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleTimeNode;9;-1877.146,103.3391;Inherit;False;1;0;FLOAT;1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SinOpNode;18;-1204.147,-19.45899;Inherit;False;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.DynamicAppendNode;3;-2310.04,103.124;Inherit;False;FLOAT4;4;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;1;FLOAT4;0\nNode;AmplifyShaderEditor.FunctionInput;29;-2180.976,234.0256;Inherit;False;Sway
+    Frequency;1;1;False;1;0;FLOAT;1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleAddOpNode;20;-1013.589,-132.3718;Inherit;False;2;2;0;FLOAT2;0,0;False;1;FLOAT2;4,4;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.PosVertexDataNode;8;-1759.387,-679.4368;Inherit;False;0;0;5;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.SimpleAddOpNode;14;-1394.377,-545.3326;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;11;-1570.391,-18.19788;Inherit;False;2;2;0;FLOAT2;0,0;False;1;FLOAT;0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.SimpleSubtractOpNode;22;-936.2268,-581.1852;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;12;-1539.384,-545.4377;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleDivideOpNode;7;-1704.387,-520.4381;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;100;False;1;FLOAT;0\nNode;AmplifyShaderEditor.ClampOpNode;10;-1851.594,-20.1969;Inherit;False;3;0;FLOAT2;0,0;False;1;FLOAT2;-1,-1;False;2;FLOAT2;1,1;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.SimpleDivideOpNode;21;-876.2319,-133.1718;Inherit;False;2;0;FLOAT2;0,0;False;1;FLOAT2;4,4;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.StaticSwitch;41;-2245.308,-151.2607;Inherit;False;Property;_UsesGlobalWindSettings2;Uses
+    Global Wind Settings?;0;0;Create;True;0;0;0;False;0;False;0;0;0;True;;Toggle;2;Key0;Key1;Reference;33;True;True;All;9;1;FLOAT2;0,0;False;0;FLOAT2;0,0;False;2;FLOAT2;0,0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT2;0,0;False;6;FLOAT2;0,0;False;7;FLOAT2;0,0;False;8;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;16;-1265.377,-557.3325;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionNode;4;-2164.872,103.5752;Inherit;False;Random
+    Range;-1;;1;7b754edb8aebbfb4a9ace907af661cfc;0;3;1;FLOAT2;0,0;False;2;FLOAT;1;False;3;FLOAT;1.01;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;17;-1842.358,-142.7489;Inherit;False;2;2;0;FLOAT2;0,0;False;1;FLOAT2;4,4;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.StaticSwitch;33;-2273.659,-528.2407;Inherit;False;Property;_UsesGlobalWindSettings;Uses
+    Global Wind Settings?;0;0;Create;False;0;0;0;False;1;Header(WIND SWAY);False;0;0;0;True;;Toggle;2;Key0;Key1;Create;True;True;All;9;1;FLOAT;0;False;0;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;4;FLOAT;0;False;5;FLOAT;0;False;6;FLOAT;0;False;7;FLOAT;0;False;8;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;37;-2412.174,-451.2726;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.StaticSwitch;34;-1749.223,238.1587;Inherit;False;Property;_UsesGlobalWindSettings1;Uses
+    Global Wind Settings?;0;0;Create;True;0;0;0;False;0;False;0;0;0;True;;Toggle;2;Key0;Key1;Reference;33;True;True;All;9;1;FLOAT;0;False;0;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;4;FLOAT;0;False;5;FLOAT;0;False;6;FLOAT;0;False;7;FLOAT;0;False;8;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionInput;27;-2626.63,-525.8508;Inherit;False;Sway
+    Intensity;1;0;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;15;-1417.358,-17.74891;Inherit;False;2;2;0;FLOAT2;0,0;False;1;FLOAT;0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.DynamicAppendNode;25;-311.2598,-157.7583;Inherit;False;FLOAT4;4;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;1;FLOAT4;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;23;-634.15,-157.0853;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.Vector2Node;40;-2524.678,-75.07318;Inherit;False;Global;varWindDirection;varWindDirection;1;0;Create;True;0;0;0;False;0;False;0,0;0,0;0;3;FLOAT2;0;FLOAT;1;FLOAT;2\nNode;AmplifyShaderEditor.RangedFloatNode;38;-2231.975,332.1256;Inherit;False;Global;varWindSwayFrequency;varWindSwayFrequency;1;0;Create;True;0;0;0;False;0;False;0;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;35;-2672.083,-434.2816;Inherit;False;Global;varWindSwayIntensity;varWindSwayIntensity;1;0;Create;True;0;0;0;False;0;False;0;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.BreakToComponentsNode;26;-465.6954,-158.2213;Inherit;False;FLOAT2;1;0;FLOAT2;0,0;False;16;FLOAT;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4;FLOAT;5;FLOAT;6;FLOAT;7;FLOAT;8;FLOAT;9;FLOAT;10;FLOAT;11;FLOAT;12;FLOAT;13;FLOAT;14;FLOAT;15\nNode;AmplifyShaderEditor.ObjectToWorldTransfNode;1;-2524.415,79.28514;Inherit;False;1;0;FLOAT4;0,0,0,1;False;5;FLOAT4;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.FunctionOutput;0;-139.7951,-158.4627;Inherit;False;True;-1;Output;0;False;1;0;FLOAT4;0,0,0,0;False;1;FLOAT4;0\nWireConnection;19;0;16;0\nWireConnection;19;1;16;0\nWireConnection;39;0;29;0\nWireConnection;39;1;38;0\nWireConnection;9;0;4;0\nWireConnection;18;0;15;0\nWireConnection;3;0;1;1\nWireConnection;3;2;1;3\nWireConnection;20;0;17;0\nWireConnection;20;1;18;0\nWireConnection;14;0;12;0\nWireConnection;11;0;10;0\nWireConnection;11;1;9;0\nWireConnection;22;0;19;0\nWireConnection;22;1;16;0\nWireConnection;12;0;8;2\nWireConnection;12;1;7;0\nWireConnection;7;0;33;0\nWireConnection;10;0;41;0\nWireConnection;21;0;20;0\nWireConnection;41;1;30;0\nWireConnection;41;0;40;0\nWireConnection;16;0;14;0\nWireConnection;16;1;14;0\nWireConnection;4;1;3;0\nWireConnection;17;0;41;0\nWireConnection;33;1;27;0\nWireConnection;33;0;37;0\nWireConnection;37;0;27;0\nWireConnection;37;1;35;0\nWireConnection;34;1;29;0\nWireConnection;34;0;39;0\nWireConnection;15;0;11;0\nWireConnection;15;1;34;0\nWireConnection;25;0;26;0\nWireConnection;25;2;26;1\nWireConnection;23;0;22;0\nWireConnection;23;1;21;0\nWireConnection;26;0;23;0\nWireConnection;0;0;25;0\nASEEND*/\n//CHKSM=F53C6C3301F72A60959DF395BBAFBF96A778C61E"
+  m_functionName: 
+  m_description: 
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 0
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_customEdited: 0
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 3
+  m_customNodeCategory: 
+  m_previewPosition: 0
+  m_hidden: 0
+  m_url: 
