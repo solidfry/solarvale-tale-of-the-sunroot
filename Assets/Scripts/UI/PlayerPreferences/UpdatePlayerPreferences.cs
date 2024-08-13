@@ -74,7 +74,7 @@ namespace UI.PlayerPreferences
                 }
 
                 var f = PlayerPrefs.GetFloat(Key, DefaultSliderValue);
-                Debug.Log(slider.gameObject);
+                // Debug.Log(slider.gameObject);
                 slider.value = f;
                 onValueChanged.Invoke(slider.value);
 

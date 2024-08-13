@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 8189055887166936246}
   - component: {fileID: 3806175378364451552}
   - component: {fileID: 1240649943039294941}
-  - component: {fileID: 5411599623286052359}
   m_Layer: 5
   m_Name: PhotographyResultCanvas
   m_TagString: Untagged
@@ -119,21 +118,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   registerOnStart: 1
---- !u!114 &5411599623286052359
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 450097017586356744}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d906827eb339874a9fc2b51bce10016, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  setAutoKill: 1
-  animations:
-  - {fileID: 7910396725762298498}
 --- !u!1 &2296651844467291187
 GameObject:
   m_ObjectHideFlags: 0
@@ -409,7 +393,8 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7642508501897660261, guid: 0c927ac0db84fcd48b0a530e9a958124, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -426,18 +411,6 @@ CanvasGroup:
     type: 3}
   m_PrefabInstance: {fileID: 560974219475342823}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &7910396725762298498 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7642508501897660261, guid: 0c927ac0db84fcd48b0a530e9a958124,
-    type: 3}
-  m_PrefabInstance: {fileID: 560974219475342823}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d0390bd8b8ffd640b34fe25065ff1df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &3214468081000720563
 PrefabInstance:
   m_ObjectHideFlags: 0

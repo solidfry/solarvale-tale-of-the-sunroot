@@ -88,7 +88,7 @@ namespace Entities.Creatures
 
         private void CheckCrucialSystems()
         {
-            Debug.Log($"Checking crucial systems in {gameObject.name}");
+            // Debug.Log($"Checking crucial systems in {gameObject.name}");
             if (GetEntityData == null)
             {
                 Debug.LogError($"EntityData is null in {gameObject.name}");

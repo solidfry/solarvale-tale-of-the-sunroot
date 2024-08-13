@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using CameraSystem;
 using Core;
+using DG.Tweening;
 using Entities;
 using Events;
 using UnityEngine;
@@ -20,6 +21,10 @@ namespace Photography
         [SerializeField] private Canvas photoCanvas;
         [SerializeField] private Button keepButton;
         [SerializeField] private Button discardButton;
+        [Header("Development UI")]
+        [SerializeField] private CanvasGroup developmentCanvasGroup;
+        [SerializeField] float developmentCanvasFadeDuration = 1f;
+        [SerializeField] float developmentCanvasFadeDelay = 1f;
 
         [SerializeField] private InputActionReference takePhotoActionRef;
 
@@ -56,6 +61,8 @@ namespace Photography
         private const int DesiredPhotoSize = 800; // Desired photo width and height
 
 
+        Tween _developmentCanvasTween;
+        
         private void Awake()
         {
             _mainCamera = Camera.main;
@@ -96,6 +103,9 @@ namespace Photography
 
             photographyHUDController.OnDisable();
             GlobalEvents.OnChangeCameraModeEvent -= OnCameraModeChanged;
+            
+            if (_developmentCanvasTween != null)
+                _developmentCanvasTween.Kill();
         }
 
         private void OnTakePhoto(InputAction.CallbackContext context)
@@ -148,7 +158,23 @@ namespace Photography
             photoCanvas.gameObject.SetActive(true);
 
             photographyHUDController.ToggleCanvas(false);
+            
+            HandleDevelopAnimation();
+
             HandleOnShowPhotoGlobalEvents();
+        }
+
+        private void HandleDevelopAnimation()
+        {
+            if (_developmentCanvasTween is not null) 
+                _developmentCanvasTween.Restart();
+
+            if (_developmentCanvasTween is null)
+            {
+                _developmentCanvasTween = developmentCanvasGroup.DOFade(0, developmentCanvasFadeDuration);
+                _developmentCanvasTween.SetDelay(developmentCanvasFadeDelay).Delay();
+                _developmentCanvasTween.SetAutoKill(false);
+            }
         }
 
         private void RemovePhoto()
@@ -156,7 +182,7 @@ namespace Photography
             photoFrame.SetActive(false);
             photoCanvas.gameObject.SetActive(false);
             photoDisplayArea.sprite = null;
-
+            developmentCanvasGroup.alpha = 1;
             photographyHUDController.ToggleCanvas(true);
             photographyHUDController.SetHUDVisibility(true);
             HandleOnRemovePhotoGlobalEvents();

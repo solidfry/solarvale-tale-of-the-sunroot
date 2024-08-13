@@ -27,13 +27,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 901424478212353622}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.26667345, y: 0.5286943, z: -0.17946747, w: 0.7855948}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3748655633976961460}
-  m_LocalEulerAnglesHint: {x: 37.5, y: 67.88, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &6455729437456555010
 Light:
   m_ObjectHideFlags: 0
@@ -263,7 +263,7 @@ MonoBehaviour:
   UniStormMenuKey: 27
   UniStormCanvas: {fileID: 0}
   m_MenuToggle: 0
-  TabNumber: 0
+  TabNumber: 1
   TimeTabNumbers: 0
   WeatherTabNumbers: 1
   CelestialTabNumbers: 0
@@ -299,11 +299,11 @@ MonoBehaviour:
   StartingMinute: 0
   StartingHour: 17
   Minute: 30
-  Hour: 8
+  Hour: 12
   Day: 25
-  Month: 6
+  Month: 12
   Year: 2032
-  DayLength: 30
+  DayLength: 15
   NightLength: 10
   TimeOfDayUpdateSeconds: 5
   UseTimeOfDayUpdateControl: 1
@@ -1083,8 +1083,8 @@ MonoBehaviour:
     NormalY: 0
   m_CurrentCloudHeight: 0
   CloudShadowResolution: 1
-  CloudSpeed: 5
-  CloudTurbulence: 14
+  CloudSpeed: 3
+  CloudTurbulence: 25
   DetectionLayerMask:
     serializedVersion: 2
     m_Bits: 8193
@@ -1096,7 +1096,7 @@ MonoBehaviour:
   LightningDetectionDistance: 20
   m_CloudSeed: 0
   CurrentFogColor: {r: 0, g: 0, b: 0, a: 0}
-  FogType: 0
+  FogType: 1
   FogMode: 1
   m_UniStormAtmosphericFog:
     isEnabled: 1
@@ -1219,7 +1219,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  CurrentSeason: 4
+  CurrentSeason: 2
   CloudType: 1
   CloudQuality: 2
   TemperatureType: 1
