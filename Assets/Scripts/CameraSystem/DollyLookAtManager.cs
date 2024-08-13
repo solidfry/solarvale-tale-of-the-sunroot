@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
+using UnityEngine.Events;
 
 public class DollyLookAtManager : MonoBehaviour
 {
@@ -17,14 +18,22 @@ public class DollyLookAtManager : MonoBehaviour
     private float switchTime4 = 45.1f; // Set speed to 5 
     private float switchTime5 = 58f; // Look at home 
     private float switchTime6 = 59f; // Set speed to 5
+    private float switchTime7 = 65f; // Set Blackscreen
+    private float switchTime8 = 69f; // Load new Scene
 
+    [SerializeField] private Animator blackScreen;
     [SerializeField] private Animator outroText1;
     [SerializeField] private Animator outroText2;
     [SerializeField] private Animator outroText3;
     [SerializeField] private Animator outroText4;
     [SerializeField] private Animator outroText5;
 
+    public UnityEvent loadGameOverScene;
 
+    private void Start()
+    {
+        blackScreen.SetBool("Fade", true);
+    }
     void Update()
     {
         currentTime += Time.deltaTime;
@@ -68,7 +77,6 @@ public class DollyLookAtManager : MonoBehaviour
             currentTargetIndex = 3;
             virtualCamera.LookAt = lookAtTargets[currentTargetIndex].transform;
             dollyCart.m_Speed = 200;
-            Debug.Log("Look at Whale Rock and set speed to 200");
         }
 
         if (currentTime >= switchTime4 && currentTime < switchTime5)
@@ -84,14 +92,22 @@ public class DollyLookAtManager : MonoBehaviour
             currentTargetIndex = 4;
             virtualCamera.LookAt = lookAtTargets[currentTargetIndex].transform;
             dollyCart.m_Speed = 200;
-            Debug.Log("Look at home and set speed to 200");
         }
 
-        if (currentTime >= switchTime6)
+        if (currentTime >= switchTime6 && currentTime < switchTime7)
         {
             // Set speed to 5
             dollyCart.m_Speed = 5;
             outroText5.SetBool("Fade", true);
+        }
+        if (currentTime >= switchTime7 && currentTime < switchTime8)
+        {
+            // Set Blackscreen
+            blackScreen.SetBool("Fade", false);
+        }
+        
+        if(currentTime >= switchTime8){
+            loadGameOverScene.Invoke();
         }
     }
 }
