@@ -7,6 +7,7 @@ using Interaction;
 using Photography;
 using QuestSystem;
 using QuestSystem.Conditions;
+using UI.Minimap;
 using UI.Onboarding;
 using UnityEngine;
 

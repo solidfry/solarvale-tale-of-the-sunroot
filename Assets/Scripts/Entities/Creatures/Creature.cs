@@ -251,8 +251,9 @@ namespace Entities.Creatures
                 model.transform.localPosition = Vector3.zero;
             });
             
-            if (level.IsComplete() && Mathf.Approximately(model.transform.position.y, targetPosition.y))
+            if (level.IsComplete() && !Mathf.Approximately(model.transform.position.y, targetPosition.y))
             {
+                onFlightEnd?.Invoke();
                 model.transform.position = targetPosition;
                 IsFlying = false;
             }
