@@ -10,17 +10,20 @@ public class DollyLookAtManager : MonoBehaviour
     public CinemachineDollyCart dollyCart; // Assign the dolly cart in the Inspector
     public GameObject[] lookAtTargets; // Array of GameObjects to look at
     private int currentTargetIndex = 0; // Index for current target
-    private float currentTime = 0f; 
-    private float switchTime0 = 16f; //Look at Sunroot
-    private float switchTime1 = 32f; // Look at Cave Painting and set speed to 200
-    private float switchTime2 = 33.72f; // Set speed to 5 
-    private float switchTime3 = 42.3f; // Look at Whale Rock and set speed to 200
-    private float switchTime4 = 45.1f; // Set speed to 5 
-    private float switchTime5 = 58f; // Look at home 
-    private float switchTime6 = 59f; // Set speed to 5
-    private float switchTime7 = 65f; // Set Blackscreen
-    private float switchTime8 = 69f; // Load new Scene
 
+    [Header("TIME TO TRANSITION")]
+    [SerializeField] private float currentTime = 0f;
+    [SerializeField] private float switchTime0 = 10f; //Look at Sunroot
+    [SerializeField] private float switchTime1 = 20f; // Look at Cave Painting and set speed to 200
+    [SerializeField] private float switchTime2 = 30.72f; // Set speed to 5 
+    [SerializeField] private float switchTime3 = 34.3f; // Look at Whale Rock and set speed to 200
+    [SerializeField] private float switchTime4 = 37.1f; // Set speed to 5 
+    [SerializeField] private float switchTime5 = 50f; // Look at home 
+    [SerializeField] private float switchTime6 = 51.5f; // Set speed to 5
+    [SerializeField] private float switchTime7 = 58f; // Set Blackscreen
+    [SerializeField] private float switchTime8 = 62f; // Load new Scene
+
+    [Header("OUTRO TEXT")]
     [SerializeField] private Animator blackScreen;
     [SerializeField] private Animator outroText1;
     [SerializeField] private Animator outroText2;
@@ -28,11 +31,16 @@ public class DollyLookAtManager : MonoBehaviour
     [SerializeField] private Animator outroText4;
     [SerializeField] private Animator outroText5;
 
+    private int currentCartSpeed ;
+    private int maxCartSpeed = 200;
+    private int minCartSpeed = 5;
+
     public UnityEvent loadGameOverScene;
 
     private void Start()
     {
         blackScreen.SetBool("Fade", true);
+        currentCartSpeed = minCartSpeed;
     }
     void Update()
     {
@@ -61,13 +69,29 @@ public class DollyLookAtManager : MonoBehaviour
             //Look at Cave painting and set speed to 200
             currentTargetIndex = 2;
             virtualCamera.LookAt = lookAtTargets[currentTargetIndex].transform;
-            dollyCart.m_Speed = 200;
+            if(currentCartSpeed <= maxCartSpeed)
+            {
+                currentCartSpeed++;
+            }
+            else
+            {
+                currentCartSpeed = maxCartSpeed;
+            }
+            dollyCart.m_Speed = currentCartSpeed;
         }
 
         if (currentTime >= switchTime2 && currentTime < switchTime3)
         {
             // Set speed to 5 
-            dollyCart.m_Speed = 4;
+            if (currentCartSpeed >= minCartSpeed)
+            {
+                currentCartSpeed--;
+            }
+            else
+            {
+                currentCartSpeed = minCartSpeed;
+            }
+            dollyCart.m_Speed = currentCartSpeed;
             outroText3.SetBool("Fade", true);
         }
 
@@ -76,13 +100,29 @@ public class DollyLookAtManager : MonoBehaviour
             // Look at Whale Rock and set speed to 200
             currentTargetIndex = 3;
             virtualCamera.LookAt = lookAtTargets[currentTargetIndex].transform;
-            dollyCart.m_Speed = 200;
+            if (currentCartSpeed <= maxCartSpeed)
+            {
+                currentCartSpeed++;
+            }
+            else
+            {
+                currentCartSpeed = maxCartSpeed;
+            }
+            dollyCart.m_Speed = currentCartSpeed;
         }
 
         if (currentTime >= switchTime4 && currentTime < switchTime5)
         {
             // Set speed to 5 
-            dollyCart.m_Speed = 20;
+            if (currentCartSpeed >= 20)
+            {
+                currentCartSpeed--;
+            }
+            else
+            {
+                currentCartSpeed = 20;
+            }
+            dollyCart.m_Speed = currentCartSpeed;
             outroText4.SetBool("Fade", true);
         }
 
@@ -91,13 +131,29 @@ public class DollyLookAtManager : MonoBehaviour
             // Look at home and set speed to 200
             currentTargetIndex = 4;
             virtualCamera.LookAt = lookAtTargets[currentTargetIndex].transform;
-            dollyCart.m_Speed = 200;
+            if (currentCartSpeed <= maxCartSpeed)
+            {
+                currentCartSpeed++;
+            }
+            else
+            {
+                currentCartSpeed = maxCartSpeed;
+            }
+            dollyCart.m_Speed = currentCartSpeed;
         }
 
         if (currentTime >= switchTime6 && currentTime < switchTime7)
         {
             // Set speed to 5
-            dollyCart.m_Speed = 5;
+            if (currentCartSpeed >= minCartSpeed)
+            {
+                currentCartSpeed--;
+            }
+            else
+            {
+                currentCartSpeed = minCartSpeed;
+            }
+            dollyCart.m_Speed = currentCartSpeed;
             outroText5.SetBool("Fade", true);
         }
         if (currentTime >= switchTime7 && currentTime < switchTime8)
