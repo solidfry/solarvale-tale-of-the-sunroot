@@ -36,6 +36,13 @@ public class DollyLookAtManager : MonoBehaviour
     private int minCartSpeed = 5;
 
     public UnityEvent loadGameOverScene;
+    public UnityEvent pianoKeySound;
+
+    private bool hasPlayedOutro1 = false;
+    private bool hasPlayedOutro2 = false;
+    private bool hasPlayedOutro3 = false;
+    private bool hasPlayedOutro4 = false;
+    private bool hasPlayedOutro5 = false;
 
     private void Start()
     {
@@ -53,6 +60,11 @@ public class DollyLookAtManager : MonoBehaviour
 
             //Fade in outro 1
             outroText1.SetBool("Fade", true);
+            if (!hasPlayedOutro1)
+            {
+                playPianoKeysOnce();
+                hasPlayedOutro1 = true;
+            }
         }
 
         if (currentTime >= switchTime0 && currentTime < switchTime1)
@@ -62,6 +74,11 @@ public class DollyLookAtManager : MonoBehaviour
             virtualCamera.LookAt = lookAtTargets[currentTargetIndex].transform;
 
             outroText2.SetBool("Fade", true);
+            if (!hasPlayedOutro2)
+            {
+                playPianoKeysOnce();
+                hasPlayedOutro2 = true;
+            }
         }
 
         if (currentTime >= switchTime1 && currentTime < switchTime2)
@@ -93,6 +110,11 @@ public class DollyLookAtManager : MonoBehaviour
             }
             dollyCart.m_Speed = currentCartSpeed;
             outroText3.SetBool("Fade", true);
+            if (!hasPlayedOutro3)
+            {
+                playPianoKeysOnce();
+                hasPlayedOutro3 = true;
+            }
         }
 
         if (currentTime >= switchTime3 && currentTime < switchTime4)
@@ -124,6 +146,11 @@ public class DollyLookAtManager : MonoBehaviour
             }
             dollyCart.m_Speed = currentCartSpeed;
             outroText4.SetBool("Fade", true);
+            if (!hasPlayedOutro4)
+            {
+                playPianoKeysOnce();
+                hasPlayedOutro4 = true;
+            }
         }
 
         if (currentTime >= switchTime5 && currentTime < switchTime6)
@@ -155,15 +182,26 @@ public class DollyLookAtManager : MonoBehaviour
             }
             dollyCart.m_Speed = currentCartSpeed;
             outroText5.SetBool("Fade", true);
+            if (!hasPlayedOutro5)
+            {
+                playPianoKeysOnce();
+                hasPlayedOutro5 = true;
+            }
+
         }
         if (currentTime >= switchTime7 && currentTime < switchTime8)
         {
             // Set Blackscreen
             blackScreen.SetBool("Fade", false);
         }
-        
-        if(currentTime >= switchTime8){
+
+        if (currentTime >= switchTime8)
+        {
             loadGameOverScene.Invoke();
         }
+    }
+    public void playPianoKeysOnce()
+    {
+        pianoKeySound.Invoke();
     }
 }
