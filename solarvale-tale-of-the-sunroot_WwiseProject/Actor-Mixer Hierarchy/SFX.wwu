@@ -251,16 +251,16 @@
 					<ChildrenList>
 						<AudioFileSource Name="SFX_Sunroot_Tree" ID="{EBB3A168-ADC7-46CF-88B6-ECE466A34959}">
 							<PropertyList>
-								<Property Name="FadeOutDuration" Type="Real64" Value="1.2573402417962"/>
+								<Property Name="FadeOutDuration" Type="Real64" Value="0.20294693635687"/>
 								<Property Name="FadeOutShape" Type="int16" Value="2"/>
 								<Property Name="OverrideConversion" Type="bool" Value="True"/>
 								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-								<Property Name="TrimEnd" Type="Real64" Value="5.11226252158895"/>
+								<Property Name="TrimEnd" Type="Real64" Value="4.78590268895297"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
-									<Custom CreatedFrom="{6D51666E-9C7A-40E4-831D-C445512EBABD}">
-										<Conversion Name="ADPCM Auto Detect High (Custom)" ID="{9330D895-5FD2-4778-BF5B-5E736401E8CE}">
+									<Custom CreatedFrom="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}">
+										<Conversion Name="Vorbis Quality High (Custom)" ID="{6B4048AC-8F2E-4A21-B071-53E6C7E80091}">
 											<PropertyList>
 												<Property Name="Channels" Type="int32">
 													<ValueList>
@@ -293,7 +293,6 @@
 												</Property>
 												<Property Name="SampleRate" Type="int32">
 													<ValueList>
-														<Value>3</Value>
 														<Value Platform="Windows">0</Value>
 														<Value Platform="Mac">0</Value>
 													</ValueList>
@@ -301,10 +300,10 @@
 											</PropertyList>
 											<ConversionPluginInfoList>
 												<ConversionPluginInfo Platform="Windows">
-													<ConversionPlugin Name="" ID="{E801594D-975D-40F0-B256-B223327191D3}" PluginName="ADPCM" CompanyID="0" PluginID="2"/>
+													<ConversionPlugin Name="" ID="{A3E3910A-8ECB-4861-8765-FC9A534DD9D1}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
 												</ConversionPluginInfo>
 												<ConversionPluginInfo Platform="Mac">
-													<ConversionPlugin Name="" ID="{37CADC8F-DC13-4513-9DB1-606C145D061C}" PluginName="ADPCM" CompanyID="0" PluginID="2"/>
+													<ConversionPlugin Name="" ID="{07FB88B3-E788-40BF-9916-95957C31A8DB}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
 												</ConversionPluginInfo>
 											</ConversionPluginInfoList>
 										</Conversion>
