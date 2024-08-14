@@ -440,10 +440,9 @@
 						</Sound>
 						<RandomSequenceContainer Name="Grandma" ID="{AA4076EC-02F5-4AB1-96AF-E5CDC39AC5A2}" ShortID="523208289">
 							<PropertyList>
-								<Property Name="GlobalOrPerObject" Type="int16" Value="0"/>
 								<Property Name="InitialDelay" Type="Real64">
 									<ValueList>
-										<Value>20</Value>
+										<Value>25</Value>
 									</ValueList>
 								</Property>
 								<Property Name="OverrideOutput" Type="bool" Value="True"/>
@@ -454,6 +453,11 @@
 								<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="5"/>
 								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 								<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-10</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -466,6 +470,11 @@
 							<ChildrenList>
 								<Sound Name="music_grandma_2" ID="{6CC2205B-C5D3-46EB-80C1-3131CF48B9F3}" ShortID="69941367">
 									<PropertyList>
+										<Property Name="InitialDelay" Type="Real64">
+											<ValueList>
+												<Value>25</Value>
+											</ValueList>
+										</Property>
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 										<Property Name="IsLoopingInfinite" Type="bool" Value="False"/>
 										<Property Name="LoopCount" Type="int32" Value="4"/>
@@ -484,6 +493,11 @@
 										<Property Name="OverrideOutput" Type="bool" Value="True"/>
 										<Property Name="OverridePositioning" Type="bool" Value="True"/>
 										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-10</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
