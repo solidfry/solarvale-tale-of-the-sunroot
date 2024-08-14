@@ -80,12 +80,12 @@
 							<ChildrenList>
 								<AudioFileSource Name="music_flute_solo" ID="{AD6CB23B-F8CE-46C4-BD29-6CF590EC4A3C}">
 									<PropertyList>
-										<Property Name="FadeInDuration" Type="Real64" Value="0.362694300518135"/>
-										<Property Name="FadeOutDuration" Type="Real64" Value="2.15200434530647"/>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.208607384707192"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.904423201499014"/>
 										<Property Name="FadeOutShape" Type="int16" Value="9"/>
 										<Property Name="OverrideConversion" Type="bool" Value="True"/>
 										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-										<Property Name="TrimEnd" Type="Real64" Value="32.0587575595102"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.00669943112221491"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -480,13 +480,14 @@
 											</ValueList>
 										</Property>
 										<Property Name="OverLimitBehavior" Type="int16" Value="1"/>
+										<Property Name="OverrideConversion" Type="bool" Value="True"/>
 										<Property Name="OverrideOutput" Type="bool" Value="True"/>
 										<Property Name="OverridePositioning" Type="bool" Value="True"/>
 										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
+											<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
 										</Reference>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Music" ID="{651529B0-D00A-407F-9314-E0A35BA653FF}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
@@ -495,7 +496,10 @@
 									<ChildrenList>
 										<AudioFileSource Name="music_grandma_2" ID="{0D32BD2D-EE0F-404F-ABE4-A6F2B055755F}">
 											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0713615023474183"/>
+												<Property Name="LoopBegin" Type="Real64" Value="0"/>
 												<Property Name="OverrideConversion" Type="bool" Value="True"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -524,6 +528,11 @@
 																	<ValueList>
 																		<Value Platform="Windows">0</Value>
 																		<Value Platform="Mac">0</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="SRConversionQuality" Type="int32">
+																	<ValueList>
+																		<Value>1</Value>
 																	</ValueList>
 																</Property>
 																<Property Name="SampleRate" Type="int32">
