@@ -12,10 +12,9 @@ Material:
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
-  - _ALBEDO_ON
   - _APPLYNORMALMAPPING_ON
   - _CLIPSURFACE_ON
-  - _CLIPUNDERTERRAIN_ON
+  - _FOAM3DLIGHTING_ON
   - _FOAM_ON
   - _PROCEDURALSKY_ON
   - _PROJECTION_PERSPECTIVE
@@ -95,25 +94,25 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Albedo: 1
+    - _Albedo: 0
     - _ApplyFlowToNormals: 0
     - _ApplyNormalMapping: 1
     - _BumpAmt: 0.514
     - _Caustics: 0
     - _CausticsBase: 0.07
     - _CausticsBias: 0.7
-    - _CausticsDepthOfField: 2
-    - _CausticsDistortionScale: 20.5
-    - _CausticsDistortionStrength: 0.0361
-    - _CausticsFocalDepth: 5.5
+    - _CausticsDepthOfField: 455
+    - _CausticsDistortionScale: 8.7
+    - _CausticsDistortionStrength: 0.0988
+    - _CausticsFocalDepth: 72.9
     - _CausticsStrength: 10
-    - _CausticsTextureAverage: 0.063
-    - _CausticsTextureScale: 7.8
+    - _CausticsTextureAverage: 0.087
+    - _CausticsTextureScale: 12.19
     - _ClipSurface: 1
-    - _ClipUnderTerrain: 1
+    - _ClipUnderTerrain: 0
     - _CompileShaderWithDebugInfo: 0
     - _ComputeDirectionalLight: 1
-    - _CullMode: 2
+    - _CullMode: 0
     - _DebugDisableMultiplyByLight0Color: 0
     - _DebugDisableShapeTextures: 0
     - _DebugDisableSmoothLOD: 0
@@ -125,8 +124,8 @@ Material:
     - _DirectionalLightFallOff: 275
     - _Flow: 0
     - _Foam: 1
-    - _Foam3DLighting: 0
-    - _FoamBubbleParallax: 0.22
+    - _Foam3DLighting: 1
+    - _FoamBubbleParallax: 0.329
     - _FoamScale: 3.4
     - _ForceUnderwater: 0
     - _FresnelPower: 7.49
@@ -147,7 +146,7 @@ Material:
     - _Projection: 1
     - _ReflectionBlur: 0.9
     - _RefractAmt: 0
-    - _RefractionStrength: 1.219
+    - _RefractionStrength: 1.17
     - _RefractiveIndexOfAir: 1.545
     - _RefractiveIndexOfWater: 1.61
     - _S: 1
@@ -178,25 +177,25 @@ Material:
     - _Underwater: 0
     - _Update: 0.083
     - _VarySmoothnessOverDistance: 1
-    - _WaveFoamBubblesCoverage: 1.04
+    - _WaveFoamBubblesCoverage: 2.48
     - _WaveFoamBubblesFeather: 0.32
     - _WaveFoamBubblesStart: 0.115
     - _WaveFoamBubblesStrength: 0.637
     - _WaveFoamCoverage: 0.38
     - _WaveFoamFeather: 0.648
     - _WaveFoamLightScale: 0.3
-    - _WaveFoamNormalStrength: 0
+    - _WaveFoamNormalStrength: 20.48
     - _WaveFoamNormalsY: 0.253
-    - _WaveFoamSpecularBoost: 0
-    - _WaveFoamSpecularFallOff: 1
+    - _WaveFoamSpecularBoost: 8.77
+    - _WaveFoamSpecularFallOff: 226
     - _WaveFoamStart: 0
     - _WaveFoamStrength: 1
     m_Colors:
-    - _DepthFogDensity: {r: 0.45, g: 0.15, b: 0.175, a: 1}
+    - _DepthFogDensity: {r: 0.35, g: 0.36, b: 0.27, a: 4.94}
     - _Diffuse: {r: 0.1137255, g: 0.5019608, b: 0.43931034, a: 1}
     - _DiffuseGrazing: {r: 0.19188322, g: 0.44758314, b: 0.5283019, a: 1}
     - _DiffuseShadow: {r: 0, g: 0.40126306, b: 0.4811321, a: 1}
-    - _FoamBubbleColor: {r: 0, g: 0.67798746, b: 0.7264151, a: 1}
+    - _FoamBubbleColor: {r: 0, g: 0.5965903, b: 0.7254902, a: 1}
     - _FoamWhiteColor: {r: 1, g: 1, b: 1, a: 1}
     - _SkyAwayFromSun: {r: 0.28773582, g: 0.41129196, b: 1, a: 1}
     - _SkyBase: {r: 0.4999555, g: 0.82702935, b: 0.990566, a: 1}
