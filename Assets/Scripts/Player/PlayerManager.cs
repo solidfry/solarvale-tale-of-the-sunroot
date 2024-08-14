@@ -22,6 +22,7 @@ namespace Player
             
             _currentControlSchemeObservable = new Observable<string>(playerInput.currentControlScheme);
             _currentControlSchemeObservable.ValueChanged += OnControlsChanged;
+            // _currentControlSchemeObservable?.Invoke();
         }
 
         private void Update()

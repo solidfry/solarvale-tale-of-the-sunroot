@@ -36,10 +36,14 @@ namespace UI
             _menuInstance = Instantiate(menuPrefab, transform.position, Quaternion.identity, transform);
             _playerHUDInstance = Instantiate(playerHUD, transform.position, Quaternion.identity, transform);
             _menuInstance.ToggleFade(0);
-            SetHUDVisibility(false);
             _playerHUDCanvasGroup = _playerHUDInstance.GetComponent<CanvasGroup>();
         }
-        
+
+        private void Start()
+        {
+            SetHUDVisibility(false);
+        }
+
         private void OnCameraModeChanged(CameraMode mode)
         {
             var check = mode == CameraMode.Exploration;
