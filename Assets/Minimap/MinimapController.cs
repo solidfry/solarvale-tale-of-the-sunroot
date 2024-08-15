@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using Minimap;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public enum MinimapMode
 {
@@ -21,8 +20,6 @@ public class MinimapController : MonoBehaviour
     [SerializeField] RectTransform scrollViewRectTransform;
     [SerializeField] public RectTransform contentRectTransform;
     [SerializeField] MinimapIcon minimapIconPrefab;
-
-    [SerializeField] private InputActionReference toggleMiniMapMode;
 
     Matrix4x4 transformationMatrix;
 
@@ -53,11 +50,6 @@ public class MinimapController : MonoBehaviour
         Instance = this;
         scrollViewDefaultSize = scrollViewRectTransform.sizeDelta;
         scrollViewDefaultPosition = scrollViewRectTransform.anchoredPosition;
-    }
-
-    private void OnEnable()
-    {
-        toggleMiniMapMode.action.performed += ctx => SetMinimapMode(currentMiniMapMode == MinimapMode.Mini ? MinimapMode.Fullscreen : MinimapMode.Mini);
     }
 
     private void Start()
