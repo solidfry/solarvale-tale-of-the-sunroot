@@ -8,7 +8,6 @@ using Events;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace Photography
@@ -103,9 +102,6 @@ namespace Photography
 
             photographyHUDController.OnDisable();
             GlobalEvents.OnChangeCameraModeEvent -= OnCameraModeChanged;
-            
-            if (_developmentCanvasTween != null)
-                _developmentCanvasTween.Kill();
         }
 
         private void OnTakePhoto(InputAction.CallbackContext context)
@@ -166,9 +162,11 @@ namespace Photography
 
         private void HandleDevelopAnimation()
         {
-            if (_developmentCanvasTween is not null) 
-                _developmentCanvasTween.Restart();
-
+            if (_developmentCanvasTween is not null)
+            {
+                _developmentCanvasTween.Rewind();
+                _developmentCanvasTween.Play();
+            }
             if (_developmentCanvasTween is null)
             {
                 _developmentCanvasTween = developmentCanvasGroup.DOFade(0, developmentCanvasFadeDuration);
