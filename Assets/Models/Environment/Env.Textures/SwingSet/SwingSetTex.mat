@@ -13,17 +13,15 @@ Material:
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
-  - _ALPHATEST_ON
   - _SPECULAR_SETUP
   m_InvalidKeywords: []
   m_LightmapFlags: 2
   m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2450
+  m_CustomRenderQueue: 2000
   stringTagMap:
-    RenderType: TransparentCutout
-  disabledShaderPasses:
-  - SHADOWCASTER
+    RenderType: Opaque
+  disabledShaderPasses: []
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
@@ -110,20 +108,20 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - Vector1_2BDF6FD9: 0.02
+    - Vector1_2BDF6FD9: 4.4
     - Vector1_2FA10055: 1
-    - Vector1_46F1304E: 0.03
+    - Vector1_46F1304E: 3
     - Vector1_BBEA2355: 1
     - _AO_Strength: 0.504
-    - _Albedo_Strength: 2.71
-    - _AlphaClip: 1
+    - _Albedo_Strength: 1
+    - _AlphaClip: 0
     - _AlphaMultiplier: 0.01
-    - _AlphaToMask: 1
+    - _AlphaToMask: 0
     - _Alpha_Clip_Threshold: 0
     - _Blend: 0
     - _BlendModePreserveSpecular: 1
     - _BumpScale: 1
-    - _CastShadows: 0
+    - _CastShadows: 1
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
     - _Cull: 0
@@ -140,17 +138,17 @@ Material:
     - _GlossyReflections: 0
     - _Metallic: 0
     - _Metallic_Strength: 0
-    - _Noise_1_Multiplier: 0.21
-    - _Noise_1_Scale: 1
-    - _Noise_2_Multiplier: 0.4
-    - _Noise_2_Scale: 40.4
-    - _NormalStength: 0.495
+    - _Noise_1_Multiplier: 4.63
+    - _Noise_1_Scale: 3.72
+    - _Noise_2_Multiplier: 2.88
+    - _Noise_2_Scale: 41.73
+    - _NormalStength: 0.51
     - _OcclusionStrength: 1
     - _Parallax: 0.005
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _Shadow_Opacity: 0.5
+    - _Shadow_Opacity: -2.49
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
@@ -168,16 +166,16 @@ Material:
     - _ZWrite: 1
     - _ZWriteControl: 0
     m_Colors:
-    - Color_D9F05973: {r: 0, g: 0, b: 0, a: 1}
+    - Color_D9F05973: {r: 0.6415094, g: 0.6415094, b: 0.6415094, a: 1}
     - Color_DB04B181: {r: 0.16732164, g: 0.14978638, b: 0.3207547, a: 1}
-    - _Albedo_Color: {r: 0.3679245, g: 0.3679245, b: 0.3679245, a: 0}
+    - _Albedo_Color: {r: 1, g: 1, b: 1, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Diffuse: {r: 1, g: 1, b: 1, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Emission_Color: {r: 1, g: 1, b: 1, a: 0}
     - _Fresnel_Color: {r: 0, g: 0, b: 0, a: 1}
-    - _NoiseColor: {r: 0, g: 0, b: 0, a: 0}
+    - _NoiseColor: {r: 0.1775139, g: 0.5849056, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _Specular: {r: 1, g: 1, b: 1, a: 0}
     - _Specular_Color: {r: 0, g: 0, b: 0, a: 0}

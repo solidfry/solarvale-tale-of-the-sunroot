@@ -25,9 +25,9 @@ Material:
     type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
-  m_InvalidKeywords:
+  m_ValidKeywords:
   - _SPECULAR_SETUP
+  m_InvalidKeywords: []
   m_LightmapFlags: 1
   m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
@@ -128,6 +128,7 @@ Material:
     - _AlphaMultiplier: 0.01
     - _AlphaToMask: 0
     - _Alpha_Clip_Threshold: 0
+    - _AmbientOcclusion: 0.5
     - _Blend: 0
     - _BlendModePreserveSpecular: 1
     - _BottomColourPosition: 1
@@ -162,7 +163,7 @@ Material:
     - _QueueOffset: 40
     - _ReceiveShadows: 1
     - _Shadow_Opacity: 0
-    - _Smoothness: 0.5
+    - _Smoothness: 0
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SpecularStrength: 0
@@ -181,15 +182,16 @@ Material:
     - _ZWriteControl: 0
     m_Colors:
     - Color_D9F05973: {r: 1, g: 1, b: 1, a: 1}
-    - Color_DB04B181: {r: 0, g: 0, b: 0, a: 1}
+    - Color_DB04B181: {r: 0.25356564, g: 0.023673896, b: 0.26415092, a: 1}
     - _Albedo_Color: {r: 1, g: 1, b: 1, a: 1}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
-    - _BottomColour: {r: 1, g: 1, b: 1, a: 1}
+    - _BottomColour: {r: 0.07831969, g: 0.09588118, b: 0.3018868, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Emission_Color: {r: 0, g: 0, b: 0, a: 0}
     - _Fresnel_Color: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+    - _SpecularColor: {r: 0.5019608, g: 0.5019608, b: 0.5019608, a: 0}
     - _Specular_Color: {r: 0, g: 0, b: 0, a: 0}
     - _WindDirection: {r: 1, g: 1, b: 0, a: 0}
   m_BuildTextureStacks: []
