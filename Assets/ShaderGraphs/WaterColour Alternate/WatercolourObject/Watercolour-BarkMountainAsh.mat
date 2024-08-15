@@ -26,23 +26,20 @@ Material:
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
-  - _ALPHAPREMULTIPLY_ON
   - _ALPHATEST_ON
   - _MAIN_LIGHT_SHADOWS
   - _MAIN_LIGHT_SHADOWS_CASCADE
   - _SOFT_SHADOWS
   - _SPECULAR_SETUP
-  - _SURFACE_TYPE_TRANSPARENT
   m_InvalidKeywords: []
   m_LightmapFlags: 2
   m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 1
-  m_CustomRenderQueue: 3006
+  m_CustomRenderQueue: 2456
   stringTagMap:
-    RenderType: Transparent
+    RenderType: TransparentCutout
   disabledShaderPasses:
   - SHADOWCASTER
-  - DepthOnly
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
@@ -99,13 +96,13 @@ Material:
     - _Albedo_Strength: 3.73
     - _AlphaClip: 1
     - _AlphaMultiplier: 1
-    - _AlphaToMask: 0
+    - _AlphaToMask: 1
     - _Alpha_Clip_Threshold: 0.832
     - _Blend: 0
     - _BlendModePreserveSpecular: 1
     - _CastShadows: 0
     - _Cull: 2
-    - _DstBlend: 10
+    - _DstBlend: 0
     - _EmissionStrength: 0
     - _Emission_Strength: 0
     - _MAIN_LIGHT_SHADOWS: 1
@@ -123,12 +120,12 @@ Material:
     - _Shadow_Opacity: 0.09
     - _SpecularStrength: 0
     - _SrcBlend: 1
-    - _Surface: 1
+    - _Surface: 0
     - _TriplanarBlend: 0.12
     - _TriplanarTiling: 0.07
     - _WorkflowMode: 0
     - _ZTest: 4
-    - _ZWrite: 0
+    - _ZWrite: 1
     - _ZWriteControl: 0
     m_Colors:
     - Color_D9F05973: {r: 0.49056602, g: 0.49056602, b: 0.49056602, a: 1}
