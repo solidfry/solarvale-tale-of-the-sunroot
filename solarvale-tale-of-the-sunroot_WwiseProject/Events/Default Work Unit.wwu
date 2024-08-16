@@ -1402,7 +1402,7 @@
 								<Action Name="" ID="{F1932DCF-F8FC-4EAF-8292-4FB570EE82DA}" ShortID="575441697">
 									<PropertyList>
 										<Property Name="FadeInCurve" Type="int16" Value="8"/>
-										<Property Name="FadeTime" Type="Real64" Value="4.5"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
@@ -1426,6 +1426,10 @@
 						<Event Name="Play_music_flutes_edit" ID="{3F87582D-2EF7-40C5-8C77-83AF2A3354AB}">
 							<ChildrenList>
 								<Action Name="" ID="{5C66F7C9-1C9B-43C8-85F0-937FC883F852}" ShortID="885102695">
+									<PropertyList>
+										<Property Name="FadeInCurve" Type="int16" Value="6"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="music_flutes_edit" ID="{5CD7F791-2127-406D-8712-9551503B4E60}" WorkUnitID="{6AACD892-8249-4CA2-BBEB-F88052A754B1}"/>
