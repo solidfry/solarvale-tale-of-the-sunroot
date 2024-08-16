@@ -27,13 +27,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 901424478212353622}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0.62788224, y: -0.35207725, z: 0.38100833, w: 0.5802053}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3748655633976961460}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 94.52, y: -62.5, z: 0}
 --- !u!108 &6455729437456555010
 Light:
   m_ObjectHideFlags: 0
@@ -162,7 +162,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1761332111613689401}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -263,7 +263,7 @@ MonoBehaviour:
   UniStormMenuKey: 27
   UniStormCanvas: {fileID: 0}
   m_MenuToggle: 0
-  TabNumber: 1
+  TabNumber: 3
   TimeTabNumbers: 0
   WeatherTabNumbers: 1
   CelestialTabNumbers: 0
@@ -299,7 +299,7 @@ MonoBehaviour:
   StartingMinute: 0
   StartingHour: 17
   Minute: 0
-  Hour: 8
+  Hour: 12
   Day: 25
   Month: 12
   Year: 2032
@@ -455,13 +455,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 496382d3b6d3bde4ba6af9ddd1274248, type: 2}
   - {fileID: 11400000, guid: b1b04f0270cfa784588fdc5818097ad3, type: 2}
   - {fileID: 11400000, guid: 865815ce607d94c4cb41162c44555e7c, type: 2}
-  - {fileID: 11400000, guid: 8564137bd991ab448bb763ee76ea290f, type: 2}
-  - {fileID: 11400000, guid: 817c2abbadfb7c04cbd380d43ef46e06, type: 2}
   - {fileID: 11400000, guid: b1712a7ceb8a9954dab341bacd44f5a8, type: 2}
   - {fileID: 11400000, guid: 3ef2a1c3a25ed764bb57de3be8960e7a, type: 2}
   - {fileID: 11400000, guid: 1c574a7c95db0204d8f2627686dde9dd, type: 2}
-  - {fileID: 11400000, guid: 9c9c95d0c839e12409171dc4a845551a, type: 2}
-  CurrentWeatherType: {fileID: 11400000, guid: 865815ce607d94c4cb41162c44555e7c, type: 2}
+  CurrentWeatherType: {fileID: 11400000, guid: 496382d3b6d3bde4ba6af9ddd1274248, type: 2}
   NextWeatherType: {fileID: 0}
   ByPassCoverageTransition: 0
   m_PrecipitationOdds: 50
@@ -1061,7 +1058,7 @@ MonoBehaviour:
     type: 3}
   WeatherGeneration: 0
   LightningStrikes: 1
-  CloudShadows: 0
+  CloudShadows: 1
   LightningStrikesEmeraldAI: 1
   EmeraldAITag: Respawn
   EmeraldAIRagdollForce: 500
@@ -1084,7 +1081,7 @@ MonoBehaviour:
   m_CurrentCloudHeight: 0
   CloudShadowResolution: 1
   CloudSpeed: 3
-  CloudTurbulence: 25
+  CloudTurbulence: 5
   DetectionLayerMask:
     serializedVersion: 2
     m_Bits: 8193
@@ -1149,7 +1146,7 @@ MonoBehaviour:
       outWeight: 0.33333334
     - serializedVersion: 3
       time: 6.7798114
-      value: 1.5
+      value: 2.005895
       inSlope: 0.00529797
       outSlope: 0.00529797
       tangentMode: 0
@@ -1158,7 +1155,7 @@ MonoBehaviour:
       outWeight: 0.33333334
     - serializedVersion: 3
       time: 12.760666
-      value: 1.5
+      value: 2.005895
       inSlope: -0.0005448237
       outSlope: -0.0005448237
       tangentMode: 0
@@ -1167,7 +1164,7 @@ MonoBehaviour:
       outWeight: 0.33333334
     - serializedVersion: 3
       time: 18.35
-      value: 1.5
+      value: 2.005895
       inSlope: -0.0053261714
       outSlope: -0.0053261714
       tangentMode: 0
@@ -1330,7 +1327,7 @@ MonoBehaviour:
       outWeight: 0.33333334
     - serializedVersion: 3
       time: 6.7798114
-      value: 1.5
+      value: 1.8048187
       inSlope: 0.00529797
       outSlope: 0.00529797
       tangentMode: 0
@@ -1339,7 +1336,7 @@ MonoBehaviour:
       outWeight: 0.33333334
     - serializedVersion: 3
       time: 12.760666
-      value: 1.5
+      value: 1.8048187
       inSlope: -0.0005448237
       outSlope: -0.0005448237
       tangentMode: 0
@@ -1348,7 +1345,7 @@ MonoBehaviour:
       outWeight: 0.33333334
     - serializedVersion: 3
       time: 18.35
-      value: 1.5
+      value: 1.8048187
       inSlope: -0.0053261714
       outSlope: -0.0053261714
       tangentMode: 0
@@ -1958,8 +1955,8 @@ MonoBehaviour:
   SunObject: {fileID: 0}
   SunObjectMaterial: {fileID: 0}
   Hemisphere: 1
-  SunShadowType: 1
-  MoonShadowType: 1
+  SunShadowType: 2
+  MoonShadowType: 2
   LightningShadowType: 0
   SunShadowResolution: 1
   MoonShadowResolution: 0
@@ -2433,10 +2430,10 @@ MonoBehaviour:
     serializedVersion: 2
     key0: {r: 0.15294118, g: 0.24705882, b: 0.34117648, a: 1}
     key1: {r: 0.15294118, g: 0.24705882, b: 0.34117648, a: 1}
-    key2: {r: 0.4419643, g: 0.4640625, b: 0.495, a: 0}
-    key3: {r: 0.78431374, g: 0.8235294, b: 0.8784314, a: 0}
-    key4: {r: 0.7821734, g: 0.8202474, b: 0.8773585, a: 0}
-    key5: {r: 0.44313726, g: 0.46666667, b: 0.49803922, a: 0}
+    key2: {r: 0.2784314, g: 0.38431373, b: 0.52156866, a: 0}
+    key3: {r: 0.56470275, g: 0.6989068, b: 0.8867924, a: 0}
+    key4: {r: 0.5647059, g: 0.7019608, b: 0.8901961, a: 0}
+    key5: {r: 0.2765664, g: 0.3804099, b: 0.5188679, a: 0}
     key6: {r: 0.15198001, g: 0.24599001, b: 0.34, a: 0}
     key7: {r: 0.15294118, g: 0.24705882, b: 0.34117648, a: 0}
     ctime0: 0
@@ -2491,14 +2488,14 @@ MonoBehaviour:
     m_NumAlphaKeys: 2
   CloudLightColor:
     serializedVersion: 2
-    key0: {r: 0.33454967, g: 0.36744392, b: 0.3962264, a: 1}
-    key1: {r: 0.21586867, g: 0.26513427, b: 0.31132078, a: 1}
-    key2: {r: 1, g: 0.70343137, b: 0.5514706, a: 0}
-    key3: {r: 0.7549395, g: 0.79037845, b: 0.8207547, a: 0}
-    key4: {r: 0.7549395, g: 0.79037845, b: 0.8207547, a: 0}
-    key5: {r: 1, g: 0.70343137, b: 0.5514706, a: 0}
-    key6: {r: 0.21586867, g: 0.26513427, b: 0.31132078, a: 0}
-    key7: {r: 0.33454967, g: 0.36744392, b: 0.3962264, a: 0}
+    key0: {r: 0.2, g: 0.29803923, b: 0.38039216, a: 1}
+    key1: {r: 0.2, g: 0.29803923, b: 0.38039216, a: 1}
+    key2: {r: 1, g: 0.63529414, b: 0.4509804, a: 0}
+    key3: {r: 0.71809363, g: 0.83951974, b: 0.9339623, a: 0}
+    key4: {r: 0.72156864, g: 0.84313726, b: 0.9372549, a: 0}
+    key5: {r: 1, g: 0.6320755, b: 0.4481132, a: 0}
+    key6: {r: 0.1975792, g: 0.29495963, b: 0.3773585, a: 0}
+    key7: {r: 0.2, g: 0.29803923, b: 0.38039216, a: 0}
     ctime0: 0
     ctime1: 16515
     ctime2: 19398
@@ -2516,7 +2513,7 @@ MonoBehaviour:
     atime6: 0
     atime7: 0
     m_Mode: 0
-    m_ColorSpace: -1
+    m_ColorSpace: 0
     m_NumColorKeys: 8
     m_NumAlphaKeys: 2
   StormyCloudLightColor:
@@ -2551,14 +2548,14 @@ MonoBehaviour:
     m_NumAlphaKeys: 2
   CloudBaseColor:
     serializedVersion: 2
-    key0: {r: 0.12237452, g: 0.16496086, b: 0.20754719, a: 1}
-    key1: {r: 0.094562136, g: 0.12920174, b: 0.16037738, a: 1}
-    key2: {r: 0.27549842, g: 0.34041992, b: 0.38679248, a: 0}
-    key3: {r: 0.51548594, g: 0.5547249, b: 0.6037736, a: 0}
-    key4: {r: 0.51548594, g: 0.5547249, b: 0.6037736, a: 0}
-    key5: {r: 0.27549842, g: 0.34041992, b: 0.38679248, a: 0}
-    key6: {r: 0.094562136, g: 0.12920174, b: 0.16037738, a: 0}
-    key7: {r: 0.12237452, g: 0.16496086, b: 0.20754719, a: 0}
+    key0: {r: 0.14901961, g: 0.27058825, b: 0.38039216, a: 1}
+    key1: {r: 0.14901961, g: 0.27058825, b: 0.38039216, a: 1}
+    key2: {r: 0.23137255, g: 0.4627451, b: 0.5764706, a: 0}
+    key3: {r: 0.31990921, g: 0.6065996, b: 0.745283, a: 0}
+    key4: {r: 0.32156864, g: 0.60784316, b: 0.7490196, a: 0}
+    key5: {r: 0.23073158, g: 0.46161246, b: 0.5754717, a: 0}
+    key6: {r: 0.14773941, g: 0.26930246, b: 0.3773585, a: 0}
+    key7: {r: 0.14901961, g: 0.27058825, b: 0.38039216, a: 0}
     ctime0: 0
     ctime1: 16515
     ctime2: 19430
@@ -2576,7 +2573,7 @@ MonoBehaviour:
     atime6: 0
     atime7: 0
     m_Mode: 0
-    m_ColorSpace: -1
+    m_ColorSpace: 0
     m_NumColorKeys: 8
     m_NumAlphaKeys: 2
   CloudStormyBaseColor:
