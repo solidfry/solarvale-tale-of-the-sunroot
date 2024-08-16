@@ -1519,12 +1519,13 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{7045560F-6C54-C16A-79DB-6D99B3C647A2}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{B17F8ABE-78C3-D9DA-DECA-CE3EDD258C69}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
 				<ShareSets>
 					<Plugin Id="48620415" Name="Have_U_Ever_Been_Outside" LibName="Wwise RoomVerb" LibId="7733251"/>
+					<Plugin Id="2258521792" Name="Brick_Wall_Minus_1dB_Peak_Slow_Release" LibName="Wwise Peak Limiter" LibId="7208963"/>
 				</ShareSets>
 				<AudioDevices>
 					<Plugin Id="3859886410" Name="System" LibName="System" LibId="11403271"/>
@@ -1551,7 +1552,13 @@
 					</PluginRefs>
 				</Bus>
 				<Bus Id="3450086625" Name="AnimalAtmos" MaxAttenuation="150"/>
-				<Bus Id="3803692087" Name="Master Audio Bus"/>
+				<Bus Id="3803692087" Name="Master Audio Bus">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2258521792"/>
+						</ShareSets>
+					</PluginRefs>
+				</Bus>
 				<Bus Id="3869215771" Name="AnimalBirds" MaxAttenuation="250"/>
 				<Bus Id="3991942870" Name="Music" MaxAttenuation="100"/>
 			</Busses>
@@ -3446,5 +3453,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{8965E408-80B5-30CB-2C6C-911901702D60}</FileHash>
+	<FileHash>{D1D18715-4C55-A3C4-6018-BE887470E7A8}</FileHash>
 </SoundBanksInfo>
