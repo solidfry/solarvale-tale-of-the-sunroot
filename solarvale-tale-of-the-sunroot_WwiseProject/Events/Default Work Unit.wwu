@@ -1535,7 +1535,6 @@
 								<Action Name="" ID="{CED6367C-B255-4802-9AEF-C3851FD6B128}" ShortID="997737070">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="2"/>
-										<Property Name="Delay" Type="Real64" Value="5"/>
 										<Property Name="FadeOutCurve" Type="int16" Value="6"/>
 										<Property Name="FadeTime" Type="Real64" Value="10"/>
 									</PropertyList>
@@ -1613,6 +1612,10 @@
 						<Event Name="Play_Ocean" ID="{409906A6-AFE2-42C7-929F-E322F09A70BB}">
 							<ChildrenList>
 								<Action Name="" ID="{00555013-191B-451D-8020-DC0553533971}" ShortID="570738723">
+									<PropertyList>
+										<Property Name="FadeInCurve" Type="int16" Value="7"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="Ocean" ID="{F2737846-7A83-44D4-8557-055938649C77}" WorkUnitID="{9CCFE6D6-BF4C-4F3A-BF1F-C42DE46CC289}"/>
