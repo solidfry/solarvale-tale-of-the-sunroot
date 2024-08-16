@@ -181,6 +181,7 @@ namespace AK
         static const AkUniqueID ANIMALBIRDS = 3869215771U;
         static const AkUniqueID ANIMALS = 949388280U;
         static const AkUniqueID ATMOS = 3034623661U;
+        static const AkUniqueID ATMOSBEACH = 685722690U;
         static const AkUniqueID ATMOSOCEAN = 1352063017U;
         static const AkUniqueID FOLEY = 247557814U;
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
