@@ -720,6 +720,16 @@
 								</ObjectList>
 							</ObjectLists>
 						</Bus>
+						<Bus Name="AnimalBirds" ID="{57A5A2AB-9A41-4459-83D0-1A400D4BF04D}">
+							<PropertyList>
+								<Property Name="ListenerRelativeRouting" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="AnimalBirds" ID="{B4872283-A760-4727-8678-735C31E2B2AD}" WorkUnitID="{05E83523-ED60-4EDF-8A61-DC39396E21A4}"/>
+								</Reference>
+							</ReferenceList>
+						</Bus>
 					</ChildrenList>
 					<ObjectLists>
 						<ObjectList Name="RTPC">
