@@ -295,6 +295,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1185943102}
+  - component: {fileID: 1185943103}
   m_Layer: 5
   m_Name: Group
   m_TagString: Untagged
@@ -321,8 +322,22 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 982.714, y: 481.09256}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1185943103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1185943101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalFit: 2
+  m_VerticalFit: 2
 --- !u!1001 &1376327978
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -427,7 +442,6 @@ GameObject:
   - component: {fileID: 1558879428}
   - component: {fileID: 1558879431}
   - component: {fileID: 1558879430}
-  - component: {fileID: 1558879429}
   - component: {fileID: 1558879432}
   m_Layer: 5
   m_Name: WoiwurrungText
@@ -452,24 +466,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 92.67828}
-  m_SizeDelta: {x: 982.714, y: 295.736}
+  m_AnchoredPosition: {x: 0, y: 263.29663}
+  m_SizeDelta: {x: 1600, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1558879429
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1558879427}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83d08a81bd1d74f0db6573b990298d60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _entryId:
-    _value: a663ffad-2ce9-43b5-b2b0-caf6fd215a38
-  _component: {fileID: 1558879430}
 --- !u!114 &1558879430
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -520,8 +519,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 32
-  m_fontSizeBase: 32
+  m_fontSize: 64
+  m_fontSizeBase: 64
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -690,7 +689,6 @@ GameObject:
   - component: {fileID: 1660402507}
   - component: {fileID: 1660402506}
   - component: {fileID: 1660402508}
-  - component: {fileID: 1660402505}
   m_Layer: 5
   m_Name: GadigalText
   m_TagString: Untagged
@@ -714,24 +712,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -92.67828}
-  m_SizeDelta: {x: 982.714, y: 295.736}
+  m_AnchoredPosition: {x: 0, y: -152.02379}
+  m_SizeDelta: {x: 1600, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1660402505
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1660402503}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83d08a81bd1d74f0db6573b990298d60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _entryId:
-    _value: a663ffad-2ce9-43b5-b2b0-caf6fd215a38
-  _component: {fileID: 1660402506}
 --- !u!114 &1660402506
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -781,8 +764,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 32
-  m_fontSizeBase: 32
+  m_fontSize: 64
+  m_fontSizeBase: 64
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -959,7 +942,7 @@ MonoBehaviour:
   fadeOnStart: 1
   fadeDirection: 1
   autoFade: 1
-  timeBeforeExit: 12
+  timeBeforeExit: 15
   FadeInAndOutOnComplete:
     m_PersistentCalls:
       m_Calls:
@@ -996,9 +979,9 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 1920, y: 1080}
+  m_ReferenceResolution: {x: 3840, y: 2160}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0.5
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
