@@ -1519,7 +1519,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{A95D060B-9771-96B3-0F22-C91F292A8079}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{359A1F3E-E1D4-BEEB-24DD-F5409261E2D3}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -1533,13 +1533,7 @@
 			<Busses>
 				<Bus Id="247557814" Name="Foley"/>
 				<Bus Id="393239870" Name="SFX" MaxAttenuation="100"/>
-				<Bus Id="685722690" Name="AtmosBeach" MaxAttenuation="150">
-					<PluginRefs>
-						<ShareSets>
-							<PluginRef Id="48620415"/>
-						</ShareSets>
-					</PluginRefs>
-				</Bus>
+				<Bus Id="685722690" Name="AtmosBeach" MaxAttenuation="75"/>
 				<Bus Id="949388280" Name="Animals" MaxAttenuation="100"/>
 				<Bus Id="1352063017" Name="AtmosOcean" MaxAttenuation="3000">
 					<PluginRefs>
@@ -1726,7 +1720,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3034623661" Type="User" Language="SFX" Hash="{BA027366-B867-F971-F314-139E8D29F6B1}">
+		<SoundBank Id="3034623661" Type="User" Language="SFX" Hash="{54EF24F5-C0CC-1080-ABC0-A877D43AF712}">
 			<ShortName>Atmos</ShortName>
 			<Path>Atmos.bnk</Path>
 			<Media>
@@ -1766,10 +1760,6 @@
 					<ShortName>Atmos_Mountain_Birds_Cicadas_01.wav</ShortName>
 					<CachePath>SFX/Atmos_Mountain_Birds_Cicadas_01_9F48E722.wem</CachePath>
 				</File>
-				<File Id="864119437" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Atmos_Beach_Wind_Gentle..wav</ShortName>
-					<CachePath>SFX/Atmos_Beach_Wind_Gentle._9FBFB6BF.wem</CachePath>
-				</File>
 				<File Id="910494700" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Atmos_Cave_Wind_Gentle.wav</ShortName>
 					<CachePath>SFX/Atmos_Cave_Wind_Gentle_EF4CA2DC.wem</CachePath>
@@ -1780,11 +1770,6 @@
 				</File>
 			</Media>
 			<Events>
-				<Event Id="3680285438" Name="Play_Atmos_Beach_Wind_Gentle_" MaxAttenuation="150" DurationType="OneShot" DurationMin="66.273994" DurationMax="83.693146">
-					<MediaRefs>
-						<MediaRef Id="864119437"/>
-					</MediaRefs>
-				</Event>
 				<Event Id="172525698" Name="Play_Atmos_Cave_01" MaxAttenuation="150" DurationType="OneShot" DurationMin="116.468925" DurationMax="119.951">
 					<MediaRefs>
 						<MediaRef Id="4175530"/>
@@ -1818,11 +1803,6 @@
 						<MediaRef Id="719415462"/>
 						<MediaRef Id="730229544"/>
 						<MediaRef Id="996077951"/>
-					</MediaRefs>
-				</Event>
-				<Event Id="2003737076" Name="Stop_Atmos_Beach_Wind_Gentle_" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
-					<MediaRefs>
-						<MediaRef Id="864119437"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="4282660668" Name="Stop_Atmos_Cave_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
@@ -1862,7 +1842,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{4EA41008-231A-FBBC-6899-C6291E2D3F78}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{29059BD5-B768-E50A-D3B1-AE2B8CE2552D}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -2586,10 +2566,6 @@
 					<ShortName>Piano 7.wav</ShortName>
 					<CachePath>SFX/Piano 7_C7C1D6EA.wem</CachePath>
 				</File>
-				<File Id="864119437" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Atmos_Beach_Wind_Gentle..wav</ShortName>
-					<CachePath>SFX/Atmos_Beach_Wind_Gentle._9FBFB6BF.wem</CachePath>
-				</File>
 				<File Id="864995489" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_Sunroot_Tree.wav</ShortName>
 					<CachePath>SFX/SFX_Sunroot_Tree_C5885306.wem</CachePath>
@@ -2791,11 +2767,7 @@
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
-				<Event Id="3680285438" Name="Play_Atmos_Beach_Wind_Gentle_" MaxAttenuation="150" DurationType="OneShot" DurationMin="66.273994" DurationMax="83.693146">
-					<MediaRefs>
-						<MediaRef Id="864119437"/>
-					</MediaRefs>
-				</Event>
+				<Event Id="3680285438" Name="Play_Atmos_Beach_Wind_Gentle_" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="172525698" Name="Play_Atmos_Cave_01" MaxAttenuation="150" DurationType="OneShot" DurationMin="116.468925" DurationMax="119.951">
 					<MediaRefs>
 						<MediaRef Id="4175530"/>
@@ -2821,9 +2793,10 @@
 						<MediaRef Id="455223534"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2006186431" Name="Play_Beach" MaxAttenuation="150" DurationType="OneShot" DurationMin="66.273994" DurationMax="83.693146">
+				<Event Id="2006186431" Name="Play_Beach" MaxAttenuation="75" DurationType="OneShot" DurationMin="331.54724" DurationMax="356.9114">
 					<MediaRefs>
-						<MediaRef Id="864119437"/>
+						<MediaRef Id="8120661"/>
+						<MediaRef Id="389401695"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="2883217168" Name="Play_BrandIntro_Birds" MaxAttenuation="100" DurationType="OneShot" DurationMin="14.034756" DurationMax="14.034756">
@@ -3454,5 +3427,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{51901191-38B4-A942-5BFD-9ACFEFF86E5D}</FileHash>
+	<FileHash>{8A2F5316-34F5-37C4-9B61-0F51F7D8F21D}</FileHash>
 </SoundBanksInfo>
