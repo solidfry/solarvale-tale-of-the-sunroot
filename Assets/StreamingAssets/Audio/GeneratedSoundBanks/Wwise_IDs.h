@@ -21,6 +21,7 @@ namespace AK
         static const AkUniqueID PLAY_ATMOS_PLAINS_SCRUB_WIND_GENTLE_ = 749604250U;
         static const AkUniqueID PLAY_ATMOS_STREAM = 807656883U;
         static const AkUniqueID PLAY_BEACH = 2006186431U;
+        static const AkUniqueID PLAY_BEACHWAVES = 798799567U;
         static const AkUniqueID PLAY_BRANDINTRO_BIRDS = 2883217168U;
         static const AkUniqueID PLAY_CAMERA_SNAP = 1514177854U;
         static const AkUniqueID PLAY_CAVE = 3602995889U;
@@ -84,6 +85,7 @@ namespace AK
         static const AkUniqueID STOP_ATMOS_PLAINS_SCRUB_WIND_GENTLE_ = 2006226368U;
         static const AkUniqueID STOP_ATMOS_STREAM = 2358452373U;
         static const AkUniqueID STOP_BEACH = 378774161U;
+        static const AkUniqueID STOP_BEACHWAVES = 3869294593U;
         static const AkUniqueID STOP_BRANDINTRO_BIRDS = 1999114582U;
         static const AkUniqueID STOP_CAVE = 1127247799U;
         static const AkUniqueID STOP_FOREST = 1085006091U;
