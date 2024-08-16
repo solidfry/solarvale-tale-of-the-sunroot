@@ -1842,7 +1842,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{0771AB7B-8F49-8258-F073-FFF2276C4A4F}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{AF277B92-FC0D-05DE-6425-058F3A85F37B}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -2402,6 +2402,10 @@
 					<ShortName>ibis-honk_01-mono.wav</ShortName>
 					<CachePath>SFX/ibis-honk_01-mono_1B0E6163.wem</CachePath>
 				</File>
+				<File Id="649641447" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Atmos_OceanBirds16bit.wav</ShortName>
+					<CachePath>SFX/Atmos_OceanBirds16bit_1CA4AB29.wem</CachePath>
+				</File>
 				<File Id="659591763" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>11.wav</ShortName>
 					<CachePath>SFX/11_818F3B66.wem</CachePath>
@@ -2801,8 +2805,9 @@
 						<MediaRef Id="455223534"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2006186431" Name="Play_Beach" MaxAttenuation="150" DurationType="OneShot" DurationMin="66.273994" DurationMax="83.693146">
+				<Event Id="2006186431" Name="Play_Beach" MaxAttenuation="150" DurationType="OneShot" DurationMin="356.9675" DurationMax="450.15564">
 					<MediaRefs>
+						<MediaRef Id="649641447"/>
 						<MediaRef Id="864119437"/>
 					</MediaRefs>
 				</Event>
@@ -3441,5 +3446,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{F07F7134-FAE4-70F9-0997-70091F10DD47}</FileHash>
+	<FileHash>{F3C9D135-4ECC-EA49-7BC2-40A4C5C58436}</FileHash>
 </SoundBanksInfo>
