@@ -178,6 +178,7 @@ namespace AK
     namespace BUSSES
     {
         static const AkUniqueID ANIMALATMOS = 3450086625U;
+        static const AkUniqueID ANIMALBIRDS = 3869215771U;
         static const AkUniqueID ANIMALS = 949388280U;
         static const AkUniqueID ATMOS = 3034623661U;
         static const AkUniqueID ATMOSOCEAN = 1352063017U;
