@@ -21,12 +21,19 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Rock
-  m_Shader: {fileID: -6465566751694194690, guid: f5d373e564280e04fba4453e862386f5,
-    type: 3}
+  m_Shader: {fileID: 4800000, guid: bee44b4a58655ee4cbff107302a3e131, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
-  - _SPECULAR_SETUP
+  - DR_CEL_EXTRA_ON
+  - _BASEMAP_PREMULTIPLY
+  - _CELPRIMARYMODE_SINGLE
+  - _DETAILMAPBLENDINGMODE_MULTIPLY
+  - _GRADIENTSPACE_LOCAL
+  - _OUTLINESPACE_SCREEN
+  - _TEXTUREBLENDINGMODE_MULTIPLY
+  - _UNITYSHADOWMODE_COLOR
+  - _UNITYSHADOW_OCCLUSION
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 1
@@ -49,11 +56,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: f58ab6795f44fee43876b017d31ac7f8, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 13cf9c9bffdaba24ca96adc12a087437, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _CelCurveTexture:
@@ -136,7 +143,7 @@ Material:
     - _AlphaMultiplier: 0.01
     - _AlphaToMask: 0
     - _Alpha_Clip_Threshold: 0
-    - _BaseMapPremultiply: 0
+    - _BaseMapPremultiply: 1
     - _Blend: 0
     - _BlendModePreserveSpecular: 1
     - _BumpScale: 1
@@ -145,7 +152,7 @@ Material:
     - _CelExtraEnabled: 1
     - _CelNumSteps: 3
     - _CelPrimaryEnabled: 0
-    - _CelPrimaryMode: 2
+    - _CelPrimaryMode: 1
     - _Cull: 2
     - _Cutoff: 0.5
     - _DetailMapBlendingMode: 0
@@ -165,8 +172,8 @@ Material:
     - _FlatSpecularEnabled: 1
     - _FlatSpecularSize: 0.1
     - _FlatSpecularSmoothness: 0.5
-    - _Flatness: 0.301
-    - _FlatnessExtra: 0.114
+    - _Flatness: 0.586
+    - _FlatnessExtra: 0.923
     - _FlatnessSecondary: 1
     - _GlossMapScale: 1
     - _Glossiness: 0
@@ -179,7 +186,7 @@ Material:
     - _GradientSize: 0.25
     - _GradientSpace: 1
     - _GradientStart: 1.17
-    - _LightContribution: 0.5
+    - _LightContribution: 0
     - _LightFalloffSize: 0.0001
     - _LightmapDirectionPitch: 0
     - _LightmapDirectionYaw: 0
@@ -207,10 +214,10 @@ Material:
     - _RimEnabled: 0
     - _SecondaryColor: 1
     - _SecondaryColorEnabled: 1
-    - _SelfShadingSize: 0
+    - _SelfShadingSize: 0.41
     - _SelfShadingSizeExtra: 0.135
-    - _ShadowEdgeSize: 0
-    - _ShadowEdgeSizeExtra: 0.175
+    - _ShadowEdgeSize: 0.172
+    - _ShadowEdgeSizeExtra: 0.122
     - _ShadowEdgeSmoothness: 0.071
     - _ShadowFalloff: 0.01
     - _Shadow_Opacity: 0.5
@@ -221,14 +228,14 @@ Material:
     - _SrcBlend: 1
     - _Surface: 0
     - _TextureBlendingMode: 0
-    - _TextureImpact: 1
+    - _TextureImpact: 0.742
     - _TriplanarBlend: 0.13
     - _TriplanarTiling: 0.06
     - _UVSec: 0
-    - _UnityShadowMode: 1
-    - _UnityShadowOcclusion: 0
+    - _UnityShadowMode: 2
+    - _UnityShadowOcclusion: 1
     - _UnityShadowPower: 1
-    - _UnityShadowSharpness: 1
+    - _UnityShadowSharpness: 10
     - _VertexColorsEnabled: 0
     - _VertexExtrusionSmoothNormals: 0
     - _WorkflowMode: 0
@@ -239,12 +246,12 @@ Material:
     - Color_D9F05973: {r: 0.5660378, g: 0.2415599, b: 0.2322891, a: 1}
     - Color_DB04B181: {r: 0.21176471, g: 0.22691523, b: 0.27058825, a: 1}
     - _Albedo_Color: {r: 0.254717, g: 0.17321895, b: 0.15018691, a: 1}
-    - _BaseColor: {r: 0.26072443, g: 0.26813543, b: 0.29245278, a: 1}
+    - _BaseColor: {r: 0.4716981, g: 0.14462443, b: 0.25434417, a: 1}
     - _Color: {r: 0.26072446, g: 0.26813546, b: 0.2924528, a: 1}
     - _ColorCelShadow: {r: 0.49056602, g: 0.34478462, b: 0.4476891, a: 1}
-    - _ColorDim: {r: 0.5660378, g: 0.53950477, b: 0.42452833, a: 0.85}
+    - _ColorDim: {r: 0.8018868, g: 0.21560162, b: 0.22172041, a: 0.85}
     - _ColorDimCurve: {r: 0.85, g: 0.85, b: 0.85, a: 0.85}
-    - _ColorDimExtra: {r: 0.0754717, g: 0.0754717, b: 0.0754717, a: 0.85}
+    - _ColorDimExtra: {r: 0.41509432, g: 0, b: 0.10167965, a: 1}
     - _ColorDimSteps: {r: 0.85, g: 0.85, b: 0.85, a: 0.85}
     - _ColorGradient: {r: 1, g: 1, b: 1, a: 1}
     - _ColorSecondary: {r: 1, g: 0.55879205, b: 0, a: 1}
@@ -260,5 +267,5 @@ Material:
     - _NoiseColor: {r: 0.8812674, g: 1, b: 0.654902, a: 0}
     - _OutlineColor: {r: 1, g: 1, b: 1, a: 1}
     - _Specular_Color: {r: 0, g: 0, b: 0, a: 0}
-    - _UnityShadowColor: {r: 0.65, g: 0.65, b: 0.65, a: 1}
+    - _UnityShadowColor: {r: 0, g: 0.0041833147, b: 0.2735849, a: 1}
   m_BuildTextureStacks: []
