@@ -1514,7 +1514,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{F22257CB-654F-6DC2-7685-6354DEF3B318}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{717BC903-C8A6-2F79-0895-7C525A45F28E}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -1529,8 +1529,20 @@
 			<Busses>
 				<Bus Id="247557814" Name="Foley"/>
 				<Bus Id="393239870" Name="SFX" MaxAttenuation="100"/>
-				<Bus Id="685722690" Name="AtmosBeach" MaxAttenuation="75"/>
-				<Bus Id="949388280" Name="Animals" MaxAttenuation="100"/>
+				<Bus Id="685722690" Name="AtmosBeach" MaxAttenuation="75">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="48620415"/>
+						</ShareSets>
+					</PluginRefs>
+				</Bus>
+				<Bus Id="949388280" Name="Animals" MaxAttenuation="100">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="48620415"/>
+						</ShareSets>
+					</PluginRefs>
+				</Bus>
 				<Bus Id="1352063017" Name="AtmosOcean" MaxAttenuation="3000">
 					<PluginRefs>
 						<ShareSets>
@@ -1582,7 +1594,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="1551306167" Type="User" Language="SFX" Hash="{9434AC30-462A-3744-D41F-E9FFC4D481F9}">
+		<SoundBank Id="1551306167" Type="User" Language="SFX" Hash="{421D3AE8-3846-3E3E-09C7-045B816AF235}">
 			<ShortName>UI</ShortName>
 			<Path>UI.bnk</Path>
 			<Media>
@@ -1850,7 +1862,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{33D94D5D-8AD2-8AFD-7407-BC8B96F11BBC}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{987C14CC-F7D7-7DBD-B41E-7AA0FE2E6560}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -3450,5 +3462,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{2E269F74-B1DC-87D1-B485-F4C5F79DD6DD}</FileHash>
+	<FileHash>{211D283E-29A0-C571-B468-AE026200A05C}</FileHash>
 </SoundBanksInfo>
