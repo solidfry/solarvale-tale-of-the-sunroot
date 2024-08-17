@@ -57,6 +57,14 @@
 									</ReferenceList>
 									<ChildrenList>
 										<SwitchContainer Name="Player_Footstep_Dirt" ID="{6590933F-7C46-4F7C-9836-7F5CF686CCF2}" ShortID="377110132">
+											<PropertyList>
+												<Property Name="OverrideEffect" Type="bool" Value="True"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-1</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
@@ -100,6 +108,11 @@
 																</ModifierInfo>
 															</ModifierList>
 														</Property>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>-1</Value>
+															</ValueList>
+														</Property>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
@@ -111,6 +124,62 @@
 													</ReferenceList>
 													<ChildrenList>
 														<AudioFileSource Name="Player_Footstep_01" ID="{B6935580-514D-4367-9581-A7242ECABF89}">
+															<PropertyList>
+																<Property Name="OverrideConversion" Type="bool" Value="True"/>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<Custom CreatedFrom="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}">
+																		<Conversion Name="Vorbis Quality High (Custom)" ID="{745C056D-59DE-4C79-B425-8B4A3105C875}">
+																			<PropertyList>
+																				<Property Name="Channels" Type="int32">
+																					<ValueList>
+																						<Value Platform="Windows">4</Value>
+																						<Value Platform="Mac">4</Value>
+																					</ValueList>
+																				</Property>
+																				<Property Name="LRMix" Type="Real64">
+																					<ValueList>
+																						<Value Platform="Windows">0</Value>
+																						<Value Platform="Mac">0</Value>
+																					</ValueList>
+																				</Property>
+																				<Property Name="MaxSampleRate" Type="int32">
+																					<ValueList>
+																						<Value Platform="Windows">0</Value>
+																						<Value Platform="Mac">0</Value>
+																					</ValueList>
+																				</Property>
+																				<Property Name="MinSampleRate" Type="int32">
+																					<ValueList>
+																						<Value Platform="Windows">0</Value>
+																						<Value Platform="Mac">0</Value>
+																					</ValueList>
+																				</Property>
+																				<Property Name="SRConversionQuality" Type="int32">
+																					<ValueList>
+																						<Value>1</Value>
+																					</ValueList>
+																				</Property>
+																				<Property Name="SampleRate" Type="int32">
+																					<ValueList>
+																						<Value Platform="Windows">0</Value>
+																						<Value Platform="Mac">0</Value>
+																					</ValueList>
+																				</Property>
+																			</PropertyList>
+																			<ConversionPluginInfoList>
+																				<ConversionPluginInfo Platform="Windows">
+																					<ConversionPlugin Name="" ID="{6B759F1F-A4BA-4F53-9C12-B07F872A0DAF}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
+																				</ConversionPluginInfo>
+																				<ConversionPluginInfo Platform="Mac">
+																					<ConversionPlugin Name="" ID="{088E9492-C7DB-438B-A8DD-4E87A1ED7342}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
+																				</ConversionPluginInfo>
+																			</ConversionPluginInfoList>
+																		</Conversion>
+																	</Custom>
+																</Reference>
+															</ReferenceList>
 															<Language>SFX</Language>
 															<AudioFile>Player_Footstep_01.wav</AudioFile>
 															<MediaIDList>
@@ -124,6 +193,19 @@
 												</Sound>
 												<Sound Name="Player_Footstep_02" ID="{A2A49444-A5F5-43B9-A36A-97215371987D}" ShortID="656419180">
 													<PropertyList>
+														<Property Name="MakeUpGain" Type="Real64">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{6D15AF24-168E-4141-9977-C26208585992}">
+																		<PropertyList>
+																			<Property Name="Enabled" Type="bool" Value="True"/>
+																			<Property Name="Max" Type="Real64" Value="4"/>
+																			<Property Name="Min" Type="Real64" Value="-1"/>
+																		</PropertyList>
+																	</Modifier>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
 														<Property Name="Pitch" Type="int32">
 															<ValueList>
 																<Value>-2</Value>
@@ -140,6 +222,11 @@
 																</ModifierInfo>
 															</ModifierList>
 														</Property>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>-1</Value>
+															</ValueList>
+														</Property>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
@@ -151,6 +238,62 @@
 													</ReferenceList>
 													<ChildrenList>
 														<AudioFileSource Name="Player_Footstep_02" ID="{EF90B35D-10CD-447C-B9F4-A6712C1FCCAC}">
+															<PropertyList>
+																<Property Name="OverrideConversion" Type="bool" Value="True"/>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<Custom CreatedFrom="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}">
+																		<Conversion Name="Vorbis Quality High (Custom)" ID="{8F194A48-9E91-4DEF-9A92-1BF884062F33}">
+																			<PropertyList>
+																				<Property Name="Channels" Type="int32">
+																					<ValueList>
+																						<Value Platform="Windows">4</Value>
+																						<Value Platform="Mac">4</Value>
+																					</ValueList>
+																				</Property>
+																				<Property Name="LRMix" Type="Real64">
+																					<ValueList>
+																						<Value Platform="Windows">0</Value>
+																						<Value Platform="Mac">0</Value>
+																					</ValueList>
+																				</Property>
+																				<Property Name="MaxSampleRate" Type="int32">
+																					<ValueList>
+																						<Value Platform="Windows">0</Value>
+																						<Value Platform="Mac">0</Value>
+																					</ValueList>
+																				</Property>
+																				<Property Name="MinSampleRate" Type="int32">
+																					<ValueList>
+																						<Value Platform="Windows">0</Value>
+																						<Value Platform="Mac">0</Value>
+																					</ValueList>
+																				</Property>
+																				<Property Name="SRConversionQuality" Type="int32">
+																					<ValueList>
+																						<Value>1</Value>
+																					</ValueList>
+																				</Property>
+																				<Property Name="SampleRate" Type="int32">
+																					<ValueList>
+																						<Value Platform="Windows">0</Value>
+																						<Value Platform="Mac">0</Value>
+																					</ValueList>
+																				</Property>
+																			</PropertyList>
+																			<ConversionPluginInfoList>
+																				<ConversionPluginInfo Platform="Windows">
+																					<ConversionPlugin Name="" ID="{CBCDA9CC-351C-4890-BE0B-ACFD0435CF21}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
+																				</ConversionPluginInfo>
+																				<ConversionPluginInfo Platform="Mac">
+																					<ConversionPlugin Name="" ID="{80604C71-725F-4962-9FCD-C812EDCC36CB}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
+																				</ConversionPluginInfo>
+																			</ConversionPluginInfoList>
+																		</Conversion>
+																	</Custom>
+																</Reference>
+															</ReferenceList>
 															<Language>SFX</Language>
 															<AudioFile>Player_Footstep_02.wav</AudioFile>
 															<MediaIDList>
@@ -164,6 +307,19 @@
 												</Sound>
 												<Sound Name="Player_Footstep_03" ID="{311FEC3B-B88F-420E-946F-DA3B4BBA96BC}" ShortID="887560088">
 													<PropertyList>
+														<Property Name="MakeUpGain" Type="Real64">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{1FB1EC4C-6CCD-48F7-ABE6-C9BE8FD77087}">
+																		<PropertyList>
+																			<Property Name="Enabled" Type="bool" Value="True"/>
+																			<Property Name="Max" Type="Real64" Value="4"/>
+																			<Property Name="Min" Type="Real64" Value="-1"/>
+																		</PropertyList>
+																	</Modifier>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
 														<Property Name="Pitch" Type="int32">
 															<ValueList>
 																<Value>-2</Value>
@@ -180,6 +336,11 @@
 																</ModifierInfo>
 															</ModifierList>
 														</Property>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>-1</Value>
+															</ValueList>
+														</Property>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
@@ -191,6 +352,62 @@
 													</ReferenceList>
 													<ChildrenList>
 														<AudioFileSource Name="Player_Footstep_03" ID="{75D8E962-5095-4768-ADF4-99BBB96C9AEB}">
+															<PropertyList>
+																<Property Name="OverrideConversion" Type="bool" Value="True"/>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<Custom CreatedFrom="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}">
+																		<Conversion Name="Vorbis Quality High (Custom)" ID="{2E43DE56-A676-4960-AE5C-0FB5E2944CA0}">
+																			<PropertyList>
+																				<Property Name="Channels" Type="int32">
+																					<ValueList>
+																						<Value Platform="Windows">4</Value>
+																						<Value Platform="Mac">4</Value>
+																					</ValueList>
+																				</Property>
+																				<Property Name="LRMix" Type="Real64">
+																					<ValueList>
+																						<Value Platform="Windows">0</Value>
+																						<Value Platform="Mac">0</Value>
+																					</ValueList>
+																				</Property>
+																				<Property Name="MaxSampleRate" Type="int32">
+																					<ValueList>
+																						<Value Platform="Windows">0</Value>
+																						<Value Platform="Mac">0</Value>
+																					</ValueList>
+																				</Property>
+																				<Property Name="MinSampleRate" Type="int32">
+																					<ValueList>
+																						<Value Platform="Windows">0</Value>
+																						<Value Platform="Mac">0</Value>
+																					</ValueList>
+																				</Property>
+																				<Property Name="SRConversionQuality" Type="int32">
+																					<ValueList>
+																						<Value>1</Value>
+																					</ValueList>
+																				</Property>
+																				<Property Name="SampleRate" Type="int32">
+																					<ValueList>
+																						<Value Platform="Windows">0</Value>
+																						<Value Platform="Mac">0</Value>
+																					</ValueList>
+																				</Property>
+																			</PropertyList>
+																			<ConversionPluginInfoList>
+																				<ConversionPluginInfo Platform="Windows">
+																					<ConversionPlugin Name="" ID="{80F53AD4-E395-48A7-B952-762732593963}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
+																				</ConversionPluginInfo>
+																				<ConversionPluginInfo Platform="Mac">
+																					<ConversionPlugin Name="" ID="{51C2810B-B525-436D-9854-6FF2A9CDC10A}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
+																				</ConversionPluginInfo>
+																			</ConversionPluginInfoList>
+																		</Conversion>
+																	</Custom>
+																</Reference>
+															</ReferenceList>
 															<Language>SFX</Language>
 															<AudioFile>Player_Footstep_03.wav</AudioFile>
 															<MediaIDList>
@@ -204,6 +421,19 @@
 												</Sound>
 												<Sound Name="Player_Footstep_04" ID="{B40C6E20-8B14-4B16-8670-25A0EC74E22A}" ShortID="402054666">
 													<PropertyList>
+														<Property Name="MakeUpGain" Type="Real64">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{663F0C64-D2D7-4447-A63D-67D8FF015454}">
+																		<PropertyList>
+																			<Property Name="Enabled" Type="bool" Value="True"/>
+																			<Property Name="Max" Type="Real64" Value="4"/>
+																			<Property Name="Min" Type="Real64" Value="-1"/>
+																		</PropertyList>
+																	</Modifier>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
 														<Property Name="Pitch" Type="int32">
 															<ValueList>
 																<Value>-2</Value>
@@ -220,6 +450,11 @@
 																</ModifierInfo>
 															</ModifierList>
 														</Property>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>-1</Value>
+															</ValueList>
+														</Property>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
@@ -231,6 +466,62 @@
 													</ReferenceList>
 													<ChildrenList>
 														<AudioFileSource Name="Player_Footstep_04" ID="{9EFA75C7-F162-4F32-AADB-2D38BC603C49}">
+															<PropertyList>
+																<Property Name="OverrideConversion" Type="bool" Value="True"/>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<Custom CreatedFrom="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}">
+																		<Conversion Name="Vorbis Quality High (Custom)" ID="{0753D0C3-EEAE-4759-9F97-B6F8A26F029F}">
+																			<PropertyList>
+																				<Property Name="Channels" Type="int32">
+																					<ValueList>
+																						<Value Platform="Windows">4</Value>
+																						<Value Platform="Mac">4</Value>
+																					</ValueList>
+																				</Property>
+																				<Property Name="LRMix" Type="Real64">
+																					<ValueList>
+																						<Value Platform="Windows">0</Value>
+																						<Value Platform="Mac">0</Value>
+																					</ValueList>
+																				</Property>
+																				<Property Name="MaxSampleRate" Type="int32">
+																					<ValueList>
+																						<Value Platform="Windows">0</Value>
+																						<Value Platform="Mac">0</Value>
+																					</ValueList>
+																				</Property>
+																				<Property Name="MinSampleRate" Type="int32">
+																					<ValueList>
+																						<Value Platform="Windows">0</Value>
+																						<Value Platform="Mac">0</Value>
+																					</ValueList>
+																				</Property>
+																				<Property Name="SRConversionQuality" Type="int32">
+																					<ValueList>
+																						<Value>1</Value>
+																					</ValueList>
+																				</Property>
+																				<Property Name="SampleRate" Type="int32">
+																					<ValueList>
+																						<Value Platform="Windows">0</Value>
+																						<Value Platform="Mac">0</Value>
+																					</ValueList>
+																				</Property>
+																			</PropertyList>
+																			<ConversionPluginInfoList>
+																				<ConversionPluginInfo Platform="Windows">
+																					<ConversionPlugin Name="" ID="{58936F71-619F-49D2-A8A9-01CC152A4D4C}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
+																				</ConversionPluginInfo>
+																				<ConversionPluginInfo Platform="Mac">
+																					<ConversionPlugin Name="" ID="{1FDEFA36-0315-484B-80B0-7C475B129C17}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
+																				</ConversionPluginInfo>
+																			</ConversionPluginInfoList>
+																		</Conversion>
+																	</Custom>
+																</Reference>
+															</ReferenceList>
 															<Language>SFX</Language>
 															<AudioFile>Player_Footstep_04.wav</AudioFile>
 															<MediaIDList>
@@ -244,6 +535,19 @@
 												</Sound>
 												<Sound Name="Player_Footstep_05" ID="{1D34976E-37BD-4E55-AD2D-4DDADDC78B1A}" ShortID="85231944">
 													<PropertyList>
+														<Property Name="MakeUpGain" Type="Real64">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{9DA42D51-78FD-49EE-94E1-E03968E892AB}">
+																		<PropertyList>
+																			<Property Name="Enabled" Type="bool" Value="True"/>
+																			<Property Name="Max" Type="Real64" Value="4"/>
+																			<Property Name="Min" Type="Real64" Value="-1"/>
+																		</PropertyList>
+																	</Modifier>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
 														<Property Name="Pitch" Type="int32">
 															<ValueList>
 																<Value>-2</Value>
@@ -260,6 +564,11 @@
 																</ModifierInfo>
 															</ModifierList>
 														</Property>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>-1</Value>
+															</ValueList>
+														</Property>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
@@ -271,6 +580,62 @@
 													</ReferenceList>
 													<ChildrenList>
 														<AudioFileSource Name="Player_Footstep_05" ID="{64A24258-0480-4083-90F1-29ED3D823314}">
+															<PropertyList>
+																<Property Name="OverrideConversion" Type="bool" Value="True"/>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<Custom CreatedFrom="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}">
+																		<Conversion Name="Vorbis Quality High (Custom)" ID="{32C4CC0E-152C-4498-A623-063CB3BEE91B}">
+																			<PropertyList>
+																				<Property Name="Channels" Type="int32">
+																					<ValueList>
+																						<Value Platform="Windows">4</Value>
+																						<Value Platform="Mac">4</Value>
+																					</ValueList>
+																				</Property>
+																				<Property Name="LRMix" Type="Real64">
+																					<ValueList>
+																						<Value Platform="Windows">0</Value>
+																						<Value Platform="Mac">0</Value>
+																					</ValueList>
+																				</Property>
+																				<Property Name="MaxSampleRate" Type="int32">
+																					<ValueList>
+																						<Value Platform="Windows">0</Value>
+																						<Value Platform="Mac">0</Value>
+																					</ValueList>
+																				</Property>
+																				<Property Name="MinSampleRate" Type="int32">
+																					<ValueList>
+																						<Value Platform="Windows">0</Value>
+																						<Value Platform="Mac">0</Value>
+																					</ValueList>
+																				</Property>
+																				<Property Name="SRConversionQuality" Type="int32">
+																					<ValueList>
+																						<Value>1</Value>
+																					</ValueList>
+																				</Property>
+																				<Property Name="SampleRate" Type="int32">
+																					<ValueList>
+																						<Value Platform="Windows">0</Value>
+																						<Value Platform="Mac">0</Value>
+																					</ValueList>
+																				</Property>
+																			</PropertyList>
+																			<ConversionPluginInfoList>
+																				<ConversionPluginInfo Platform="Windows">
+																					<ConversionPlugin Name="" ID="{D978B17F-7EF1-4125-96C2-5DA6A6B915ED}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
+																				</ConversionPluginInfo>
+																				<ConversionPluginInfo Platform="Mac">
+																					<ConversionPlugin Name="" ID="{9D33E0A5-5AE6-4F07-BAED-DCA58E3CD197}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
+																				</ConversionPluginInfo>
+																			</ConversionPluginInfoList>
+																		</Conversion>
+																	</Custom>
+																</Reference>
+															</ReferenceList>
 															<Language>SFX</Language>
 															<AudioFile>Player_Footstep_05.wav</AudioFile>
 															<MediaIDList>
@@ -284,6 +649,19 @@
 												</Sound>
 												<Sound Name="Player_Footstep_06" ID="{F6BE597F-42AB-4EAA-AC08-653DA4EA6FF9}" ShortID="1044466671">
 													<PropertyList>
+														<Property Name="MakeUpGain" Type="Real64">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{3CCEE619-DED8-46F0-9AC6-A65D7ACB4134}">
+																		<PropertyList>
+																			<Property Name="Enabled" Type="bool" Value="True"/>
+																			<Property Name="Max" Type="Real64" Value="4"/>
+																			<Property Name="Min" Type="Real64" Value="-1"/>
+																		</PropertyList>
+																	</Modifier>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
 														<Property Name="Pitch" Type="int32">
 															<ValueList>
 																<Value>-2</Value>
@@ -300,6 +678,11 @@
 																</ModifierInfo>
 															</ModifierList>
 														</Property>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>-1</Value>
+															</ValueList>
+														</Property>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
@@ -311,6 +694,62 @@
 													</ReferenceList>
 													<ChildrenList>
 														<AudioFileSource Name="Player_Footstep_06" ID="{3C314D85-8228-48A7-8CA1-CCE0E4716155}">
+															<PropertyList>
+																<Property Name="OverrideConversion" Type="bool" Value="True"/>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<Custom CreatedFrom="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}">
+																		<Conversion Name="Vorbis Quality High (Custom)" ID="{CE7D7675-A22E-4D4D-A1B6-014A2BEE6BFF}">
+																			<PropertyList>
+																				<Property Name="Channels" Type="int32">
+																					<ValueList>
+																						<Value Platform="Windows">4</Value>
+																						<Value Platform="Mac">4</Value>
+																					</ValueList>
+																				</Property>
+																				<Property Name="LRMix" Type="Real64">
+																					<ValueList>
+																						<Value Platform="Windows">0</Value>
+																						<Value Platform="Mac">0</Value>
+																					</ValueList>
+																				</Property>
+																				<Property Name="MaxSampleRate" Type="int32">
+																					<ValueList>
+																						<Value Platform="Windows">0</Value>
+																						<Value Platform="Mac">0</Value>
+																					</ValueList>
+																				</Property>
+																				<Property Name="MinSampleRate" Type="int32">
+																					<ValueList>
+																						<Value Platform="Windows">0</Value>
+																						<Value Platform="Mac">0</Value>
+																					</ValueList>
+																				</Property>
+																				<Property Name="SRConversionQuality" Type="int32">
+																					<ValueList>
+																						<Value>1</Value>
+																					</ValueList>
+																				</Property>
+																				<Property Name="SampleRate" Type="int32">
+																					<ValueList>
+																						<Value Platform="Windows">0</Value>
+																						<Value Platform="Mac">0</Value>
+																					</ValueList>
+																				</Property>
+																			</PropertyList>
+																			<ConversionPluginInfoList>
+																				<ConversionPluginInfo Platform="Windows">
+																					<ConversionPlugin Name="" ID="{4E29AD28-3BBB-42BE-AB44-7E4F1C03D37E}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
+																				</ConversionPluginInfo>
+																				<ConversionPluginInfo Platform="Mac">
+																					<ConversionPlugin Name="" ID="{2FA8EF66-ED65-49F8-A92D-59D90763AF9A}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
+																				</ConversionPluginInfo>
+																			</ConversionPluginInfoList>
+																		</Conversion>
+																	</Custom>
+																</Reference>
+															</ReferenceList>
 															<Language>SFX</Language>
 															<AudioFile>Player_Footstep_06.wav</AudioFile>
 															<MediaIDList>
@@ -324,6 +763,19 @@
 												</Sound>
 												<Sound Name="Player_Footstep_07" ID="{9BBA142F-EC21-47D5-A842-BAFC0C375A92}" ShortID="684327550">
 													<PropertyList>
+														<Property Name="MakeUpGain" Type="Real64">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{E90694AC-31D7-4F97-975B-1C2FBBFB6CE2}">
+																		<PropertyList>
+																			<Property Name="Enabled" Type="bool" Value="True"/>
+																			<Property Name="Max" Type="Real64" Value="4"/>
+																			<Property Name="Min" Type="Real64" Value="-1"/>
+																		</PropertyList>
+																	</Modifier>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
 														<Property Name="Pitch" Type="int32">
 															<ValueList>
 																<Value>-2</Value>
@@ -340,6 +792,11 @@
 																</ModifierInfo>
 															</ModifierList>
 														</Property>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>-1</Value>
+															</ValueList>
+														</Property>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
@@ -351,6 +808,62 @@
 													</ReferenceList>
 													<ChildrenList>
 														<AudioFileSource Name="Player_Footstep_07" ID="{8993CB55-DF40-4E59-8FCB-7F76CDF4B00D}">
+															<PropertyList>
+																<Property Name="OverrideConversion" Type="bool" Value="True"/>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<Custom CreatedFrom="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}">
+																		<Conversion Name="Vorbis Quality High (Custom)" ID="{9FE436EB-118D-49E6-A28E-C781677BA811}">
+																			<PropertyList>
+																				<Property Name="Channels" Type="int32">
+																					<ValueList>
+																						<Value Platform="Windows">4</Value>
+																						<Value Platform="Mac">4</Value>
+																					</ValueList>
+																				</Property>
+																				<Property Name="LRMix" Type="Real64">
+																					<ValueList>
+																						<Value Platform="Windows">0</Value>
+																						<Value Platform="Mac">0</Value>
+																					</ValueList>
+																				</Property>
+																				<Property Name="MaxSampleRate" Type="int32">
+																					<ValueList>
+																						<Value Platform="Windows">0</Value>
+																						<Value Platform="Mac">0</Value>
+																					</ValueList>
+																				</Property>
+																				<Property Name="MinSampleRate" Type="int32">
+																					<ValueList>
+																						<Value Platform="Windows">0</Value>
+																						<Value Platform="Mac">0</Value>
+																					</ValueList>
+																				</Property>
+																				<Property Name="SRConversionQuality" Type="int32">
+																					<ValueList>
+																						<Value>1</Value>
+																					</ValueList>
+																				</Property>
+																				<Property Name="SampleRate" Type="int32">
+																					<ValueList>
+																						<Value Platform="Windows">0</Value>
+																						<Value Platform="Mac">0</Value>
+																					</ValueList>
+																				</Property>
+																			</PropertyList>
+																			<ConversionPluginInfoList>
+																				<ConversionPluginInfo Platform="Windows">
+																					<ConversionPlugin Name="" ID="{38A56D21-46CD-4F46-9F63-F14759EC5123}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
+																				</ConversionPluginInfo>
+																				<ConversionPluginInfo Platform="Mac">
+																					<ConversionPlugin Name="" ID="{09E02260-AEFB-46E5-9AF2-B42DF3025EEC}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
+																				</ConversionPluginInfo>
+																			</ConversionPluginInfoList>
+																		</Conversion>
+																	</Custom>
+																</Reference>
+															</ReferenceList>
 															<Language>SFX</Language>
 															<AudioFile>Player_Footstep_07.wav</AudioFile>
 															<MediaIDList>
@@ -364,6 +877,19 @@
 												</Sound>
 												<Sound Name="Player_Footstep_08" ID="{955B5537-13D8-4360-A739-9C78447BF3DE}" ShortID="1068971748">
 													<PropertyList>
+														<Property Name="MakeUpGain" Type="Real64">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{307772BE-9C88-47F0-A9F9-4D2FD66E9E6F}">
+																		<PropertyList>
+																			<Property Name="Enabled" Type="bool" Value="True"/>
+																			<Property Name="Max" Type="Real64" Value="4"/>
+																			<Property Name="Min" Type="Real64" Value="-1"/>
+																		</PropertyList>
+																	</Modifier>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
 														<Property Name="Pitch" Type="int32">
 															<ValueList>
 																<Value>-2</Value>
@@ -380,6 +906,11 @@
 																</ModifierInfo>
 															</ModifierList>
 														</Property>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>-1</Value>
+															</ValueList>
+														</Property>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
@@ -391,6 +922,62 @@
 													</ReferenceList>
 													<ChildrenList>
 														<AudioFileSource Name="Player_Footstep_08" ID="{06E15D9A-C653-42D3-B982-63207FFF2BBC}">
+															<PropertyList>
+																<Property Name="OverrideConversion" Type="bool" Value="True"/>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<Custom CreatedFrom="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}">
+																		<Conversion Name="Vorbis Quality High (Custom)" ID="{E0E35EF1-3DB9-4C16-B0B5-E0492755C85B}">
+																			<PropertyList>
+																				<Property Name="Channels" Type="int32">
+																					<ValueList>
+																						<Value Platform="Windows">4</Value>
+																						<Value Platform="Mac">4</Value>
+																					</ValueList>
+																				</Property>
+																				<Property Name="LRMix" Type="Real64">
+																					<ValueList>
+																						<Value Platform="Windows">0</Value>
+																						<Value Platform="Mac">0</Value>
+																					</ValueList>
+																				</Property>
+																				<Property Name="MaxSampleRate" Type="int32">
+																					<ValueList>
+																						<Value Platform="Windows">0</Value>
+																						<Value Platform="Mac">0</Value>
+																					</ValueList>
+																				</Property>
+																				<Property Name="MinSampleRate" Type="int32">
+																					<ValueList>
+																						<Value Platform="Windows">0</Value>
+																						<Value Platform="Mac">0</Value>
+																					</ValueList>
+																				</Property>
+																				<Property Name="SRConversionQuality" Type="int32">
+																					<ValueList>
+																						<Value>1</Value>
+																					</ValueList>
+																				</Property>
+																				<Property Name="SampleRate" Type="int32">
+																					<ValueList>
+																						<Value Platform="Windows">0</Value>
+																						<Value Platform="Mac">0</Value>
+																					</ValueList>
+																				</Property>
+																			</PropertyList>
+																			<ConversionPluginInfoList>
+																				<ConversionPluginInfo Platform="Windows">
+																					<ConversionPlugin Name="" ID="{78063BC8-6644-47C4-A121-67D0C4D7880A}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
+																				</ConversionPluginInfo>
+																				<ConversionPluginInfo Platform="Mac">
+																					<ConversionPlugin Name="" ID="{B01BA38C-8E48-4104-9E81-7A4910A69615}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
+																				</ConversionPluginInfo>
+																			</ConversionPluginInfoList>
+																		</Conversion>
+																	</Custom>
+																</Reference>
+															</ReferenceList>
 															<Language>SFX</Language>
 															<AudioFile>Player_Footstep_08.wav</AudioFile>
 															<MediaIDList>
@@ -404,6 +991,19 @@
 												</Sound>
 												<Sound Name="Player_Footstep_09" ID="{3D7B628A-7C3F-4C4C-9E7C-F22F5D35570E}" ShortID="20553229">
 													<PropertyList>
+														<Property Name="MakeUpGain" Type="Real64">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{51ACB65F-0D8D-4FE2-86E1-7F300924B756}">
+																		<PropertyList>
+																			<Property Name="Enabled" Type="bool" Value="True"/>
+																			<Property Name="Max" Type="Real64" Value="4"/>
+																			<Property Name="Min" Type="Real64" Value="-1"/>
+																		</PropertyList>
+																	</Modifier>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
 														<Property Name="Pitch" Type="int32">
 															<ValueList>
 																<Value>-2</Value>
@@ -420,6 +1020,11 @@
 																</ModifierInfo>
 															</ModifierList>
 														</Property>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>-1</Value>
+															</ValueList>
+														</Property>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
@@ -431,6 +1036,62 @@
 													</ReferenceList>
 													<ChildrenList>
 														<AudioFileSource Name="Player_Footstep_09" ID="{C08E44C9-BA34-45A2-B1E7-81FA86CF4D18}">
+															<PropertyList>
+																<Property Name="OverrideConversion" Type="bool" Value="True"/>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<Custom CreatedFrom="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}">
+																		<Conversion Name="Vorbis Quality High (Custom)" ID="{91EC1067-BE6B-4076-8BAA-58FA8367998E}">
+																			<PropertyList>
+																				<Property Name="Channels" Type="int32">
+																					<ValueList>
+																						<Value Platform="Windows">4</Value>
+																						<Value Platform="Mac">4</Value>
+																					</ValueList>
+																				</Property>
+																				<Property Name="LRMix" Type="Real64">
+																					<ValueList>
+																						<Value Platform="Windows">0</Value>
+																						<Value Platform="Mac">0</Value>
+																					</ValueList>
+																				</Property>
+																				<Property Name="MaxSampleRate" Type="int32">
+																					<ValueList>
+																						<Value Platform="Windows">0</Value>
+																						<Value Platform="Mac">0</Value>
+																					</ValueList>
+																				</Property>
+																				<Property Name="MinSampleRate" Type="int32">
+																					<ValueList>
+																						<Value Platform="Windows">0</Value>
+																						<Value Platform="Mac">0</Value>
+																					</ValueList>
+																				</Property>
+																				<Property Name="SRConversionQuality" Type="int32">
+																					<ValueList>
+																						<Value>1</Value>
+																					</ValueList>
+																				</Property>
+																				<Property Name="SampleRate" Type="int32">
+																					<ValueList>
+																						<Value Platform="Windows">0</Value>
+																						<Value Platform="Mac">0</Value>
+																					</ValueList>
+																				</Property>
+																			</PropertyList>
+																			<ConversionPluginInfoList>
+																				<ConversionPluginInfo Platform="Windows">
+																					<ConversionPlugin Name="" ID="{2905E57E-A6C5-45F9-87BA-4D72F59D8EF3}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
+																				</ConversionPluginInfo>
+																				<ConversionPluginInfo Platform="Mac">
+																					<ConversionPlugin Name="" ID="{2F28E288-6430-49E1-9ABA-CE43692FF280}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
+																				</ConversionPluginInfo>
+																			</ConversionPluginInfoList>
+																		</Conversion>
+																	</Custom>
+																</Reference>
+															</ReferenceList>
 															<Language>SFX</Language>
 															<AudioFile>Player_Footstep_09.wav</AudioFile>
 															<MediaIDList>
@@ -449,6 +1110,19 @@
 																<Value>2</Value>
 															</ValueList>
 														</Property>
+														<Property Name="MakeUpGain" Type="Real64">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{FC530C22-567D-4E68-B56B-B2FF48466228}">
+																		<PropertyList>
+																			<Property Name="Enabled" Type="bool" Value="True"/>
+																			<Property Name="Max" Type="Real64" Value="4"/>
+																			<Property Name="Min" Type="Real64" Value="-1"/>
+																		</PropertyList>
+																	</Modifier>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
 														<Property Name="Pitch" Type="int32">
 															<ValueList>
 																<Value>-2</Value>
@@ -465,6 +1139,11 @@
 																</ModifierInfo>
 															</ModifierList>
 														</Property>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>-1</Value>
+															</ValueList>
+														</Property>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
@@ -476,6 +1155,62 @@
 													</ReferenceList>
 													<ChildrenList>
 														<AudioFileSource Name="Player_Footstep_10" ID="{79A70AFD-BEB2-4715-A18C-B3BC06D63DC1}">
+															<PropertyList>
+																<Property Name="OverrideConversion" Type="bool" Value="True"/>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<Custom CreatedFrom="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}">
+																		<Conversion Name="Vorbis Quality High (Custom)" ID="{76413B26-6FE1-4574-A6FE-22A700134E55}">
+																			<PropertyList>
+																				<Property Name="Channels" Type="int32">
+																					<ValueList>
+																						<Value Platform="Windows">4</Value>
+																						<Value Platform="Mac">4</Value>
+																					</ValueList>
+																				</Property>
+																				<Property Name="LRMix" Type="Real64">
+																					<ValueList>
+																						<Value Platform="Windows">0</Value>
+																						<Value Platform="Mac">0</Value>
+																					</ValueList>
+																				</Property>
+																				<Property Name="MaxSampleRate" Type="int32">
+																					<ValueList>
+																						<Value Platform="Windows">0</Value>
+																						<Value Platform="Mac">0</Value>
+																					</ValueList>
+																				</Property>
+																				<Property Name="MinSampleRate" Type="int32">
+																					<ValueList>
+																						<Value Platform="Windows">0</Value>
+																						<Value Platform="Mac">0</Value>
+																					</ValueList>
+																				</Property>
+																				<Property Name="SRConversionQuality" Type="int32">
+																					<ValueList>
+																						<Value>1</Value>
+																					</ValueList>
+																				</Property>
+																				<Property Name="SampleRate" Type="int32">
+																					<ValueList>
+																						<Value Platform="Windows">0</Value>
+																						<Value Platform="Mac">0</Value>
+																					</ValueList>
+																				</Property>
+																			</PropertyList>
+																			<ConversionPluginInfoList>
+																				<ConversionPluginInfo Platform="Windows">
+																					<ConversionPlugin Name="" ID="{17D22512-42B4-4E4F-8001-4ECDA1095C06}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
+																				</ConversionPluginInfo>
+																				<ConversionPluginInfo Platform="Mac">
+																					<ConversionPlugin Name="" ID="{E19034D9-8A40-4DE5-B552-F9BA5BBC1BF3}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
+																				</ConversionPluginInfo>
+																			</ConversionPluginInfoList>
+																		</Conversion>
+																	</Custom>
+																</Reference>
+															</ReferenceList>
 															<Language>SFX</Language>
 															<AudioFile>Player_Footstep_10.wav</AudioFile>
 															<MediaIDList>
@@ -488,6 +1223,21 @@
 													</ActiveSourceList>
 												</Sound>
 											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Effects">
+													<Reference>
+														<Local>
+															<EffectSlot Name="" ID="{526B9E33-9036-4F11-AFF6-51F4049533E6}" ShortID="86006941">
+																<ReferenceList>
+																	<Reference Name="Effect" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
+																		<ObjectRef Name="Dialog_Leveler_Soft" ID="{9C1D0FCF-896E-4739-A8E8-B1E908F51CE6}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+																	</Reference>
+																</ReferenceList>
+															</EffectSlot>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
 											<GroupingInfo>
 												<GroupingBehaviorList>
 													<GroupingBehavior>
@@ -631,6 +1381,26 @@
 									</ReferenceList>
 									<ChildrenList>
 										<Sound Name="Player_Land" ID="{AAD9F891-EB55-4E20-A04F-EE30C1E2F535}" ShortID="690226695">
+											<PropertyList>
+												<Property Name="MakeUpGain" Type="Real64">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{59398BAC-C39D-43EA-8459-997AF32CB6A3}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="4"/>
+																	<Property Name="Min" Type="Real64" Value="-1"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-1</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
@@ -641,6 +1411,62 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="Player_Land" ID="{D1CC5273-3222-4425-8935-EC7D724131F7}">
+													<PropertyList>
+														<Property Name="OverrideConversion" Type="bool" Value="True"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<Custom CreatedFrom="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}">
+																<Conversion Name="Vorbis Quality High (Custom)" ID="{30FA7473-E11B-46A3-A0A9-D8A2B99E39FD}">
+																	<PropertyList>
+																		<Property Name="Channels" Type="int32">
+																			<ValueList>
+																				<Value Platform="Windows">4</Value>
+																				<Value Platform="Mac">4</Value>
+																			</ValueList>
+																		</Property>
+																		<Property Name="LRMix" Type="Real64">
+																			<ValueList>
+																				<Value Platform="Windows">0</Value>
+																				<Value Platform="Mac">0</Value>
+																			</ValueList>
+																		</Property>
+																		<Property Name="MaxSampleRate" Type="int32">
+																			<ValueList>
+																				<Value Platform="Windows">0</Value>
+																				<Value Platform="Mac">0</Value>
+																			</ValueList>
+																		</Property>
+																		<Property Name="MinSampleRate" Type="int32">
+																			<ValueList>
+																				<Value Platform="Windows">0</Value>
+																				<Value Platform="Mac">0</Value>
+																			</ValueList>
+																		</Property>
+																		<Property Name="SRConversionQuality" Type="int32">
+																			<ValueList>
+																				<Value>1</Value>
+																			</ValueList>
+																		</Property>
+																		<Property Name="SampleRate" Type="int32">
+																			<ValueList>
+																				<Value Platform="Windows">0</Value>
+																				<Value Platform="Mac">0</Value>
+																			</ValueList>
+																		</Property>
+																	</PropertyList>
+																	<ConversionPluginInfoList>
+																		<ConversionPluginInfo Platform="Windows">
+																			<ConversionPlugin Name="" ID="{3D88307F-8746-44AD-9B1F-9892C1B1455D}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
+																		</ConversionPluginInfo>
+																		<ConversionPluginInfo Platform="Mac">
+																			<ConversionPlugin Name="" ID="{69A1599E-3C35-4949-AC4A-7B1F626C2EF7}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
+																		</ConversionPluginInfo>
+																	</ConversionPluginInfoList>
+																</Conversion>
+															</Custom>
+														</Reference>
+													</ReferenceList>
 													<Language>SFX</Language>
 													<AudioFile>Player_Land.wav</AudioFile>
 													<MediaIDList>
