@@ -68,7 +68,6 @@ namespace AK
         static const AkUniqueID PLAY_SFX_SUNROOT_TREE = 2907169251U;
         static const AkUniqueID PLAY_SFX_WINGS_FLAP = 2000475864U;
         static const AkUniqueID PLAY_SFX_WOOD_FENCE_MONO = 61543571U;
-        static const AkUniqueID PLAY_SFX_WOOD_FENCE_MONO_01 = 1712699527U;
         static const AkUniqueID PLAY_UI__PHOTO_DISCARD = 149110613U;
         static const AkUniqueID PLAY_UI__PHOTO_KEEP = 1217678326U;
         static const AkUniqueID PLAY_WALLA = 562855495U;
