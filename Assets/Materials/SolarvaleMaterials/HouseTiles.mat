@@ -12,7 +12,7 @@ Material:
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
-  - DR_CEL_EXTRA_ON
+  - _ALPHATEST_ON
   - _BASEMAP_PREMULTIPLY
   - _CELPRIMARYMODE_SINGLE
   - _DETAILMAPBLENDINGMODE_MULTIPLY
@@ -25,11 +25,11 @@ Material:
   m_InvalidKeywords: []
   m_LightmapFlags: 1
   m_EnableInstancingVariants: 1
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
+  m_DoubleSidedGI: 1
+  m_CustomRenderQueue: 2450
+  stringTagMap:
+    RenderType: TransparentCutout
   disabledShaderPasses:
-  - SHADOWCASTER
   - SRPDEFAULTUNLIT
   m_LockedProperties: 
   m_SavedProperties:
@@ -44,7 +44,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseMap:
-        m_Texture: {fileID: 2800000, guid: eca94250de6ef514d8dc73ab62152a4e, type: 3}
+        m_Texture: {fileID: 2800000, guid: 8ce77cdd8ba361449b588ceaff1cb46e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
@@ -131,7 +131,7 @@ Material:
     - Vector1_BBEA2355: 1
     - _AO_Strength: 0.555
     - _Albedo_Strength: 1
-    - _AlphaClip: 0
+    - _AlphaClip: 1
     - _AlphaMultiplier: 0.01
     - _AlphaToMask: 0
     - _Alpha_Clip_Threshold: 0
@@ -141,13 +141,13 @@ Material:
     - _BumpScale: 1
     - _CameraDistanceImpact: 0
     - _CastShadows: 1
-    - _CelExtraEnabled: 1
+    - _CelExtraEnabled: 0
     - _CelNumSteps: 3
     - _CelPrimaryMode: 1
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
-    - _Cull: 2
-    - _Cutoff: 0.5
+    - _Cull: 0
+    - _Cutoff: 0
     - _DetailAlbedoMapScale: 1
     - _DetailMapBlendingMode: 0
     - _DetailMapImpact: 0
@@ -162,7 +162,7 @@ Material:
     - _FlatRimSize: 0.5
     - _FlatSpecularEdgeSmoothness: 0
     - _FlatSpecularSize: 0.1
-    - _Flatness: 0.274
+    - _Flatness: 0.55
     - _FlatnessExtra: 1
     - _GlossMapScale: 0
     - _Glossiness: 0
@@ -196,9 +196,9 @@ Material:
     - _QueueOffset: 0
     - _ReceiveShadows: 1
     - _RimEnabled: 0
-    - _SelfShadingSize: 0.45
+    - _SelfShadingSize: 0.5
     - _SelfShadingSizeExtra: 0.374
-    - _ShadowEdgeSize: 0.034
+    - _ShadowEdgeSize: 0.289
     - _ShadowEdgeSizeExtra: 0.102
     - _Shadow_Opacity: 0.82
     - _Smoothness: 0.5
@@ -216,7 +216,7 @@ Material:
     - _UnityShadowMode: 2
     - _UnityShadowOcclusion: 1
     - _UnityShadowPower: 0.2
-    - _UnityShadowSharpness: 2
+    - _UnityShadowSharpness: 10
     - _VertexColorsEnabled: 0
     - _VertexExtrusionSmoothNormals: 0
     - _WiggleOffset: 1

@@ -25,8 +25,6 @@ Material:
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
-  - DR_CEL_EXTRA_ON
-  - _ALPHATEST_ON
   - _BASEMAP_PREMULTIPLY
   - _CELPRIMARYMODE_SINGLE
   - _DETAILMAPBLENDINGMODE_MULTIPLY
@@ -38,12 +36,12 @@ Material:
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2450
+  m_CustomRenderQueue: 2000
   stringTagMap:
-    RenderType: TransparentCutout
+    RenderType: Opaque
   disabledShaderPasses:
   - SRPDEFAULTUNLIT
-  m_LockedProperties: 
+  m_LockedProperties: _LightContribution
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -121,7 +119,7 @@ Material:
     - _AO_Strength: 0.489
     - _Albedo_Intensity: 1.3
     - _Albedo_Strength: 2.54
-    - _AlphaClip: 1
+    - _AlphaClip: 0
     - _AlphaMultiplier: 1
     - _AlphaToMask: 1
     - _Alpha_Clip_Threshold: 0
@@ -130,7 +128,7 @@ Material:
     - _BlendModePreserveSpecular: 1
     - _CameraDistanceImpact: 0
     - _CastShadows: 1
-    - _CelExtraEnabled: 1
+    - _CelExtraEnabled: 0
     - _CelNumSteps: 3
     - _CelPrimaryMode: 1
     - _Cull: 2
@@ -145,7 +143,7 @@ Material:
     - _FlatRimSize: 0.5
     - _FlatSpecularEdgeSmoothness: 0
     - _FlatSpecularSize: 0.1
-    - _Flatness: 1
+    - _Flatness: 0.454
     - _FlatnessExtra: 1
     - _GradientAngle: 0
     - _GradientCenterX: 0
@@ -176,23 +174,23 @@ Material:
     - _ReceiveShadows: 1
     - _RimEnabled: 0
     - _SOFT_SHADOWS: 1
-    - _SelfShadingSize: 0.5
-    - _SelfShadingSizeExtra: 0.35
-    - _ShadowEdgeSize: 0.202
-    - _ShadowEdgeSizeExtra: 0.1
+    - _SelfShadingSize: 0.505
+    - _SelfShadingSizeExtra: 0.646
+    - _ShadowEdgeSize: 0.356
+    - _ShadowEdgeSizeExtra: 0.321
     - _Shadow_Opacity: 0.5
     - _SpecularEnabled: 0
     - _SpecularStrength: 0
     - _SrcBlend: 1
     - _Surface: 0
     - _TextureBlendingMode: 0
-    - _TextureImpact: 1
+    - _TextureImpact: 0.647
     - _TriplanarBlend: 1
     - _TriplanarTiling: 0.01
     - _UnityShadowMode: 2
     - _UnityShadowOcclusion: 0
-    - _UnityShadowPower: 0.2
-    - _UnityShadowSharpness: 2
+    - _UnityShadowPower: 0.668
+    - _UnityShadowSharpness: 10
     - _VertexColorsEnabled: 0
     - _VertexExtrusionSmoothNormals: 0
     - _WorkflowMode: 0
@@ -206,7 +204,7 @@ Material:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _ColorDim: {r: 0, g: 0.0041833147, b: 0.2735849, a: 1}
     - _ColorDimCurve: {r: 0.85023, g: 0.85034, b: 0.8504499, a: 0.85056}
-    - _ColorDimExtra: {r: 0, g: 0.019607844, b: 0.5019608, a: 1}
+    - _ColorDimExtra: {r: 1, g: 1, b: 1, a: 1}
     - _ColorDimSteps: {r: 0.85023, g: 0.85034, b: 0.8504499, a: 0.85056}
     - _ColorGradient: {r: 0.85023, g: 0.85034, b: 0.85045, a: 0.85056}
     - _DetailMapColor: {r: 1, g: 1, b: 1, a: 1}
@@ -219,5 +217,5 @@ Material:
     - _NoiseColor: {r: 0, g: 0, b: 0, a: 0}
     - _OutlineColor: {r: 1, g: 1, b: 1, a: 1}
     - _Specular_Color: {r: 0, g: 0, b: 0, a: 0}
-    - _UnityShadowColor: {r: 0, g: 0.0041833147, b: 0.2735849, a: 1}
+    - _UnityShadowColor: {r: 0, g: 0.003773545, b: 0.26415092, a: 1}
   m_BuildTextureStacks: []
