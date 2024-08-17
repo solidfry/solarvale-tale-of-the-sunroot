@@ -237,7 +237,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="393239870" Type="User" Language="SFX" Hash="{1B8FAA3D-B8E2-7B57-CE5B-FDBBB94E60A6}">
+		<SoundBank Id="393239870" Type="User" Language="SFX" Hash="{AC214261-5B9A-9F0E-047F-014951C8384A}">
 			<ShortName>SFX</ShortName>
 			<Path>SFX.bnk</Path>
 			<Media>
@@ -375,7 +375,7 @@
 				</File>
 				<File Id="864995489" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_Sunroot_Tree.wav</ShortName>
-					<CachePath>SFX/SFX_Sunroot_Tree_C5885306.wem</CachePath>
+					<CachePath>SFX/SFX_Sunroot_Tree_6371A6C5.wem</CachePath>
 				</File>
 				<File Id="902537466" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>3.wav</ShortName>
@@ -414,6 +414,13 @@
 					<CachePath>SFX/SFX_Rubbish_03_69EBB9AE.wem</CachePath>
 				</File>
 			</Media>
+			<Plugins>
+				<ShareSets>
+					<Plugin Id="48620415" Name="Have_U_Ever_Been_Outside" LibName="Wwise RoomVerb" LibId="7733251"/>
+					<Plugin Id="2652646462" Name="Dialog_Leveler_Soft" LibName="Wwise Compressor" LibId="7077891"/>
+					<Plugin Id="3657550167" Name="New_Parametric_EQ" LibName="Wwise Parametric EQ" LibId="6881283"/>
+				</ShareSets>
+			</Plugins>
 			<Events>
 				<Event Id="2322926753" Name="Play_Forest_01" MaxAttenuation="150" DurationType="OneShot" DurationMin="47.134724" DurationMax="204.5">
 					<MediaRefs>
@@ -501,6 +508,13 @@
 					<MediaRefs>
 						<MediaRef Id="503808030"/>
 					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="48620415"/>
+							<PluginRef Id="2652646462"/>
+							<PluginRef Id="3657550167"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 				<Event Id="938598783" Name="Stop_Forest_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
 					<MediaRefs>
@@ -547,6 +561,13 @@
 					<MediaRefs>
 						<MediaRef Id="503808030"/>
 					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="48620415"/>
+							<PluginRef Id="2652646462"/>
+							<PluginRef Id="3657550167"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 			</Events>
 		</SoundBank>
@@ -1862,7 +1883,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{987C14CC-F7D7-7DBD-B41E-7AA0FE2E6560}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{2649CF1F-8281-FAB7-E760-7837886F48C5}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -2596,7 +2617,7 @@
 				</File>
 				<File Id="864995489" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_Sunroot_Tree.wav</ShortName>
-					<CachePath>SFX/SFX_Sunroot_Tree_C5885306.wem</CachePath>
+					<CachePath>SFX/SFX_Sunroot_Tree_6371A6C5.wem</CachePath>
 				</File>
 				<File Id="866490921" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Rainbow Lorikeet\Mono_lorikeet\lorikeet-chirp_09-mono.wav</ShortName>
@@ -2766,8 +2787,10 @@
 					<Plugin Id="733302481" Name="New_Time_Stretch_01" LibName="Wwise Time Stretch" LibId="8519683"/>
 					<Plugin Id="776837744" Name="Born_In_1950" LibName="Wwise Parametric EQ" LibId="6881283"/>
 					<Plugin Id="1724990773" Name="New_Time_Stretch" LibName="Wwise Time Stretch" LibId="8519683"/>
+					<Plugin Id="2652646462" Name="Dialog_Leveler_Soft" LibName="Wwise Compressor" LibId="7077891"/>
 					<Plugin Id="2662085913" Name="Large_Church1" LibName="Wwise Matrix Reverb" LibId="7536643"/>
 					<Plugin Id="3216246379" Name="Space_Dreaming" LibName="Wwise RoomVerb" LibId="7733251"/>
+					<Plugin Id="3657550167" Name="New_Parametric_EQ" LibName="Wwise Parametric EQ" LibId="6881283"/>
 				</ShareSets>
 			</Plugins>
 			<Events>
@@ -3232,6 +3255,13 @@
 					<MediaRefs>
 						<MediaRef Id="503808030"/>
 					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="48620415"/>
+							<PluginRef Id="2652646462"/>
+							<PluginRef Id="3657550167"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 				<Event Id="149110613" Name="Play_UI__Photo_Discard" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.5558968" DurationMax="0.5558968">
 					<MediaRefs>
@@ -3462,5 +3492,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{211D283E-29A0-C571-B468-AE026200A05C}</FileHash>
+	<FileHash>{FB3E308B-CC1E-C5ED-5D0F-4D8B34A196E0}</FileHash>
 </SoundBanksInfo>

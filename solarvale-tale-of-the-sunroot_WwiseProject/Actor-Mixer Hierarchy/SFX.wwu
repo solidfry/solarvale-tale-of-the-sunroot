@@ -251,6 +251,7 @@
 					<ChildrenList>
 						<AudioFileSource Name="SFX_Sunroot_Tree" ID="{EBB3A168-ADC7-46CF-88B6-ECE466A34959}">
 							<PropertyList>
+								<Property Name="FadeInDuration" Type="Real64" Value="3.7280047718461E-05"/>
 								<Property Name="FadeOutDuration" Type="Real64" Value="0.20294693635687"/>
 								<Property Name="FadeOutShape" Type="int16" Value="2"/>
 								<Property Name="OverrideConversion" Type="bool" Value="True"/>
@@ -1253,10 +1254,11 @@
 					<PropertyList>
 						<Property Name="MakeUpGain" Type="Real64">
 							<ValueList>
-								<Value>10</Value>
+								<Value>17</Value>
 							</ValueList>
 						</Property>
 						<Property Name="OverrideOutput" Type="bool" Value="True"/>
+						<Property Name="OverridePositioning" Type="bool" Value="True"/>
 						<Property Name="Pitch" Type="int32">
 							<ModifierList>
 								<ModifierInfo>
@@ -1272,6 +1274,9 @@
 						</Property>
 					</PropertyList>
 					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="Atmos" ID="{02DBC80D-A3A8-401A-BF00-768794A1700C}" WorkUnitID="{05E83523-ED60-4EDF-8A61-DC39396E21A4}"/>
+						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
 						</Reference>
