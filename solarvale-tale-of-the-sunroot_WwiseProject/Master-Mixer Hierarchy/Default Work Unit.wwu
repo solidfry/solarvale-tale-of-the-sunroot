@@ -730,6 +730,21 @@
 									<ObjectRef Name="AnimalBirds" ID="{B4872283-A760-4727-8678-735C31E2B2AD}" WorkUnitID="{05E83523-ED60-4EDF-8A61-DC39396E21A4}"/>
 								</Reference>
 							</ReferenceList>
+							<ObjectLists>
+								<ObjectList Name="Effects">
+									<Reference>
+										<Local>
+											<EffectSlot Name="" ID="{3CA4AB94-C642-46C1-BB43-D255B409DC35}" ShortID="745394702">
+												<ReferenceList>
+													<Reference Name="Effect" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+														<ObjectRef Name="Have_U_Ever_Been_Outside" ID="{FE29AE8D-FD86-4652-A95D-68D32F5760EC}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+													</Reference>
+												</ReferenceList>
+											</EffectSlot>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
 						</Bus>
 						<Bus Name="AtmosBeach" ID="{B7BB6CAA-8EC1-4CFB-BFA7-93944369F126}">
 							<PropertyList>
@@ -757,9 +772,7 @@
 								<ObjectList Name="Effects">
 									<Reference>
 										<Local>
-											<EffectSlot Name="" ID="{22909CDB-60B5-446C-9D31-0C4E63FD8BDB}" ShortID="703951828">
-												<ReferenceList/>
-											</EffectSlot>
+											<EffectSlot Name="" ID="{22909CDB-60B5-446C-9D31-0C4E63FD8BDB}" ShortID="703951828"/>
 										</Local>
 									</Reference>
 								</ObjectList>

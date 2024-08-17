@@ -601,6 +601,11 @@
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="Walla" ID="{03D0C901-8641-4B5F-959E-1920A07633C7}" ShortID="665203731">
 							<PropertyList>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>27</Value>
+									</ValueList>
+								</Property>
 								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
 								<Property Name="OverrideGameAuxSends" Type="bool" Value="True"/>
 								<Property Name="OverrideOutput" Type="bool" Value="True"/>
@@ -627,17 +632,38 @@
 										<Property Name="OverrideGameAuxSends" Type="bool" Value="True"/>
 										<Property Name="OverrideOutput" Type="bool" Value="True"/>
 										<Property Name="OverridePositioning" Type="bool" Value="True"/>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>-2</Value>
+											</ValueList>
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{B081347E-040F-4110-8D81-936371A6E1E1}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="100"/>
+															<Property Name="Min" Type="Real64" Value="-1"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
 										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-3</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Attenuation">
-											<ObjectRef Name="AnimalSoundAtten" ID="{BADF60B6-F5A2-4FE1-83CA-79928673C0CD}" WorkUnitID="{05E83523-ED60-4EDF-8A61-DC39396E21A4}"/>
+											<ObjectRef Name="AnimalBirds" ID="{B4872283-A760-4727-8678-735C31E2B2AD}" WorkUnitID="{05E83523-ED60-4EDF-8A61-DC39396E21A4}"/>
 										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="ADPCM Auto Detect High" ID="{6D51666E-9C7A-40E4-831D-C445512EBABD}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="AnimalAtmos" ID="{F9987C84-9B33-44CC-A6C3-1E3CB4F52D3C}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+											<ObjectRef Name="AnimalBirds" ID="{57A5A2AB-9A41-4459-83D0-1A400D4BF04D}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -716,21 +742,43 @@
 								<Sound Name="cockatoo-shriek_multiple_bg_bird_walla_02-stereo" ID="{19F60424-BDFB-47F3-B6E2-F6D716ACBFE7}" ShortID="543049578">
 									<PropertyList>
 										<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
+										<Property Name="IsLoopingInfinite" Type="bool" Value="False"/>
 										<Property Name="OverrideConversion" Type="bool" Value="True"/>
 										<Property Name="OverrideGameAuxSends" Type="bool" Value="True"/>
 										<Property Name="OverrideOutput" Type="bool" Value="True"/>
 										<Property Name="OverridePositioning" Type="bool" Value="True"/>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>-3</Value>
+											</ValueList>
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{6D0C3ECA-DA71-4265-9C4E-3E5FA760D1C3}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="100"/>
+															<Property Name="Min" Type="Real64" Value="-1"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
 										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-3</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Attenuation">
-											<ObjectRef Name="AnimalSoundAtten" ID="{BADF60B6-F5A2-4FE1-83CA-79928673C0CD}" WorkUnitID="{05E83523-ED60-4EDF-8A61-DC39396E21A4}"/>
+											<ObjectRef Name="AnimalBirds" ID="{B4872283-A760-4727-8678-735C31E2B2AD}" WorkUnitID="{05E83523-ED60-4EDF-8A61-DC39396E21A4}"/>
 										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="ADPCM Auto Detect High" ID="{6D51666E-9C7A-40E4-831D-C445512EBABD}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="AnimalAtmos" ID="{F9987C84-9B33-44CC-A6C3-1E3CB4F52D3C}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+											<ObjectRef Name="AnimalBirds" ID="{57A5A2AB-9A41-4459-83D0-1A400D4BF04D}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -814,17 +862,33 @@
 										<Property Name="OverrideGameAuxSends" Type="bool" Value="True"/>
 										<Property Name="OverrideOutput" Type="bool" Value="True"/>
 										<Property Name="OverridePositioning" Type="bool" Value="True"/>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>-2</Value>
+											</ValueList>
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{8B06A9C4-5842-4A97-B007-A8D0DCFCCDEB}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="150"/>
+															<Property Name="Min" Type="Real64" Value="-1"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
 										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Attenuation">
-											<ObjectRef Name="AnimalSoundAtten" ID="{BADF60B6-F5A2-4FE1-83CA-79928673C0CD}" WorkUnitID="{05E83523-ED60-4EDF-8A61-DC39396E21A4}"/>
+											<ObjectRef Name="AnimalBirds" ID="{B4872283-A760-4727-8678-735C31E2B2AD}" WorkUnitID="{05E83523-ED60-4EDF-8A61-DC39396E21A4}"/>
 										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="ADPCM Auto Detect High" ID="{6D51666E-9C7A-40E4-831D-C445512EBABD}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="AnimalAtmos" ID="{F9987C84-9B33-44CC-A6C3-1E3CB4F52D3C}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+											<ObjectRef Name="AnimalBirds" ID="{57A5A2AB-9A41-4459-83D0-1A400D4BF04D}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -906,17 +970,33 @@
 										<Property Name="OverrideGameAuxSends" Type="bool" Value="True"/>
 										<Property Name="OverrideOutput" Type="bool" Value="True"/>
 										<Property Name="OverridePositioning" Type="bool" Value="True"/>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>-2</Value>
+											</ValueList>
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{55B76659-4AAA-4FFC-823E-DCB82BCD7CD5}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="100"/>
+															<Property Name="Min" Type="Real64" Value="-1"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
 										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Attenuation">
-											<ObjectRef Name="AnimalSoundAtten" ID="{BADF60B6-F5A2-4FE1-83CA-79928673C0CD}" WorkUnitID="{05E83523-ED60-4EDF-8A61-DC39396E21A4}"/>
+											<ObjectRef Name="AnimalBirds" ID="{B4872283-A760-4727-8678-735C31E2B2AD}" WorkUnitID="{05E83523-ED60-4EDF-8A61-DC39396E21A4}"/>
 										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="ADPCM Auto Detect High" ID="{6D51666E-9C7A-40E4-831D-C445512EBABD}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="AnimalAtmos" ID="{F9987C84-9B33-44CC-A6C3-1E3CB4F52D3C}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+											<ObjectRef Name="AnimalBirds" ID="{57A5A2AB-9A41-4459-83D0-1A400D4BF04D}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -4450,13 +4530,13 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Attenuation">
-											<ObjectRef Name="AnimalSoundAtten" ID="{BADF60B6-F5A2-4FE1-83CA-79928673C0CD}" WorkUnitID="{05E83523-ED60-4EDF-8A61-DC39396E21A4}"/>
+											<ObjectRef Name="AnimalBirds" ID="{B4872283-A760-4727-8678-735C31E2B2AD}" WorkUnitID="{05E83523-ED60-4EDF-8A61-DC39396E21A4}"/>
 										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="AnimalAtmos" ID="{F9987C84-9B33-44CC-A6C3-1E3CB4F52D3C}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+											<ObjectRef Name="AnimalBirds" ID="{57A5A2AB-9A41-4459-83D0-1A400D4BF04D}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -4558,13 +4638,13 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Attenuation">
-											<ObjectRef Name="AnimalSoundAtten" ID="{BADF60B6-F5A2-4FE1-83CA-79928673C0CD}" WorkUnitID="{05E83523-ED60-4EDF-8A61-DC39396E21A4}"/>
+											<ObjectRef Name="AnimalBirds" ID="{B4872283-A760-4727-8678-735C31E2B2AD}" WorkUnitID="{05E83523-ED60-4EDF-8A61-DC39396E21A4}"/>
 										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="AnimalAtmos" ID="{F9987C84-9B33-44CC-A6C3-1E3CB4F52D3C}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+											<ObjectRef Name="AnimalBirds" ID="{57A5A2AB-9A41-4459-83D0-1A400D4BF04D}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -4671,13 +4751,13 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Attenuation">
-											<ObjectRef Name="AnimalSoundAtten" ID="{BADF60B6-F5A2-4FE1-83CA-79928673C0CD}" WorkUnitID="{05E83523-ED60-4EDF-8A61-DC39396E21A4}"/>
+											<ObjectRef Name="AnimalBirds" ID="{B4872283-A760-4727-8678-735C31E2B2AD}" WorkUnitID="{05E83523-ED60-4EDF-8A61-DC39396E21A4}"/>
 										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="AnimalAtmos" ID="{F9987C84-9B33-44CC-A6C3-1E3CB4F52D3C}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+											<ObjectRef Name="AnimalBirds" ID="{57A5A2AB-9A41-4459-83D0-1A400D4BF04D}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -4778,13 +4858,13 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Attenuation">
-											<ObjectRef Name="AnimalSoundAtten" ID="{BADF60B6-F5A2-4FE1-83CA-79928673C0CD}" WorkUnitID="{05E83523-ED60-4EDF-8A61-DC39396E21A4}"/>
+											<ObjectRef Name="AnimalBirds" ID="{B4872283-A760-4727-8678-735C31E2B2AD}" WorkUnitID="{05E83523-ED60-4EDF-8A61-DC39396E21A4}"/>
 										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="AnimalAtmos" ID="{F9987C84-9B33-44CC-A6C3-1E3CB4F52D3C}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+											<ObjectRef Name="AnimalBirds" ID="{57A5A2AB-9A41-4459-83D0-1A400D4BF04D}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -4892,13 +4972,13 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Attenuation">
-											<ObjectRef Name="AnimalSoundAtten" ID="{BADF60B6-F5A2-4FE1-83CA-79928673C0CD}" WorkUnitID="{05E83523-ED60-4EDF-8A61-DC39396E21A4}"/>
+											<ObjectRef Name="AnimalBirds" ID="{B4872283-A760-4727-8678-735C31E2B2AD}" WorkUnitID="{05E83523-ED60-4EDF-8A61-DC39396E21A4}"/>
 										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="AnimalAtmos" ID="{F9987C84-9B33-44CC-A6C3-1E3CB4F52D3C}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+											<ObjectRef Name="AnimalBirds" ID="{57A5A2AB-9A41-4459-83D0-1A400D4BF04D}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -5005,13 +5085,13 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Attenuation">
-											<ObjectRef Name="AnimalSoundAtten" ID="{BADF60B6-F5A2-4FE1-83CA-79928673C0CD}" WorkUnitID="{05E83523-ED60-4EDF-8A61-DC39396E21A4}"/>
+											<ObjectRef Name="AnimalBirds" ID="{B4872283-A760-4727-8678-735C31E2B2AD}" WorkUnitID="{05E83523-ED60-4EDF-8A61-DC39396E21A4}"/>
 										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="AnimalAtmos" ID="{F9987C84-9B33-44CC-A6C3-1E3CB4F52D3C}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+											<ObjectRef Name="AnimalBirds" ID="{57A5A2AB-9A41-4459-83D0-1A400D4BF04D}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -5115,13 +5195,13 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Attenuation">
-											<ObjectRef Name="AnimalSoundAtten" ID="{BADF60B6-F5A2-4FE1-83CA-79928673C0CD}" WorkUnitID="{05E83523-ED60-4EDF-8A61-DC39396E21A4}"/>
+											<ObjectRef Name="AnimalBirds" ID="{B4872283-A760-4727-8678-735C31E2B2AD}" WorkUnitID="{05E83523-ED60-4EDF-8A61-DC39396E21A4}"/>
 										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="AnimalAtmos" ID="{F9987C84-9B33-44CC-A6C3-1E3CB4F52D3C}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+											<ObjectRef Name="AnimalBirds" ID="{57A5A2AB-9A41-4459-83D0-1A400D4BF04D}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -5223,13 +5303,13 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Attenuation">
-											<ObjectRef Name="AnimalSoundAtten" ID="{BADF60B6-F5A2-4FE1-83CA-79928673C0CD}" WorkUnitID="{05E83523-ED60-4EDF-8A61-DC39396E21A4}"/>
+											<ObjectRef Name="AnimalBirds" ID="{B4872283-A760-4727-8678-735C31E2B2AD}" WorkUnitID="{05E83523-ED60-4EDF-8A61-DC39396E21A4}"/>
 										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="AnimalAtmos" ID="{F9987C84-9B33-44CC-A6C3-1E3CB4F52D3C}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+											<ObjectRef Name="AnimalBirds" ID="{57A5A2AB-9A41-4459-83D0-1A400D4BF04D}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -5319,13 +5399,13 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Attenuation">
-											<ObjectRef Name="AnimalSoundAtten" ID="{BADF60B6-F5A2-4FE1-83CA-79928673C0CD}" WorkUnitID="{05E83523-ED60-4EDF-8A61-DC39396E21A4}"/>
+											<ObjectRef Name="AnimalBirds" ID="{B4872283-A760-4727-8678-735C31E2B2AD}" WorkUnitID="{05E83523-ED60-4EDF-8A61-DC39396E21A4}"/>
 										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="AnimalAtmos" ID="{F9987C84-9B33-44CC-A6C3-1E3CB4F52D3C}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+											<ObjectRef Name="AnimalBirds" ID="{57A5A2AB-9A41-4459-83D0-1A400D4BF04D}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -5439,13 +5519,13 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Attenuation">
-											<ObjectRef Name="AnimalSoundAtten" ID="{BADF60B6-F5A2-4FE1-83CA-79928673C0CD}" WorkUnitID="{05E83523-ED60-4EDF-8A61-DC39396E21A4}"/>
+											<ObjectRef Name="AnimalBirds" ID="{B4872283-A760-4727-8678-735C31E2B2AD}" WorkUnitID="{05E83523-ED60-4EDF-8A61-DC39396E21A4}"/>
 										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="AnimalAtmos" ID="{F9987C84-9B33-44CC-A6C3-1E3CB4F52D3C}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+											<ObjectRef Name="AnimalBirds" ID="{57A5A2AB-9A41-4459-83D0-1A400D4BF04D}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -5552,13 +5632,13 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Attenuation">
-											<ObjectRef Name="AnimalSoundAtten" ID="{BADF60B6-F5A2-4FE1-83CA-79928673C0CD}" WorkUnitID="{05E83523-ED60-4EDF-8A61-DC39396E21A4}"/>
+											<ObjectRef Name="AnimalBirds" ID="{B4872283-A760-4727-8678-735C31E2B2AD}" WorkUnitID="{05E83523-ED60-4EDF-8A61-DC39396E21A4}"/>
 										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="AnimalAtmos" ID="{F9987C84-9B33-44CC-A6C3-1E3CB4F52D3C}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+											<ObjectRef Name="AnimalBirds" ID="{57A5A2AB-9A41-4459-83D0-1A400D4BF04D}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -6641,13 +6721,13 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Attenuation">
-											<ObjectRef Name="AnimalSoundAtten" ID="{BADF60B6-F5A2-4FE1-83CA-79928673C0CD}" WorkUnitID="{05E83523-ED60-4EDF-8A61-DC39396E21A4}"/>
+											<ObjectRef Name="AnimalBirds" ID="{B4872283-A760-4727-8678-735C31E2B2AD}" WorkUnitID="{05E83523-ED60-4EDF-8A61-DC39396E21A4}"/>
 										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="AnimalAtmos" ID="{F9987C84-9B33-44CC-A6C3-1E3CB4F52D3C}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+											<ObjectRef Name="AnimalBirds" ID="{57A5A2AB-9A41-4459-83D0-1A400D4BF04D}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -6755,13 +6835,13 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Attenuation">
-											<ObjectRef Name="AnimalSoundAtten" ID="{BADF60B6-F5A2-4FE1-83CA-79928673C0CD}" WorkUnitID="{05E83523-ED60-4EDF-8A61-DC39396E21A4}"/>
+											<ObjectRef Name="AnimalBirds" ID="{B4872283-A760-4727-8678-735C31E2B2AD}" WorkUnitID="{05E83523-ED60-4EDF-8A61-DC39396E21A4}"/>
 										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="AnimalAtmos" ID="{F9987C84-9B33-44CC-A6C3-1E3CB4F52D3C}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+											<ObjectRef Name="AnimalBirds" ID="{57A5A2AB-9A41-4459-83D0-1A400D4BF04D}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -6874,13 +6954,13 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Attenuation">
-											<ObjectRef Name="AnimalSoundAtten" ID="{BADF60B6-F5A2-4FE1-83CA-79928673C0CD}" WorkUnitID="{05E83523-ED60-4EDF-8A61-DC39396E21A4}"/>
+											<ObjectRef Name="AnimalBirds" ID="{B4872283-A760-4727-8678-735C31E2B2AD}" WorkUnitID="{05E83523-ED60-4EDF-8A61-DC39396E21A4}"/>
 										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="AnimalAtmos" ID="{F9987C84-9B33-44CC-A6C3-1E3CB4F52D3C}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+											<ObjectRef Name="AnimalBirds" ID="{57A5A2AB-9A41-4459-83D0-1A400D4BF04D}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -11709,13 +11789,13 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Attenuation">
-											<ObjectRef Name="AnimalSoundAtten" ID="{BADF60B6-F5A2-4FE1-83CA-79928673C0CD}" WorkUnitID="{05E83523-ED60-4EDF-8A61-DC39396E21A4}"/>
+											<ObjectRef Name="AnimalBirds" ID="{B4872283-A760-4727-8678-735C31E2B2AD}" WorkUnitID="{05E83523-ED60-4EDF-8A61-DC39396E21A4}"/>
 										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="AnimalAtmos" ID="{F9987C84-9B33-44CC-A6C3-1E3CB4F52D3C}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+											<ObjectRef Name="AnimalBirds" ID="{57A5A2AB-9A41-4459-83D0-1A400D4BF04D}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -13838,7 +13918,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="AnimalAtmos" ID="{F9987C84-9B33-44CC-A6C3-1E3CB4F52D3C}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+									<ObjectRef Name="AnimalBirds" ID="{57A5A2AB-9A41-4459-83D0-1A400D4BF04D}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>

@@ -1264,7 +1264,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1212631982" Type="User" Language="SFX" Hash="{8CA0A01F-639A-C4CE-9E4E-7D68EEAE8B74}">
+		<SoundBank Id="1212631982" Type="User" Language="SFX" Hash="{329F2615-9881-1B74-FF20-EC96D556320E}">
 			<ShortName>AnimalsAtmos</ShortName>
 			<Path>AnimalsAtmos.bnk</Path>
 			<Media>
@@ -1376,7 +1376,7 @@
 						<MediaRef Id="779082508"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="562855495" Name="Play_Walla" MaxAttenuation="100" DurationType="OneShot" DurationMin="2.25" DurationMax="43.75">
+				<Event Id="562855495" Name="Play_Walla" MaxAttenuation="250" DurationType="OneShot" DurationMin="2.1274004" DurationMax="43.82588">
 					<MediaRefs>
 						<MediaRef Id="426785514"/>
 						<MediaRef Id="663582759"/>
@@ -1384,7 +1384,7 @@
 						<MediaRef Id="974823757"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1137965771" Name="Play_Walla_01" MaxAttenuation="100" DurationType="OneShot" DurationMin="12.844068" DurationMax="31.0625">
+				<Event Id="1137965771" Name="Play_Walla_01" MaxAttenuation="250" DurationType="OneShot" DurationMin="12.844068" DurationMax="31.0625">
 					<MediaRefs>
 						<MediaRef Id="50422221"/>
 						<MediaRef Id="88830038"/>
@@ -1399,12 +1399,12 @@
 						<MediaRef Id="1024080336"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1137965768" Name="Play_Walla_02" MaxAttenuation="100" DurationType="OneShot" DurationMin="39.369778" DurationMax="40.546818">
+				<Event Id="1137965768" Name="Play_Walla_02" MaxAttenuation="250" DurationType="OneShot" DurationMin="39.369778" DurationMax="40.546818">
 					<MediaRefs>
 						<MediaRef Id="745888759"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1137965769" Name="Play_Walla_03" MaxAttenuation="100" DurationType="OneShot" DurationMin="6.440118" DurationMax="29.690567">
+				<Event Id="1137965769" Name="Play_Walla_03" MaxAttenuation="250" DurationType="OneShot" DurationMin="6.440118" DurationMax="29.690567">
 					<MediaRefs>
 						<MediaRef Id="246656770"/>
 						<MediaRef Id="804366401"/>
@@ -1514,7 +1514,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{B17F8ABE-78C3-D9DA-DECA-CE3EDD258C69}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{F22257CB-654F-6DC2-7685-6354DEF3B318}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -1554,7 +1554,13 @@
 						</ShareSets>
 					</PluginRefs>
 				</Bus>
-				<Bus Id="3869215771" Name="AnimalBirds" MaxAttenuation="250"/>
+				<Bus Id="3869215771" Name="AnimalBirds" MaxAttenuation="250">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="48620415"/>
+						</ShareSets>
+					</PluginRefs>
+				</Bus>
 				<Bus Id="3991942870" Name="Music" MaxAttenuation="100"/>
 			</Busses>
 			<GameParameters>
@@ -1576,7 +1582,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="1551306167" Type="User" Language="SFX" Hash="{FCF43F5D-0D45-0DE2-F853-4B379A9347B7}">
+		<SoundBank Id="1551306167" Type="User" Language="SFX" Hash="{9434AC30-462A-3744-D41F-E9FFC4D481F9}">
 			<ShortName>UI</ShortName>
 			<Path>UI.bnk</Path>
 			<Media>
@@ -1844,7 +1850,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{FD84DC5D-144A-6876-7CA1-33829519C5B4}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{33D94D5D-8AD2-8AFD-7407-BC8B96F11BBC}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -3225,7 +3231,7 @@
 						<MediaRef Id="407734084"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="562855495" Name="Play_Walla" MaxAttenuation="100" DurationType="OneShot" DurationMin="2.25" DurationMax="43.75">
+				<Event Id="562855495" Name="Play_Walla" MaxAttenuation="250" DurationType="OneShot" DurationMin="2.1274004" DurationMax="43.82588">
 					<MediaRefs>
 						<MediaRef Id="426785514"/>
 						<MediaRef Id="663582759"/>
@@ -3233,7 +3239,7 @@
 						<MediaRef Id="974823757"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1137965771" Name="Play_Walla_01" MaxAttenuation="100" DurationType="OneShot" DurationMin="12.844068" DurationMax="31.0625">
+				<Event Id="1137965771" Name="Play_Walla_01" MaxAttenuation="250" DurationType="OneShot" DurationMin="12.844068" DurationMax="31.0625">
 					<MediaRefs>
 						<MediaRef Id="50422221"/>
 						<MediaRef Id="88830038"/>
@@ -3248,12 +3254,12 @@
 						<MediaRef Id="1024080336"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1137965768" Name="Play_Walla_02" MaxAttenuation="100" DurationType="OneShot" DurationMin="39.369778" DurationMax="40.546818">
+				<Event Id="1137965768" Name="Play_Walla_02" MaxAttenuation="250" DurationType="OneShot" DurationMin="39.369778" DurationMax="40.546818">
 					<MediaRefs>
 						<MediaRef Id="745888759"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1137965769" Name="Play_Walla_03" MaxAttenuation="100" DurationType="OneShot" DurationMin="6.440118" DurationMax="29.690567">
+				<Event Id="1137965769" Name="Play_Walla_03" MaxAttenuation="250" DurationType="OneShot" DurationMin="6.440118" DurationMax="29.690567">
 					<MediaRefs>
 						<MediaRef Id="246656770"/>
 						<MediaRef Id="804366401"/>
@@ -3444,5 +3450,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{EC8131BE-527C-1534-0B18-816E2881E8E3}</FileHash>
+	<FileHash>{2E269F74-B1DC-87D1-B485-F4C5F79DD6DD}</FileHash>
 </SoundBanksInfo>
