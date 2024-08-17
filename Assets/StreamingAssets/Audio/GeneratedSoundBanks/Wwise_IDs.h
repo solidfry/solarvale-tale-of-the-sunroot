@@ -76,6 +76,7 @@ namespace AK
         static const AkUniqueID PLAY_WALLA_02 = 1137965768U;
         static const AkUniqueID PLAY_WALLA_03 = 1137965769U;
         static const AkUniqueID PLAY_WALLA_04 = 1137965774U;
+        static const AkUniqueID PLAY_WHALEROCK = 2062730270U;
         static const AkUniqueID PLAY_WOMBAT_CHATTER = 2355898552U;
         static const AkUniqueID PLAY_WOMBAT_EATING = 758826763U;
         static const AkUniqueID PLAY_WOMBAT_WALLA_01_STEREO = 499011499U;
@@ -131,6 +132,7 @@ namespace AK
         static const AkUniqueID STOP_WALLA_02 = 1466473722U;
         static const AkUniqueID STOP_WALLA_03 = 1466473723U;
         static const AkUniqueID STOP_WALLA_04 = 1466473724U;
+        static const AkUniqueID STOP_WHALEROCK = 3149803708U;
         static const AkUniqueID STOP_WOMBAT_CHATTER = 2441382638U;
         static const AkUniqueID STOP_WOMBAT_EATING = 3487772253U;
         static const AkUniqueID STOP_WOMBAT_WALLA_01_STEREO = 2129048537U;

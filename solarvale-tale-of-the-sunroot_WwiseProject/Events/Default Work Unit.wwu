@@ -839,6 +839,33 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_WhaleRock" ID="{520DA916-550D-4733-956B-8A0C1A304FD1}">
+							<ChildrenList>
+								<Action Name="" ID="{4096C907-B247-4B5B-AC25-52334846D14E}" ShortID="315426783">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="WhaleRock" ID="{7C3DF121-581B-48CC-B589-D7F0B502CE4F}" WorkUnitID="{BF25DDCB-4F6E-4FFB-A522-CBB1CD35F4B9}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stop_WhaleRock" ID="{57371C62-1E93-4BE4-903F-3B9F47BB2F39}">
+							<ChildrenList>
+								<Action Name="" ID="{BC66E82E-F5A0-466A-94CB-A85A62CB22BE}" ShortID="40776762">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeOutCurve" Type="int16" Value="6"/>
+										<Property Name="FadeTime" Type="Real64" Value="3.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="WhaleRock" ID="{7C3DF121-581B-48CC-B589-D7F0B502CE4F}" WorkUnitID="{BF25DDCB-4F6E-4FFB-A522-CBB1CD35F4B9}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Foley" ID="{1CA7D90C-09F5-4186-A6ED-2D00D7A4000D}" ShortID="166960355">

@@ -163,7 +163,7 @@
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Attenuation">
-							<ObjectRef Name="Atmos" ID="{02DBC80D-A3A8-401A-BF00-768794A1700C}" WorkUnitID="{05E83523-ED60-4EDF-8A61-DC39396E21A4}"/>
+							<ObjectRef Name="WhaleRock" ID="{FCAC9E4F-9DFF-4C82-8962-948D6ED24770}" WorkUnitID="{05E83523-ED60-4EDF-8A61-DC39396E21A4}"/>
 						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
@@ -1862,6 +1862,145 @@
 							</ChildrenList>
 							<ActiveSourceList>
 								<ActiveSource Name="Atmos_Beach_Lapping_Waves_02" ID="{49138EA3-5924-4558-9019-4AFEC6FE0D96}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
+				<RandomSequenceContainer Name="WhaleRock" ID="{7C3DF121-581B-48CC-B589-D7F0B502CE4F}" ShortID="978194206">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+						<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
+						<Property Name="MakeUpGain" Type="Real64">
+							<ValueList>
+								<Value>10</Value>
+							</ValueList>
+						</Property>
+						<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+						<Property Name="OverrideGameAuxSends" Type="bool" Value="True"/>
+						<Property Name="OverrideOutput" Type="bool" Value="True"/>
+						<Property Name="OverridePositioning" Type="bool" Value="True"/>
+						<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+						<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="35"/>
+						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="WhaleRock" ID="{FCAC9E4F-9DFF-4C82-8962-948D6ED24770}" WorkUnitID="{05E83523-ED60-4EDF-8A61-DC39396E21A4}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Atmos" ID="{E51D6CB8-01C8-48A1-8608-AE500145E9A8}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Atmos_Mountain__Small_Breeze_Distant_Water_01" ID="{51EDEDE0-BC78-46E4-8BD8-DE8971E6FE37}" ShortID="993965246">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>20</Value>
+									</ValueList>
+								</Property>
+								<Property Name="OverrideOutput" Type="bool" Value="True"/>
+								<Property Name="OverridePositioning" Type="bool" Value="True"/>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-1</Value>
+									</ValueList>
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{11756DC2-B301-4B4C-B9F4-123CE611B329}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="50"/>
+													<Property Name="Min" Type="Real64" Value="-1"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="98"/>
+								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="WhaleRock" ID="{FCAC9E4F-9DFF-4C82-8962-948D6ED24770}" WorkUnitID="{05E83523-ED60-4EDF-8A61-DC39396E21A4}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Atmos" ID="{E51D6CB8-01C8-48A1-8608-AE500145E9A8}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Atmos_Mountain__Small_Breeze_Distant_Water_01" ID="{6B9EB4D2-25ED-4AD2-92BC-F752C9BF31C3}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="10.7"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="11.1458333333333"/>
+										<Property Name="OverrideConversion" Type="bool" Value="True"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<Custom CreatedFrom="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}">
+												<Conversion Name="Vorbis Quality High (Custom)" ID="{CF5A2B1A-BDA3-429E-8FE8-2A1963576771}">
+													<PropertyList>
+														<Property Name="Channels" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">4</Value>
+																<Value Platform="Mac">4</Value>
+															</ValueList>
+														</Property>
+														<Property Name="LRMix" Type="Real64">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+														<Property Name="MaxSampleRate" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+														<Property Name="MinSampleRate" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+														<Property Name="SampleRate" Type="int32">
+															<ValueList>
+																<Value Platform="Windows">0</Value>
+																<Value Platform="Mac">0</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ConversionPluginInfoList>
+														<ConversionPluginInfo Platform="Windows">
+															<ConversionPlugin Name="" ID="{CB7A2EE4-CA02-4D6E-B3A5-BF11BACD5C14}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
+														</ConversionPluginInfo>
+														<ConversionPluginInfo Platform="Mac">
+															<ConversionPlugin Name="" ID="{606BBD58-3A8F-4C26-8080-01AC972FE2C9}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
+														</ConversionPluginInfo>
+													</ConversionPluginInfoList>
+												</Conversion>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<Language>SFX</Language>
+									<AudioFile>Atmos_Mountain__Small_Breeze_Distant_Water_01.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="719415462"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Atmos_Mountain__Small_Breeze_Distant_Water_01" ID="{6B9EB4D2-25ED-4AD2-92BC-F752C9BF31C3}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
