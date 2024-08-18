@@ -250,7 +250,7 @@
 						<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
 						<Property Name="MakeUpGain" Type="Real64">
 							<ValueList>
-								<Value>10</Value>
+								<Value>16</Value>
 							</ValueList>
 						</Property>
 						<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
@@ -1071,6 +1071,11 @@
 					<PropertyList>
 						<Property Name="3DSpatialization" Type="int16" Value="1"/>
 						<Property Name="GlobalOrPerObject" Type="int16" Value="0"/>
+						<Property Name="MakeUpGain" Type="Real64">
+							<ValueList>
+								<Value>10</Value>
+							</ValueList>
+						</Property>
 						<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
 						<Property Name="OverrideGameAuxSends" Type="bool" Value="True"/>
 						<Property Name="OverrideOutput" Type="bool" Value="True"/>
@@ -1092,6 +1097,11 @@
 					<ChildrenList>
 						<Sound Name="Atmos_Cave_01" ID="{CD4BB25D-04F8-4BE0-84DA-40FBE883DE1C}" ShortID="943698064">
 							<PropertyList>
+								<Property Name="Highpass" Type="int16">
+									<ValueList>
+										<Value>33</Value>
+									</ValueList>
+								</Property>
 								<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
 								<Property Name="MakeUpGain" Type="Real64">
 									<ValueList>
@@ -1200,6 +1210,11 @@
 						</Sound>
 						<Sound Name="Atmos_Cave_Wind_Gentle" ID="{1F67AE59-EF6B-4C11-A150-51E630B31DD3}" ShortID="1016240996">
 							<PropertyList>
+								<Property Name="Highpass" Type="int16">
+									<ValueList>
+										<Value>17</Value>
+									</ValueList>
+								</Property>
 								<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
 								<Property Name="MakeUpGain" Type="Real64">
 									<ValueList>
@@ -1347,7 +1362,7 @@
 								<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
 								<Property Name="MakeUpGain" Type="Real64">
 									<ValueList>
-										<Value>17</Value>
+										<Value>21</Value>
 									</ValueList>
 								</Property>
 								<Property Name="OverrideGameAuxSends" Type="bool" Value="True"/>
@@ -1631,6 +1646,11 @@
 				<RandomSequenceContainer Name="BeachWaves" ID="{FB0ACF98-C1C3-4311-80B8-32CC865A10A6}" ShortID="730310302">
 					<PropertyList>
 						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+						<Property Name="MakeUpGain" Type="Real64">
+							<ValueList>
+								<Value>8</Value>
+							</ValueList>
+						</Property>
 						<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
 						<Property Name="OverrideOutput" Type="bool" Value="True"/>
 						<Property Name="OverridePositioning" Type="bool" Value="True"/>
@@ -1654,7 +1674,7 @@
 								<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
 								<Property Name="MakeUpGain" Type="Real64">
 									<ValueList>
-										<Value>7</Value>
+										<Value>8</Value>
 									</ValueList>
 								</Property>
 								<Property Name="Pitch" Type="int32">
@@ -1872,7 +1892,7 @@
 						<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
 						<Property Name="MakeUpGain" Type="Real64">
 							<ValueList>
-								<Value>10</Value>
+								<Value>14</Value>
 							</ValueList>
 						</Property>
 						<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
