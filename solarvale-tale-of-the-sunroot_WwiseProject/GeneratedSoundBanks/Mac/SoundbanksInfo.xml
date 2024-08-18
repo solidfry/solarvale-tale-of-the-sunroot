@@ -1535,7 +1535,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{0C22CE64-559F-77A8-584F-AFB0097B313D}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{F8732FA3-43AE-9C6C-4F57-DE834425E5F1}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -1761,7 +1761,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3034623661" Type="User" Language="SFX" Hash="{7B199491-265F-0EC9-98BD-C0DD8F0A951C}">
+		<SoundBank Id="3034623661" Type="User" Language="SFX" Hash="{AF4321FF-1851-BBE2-E50C-589D01B948DE}">
 			<ShortName>Atmos</ShortName>
 			<Path>Atmos.bnk</Path>
 			<Media>
@@ -1883,7 +1883,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{0468F2DD-3ED4-2E8D-8D45-391E648964AA}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{CB3103D2-441A-0476-C856-0F1009CD2710}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -2443,6 +2443,10 @@
 					<ShortName>ibis-honk_01-mono.wav</ShortName>
 					<CachePath>SFX/ibis-honk_01-mono_1B0E6163.wem</CachePath>
 				</File>
+				<File Id="649641447" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Atmos_OceanBirds16bit.wav</ShortName>
+					<CachePath>SFX/Atmos_OceanBirds16bit_447C01D4.wem</CachePath>
+				</File>
 				<File Id="659591763" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>11.wav</ShortName>
 					<CachePath>SFX/11_818F3B66.wem</CachePath>
@@ -2844,8 +2848,9 @@
 						<MediaRef Id="455223534"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2006186431" Name="Play_Beach" MaxAttenuation="150" DurationType="OneShot" DurationMin="66.273994" DurationMax="83.693146">
+				<Event Id="2006186431" Name="Play_Beach" MaxAttenuation="150" DurationType="OneShot" DurationMin="356.9675" DurationMax="450.15564">
 					<MediaRefs>
+						<MediaRef Id="649641447"/>
 						<MediaRef Id="864119437"/>
 					</MediaRefs>
 				</Event>
@@ -3487,5 +3492,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{795E289E-5D28-B2B9-2CD6-A867270C339C}</FileHash>
+	<FileHash>{97E2B54E-CF00-618A-F32D-FA032335116F}</FileHash>
 </SoundBanksInfo>
