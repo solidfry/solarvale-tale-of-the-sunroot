@@ -111,7 +111,7 @@ namespace CameraSystem
 
         private void AdjustUIVisibility()
         {
-            Debug.Log(IsInCameraMode ? CameraMode.Photography : CameraMode.Exploration);
+            // Debug.Log(IsInCameraMode ? CameraMode.Photography : CameraMode.Exploration);
             GlobalEvents.OnSetCursorInputForLookEvent?.Invoke(!IsInCameraMode);
             GlobalEvents.OnSetHUDVisibilityEvent?.Invoke(!IsInCameraMode);
             GlobalEvents.OnSetCameraHUDVisibilityEvent?.Invoke(IsInCameraMode);

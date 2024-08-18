@@ -93,7 +93,7 @@ namespace Photography
 
             }
         
-            Debug.Log(this + " Loaded " + photos.Count + " photos");
+            // Debug.Log(this + " Loaded " + photos.Count + " photos");
             OnPhotosLoaded?.Invoke(photos);
         }
     

@@ -151,12 +151,12 @@ namespace UI
             {
                 case FadeDirection.In:
                     // CheckKeyComponentsEnabled();
-                    Debug.Log("Fade In");
+                    // Debug.Log("Fade In");
                     canvasGroup.alpha = 0;
                     FadeIn();
                     break;
                 case FadeDirection.Out:
-                    Debug.Log("Fade Out");
+                    // Debug.Log("Fade Out");
                     // CheckKeyComponentsEnabled();
                     canvasGroup.alpha = 1;
                     FadeOut();

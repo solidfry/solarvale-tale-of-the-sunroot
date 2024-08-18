@@ -125,7 +125,7 @@ namespace UI
 
         void FadeIn(CanvasGroup canvasGroup)
         {
-            Debug.Log($"Fading in: {canvasGroup.gameObject.name}");
+            // Debug.Log($"Fading in: {canvasGroup.gameObject.name}");
             if (_fadeInTween != null && _fadeInTween.IsActive())
                 _fadeInTween.Kill();
             _fadeInTween = canvasGroup.DOFade(1, fadeDuration).OnComplete(() =>

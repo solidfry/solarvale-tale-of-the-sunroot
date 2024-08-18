@@ -69,7 +69,7 @@ namespace Progression
             foreach (var entity in entityList.Entities)
             {
                 _entitiesDiscovered.Add(entity, distinctEntities.Contains(entity));
-                Debug.Log("Entity added to dictionary: " + entity.Name);
+                // Debug.Log("Entity added to dictionary: " + entity.Name);
             }
             HasDictionaryChanged = true;
             OnEntityListLoaded?.Invoke(_entitiesDiscovered);
@@ -78,7 +78,7 @@ namespace Progression
         private void UpdateDiscovery(PhotoData photo)
         {
             if (photo.EntitiesInPhoto == null) return;
-            Debug.Log("Checking discovery" + photo.EntitiesInPhoto);
+            // Debug.Log("Checking discovery" + photo.EntitiesInPhoto);
             foreach (string entityString in photo.EntitiesInPhoto)
             {
                 var entity = entityList.Entities.Find(entity => entity.Name == entityString);
@@ -88,9 +88,9 @@ namespace Progression
                     _entitiesDiscovered[entity] = true;
                     OnEntityDiscovered?.Invoke(entity);
                     GlobalEvents.OnNewEntityDiscovered?.Invoke(entity);
-                    Debug.Log("Entity discovered: " + entity.Name);
+                    // Debug.Log("Entity discovered: " + entity.Name);
                 }
-                Debug.Log("Entity discovered: " + entity.Name);
+                // Debug.Log("Entity discovered: " + entity.Name);
             }
             HasDictionaryChanged = true;
         }

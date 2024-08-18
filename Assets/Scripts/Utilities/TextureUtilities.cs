@@ -17,7 +17,7 @@ namespace Utilities
             byte[] bytes = texture.EncodeToPNG();
             string filePath = Path.Combine(SaveDirectory, fileName + ".png");
             File.WriteAllBytes(filePath, bytes);
-            Debug.Log("Saved texture to: " + filePath);
+            // Debug.Log("Saved texture to: " + filePath);
         }
 
         public static Texture2D LoadTextureFromFile(string filePath)
@@ -27,7 +27,7 @@ namespace Utilities
                 byte[] bytes = File.ReadAllBytes(filePath);
                 Texture2D texture = new Texture2D(2, 2);
                 texture.LoadImage(bytes);
-                Debug.Log("Loaded texture from: " + filePath);
+                // Debug.Log("Loaded texture from: " + filePath);
                 return texture;
             }
             else
