@@ -2,6 +2,7 @@ using OccaSoftware.Buto.Runtime;
 using UniStorm;
 using UnityEngine;
 using UnityEngine.Rendering;
+using UnityEngine.Serialization;
 
 namespace Lighting
 {
@@ -17,7 +18,7 @@ namespace Lighting
         
         [SerializeField] Volume volume;
     
-        [SerializeField] float fogHDRIntensity = 1.0f;
+        [SerializeField] float morningFogHDRIntensity = 1.0f, dayFogHDRIntensity = 1.0f, eveningFogHDRIntensity = 1.0f, nightFogHDRIntensity = 1.0f;
     
         ButoVolumetricFog _fogVolume;
     
@@ -65,24 +66,24 @@ namespace Lighting
             switch (timeOfDay)
             {
                 case UniStormSystem.CurrentTimeOfDayEnum.Morning:
-                    UpdateFog(_uniStormSystem.m_SunLight.color * morningFogTintColor);
+                    UpdateFog(_uniStormSystem.m_SunLight.color * morningFogTintColor, morningFogHDRIntensity);
                     break;
                 case UniStormSystem.CurrentTimeOfDayEnum.Day:
-                    UpdateFog( _uniStormSystem.m_SunLight.color * dayFogTintColor);
+                    UpdateFog( _uniStormSystem.m_SunLight.color * dayFogTintColor, dayFogHDRIntensity);
                     break;
                 case UniStormSystem.CurrentTimeOfDayEnum.Evening:
-                    UpdateFog(_uniStormSystem.m_MoonLight.color * eveningFogTintColor);
+                    UpdateFog(_uniStormSystem.m_MoonLight.color * eveningFogTintColor, eveningFogHDRIntensity);
                     break;
                 case UniStormSystem.CurrentTimeOfDayEnum.Night:
-                    UpdateFog(_uniStormSystem.m_MoonLight.color * nightFogTintColor);
+                    UpdateFog(_uniStormSystem.m_MoonLight.color * nightFogTintColor, nightFogHDRIntensity);
                     break;
             }
         }
 
-        void UpdateFog(Color l)
+        void UpdateFog(Color l, float intensity = 1.0f)
         {
             fogColor = l;
-            _fogColorParam.value = fogColor * fogHDRIntensity;
+            _fogColorParam.value = fogColor * intensity;
             _fogVolume.directionalForward.value = _fogColorParam.value;
             _fogVolume.litColor.value = _fogColorParam.value;
         }
