@@ -13,6 +13,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	202704733	Stop_Walla			\Default Work Unit\Cockatoo\SFX\Stop_Walla	
 	207755397	Play_Forest			\Default Work Unit\Atmos\Play_Forest	
 	287728669	Stop_SFX			\Default Work Unit\Cockatoo\SFX\Stop_SFX	
+	326089004	Stop_music_finalcutscene			\Default Work Unit\Music\Stop_music_finalcutscene	
 	330024833	Play_FTS_Water_Land			\Default Work Unit\Foley\Jump\Play_FTS_Water_Land	
 	365191676	Stop_music_grandma			\Default Work Unit\Music\Stop_music_grandma	
 	378774161	Stop_Beach			\Default Work Unit\Atmos\Stop_Beach	
@@ -96,6 +97,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	3257337844	Play_SFX_02			\Default Work Unit\Koala\SFX\Play_SFX_02	
 	3257337845	Play_SFX_03			\Default Work Unit\Kookaburra\SFX\Play_SFX_03	
 	3257337847	Play_SFX_01			\Default Work Unit\Ibis\SFX\Play_SFX_01	
+	3361410662	Play_music_finalcutscene			\Default Work Unit\Music\Play_music_finalcutscene	
 	3436193965	Play_FTS_Land			\Default Work Unit\Foley\Jump\Play_FTS_Land	
 	3440786873	Stop_SFX_01			\Default Work Unit\Ibis\SFX\Stop_SFX_01	
 	3440786874	Stop_SFX_02			\Default Work Unit\Koala\SFX\Stop_SFX_02	
@@ -153,6 +155,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	8120661	Atmos_Beach_Lapping_Waves_01	E:\Users\Voide\Desktop\solarvale\solarvaleproject\solarvale-tale-of-the-sunroot\solarvale-tale-of-the-sunroot_WwiseProject\.cache\Mac\SFX\Atmos_Beach_Lapping_Waves_01_07DDCA3A.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\AtmosOcean\Ocean\Atmos_Beach_Lapping_Waves_01		2253028
 	14543938	cockatoo-call_multiple_01-mono	E:\Users\Voide\Desktop\solarvale\solarvaleproject\solarvale-tale-of-the-sunroot\solarvale-tale-of-the-sunroot_WwiseProject\.cache\Mac\SFX\Cockatoo\Mono_Cockatoo\cockatoo-call_multiple_01-mono_1E1EDF17.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Animals\Cockatoo\SFX\Call\cockatoo-call_multiple_01-mono		103416
 	15635263	kookaburra-chuckle_multiple_03-mono	E:\Users\Voide\Desktop\solarvale\solarvaleproject\solarvale-tale-of-the-sunroot\solarvale-tale-of-the-sunroot_WwiseProject\.cache\Mac\SFX\Kookaburra\Mono\kookaburra-chuckle_multiple_03-mono_91C26E99.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Animals\Kookaburra\SFX\Chuckle\kookaburra-chuckle_multiple_03-mono		417516
+	22217975	music_finalcutscene	E:\Users\Voide\Desktop\solarvale\solarvaleproject\solarvale-tale-of-the-sunroot\solarvale-tale-of-the-sunroot_WwiseProject\.cache\Mac\SFX\music_finalcutscene_0AEA315F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\music_finalcutscene		830929
 	22394516	kookaburra-chuckle_02-mono	E:\Users\Voide\Desktop\solarvale\solarvaleproject\solarvale-tale-of-the-sunroot\solarvale-tale-of-the-sunroot_WwiseProject\.cache\Mac\SFX\Kookaburra\Mono\kookaburra-chuckle_02-mono_5B00B828.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Animals\Kookaburra\SFX\Chuckle\kookaburra-chuckle_02-mono		55788
 	45670411	SFX_Cricket	E:\Users\Voide\Desktop\solarvale\solarvaleproject\solarvale-tale-of-the-sunroot\solarvale-tale-of-the-sunroot_WwiseProject\.cache\Mac\SFX\SFX_Cricket_1C58ED9F.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\SFX\SFX_Cricket		18780
 	50422221	kookaburra-laugh_walla_06-stereo	E:\Users\Voide\Desktop\solarvale\solarvaleproject\solarvale-tale-of-the-sunroot\solarvale-tale-of-the-sunroot_WwiseProject\.cache\Mac\SFX\Kookaburra\Stereo\kookaburra-laugh_walla_06-stereo_2E065438.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Animals\Kookaburra\Walla\kookaburra-laugh_walla_06-stereo		164164
@@ -319,7 +322,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	804366401	magpie-raven_walla_01-stereo	E:\Users\Voide\Desktop\solarvale\solarvaleproject\solarvale-tale-of-the-sunroot\solarvale-tale-of-the-sunroot_WwiseProject\.cache\Mac\SFX\Magpie\Stereo\magpie-raven_walla_01-stereo_37A4EECC.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Animals\Magpie\Walla\magpie-raven_walla_01-stereo		357864
 	811932731	music_grandma_2	E:\Users\Voide\Desktop\solarvale\solarvaleproject\solarvale-tale-of-the-sunroot\solarvale-tale-of-the-sunroot_WwiseProject\.cache\Mac\SFX\music_grandma_2_7A553582.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\Grandma\music_grandma_2		265741
 	822408853	FTS_Water_03	E:\Users\Voide\Desktop\solarvale\solarvaleproject\solarvale-tale-of-the-sunroot\solarvale-tale-of-the-sunroot_WwiseProject\.cache\Mac\SFX\FTS_Water_03_9E12AB17.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Foley\FootstepsSwitch\Water-Stream Footsteps\FTS_Water_03		23496
-	824266889	music_picolo	E:\Users\Voide\Desktop\solarvale\solarvaleproject\solarvale-tale-of-the-sunroot\solarvale-tale-of-the-sunroot_WwiseProject\.cache\Mac\SFX\music_picolo_4B9541BF.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\music_picolo		659787
+	824266889	music_picolo	E:\Users\Voide\Desktop\solarvale\solarvaleproject\solarvale-tale-of-the-sunroot\solarvale-tale-of-the-sunroot_WwiseProject\.cache\Mac\SFX\music_picolo_050EF269.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\music_picolo		659787
 	826752868	ibis-walla_01-stereo	E:\Users\Voide\Desktop\solarvale\solarvaleproject\solarvale-tale-of-the-sunroot\solarvale-tale-of-the-sunroot_WwiseProject\.cache\Mac\SFX\ibis-walla_01-stereo_8709A909.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Animals\Ibis\ibis-walla_01-stereo		649113
 	827653856	FTS_Water_Jump	E:\Users\Voide\Desktop\solarvale\solarvaleproject\solarvale-tale-of-the-sunroot\solarvale-tale-of-the-sunroot_WwiseProject\.cache\Mac\SFX\FTS_Water_Jump_6280E81C.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Foley\FTS_Water_Jump		17196
 	832474364	kookaburra-laugh_walla_01-stereo	E:\Users\Voide\Desktop\solarvale\solarvaleproject\solarvale-tale-of-the-sunroot\solarvale-tale-of-the-sunroot_WwiseProject\.cache\Mac\SFX\Kookaburra\Stereo\kookaburra-laugh_walla_01-stereo_248B8BCA.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Animals\Kookaburra\Walla\kookaburra-laugh_walla_01-stereo		186226

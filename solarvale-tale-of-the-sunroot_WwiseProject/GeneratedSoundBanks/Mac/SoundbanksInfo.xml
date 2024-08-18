@@ -1883,7 +1883,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{2903D03B-EE5C-45F0-474D-C7519EE0B956}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{C6B057EA-3C0C-3D63-DA5F-E118C535B0BF}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -1910,6 +1910,10 @@
 				<File Id="15635263" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Kookaburra\Mono\kookaburra-chuckle_multiple_03-mono.wav</ShortName>
 					<CachePath>SFX/Kookaburra/Mono/kookaburra-chuckle_multiple_03-mono_91C26E99.wem</CachePath>
+				</File>
+				<File Id="22217975" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>music_finalcutscene.wav</ShortName>
+					<CachePath>SFX/music_finalcutscene_0AEA315F.wem</CachePath>
 				</File>
 				<File Id="22394516" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Kookaburra\Mono\kookaburra-chuckle_02-mono.wav</ShortName>
@@ -2577,7 +2581,7 @@
 				</File>
 				<File Id="824266889" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>music_picolo.wav</ShortName>
-					<CachePath>SFX/music_picolo_4B9541BF.wem</CachePath>
+					<CachePath>SFX/music_picolo_050EF269.wem</CachePath>
 				</File>
 				<File Id="826752868" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>ibis-walla_01-stereo.wav</ShortName>
@@ -3031,6 +3035,11 @@
 						<MediaRef Id="1032854377"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="3361410662" Name="Play_music_finalcutscene" DurationType="OneShot" DurationMin="60.501045" DurationMax="60.501045">
+					<MediaRefs>
+						<MediaRef Id="22217975"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="1150390550" Name="Play_music_flute_solo" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="695495137"/>
@@ -3374,6 +3383,7 @@
 				<Event Id="73987256" Name="Stop_ibis_walla_01_stereo" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="1183164895" Name="Stop_koala_walla_01_stereo" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="46972289" Name="Stop_Mountain" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="326089004" Name="Stop_music_finalcutscene" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="1521500452" Name="Stop_music_flute_solo" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="2536381516" Name="Stop_music_flutes_edit" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="4182453923" Name="Stop_music_game_start" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
@@ -3418,7 +3428,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3991942870" Type="User" Language="SFX" Hash="{3225D3A0-23A5-2D8E-7CA0-BE6435CAB442}">
+		<SoundBank Id="3991942870" Type="User" Language="SFX" Hash="{48E9A2D2-F59B-52C1-2A95-08C3031E5CD6}">
 			<ShortName>Music</ShortName>
 			<Path>Music.bnk</Path>
 			<Media>
@@ -3502,5 +3512,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{D81F7AB2-4A41-03D8-FB5C-0BE2C9939B16}</FileHash>
+	<FileHash>{8BAEB6E6-1257-ABB3-5138-B68509CC6224}</FileHash>
 </SoundBanksInfo>

@@ -1606,6 +1606,32 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_music_finalcutscene" ID="{B3C9C7E8-AACA-4526-8881-DDE718C67952}">
+							<ChildrenList>
+								<Action Name="" ID="{EB45A720-4118-4884-A36F-F8D9FF33FCE0}" ShortID="800889583">
+									<PropertyList>
+										<Property Name="FadeInCurve" Type="int16" Value="6"/>
+										<Property Name="FadeTime" Type="Real64" Value="3"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="music_finalcutscene" ID="{3CBDB0C1-6DC4-4AF9-95A2-47A7B8CF2BF8}" WorkUnitID="{6AACD892-8249-4CA2-BBEB-F88052A754B1}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stop_music_finalcutscene" ID="{157DD621-007C-487E-8994-B7F2BE7EB5D1}">
+							<ChildrenList>
+								<Action Name="" ID="{C60CBD78-F7C8-4737-B044-729911C9BBC9}" ShortID="101564573">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="3"/>
+										<Property Name="FadeOutCurve" Type="int16" Value="8"/>
+									</PropertyList>
+									<ReferenceList/>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="UI" ID="{8F46A6F1-7581-4E47-8EF5-B68BF1E8C23E}" ShortID="376011255">

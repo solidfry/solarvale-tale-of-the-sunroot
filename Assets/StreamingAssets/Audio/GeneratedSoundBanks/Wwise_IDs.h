@@ -45,6 +45,7 @@ namespace AK
         static const AkUniqueID PLAY_KOALA_WALLA_01_STEREO = 4167803777U;
         static const AkUniqueID PLAY_MOUNTAIN = 825230623U;
         static const AkUniqueID PLAY_MUMBLES = 75253099U;
+        static const AkUniqueID PLAY_MUSIC_FINALCUTSCENE = 3361410662U;
         static const AkUniqueID PLAY_MUSIC_FLUTE_SOLO = 1150390550U;
         static const AkUniqueID PLAY_MUSIC_FLUTES_EDIT = 3133905178U;
         static const AkUniqueID PLAY_MUSIC_GAME_START = 4029504345U;
@@ -107,6 +108,7 @@ namespace AK
         static const AkUniqueID STOP_IBIS_WALLA_01_STEREO = 73987256U;
         static const AkUniqueID STOP_KOALA_WALLA_01_STEREO = 1183164895U;
         static const AkUniqueID STOP_MOUNTAIN = 46972289U;
+        static const AkUniqueID STOP_MUSIC_FINALCUTSCENE = 326089004U;
         static const AkUniqueID STOP_MUSIC_FLUTE_SOLO = 1521500452U;
         static const AkUniqueID STOP_MUSIC_FLUTES_EDIT = 2536381516U;
         static const AkUniqueID STOP_MUSIC_GAME_START = 4182453923U;
