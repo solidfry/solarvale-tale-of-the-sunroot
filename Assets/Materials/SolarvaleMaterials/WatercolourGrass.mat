@@ -30,7 +30,7 @@ Material:
   m_InvalidKeywords: []
   m_LightmapFlags: 1
   m_EnableInstancingVariants: 1
-  m_DoubleSidedGI: 0
+  m_DoubleSidedGI: 1
   m_CustomRenderQueue: 2040
   stringTagMap:
     RenderType: Opaque
@@ -40,7 +40,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - Texture2D_5C2B0A42:
-        m_Texture: {fileID: 2800000, guid: 86f0a8e463a3b2043ba99402bc93d7e8, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _AO_Texture:
@@ -52,7 +52,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 71b5d2de26f8dd5449363d20985dd6f8, type: 3}
+        m_Texture: {fileID: 2800000, guid: 3ddc476d688587143a531c77dea0eec3, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Metallic_Texture:
@@ -85,12 +85,12 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - Vector1_2BDF6FD9: 0.61
-    - Vector1_2FA10055: 0.79
-    - Vector1_46F1304E: -0.15
-    - Vector1_BBEA2355: 1.77
+    - Vector1_2BDF6FD9: 0
+    - Vector1_2FA10055: 1
+    - Vector1_46F1304E: 0
+    - Vector1_BBEA2355: 0
     - _AO_Strength: 0.498
-    - _Albedo_Strength: 1.32
+    - _Albedo_Strength: 0.5
     - _Alpha: 1
     - _AlphaClip: 0
     - _AlphaMultiplier: 0.01
@@ -112,10 +112,10 @@ Material:
     - _MAIN_LIGHT_SHADOWS_CASCADE: 0
     - _Metallic: 0
     - _Metallic_Strength: 0
-    - _Noise_1_Multiplier: 1.67
-    - _Noise_1_Scale: 9.94
-    - _Noise_2_Multiplier: 2.14
-    - _Noise_2_Scale: 27.09
+    - _Noise_1_Multiplier: 0.01
+    - _Noise_1_Scale: 0
+    - _Noise_2_Multiplier: 0.01
+    - _Noise_2_Scale: 0
     - _NormalStength: 0
     - _QueueControl: 0
     - _QueueOffset: 40
@@ -123,8 +123,8 @@ Material:
     - _SOFT_SHADOWS: 0
     - _ShadowPosition: 1
     - _ShadowStrength: 1.763
-    - _Shadow_Opacity: 0.03
-    - _Smoothness: 0
+    - _Shadow_Opacity: 1
+    - _Smoothness: 0.2
     - _SpecularStrength: 0
     - _SrcBlend: 1
     - _Sub: 0
@@ -141,13 +141,13 @@ Material:
     - _ZWrite: 1
     - _ZWriteControl: 0
     m_Colors:
-    - Color_D9F05973: {r: 0.3490566, g: 0.3490566, b: 0.3490566, a: 1}
-    - Color_DB04B181: {r: 0.23673905, g: 0.3773585, b: 0.3284474, a: 1}
-    - _Albedo_Color: {r: 0.28159487, g: 0.5283019, b: 0.42719245, a: 1}
+    - Color_D9F05973: {r: 0.39014873, g: 0.5377358, b: 0.32720718, a: 1}
+    - Color_DB04B181: {r: 0, g: 0.23584908, b: 0.1250284, a: 1}
+    - _Albedo_Color: {r: 1, g: 1, b: 1, a: 1}
     - _BottomColor: {r: 0.34069067, g: 0.8301887, b: 0.6632831, a: 1}
-    - _BottomColour: {r: 0, g: 0.08090441, b: 0.4339623, a: 1}
+    - _BottomColour: {r: 0.122641504, g: 0, b: 0, a: 1}
     - _Emission_Color: {r: 0, g: 0, b: 0, a: 0}
-    - _Fresnel_Color: {r: 0.5028222, g: 0.5754717, b: 0.371885, a: 1}
+    - _Fresnel_Color: {r: 0.113296546, g: 0.3584906, b: 0.15656607, a: 1}
     - _Normals: {r: 1, g: 1, b: 10000, a: 0}
     - _PlayerPos: {r: 0, g: 0, b: 0, a: 0}
     - _RippleColor: {r: 0.8018868, g: 0.5030704, b: 0.5030704, a: 0}

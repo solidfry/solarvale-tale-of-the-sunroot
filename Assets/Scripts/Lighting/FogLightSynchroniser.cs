@@ -10,7 +10,9 @@ namespace Lighting
         RenderSettings _renderSettings;
         [SerializeField, ColorUsage(false, true)] Color fogColor = Color.white;
         
+        [SerializeField] Color morningFogTintColor = Color.white;
         [SerializeField] Color dayFogTintColor = Color.white;
+        [SerializeField] Color eveningFogTintColor = Color.white;
         [SerializeField] Color nightFogTintColor = Color.white;
         
         [SerializeField] Volume volume;
@@ -62,12 +64,16 @@ namespace Lighting
             
             switch (timeOfDay)
             {
-                case UniStormSystem.CurrentTimeOfDayEnum.Day:
                 case UniStormSystem.CurrentTimeOfDayEnum.Morning:
+                    UpdateFog(_uniStormSystem.m_SunLight.color * morningFogTintColor);
+                    break;
+                case UniStormSystem.CurrentTimeOfDayEnum.Day:
                     UpdateFog( _uniStormSystem.m_SunLight.color * dayFogTintColor);
                     break;
-                case UniStormSystem.CurrentTimeOfDayEnum.Night:
                 case UniStormSystem.CurrentTimeOfDayEnum.Evening:
+                    UpdateFog(_uniStormSystem.m_MoonLight.color * eveningFogTintColor);
+                    break;
+                case UniStormSystem.CurrentTimeOfDayEnum.Night:
                     UpdateFog(_uniStormSystem.m_MoonLight.color * nightFogTintColor);
                     break;
             }
