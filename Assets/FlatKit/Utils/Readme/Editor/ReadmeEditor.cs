@@ -200,13 +200,6 @@ public class ReadmeEditor : Editor {
     }
 
     private string[] GetDebugInfo() {
-        var renderPipelineAsset = GraphicsSettings.currentRenderPipeline;
-        if (renderPipelineAsset == null) {
-            renderPipelineAsset = GraphicsSettings.defaultRenderPipeline;
-        }
-
-        var rpAssetName = renderPipelineAsset == null ? "N/A" : renderPipelineAsset.name;
-
         var info = new List<string> {
             $"{AssetName} version {_readme.FlatKitVersion}",
             $"Unity {_readme.UnityVersion}",
@@ -214,7 +207,6 @@ public class ReadmeEditor : Editor {
             $"Target platform: {EditorUserBuildSettings.activeBuildTarget}",
             $"URP installed: {_readme.UrpInstalled}, version {_readme.UrpVersionInstalled}",
             $"Render pipeline: {Shader.globalRenderPipeline}",
-            $"Render pipeline asset: {rpAssetName}",
             $"Color space: {PlayerSettings.colorSpace}"
         };
 

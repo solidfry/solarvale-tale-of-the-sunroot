@@ -2,7 +2,6 @@ using OccaSoftware.Buto.Runtime;
 using UniStorm;
 using UnityEngine;
 using UnityEngine.Rendering;
-using UnityEngine.Serialization;
 
 namespace Lighting
 {
@@ -11,14 +10,12 @@ namespace Lighting
         RenderSettings _renderSettings;
         [SerializeField, ColorUsage(false, true)] Color fogColor = Color.white;
         
-        [SerializeField] Color morningFogTintColor = Color.white;
         [SerializeField] Color dayFogTintColor = Color.white;
-        [SerializeField] Color eveningFogTintColor = Color.white;
         [SerializeField] Color nightFogTintColor = Color.white;
         
         [SerializeField] Volume volume;
     
-        [SerializeField] float morningFogHDRIntensity = 1.0f, dayFogHDRIntensity = 1.0f, eveningFogHDRIntensity = 1.0f, nightFogHDRIntensity = 1.0f;
+        [SerializeField] float fogHDRIntensity = 1.0f;
     
         ButoVolumetricFog _fogVolume;
     
@@ -65,25 +62,21 @@ namespace Lighting
             
             switch (timeOfDay)
             {
-                case UniStormSystem.CurrentTimeOfDayEnum.Morning:
-                    UpdateFog(_uniStormSystem.m_SunLight.color * morningFogTintColor, morningFogHDRIntensity);
-                    break;
                 case UniStormSystem.CurrentTimeOfDayEnum.Day:
-                    UpdateFog( _uniStormSystem.m_SunLight.color * dayFogTintColor, dayFogHDRIntensity);
-                    break;
-                case UniStormSystem.CurrentTimeOfDayEnum.Evening:
-                    UpdateFog(_uniStormSystem.m_MoonLight.color * eveningFogTintColor, eveningFogHDRIntensity);
+                case UniStormSystem.CurrentTimeOfDayEnum.Morning:
+                    UpdateFog( _uniStormSystem.m_SunLight.color * dayFogTintColor);
                     break;
                 case UniStormSystem.CurrentTimeOfDayEnum.Night:
-                    UpdateFog(_uniStormSystem.m_MoonLight.color * nightFogTintColor, nightFogHDRIntensity);
+                case UniStormSystem.CurrentTimeOfDayEnum.Evening:
+                    UpdateFog(_uniStormSystem.m_MoonLight.color * nightFogTintColor);
                     break;
             }
         }
 
-        void UpdateFog(Color l, float intensity = 1.0f)
+        void UpdateFog(Color l)
         {
             fogColor = l;
-            _fogColorParam.value = fogColor * intensity;
+            _fogColorParam.value = fogColor * fogHDRIntensity;
             _fogVolume.directionalForward.value = _fogColorParam.value;
             _fogVolume.litColor.value = _fogColorParam.value;
         }
