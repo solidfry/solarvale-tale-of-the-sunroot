@@ -51,6 +51,7 @@ namespace AK
         static const AkUniqueID PLAY_MUSIC_GECKO = 1568956567U;
         static const AkUniqueID PLAY_MUSIC_GRANDMA = 196110170U;
         static const AkUniqueID PLAY_MUSIC_GRANDMA_2 = 1246736721U;
+        static const AkUniqueID PLAY_MUSIC_PICOLO = 1760624938U;
         static const AkUniqueID PLAY_OCEAN = 1724638476U;
         static const AkUniqueID PLAY_PIANOKEYS = 4116426549U;
         static const AkUniqueID PLAY_POLAROID_PHOTO_CLICK_PRINT = 1715369302U;
@@ -112,6 +113,7 @@ namespace AK
         static const AkUniqueID STOP_MUSIC_GECKO = 2954834333U;
         static const AkUniqueID STOP_MUSIC_GRANDMA = 365191676U;
         static const AkUniqueID STOP_MUSIC_GRANDMA_2 = 3879116483U;
+        static const AkUniqueID STOP_MUSIC_PICOLO = 95705376U;
         static const AkUniqueID STOP_OCEAN = 4196961906U;
         static const AkUniqueID STOP_RUBBISH = 1345196761U;
         static const AkUniqueID STOP_SFX = 287728669U;

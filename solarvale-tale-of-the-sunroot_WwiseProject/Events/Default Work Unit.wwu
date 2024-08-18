@@ -1580,6 +1580,28 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_music_picolo" ID="{D8968C22-CD12-4EAF-B9EC-C0D58D7003BF}">
+							<ChildrenList>
+								<Action Name="" ID="{85E2612C-3ED7-4DEA-9210-ED1F69C16D77}" ShortID="716186573">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="music_picolo" ID="{6684E666-5923-4064-8F5A-1783D29AB9C6}" WorkUnitID="{6AACD892-8249-4CA2-BBEB-F88052A754B1}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stop_music_picolo" ID="{C2007061-C62E-45CC-BAAB-8717010A5306}">
+							<ChildrenList>
+								<Action Name="" ID="{194392A9-9043-4059-BE93-BD47DC0277BE}" ShortID="135534480">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="3"/>
+										<Property Name="FadeOutCurve" Type="int16" Value="8"/>
+									</PropertyList>
+									<ReferenceList/>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="UI" ID="{8F46A6F1-7581-4E47-8EF5-B68BF1E8C23E}" ShortID="376011255">

@@ -1615,7 +1615,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="1551306167" Type="User" Language="SFX" Hash="{421D3AE8-3846-3E3E-09C7-045B816AF235}">
+		<SoundBank Id="1551306167" Type="User" Language="SFX" Hash="{A829E775-D779-D7D8-C5CC-B930FF909970}">
 			<ShortName>UI</ShortName>
 			<Path>UI.bnk</Path>
 			<Media>
@@ -1761,7 +1761,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3034623661" Type="User" Language="SFX" Hash="{AF4321FF-1851-BBE2-E50C-589D01B948DE}">
+		<SoundBank Id="3034623661" Type="User" Language="SFX" Hash="{2B5460C5-7373-964B-2E7D-FC91A874D435}">
 			<ShortName>Atmos</ShortName>
 			<Path>Atmos.bnk</Path>
 			<Media>
@@ -1883,7 +1883,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{CB3103D2-441A-0476-C856-0F1009CD2710}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{888DBE7D-EF99-B804-C581-E31C69460172}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -2575,6 +2575,10 @@
 					<ShortName>FTS_Water_03.wav</ShortName>
 					<CachePath>SFX/FTS_Water_03_9E12AB17.wem</CachePath>
 				</File>
+				<File Id="824266889" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>music_picolo.wav</ShortName>
+					<CachePath>SFX/music_picolo_0CC3FF09.wem</CachePath>
+				</File>
 				<File Id="826752868" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>ibis-walla_01-stereo.wav</ShortName>
 					<CachePath>SFX/ibis-walla_01-stereo_8709A909.wem</CachePath>
@@ -3062,6 +3066,11 @@
 						<MediaRef Id="811932731"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="1760624938" Name="Play_music_picolo" DurationType="OneShot" DurationMin="44.827766" DurationMax="44.827766">
+					<MediaRefs>
+						<MediaRef Id="824266889"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="1724638476" Name="Play_Ocean" MaxAttenuation="3000" DurationType="OneShot" DurationMin="385.95306" DurationMax="412.97614">
 					<MediaRefs>
 						<MediaRef Id="8120661"/>
@@ -3371,6 +3380,7 @@
 				<Event Id="2954834333" Name="Stop_music_gecko" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="365191676" Name="Stop_music_grandma" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="3879116483" Name="Stop_music_grandma_2" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="95705376" Name="Stop_music_picolo" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="4196961906" Name="Stop_Ocean" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="1345196761" Name="Stop_Rubbish" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="287728669" Name="Stop_SFX" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
@@ -3492,5 +3502,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{A3C72B9D-5A56-AA77-46FC-37E13A5C1FF9}</FileHash>
+	<FileHash>{4AA391DF-11E1-9E68-0810-9DE99AFA80CA}</FileHash>
 </SoundBanksInfo>
