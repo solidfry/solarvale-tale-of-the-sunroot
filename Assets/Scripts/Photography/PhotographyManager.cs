@@ -20,10 +20,10 @@ namespace Photography
         [SerializeField] private Canvas photoCanvas;
         [SerializeField] private Button keepButton;
         [SerializeField] private Button discardButton;
-        [Header("Development UI")]
-        [SerializeField] private CanvasGroup developmentCanvasGroup;
-        [SerializeField] float developmentCanvasFadeDuration = 1f;
-        [SerializeField] float developmentCanvasFadeDelay = 1f;
+        // [Header("Development UI")]
+        // [SerializeField] private CanvasGroup developmentCanvasGroup;
+        // [SerializeField] float developmentCanvasFadeDuration = 1f;
+        // [SerializeField] float developmentCanvasFadeDelay = 1f;
 
         [SerializeField] private InputActionReference takePhotoActionRef;
 
@@ -155,32 +155,32 @@ namespace Photography
 
             photographyHUDController.ToggleCanvas(false);
             
-            HandleDevelopAnimation();
+            // HandleDevelopAnimation();
 
             HandleOnShowPhotoGlobalEvents();
         }
 
-        private void HandleDevelopAnimation()
-        {
-            if (_developmentCanvasTween is not null)
-            {
-                _developmentCanvasTween.Rewind();
-                _developmentCanvasTween.Play();
-            }
-            if (_developmentCanvasTween is null)
-            {
-                _developmentCanvasTween = developmentCanvasGroup.DOFade(0, developmentCanvasFadeDuration);
-                _developmentCanvasTween.SetDelay(developmentCanvasFadeDelay).Delay();
-                _developmentCanvasTween.SetAutoKill(false);
-            }
-        }
+        // private void HandleDevelopAnimation()
+        // {
+        //     if (_developmentCanvasTween is not null)
+        //     {
+        //         _developmentCanvasTween.Rewind();
+        //         _developmentCanvasTween.Play();
+        //     }
+        //     if (_developmentCanvasTween is null)
+        //     {
+        //         _developmentCanvasTween = developmentCanvasGroup.DOFade(0, developmentCanvasFadeDuration);
+        //         _developmentCanvasTween.SetDelay(developmentCanvasFadeDelay).Delay();
+        //         _developmentCanvasTween.SetAutoKill(false);
+        //     }
+        // }
 
         private void RemovePhoto()
         {
             photoFrame.SetActive(false);
             photoCanvas.gameObject.SetActive(false);
             photoDisplayArea.sprite = null;
-            developmentCanvasGroup.alpha = 1;
+            // developmentCanvasGroup.alpha = 1;
             photographyHUDController.ToggleCanvas(true);
             photographyHUDController.SetHUDVisibility(true);
             HandleOnRemovePhotoGlobalEvents();
