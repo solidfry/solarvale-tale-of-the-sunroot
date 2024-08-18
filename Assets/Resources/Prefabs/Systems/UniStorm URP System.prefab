@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_LensFlareData: {fileID: 11400000, guid: 69ffd98bf7a2a4bf9a1217c6d30c381d, type: 2}
-  intensity: 1
+  intensity: 1.1
   maxAttenuationDistance: 100
   maxAttenuationScale: 100
   distanceAttenuationCurve:
@@ -234,7 +234,7 @@ MonoBehaviour:
   sampleCount: 32
   occlusionOffset: 0.05
   scale: 1
-  allowOffScreen: 1
+  allowOffScreen: 0
   volumetricCloudOcclusion: 0
   occlusionRemapCurve:
     <length>k__BackingField: 2
@@ -390,7 +390,7 @@ MonoBehaviour:
   UniStormMenuKey: 27
   UniStormCanvas: {fileID: 0}
   m_MenuToggle: 0
-  TabNumber: 3
+  TabNumber: 1
   TimeTabNumbers: 0
   WeatherTabNumbers: 1
   CelestialTabNumbers: 0
@@ -430,8 +430,8 @@ MonoBehaviour:
   Day: 25
   Month: 12
   Year: 2032
-  DayLength: 1
-  NightLength: 1
+  DayLength: 15
+  NightLength: 10
   TimeOfDayUpdateSeconds: 1
   UseTimeOfDayUpdateControl: 1
   m_TimeFloat: 0
@@ -2228,25 +2228,25 @@ MonoBehaviour:
     key0: {r: 0.17646985, g: 0.12102808, b: 0.07843174, a: 1}
     key1: {r: 0.17646985, g: 0.12102808, b: 0.07843174, a: 1}
     key2: {r: 0.7075472, g: 0.31497002, b: 0.11681202, a: 1}
-    key3: {r: 0.9529412, g: 0.8980392, b: 0.68235296, a: 1}
-    key4: {r: 0.9528302, g: 0.89799756, b: 0.6786668, a: 1}
+    key3: {r: 0.9056604, g: 0.8753231, b: 0.756141, a: 1}
+    key4: {r: 0.90588236, g: 0.8784314, b: 0.75686276, a: 1}
     key5: {r: 0.7075472, g: 0.31497002, b: 0.11681202, a: 1}
     key6: {r: 0.17646985, g: 0.12102808, b: 0.07843174, a: 0}
     key7: {r: 0.17646986, g: 0.12102808, b: 0.07843174, a: 0}
-    ctime0: 0
+    ctime0: 386
     ctime1: 15521
     ctime2: 18396
     ctime3: 22803
     ctime4: 45223
     ctime5: 49630
     ctime6: 52235
-    ctime7: 65535
-    atime0: 0
+    ctime7: 64571
+    atime0: 386
     atime1: 15806
     atime2: 18119
     atime3: 49537
     atime4: 52814
-    atime5: 65535
+    atime5: 64571
     atime6: 0
     atime7: 0
     m_Mode: 0
@@ -3270,7 +3270,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3748655633976961460}
-  m_LocalEulerAnglesHint: {x: -180, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -299.2, y: 0, z: 0}
 --- !u!108 &1322890600680016017
 Light:
   m_ObjectHideFlags: 0
@@ -3470,7 +3470,7 @@ MonoBehaviour:
   sampleCount: 32
   occlusionOffset: 0.05
   scale: 3
-  allowOffScreen: 1
+  allowOffScreen: 0
   volumetricCloudOcclusion: 0
   occlusionRemapCurve:
     <length>k__BackingField: 2
