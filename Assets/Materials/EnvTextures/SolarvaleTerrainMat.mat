@@ -14,7 +14,8 @@ Material:
   m_ValidKeywords:
   - DR_CEL_EXTRA_ON
   - _CELPRIMARYMODE_SINGLE
-  - _UNITYSHADOWMODE_COLOR
+  - _TERRAIN_INSTANCED_PERPIXEL_NORMAL
+  - _UNITYSHADOWMODE_MULTIPLY
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 1
@@ -137,7 +138,7 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _EnableHeightBlend: 0
-    - _EnableInstancedPerPixelNormal: 0
+    - _EnableInstancedPerPixelNormal: 1
     - _FlatRimEdgeSmoothness: 0.227
     - _FlatRimEnabled: 1
     - _FlatRimLightAlign: 0.129
@@ -146,7 +147,7 @@ Material:
     - _FlatSpecularEdgeSmoothness: 1
     - _FlatSpecularEnabled: 1
     - _FlatSpecularSize: 0
-    - _Flatness: 1
+    - _Flatness: 0.521
     - _FlatnessExtra: 0.663
     - _FlatnessSecondary: 1
     - _GlossMapScale: 1
@@ -160,8 +161,8 @@ Material:
     - _GradientSize: 59.6
     - _GradientStart: 1.17
     - _HeightTransition: 0.533
-    - _LightContribution: 1
-    - _LightFalloffSize: 0.49
+    - _LightContribution: 0.193
+    - _LightFalloffSize: 0.021
     - _LightmapDirectionPitch: 0
     - _LightmapDirectionYaw: 0
     - _Metallic: 0
@@ -180,11 +181,11 @@ Material:
     - _RimEnabled: 0
     - _SecondaryColor: 1
     - _SecondaryColorEnabled: 1
-    - _SelfShadingSize: 0.952
+    - _SelfShadingSize: 0.948
     - _SelfShadingSizeExtra: 0.596
     - _ShadowAmount: 0
-    - _ShadowEdgeSize: 0.09
-    - _ShadowEdgeSizeExtra: 0.049
+    - _ShadowEdgeSize: 0.301
+    - _ShadowEdgeSizeExtra: 0.419
     - _ShadowEdgeSmoothness: 0.5
     - _ShadowFalloff: 0.01
     - _Smoothness0: 0.5
@@ -196,16 +197,16 @@ Material:
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
-    - _UnityShadowMode: 2
+    - _UnityShadowMode: 1
     - _UnityShadowPower: 1
-    - _UnityShadowSharpness: 3.99
+    - _UnityShadowSharpness: 7.54
     - _ZWrite: 1
     m_Colors:
     - _BaseColor: {r: 0.17176926, g: 0.1743322, b: 0.18867919, a: 1}
     - _Color: {r: 0.17176929, g: 0.17433223, b: 0.18867922, a: 1}
     - _ColorDim: {r: 1, g: 1, b: 1, a: 1}
     - _ColorDimCurve: {r: 0.0244749, g: 0.0244749, b: 0.20754719, a: 1}
-    - _ColorDimExtra: {r: 0.59474015, g: 0.5971603, b: 0.764151, a: 1}
+    - _ColorDimExtra: {r: 0.010768958, g: 0.010768958, b: 0.20754719, a: 1}
     - _ColorDimSteps: {r: 1, g: 1, b: 1, a: 0.85}
     - _ColorGradient: {r: 1, g: 1, b: 1, a: 1}
     - _ColorSecondary: {r: 1, g: 0.55879205, b: 0, a: 1}
@@ -215,7 +216,7 @@ Material:
     - _FlatRimColor: {r: 0.93404925, g: 0.93404925, b: 0.93404925, a: 1}
     - _FlatSpecularColor: {r: 1, g: 1, b: 1, a: 1}
     - _LightmapDirection: {r: 0, g: 1, b: 0, a: 0}
-    - _UnityShadowColor: {r: 0, g: 0.0041833147, b: 0.2735849, a: 1}
+    - _UnityShadowColor: {r: 0.0041994685, g: 0, b: 0.2924528, a: 1}
   m_BuildTextureStacks: []
 --- !u!114 &1658206231470023897
 MonoBehaviour:
