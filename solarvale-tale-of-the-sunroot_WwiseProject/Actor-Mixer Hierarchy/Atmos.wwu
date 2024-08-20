@@ -715,22 +715,22 @@
 					<PropertyList>
 						<Property Name="3DSpatialization" Type="int16" Value="1"/>
 						<Property Name="GlobalOrPerObject" Type="int16" Value="0"/>
-						<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
 						<Property Name="MakeUpGain" Type="Real64">
 							<ValueList>
-								<Value>12</Value>
+								<Value>9</Value>
 							</ValueList>
 						</Property>
 						<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
 						<Property Name="OverrideGameAuxSends" Type="bool" Value="True"/>
 						<Property Name="OverrideOutput" Type="bool" Value="True"/>
 						<Property Name="OverridePositioning" Type="bool" Value="True"/>
+						<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
 						<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 						<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="50"/>
 						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>5</Value>
+								<Value>2</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
@@ -1066,6 +1066,9 @@
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
+					<PositioningInfo>
+						<Position Name="" ID="{46FCC3DC-9E94-4D29-9158-63D86D6ADA9F}"/>
+					</PositioningInfo>
 				</RandomSequenceContainer>
 				<RandomSequenceContainer Name="Cave" ID="{121E3A8D-E496-4B9F-B6EE-1103E2E0C744}" ShortID="767162390">
 					<PropertyList>

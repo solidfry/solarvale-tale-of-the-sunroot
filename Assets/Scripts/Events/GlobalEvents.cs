@@ -31,6 +31,7 @@ namespace Events
         public static Action<bool> OnActivateHUDVisibilityEvent;
         public static Action<bool> OnSetHUDVisibilityEvent;
         public static Action<bool> OnSetCameraHUDVisibilityEvent;
+        public static Action<bool> OnToggleUICameraEvent;
         #endregion
         
         #region Player Management

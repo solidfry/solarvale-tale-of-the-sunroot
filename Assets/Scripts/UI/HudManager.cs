@@ -4,7 +4,6 @@ using DG.Tweening;
 using Events;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.Serialization;
 
 namespace UI
 {
@@ -44,16 +43,16 @@ namespace UI
             SetHUDVisibility(false);
         }
 
-        private void OnCameraModeChanged(CameraMode mode)
+        private void OnCameraModeChanged(GameState mode)
         {
-            var check = mode == CameraMode.Exploration;
+            var check = mode == GameState.Exploration || mode == GameState.Menu;
             canShowMenu = check;
             SetHUDVisibility(check);
         }
 
         private void OnEnable()
         {
-            GlobalEvents.OnChangeCameraModeEvent += OnCameraModeChanged;
+            GlobalEvents.OnGameStateChangeEvent += OnCameraModeChanged;
             GlobalEvents.OnActivateHUDVisibilityEvent += SetHUDVisibility;
             menuOpenAction.action.performed += _ => ToggleMenu();
             menuCloseAction.action.performed += _ => ToggleMenu();
@@ -61,7 +60,7 @@ namespace UI
 
         private void OnDisable()
         {
-            GlobalEvents.OnChangeCameraModeEvent -= OnCameraModeChanged;
+            GlobalEvents.OnGameStateChangeEvent -= OnCameraModeChanged;
             GlobalEvents.OnActivateHUDVisibilityEvent -= SetHUDVisibility;
         }
         

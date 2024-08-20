@@ -1,3 +1,4 @@
+using Core;
 using DG.Tweening;
 using Events;
 using Interaction;
@@ -32,14 +33,23 @@ namespace UI
         {
             GlobalEvents.OnInteractableFound += SetInteractable;
             GlobalEvents.OnPlayerChangeActionMapEvent += OnPlayerControlsLocked;
+            GlobalEvents.OnGameStateChangeEvent += OnGameStateChange;
         }
 
-   
+        private void OnGameStateChange(GameState obj)
+        {
+            _canInteract = obj == GameState.Exploration;
+            if (!_canInteract)
+            {
+                FadeOut();
+            }
+        }
 
         private void OnDisable()
         {
             GlobalEvents.OnInteractableFound -= SetInteractable;
             GlobalEvents.OnPlayerChangeActionMapEvent -= OnPlayerControlsLocked;
+            GlobalEvents.OnGameStateChangeEvent -= OnGameStateChange;
         }
 
         void SetInteractable(IInteractable interactable)

@@ -117,6 +117,7 @@ namespace Photography
         private IEnumerator CapturePhoto()
         {
             onBeforePhotoTaken?.Invoke();
+            GlobalEvents.OnToggleUICameraEvent?.Invoke(false);
             yield return new WaitForEndOfFrame();
 
             int screenMinDimensions = Mathf.Min(Screen.width, Screen.height);
@@ -145,6 +146,8 @@ namespace Photography
 
         private void ShowPhoto()
         {
+            GlobalEvents.OnToggleUICameraEvent?.Invoke(true);
+
             if (_screenCapture == null) return;
 
             var photoSprite = Sprite.Create(_screenCapture, new Rect(0.0f, 0.0f, _screenCapture.width, _screenCapture.height), new Vector2(0.5f, 0.5f), 100.0f);

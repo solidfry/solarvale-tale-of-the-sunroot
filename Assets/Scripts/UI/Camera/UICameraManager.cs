@@ -16,12 +16,25 @@ namespace UI.Camera
             uiCamera = GetComponent<UnityEngine.Camera>();
             GlobalEvents.OnRegisterUIWithCameraEvent += RegisterUI;
         }
-    
+        
+        void ToggleUICamera(bool value) => uiCamera.enabled = value;
+        
+        private void OnEnable()
+        {
+            GlobalEvents.OnToggleUICameraEvent += ToggleUICamera;
+        }
+
         private void OnDisable()
         {
-            GlobalEvents.OnRegisterUIWithCameraEvent -= RegisterUI;
-            uiCanvases.Clear();
+            GlobalEvents.OnToggleUICameraEvent -= ToggleUICamera;
         }
+
+        private void OnDestroy()
+        {
+            GlobalEvents.OnRegisterUIWithCameraEvent -= RegisterUI;
+        }
+
+
 
         private void RegisterUI(Canvas canvas)
         {
