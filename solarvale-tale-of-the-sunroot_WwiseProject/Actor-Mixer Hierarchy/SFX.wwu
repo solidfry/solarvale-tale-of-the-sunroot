@@ -116,6 +116,16 @@
 				</Sound>
 				<Sound Name="SFX_Crickets" ID="{ECE39EA0-FCD3-4F28-91A3-D9EB2C82AE90}" ShortID="771878704">
 					<PropertyList>
+						<Property Name="Highpass" Type="int16">
+							<ValueList>
+								<Value>34</Value>
+							</ValueList>
+						</Property>
+						<Property Name="MakeUpGain" Type="Real64">
+							<ValueList>
+								<Value>15</Value>
+							</ValueList>
+						</Property>
 						<Property Name="OverrideGameAuxSends" Type="bool" Value="True"/>
 						<Property Name="OverrideOutput" Type="bool" Value="True"/>
 						<Property Name="OverridePositioning" Type="bool" Value="True"/>
@@ -325,6 +335,11 @@
 				<Sound Name="SFX_Wings_flap" ID="{8041C211-6019-4708-AE82-DCB590860103}" ShortID="209684317">
 					<PropertyList>
 						<Property Name="3DSpatialization" Type="int16" Value="2"/>
+						<Property Name="Highpass" Type="int16">
+							<ValueList>
+								<Value>24</Value>
+							</ValueList>
+						</Property>
 						<Property Name="MakeUpGain" Type="Real64">
 							<ValueList>
 								<Value>15</Value>
@@ -453,7 +468,7 @@
 						<Property Name="3DSpatialization" Type="int16" Value="1"/>
 						<Property Name="Highpass" Type="int16">
 							<ValueList>
-								<Value>38</Value>
+								<Value>40</Value>
 							</ValueList>
 						</Property>
 						<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
@@ -666,6 +681,11 @@
 					<ChildrenList>
 						<Sound Name="SFX_Forest_Rustling_Long" ID="{5F42308E-EDB7-480B-8A41-578056A2D352}" ShortID="905302628">
 							<PropertyList>
+								<Property Name="Highpass" Type="int16">
+									<ValueList>
+										<Value>40</Value>
+									</ValueList>
+								</Property>
 								<Property Name="MakeUpGain" Type="Real64">
 									<ValueList>
 										<Value>5</Value>
@@ -759,6 +779,11 @@
 						</Sound>
 						<Sound Name="SFX_Forest_Rustling" ID="{DC0562C1-A98C-4865-A196-02A78D6E01CF}" ShortID="948237668">
 							<PropertyList>
+								<Property Name="Highpass" Type="int16">
+									<ValueList>
+										<Value>41</Value>
+									</ValueList>
+								</Property>
 								<Property Name="MakeUpGain" Type="Real64">
 									<ValueList>
 										<Value>17</Value>
@@ -852,9 +877,14 @@
 						</Sound>
 						<Sound Name="SFX_Forest_Creaking" ID="{FAB5708A-E58F-4B0A-8088-419430979E3D}" ShortID="985779400">
 							<PropertyList>
+								<Property Name="Highpass" Type="int16">
+									<ValueList>
+										<Value>40</Value>
+									</ValueList>
+								</Property>
 								<Property Name="MakeUpGain" Type="Real64">
 									<ValueList>
-										<Value>16</Value>
+										<Value>15</Value>
 									</ValueList>
 								</Property>
 								<Property Name="OverridePositioning" Type="bool" Value="True"/>
