@@ -16,7 +16,7 @@ namespace UI.Onboarding
             if (onboardingRequestSent) return;
             SendOnboardingInterrupt();
             GlobalEvents.OnOnboardingRequestEvent?.Invoke(onboardingNotificationRequest);
-            Debug.Log("Onboarding request sent");
+            // Debug.Log("Onboarding request sent");
             
             onboardingRequestSent = true;
         }
@@ -28,7 +28,7 @@ namespace UI.Onboarding
             var req = OnboardingNotificationRequest.Create(position, width, height, sizeOffset, pulseColor, duration);
             
             GlobalEvents.OnOnboardingRequestEvent?.Invoke(req);
-            Debug.Log($"Onboarding request sent with params: {position}, {width}, {height} and {sizeOffset}");
+            // Debug.Log($"Onboarding request sent with params: {position}, {width}, {height} and {sizeOffset}");
             
             onboardingRequestSent = true;
         }

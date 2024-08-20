@@ -1,5 +1,3 @@
-using System;
-using Events;
 using UnityEngine;
 
 namespace UI.Minimap

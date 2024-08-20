@@ -62,7 +62,7 @@ namespace Photography
             string jsonPath = Path.Combine(saveDirectory, fileName + ".json");
             File.WriteAllText(jsonPath, photo.ToJson());
 
-            Debug.Log(this + " Saved photo to " + jsonPath);
+            // Debug.Log(this + " Saved photo to " + jsonPath);
         
         }
     

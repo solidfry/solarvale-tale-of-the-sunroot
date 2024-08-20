@@ -80,10 +80,8 @@ namespace QuestSystem.UI
                 AddQuestNodeElement(quest);
             }
         }
-        
-        
-        
-        public void UpdateQuestLog(QuestData questData)
+
+        void UpdateQuestLog(QuestData questData)
         {
             if (questData is null) return;
             if (questNodes.Find(questNode => questNode.QuestData == questData))
@@ -99,7 +97,7 @@ namespace QuestSystem.UI
             AddQuestNodeElement(questData);
             ShowQuestNotification(questData);
         }
-        
+
         private void InitialiseQuestNotificationModal()
         {
             if (questModal is null) return;
@@ -122,7 +120,7 @@ namespace QuestSystem.UI
             yield return new WaitForSeconds(notificationDuration);
             _questInstance.CanvasGroup.DOFade(0, notificationFadeDuration).OnComplete(() => _questInstance.gameObject.SetActive(false));
         }
-
+        
         public void AddQuestNodeElement(QuestData questData)
         {
             QuestNode questNode = Instantiate(prefab, questLogParent);

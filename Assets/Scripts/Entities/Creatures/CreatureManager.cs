@@ -104,13 +104,15 @@ namespace Entities.Creatures
             {
                 if (creatureStates[i])
                 {
-                    creatures[i].gameObject.SetActive(true);
+                    creatures[i].GetModel().SetActive(true);
                     if (creatures[i].GetBehaviourTree.IsBehavioursPaused) continue;
                     creatures[i].GetBehaviourTree?.Run();
                 }
                 else
                 {
-                    creatures[i].gameObject.SetActive(false);
+                    creatures[i].GetModel().SetActive(false);
+                    if (creatures[i].GetBehaviourTree.IsBehavioursPaused) continue;
+                    creatures[i].GetBehaviourTree?.Run();
                 }
             }
         }

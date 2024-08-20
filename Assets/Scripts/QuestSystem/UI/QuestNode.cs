@@ -125,9 +125,10 @@ namespace QuestSystem.UI
                     .OnComplete(
                         () =>
                         {
-                            canvasGroup.DOFade(0, fadeDuration)
-                                .SetDelay(delayBeforeFade);
-                        
+                            // canvasGroup.DOFade(0, fadeDuration)
+                            //     .SetDelay(delayBeforeFade)
+                            //     .SetAutoKill(true).Delay();
+                            //
                             layoutElement.DOPreferredSize( new Vector2( layoutElement.preferredWidth, 0 ), heightAnimationTime )
                                 .SetDelay(delayBeforeFade)
                                 .OnComplete(() =>
@@ -135,7 +136,7 @@ namespace QuestSystem.UI
                                     isSafeToDestroy.Value = true;
                                     gameObject.SetActive(false);
                                 })
-                                .SetAutoKill(true);
+                                .SetAutoKill(true).Delay();
                         });
             }
         }
@@ -161,9 +162,9 @@ namespace QuestSystem.UI
     
         public void ToggleActive() => gameObject.SetActive(!gameObject.activeSelf);
 
-        private void OnDestroy()
-        {
-            DOTween.KillAll();
-        }
+        // private void OnDestroy()
+        // {
+        //     DOTween.KillAll();
+        // }
     }
 }

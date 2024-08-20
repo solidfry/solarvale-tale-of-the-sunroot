@@ -15,6 +15,8 @@ namespace UI
     
         [Header("Animation Settings")]
         [SerializeField] float fadeDuration = 0.5f;
+        
+        [SerializeField] string currentInteractableName;
     
         bool _isAnimating;
         bool _canInteract = true;
@@ -36,14 +38,23 @@ namespace UI
             GlobalEvents.OnGameStateChangeEvent += OnGameStateChange;
         }
 
-        private void OnGameStateChange(GameState obj)
+        private void OnGameStateChange(GameState state)
         {
-            _canInteract = obj == GameState.Exploration;
-            if (!_canInteract)
+            _canInteract = state == GameState.Exploration;
+            // Debug.Log("Can interact: " + _canInteract);
+            if (state != GameState.Exploration)
             {
-                FadeOut();
+               canvasGroup.alpha = 0;
             }
         }
+
+        // private void Update()
+        // {
+        //     if (_currentInteractable == null) 
+        //         currentInteractableName = "Null";
+        //     else
+        //         currentInteractableName = _currentInteractable?.Name;
+        // }
 
         private void OnDisable()
         {
@@ -59,6 +70,7 @@ namespace UI
             {
                 FadeOut();
                 _currentInteractable = null;
+                ConfigureInteractableUI();
                 return;
             }
             _currentInteractable = interactable;
@@ -85,7 +97,7 @@ namespace UI
 
         void ConfigureInteractableUI()
         {
-            keyPromptUI.SetText(_currentInteractable.InteractMessage);
+            keyPromptUI.SetText(_currentInteractable?.InteractMessage);
         }
     
         private void OnPlayerControlsLocked(bool value)
