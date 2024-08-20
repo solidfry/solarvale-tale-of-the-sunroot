@@ -21,10 +21,15 @@
 						<Bus Name="Animals" ID="{7F338F3F-8132-4E7B-9A3A-B8C748CF0DDE}">
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+								<Property Name="BusVolume" Type="Real64">
+									<ValueList>
+										<Value>-2</Value>
+									</ValueList>
+								</Property>
 								<Property Name="Color" Type="int16" Value="26"/>
 								<Property Name="Highpass" Type="int16">
 									<ValueList>
-										<Value>10</Value>
+										<Value>20</Value>
 									</ValueList>
 								</Property>
 								<Property Name="ListenerRelativeRouting" Type="bool" Value="True"/>
@@ -130,6 +135,11 @@
 						</Bus>
 						<Bus Name="Atmos" ID="{E51D6CB8-01C8-48A1-8608-AE500145E9A8}">
 							<PropertyList>
+								<Property Name="BusVolume" Type="Real64">
+									<ValueList>
+										<Value>-2</Value>
+									</ValueList>
+								</Property>
 								<Property Name="Color" Type="int16" Value="18"/>
 								<Property Name="Highpass" Type="int16">
 									<ValueList>
