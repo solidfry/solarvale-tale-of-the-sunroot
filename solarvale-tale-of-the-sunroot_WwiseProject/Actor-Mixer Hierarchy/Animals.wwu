@@ -857,6 +857,11 @@
 								</Sound>
 								<Sound Name="cockatoo-walla_loop_01-stereo" ID="{73AAA0AA-B06C-40CF-B036-30C3B749857E}" ShortID="102462219">
 									<PropertyList>
+										<Property Name="Highpass" Type="int16">
+											<ValueList>
+												<Value>37</Value>
+											</ValueList>
+										</Property>
 										<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
 										<Property Name="OverrideConversion" Type="bool" Value="True"/>
 										<Property Name="OverrideGameAuxSends" Type="bool" Value="True"/>
@@ -965,6 +970,11 @@
 								</Sound>
 								<Sound Name="cockatoo-walla_loop_02-stereo" ID="{EA01AEB9-0EA1-429D-84EC-B45496ECB47C}" ShortID="683888337">
 									<PropertyList>
+										<Property Name="Highpass" Type="int16">
+											<ValueList>
+												<Value>27</Value>
+											</ValueList>
+										</Property>
 										<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
 										<Property Name="OverrideConversion" Type="bool" Value="True"/>
 										<Property Name="OverrideGameAuxSends" Type="bool" Value="True"/>
@@ -4517,7 +4527,17 @@
 							<ChildrenList>
 								<Sound Name="kookaburra-laugh_walla_06-stereo" ID="{F5DEB61F-CE41-46C4-8EE9-ECED24A577F3}" ShortID="934799223">
 									<PropertyList>
+										<Property Name="Highpass" Type="int16">
+											<ValueList>
+												<Value>41</Value>
+											</ValueList>
+										</Property>
 										<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
+										<Property Name="Lowpass" Type="int16">
+											<ValueList>
+												<Value>33</Value>
+											</ValueList>
+										</Property>
 										<Property Name="MakeUpGain" Type="Real64">
 											<ValueList>
 												<Value>17</Value>
@@ -4609,10 +4629,20 @@
 								</Sound>
 								<Sound Name="kookaburra-laugh_walla_07-stereo" ID="{4F8D6645-AEE7-4341-B906-C847EB2F8AD0}" ShortID="91084342">
 									<PropertyList>
+										<Property Name="Highpass" Type="int16">
+											<ValueList>
+												<Value>42</Value>
+											</ValueList>
+										</Property>
 										<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
+										<Property Name="Lowpass" Type="int16">
+											<ValueList>
+												<Value>20</Value>
+											</ValueList>
+										</Property>
 										<Property Name="MakeUpGain" Type="Real64">
 											<ValueList>
-												<Value>21</Value>
+												<Value>20</Value>
 											</ValueList>
 										</Property>
 										<Property Name="OverrideGameAuxSends" Type="bool" Value="True"/>
@@ -4722,6 +4752,11 @@
 								</Sound>
 								<Sound Name="kookaburra-laugh_walla_08-stereo" ID="{EE95BDB5-FAC6-4F0C-9FA0-37A0F23F5999}" ShortID="4931581">
 									<PropertyList>
+										<Property Name="Highpass" Type="int16">
+											<ValueList>
+												<Value>26</Value>
+											</ValueList>
+										</Property>
 										<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
 										<Property Name="MakeUpGain" Type="Real64">
 											<ValueList>
@@ -4835,6 +4870,11 @@
 								</Sound>
 								<Sound Name="kookaburra-laugh_walla_01-stereo" ID="{B1E4BF10-9D14-453B-B0BD-5347399B4BB9}" ShortID="487433943">
 									<PropertyList>
+										<Property Name="Highpass" Type="int16">
+											<ValueList>
+												<Value>32</Value>
+											</ValueList>
+										</Property>
 										<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
 										<Property Name="MakeUpGain" Type="Real64">
 											<ValueList>
@@ -4943,10 +4983,20 @@
 								</Sound>
 								<Sound Name="kookaburra-laugh_walla_02-stereo" ID="{07C35E7E-7F9A-4712-AAD6-9ED1C9BC8D60}" ShortID="392142172">
 									<PropertyList>
+										<Property Name="Highpass" Type="int16">
+											<ValueList>
+												<Value>41</Value>
+											</ValueList>
+										</Property>
 										<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
+										<Property Name="Lowpass" Type="int16">
+											<ValueList>
+												<Value>31</Value>
+											</ValueList>
+										</Property>
 										<Property Name="MakeUpGain" Type="Real64">
 											<ValueList>
-												<Value>20</Value>
+												<Value>18</Value>
 											</ValueList>
 										</Property>
 										<Property Name="OverrideGameAuxSends" Type="bool" Value="True"/>
@@ -4984,7 +5034,7 @@
 									<ChildrenList>
 										<AudioFileSource Name="kookaburra-laugh_walla_02-stereo" ID="{18290A23-84D9-4A88-8D86-C1A3902421DC}">
 											<PropertyList>
-												<Property Name="FadeInDuration" Type="Real64" Value="0.150125362318841"/>
+												<Property Name="FadeInDuration" Type="Real64" Value="2.5649811382409"/>
 												<Property Name="FadeOutDuration" Type="Real64" Value="0.262719384057972"/>
 												<Property Name="OverrideConversion" Type="bool" Value="True"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
@@ -5056,6 +5106,11 @@
 								</Sound>
 								<Sound Name="kookaburra-laugh_walla_03-stereo" ID="{A0801CC7-0EE2-4A5E-95F0-66414AC4CD9D}" ShortID="510430984">
 									<PropertyList>
+										<Property Name="Highpass" Type="int16">
+											<ValueList>
+												<Value>37</Value>
+											</ValueList>
+										</Property>
 										<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
 										<Property Name="MakeUpGain" Type="Real64">
 											<ValueList>
@@ -5169,6 +5224,11 @@
 								</Sound>
 								<Sound Name="kookaburra-laugh_walla_04-stereo" ID="{9A62DC68-7ADE-4843-A020-40094322E342}" ShortID="915273210">
 									<PropertyList>
+										<Property Name="Highpass" Type="int16">
+											<ValueList>
+												<Value>39</Value>
+											</ValueList>
+										</Property>
 										<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
 										<Property Name="MakeUpGain" Type="Real64">
 											<ValueList>
@@ -5279,6 +5339,11 @@
 								</Sound>
 								<Sound Name="kookaburra-laugh_walla_05-stereo" ID="{B9A5C542-8A59-4E12-A505-4E838850DFE9}" ShortID="551689557">
 									<PropertyList>
+										<Property Name="Highpass" Type="int16">
+											<ValueList>
+												<Value>20</Value>
+											</ValueList>
+										</Property>
 										<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
 										<Property Name="OverrideGameAuxSends" Type="bool" Value="True"/>
 										<Property Name="OverrideOutput" Type="bool" Value="True"/>
@@ -5386,6 +5451,11 @@
 								</Sound>
 								<Sound Name="kookaburra-laugh_walla_10-stereo" ID="{F7684488-A574-4BE2-A20C-49A75DFB44AE}" ShortID="28270599">
 									<PropertyList>
+										<Property Name="Highpass" Type="int16">
+											<ValueList>
+												<Value>41</Value>
+											</ValueList>
+										</Property>
 										<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
 										<Property Name="MakeUpGain" Type="Real64">
 											<ValueList>
@@ -5482,6 +5552,11 @@
 								</Sound>
 								<Sound Name="kookaburra-chuckle_walla_01-stereo" ID="{9B8FADDF-2559-47A1-B637-39378F7CE484}" ShortID="852262313">
 									<PropertyList>
+										<Property Name="Highpass" Type="int16">
+											<ValueList>
+												<Value>24</Value>
+											</ValueList>
+										</Property>
 										<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
 										<Property Name="MakeUpGain" Type="Real64">
 											<ValueList>
@@ -5603,7 +5678,17 @@
 								</Sound>
 								<Sound Name="kookaburra-laugh_walla_09-stereo" ID="{B927B9CB-2848-4E34-B8FF-AF55D0699B5C}" ShortID="595571961">
 									<PropertyList>
+										<Property Name="Highpass" Type="int16">
+											<ValueList>
+												<Value>21</Value>
+											</ValueList>
+										</Property>
 										<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
+										<Property Name="Lowpass" Type="int16">
+											<ValueList>
+												<Value>8</Value>
+											</ValueList>
+										</Property>
 										<Property Name="MakeUpGain" Type="Real64">
 											<ValueList>
 												<Value>8</Value>
@@ -6692,10 +6777,20 @@
 							<ChildrenList>
 								<Sound Name="magpie-walla_01-stereo" ID="{6EC9C9B5-8868-4D19-8AE7-66960243663E}" ShortID="722850326">
 									<PropertyList>
+										<Property Name="Highpass" Type="int16">
+											<ValueList>
+												<Value>42</Value>
+											</ValueList>
+										</Property>
 										<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
+										<Property Name="Lowpass" Type="int16">
+											<ValueList>
+												<Value>12</Value>
+											</ValueList>
+										</Property>
 										<Property Name="MakeUpGain" Type="Real64">
 											<ValueList>
-												<Value>9</Value>
+												<Value>4</Value>
 											</ValueList>
 										</Property>
 										<Property Name="OverrideGameAuxSends" Type="bool" Value="True"/>
@@ -6920,6 +7015,11 @@
 								</Sound>
 								<Sound Name="magpie-raven_walla_01-stereo" ID="{8E2F99EB-184A-49B5-B97C-3F6A28830B28}" ShortID="81787968">
 									<PropertyList>
+										<Property Name="Highpass" Type="int16">
+											<ValueList>
+												<Value>42</Value>
+											</ValueList>
+										</Property>
 										<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
 										<Property Name="MakeUpGain" Type="Real64">
 											<ValueList>
@@ -11760,6 +11860,11 @@
 							<ChildrenList>
 								<Sound Name="lorikeet-walla_-01-stereo" ID="{57A160DE-A5DC-4A08-A5C1-F508B51C7614}" ShortID="31762747">
 									<PropertyList>
+										<Property Name="Highpass" Type="int16">
+											<ValueList>
+												<Value>31</Value>
+											</ValueList>
+										</Property>
 										<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
 										<Property Name="MakeUpGain" Type="Real64">
 											<ValueList>
@@ -11993,9 +12098,14 @@
 						</Sound>
 						<Sound Name="wombat-walla_01-stereo" ID="{EEBAEF55-322E-49F3-B21F-8014343FF9BB}" ShortID="1063011755">
 							<PropertyList>
+								<Property Name="Highpass" Type="int16">
+									<ValueList>
+										<Value>38</Value>
+									</ValueList>
+								</Property>
 								<Property Name="MakeUpGain" Type="Real64">
 									<ValueList>
-										<Value>8</Value>
+										<Value>14</Value>
 									</ValueList>
 								</Property>
 								<Property Name="OverrideGameAuxSends" Type="bool" Value="True"/>
@@ -13861,6 +13971,16 @@
 					<ChildrenList>
 						<Sound Name="ibis-walla_01-stereo" ID="{B520D99D-A6E9-4734-93B4-185E40B3E453}" ShortID="976036348">
 							<PropertyList>
+								<Property Name="Highpass" Type="int16">
+									<ValueList>
+										<Value>42</Value>
+									</ValueList>
+								</Property>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>14</Value>
+									</ValueList>
+								</Property>
 								<Property Name="OverrideGameAuxSends" Type="bool" Value="True"/>
 								<Property Name="OverrideOutput" Type="bool" Value="True"/>
 								<Property Name="OverridePositioning" Type="bool" Value="True"/>
@@ -13880,7 +14000,11 @@
 							<ChildrenList>
 								<AudioFileSource Name="ibis-walla_01-stereo" ID="{8D6B8B07-7FEE-4D5B-9B82-319CFE63484B}">
 									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="6.3589509394572"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="12.8294624217119"/>
+										<Property Name="FadeOutShape" Type="int16" Value="2"/>
 										<Property Name="OverrideConversion" Type="bool" Value="True"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
 										<Property Name="VolumeOffset" Type="Real64">
 											<ValueList>
 												<Value>12.9</Value>
