@@ -748,20 +748,21 @@
 										<Value>25</Value>
 									</ValueList>
 								</Property>
+								<Property Name="OverrideOutput" Type="bool" Value="True"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D3DFA3F4-31E3-490A-B588-BCC554A5A37C}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
+									<ObjectRef Name="Music" ID="{651529B0-D00A-407F-9314-E0A35BA653FF}" WorkUnitID="{2B92202B-F0DE-413C-8CEB-65E6B9AE535B}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="music_finalcutscene" ID="{984B0CCA-A090-4801-BF00-1560B3966E97}">
 									<PropertyList>
 										<Property Name="FadeInDuration" Type="Real64" Value="0.0288528444099527"/>
-										<Property Name="FadeOutDuration" Type="Real64" Value="0.0105688724507047"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0245673064040943"/>
 										<Property Name="FadeOutShape" Type="int16" Value="9"/>
 										<Property Name="OverrideConversion" Type="bool" Value="True"/>
 										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
