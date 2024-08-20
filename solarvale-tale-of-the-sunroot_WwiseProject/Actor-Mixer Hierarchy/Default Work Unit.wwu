@@ -742,6 +742,13 @@
 						</Sound>
 						<Sound Name="music_finalcutscene" ID="{3CBDB0C1-6DC4-4AF9-95A2-47A7B8CF2BF8}" ShortID="816126513">
 							<PropertyList>
+								<Property Name="InitialDelay" Type="Real64">
+									<ValueList>
+										<Value>20</Value>
+									</ValueList>
+								</Property>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="IsLoopingInfinite" Type="bool" Value="False"/>
 								<Property Name="MakeUpGain" Type="Real64">
 									<ValueList>
 										<Value>10</Value>
@@ -760,10 +767,11 @@
 								<AudioFileSource Name="music_finalcutscene" ID="{984B0CCA-A090-4801-BF00-1560B3966E97}">
 									<PropertyList>
 										<Property Name="FadeInDuration" Type="Real64" Value="0.043951233625269"/>
-										<Property Name="FadeOutDuration" Type="Real64" Value="5.04175365344467"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="4.03340292275573"/>
+										<Property Name="FadeOutShape" Type="int16" Value="9"/>
 										<Property Name="OverrideConversion" Type="bool" Value="True"/>
 										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-										<Property Name="TrimEnd" Type="Real64" Value="60.5010438413361"/>
+										<Property Name="TrimEnd" Type="Real64" Value="56.3235908141962"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
