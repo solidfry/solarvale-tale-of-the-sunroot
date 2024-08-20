@@ -10,6 +10,11 @@
 				<Sound Name="SFX_Cricket" ID="{5BA01659-6736-4AC9-80F5-557DC39769DB}" ShortID="622342344">
 					<PropertyList>
 						<Property Name="3DSpatialization" Type="int16" Value="2"/>
+						<Property Name="Highpass" Type="int16">
+							<ValueList>
+								<Value>22</Value>
+							</ValueList>
+						</Property>
 						<Property Name="OverrideGameAuxSends" Type="bool" Value="True"/>
 						<Property Name="OverrideOutput" Type="bool" Value="True"/>
 						<Property Name="OverridePositioning" Type="bool" Value="True"/>
@@ -629,9 +634,14 @@
 				</Sound>
 				<RandomSequenceContainer Name="Forest" ID="{45829E48-39DD-45CF-9A53-8D6C0696C901}" ShortID="655024495">
 					<PropertyList>
+						<Property Name="Highpass" Type="int16">
+							<ValueList>
+								<Value>7</Value>
+							</ValueList>
+						</Property>
 						<Property Name="MakeUpGain" Type="Real64">
 							<ValueList>
-								<Value>29</Value>
+								<Value>15</Value>
 							</ValueList>
 							<ModifierList>
 								<ModifierInfo>
@@ -978,6 +988,11 @@
 				</RandomSequenceContainer>
 				<RandomSequenceContainer Name="Rubbish" ID="{8FCB4D8C-3178-48E5-9FC8-E2756629AD46}" ShortID="100751659">
 					<PropertyList>
+						<Property Name="Highpass" Type="int16">
+							<ValueList>
+								<Value>15</Value>
+							</ValueList>
+						</Property>
 						<Property Name="MakeUpGain" Type="Real64">
 							<ValueList>
 								<Value>7</Value>
@@ -1287,6 +1302,11 @@
 				</RandomSequenceContainer>
 				<RandomSequenceContainer Name="Gecko" ID="{F6C9B350-4D6C-441C-8F67-4A3B3E8DE815}" ShortID="998650338">
 					<PropertyList>
+						<Property Name="Highpass" Type="int16">
+							<ValueList>
+								<Value>18</Value>
+							</ValueList>
+						</Property>
 						<Property Name="MakeUpGain" Type="Real64">
 							<ValueList>
 								<Value>17</Value>

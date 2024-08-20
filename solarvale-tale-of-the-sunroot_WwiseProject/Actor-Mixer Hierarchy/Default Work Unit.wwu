@@ -438,6 +438,11 @@
 										<Value>25</Value>
 									</ValueList>
 								</Property>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>5</Value>
+									</ValueList>
+								</Property>
 								<Property Name="OverrideOutput" Type="bool" Value="True"/>
 								<Property Name="PlayMechanismInfiniteOrNumberOfLoops" Type="int16" Value="0"/>
 								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
@@ -1002,8 +1007,8 @@
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
-													<Custom CreatedFrom="{6D51666E-9C7A-40E4-831D-C445512EBABD}">
-														<Conversion Name="ADPCM Auto Detect High (Custom)" ID="{0F206B36-19EC-4F96-8640-67F752D0BCBB}">
+													<Custom CreatedFrom="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}">
+														<Conversion Name="Vorbis Quality High (Custom)" ID="{7EEE5E2B-BB36-4BCA-ABE7-812BBA0A4B9C}">
 															<PropertyList>
 																<Property Name="Channels" Type="int32">
 																	<ValueList>
@@ -1036,7 +1041,6 @@
 																</Property>
 																<Property Name="SampleRate" Type="int32">
 																	<ValueList>
-																		<Value>3</Value>
 																		<Value Platform="Windows">0</Value>
 																		<Value Platform="Mac">0</Value>
 																	</ValueList>
@@ -1044,10 +1048,18 @@
 															</PropertyList>
 															<ConversionPluginInfoList>
 																<ConversionPluginInfo Platform="Windows">
-																	<ConversionPlugin Name="" ID="{062D4F02-D773-49DF-9912-BEA6992A6843}" PluginName="ADPCM" CompanyID="0" PluginID="2"/>
+																	<ConversionPlugin Name="" ID="{DAC15EA8-036B-4277-8505-1D11CE2EE4D8}" PluginName="Vorbis" CompanyID="0" PluginID="4">
+																		<PropertyList>
+																			<Property Name="QualityFactor" Type="Real32" Value="10"/>
+																		</PropertyList>
+																	</ConversionPlugin>
 																</ConversionPluginInfo>
 																<ConversionPluginInfo Platform="Mac">
-																	<ConversionPlugin Name="" ID="{45FF64A0-D7FA-4138-B2F3-E75C6400ADF5}" PluginName="ADPCM" CompanyID="0" PluginID="2"/>
+																	<ConversionPlugin Name="" ID="{F3CF2509-5670-43C9-9C7C-62F18C17A0BC}" PluginName="Vorbis" CompanyID="0" PluginID="4">
+																		<PropertyList>
+																			<Property Name="QualityFactor" Type="Real32" Value="10"/>
+																		</PropertyList>
+																	</ConversionPlugin>
 																</ConversionPluginInfo>
 															</ConversionPluginInfoList>
 														</Conversion>
@@ -1107,8 +1119,8 @@
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
-													<Custom CreatedFrom="{6D51666E-9C7A-40E4-831D-C445512EBABD}">
-														<Conversion Name="ADPCM Auto Detect High (Custom)" ID="{7D2F19A7-DD98-485F-BEFD-877F3AA97E11}">
+													<Custom CreatedFrom="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}">
+														<Conversion Name="Vorbis Quality High (Custom)" ID="{500C45B6-764D-4A49-952E-FA9100643C1E}">
 															<PropertyList>
 																<Property Name="Channels" Type="int32">
 																	<ValueList>
@@ -1141,7 +1153,6 @@
 																</Property>
 																<Property Name="SampleRate" Type="int32">
 																	<ValueList>
-																		<Value>3</Value>
 																		<Value Platform="Windows">0</Value>
 																		<Value Platform="Mac">0</Value>
 																	</ValueList>
@@ -1149,10 +1160,18 @@
 															</PropertyList>
 															<ConversionPluginInfoList>
 																<ConversionPluginInfo Platform="Windows">
-																	<ConversionPlugin Name="" ID="{C9AFCB57-05DB-4E28-B9B7-EE2A9D37BB76}" PluginName="ADPCM" CompanyID="0" PluginID="2"/>
+																	<ConversionPlugin Name="" ID="{C8736447-70F0-43A5-97EB-4AE9E227A124}" PluginName="Vorbis" CompanyID="0" PluginID="4">
+																		<PropertyList>
+																			<Property Name="QualityFactor" Type="Real32" Value="10"/>
+																		</PropertyList>
+																	</ConversionPlugin>
 																</ConversionPluginInfo>
 																<ConversionPluginInfo Platform="Mac">
-																	<ConversionPlugin Name="" ID="{39CD6793-444C-4109-864C-9133F847FE77}" PluginName="ADPCM" CompanyID="0" PluginID="2"/>
+																	<ConversionPlugin Name="" ID="{3E6E438B-6820-469B-B81E-4F621FF53730}" PluginName="Vorbis" CompanyID="0" PluginID="4">
+																		<PropertyList>
+																			<Property Name="QualityFactor" Type="Real32" Value="10"/>
+																		</PropertyList>
+																	</ConversionPlugin>
 																</ConversionPluginInfo>
 															</ConversionPluginInfoList>
 														</Conversion>
@@ -1215,8 +1234,8 @@
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
-													<Custom CreatedFrom="{6D51666E-9C7A-40E4-831D-C445512EBABD}">
-														<Conversion Name="ADPCM Auto Detect High (Custom)" ID="{04D023A6-DD29-46B3-9A8B-696BB45F561C}">
+													<Custom CreatedFrom="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}">
+														<Conversion Name="Vorbis Quality High (Custom)" ID="{984AE49C-6EE5-450A-BC90-9194EE7B3B96}">
 															<PropertyList>
 																<Property Name="Channels" Type="int32">
 																	<ValueList>
@@ -1249,7 +1268,6 @@
 																</Property>
 																<Property Name="SampleRate" Type="int32">
 																	<ValueList>
-																		<Value>3</Value>
 																		<Value Platform="Windows">0</Value>
 																		<Value Platform="Mac">0</Value>
 																	</ValueList>
@@ -1257,10 +1275,18 @@
 															</PropertyList>
 															<ConversionPluginInfoList>
 																<ConversionPluginInfo Platform="Windows">
-																	<ConversionPlugin Name="" ID="{5FC6F0E7-A092-466F-8773-3340E851D84A}" PluginName="ADPCM" CompanyID="0" PluginID="2"/>
+																	<ConversionPlugin Name="" ID="{413AA293-186A-4B00-99F2-745C472004FE}" PluginName="Vorbis" CompanyID="0" PluginID="4">
+																		<PropertyList>
+																			<Property Name="QualityFactor" Type="Real32" Value="10"/>
+																		</PropertyList>
+																	</ConversionPlugin>
 																</ConversionPluginInfo>
 																<ConversionPluginInfo Platform="Mac">
-																	<ConversionPlugin Name="" ID="{501260EB-2976-4300-944C-62B36EF8D304}" PluginName="ADPCM" CompanyID="0" PluginID="2"/>
+																	<ConversionPlugin Name="" ID="{042C4D5C-A1ED-4479-9433-7C02627B83E0}" PluginName="Vorbis" CompanyID="0" PluginID="4">
+																		<PropertyList>
+																			<Property Name="QualityFactor" Type="Real32" Value="10"/>
+																		</PropertyList>
+																	</ConversionPlugin>
 																</ConversionPluginInfo>
 															</ConversionPluginInfoList>
 														</Conversion>
@@ -1307,8 +1333,8 @@
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
-													<Custom CreatedFrom="{6D51666E-9C7A-40E4-831D-C445512EBABD}">
-														<Conversion Name="ADPCM Auto Detect High (Custom)" ID="{070D8E0C-59F9-4A7E-A973-F36E427A9963}">
+													<Custom CreatedFrom="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}">
+														<Conversion Name="Vorbis Quality High (Custom)" ID="{AC67BA14-682C-4C09-B267-EC2E21B8CDBB}">
 															<PropertyList>
 																<Property Name="Channels" Type="int32">
 																	<ValueList>
@@ -1341,7 +1367,6 @@
 																</Property>
 																<Property Name="SampleRate" Type="int32">
 																	<ValueList>
-																		<Value>3</Value>
 																		<Value Platform="Windows">0</Value>
 																		<Value Platform="Mac">0</Value>
 																	</ValueList>
@@ -1349,10 +1374,18 @@
 															</PropertyList>
 															<ConversionPluginInfoList>
 																<ConversionPluginInfo Platform="Windows">
-																	<ConversionPlugin Name="" ID="{8F93923D-887D-43F1-94F1-70F0F08F2DA8}" PluginName="ADPCM" CompanyID="0" PluginID="2"/>
+																	<ConversionPlugin Name="" ID="{F5ED2B84-C528-449C-83DA-3D490DED23D3}" PluginName="Vorbis" CompanyID="0" PluginID="4">
+																		<PropertyList>
+																			<Property Name="QualityFactor" Type="Real32" Value="10"/>
+																		</PropertyList>
+																	</ConversionPlugin>
 																</ConversionPluginInfo>
 																<ConversionPluginInfo Platform="Mac">
-																	<ConversionPlugin Name="" ID="{639290C9-9A70-4011-9013-0E74A57C2300}" PluginName="ADPCM" CompanyID="0" PluginID="2"/>
+																	<ConversionPlugin Name="" ID="{C8FB2BE6-6E32-432A-AAD4-CDF3D8978DE1}" PluginName="Vorbis" CompanyID="0" PluginID="4">
+																		<PropertyList>
+																			<Property Name="QualityFactor" Type="Real32" Value="10"/>
+																		</PropertyList>
+																	</ConversionPlugin>
 																</ConversionPluginInfo>
 															</ConversionPluginInfoList>
 														</Conversion>
@@ -1396,6 +1429,11 @@
 							<ChildrenList>
 								<Sound Name="Piano 0" ID="{DB89F987-7C9F-45C8-BD28-D906FD393B08}" ShortID="149256813">
 									<PropertyList>
+										<Property Name="Highpass" Type="int16">
+											<ValueList>
+												<Value>15</Value>
+											</ValueList>
+										</Property>
 										<Property Name="OverrideConversion" Type="bool" Value="True"/>
 										<Property Name="Pitch" Type="int32">
 											<ValueList>
@@ -1487,6 +1525,11 @@
 								</Sound>
 								<Sound Name="Piano 1" ID="{1BE5A03E-08EA-46A8-8719-29F5173F578A}" ShortID="772431493">
 									<PropertyList>
+										<Property Name="Highpass" Type="int16">
+											<ValueList>
+												<Value>15</Value>
+											</ValueList>
+										</Property>
 										<Property Name="OverrideConversion" Type="bool" Value="True"/>
 									</PropertyList>
 									<ReferenceList>
@@ -1568,6 +1611,11 @@
 								</Sound>
 								<Sound Name="Piano 2" ID="{E9016F0A-494D-4B16-A275-DA62ACD61509}" ShortID="292418412">
 									<PropertyList>
+										<Property Name="Highpass" Type="int16">
+											<ValueList>
+												<Value>15</Value>
+											</ValueList>
+										</Property>
 										<Property Name="OverrideConversion" Type="bool" Value="True"/>
 									</PropertyList>
 									<ReferenceList>
@@ -1654,6 +1702,11 @@
 								</Sound>
 								<Sound Name="Piano 3" ID="{ECFCED80-C7D7-468E-B9B0-B706C1F349C0}" ShortID="154254459">
 									<PropertyList>
+										<Property Name="Highpass" Type="int16">
+											<ValueList>
+												<Value>15</Value>
+											</ValueList>
+										</Property>
 										<Property Name="OverrideConversion" Type="bool" Value="True"/>
 									</PropertyList>
 									<ReferenceList>
@@ -1740,6 +1793,11 @@
 								</Sound>
 								<Sound Name="Piano 4" ID="{E89E7E9B-091C-4987-B67A-51F706935F0E}" ShortID="631835081">
 									<PropertyList>
+										<Property Name="Highpass" Type="int16">
+											<ValueList>
+												<Value>15</Value>
+											</ValueList>
+										</Property>
 										<Property Name="OverrideConversion" Type="bool" Value="True"/>
 									</PropertyList>
 									<ReferenceList>
@@ -1825,6 +1883,11 @@
 								</Sound>
 								<Sound Name="Piano 5" ID="{61C77113-1175-4C62-931E-0BB03A7ECAB7}" ShortID="886493332">
 									<PropertyList>
+										<Property Name="Highpass" Type="int16">
+											<ValueList>
+												<Value>15</Value>
+											</ValueList>
+										</Property>
 										<Property Name="OverrideConversion" Type="bool" Value="True"/>
 									</PropertyList>
 									<ReferenceList>
@@ -1911,6 +1974,11 @@
 								</Sound>
 								<Sound Name="Piano 6" ID="{AD4FDBCD-5574-4791-AE02-E95016420B72}" ShortID="778444336">
 									<PropertyList>
+										<Property Name="Highpass" Type="int16">
+											<ValueList>
+												<Value>15</Value>
+											</ValueList>
+										</Property>
 										<Property Name="OverrideConversion" Type="bool" Value="True"/>
 									</PropertyList>
 									<ReferenceList>
@@ -1997,6 +2065,11 @@
 								</Sound>
 								<Sound Name="Piano 7" ID="{C390113F-75D2-453B-A774-D2283755317A}" ShortID="865600098">
 									<PropertyList>
+										<Property Name="Highpass" Type="int16">
+											<ValueList>
+												<Value>15</Value>
+											</ValueList>
+										</Property>
 										<Property Name="OverrideConversion" Type="bool" Value="True"/>
 										<Property Name="Pitch" Type="int32">
 											<ModifierList>
