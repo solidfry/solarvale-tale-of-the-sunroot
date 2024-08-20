@@ -1761,12 +1761,18 @@
 						<Sound Name="Atmos_Mountain__Small_Breeze_Distant_Water_01" ID="{51EDEDE0-BC78-46E4-8BD8-DE8971E6FE37}" ShortID="993965246">
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="Highpass" Type="int16">
+									<ValueList>
+										<Value>12</Value>
+									</ValueList>
+								</Property>
 								<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
 								<Property Name="MakeUpGain" Type="Real64">
 									<ValueList>
 										<Value>20</Value>
 									</ValueList>
 								</Property>
+								<Property Name="OverrideEffect" Type="bool" Value="True"/>
 								<Property Name="OverrideOutput" Type="bool" Value="True"/>
 								<Property Name="OverridePositioning" Type="bool" Value="True"/>
 								<Property Name="Pitch" Type="int32">
@@ -1862,6 +1868,21 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Effects">
+									<Reference>
+										<Local>
+											<EffectSlot Name="" ID="{B844F87E-6F48-425B-ABAB-7C406FA798E3}" ShortID="612975914">
+												<ReferenceList>
+													<Reference Name="Effect" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+														<ObjectRef Name="New_Parametric_EQ" ID="{CE75354D-D43F-43E6-A748-47F71E333B31}" WorkUnitID="{2DE174A0-C58B-4A2B-BA1D-C711DE10CC9F}"/>
+													</Reference>
+												</ReferenceList>
+											</EffectSlot>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
 							<ActiveSourceList>
 								<ActiveSource Name="Atmos_Mountain__Small_Breeze_Distant_Water_01" ID="{6B9EB4D2-25ED-4AD2-92BC-F752C9BF31C3}" Platform="Linked"/>
 							</ActiveSourceList>
